@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=12810.0" />
+		<title>Print Page - General Security Setup</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: fyodor on February 22, 2012, 03:14 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>General Security Setup</strong><br />
+				Post by: <strong>fyodor</strong> on <strong>February 22, 2012, 03:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				I didn&#039;t see a post on general security setup; OS, encryption, browser vulnerabilities. Highly recommended for sellers and the very paranoid willing to take the time. Feel free to add, correct, or disagree if you feel there is something lacking. <br /><br />First off I&#039;d like to clarify two things about anonymity: footprint vs fingerprint. You would think the smallest footprint would be best, but the lack of information, depending on how it&#039;s logged may be an identifier itself! Example... blank user-agent versus firefox user-agent. You may be the only user to pass through a tor entry and exit node with no user agent, identifying you. Check out https://panopticlick.eff.org/<br /><br />First off you can be identified in 3 main ways:<br />1)ISP (internet service provider)<br />2)browser fingerprint/vulnerabilities<br />3)MAC (machine-access-code)<br /><br />For the most secure/anon setup follow this guide:<br />1.&quot;FDE&quot; Live Persistent Linux USB stick to boot- Full dick encryption with a strong passphrase will ultimately foil all attempts to get data from your system upon a raid; EXCEPT if your machine is already booted during the raid. Forensic Techs can cold boot your machine with freeze spray from its RAM getting it&#039;s passphrase. Always shutdown properly. Having it on a Live usb stick insures no data is stored on your local Hard Drive, which upon deletion if not purged/shreded will still exist, just as un-allocated space. Also having it on a usb micro allows you to hide it or toss it easily. The &quot;persistent&quot; part, allows you to save data/programs (tor browser) to the usb stick without it being overwritten upon reboot.<br /><br />Tutorial (http://www.infosecramblings.com/backtrack/backtrack-5-bootable-usb-thumb-drive-with-full-disk-encryption/)<br />*Notes: I don&#039;t believe this has to be BackTrack &quot;flavor&quot; since BackTrack Runs off Ubuntu, but you will enjoy it&#039;s tools anyway ;). Read the full tut before starting. Some things not made entirely clear in the tut... <br />i)Use a 16g or bigger stick IMO<br />ii)You are booting from another live cd/usb to create this FDE Live Persistent BT5r1 stick. Use unetbootin to create it, I don&#039;t recommend a virtual machine unless familiar.<br />iii)To help identify your drive at &quot;dmesg | egrep hd.\|sd.&quot; it will have the size and typically the brand out to the right in the terminal<br />iv)As expected I got &quot;..the partition table failed with error 16:...&quot; on first step. He says you need to &quot;re-execute cryptsetup luksOpen&quot; although he never said to initially start this??? I just rebooted and continued<br />v)(to calrify) At &quot;vi /etc/fstab&quot; my file, once fixed read:<br /><br />&nbsp;/etc/fstab: static file system information.<br />#<br /># Use &#039;blkid -o value -s UUID&#039; to print the universally unique identifier<br /># for a device; this may be used with UUID= as a more robust way to name<br /># devices that works even if disks are added and removed. See fstab(5).<br />#<br /># &lt;file system&gt; &lt;mount point&gt;&nbsp; &nbsp;&lt;type&gt;&nbsp; &lt;options&gt;&nbsp; &nbsp; &nbsp; &nbsp;&lt;dump&gt;&nbsp; &lt;pass&gt;<br />proc&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /proc&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;proc&nbsp; &nbsp; nodev,noexec,nosuid 0&nbsp; &nbsp; &nbsp; &nbsp;0<br />/dev/mapper/vg-root /&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ext4&nbsp; &nbsp; defaults 0&nbsp; &nbsp; &nbsp; &nbsp;1<br /># /boot was on /dev/sdc1 during installation<br /><br />vi)After finished entirely reboot, login, &quot;startx&quot;, run &quot;apt-get upgrade&quot;. Do not run &quot;apt-get safe-upgrade&quot; or &quot;apt-get autoremove&quot;. If you do run &quot;apt-get autoremove&quot; running &quot;apt-get install cryptsetup ecryptfs-utils keyutils&quot; may fix it.<br />vii)You should never use the &quot;root&quot; account regularly. Create a new (encrypted) user: &quot;adduser --encrypt-home USERNAME&quot; where USERNAME is the account name you want. Don&#039;t use the same passphrase as your FDE passphrase. Don&#039;t give any personal information. Add new user to sudoers: &quot;visudo&quot;. Under the line &quot;root&nbsp; &nbsp; ALL=(ALL) ALL&quot; add &quot;USERNAME&nbsp; &nbsp; ALL=(ALL) ALL&quot; where USERNAME is your account name you just created. Hold &quot;cntrl&quot; and &quot;x&quot; to exit, press y to save, press enter to confirm. Change root password: &quot;passwd root&quot;.<br />viii)Download your favorite virtual machine software, if so inclined, although I think it may be a little overkill in this situation.<br /><br />2)ISP (finally!)<br />i)Login to the account you created, download tor browser bundle. &quot;tar -xvzf&quot; the file you downloaded to unzip/install.<br />ii)Use a bridge to access tor if it&#039;s blocked by your ISP. You may also want to use it to hide from your ISP that you ever connected to tor. Also use an outproxy when connecting to official &quot;clear internet&quot; bitcoin sites to avoid a Suspicious Activity Report (SAR).<br />iii)As many know, if the entry and exit nodes are controlled on tor by the same person, one might identify your IP. I still recommend using an open wifi network, with a nifty Yagi antenna from home. Check out the FBI&#039;s Carnivore project... With most nodes in the US and how much data their Carnivore is eating, I&#039;m weary.<br /><br />3)Browser Vulnerabilities (the biggie!)<br />i)Navigate to http://ip-check.info/?lang=en in your tor browser for an anonymity test for an idea of how anonymous you really are. May have to allow through no-script for full read out<br />ii)Navigate to &quot;about:config&quot; make sure prefs read as listed below:<br />browser.cahce.disk.enable, false<br />browser.cahce.memory.enable false&nbsp; &nbsp; *this one seems to come back to true whenever I restart so be careful*<br />browser.display.use_document_fonts, 0<br />browser.sessionhistory.max_entries, 2<br />dom.storage.enabled, false<br />**there is a tab-name-eraser toggle I&#039;m missing here if anyone can find it**<br />iii)Add these firefox extensions:<br />Adblock Plus<br />Better Privacy (select your entire user directory for searching of these D4MN flash cookies! They&#039;ll reside in your tor-browser directory and your .macromedia folder. Have them deleted every time you exit and start.)<br />Ghostery (select all trackers and cookies)<br />RefControl (options&gt;edit block referer)<br />iv)Firefox&gt;edit pref&gt;privacy&gt; check &quot;tell websites don&#039;t track me&quot; and check &quot;always use private browsing&quot; and do not &quot;accept cookies&quot;. Under exceptions add SR sites<br />v)Once restarted go back to http://ip-check.info/?lang=en to see how you rate.<br /><br />3)MAC and connecting<br />While MAC address&#039; should never leave the router, and perhaps this is more of a h4x0r trick, but if sh!t hits the fan, it&#039;s the true identifier that the connection came from &quot;this here computer.&quot; In a court case, when the MAC address&#039; don&#039;t match up, it&#039;ll be your last line of defense. &quot;Your network was open/hacked when the ISP recorded your ip.&quot;<br />Disconnect from your internet connection, then from terminal run &quot;sudo ifconfig&quot; you&#039;ll see all your internet interfaces: eth, lo, and wlan. Wifi=wlan, ethernet=eth. If you connect via wifi adapter it may show up as wlan1. <br />Run on your interface that you use to connect to the internet &quot;sudo ifconfig wlan0 down&quot; for me. May be eth0 for most desktops.<br />Run &quot;sudo macchanger -r wlan0&quot; for a random address. <br />Run &quot;sudo ifconfig wlan0 up&quot; to turn interface back on.<br />Connect to your internet or &quot;open&quot; neighborhood/starbucks/library/Yagi wifi.<br />(Run vm software with random macs if you please or want multiple comps up)<br />Run Tor and have fun.<br /><br />*I never even use this whole usb stick for anything personal. Also check into getting an overseas non-extraditing VPN to run before tor.<br />**If anyone has a good tut on setting up a pseudo nym.alias remailer account connection with my overseas email account (neomail or countermail) let us know!<br /><br />Thanks for reading! Let me know if I forgot something or if you disagree. As for questions, I may not be on frequently, sorry.<br />---------------------------------------------------------------------------------<br />&quot;Only to live, to live and live! Life, whatever it may be!&quot;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: General Security Setup</strong><br />
+				Post by: <strong>Derpasaurus</strong> on <strong>February 22, 2012, 04:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				Don&#039;t use countermail. Nobody knows who runs it, and they &#039;encrypt for you&#039; which is disturbing. <br />At least if you use privacybox.de you know the German Privacy Foundation and affiliated people from the Chaos Computer Club in Berlin won&#039;t be screwing with you. You can also up your own GPG key instead of letting countermail generate for you.<br /><br />The only problem with your setup is if the cops kick down the door and seize your USB key, because there is no brute force protection, and no shielding they can run all sorts of attacks on it. Maybe invest in cryptostick 2.0 when they come out.<br /><br />I prefer to just use an anonymous live CD in bridge mode with an encrypted usb stick for storage. That way evidence disappears after reboot and usb device has protection against all forensic attacks including brute force timeout
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: General Security Setup</strong><br />
+				Post by: <strong>QTC</strong> on <strong>February 22, 2012, 04:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=12810.msg121813#msg121813">Quote from: Derpasaurus on February 22, 2012, 04:06 am</a></div></div><blockquote class="bbc_standard_quote">The only problem with your setup is if the cops kick down the door and seize your USB key, because there is no brute force protection, and no shielding they can run all sorts of attacks on it. Maybe invest in cryptostick 2.0 when they come out.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Ironkey has been around forever and works just fine.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: General Security Setup</strong><br />
+				Post by: <strong>Derpasaurus</strong> on <strong>February 22, 2012, 04:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				Ironkey is good, but can&#039;t buy it outside N. America <br />Unless somebody here wants to start selling them :) though you would be crazy to do it. Not very hard to find the guy buying bulk Ironkeys from distributors. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: General Security Setup</strong><br />
+				Post by: <strong>orbitalics</strong> on <strong>February 22, 2012, 05:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				tl;dr? :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: General Security Setup</strong><br />
+				Post by: <strong>JimPooley</strong> on <strong>February 22, 2012, 05:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				Q: Is hushmail reliable? What about instant msg like privatnotes?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: General Security Setup</strong><br />
+				Post by: <strong>Derpasaurus</strong> on <strong>February 22, 2012, 05:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hushmail is even worse than using regular yahoo mail. Not lying. It&#039;s a lot harder for them to get a warrant to open your yahoo mail than it is contacting Canada police and having them spill your hushmail account. If you are Canadian, and using Canadian email it&#039;s harder for them to get at as they need warrants. But if you&#039;re American, then Charter of Rights and Freedoms doesn&#039;t apply and they will hand over your info at the drop of a hat. All it takes is a simple request through MLAT <br /><br />Hushmail has coughed up countless times to the feds, and even admitted their encryption is fully backdoored for law enforcement. It&#039;s 100% garbage. They will also cancel any account even suspected of &#039;illegal activity&#039;. <br /><br />Use Tormail and encrypt your own mail. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: General Security Setup</strong><br />
+				Post by: <strong>fyodor</strong> on <strong>February 22, 2012, 08:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=12810.msg121813#msg121813">Quote from: Derpasaurus on February 22, 2012, 04:06 am</a></div></div><blockquote class="bbc_standard_quote">Don&#039;t use countermail. Nobody knows who runs it, and they &#039;encrypt for you&#039; which is disturbing. <br />At least if you use privacybox.de you know the German Privacy Foundation and affiliated people from the Chaos Computer Club in Berlin won&#039;t be screwing with you. You can also up your own GPG key instead of letting countermail generate for you.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thanks for the heads up on countermail. I didn&#039;t know CCC had an email service. And @JimPooley, hushmail is sh!t. Not only did they comply to turn data over they installed a back door on the user in question, THEN released it to all the users as a &quot;security update.&quot;<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=12810.msg121813#msg121813">Quote from: Derpasaurus on February 22, 2012, 04:06 am</a></div></div><blockquote class="bbc_standard_quote">there is no brute force protection, and no shielding they can run all sorts of attacks on it. Maybe invest in cryptostick 2.0 when they come out.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I haven&#039;t heard of anyone brute forcing FDE aes 512 encryption. Their only saving grace is cold booting. www.sciencedirect.com/science/article/pii/S1742287611000727<br />&nbsp;---------------------------------------------------------------------------------<br />&quot;Only to live, to live and live! Life, whatever it may be!&quot;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: General Security Setup</strong><br />
+				Post by: <strong>Asal88</strong> on <strong>July 10, 2012, 07:18 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Cheers for this, commenting so I can find it again.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

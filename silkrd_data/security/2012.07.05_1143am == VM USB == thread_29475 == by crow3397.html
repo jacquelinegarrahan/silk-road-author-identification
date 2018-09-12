@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=29475.0" />
+		<title>Print Page - VM USB </title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: crow3397 on July 05, 2012, 11:43 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>VM USB </strong><br />
+				Post by: <strong>crow3397</strong> on <strong>July 05, 2012, 11:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				My friend who know about SR ask&nbsp; me to set up VM usb for him the way like I do<br /><br />If I make usb for him on mine computer and give that to him can that come back to mine computer if he got in trouble?&nbsp; Could they know I make USB for him?<br /><br />Should I go to his computer to set it up exactly for his machine or make it at my home and just give it to him with details?<br /><br />Prefer to do last way as wife of his and me do not get on well.<br /><br />He already on SR but his security is terrible.<br /><br />I hope you understand me
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VM USB </strong><br />
+				Post by: <strong>zalaan</strong> on <strong>July 08, 2012, 06:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				@crow3397<br /><br />If you did some testing while you were configuring it for him that included IP address info from connections to your ISP then that might be one way it could come back to u.<br /><br />Also know that each storage device has its own unique serial number.&nbsp; You can see this when its plugged in to your computer, for example under Windows navigate to<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">My Computer <br />-&gt; Right Click the USB drive <br />-&gt; Properties <br />-&gt; Harware Tab and select the USB device from the list <br />-&gt; goto Details tab and navigate to &#039;Device Instance Path&#039; property and you see something like<br />&nbsp; &nbsp; USBSTOR\DISK&amp;VEN_KINGSTON&amp;PROD_DATATRAVELER_2.0&amp;REV_1.00001E4FB70682C8C185790999[&amp;0</code><br />where near the end of that device patch &#039;001E4FB70682C8C185790999&#039; is the devices unique serial number.<br /><br /><br />Under Linux you can see it under /proc:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">$ cat /proc/scsi/usb-storage/2 <br />&nbsp; &nbsp;Host scsi2: usb-storage<br />&nbsp; &nbsp; &nbsp; &nbsp;Vendor: Kingston<br />&nbsp; &nbsp; &nbsp; Product: DataTraveler 2.0<br />Serial Number: 001E4FB70682C8C185790999<br />&nbsp; &nbsp; &nbsp;Protocol: Transparent SCSI<br />&nbsp; &nbsp; Transport: Bulk<br />&nbsp; &nbsp; &nbsp; &nbsp;Quirks: SANE_SENSE</code><br />Depending on your operating system, it may keep a history of devices that have been attached, even after they&#039;ve been removed.&nbsp; Windows will log this info in the registry for example (and possibly other places).<br /><br />Linux may log device serial number info via syslog to be saved in /var/log or whatever if it experiences I/O errors when reports the errored device details (make, model, serial number etc).<br /><br />If you dont want his USB device information appearing on your computer, then probably best to do the install at his place, on his equipment...<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VM USB </strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>July 08, 2012, 06:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=29475.msg326541#msg326541">Quote from: crow3397 on July 05, 2012, 11:43 am</a></div></div><blockquote class="bbc_standard_quote">My friend who know about SR ask&nbsp; me to set up VM usb for him the way like I do<br /><br />If I make usb for him on mine computer and give that to him can that come back to mine computer if he got in trouble?&nbsp; Could they know I make USB for him?<br /><br />Should I go to his computer to set it up exactly for his machine or make it at my home and just give it to him with details?<br /><br />Prefer to do last way as wife of his and me do not get on well.<br /><br />He already on SR but his security is terrible.<br /><br />I hope you understand me<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hi crow,<br /><br />I applaud your intentions as when I first started on here I explored the possibility of selling secure virtual machines on USB but realised that it was too much to ask a complete stranger to trust me not to install any spyware! <br /><br />Of course your friend knows he can trust you but it&#039;s generally good practice to know how to do such things for himself. Why don&#039;t you point him in the direction of the Liberte Linux website which has some very easy instructions about how to get set up on a USB stick of his own?<br /><br />All the best,<br /><br />V.<br /><br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=209376.0" />
+		<title>Print Page - Vendors PgP key won't import??</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: SeekEnlighten on September 02, 2013, 02:04 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Vendors PgP key won't import??</strong><br />
+				Post by: <strong>SeekEnlighten</strong> on <strong>September 02, 2013, 02:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hey everyone, on Friday I tried placing my 3rd order(25c), but unfortunately it didn&#039;t work out. I ordered Silo&#039;s 1000microgram 25C-NBOME tabs x10. If anyone has tried them btw how are they? Anyways, the reason it didn&#039;t work out was because apparently I encrypted my shipping address with a key that did not belong to the vendor. <br /><br />I posted a thread here yesterday, and then tried sending him an encrypted messege with my shipping address, but his public key posted on his page would not import when I clicked certificate import(I use Kleopatra). I went into configuration settings and everything and did something that I can&#039;t remember, that was supposed to help it, but it didn&#039;t. I tried looking him up on the servers, I typed in silo, a list of a bunch of variations of the name showed up, with a plain silo at the top. I clicked his name, clicked import, and it showed up on my certificate manager but the name was red. I&#039;ve succesfully sent encrypted messeges to &#039;&#039;Righteous&#039;&#039; and &#039;&#039;Frylexa&#039;&#039;. Can someone maybe remind me how to import a new vendors key on kleopatra since I think i&#039;m fucking up somewhere, please?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors PgP key won't import??</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>September 02, 2013, 03:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209376.msg1510291#msg1510291">Quote from: SeekEnlighten on September 02, 2013, 02:04 am</a></div></div><blockquote class="bbc_standard_quote"><br />... Anyways, the reason it didn&#039;t work out was because apparently I encrypted my shipping address with a key that did not belong to the vendor. </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You gotta be careful with stuff like that -- you have to make sure you use the right key. <br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209376.msg1510291#msg1510291">Quote from: SeekEnlighten on September 02, 2013, 02:04 am</a></div></div><blockquote class="bbc_standard_quote">I posted a thread here yesterday, and then tried sending him an encrypted messege with my shipping address, but his public key posted on his page would not import when I clicked certificate import(I use Kleopatra). </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The most common error that crops up when trying to import keys is the failure to have all 5 dashes at the beginning and end of the -----BEGIN PGP PUBLIC KEY----- and -----END PGP PUBLIC KEY----- lines. <br /><br />If even one of the dashes is missing, the key will fail to import. <br /><br />I just tried importing his key, and had no problems whatsoever, so his key is not malformed or garbled in any way. <br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209376.msg1510291#msg1510291">Quote from: SeekEnlighten on September 02, 2013, 02:04 am</a></div></div><blockquote class="bbc_standard_quote">I went into configuration settings and everything and did something that I can&#039;t remember, that was supposed to help it, but it didn&#039;t. I tried looking him up on the servers, I typed in silo, a list of a bunch of variations of the name showed up, with a plain silo at the top. I clicked his name, clicked import, and it showed up on my certificate manager but the name was red. I&#039;ve succesfully sent encrypted messeges to &#039;&#039;Righteous&#039;&#039; and &#039;&#039;Frylexa&#039;&#039;. Can someone maybe remind me how to import a new vendors key on kleopatra since I think i&#039;m fucking up somewhere, please?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This is a textbook example of what not to do. If you run into a situation like this, please stop immediately and ask for help! Please do not change any settings, and flail about trying to fix the problem -- believe me, you will only cause more problems than you solve. <br /><br />As far as the keyservers go, a lot of vendors do not post their PGP keys to the keyservers, so the odds of success are minimal. The absolute best place to obtain a vendor&#039;s key is from their SR vendor page, or here on the Forums, if they happened to post their key here. <br /><br />If I were in your shoes, I&#039;d ditch Kleopatra, and use gpg4usb instead. You can download it from: <br /><br />http://gpg4usb.cpunk.de/index.html<br /><br />Nightcrawler<br />4096R/BBF7433B 2012-09-22 Nightcrawler &lt;Nightcrawler@SR&gt;<br />PGP Key: http://qtt2yl5jocgrk7nu.onion/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B (IndyMedia .onion keyserver)<br />PGP Key: http://dkn255hz262ypmii.onion/index.php?topic=174.msg633090#msg633090&nbsp; &nbsp; &nbsp;(Silk Road Forums PGP Key Link)<br />PGP Key Fingerprint = 83F8 CAF8 7B73 C3C7 8D07&nbsp; B66B AFC8 CE71 D9AF D2F0<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

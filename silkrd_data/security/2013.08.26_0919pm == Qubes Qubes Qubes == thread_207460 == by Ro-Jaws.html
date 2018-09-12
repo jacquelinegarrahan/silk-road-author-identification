@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=207460.0" />
+		<title>Print Page - Qubes Qubes Qubes</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Ro-Jaws on August 26, 2013, 09:19 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Qubes Qubes Qubes</strong><br />
+				Post by: <strong>Ro-Jaws</strong> on <strong>August 26, 2013, 09:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hey,<br />I am looking for some help with Qubes. I have been using it for a couple of weeks now and on an everyday level the transfer was relatively painless (once I got my head around how templates relate to individual app VMs, a simple relationship but one that kept tripping me up for almost a week). <br /><br />Even some of the marginally more complex stuff went without a hitch (such as setting up a torVM, adding bridges creating a new disposable VM template etc). However I have a couple of things I want to clear up before I start using Qubes for browsing SR and this forum.<br /><br />The disposable VMs - they run entirely in RAM right? I know they check the savefile and then start but I read somewhere that when you open a specific file using a dispVM (like a PDF) any changes made are also made to the original so obviously I want to avoid this.<br /><br />Linked to this is the wiping of RAM, looking at TAILS I see they use smem to wipe the ram upon shutdown, at some point I would like to get to that but for now I am just looking to run it at all. I am assuming it should be run in dom0 to give it full access to the RAM, is this correct? <br /><br />Connected to this is the command for copying files to dom0, I cannot get this to work, it simply does nothing rather like most terminals when they are running a process, has anyone used this command successfully?<br /><br />And finally (finally!) has anyone used the tbb_torless_launcher? It seems to work (as in I can access hidden services) but whenever I try to use the tor check site I get the message that the proxy is refusing connections.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>Kiwikiikii</strong> on <strong>August 26, 2013, 11:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				qubes is not a safe OS to use, its permanent not live like tails so if anything does get into your main OS then the whole system is fucked until u wipe the drive. That and its a pain in the ass to configure and your whole system is locked to one computer, u cant take it with u like tails. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 27, 2013, 12:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1493234#msg1493234">Quote from: Ro-Jaws on August 26, 2013, 09:19 pm</a></div></div><blockquote class="bbc_standard_quote">The disposable VMs - they run entirely in RAM right? I know they check the savefile and then start but I read somewhere that when you open a specific file using a dispVM (like a PDF) any changes made are also made to the original so obviously I want to avoid this.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I don&#039;t think disposable VMs run entirely in RAM. I have seen no mention of that, and if it was a feature, I expect to have read it somewhere. It isn&#039;t mentioned in any of the documentation that I&#039;ve dug up (which is unfortunately sparse):<br /><br />http://qubes-os.org/trac/wiki/DisposableVms<br />http://qubes-os.org/trac/wiki/UserDoc/DispVMCustomization<br />http://theinvisiblethings.blogspot.com/2010/06/disposable-vms.html<br /><br /><br />I&#039;m not running Qubes right now because the hard drive crashed on the old laptop that I was testing it on, but you should be able to look at the properties of the dispvm in the VM Manager and see whether / how much disk storage space it has been assigned.<br /><br />A VM that runs only in RAM would be preferred, but I suppose it&#039;s not a big problem if you use full disk encryption. If someone has access to your decrypted hard drive, you are probably already screwed.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Linked to this is the wiping of RAM, looking at TAILS I see they use smem to wipe the ram upon shutdown, at some point I would like to get to that but for now I am just looking to run it at all. I am assuming it should be run in dom0 to give it full access to the RAM, is this correct?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Seems so, although you may be able to wipe the RAM of specific VMs too. IDK. I heard DDR3 memory decays very quickly anyway, so cold boot attacks are not very effective on it. All I can find about this issue re Qubes was this message from the qubes-devel mailing list:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">&gt; Also, they wipe the memory on<br />&gt; shutdown to prevent data being held in RAM upon reboot. Would these<br />&gt; features be of use in Qubes to further enhance security?<br />&gt;<br /><br />Right now (Qubes 1.0) we&#039;re not addressing any of the physical attacks<br />(such as Cold Boot, or Evil Maid). We really need a good trusted boot<br />for this, such as perhaps Intel TXT, which howover is still unsupported<br />on majority of laptops, and this is planned for Qubes 2.0 branch.<br /><br />So, no.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />And then this roadmap:<br /><br />http://qubes-os.org/trac/roadmap<br /><br />which says that the trusted boot / anti-evil mail stuff won&#039;t be added until Qubes version 3, meaning it could be a few years before they include a memory wipe feature.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Connected to this is the command for copying files to dom0, I cannot get this to work, it simply does nothing rather like most terminals when they are running a process, has anyone used this command successfully?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I haven&#039;t tried this, but cat with redirection is supposed to do nothing in the terminal. Did you check if the file is in the destination location? :)<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">And finally (finally!) has anyone used the tbb_torless_launcher? It seems to work (as in I can access hidden services) but whenever I try to use the tor check site I get the message that the proxy is refusing connections.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Haven&#039;t tried this either. Can you get to check.torproject.org in a regular browser (through the TorVM)? If so, then maybe the script is blocking everything but onion addresses, which seems strange. Can you paste it here?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>August 27, 2013, 02:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				astor is right.. Qubes isn&#039;t built to use and not leave a trace on the hard drive.&nbsp; &nbsp;They&#039;re fairly clear that that isn&#039;t one of their design goals.&nbsp; &nbsp;Their goal is to minimize the attack surface available to malicious code to the smallest degree possible.&nbsp; &nbsp;<br /><br />I believe a Disposable VM is simply a running snapshot that&#039;s just instantiated and then destroyed when you&#039;re done.&nbsp; Shouldn&#039;t be pinned to memory any more than anything else in Qubes would be.&nbsp; &nbsp;If you&#039;re worried about forensic recovery whenever somebody gets their hands on your computer, all you really have is your full disk encryption between them and you.&nbsp; <br /><br />I&#039;d have a hard time believing that a VM-based system on disk could ever truly remove all traces of activities.&nbsp; &nbsp;Lots of moving parts, lots of opportunities for things to get written to disk or swap.&nbsp; &nbsp;<br /><br />Unless you&#039;re running Qubes on a ramdisk or something.&nbsp; &nbsp; That might be fun to try.&nbsp; &nbsp; <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>August 27, 2013, 06:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1493678#msg1493678">Quote from: Kiwikiikii on August 26, 2013, 11:35 pm</a></div></div><blockquote class="bbc_standard_quote">qubes is not a safe OS to use, its permanent not live like tails so if anything does get into your main OS then the whole system is fucked until u wipe the drive. That and its a pain in the ass to configure and your whole system is locked to one computer, u cant take it with u like tails.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Tails is not a safe OS to use, it lacks persistent entry guards because it is live and doesn&#039;t use strong isolation technology. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>August 27, 2013, 01:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1493829#msg1493829">Quote from: astor on August 27, 2013, 12:43 am</a></div></div><blockquote class="bbc_standard_quote">which says that the trusted boot / anti-evil mail stuff won&#039;t be added until Qubes version 3, meaning it could be a few years before they include a memory wipe feature.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Shouldn&#039;t that be possible with a simple script which fills up the RAM with random data when shutting down the system? <br /><br />Edit: Simple is probably not enough. However this shouldn&#039;t be a problem if the computer has DDR3 memory, as it only keeps voltage for a few seconds after turning off the computer.<br />Turning on Memory Test in the computer&#039;s BIOS may also wipe the RAM every time you turn on the computer. So when someone is at your door, power off the computer (resetting it is probably not enough) and turn it on again to wipe the memory.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1493678#msg1493678">Quote from: Kiwikiikii on August 26, 2013, 11:35 pm</a></div></div><blockquote class="bbc_standard_quote">qubes is not a safe OS to use, its permanent not live like tails so if anything does get into your main OS then the whole system is fucked until u wipe the drive. That and its a pain in the ass to configure and your whole system is locked to one computer, u cant take it with u like tails.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You could simply use full disk encryption with Qubes, and it may be possible to install it on an USB stick. Though I&#039;ve had too many headaches with encrypted bootable Linux systems on USB sticks recently, so I won&#039;t test that. Unless you use USB3 it can be extremely annoying because it&#039;s so slow under certain circumstances.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>rockwaterwind</strong> on <strong>August 27, 2013, 02:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				subbed
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>crystal</strong> on <strong>August 27, 2013, 03:03 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1494137#msg1494137">Quote from: ECC_ROT13 on August 27, 2013, 02:43 am</a></div></div><blockquote class="bbc_standard_quote">Unless you&#039;re running Qubes on a ramdisk or something.&nbsp; &nbsp; That might be fun to try.&nbsp; &nbsp;<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That would be interesting. You could also create your own Qubes-like OS on ramdisk using debian+xen...<br /><br />The system would have to be created and then mounted read only, with as much as possible of it mounted on a ramdisk (/home, /tmp and the like). <br /><br />Idealy the whole system would be stored encrypted and extracted at boot on several RAM partitions... <br /><br />Do you guys see any way to easily extract/mount a whole system on a ramdisk?<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>envious</strong> on <strong>August 27, 2013, 03:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m having trouble discerning which is buggier, Qubes or Tails?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 27, 2013, 03:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1494137#msg1494137">Quote from: ECC_ROT13 on August 27, 2013, 02:43 am</a></div></div><blockquote class="bbc_standard_quote">astor is right.. Qubes isn&#039;t built to use and not leave a trace on the hard drive.&nbsp; &nbsp;They&#039;re fairly clear that that isn&#039;t one of their design goals.&nbsp; &nbsp;Their goal is to minimize the attack surface available to malicious code to the smallest degree possible.&nbsp; &nbsp;<br /><br />I believe a Disposable VM is simply a running snapshot that&#039;s just instantiated and then destroyed when you&#039;re done.&nbsp; Shouldn&#039;t be pinned to memory any more than anything else in Qubes would be.&nbsp; &nbsp;If you&#039;re worried about forensic recovery whenever somebody gets their hands on your computer, all you really have is your full disk encryption between them and you.&nbsp; <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yeah, I think their threat model right now is that Qubes locks down your computing environment so well that it is extremely difficult for an attacker to identify you, so the threat of a physical attack is secondary. Of course, an attacker might identify you in many ways not related to exploiting your OS, so they plan on physical defenses in the future.<br /><br />OTOH, Tails assumes there is a high probability you will be physically attacked and your best defense is to leave no trace of your activities. (That is a reasonable assumption for its original user base, political dissidents at internet cafes in repressive regimes.)<br /><br />We all want both defenses: the strongest isolation to protect against exploits and identification, and the best security against physical attacks, but no preconfigured solution offers that right now. Qubes looks the most promising going forward, since they mention defenses against physical attacks in their future milestones, while it doesn&#039;t look like Tails has any plans to add VM isolation.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>Kiwikiikii</strong> on <strong>August 27, 2013, 06:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1494804#msg1494804">Quote from: kmfkewm on August 27, 2013, 06:31 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1493678#msg1493678">Quote from: Kiwikiikii on August 26, 2013, 11:35 pm</a></div></div><blockquote class="bbc_alternate_quote">qubes is not a safe OS to use, its permanent not live like tails so if anything does get into your main OS then the whole system is fucked until u wipe the drive. That and its a pain in the ass to configure and your whole system is locked to one computer, u cant take it with u like tails.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Tails is not a safe OS to use, it lacks persistent entry guards because it is live and doesn&#039;t use strong isolation technology.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You can create persistent entry guards by using a small set of bridges. Yes its not isolated, so if u get pwned then for that session u get pwned, but seriously if you are browsing the net with JS enabled then you&#039;d probably enter the session with all your shit locked down anyways. As for qubes sure u have a persistent OS that isolates everything so the odds of getting hacked are minimal, but from a security standpoint both approaches have the same net effect as long as you know what you are doing. <br /><br />Id pick tails just because its portable (and easy to backup) and doesnt leave any traces. FDE isnt going to help if some pious judge threatens you with contempt. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 27, 2013, 07:18 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Supposedly, you can install Qubes on a thumb drive, so it can be a leave-no-trace-behind operating system, but I don&#039;t know anyone who has done it.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>crystal</strong> on <strong>August 27, 2013, 07:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1496300#msg1496300">Quote from: astor on August 27, 2013, 07:18 pm</a></div></div><blockquote class="bbc_standard_quote">Supposedly, you can install Qubes on a thumb drive, so it can be a leave-no-trace-behind operating system, but I don&#039;t know anyone who has done it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It should be possible, and would be interesting to try - but each use would leave a trace on the thumb drive. <br /><br />If an attacker has access to the thumb drive and finds a way to get your paraphrase or to break the encryption, it becomes available to see. Wiping the thumb drive every now and then and installing a fresh system might (partly) solve the problem; a way to create an image and load everything in ram would be better. But you&#039;d have to build a new system each time you want to apply a security upgrade.<br /><br />Keeping in ram only the folders/partitions where temp/log/whatever files can/will be written could be a solution. Some work would be needed to create such a list...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 27, 2013, 08:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1496350#msg1496350">Quote from: crystal on August 27, 2013, 07:47 pm</a></div></div><blockquote class="bbc_standard_quote">If an attacker has access to the thumb drive and finds a way to get your paraphrase or to break the encryption, it becomes available to see. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Tails with a persistent volume is vulnerable to the same attack, and that&#039;s how most people here use it. I think the plan is to flush it down the toilet so there&#039;s no trace of even a Tails system image on any storage media in their possession. Somebody said in a thread recently that their thumb drive is so small they can swallow it. :)<br /><br />So Qubes on a thumb drive is not worse that Tails in that respect, but it&#039;s better because of VM isolation (although you have to setup a Tor VM, whereas on Tails you manually have to add bridges).<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>Kiwikiikii</strong> on <strong>August 27, 2013, 08:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1496378#msg1496378">Quote from: astor on August 27, 2013, 08:00 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1496350#msg1496350">Quote from: crystal on August 27, 2013, 07:47 pm</a></div></div><blockquote class="bbc_alternate_quote">If an attacker has access to the thumb drive and finds a way to get your paraphrase or to break the encryption, it becomes available to see. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Tails with a persistent volume is vulnerable to the same attack, and that&#039;s how most people here use it. I think the plan is to flush it down the toilet so there&#039;s no trace of even a Tails system image on any storage media in their possession. Somebody said in a thread recently that their thumb drive is so small they can swallow it. :)<br /><br />So Qubes on a thumb drive is not worse that Tails in that respect, but it&#039;s better because of VM isolation (although you have to setup a Tor VM, whereas on Tails you manually have to add bridges).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Id try qubes on a thumbdrive if any can write a tutorial on it. The one thing that bothers&nbsp; me about tails is that if u get hacked its easy for an attacker to unmask you, tails has a clearnet browser for logging into wifi spots so all they have to do is use that and they have your IP. Pretty fucking risky for a anonymity standpoint. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>rockwaterwind</strong> on <strong>August 28, 2013, 11:39 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve been playing around with Qubes for the past few days... ran into some trouble setting up the TorVM but I have just got it working<br /><br />Read this and have a look at the pretty pictures to get an idea of how everything slots together BUT DO NOT follow the instructions (they are for version 1 and we are now a year past those instructions)<br /><br />http://theinvisiblethings.blogspot.sg/2011/09/playing-with-qubes-networking-for-fun.html<br /><br />Ok - you need to follow the following instructions:<br /><br />http://qubes-os.org/trac/wiki/UserDoc/TorVM<br /><br />But they have missed a couple of steps, which you can figure out using the following link:<br /><br />https://groups.google.com/forum/#!msg/qubes-users/fyBVmxIpbSs/R5mxUcIEZAQJ<br /><br />Seems to be working like a charm so far.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>August 31, 2013, 05:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1495901#msg1495901">Quote from: astor on August 27, 2013, 03:47 pm</a></div></div><blockquote class="bbc_standard_quote">We all want both defenses: the strongest isolation to protect against exploits and identification, and the best security against physical attacks, but no preconfigured solution offers that right now. Qubes looks the most promising going forward, since they mention defenses against physical attacks in their future milestones, while it doesn&#039;t look like Tails has any plans to add VM isolation.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>You&#039;re exactly right.&nbsp; &nbsp;What everyone wants is Tails meets Qubes.&nbsp; &nbsp; But Qubes is i/o-intensive enough that I think you&#039;d have to toss the whole thing in a decent sized ramdisk to make it usable from USB.&nbsp; &nbsp;Most Xen dom0 kernels don&#039;t lend themselves to easy, Tails-style hardware compatability, either.&nbsp; Everybody will need to go shopping for laptops with 32-64Gb of RAM and no hard drives.<br /><br />USB-bootable Whonix (possibly with Tor running on host OS and not in separate VM) is probably the easiest thing to cobble together without very significant effort.&nbsp; And it&#039;s still missing that minimized attack surface via Xen PV that makes Qubes so appealing.&nbsp; We just have a slow booting Whonix that&#039;s not leaving a trace.&nbsp; But it&#039;s probably the easiest way to do it if somebody wanted to.&nbsp; &nbsp;Start with Debian live build, add virtualbox and preconfigured Whonix GW and Workstation, duct-tape in memory wipes from Tails, and add &quot;toram&quot; to the boot parameters.&nbsp; &nbsp; I suspect it&#039;d require &gt;8GB RAM, and persistent storage would require dmcrypt-wrapped virtual disks to attach to both sides to store configs, keys, entry guards, etc.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1496300#msg1496300">Quote from: astor on August 27, 2013, 07:18 pm</a></div></div><blockquote class="bbc_standard_quote"> <br />Supposedly, you can install Qubes on a thumb drive, so it can be a leave-no-trace-behind operating system, but I don&#039;t know anyone who has done it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Wow.. I&#039;m guessing whoever tried it is still waiting for it to finish booting. :)<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 31, 2013, 06:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1506592#msg1506592">Quote from: ECC_ROT13 on August 31, 2013, 05:26 am</a></div></div><blockquote class="bbc_standard_quote">You&#039;re exactly right.&nbsp; &nbsp;What everyone wants is Tails meets Qubes.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I would also love to see a Qubes Server Edition, basically Qubes without the GUI, and instead of choosing between KDE or Xfce, you could choose web and database servers which would be VM isolated. Add a TorVM and you have a highly secure, out of the box solution for hidden services.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">USB-bootable Whonix (possibly with Tor running on host OS and not in separate VM) is probably the easiest thing to cobble together without very significant effort.&nbsp; <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Bazille has a tutorial that does pretty much that, except with a custom VM.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1496300#msg1496300">Quote from: astor on August 27, 2013, 07:18 pm</a></div></div><blockquote class="bbc_alternate_quote"> <br />Supposedly, you can install Qubes on a thumb drive, so it can be a leave-no-trace-behind operating system, but I don&#039;t know anyone who has done it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Wow.. I&#039;m guessing whoever tried it is still waiting for it to finish booting. :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />LOL.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>August 31, 2013, 10:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The USB sticks in my tutorials are not bootable though. I will create a tutorial how to install Whonix on a partly encrypted live (bootable) Xubuntu stick soon. 8GB quality (fast) USB stick and 4GB RAM is enough.&nbsp; With it you&#039;d have the portability of persistent Tails with the additional protection of an (software) isolated virtual machine and Tor entry guards. Speed is acceptable with fast USB2 sticks.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">USB-bootable Whonix (possibly with Tor running on host OS and not in separate VM)</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I suggest using the Whonix gateway in a virtual machine instead, unless you intend to install the Whonix gateway as host OS. It can be quite some work to make a fresh install of a Linux distro as secure and hardly fingerprintable as the Whonix gateway.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 01, 2013, 01:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">I would also love to see a Qubes Server Edition, basically Qubes without the GUI, and instead of choosing between KDE or Xfce, you could choose web and database servers which would be VM isolated. Add a TorVM and you have a highly secure, out of the box solution for hidden services.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />FreeBSD and OpenSolaris sound like they might interest you. You can configure TorVM with FreeBSD jails or OpenSolaris Zones. And also you can isolate everything you run, although you need to do it manually. You can upgrade all jails at the same time with FreeBSD as well. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Qubes Qubes Qubes</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>September 01, 2013, 08:05 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=207460.msg1507820#msg1507820">Quote from: kmfkewm on September 01, 2013, 01:41 am</a></div></div><blockquote class="bbc_standard_quote">FreeBSD and OpenSolaris sound like they might interest you. You can configure TorVM with FreeBSD jails or OpenSolaris Zones. And also you can isolate everything you run, although you need to do it manually. You can upgrade all jails at the same time with FreeBSD as well.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>It&#039;s been a few years since I tried FreeBSD jails, but they were perfect for easily isolating components.&nbsp; &nbsp;Do you know if they support a virtual network interface (and virtual networking) to keep the jailed instance unable to discover its real IP (and network past a filtered gateway), or are they still aliasing to the physical adapter?&nbsp; 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=199593.0" />
+		<title>Print Page - Tails .20 - anyone else having problems</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: tbart on August 10, 2013, 01:00 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>tbart</strong> on <strong>August 10, 2013, 01:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				downloaded it and followed FallKniven&#039;s instructions to a &quot;T&quot; to install it to the first USB drive - computer will not boot up on it (it did fine on Tails .19), tried burning it to a DVD to burn to the usb drive, but same thing, it will not boot from the DVD<br /><br />downloaded it a 2nd time, reburnt it to the USB drive using the USB Universal installer, and still getting a window error msg that a file is missing from boot records (paraphrasing the msg)<br /><br />anyone had success with it??
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>comsec</strong> on <strong>August 10, 2013, 01:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				Ask on their IRC channel<br />server: irc.oftc.net<br />port: 6697<br />chatroom: #tails<br /><br />Could be a new problem, they often have booting problems with certain hardware and updates if you check their known issues page and buglist. <br /><br />Can also download Vmware or Virtualbox and run Tails .ISO you downloaded on it to confirm it&#039;s not a hardware issue (if it doesn&#039;t boot there either)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>tbart</strong> on <strong>August 10, 2013, 03:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				thanks for the suggestion - turns out they do have quite a few hardware related issues <br /><br />but in going back thru FallKniven&#039;s tutorial, i went to bootice, and from there found a link to use &quot;infra-recorder&quot; to burn TAILS to the dvd - i remembered in that 12-15 hours session that&#039;s what had gotten my computer to recognize TAILS on boot - and it worked this time as well, so suspect my sony has some hardware issues with TAILS <br /><br />working fine now<br /><br />again, tks
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>livestr0ng</strong> on <strong>August 10, 2013, 09:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				Does anyone know how to verify the signature when downloading the new ISO? The TAILS site only briefly mentions it. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>Yoda</strong> on <strong>August 10, 2013, 10:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=199593.msg1434514#msg1434514">Quote from: livestr0ng on August 10, 2013, 09:42 am</a></div></div><blockquote class="bbc_standard_quote">Does anyone know how to verify the signature when downloading the new ISO? The TAILS site only briefly mentions it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You first need to put the Tails developers signing key on your keyring... then you would need to sign it (could be as simple as right clicking the key and selecting sign).&nbsp; <br /><br />Download Tails and the Tails signature file just below it to the same folder.&nbsp; Once finished, depending on your gpg program...&nbsp; you&#039;d select the newly downloaded Tails and command your gpg to verify it using the sig file next to it.&nbsp; Like if you&#039;re using gpg4win/Kleopatra; all you&#039;d have to do is right click on Tails and select verify. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>HeatFireFlame</strong> on <strong>August 10, 2013, 10:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				No it worked absolutely fine for me. <br />I was going to do it yestrday but had no blank discs so i had to borrow one from someone.<br />I burned the ISO image to a DVD-R disk, Booted up from the disk. Went to Applications - Tails - Tails USB installer, And at this point inserted by USB with the old tails 0.19 on it, and clicked clone and upgrade, This way it also keeps your persistent volume intact. <br /><br />And that was it, All working fine :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>shermanhex4sun</strong> on <strong>August 10, 2013, 10:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=199593.msg1434561#msg1434561">Quote from: HeatFireFlame on August 10, 2013, 10:20 am</a></div></div><blockquote class="bbc_standard_quote">No it worked absolutely fine for me. <br />I was going to do it yestrday but had no blank discs so i had to borrow one from someone.<br />I burned the ISO image to a DVD-R disk, Booted up from the disk. Went to Applications - Tails - Tails USB installer, And at this point inserted by USB with the old tails 0.19 on it, and clicked clone and upgrade, This way it also keeps your persistent volume intact. <br /><br />And that was it, All working fine :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />same here. no problems. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>livestr0ng</strong> on <strong>August 10, 2013, 08:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=199593.msg1434553#msg1434553">Quote from: Yoda on August 10, 2013, 10:13 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=199593.msg1434514#msg1434514">Quote from: livestr0ng on August 10, 2013, 09:42 am</a></div></div><blockquote class="bbc_alternate_quote">Does anyone know how to verify the signature when downloading the new ISO? The TAILS site only briefly mentions it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You first need to put the Tails developers signing key on your keyring... then you would need to sign it (could be as simple as right clicking the key and selecting sign).&nbsp; <br /><br />Download Tails and the Tails signature file just below it to the same folder.&nbsp; Once finished, depending on your gpg program...&nbsp; you&#039;d select the newly downloaded Tails and command your gpg to verify it using the sig file next to it.&nbsp; Like if you&#039;re using gpg4win/Kleopatra; all you&#039;d have to do is right click on Tails and select verify.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Awesome thanks!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>livestr0ng</strong> on <strong>August 10, 2013, 08:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				My shit is fucked&nbsp; &gt;:(. I spent about 2 hours last night trying to update to tails .20<br /><br />I have two flash drives both with TAILS on them. I tried upgrading but it&#039;d get to the end and say it couldn&#039;t overwrite the Live OS on the flash drive (that&#039;s the flashdrive I don&#039;t use with no persistent volume). Now that flashdrive that couldn&#039;t be overwritten doesn&#039;t work (I plug it in, select it, but it won&#039;t bring up TAILS how it&#039;s supposed to). Of course, on my normal desktop, it&#039;s not recognized as having any information on it. Is there a way I could format it and start all over then just clone and install it the other flash drive (the one I use with persistence)? <br /><br />I&#039;m compleley at a loss. Any help would be very appreciated. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>TMan99</strong> on <strong>August 10, 2013, 09:18 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=199593.msg1436136#msg1436136">Quote from: livestr0ng on August 10, 2013, 08:38 pm</a></div></div><blockquote class="bbc_standard_quote">My shit is fucked&nbsp; &gt;:(. I spent about 2 hours last night trying to update to tails .20<br /><br />I have two flash drives both with TAILS on them. I tried upgrading but it&#039;d get to the end and say it couldn&#039;t overwrite the Live OS on the flash drive (that&#039;s the flashdrive I don&#039;t use with no persistent volume). Now that flashdrive that couldn&#039;t be overwritten doesn&#039;t work (I plug it in, select it, but it won&#039;t bring up TAILS how it&#039;s supposed to). Of course, on my normal desktop, it&#039;s not recognized as having any information on it. Is there a way I could format it and start all over then just clone and install it the other flash drive (the one I use with persistence)? <br /><br />I&#039;m compleley at a loss. Any help would be very appreciated.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I find it easiest to burn to a CD first and then upgrading the USB flash drive.<br /><br />Downloading to the CD is pretty simple. Just follow the instructions on the site, otherwise you can ask me and I can help out.<br /><br />To verify the ISO image, make sure you download the ISO image on FIREFOX (If you are on windows). That is the easiest way to verify the ISO image, the instructions on that are clear and simple. <br /><br />1. Download ISO Image on Firefox<br />2. Download program to check ISO image<br />3. Download CD Burner on Ubantu document (I tried burning on my regualr CD burner and it did not work)<br />4. Check ISO image.<br />5. Burn<br /><br />Then when you get on you can easily upgrade the USB drive.<br /><br />Good luck
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>boosties</strong> on <strong>August 11, 2013, 12:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				For some reason with .20 I was not able to boot from the DVD like previously done.<br />So I just got another usb cloned the running .19version onto it and updated via USB installer to .20<br />then re-started with new one and updated original. This way I also have a back up. took a little while though.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>zandermanreturns</strong> on <strong>August 11, 2013, 12:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				I just got around to installing tails on my usb. amazing how damn easy it was. Had to download bootice to change format on usb but after that, blam done and done. Heres a question, what is this pop up i get when signing into SR or the forums?<br />&nbsp;<br />The information you have entered is to be sent over an unencrypted connection and could easily be read by a third party.<br /><br />Are you sure you want to continue sending this information?<br /><br />Is there something i did not do? such a dis-concerning message, any insight would be helpful&nbsp; :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>boosties</strong> on <strong>August 11, 2013, 02:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				It is because you are not running a virtual machine or a VPN. ^^^^
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>livestr0ng</strong> on <strong>August 11, 2013, 03:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=199593.msg1436859#msg1436859">Quote from: zandermanreturns on August 11, 2013, 12:33 am</a></div></div><blockquote class="bbc_standard_quote">I just got around to installing tails on my usb. amazing how damn easy it was. Had to download bootice to change format on usb but after that, blam done and done. Heres a question, what is this pop up i get when signing into SR or the forums?<br />&nbsp;<br />The information you have entered is to be sent over an unencrypted connection and could easily be read by a third party.<br /><br />Are you sure you want to continue sending this information?<br /><br />Is there something i did not do? such a dis-concerning message, any insight would be helpful&nbsp; :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>you can ignore it and its fine
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>zandermanreturns</strong> on <strong>August 11, 2013, 05:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=199593.msg1437147#msg1437147">Quote from: boosties on August 11, 2013, 02:26 am</a></div></div><blockquote class="bbc_standard_quote">It is because you are not running a virtual machine or a VPN. ^^^^<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />not super tech savvy but i have seen both of the above mentioned alot. Something to further increase security? Layman&#039;s information would be helpful about either one and where to start if indeed i can or need to take the next step.&nbsp; :) <br />Windows 7
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>livestr0ng</strong> on <strong>August 11, 2013, 06:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=199593.msg1436236#msg1436236">Quote from: TMan99 on August 10, 2013, 09:18 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=199593.msg1436136#msg1436136">Quote from: livestr0ng on August 10, 2013, 08:38 pm</a></div></div><blockquote class="bbc_alternate_quote">My shit is fucked&nbsp; &gt;:(. I spent about 2 hours last night trying to update to tails .20<br /><br />I have two flash drives both with TAILS on them. I tried upgrading but it&#039;d get to the end and say it couldn&#039;t overwrite the Live OS on the flash drive (that&#039;s the flashdrive I don&#039;t use with no persistent volume). Now that flashdrive that couldn&#039;t be overwritten doesn&#039;t work (I plug it in, select it, but it won&#039;t bring up TAILS how it&#039;s supposed to). Of course, on my normal desktop, it&#039;s not recognized as having any information on it. Is there a way I could format it and start all over then just clone and install it the other flash drive (the one I use with persistence)? <br /><br />I&#039;m compleley at a loss. Any help would be very appreciated.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I find it easiest to burn to a CD first and then upgrading the USB flash drive.<br /><br />Downloading to the CD is pretty simple. Just follow the instructions on the site, otherwise you can ask me and I can help out.<br /><br />To verify the ISO image, make sure you download the ISO image on FIREFOX (If you are on windows). That is the easiest way to verify the ISO image, the instructions on that are clear and simple. <br /><br />1. Download ISO Image on Firefox<br />2. Download program to check ISO image<br />3. Download CD Burner on Ubantu document (I tried burning on my regualr CD burner and it did not work)<br />4. Check ISO image.<br />5. Burn<br /><br />Then when you get on you can easily upgrade the USB drive.<br /><br />Good luck<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Thank you! I think I just found that the issue is that there isn&#039;t enough room on the non-persistent USB. It&#039;s weird because I&#039;ve definitely ran TAILS from it before but whatever. Upon trying to clone and install TAILS 0.19 (again) to it, I got a message saying there isn&#039;t enough room on it. It&#039;s 2.1 GB so I&#039;m going to get one with more memory ASAP. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails .20 - anyone else having problems</strong><br />
+				Post by: <strong>boosties</strong> on <strong>August 11, 2013, 03:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=199593.msg1437503#msg1437503">Quote from: zandermanreturns on August 11, 2013, 05:06 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=199593.msg1437147#msg1437147">Quote from: boosties on August 11, 2013, 02:26 am</a></div></div><blockquote class="bbc_alternate_quote">It is because you are not running a virtual machine or a VPN. ^^^^<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />not super tech savvy but i have seen both of the above mentioned alot. Something to further increase security? Layman&#039;s information would be helpful about either one and where to start if indeed i can or need to take the next step.&nbsp; :) <br />Windows 7<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div> A VPN is a service that you connect to first before connecting to the main internet. so you connect <br />to their servers first, through their servers you can now connect to the internet and all of your traffic <br />is encrypted. use the search there was a thread that listing best VPN services for 2013. As for the VM <br />I dont know as much about them as I dont run one. But from what I understand its a sandbox that <br />has it&#039;s own IP separate from your computer. so the virtual monitor looks like a cpu but with a different ip<br />Not sure if thats 100% correct about the VM. I am sure someone will correct me if I am wrong.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=2004.0" />
+		<title>Print Page - How to speed up TOR: A Cure for Dropped Pages?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Freeman on August 16, 2011, 10:47 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>How to speed up TOR: A Cure for Dropped Pages?</strong><br />
+				Post by: <strong>Freeman</strong> on <strong>August 16, 2011, 10:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve had a lot of problems with page timeouts.&nbsp; Sometimes it&#039;s better and sometimes it&#039;s worse.&nbsp; In spite of having the fastest residential Internet connection I can get, I spend 2x-3x as much time on SR as is required for my business here due to reloading pages 10 times just to send a message.&nbsp; However, I found this solution and it seems to help quite a bit.&nbsp; I&#039;ve just performed the mod and haven&#039;t had any issues since.&nbsp; Hope this helps someone else.&nbsp; The forum post is dated, so if someone knows a better recent solution, then hit me up.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">If you use TOR, you probably have experienced slow connections sometimes. Below, I&#039;ll attempt to give instructions to speed up TOR.<br /><br />First thing is you will need to have Vidalia bundle installed. (obviously)<br /><br />Next, double-click the icon for Vidalia Control Panel in your task bar. This should bring up the Vidalia Control Panel<br /><br />Click on &quot;settings&quot; to bring up the settings screen.<br />Click on the &quot;Advanced&quot; button to bring up that tab.<br />Take not of the path to the &quot;Tor Configuration File&quot;.<br />Go to that location and open up the &quot;torrc&quot;.<br /><br />***Alternative to the above instructions***<br />Go to START - PROGRAMS - VIDALIA BUNDLE - TOR - TORRC<br /><br />This will open up the Torrc in notepad.<br /><br />******<br />Make a backup of torrc before editing.<br /><br />After you get the torrc open, at the end of it, paste the following code:<br /><br />Code:<br /># Try for at most NUM seconds when building circuits. If the circuit isn&#039;t<br /># open in that time, give up on it. (Default: 1 minute.)<br />CircuitBuildTimeout 5<br /># Send a padding cell every N seconds to keep firewalls from closing our<br /># connections while Tor is not in use.<br />KeepalivePeriod 60<br /># Force Tor to consider whether to build a new circuit every NUM seconds.<br />NewCircuitPeriod 15<br /># How many entry guards should we keep at a time?<br />NumEntryGuards 8<br />Go back to the Vidalia Control Panel from the task bar and click Stop Tor, then Start Tor. This will restart Tor</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />source - http://www.blackhatworld.com/blackhat-seo/proxies/3349-speeding-up-tor.html
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How to speed up TOR: A Cure for Dropped Pages?</strong><br />
+				Post by: <strong>OneOfMany</strong> on <strong>August 16, 2011, 10:24 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m not saying this is a bad idea necessarily, but you should be aware that some of those changes, may reduce your security somewhat. I&#039;m don&#039;t really have the deep technical knowledge required to say exactly how much. But raising the entry guard count for example increases the chance that one of them will be malicious.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How to speed up TOR: A Cure for Dropped Pages?</strong><br />
+				Post by: <strong>Freeman</strong> on <strong>August 17, 2011, 12:12 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=2004.msg16988#msg16988">Quote from: OneOfMany on August 16, 2011, 10:24 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;m not saying this is a bad idea necessarily, but you should be aware that some of those changes, may reduce your security somewhat. I&#039;m don&#039;t really have the deep technical knowledge required to say exactly how much. But raising the entry guard count for example increases the chance that one of them will be malicious.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thanks for the heads-up.&nbsp; Can anyone with more technical savvy look at that code and see if there are any problems?
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

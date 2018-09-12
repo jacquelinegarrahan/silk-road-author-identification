@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=4055.0" />
+		<title>Print Page - Local privacy with Tor</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Diamond on October 11, 2011, 02:59 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Local privacy with Tor</strong><br />
+				Post by: <strong>Diamond</strong> on <strong>October 11, 2011, 02:59 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hello all! I&#039;ve got a simple question regarding where privacy on Tor &quot;starts&quot;; I&#039;m hoping some of you security/privacy minded people might have the answer.<br /><br />Essentially, what I want to know is if an attacker on the same network as me (someone tapped into my WLAN or LAN for instance, or maybe a public WiFi if I have no other alternative) can see:<br />&nbsp;- That I&#039;m using Tor<br />&nbsp;- Can see my traffic to and from the Tor network (both the destination and data)<br /><br />When my Tor configured application or browser sends a data or request, what can someone on the network see? I *think* that the browser sends the request to the localhost as a proxy, and the data is then routed through whatever application made the Tor connection (like Vidalia) and then the request gets bounced through to the exit node (where data is NOT safe). I would *think* that they would a request from my machine to the first node, if anything.<br /><br />This assumes, of course, that my machine is not compromised. I&#039;m thinking, for example, of attacks from network admins, the FBI party van connected to my WLAN, or a public WiFi snoop.<br /><br />I understand the concept of Tor, just not the exact path of the data before it gets encrypted and leaves for the first node. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Local privacy with Tor</strong><br />
+				Post by: <strong>CrunchyFrog</strong> on <strong>October 12, 2011, 05:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote from: Diamond</div></div><blockquote class="bbc_standard_quote">...if an attacker on the same network as me (someone tapped into my WLAN or LAN for instance, or maybe a public WiFi if I have no other alternative) can [s/he] see:<br />- That I&#039;m using Tor...</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Possibly, if the attacker is capable of performing deep packet inspection [ https://secure.wikimedia.org/wikipedia/en/wiki/Deep_packet_inspection ] and knows what to look for.&nbsp; The Iranian government is believed to have done this recently in an (ultimately unsuccessful) attempt to block Tor traffic [ https://blog.torproject.org/blog/iran-blocks-tor-tor-releases-same-day-fix ].<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote from: Diamond</div></div><blockquote class="bbc_standard_quote">...- Can see my traffic to and from the Tor network (both the destination and data)...</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>If everything is working as intended, they would see only the address of the first relay (of three) and encrypted traffic flowing between it and you.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Local privacy with Tor</strong><br />
+				Post by: <strong>CrunchyFrog</strong> on <strong>October 12, 2011, 06:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				One other thing that I forgot to mention: lists of Tor relays are published and continuously updated by the Tor Project and others [ https://torstatus.blutmagie.de ], so seeing you connect to an address on that list would be pretty much a dead giveaway.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Local privacy with Tor</strong><br />
+				Post by: <strong>Paperchasing</strong> on <strong>October 12, 2011, 06:45 am</strong>
+			</dt>
+			<dd class="postbody">
+				https://www.torproject.org/about/overview.html.en<br />&nbsp; <br />Best solution to connecting to tor is using a prepaid throwaway usb tethered to your system (preferably a laptop that you drive around with while your using tor or go to some other place than your home)&nbsp; I can hear them now - &quot;Sir...&nbsp; ummm we tracked them down, their everywhere...&quot;&nbsp; Change throwaways now and then based on your threat analysis (how bad you think they may be looking to find you)<br /><br />Paperchasing
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Local privacy with Tor</strong><br />
+				Post by: <strong>Diamond</strong> on <strong>October 12, 2011, 05:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote from: CrunchyFrog</div></div><blockquote class="bbc_standard_quote">Possibly, if the attacker is capable of performing deep packet inspection...</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Thanks, that&#039;s something I will keep in mind. I actually started reading about that last night on Poly|Front, I understand that DPI is a capability of many attackers, just not sure how it works (and understanding how it works is the first step to circumventing it!) I&#039;m not TOO concerned with that regarding my activity yet, but it&#039;s on my list of potential holes.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote from: CrunchyFrog</div></div><blockquote class="bbc_standard_quote">If everything is working as intended, they would see only the address of the first relay (of three) and encrypted traffic flowing between it and you</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Ok, that&#039;s good to know and it&#039;s my main concern for now. Just wasn&#039;t sure what traffic looked like when it exited my machine into the network.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=4055.msg34209#msg34209">Quote from: CrunchyFrog on October 12, 2011, 06:17 am</a></div></div><blockquote class="bbc_standard_quote">...lists of Tor relays are published and continuously updated by the Tor Project...</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Good to know. Is it just me or does that seem like a big potential flaw in the system? What&#039;s to stop Iran from just blocking that IP list? (Not that I know a better way to do it.)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Local privacy with Tor</strong><br />
+				Post by: <strong>Diamond</strong> on <strong>October 12, 2011, 05:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=4055.msg34217#msg34217">Quote from: Paperchasing on October 12, 2011, 06:45 am</a></div></div><blockquote class="bbc_standard_quote">Best solution to connecting to tor is using a prepaid throwaway usb tethered to your system ...</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;ve considered this as well. I have a a &quot;throwaway computer&quot; in a sense that I can use for all of my Tor activity as well (itself running through an encrypted sandbox), if it ever come to something so drastic. <br /><br />Thanks for the help guys!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Local privacy with Tor</strong><br />
+				Post by: <strong>CrunchyFrog</strong> on <strong>October 19, 2011, 04:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=4055.msg34289#msg34289">Quote from: Diamond on October 12, 2011, 05:44 pm</a></div></div><blockquote class="bbc_standard_quote">...What&#039;s to stop Iran from just blocking that IP list?...</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Nothing at all.&nbsp; But that&#039;s where &quot;bridge&quot; relays come in handy; only a very few of them are publicly known at any given time.&nbsp; Many are operated by people with friends living in repressive countries and would be known only to those friends.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Local privacy with Tor</strong><br />
+				Post by: <strong>Diamond</strong> on <strong>October 19, 2011, 06:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=4055.msg34744#msg34744">Quote from: CrunchyFrog on October 19, 2011, 04:06 am</a></div></div><blockquote class="bbc_standard_quote">Nothing at all.&nbsp; But that&#039;s where &quot;bridge&quot; relays come in handy; only a very few of them are publicly known at any given time.&nbsp; Many are operated by people with friends living in repressive countries and would be known only to those friends.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Oh ok, I didn&#039;t quite understand how those worked. So the bridge relay acts as a sort of secondary entry into the Network.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

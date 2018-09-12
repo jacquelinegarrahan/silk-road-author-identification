@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=202408.0" />
+		<title>Print Page - Android crypto flaw results in $5,700 Bitcoin theft</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: StaticTension on August 15, 2013, 10:43 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Android crypto flaw results in $5,700 Bitcoin theft</strong><br />
+				Post by: <strong>StaticTension</strong> on <strong>August 15, 2013, 10:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				A serious weakness used in the Java Crypto algorithm used on Android devices. If your using a a wallet on your phone or any tablet using Android this affects you:<br /><br />Clearnet: http://arstechnica.com/security/2013/08/google-confirms-critical-android-crypto-flaw-used-in-5700-bitcoin-heist/<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Google developers have confirmed a cryptographic vulnerability in the Android operating system that researchers say could generate serious security glitches on hundreds of thousands of end-user apps, many of them used to make Bitcoin transactions.<br /><br />This weakness in Android&#039;s Java Cryptography Architecture is the root cause of a Bitcoin transaction that reportedly was exploited to pilfer about $5,720 worth of bitcoins out of a digital wallet last week. The disclosure, included in a blog post published Wednesday by Google security engineer Alex Klyubin, was the first official confirmation of the Android vulnerability since Ars and others reported the incident last weekend. Klyubin warned that other apps might also be compromised unless developers change the way they access so-called PRNGs, short for pseudo random number generators.<br /><br />&quot;We have now determined that applications which use the Java Cryptography Architecture (JCA) for key generation, signing, or random number generation may not receive cryptographically strong values on Android devices due to improper initialization of the underlying PRNG,&quot; he wrote. &quot;Applications that directly invoke the system-provided OpenSSL PRNG without explicit initialization on Android are also affected.&quot; Apps that establish encrypted connections using the HttpClient and java.net classes aren&#039;t vulnerable.<br /><br />The confirmation came a few hours after researchers from security firm Symantec warned that hundreds of thousands of Android apps may be affected by the vulnerability. By Symantec&#039;s count, as many as 360,000 programs rely on the SecureRandom, which is one of the programming services for generating random numbers provided by the JCA. Contrary to many earlier reports, the flaw affects all versions of Android, not just 4.2 and earlier, Android Security Engineer Adrian Ludwig told Ars.<br /><br />&quot;Call me the tumblin&#039; dice&quot;<br /><br />PRNGs ensure that computers produce long numbers that are impossible to predict ahead of time and are a core requirement in many cryptographic applications. They&#039;re akin to the shakers used by board game players to make sure dice don&#039;t land in predictable patterns. Among other things, the random numbers PRNGs produce help ensure that the secret keys used to encrypt or digitally sign data can&#039;t be cracked easily.<br /><br />The Android apps that were exploited in the recent Bitcoin thefts may have signed multiple transactions using an identical number the apps presumed was random, Symantec researchers said in their blog post. &quot;Since transactions are public on the Bitcoin network, attackers scanned the transaction block chain looking for these particular transactions to retrieve the private key and transfer funds from the Bitcoin wallet without the owner’s consent.&quot;<br /><br />Wednesday&#039;s blog post from Google recommended developers update all apps that use JCA to &quot;explicitly initialize the PRNG with entropy from /dev/urandom or /dev/random.&quot; The advisory went on to suggest developers consider regenerating cryptographic keys or other random values that were previously generated using JCA programming interfaces including SecureRandom, KeyGenerator, KeyPairGenerator, KeyAgreement, and Signature. It also provided example code for implementing the suggestions.<br /><br />The post said Google developers have delivered patches to handset manufacturers but gave no indication when those updates may find their way onto end-user devices. Instead, the post emphasized the steps third-party developers should take to ensure their Android software. At least four Bitcoin wallets have already been updated to close the vulnerability, according to a Bitcoin advisory that was updated Tuesday. It wouldn&#039;t be surprising to see many more apps follow suit in the next few days.<br />[/quote/<br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

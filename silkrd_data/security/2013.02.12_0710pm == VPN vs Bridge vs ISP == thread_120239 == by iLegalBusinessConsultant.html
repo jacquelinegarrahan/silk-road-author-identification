@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=120239.0" />
+		<title>Print Page - VPN vs Bridge vs ISP</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: iLegalBusinessConsultant on February 12, 2013, 07:10 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>iLegalBusinessConsultant</strong> on <strong>February 12, 2013, 07:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve read a lot of threads on the forums discussing the use accessing TOR via a VPN or a bridge and I am confused. There have been lots of differing opinions on both sides of the aisle on whether one should use a VPN to connect to TOR or use a bridge to connect to TOR or simply using your regular ISP to connect to TOR is enough. <br /><br />Could we get a definitive answer to this debate? What is the best way to anonymously connect to TOR so that no one can see that you are connecting to TOR at the connection point? Please look at it from a SR buyer perspective and a SR vendor perspective, where the risks are much greater. I, like many of the newbies are not tech people. A untechy explanation would be greatly appreciated. And I apologize if this debate opens up a whole can of worms&nbsp; :P but I just would like to get a definitive answer to the whole question of how to not be seen connecting to TOR. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>astor</strong> on <strong>February 13, 2013, 01:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				Neither a bridge nor a VPN offer perfect security, because<br /><br />1. Bridges can be identified (although it is difficult to enumerate all of them because of the way they are distributed)<br /><br />2. VPNs can see your entire connection, who you are (your IP address) and where you&#039;re going (the destination IP address). Even if they don&#039;t log right now, they could be compelled by LE to log your activity.<br /><br />However, the way to look at it is that each piece offers an additional layer of security.<br /><br />So, VPN + bridge + Tor &gt; bridge + Tor&nbsp; or&nbsp; VPN + Tor &gt; just Tor<br /><br />For the best (but not perfect) hiding of your Tor activity, get a VPN in a foreign country (to maximize jurisdictional issues), AND configure your Tor client to use an obfsproxy bridge.<br /><br /><br />Actually, there&#039;s an even better solution, but it&#039;s more difficult to implement. Rent a VPS anonymously in another country and turn it into a private (unpublished) obfsproxy bridge. Someone watching your local internet connection won&#039;t know what the hell it is. It won&#039;t show up in the list of bridges if they enumerate those, and won&#039;t show up as a known VPN or proxy provider. The connection won&#039;t even look like a Tor connection (although the hand shake will, at least until obfs3 comes out). It will simply look like a box at a random hosting provider.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>February 13, 2013, 01:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				Actually the risks are much greater for a vendor who has more to lose and whose location can be gleaned through correlation attacks.<br /><br />That aside using a bridge doesnt hide the fact you are connected to tor because simple protocol analysis can determine that you are still sending tor traffic, and bridges are publicly broadcasted. Using a VPN *can* hide tor usage because it usually offers an end to end encrypted tunnel, that is instead of connecting directly to the tor servers, you initiate a encrypted connection to a VPN (a paid proxy) who then send your connection on through tor. At that first hop between you&lt;-&gt;ISP&lt;-&gt;VPN not only if your tor data encrypted via tor (the data you are trying to keep secret), but that encrypted connection is encrypted through the VPN. At this point the VPN wont offer you better protection from traffic analysis as you are essentially &quot;double bagging&quot;, but it does cover the most obvious &quot;hey look im connecting to tor&quot; signals you initially send out when you connect to tor.<br />&nbsp;<br />Now lets say were talking specifically about connecting to hidden services, whereas connecting to a clearnet site opens you open to possible MitM attacks from exit nodes snooping in on unencrypted traffic, or redirecting you to spoof sites, or governments spoofing SSL certs to snoop in on your https traffic...connecting to a hidden service doesnt involve exit nodes, therefore your traffic stays encrypted throughout the chain and isnt subject to spoofing or snooping. It also frees you from timing attacks, that is assuming the hidden service your connecting to isnt controlled by a global adversary, for instance if you connected to a clearnet site the owner of said site could be made to give up server logs and then it could be correlated that you (assuming you are the target of investigation at this point) sent a request via tor and shortly thereafter a request was received at the site through an exit node, but hidden services are often just that, hidden, and the likelihood of the sites operator being an adversary or being found and compelled to give up server logs is unlikely, and even then would only be circumstantial evidence as part of a larger case.<br /><br />The only other option besides VPN&#039;s for masking tor usage is a project called obfsproxy which aims to combine the use of bridges (once again a deeply flawed strategy) with protocol obfuscation, that is making tor look more like http traffic. Its still in its early stages and not being a security researcher have no idea how one would prove its effectiveness. This i assume would require some in depth knowledge on ISP&#039;s deep packet inspection technologies and protocol analysis techniques.<br /><br />Here, this graphic helps in understanding the flow of tor, just imagine the VPN in this case is an additional encrypted proxy that sits between you and the first first relay (technically between your isp and the first relay but traffic is still destined towards the VPN in the ISP&#039;s eyes instead of tor).<br /><br />https://www.eff.org/pages/tor-and-https
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>February 13, 2013, 01:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote"> 2. VPNs can see your entire connection, who you are (your IP address) and where you&#039;re going (the destination IP address). Even if they don&#039;t log right now, they could be compelled by LE to log your activity.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Correct me if im mistaken, but when you send data from tor its already encrypted as not to reveal its contents. Yes the VPN *can* see your IP, and they can see that you&#039;re trying to connect to tor, but they CANT see what you are trying to send or where you&#039;re trying to send it to, else if that were possible then your ISP could snoop on the entire session and there would be no point in using tor. The only point in having a VPN is to keep your ISP from knowing the next location you are trying to connect to (ie tor). Ironically Tor works in the same way, just no so effectively as to keep your ISP/VPN/Whatever from knowing that you&#039;re using it. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">For the best (but not perfect) hiding of your Tor activity, get a VPN in a foreign country (to maximize jurisdictional issues), AND configure your Tor client to use an obfsproxy bridge.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Congratulations, you just suggested a 5-hop proxy circuit. Why stop there, you could rent out 100 VPN&#039;s in every country hostile to yours and make it super difficult for anyone to locate the source of the connection, and by the time they figured it out your first packet would have just made it through. Tor was made as to get past the age old method of proxy chaining (the same method botnet owners use to control their botnets anonymously), and without having to sacrifice ones sanity waiting for the connection to go through. <br /><br />Once again, the only reason to use a VPN is because you dont trust your ISP not to collude with your government and want to shift that risk onto an VPN that might be less than willing to comply. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>astor</strong> on <strong>February 13, 2013, 01:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yes, but my point is that if you&#039;re trying to hide the fact that you&#039;re using Tor, a VPN adds a layer of obfuscation, but a determined adversary can still get around it.<br /><br />They look at your internet connection and see you connecting to a VPN provider in Sweden. They contact Swedish LE who send a request to log your activity. They get logs which show you are connecting to Tor relays.<br /><br />That may not be your threat model. Maybe LE doesn&#039;t want to put the work into figuring out what you are accessing through that VPN if it means spending months negotiating with foreign LE. Maybe they ordered packages from you (an SR vendor) which were postmarked in your town, so they asked your ISP for accounts that were accessing Tor, and naturally since you were using a VPN, your account info was not turned over. Maybe that lead them to waste time investigating other people. <br /><br />Each layer is a barrier that makes LE&#039;s job harder, but keep in mind my original point. It&#039;s not a perfect solution and a determined adversary, especially with the force of the state behind it, can get around a VPN.<br /><br />Just ask those Anonymous guys who were using HideMyAss.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>astor</strong> on <strong>February 13, 2013, 01:48 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=120239.msg819556#msg819556">Quote from: masterblaster on February 13, 2013, 01:41 am</a></div></div><blockquote class="bbc_standard_quote">Congratulations, you just suggested a 5-hop proxy circuit. Why stop there, you could rent out 100 VPN&#039;s in every country hostile to yours and make it super difficult for anyone to locate the source of the connection, and by the time they figured it out your first packet would have just made it through. Tor was made as to get past the age old method of proxy chaining (the same method botnet owners use to control their botnets anonymously), and without having to sacrifice ones sanity waiting for the connection to go through. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It&#039;s interesting that you mention that, because Tor Project member Jacob Appelbaum, who has a well known state adversary, has admitted to using multiple layered VPNs to access Tor.<br /><br />Again, depends on your threat model. LE is unlikely to spend as much resources on a low level drug dealer as on an associate of Julian Assange.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>February 13, 2013, 03:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				While we&#039;re discussing VPN&#039;s, which countries are favorable to find one in, that are known not to cooperate with US/UK authorities?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>420SLINGER</strong> on <strong>February 13, 2013, 03:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				what about using a mobile mi-fi devices you can buy them with no contract (anonymous) <br /><br />I use one with a smart phone loaded with a free wi-fi phone service cost me (not including the PH) 120 bucks for 6 months worth unlimited calling and internet no contract<br />\<br />could (LE) some how trace the device to its location<br /><br />&nbsp;like a cell phone in the movies.<br /><br />I know you can trace cell phones but there are very few cases in the court where a drug dealer or buyer has been busted from cell phone tracking <br /><br />there are many cases of cell phone tapping <br /><br />but very few gps like tracking of cell phones and none of&nbsp; mi-fi&nbsp; (7 cases over past 5 years)<br /><br />??????????????????????????????????????????????????????????????????
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>February 13, 2013, 03:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">I use one with a smart phone loaded with a free wi-fi phone service cost me (not including the PH) 120 bucks for 6 months worth unlimited calling and internet no contract<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thats highly unlikely as you&#039;d be getting a better deal than most 2yr contract plans. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">could (LE) some how trace the device to its location<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />yes, its called cell tower triangulation, and they triangulate your loc as part of normal cell phone operation. They would do this to you if they wanted to find you and had reason to believe the phone was yours.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">what about using a mobile mi-fi devices you can buy them with no contract (anonymous) </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well there actually is a way to use tor anonymously, and this is part of it. You would get yourself a prepaid android phone with a data plan, then load up Orbot (tor for android) app on your phone. Not exactly secure in the sense of keeping it out of the wrongs hands but it would provide anonymity in its usage provided you didnt also use it to make drug calls. Definitely the more expensive way to go.<br /><br /><br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>420SLINGER</strong> on <strong>February 13, 2013, 04:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=120239.msg819905#msg819905">Quote from: masterblaster on February 13, 2013, 03:51 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">I use one with a smart phone loaded with a free wi-fi phone service cost me (not including the PH) 120 bucks for 6 months worth unlimited calling and internet no contract<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thats highly unlikely as you&#039;d be getting a better deal than most 2yr contract plans. NOPE GOOGLE VOICE WITH TALKATONE ALONG WITH A 3GB PRE-PAID CARD COST $50&nbsp; LAST ME 6 MONTHS I USE MY PH FOR EVEY THING <br /><br />EXCEPT SR<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">could (LE) some how trace the device to its location<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />yes, its called cell tower triangulation, and they triangulate your loc as part of normal cell phone operation. They would do this to you if they wanted to find you and had reason to believe the phone was yours. <br /><br />TALK A TONE USE ONE IP ADDRESS PER STATE FOR THERE FREE SERVICE THIS DOES NOT MAKE IT IMPOSSABLE BUT IT DOES MAKE IT A LOT HARDER THEN JUST TRIAGULATING THE SIGNAL AND YOU USE TOR ALONG WITH THE MI-FI WOULD THIS NOT ADD TO THE SECURITY<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">what about using a mobile mi-fi devices you can buy them with no contract (anonymous) </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well there actually is a way to use tor anonymously, and this is part of it. You would get yourself a prepaid android phone with a data plan, then load up Orbot (tor for android) app on your phone. Not exactly secure in the sense of keeping it out of the wrongs hands but it would provide anonymity in its usage provided you didnt also use it to make drug calls. Definitely the more expensive way to go.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />COULD YOU NOT DO THE SAME WITH THE MI-FI USING TOR
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>iLegalBusinessConsultant</strong> on <strong>February 14, 2013, 06:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				thanks for the great answers. So what I&#039;m getting out of this convo is that although there is no perfect way to hide the fact you are using TOR, in order to resonably put some extra steps between you and LE is to use a VPN in a country not friendly to your own, connect to TOR, but don&#039;t bother with bridges. Cool, so that will be my setup! Sorry I couldn&#039;t get a hold of the obsfproxy you guys were talking about. That&#039;s more of an advanced lesson I guess.<br /><br />Now what are you guys saying about this mi-fi? How could I get a disposable smart phone and connect to TOR using that? This would be like the equivalent of a street dealer and his throw away phone.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>February 14, 2013, 06:55 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yep, except everytime a dealer wants a new identity they have to buy a new phone, with tor you just have to click &quot;new identity&quot;. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>signal16</strong> on <strong>February 14, 2013, 09:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				yeah and i dont know about that orbot app for android, it isnt secure.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>XXXotica</strong> on <strong>February 14, 2013, 01:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Great thread!!!!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>February 15, 2013, 05:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=120239.msg823662#msg823662">Quote from: signal16 on February 14, 2013, 09:17 am</a></div></div><blockquote class="bbc_standard_quote">yeah and i dont know about that orbot app for android, it isnt secure.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />got any evidence?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>signal16</strong> on <strong>February 15, 2013, 09:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				i guess it depends on what browser your using, but i think dns leaks were a problem...?&nbsp; orbot wont do transparent on my rooted phone.&nbsp; and cant stand the orweb browser, not sure how secure opera is using tor, but its a better browser :/ <br />id just stick to tor browser bundles.&nbsp; open source of course :D<br /><br />edit:&nbsp; <br />&quot;Additionally, the Android web browser does not have Torbutton. This means that while it may be useful for circumvention, it probably is unsuitable for strong web browser anonymity requirements. &quot;<br /><br />https://www.torproject.org/docs/android.html.en&nbsp; &nbsp;<br />its at the bottom.<br /><br />and <br />&nbsp;&quot;We don&#039;t support IE, Opera or Safari and never plan to. There are too many ways that your privacy can go wrong with those browsers, and because of their closed design it is really hard for us to do anything to change these privacy problems.<br /><br />We are working with the Chrome people to modify Chrome&#039;s internals so that we can eventually support it. But for now, Firefox is the only safe choice. &quot;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>February 17, 2013, 05:39 am</strong>
+			</dt>
+			<dd class="postbody">
+				Well i wouldnt use a smart phone to browse the net as the screens are way too small, but im thinking using the gibberbot app to chat anon would be pretty sweet. And because it can do transparent proxying its actually more secure from leaks than most desktop configurations. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>February 18, 2013, 06:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				Found some more info on this:<br /><br />http://sourceforge.net/p/whonix/wiki/Tunnel_Tor_through_proxy_or_VPN_or_SSH/<br />https://trac.torproject.org/projects/tor/wiki/doc/TorPlusVPN
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>iLegalBusinessConsultant</strong> on <strong>February 19, 2013, 04:39 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=120239.msg835779#msg835779">Quote from: masterblaster on February 18, 2013, 06:07 am</a></div></div><blockquote class="bbc_standard_quote">Found some more info on this:<br /><br />http://sourceforge.net/p/whonix/wiki/Tunnel_Tor_through_proxy_or_VPN_or_SSH/<br />https://trac.torproject.org/projects/tor/wiki/doc/TorPlusVPN<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />great info! thx for all the help on using tor safely. hope you all had a great weekend. tripped on shrooms this weekend. fucking good trip. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN vs Bridge vs ISP</strong><br />
+				Post by: <strong>LionwareTradingCo</strong> on <strong>February 19, 2013, 10:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hello and thanks for the great info guys and gals.<br /><br />I have a question.<br /><br />I have a VPN /run Tor/ Windows&nbsp; and added a SOCK5 address to Vadalia.<br /><br />Any tips? Please.<br /><br />I was also wondering...If I dragged my torbrowser\data folder onto a disk would i be protecting myself?
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

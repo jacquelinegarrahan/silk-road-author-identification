@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=163576.0" />
+		<title>Print Page - Where does Tor Browser store bookmarks??</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Rastaman Vibration on May 24, 2013, 08:05 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Where does Tor Browser store bookmarks??</strong><br />
+				Post by: <strong>Rastaman Vibration</strong> on <strong>May 24, 2013, 08:05 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Does anyone know where Tor Browser stores bookmarks? Is it within the application or does it dump to a file somewhere?<br /><br />I&#039;m going back and cleaning up my computer from the mess I made in back in my utra-n00b days. When I first checked out SR, a friend showed it to me on my Mac that I use for work stuff.&nbsp; I thought it was fucking unreal and I bookmarked the site just for shits and giggles. This was WAY before I ever considered ordering from here. So I didn&#039;t know any better and bookmarked it.<br /><br />I&#039;ve since upgraded my security to say the least. I use TAILS now. But thats a different story.<br /><br />Now I&#039;m going back and cleaning out my Mac and deleting anything that could be incriminating. I&#039;ve deleted all the old versions of Tor (with the bookmarks) off it. Are there any other files I should be deleting&nbsp; as well? Libraries or hidden files or anything like that? Any expert knowledge would be most helpful.<br /><br />BTW I&#039;m using the Secure Empty Trash on the Mac to delete. According to my research, it does a pretty adequate job on hard disks, enough to where someone would have to spend a lot of money if they wanted to recover what I deleted. I only purchase personal quantities, so its pretty unlikely that if LE were to ever seize my computer they would shell out big $$$ for forensics services. I just want to cover my tracks and delete anything obvious.<br /><br />Thanks 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Where does Tor Browser store bookmarks??</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 24, 2013, 08:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If you secure deleted the entire TBB folder hierarchy and you believe that is a safe method (I don&#039;t know myself, but generally individual file overwrites are not safe), then you&#039;re good. Bookmarks are stored in /Data/profile/bookmarks.html and Data/profile/bookmarkbackups, which would have been deleted when you deleted the TBB folder hierarchy. <br /><br />Keep in mind, if you&#039;re trying to eliminate all traces of the browser bundle on your computer, there may be traces outside of the TBB folder hierarchy. A Tor developer is doing forensic analysis of that, but they haven&#039;t done Macs yet. You can read about the Windows and Linux analysis here:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=148291.0<br /><br />Hopefully in another month she will post the results for Macs.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Where does Tor Browser store bookmarks??</strong><br />
+				Post by: <strong>DoctorFate</strong> on <strong>May 24, 2013, 09:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Also the tor bundle basically uses Firefox, so if you wanted to backup your bookmarks elsewhere it the same as in Firefox.<br /><br />Bookmarks -- Show all bookmarks -- Import and Backup 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Where does Tor Browser store bookmarks??</strong><br />
+				Post by: <strong>railroadbill</strong> on <strong>May 24, 2013, 10:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				you got a mac? only way to clean that is with fire. chances are your files are on apples servers now anyways. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Where does Tor Browser store bookmarks??</strong><br />
+				Post by: <strong>Rastaman Vibration</strong> on <strong>May 24, 2013, 10:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for the replies.<br /><br />I&#039;m not trying to delete all traces of Tor from the Mac, just the bookmarks from an old version. I use the Mac for work stuff, so destroying it is not an option :P Also I still have Tor on the Mac (new version, no SR bookmarks). I&#039;m not really worried about that, using Tor is perfectly legit/legal, and I was using Tor long before I ever discovered SR. I just want to delete any traces of the SR bookmark.<br /><br />Thanks again
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Where does Tor Browser store bookmarks??</strong><br />
+				Post by: <strong>AfternoonDelight</strong> on <strong>May 28, 2013, 03:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Torbrowser on Macs store everything within the app.<br />Trash the app and it&#039;s all gone, install the latest torbrowser, and it&#039;s all gone.<br />Both frustrating and fantastic.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=15952.0" />
+		<title>Print Page - ATA Secure Erase Command &amp; TAILS</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Heyenezz on March 19, 2012, 05:15 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 19, 2012, 05:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				1. Does the ATA secure erase command render all data on my HDD completely irrecoverable to LEO? I&#039;m in no position to physically destroy the HDD and will need to reinstall Windows 7 on it later. So degaussing, incineration, or other means of physical destruction are out of the question.<br /><br />2. Is any incriminating data at all recoverable from TAILS?<br /><br />My C drive&#039;s encrypted and I boot from TAILS on a USB. Beforebooting from TAILS, I turn on my computer, press F2 to reach the screen to change the boot order, and then save the changes. I turn my computer offer, plug in my TAILS USB, turn my computer on, then start using TAILS.<br /><br />Thanks for any help.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>Oldtoker</strong> on <strong>March 20, 2012, 10:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				I don&#039;t think that the ATA Secure Erase command is good enough.&nbsp; Unless I&#039;m mistaken it just marks the SSD drive cells as empty.&nbsp; To be secure you want to write over the drive.<br /><br />I have seen on here where people recommend the Linux command shred.&nbsp; But, that is really very limited depending on the type of file system you have on your computer.&nbsp; It won&#039;t work on Log structured or journaled file systems along with some others such as RAID Systems.&nbsp; To find out just enter the command &quot;man shred&quot;.<br /><br />I think your best bet is to use one of these (they are free and have a GPL licenses):<br /><br />http://www.dban.org/<br />http://sourceforge.net/projects/disc-wipe/<br />http://www.killdisk.com/<br /><br />They are all DOD5220.22 M Compliant<br /><br /><br /><br /><br />&nbsp;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 20, 2012, 11:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15952.msg156362#msg156362">Quote from: Heyenezz on March 19, 2012, 05:15 am</a></div></div><blockquote class="bbc_standard_quote">1. Does the ATA secure erase command render all data on my HDD completely irrecoverable to LEO? I&#039;m in no position to physically destroy the HDD and will need to reinstall Windows 7 on it later. So degaussing, incineration, or other means of physical destruction are out of the question.<br /><br />2. Is any incriminating data at all recoverable from TAILS?<br /><br />My C drive&#039;s encrypted and I boot from TAILS on a USB. Beforebooting from TAILS, I turn on my computer, press F2 to reach the screen to change the boot order, and then save the changes. I turn my computer offer, plug in my TAILS USB, turn my computer on, then start using TAILS.<br /><br />Thanks for any help.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />in short: yes, no <br /><br />in long: As far as modern forensics are currently concerned, as long as nothing fucks up (I don&#039;t think it will but who knows) 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>0x00</strong> on <strong>March 20, 2012, 04:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15952.msg157764#msg157764">Quote from: Oldtoker on March 20, 2012, 10:20 am</a></div></div><blockquote class="bbc_standard_quote">I don&#039;t think that the ATA Secure Erase command is good enough.&nbsp; Unless I&#039;m mistaken it just marks the SSD drive cells as empty.&nbsp; To be secure you want to write over the drive.<br /><br />I have seen on here where people recommend the Linux command shred.&nbsp; But, that is really very limited depending on the type of file system you have on your computer.&nbsp; It won&#039;t work on Log structured or journaled file systems along with some others such as RAID Systems.&nbsp; To find out just enter the command &quot;man shred&quot;.<br /><br />I think your best bet is to use one of these (they are free and have a GPL licenses):<br /><br />http://www.dban.org/<br />http://sourceforge.net/projects/disc-wipe/<br />http://www.killdisk.com/<br /><br />They are all DOD5220.22 M Compliant<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This is not true. You are mistaken. Also, this is a very common misconception.<br /><br />Not only is ATA Secure Erase a proper way of securely wiping out the data on the HDD, it is also faster than any other method. I can tell you straight out that all of the above mentioned 3rd party tools are basically pointless, as you will achieve almost the same end result - only with a substantially longer execution time (actually it&#039;s going to be even slightly worse, not in their favor, for the reason mentioned below). There is absolutely no sensible way of restoring the data off a magnetic surface, once it has been zeroed out (overwritten with 0x00 - NUL bytes). The only way you could possibly &quot;try&quot; to do so - is with an atomic microscope and it will take months just to restore a few lucky bytes. So, you can consider this impossible, especially with the density, at which modern hard drives write data onto the platter surface. All what those tools do - is create an illusion, that you need to write random data over the current one, in order to be &quot;secure&quot; / &quot;protected&quot;. It&#039;s a gimmick based on hoax. Their obvious shortcomings are, of course, very long execution time and they are also NOT capable of erasing (wiping) things like &quot;bad sectors&quot; (blocks) - sectors, that have been remapped (replaced for the sectors in the reserved area). ATA Secure Erase can do that, on the contrary.<br /><br />There are 2 types of ATA SE: standard and enhanced. The latter is mostly found in the more or less recent ATA command set (after y. 2004). This is a hardware-based operation - thus being obviously faster, than anything software. However, it will not work on drives connected through USB.<br /><br />You can either activate this feature through a tool called `hdparm` on an unix-like OS or with a DOS app. called `MHDD`. <br />Overall, start your journey from here: http://cmrr.ucsd.edu/people/Hughes/SecureErase.shtml<br /><br />On a side note: `shred` is only good for erasing files, not the whole disk. Also, if you do not plan on using ATA SE for whatever reason - then just using a tool called `dd` in a way of `dd if=/dev/zero out=/dev/sdX bs=1M conv=noerror` is sufficient (but a bit slower than SE): its only disadvantage is going to be reallocated bad sectors (if there are any).<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>QTC</strong> on <strong>March 20, 2012, 04:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				+1 to everything 0x00 said. Also DoD 5220.22-M compliance doesn&#039;t really mean anything, it doesn&#039;t discuss any specific data sanitization methods... it doesn&#039;t even really cover data sanitization at all! DSS handles data sanitization for the DoD and they recommend overwriting followed by degaussing then killing the drive with either fire or a belt sander. But OP said that they&#039;re not in a position to do this so ATA SE will work great.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>Oldtoker</strong> on <strong>March 20, 2012, 04:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				From my understanding Secure erase does just mark the cells as empty.&nbsp; I also believe Secure Erase is recognized by the U.S. National Institute for Standards and Technology (NIST), as a way to meet legal data sanitization requirements against attacks up to laboratory level. <br /><br />I believe most Vendors on here would like something that would be a little better than this. After all, if their computer is confiscated, chances are it&#039;s going to end up in a Computer Forensics Laboratory.&nbsp; I read somewhere that 10 percent of all data is still available after a Secure Erase.&nbsp; <br /><br />I don&#039;t have the time right now but, I&#039;ll try to research this and come up with some good sources.&nbsp; <br /><br />However, you may very well be right that the GPL and Commercial packages are not much better.&nbsp; They definitely take longer.&nbsp; I think about 7-8 times longer.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>0x00</strong> on <strong>March 20, 2012, 05:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15952.msg158051#msg158051">Quote from: Oldtoker on March 20, 2012, 04:51 pm</a></div></div><blockquote class="bbc_standard_quote">From my understanding Secure erase does just mark the cells as empty.&nbsp; I also believe Secure Erase is recognized by the U.S. National Institute for Standards and Technology (NIST), as a way to meet legal data sanitization requirements against attacks up to laboratory level. <br /><br />I believe most Vendors on here would like something that would be a little better than this. After all, if their computer is confiscated, chances are it&#039;s going to end up in a Computer Forensics Laboratory.&nbsp; I read somewhere that 10 percent of all data is still available after a Secure Erase.&nbsp; <br /><br />I don&#039;t have the time right now but, I&#039;ll try to research this and come up with some good sources.&nbsp; <br /><br />However, you may very well be right that the GPL and Commercial packages are not much better.&nbsp; They definitely take longer.&nbsp; I think about 7-8 times longer. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m sorry - but you are incorrect. You are making an invalid assumption which leads you to building incorrect decisions / recommendations about the whole matter. SE does not just &quot;mark the cells empty&quot; - it physically overwrites every bit of data on the hard drive. Not only does it do so irrecoverably (by todays means), it also does more for security, than the aforementioned 3rd party utilities (as it also wipes bad sectors). This is a completely reliable, convenient way of securely erasing (wiping) the HDD clean. Trust me, when I tell you, that this is an established and highly recognizable way of data shredding in the field of professional data recovery and forensics. This is a standard that works and works well. There is nothing a laboratory can do, after this operation has been successfully executed. The only extreme way of possibly trying to recover tiny pieces of random data - is with an atomic microscope, but absolutely useless, as it will take a tremendous amount of time recovering a few bytes of data that you won&#039;t even be able to make sense of. No forensics lab is going to even attempt to do this, as the error rate is just ridiculously enormous. <br /><br />&quot;I believe most vendors on here would like something that would be a little better than this&quot; - that makes no sense in the given context, taking the said above into account. There has never been a documented case, where this type of recovery has proven to be feasible. They are already as safe as it basically gets, if they use SE.<br /><br />Here are some quotes from the &quot;Center of Magnetic Recording Research&quot; to back up the story:<br /><br />&quot;Q:&nbsp; What is secure erase?<br /><br />A:&nbsp; The ANSI T-13 committee which oversees the ATA (also known as IDE) interface specification and the ANSI T-10 committee which governs the SCSI interface specification have incorporated into their standards a command feature known as Secure Erase (SE).&nbsp; Secure erase is a positive easy-to-use data destroy command, amounting to “electronic data shredding.”&nbsp; It completely erases all possible user data areas by overwriting, including the so-called g-lists that contain data in reallocated disk sectors (sectors that the drive no longer uses because they have hard errors in them).&quot;<br /><br />&quot;Q:&nbsp; Is secure erase approved for government security?<br /><br />A:&nbsp; Secure erase has been approved by the U.S. National Institute for Standards and Technology (NIST), Computer Security Center1.&nbsp; In general data erasure techniques when used alone are approved by NIST for lower security sanitization (less than secret) since the data can be recovered at least in theory&quot;<br /><br />&quot;Q:&nbsp; Is any data left after a secure erase?<br /><br />A:&nbsp; Investigations at CMRR at UCSD have shown that a single pass secure erase at lower frequencies results in no remaining data signals and a second erase reduces this signal only slightly more.&nbsp; The resulting data signal to noise ratio (SNR) at the magnetic drive head is below that required to recover data using a disk drive channel1.&nbsp; The only recorded signal left in these experiments is a small amount of highly distorted track edge recording which is extremely difficult to recover data from even if the disk is removed from the drive and tested on a spin-stand.&quot;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>Oldtoker</strong> on <strong>March 20, 2012, 06:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15952.msg158032#msg158032">Quote from: QTC on March 20, 2012, 04:37 pm</a></div></div><blockquote class="bbc_standard_quote">+1 to everything 0x00 said. Also DoD 5220.22-M compliance doesn&#039;t really mean anything, it doesn&#039;t discuss any specific data sanitization methods... it doesn&#039;t even really cover data sanitization at all! DSS handles data sanitization for the DoD and they recommend overwriting followed by degaussing then killing the drive with either fire or a belt sander. But OP said that they&#039;re not in a position to do this so ATA SE will work great.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I know that the DOD 5220.22-M only mentioned clearing and sanitization but, the term is generally accepted to mean that it meets DOD Standards. Of course, current DOD standards no longer accept the over write technique for classified information. <br /><br />However, the 1995 and 1997 editions of NISPOM did.&nbsp; It included a table from the Defense Security Service&nbsp; titled &quot;Clearing and Sanitization Matrix&quot; which did specify numerous ways of handling all sorts of media to including hard disks. But, as of the June 28, 2007 edition, &quot;Overwriting is no longer acceptable for sanitization of magnetic media. Only degaussing or physical destruction.<br /><br />If I remember correctly it was the 1997 edition where the &quot;seven pass&quot; specification came from. <br /><br />I&#039;ll admit that I may be a little outdated on this.&nbsp; &nbsp;It&#039;s been about 12-15 Years since I&#039;ve worked in the field.&nbsp; <br /><br />This is an interesting read:&nbsp; http://www.infodelete.com/data_remanence/encyclopedia.htm#Feasibility_of_recovering_overwritten_data
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>DropGuy751</strong> on <strong>March 20, 2012, 06:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				http://www.dban.org/<br /><br />Dariks nuke and boot do a guttman wipe if your scared. (35pass) ((For Entire Drive Wipe)) ((Wipes all drives detected))<br /><br />Use http://www.blancco.com/us/products/selective-data-erasure/file-shredder-pc-edition/ ((If you want to securely delete files)) Should be on Warez somewhere.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>Oldtoker</strong> on <strong>March 20, 2012, 08:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15952.msg158155#msg158155">Quote from: DropGuy751 on March 20, 2012, 06:39 pm</a></div></div><blockquote class="bbc_standard_quote">http://www.dban.org/<br /><br />Dariks nuke and boot do a guttman wipe if your scared. (35pass) ((For Entire Drive Wipe)) ((Wipes all drives detected))<br /><br />Use http://www.blancco.com/us/products/selective-data-erasure/file-shredder-pc-edition/ ((If you want to securely delete files)) Should be on Warez somewhere.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That&#039;s what I use, although, I don&#039;t use the 35 pass.&nbsp; Even if I were a Vendor I don&#039;t think I&#039;d use the 35 pass, probably a seven pass.&nbsp; Hell a 3 pass on a 250 GB Hard Drive takes about 7 hours.&nbsp; Before doing a 35 pass erase I&#039;d destroy the Drives.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>0x00</strong> on <strong>March 20, 2012, 08:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15952.msg158155#msg158155">Quote from: DropGuy751 on March 20, 2012, 06:39 pm</a></div></div><blockquote class="bbc_standard_quote">http://www.dban.org/<br /><br />Dariks nuke and boot do a guttman wipe if your scared. (35pass) ((For Entire Drive Wipe)) ((Wipes all drives detected))<br /><br />Use http://www.blancco.com/us/products/selective-data-erasure/file-shredder-pc-edition/ ((If you want to securely delete files)) Should be on Warez somewhere.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I think I will start using different terminology. As it seems that some people are still under the influence of myths and disinformation, even though clear evidence is presented.<br /><br />DBAN is BULLSHIT. Guttman&#039;s paper is flawed, obsolete and BULLSHIT for the claims. You do not need to do ANYTHING, but a single pass of SE or writing 0x00 with software.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>0x00</strong> on <strong>March 20, 2012, 08:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15952.msg158247#msg158247">Quote from: Oldtoker on March 20, 2012, 08:31 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15952.msg158155#msg158155">Quote from: DropGuy751 on March 20, 2012, 06:39 pm</a></div></div><blockquote class="bbc_alternate_quote">http://www.dban.org/<br /><br />Dariks nuke and boot do a guttman wipe if your scared. (35pass) ((For Entire Drive Wipe)) ((Wipes all drives detected))<br /><br />Use http://www.blancco.com/us/products/selective-data-erasure/file-shredder-pc-edition/ ((If you want to securely delete files)) Should be on Warez somewhere.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That&#039;s what I use, although, I don&#039;t use the 35 pass.&nbsp; Even if I were a Vendor I don&#039;t think I&#039;d use the 35 pass, probably a seven pass.&nbsp; Hell a 3 pass on a 250 GB Hard Drive takes about 7 hours.&nbsp; Before doing a 35 pass erase I&#039;d destroy the Drives.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />OK, the only conclusion I can make from this, is that you are totally ignoring the established facts. Only continuing to support myths and misconceptions. Please, provide proof why such excessively useless and pointless measures are needed. Whether you are a vendor or the friggin&#039; Vatican Pope - a single pass of SE or 0x00 is going to be enough BY NO MEANS compromising your security IN ANY WAY.<br /><br />If you want another balanced POV on the subject, please read: http://ultraparanoid.wordpress.com/2007/09/12/securely-erase-hard-drives/<br /><br />You will also find heaps of forum and blog posts, as well as articles, where the multi-random-overwrite is confirmed to be nothing but bullshit, in regards to modern-day storage.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>Oldtoker</strong> on <strong>March 21, 2012, 07:48 am</strong>
+			</dt>
+			<dd class="postbody">
+				And yet, even he says (in the link you posted) that, he uses both a three pass system and the ATA Secure Erase Command.&nbsp; I&#039;m not ignoring the established facts.&nbsp; But, all too often what is fact today is not tomorrow.&nbsp; Especially in the area of security.&nbsp; I don&#039;t believe everything I read.&nbsp; I do believe, when it comes to security, that you should err on the side of caution.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>no_pain</strong> on <strong>March 21, 2012, 11:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				giving a comment to find the thread for later read...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: ATA Secure Erase Command &amp; TAILS</strong><br />
+				Post by: <strong>0x00</strong> on <strong>March 21, 2012, 07:56 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15952.msg158945#msg158945">Quote from: Oldtoker on March 21, 2012, 07:48 am</a></div></div><blockquote class="bbc_standard_quote">And yet, even he says (in the link you posted) that, he uses both a three pass system and the ATA Secure Erase Command.&nbsp; I&#039;m not ignoring the established facts.&nbsp; But, all too often what is fact today is not tomorrow.&nbsp; Especially in the area of security.&nbsp; I don&#039;t believe everything I read.&nbsp; I do believe, when it comes to security, that you should err on the side of caution. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This is becoming a &quot;facepalm&quot;-type discussion. If you reference something, then, please, do not blow it out of proportions by deliberately ignoring the context. He does NOT use a &quot;three pass&quot; system (where did you even pick that up?), this is what he actually SAYS he WOULD DO:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Of course, if you’re anything like me you’ll use both ATA-SE and Block Erase for your sensitive data, then yanking the platters from the drive, grinding the surfaces and bending the platters. Then melting the platters in a burning furnace and taking a boat to somewhere in the middle of the pacific ocean and dropping the furnace overboard. Then having NASA hurling the Pacific Ocean into the sun. Then making God destroy the universe.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Now it adds a noticeably different undertone to what you&#039;ve &quot;quoted&quot;. He is deliberately exaggerating to the point, where it&#039;s becoming completely unrealistic. So, no, he is clearly not saying, that using ATA-SE + Block Erase is going to give you any more safety. He is only giving an example, of what lengths a paranoid mind can go, utilizing anything that you can possibly think of by radically disregarding reasoning and rationality on its way.<br /><br />In fact, the sole purpose of going through his blog post, is to pinpoint some of the most important points he is making:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">ATA-SE methodology is superior to Block Erase methodology due to ATA-SE’s ability to overwrite bad blocks, due to it’s reduced time demand and due to it’s improved completion feedback.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This, effectively adds another layer of confirmation to the statements I have made before, as they are based on solid proof and evidence. Not only does he say, that ATA-SE is just as effective as BEWTs, but he also claims, that ATA-SE is superior. This means, that there is NO REASON to do anything else, but a single pass with ATA-SE.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">When it comes to ATA disks, however, I believe BEWTs pretty much have played out their role</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Obviously.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">I&#039;m not ignoring the established facts.&nbsp; But, all too often what is fact today is not tomorrow.&nbsp; Especially in the area of security.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Then why on earth would you rely on something as vague and obsolete as the technology from 1996??? I urge you not to seed any more confusion and to give up the straw man argumentation. We are sharing knowledge here and I&#039;m sharing (for the benefit of others) what I have researched and therefore can definitely back up (and have done so). Let&#039;s settle on this, as it&#039;s just too obvious now where the truth lies. If you still have doubts - I will provide a few finishing paragraphs:<br /><br />(taken from http://www.anti-forensics.com/disk-wiping-one-pass-is-enough-part-2-this-time-with-screenshots)<br /><br />Sans Computer Forensics on Magnetic Force Microscopy<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">“The basis of this belief that data can be recovered from a wiped drive is based on a presupposition that when a one (1) is written to disk the actual effect is closer to obtaining a 0.95 when a zero (0) is overwritten with one (1), and a 1.05 when one (1) is overwritten with one (1).<br /><br />This can be demonstrated to be false.”<br /><br />“In many instances, using a MFM (magnetic force microscope) to determine the prior value written to the hard drive was less successful than a simple coin toss.”</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Secure Deletion of Data from Magnetic and Solid-State Memory by Peter Gutmann (35 pass wipe originated from Mr. Gutmann)<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">“Any modern drive will most likely be a hopeless task, what with ultra-high densities and use of perpendicular recording I don’t see how MFM would even get a usable image, and then the use of EPRML will mean that even if you could magically transfer some sort of image into a file, the ability to decode that to recover the original data would be quite challenging.”</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />So, yes, this is an urban legend in our times. The person responsible even takes it for one.<br /><br />More links:<br /><br />http://grot.com/wordpress/?p=154<br />http://www.springerlink.com/content/408263ql11460147/<br />http://security.stackexchange.com/questions/5749/how-can-i-reliably-erase-all-information-on-a-hard-drive
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

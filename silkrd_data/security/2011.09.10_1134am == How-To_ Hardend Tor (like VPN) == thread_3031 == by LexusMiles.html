@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=3031.0" />
+		<title>Print Page - How-To: Hardend Tor (like VPN)</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: LexusMiles on September 10, 2011, 11:34 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>How-To: Hardend Tor (like VPN)</strong><br />
+				Post by: <strong>LexusMiles</strong> on <strong>September 10, 2011, 11:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				Target Audience:<br /><br />Windows XP, Vista, 7 users. You want to run all your apps through Tor without configuring a proxy for each one. Some apps don&#039;t have a &#039;proxy&#039; option, but to want to put them through Tor too. You Don&#039;t trust all your apps not not leak your IP outside of the proxy. You suspect that IP may leak via a script, or unpatched bug in any app (firefox and thunderbird especially). You want your (selected) apps to all route through Tor, just like a VPN. -- This guide is for you.<br /><br />Requirements:<br /><br />Sandboxie [ www.sandboxie.com/index.php?DownloadSandboxie ]<br />Proxifier - standard edition [ http://www.proxifier.com/download.htm ]<br />Tor Vidalia Bundle [ www.torproject.org/download/download.html.en ] <br />All your other apps (Firefox, Opera, Thunderbird, any app that can connect to internet)<br /><br />Method (installation):<br /><br />(i) Install Tor<br />(ii) Install Sandboxie. The I recommend to get the paid version. Free version is fine for this though. A quick note: its fast, non-bloat-ware with no ads and no bugs. 2MB in size. <br />(iii) Create a new Sandbox and name it Proxify<br />(iv) Install Proxifier Standard Edition into the Sandbox<br />(v) Setup proxifier to route all apps via 9050 (or whatever is your Tor proxy port)<br />(vi) This is the final step: Run any program you like in the &#039;proxify&#039; sandbox. Every app you run in the sandbox will will now be through Tor.<br />(vii) Oh one more step.. create a link on your desktop to the Sandboxed proxifier.<br /><br /><br />Method (regular use):<br /><br />Eg: For example, after you start PC in the morning, first use of the day:<br />(i)Execute Vidalia<br />(ii)Execute Proxyfier<br />(iii)Execute any and as many apps Sandboxed as you liked. Its as simple as &quot;Right click any icon&quot;--&gt;&quot;Run Sandboxed&quot;.<br /><br />So this means, no more going to the proxy options for any app. If you want an app to use Tor, just simply run it via the &#039;proxify&#039; sandbox. You have as many running at once as you like.<br /><br />Now, &quot;why sandbox?&quot; I hear you say. Two reasons:<br /><br />(i) Proxifier is a 31 day trial. Delete the sandbox after 31 days and create it again. Whalla! 31 more days of proxify.<br />(ii) We don&#039;t want *all* the apps on our system to be proxified. So this way, only apps executed into the sandbox are Torified.<br /><br />Why do any of this? As earlier stated -- NO dns leaks, and NO ip leaks will occur with this method. All apps are tightly sealed within the Tor/Sandbox realm (even youtube and flash/scripts). I think above all, this is the far reaching and true reason. Locked tight ship, with no leaks or gaps. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How-To: Hardend Tor (like VPN)</strong><br />
+				Post by: <strong>trainwrecker</strong> on <strong>September 10, 2011, 02:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				it takes a few more steps,<br />like configuring proxifier to actually use dns over proxy<br />( by default it does NOT ).<br />-<br />I like the idear but i preffer a &quot;real virtual maschine&quot;,<br />it is a bit more tho to setup the hole vm thingy..<br />-<br />you should be able to find a key for proxyfier in the interwebs<br />within a few secs, if not u doing it wrong&nbsp; ::) ::)<br />think i posten one on the forum already in one of my previous posts.<br /><br />tw
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How-To: Hardend Tor (like VPN)</strong><br />
+				Post by: <strong>miserableprick</strong> on <strong>September 10, 2011, 06:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Tails Live-Linux CD FTW :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How-To: Hardend Tor (like VPN)</strong><br />
+				Post by: <strong>LexusMiles</strong> on <strong>September 10, 2011, 09:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=3031.msg25298#msg25298">Quote from: trainwrecker on September 10, 2011, 02:28 pm</a></div></div><blockquote class="bbc_standard_quote">i preffer a &quot;real virtual maschine&quot;</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Kinda a good starting point -- but a VM alone provides no significant convenience or security. You&#039;re still counting on individual apps to follow their own proxy rules, which I think if you investigate, you can find they don&#039;t. Often apps will send http connections directly via your regular ISP internet IP, bybassing the proxy. Firefox and Thunderbird are 2 examples of this. The solution I described stops the possibility of this. Also, a VM is a resource heavy solution. Booting up VM, and for all the effort in settings it up, would have been possible to setup a full truecrpted OS.<br /><br />[edit] Ok I get you after reading it again. You mean to simply do away with the Sandbox and instead, use proxifier inside of a VM. Yes this is possibly the best solution available. Its got the slight drawback of startup time + heavy mem usage, but for most PC&#039;s these days, those problems are insignificant. Esp if you put XP as the VM. I&#039;d say two thumbs up to this solution.<br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=3031.msg25366#msg25366">Quote from: miserableprick on September 10, 2011, 06:28 pm</a></div></div><blockquote class="bbc_standard_quote">Tails Live-Linux CD FTW :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes this is a nice solution if you are a Linux fan -- and who isn&#039;t a fan -- but it comes with its own inherent flaws too. A better adaptation of tails is to install in on the HDD in a truecrypt container + VM. Now that&#039;s a tight solution, and avoids all the caveats of the live CD (slow, non-persistent).<br /><br />The more methods we can share the better. Each has its own strengths and weaknesses. Critiques/ideas/solutions are most welcome.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How-To: Hardend Tor (like VPN)</strong><br />
+				Post by: <strong>trainwrecker</strong> on <strong>September 11, 2011, 11:39 am</strong>
+			</dt>
+			<dd class="postbody">
+				@ The more methods we can share the better. Each has its own strengths and weaknesses. Critiques/ideas/solutions are most welcome.<br /><br />Indeed correct sir,<br />everyone likes stuff a bit diffrent,<br />the more options there is to choose from the better.<br /><br />&nbsp;pulled my quickguide from my other post, i think reposting it in here does make sense..<br /><br />Run everything over TOR via Vm :<br /><br />1)Setup a Virtual Maschine<br />2)set it to have an exclusive network with the host maschine &lt;- important shit, no bridging networks<br />3)configure polipo.conf ( in the vidalia install folder somewhere ) to accept the vm&#039;s Ip<br />(allowedClients parameter)<br />4)install firefox on vm and set &quot;your host maschine&quot; as proxy to test if config of polipo is working<br />5)install soemthing liek Sockscap or Proxifier that tunnels ALL your traffic thru a socks4/5 proxy on the VM<br />( Proxifier is not freeware but keys can be found on the web *coth BYZNF-Y3ZLZ-LQBYQ-QE8EY-LPM5Q)<br />configure proxiefier with your hostIP as proxy<br />6)install whatever you want on the vm and it will be tunneld thru tor.<br /><br />if done correctly, this way dns can not be leaked,<br />without proxifier all Applications on the vm can run thru tor<br />if they support proxxies. if not it simply wont get a dns/conenction.<br /><br />with proxifier running everythign will be tunneld thru tor.<br />Which ofc also means it is possible to install the vidalia<br />bundle on the vm and have tor conenct to tornetwork thru tor&nbsp; :o 8).<br />this is quite nice approch to run hidden services quite secure.<br /><br />This method comes with some work to setup but is defenetly worth it.<br />Ofc it is also possible to run Livecd&#039;s on those vms for enhanced security,<br />but after all some ppl are lazy and do like having bookmarks.<br />Also it is possible to nicely split stuff on a single vm&#039;s,<br />like having an exclusive for vm just for running some hidden services,<br />additonal VM to run all the bitcoin shit, another one for all SR related/pgp stuff,<br />etc etc.<br />Even in case LE manages to breach into a vm they still dont know jackshit <br />&nbsp;if they have root and full acces to the vm via a trojan.<br />Diffrent Story OFC for the host system,<br />i would highly suggest not using the host system for anything<br />besides running the vm&#039;S/truecrypt/tor, and ofc<br />apply the highest possible security standarts for the host<br />viresscan/a proper firewall/security updates/Server Operating system, etc.<br /><br />Ressources on the host pc is another thing.<br />A &quot;win xp&quot; vm shoudl have about 500mb dedicated mem.<br />CPU wise it ofc depends heavily what you run on the vm.<br />For normal &quot;office&quot; like work, the additional cpu load is minimal.<br />Also ofc each vm needs soem GB&#039;s of harddiskspace.<br /><br />a dual core 2.5 Ghz with 8GB ram,<br />can run some 10 vm&#039;S at same time without issues,<br />as long as the vms dont run cpu intens stuff.<br /><br />Tweaking:<br />I found that polipo does need some tweking in the config <br />to run extensive ammounts of vm&#039;S,<br />specially these parameter:<br />maxConnectionAge, maxConnectionRequests, serverMaxSlots, serverSlots.<br /><br />play around with these setting a bit and see which config suits<br />your settings best.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How-To: Hardend Tor (like VPN)</strong><br />
+				Post by: <strong>LexusMiles</strong> on <strong>September 11, 2011, 12:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yes reposting here is absolutely necessary. I searched the recent 10 pages of topics before coming to the party. Thought I was first but no. Good to have your write-up on page 1 again in any case.<br /><br />What was that important part of your solution about not bridging? I&#039;m curious, for all the processes taking place inside of the VM, is it possible that the network adapter outside of the VM (host adapter) can send rogue dns or ip packets? That nested loop of Tor is totally new to me (Tor within tor). Out of respect for the network I doubt I&#039;l try it, but highlights the prospect that there really are infinite methods and ways of doing this here Internet.<br /><br />Last question... when using a pirate key for proxifier, do you trust that the creator of proxify doesn&#039;t have a built in backdoor or some kind of silent alarm that draws his attention? The reason I ask is.. the writer of that app is *really* clever.&nbsp; I could never figure how he kept track of the 30 days in the portable version -- admittedly cracking isn&#039;t my forte.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How-To: Hardend Tor (like VPN)</strong><br />
+				Post by: <strong>trainwrecker</strong> on <strong>September 12, 2011, 11:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				@ What was that important part of your solution about not bridging?<br /><br />If you have a &quot;bridged&quot; network for the vm, the host will bridge the vm&#039;s traffic<br />into the hosts REAL network. By Selecting a &quot;host only&quot; network for the vm, the host wont/cant leak<br />traffic to a real network unless you have a specific tool to do exactly that (proxy, internetconenctionsharing, etc).<br />The &quot;host only&quot; network enshures the vm&#039;s can only find each other and the host per network.<br /><br />@is it possible that the network adapter outside of the VM (host adapter) can send rogue dns or ip packets?<br /><br />Depends heavely on what software you have installed on the Host.<br />By default i would say NO. Then again dont trust anything that&nbsp; you havent double checked.<br />ALWAYS have a proper Firewall installed and disallow most traffic besides TOR for the<br />outgoing Network adapter on the host. Set Firewalls to &quot;disallow by default&quot; and make shure<br />you have the firewall rules set correctly so the vm&#039;s can connect to polipos ports and only<br />the applications you want are allowed to connect to the real interwebs.<br /><br />@do you trust that the creator of proxify doesn&#039;t have a built in backdoor or some kind of silent alarm that draws his attention<br /><br />Dont trust Anything .-)<br />A feature like you descibed would ruin proxifiers reputation if anyone every found it,<br />i doubt a software developer for such a specific software would do soemthing stupid<br />liek killing all his relilability in the interwebs by adding a backdoor .-)<br />Then again, it does not hurt to double check.<br />As long as your not using tor over tor on the vm, the traffic from the VM over proxifier <br />is not encrypted in the &quot;virtual network&quot;, so its not that hard to Sniff the traffic<br />when you have control over the host system.<br />Install wireshark on the host system dump all traffic from the Virtual network<br />into a file, and double check if you feeling unsecure about Proxifier.<br /><br />ninjaedit: forgott ot add, even if proxifieer has a feature which alarms its developer of illegal copies,<br />all he could find out is information wise, your vm&#039;s ip settings, ur vm&#039;s network names, your host network name and your host ip( ip as in the IP for the virtuall network which conencts host and vm).<br />it is still pretty save as proxifier has no direct connection to the interwebs.<br /><br />tw
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

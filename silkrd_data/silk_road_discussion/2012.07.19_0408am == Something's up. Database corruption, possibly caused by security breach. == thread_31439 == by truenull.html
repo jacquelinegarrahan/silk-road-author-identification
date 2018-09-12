@@ -1,0 +1,414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=31439.0" />
+		<title>Print Page - Something's up. Database corruption, possibly caused by security breach.</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Silk Road discussion => Topic started by: truenull on July 19, 2012, 04:08 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>truenull</strong> on <strong>July 19, 2012, 04:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hello, everyone, I&#039;m truenull.<br /><br />A few months ago, I discovered multiple serious security holes in Silk Road: XSS, SQL injection, a vulnerability allowing the discovery of the Silk Road host server&#039;s public (non-Tor) IP, and CSRF.<br /><br />Yesterday, I forgot my PIN (fuck me, right?) and figured I&#039;d just wait 7 days for it to be reset, but...<br /><br />A few hours later, there was downtime similar to today&#039;s. Attempts to connect to the silkroadvb5piz3r.onion website were met with a failed connection, and a message in the Tor logs indicating a server-side problem.<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">[Notice] Closing stream for &#039;[scrubbed].onion&#039;: hidden service is unavailable (try again later).</code> <br /><br />After that downtime, there was a brief period allowing logins, then more downtime, but of a different sort. It seemed that there was an issue with the SR webapp or database itself- session cookies were repeatedly invalidated, and users were thus constantly kicked back to /silkroad/home (the login page), even after entering valid credentials and CAPTCHA.<br /><br />During this downtime, I (stupidly) decided to do some additional testing, attempting to create a new account with the same username as my existing account (truenull). It kicked me back to /silkroad/home, and I thought nothing of it... until the downtime ended.<br /><br />I logged in normally- and my account was as if it had been newly created. Balance of 0 BTC (previously ~20), account age (from buyer stats) in the minutes, and (to top it all off) a welcoming PM from SR Support.<br /><br />Fuck.<br /><br />So now I&#039;m out 20 BTC. I PM SR Support (as a reply to the very helpful welcoming PM) and, on the advice of nomadbloodbath in IRC, DPR.<br /><br />A few hours later, I get a reply from SR Support... informing me that my PIN had been reset, and that I would have to wait 5 days before I could change it. This was on my new account, only a few hours old, on which I had never done any sort of PIN activity.<br /><br />&quot;Fuck,&quot; I thought to myself. &quot;This is not normal. There is a serious issue with Silk Road&#039;s database.&quot; I can be quite eloquent in my internal dialogue.<br /><br />So I send off a few strongly worded PMs to SR Support, detailing my evidence. They&#039;ve been read, but have not been responded to. The PM to DPR has yet to be read.<br /><br />Today, there&#039;s more downtime, of a similar sort to the first downtime period yesterday (same error in Tor logs).<br /><br />Analysing the situation further, by my estimate yesterday&#039;s second downtime was just long enough for a user to copy the entire SR database (disabling writes in the meantime to prevent getting a corrupted copy, which explains the session cookie issues), then reload it. If I created my &quot;new&quot; account during the reload, it could easily explain the loss of my account (if the DB restore script prioritized existing rows).<br /><br />So, best-case scenario: SR fucked up server maintenance. Worst-case: SR is compromised by LEO.<br /><br />More information as I collect it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>34tuforlunch</strong> on <strong>July 19, 2012, 04:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				If I loose my bitcoins I am going to be very sad murp =(
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>truenull</strong> on <strong>July 19, 2012, 04:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355312#msg355312">Quote from: Shannon on July 19, 2012, 04:18 am</a></div></div><blockquote class="bbc_standard_quote">oh you pentest the site too? :) we should trade notes sometime<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I did, a while ago... eventually did a full code audit. Then I found a decent connect in my (newly-moved-to) area, and lost interest in SR. Actually, the reason I returned was to withdraw the 20BTC I left in my account... didn&#039;t work too well&nbsp; ::)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>pterodactyl</strong> on <strong>July 19, 2012, 04:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355320#msg355320">Quote from: shillbill on July 19, 2012, 04:22 am</a></div></div><blockquote class="bbc_standard_quote">Who is this admin http://dkn255hz262ypmii.onion/index.php?action=profile;u=26708&nbsp; ?<br /><br />Had no posts this morning<br /><br />Vendors?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />DigitalAlch mentioned previously about stepping down and Indica|Sativa&nbsp; becoming an Admin, read around the forums and you will find the answers to many, many questions.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>caffeine_me</strong> on <strong>July 19, 2012, 04:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				You sound like you know what you are talking about and are very good with the computer........the puzzling thing to me is how would someone of your know how &quot;forget&quot; your password? ::)&nbsp; There are programs for that if you have no long term memory.<br /><br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355289#msg355289">Quote from: truenull on July 19, 2012, 04:08 am</a></div></div><blockquote class="bbc_standard_quote">Hello, everyone, I&#039;m truenull.<br /><br />A few months ago, I discovered multiple serious security holes in Silk Road: XSS, SQL injection, a vulnerability allowing the discovery of the Silk Road host server&#039;s public (non-Tor) IP, and CSRF.<br /><br />Yesterday, I forgot my PIN (fuck me, right?) and figured I&#039;d just wait 7 days for it to be reset, but...<br /><br />A few hours later, there was downtime similar to today&#039;s. Attempts to connect to the silkroadvb5piz3r.onion website were met with a failed connection, and a message in the Tor logs indicating a server-side problem.<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">[Notice] Closing stream for &#039;[scrubbed].onion&#039;: hidden service is unavailable (try again later).</code> <br /><br />After that downtime, there was a brief period allowing logins, then more downtime, but of a different sort. It seemed that there was an issue with the SR webapp or database itself- session cookies were repeatedly invalidated, and users were thus constantly kicked back to /silkroad/home (the login page), even after entering valid credentials and CAPTCHA.<br /><br />During this downtime, I (stupidly) decided to do some additional testing, attempting to create a new account with the same username as my existing account (truenull). It kicked me back to /silkroad/home, and I thought nothing of it... until the downtime ended.<br /><br />I logged in normally- and my account was as if it had been newly created. Balance of 0 BTC (previously ~20), account age (from buyer stats) in the minutes, and (to top it all off) a welcoming PM from SR Support.<br /><br />Fuck.<br /><br />So now I&#039;m out 20 BTC. I PM SR Support (as a reply to the very helpful welcoming PM) and, on the advice of nomadbloodbath in IRC, DPR.<br /><br />A few hours later, I get a reply from SR Support... informing me that my PIN had been reset, and that I would have to wait 5 days before I could change it. This was on my new account, only a few hours old, on which I had never done any sort of PIN activity.<br /><br />&quot;Fuck,&quot; I thought to myself. &quot;This is not normal. There is a serious issue with Silk Road&#039;s database.&quot; I can be quite eloquent in my internal dialogue.<br /><br />So I send off a few strongly worded PMs to SR Support, detailing my evidence. They&#039;ve been read, but have not been responded to. The PM to DPR has yet to be read.<br /><br />Today, there&#039;s more downtime, of a similar sort to the first downtime period yesterday (same error in Tor logs).<br /><br />Analysing the situation further, by my estimate yesterday&#039;s second downtime was just long enough for a user to copy the entire SR database (disabling writes in the meantime to prevent getting a corrupted copy, which explains the session cookie issues), then reload it. If I created my &quot;new&quot; account during the reload, it could easily explain the loss of my account (if the DB restore script prioritized existing rows).<br /><br />So, best-case scenario: SR fucked up server maintenance. Worst-case: SR is compromised by LEO.<br /><br />More information as I collect it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>truenull</strong> on <strong>July 19, 2012, 04:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355328#msg355328">Quote from: caffeine_me on July 19, 2012, 04:28 am</a></div></div><blockquote class="bbc_standard_quote">You sound like you know what you are talking about and are very good with the computer........the puzzling thing to me is how would someone of your know how &quot;forget&quot; your password? ::)&nbsp; There are programs for that if you have no long term memory.<br /><br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355289#msg355289">Quote from: truenull on July 19, 2012, 04:08 am</a></div></div><blockquote class="bbc_alternate_quote">Hello, everyone, I&#039;m truenull.<br />[snipped]<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Not my password, my PIN.<br /><br />I figured I could remember it. I guess I was wrong- although I was very sure I knew it.<br /><br />Hmm... might have been corrupted as well. Someone (nomad?) in IRC said he&#039;d been seeing a lot of PIN resets yesterday, so make of that what you will.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>mybodymychoice</strong> on <strong>July 19, 2012, 04:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				stop f-in with SR and you wont get burnt biatch! ;) 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>Whothefuckisthis</strong> on <strong>July 19, 2012, 04:40 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hmm yeah do you find that when you know you&#039;ve entered your login info correct that it denies you access sometimes?<br />I swear sometimes I&#039;m getting this. ;D
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>jpinkman</strong> on <strong>July 19, 2012, 04:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				So is this what that latest Gawker article was referring to about LE closing in on Silk Road? <br /><br />I would imagine if they could figure out the source of the db corruption, they&#039;d want to roll it back and patch the vulnerability, then force everyone to change passwords or create new accounts if they suspect the db was compromised during that time ... then go through the labor of tracking down bitcoins, a major PITA. <br /><br />I guess we&#039;ll find out.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>mybodymychoice</strong> on <strong>July 19, 2012, 04:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				quick.. everyone get their tinfoil hats! no ... suits, on! chill out people! SR will be back shortly. if i had a bitcoin for everytime someone freaked out like this when there is a minor hiccup i would be a bitcoin millionaire! Take care all. MBMC
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>truenull</strong> on <strong>July 19, 2012, 04:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355357#msg355357">Quote from: jpinkman on July 19, 2012, 04:49 am</a></div></div><blockquote class="bbc_standard_quote">So is this what that latest Gawker article was referring to about LE closing in on Silk Road?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Might be. With no reply to PMs... concern is warranted (like the hypothetical cops who hypothetically seized SR&#039;s server... get it, warranted? no? okay&nbsp; :&#039;()
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>truenull</strong> on <strong>July 19, 2012, 04:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355359#msg355359">Quote from: mybodymychoice on July 19, 2012, 04:49 am</a></div></div><blockquote class="bbc_standard_quote">quick.. everyone get their tinfoil hats! no ... suits, on! chill out people! SR will be back shortly. if i had a bitcoin for everytime someone freaked out like this when there is a minor hiccup i would be a bitcoin millionaire! Take care all. MBMC<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Can you explain my account&#039;s deletion in an uncorrupted database?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>jpinkman</strong> on <strong>July 19, 2012, 04:55 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355289#msg355289">Quote from: truenull on July 19, 2012, 04:08 am</a></div></div><blockquote class="bbc_standard_quote">Hello, everyone, I&#039;m truenull.<br /><br />A few months ago, I discovered multiple serious security holes in Silk Road: XSS, SQL injection, a vulnerability allowing the discovery of the Silk Road host server&#039;s public (non-Tor) IP, and CSRF.<br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You did provide the results of your pentest to DPR right?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>mybodymychoice</strong> on <strong>July 19, 2012, 04:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				actually i do have one interesting story to contribute to this. last night i noticed that i was logged out and forced to log back in which happens from time to time on SR. I normally can stay logged in for a few days before getting bumped. so last night it asked me to login and i know i entered the right captch and it didnt spit out a message saying invalid login it just made me login again but this time the captch was only 3 digits and was all numbers if i recall. i think it was like 357 or something liike that. i entered the odd captcha and it let me in. ive never seen a 3 digit captcha on SR. <br /><br />Perhaps DPR was deploying a new server and we got caught in the time he was setting up the connections to the DB or something. who knows. but just keep your tin foil hats on and SR will be back soon! Enjoy! MBMC
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>truenull</strong> on <strong>July 19, 2012, 04:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355367#msg355367">Quote from: jpinkman on July 19, 2012, 04:55 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355289#msg355289">Quote from: truenull on July 19, 2012, 04:08 am</a></div></div><blockquote class="bbc_alternate_quote">Hello, everyone, I&#039;m truenull.<br /><br />A few months ago, I discovered multiple serious security holes in Silk Road: XSS, SQL injection, a vulnerability allowing the discovery of the Silk Road host server&#039;s public (non-Tor) IP, and CSRF.<br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You did provide the results of your pentest to DPR right?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yeah, and I got paid for it. I ended up doing a full code audit, and finding a few more flaws.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>lookatthis</strong> on <strong>July 19, 2012, 04:59 am</strong>
+			</dt>
+			<dd class="postbody">
+				Now that you guys mention it the forum site has been acting real weird the past 2 days. i would suspect some kind of bug or security breach. i am no expert tho so dont take my word for it. just an opinion 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>truenull</strong> on <strong>July 19, 2012, 05:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355372#msg355372">Quote from: mybodymychoice on July 19, 2012, 04:56 am</a></div></div><blockquote class="bbc_standard_quote">actually i do have one interesting story to contribute to this. last night i noticed that i was logged out and forced to log back in which happens from time to time on SR. I normally can stay logged in for a few days before getting bumped. so last night it asked me to login and i know i entered the right captch and it didnt spit out a message saying invalid login it just made me login again but this time the captch was only 3 digits and was all numbers if i recall. i think it was like 357 or something liike that. i entered the odd captcha and it let me in. ive never seen a 3 digit captcha on SR. <br /><br />Perhaps DPR was deploying a new server and we got caught in the time he was setting up the connections to the DB or something. who knows. but just keep your tin foil hats on and SR will be back soon! Enjoy! MBMC<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yeah, that was the session cookie invalidation. Come to think of it, I was seeing the odd captchas too. I know SR captchas are taken from a wordlist table combined with a random 3-digit number- so a database issue could cause this too.<br /><br />But yeah, I don&#039;t think this was LEO. I&#039;ll keep being suspicious until it can be conclusively shown to be benign... because after all, we&#039;re buying drugs on the internet here.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>sl1pknot</strong> on <strong>July 19, 2012, 05:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355372#msg355372">Quote from: mybodymychoice on July 19, 2012, 04:56 am</a></div></div><blockquote class="bbc_standard_quote">actually i do have one interesting story to contribute to this. last night i noticed that i was logged out and forced to log back in which happens from time to time on SR. I normally can stay logged in for a few days before getting bumped. so last night it asked me to login and i know i entered the right captch and it didnt spit out a message saying invalid login it just made me login again but this time the captch was only 3 digits and was all numbers if i recall. i think it was like 357 or something liike that. i entered the odd captcha and it let me in. ive never seen a 3 digit captcha on SR. <br /><br />Perhaps DPR was deploying a new server and we got caught in the time he was setting up the connections to the DB or something. who knows. but just keep your tin foil hats on and SR will be back soon! Enjoy! MBMC<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>The past couple days I have also been getting some awkward 3 digit captcha images. Just thought it was my internet being screwy and not loading the page completely.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>kingpinirl</strong> on <strong>July 19, 2012, 05:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355372#msg355372">Quote from: mybodymychoice on July 19, 2012, 04:56 am</a></div></div><blockquote class="bbc_standard_quote">actually i do have one interesting story to contribute to this. last night i noticed that i was logged out and forced to log back in which happens from time to time on SR. I normally can stay logged in for a few days before getting bumped. so last night it asked me to login and i know i entered the right captch and it didnt spit out a message saying invalid login it just made me login again but this time the captch was only 3 digits and was all numbers if i recall. i think it was like 357 or something liike that. i entered the odd captcha and it let me in. ive never seen a 3 digit captcha on SR. <br /><br />Perhaps DPR was deploying a new server and we got caught in the time he was setting up the connections to the DB or something. who knows. but just keep your tin foil hats on and SR will be back soon! Enjoy! MBMC<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Exact same thing happened to me earlier today - same situation.&nbsp; I never get &quot;booted&quot; off.&nbsp; Did today, and got the same 3 number captcha.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>ddd45</strong> on <strong>July 19, 2012, 05:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355390#msg355390">Quote from: kingpinirl on July 19, 2012, 05:03 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355372#msg355372">Quote from: mybodymychoice on July 19, 2012, 04:56 am</a></div></div><blockquote class="bbc_alternate_quote">actually i do have one interesting story to contribute to this. last night i noticed that i was logged out and forced to log back in which happens from time to time on SR. I normally can stay logged in for a few days before getting bumped. so last night it asked me to login and i know i entered the right captch and it didnt spit out a message saying invalid login it just made me login again but this time the captch was only 3 digits and was all numbers if i recall. i think it was like 357 or something liike that. i entered the odd captcha and it let me in. ive never seen a 3 digit captcha on SR. <br /><br />Perhaps DPR was deploying a new server and we got caught in the time he was setting up the connections to the DB or something. who knows. but just keep your tin foil hats on and SR will be back soon! Enjoy! MBMC<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Exact same thing happened to me earlier today - same situation.&nbsp; I never get &quot;booted&quot; off.&nbsp; Did today, and got the same 3 number captcha. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;ll throw my hat in this one. Same story here with the boot and subsequent 3 digit captcha. Didn&#039;t log me in with the 3 digit but resumed to normal length right after and let me in.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>sourman</strong> on <strong>July 19, 2012, 05:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				I concur on the possible DB issues. At some point, I too experienced the session cookie invalidation followed by having to re-login at the home page. Only numbers appeared in the CAPTCHA as opposed to the usual combination of both.<br /><br />SR could be moving servers, or they might be making big changes to the site that require the main DB to be taken offline while leaving a copy to handle interim transactions. This could be a response to increased LE scrutiny, or it could be a hack. Could be LE pulling the plug on the site after leaving it up as a honeypot. Remember, there have been several reports of btc transfers not making it to SR accounts.<br /><br />As of now, SR is still completely down (hidden service is unavailable (try again later).). When it first went offline, I was getting an error from tor about the server fingerprint or key being different than expected. Either the server was moved or somehow refreshed, or I dunno....<br /><br />****EDIT: SR just came back as of Thursday 19th of July 2012 04:51:02 AM UTC****
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>gambino</strong> on <strong>July 19, 2012, 05:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				I noticed some database weirdness earlier today.&nbsp; One of the pictures that came up on the main page was xtc pills from a vendor called iDesign.&nbsp; IIRC, that guy ended up being a scammer and hasn&#039;t been around for months.&nbsp; When I clicked on the listing it came up as &quot;listing not available&quot; or whatever it usually says.&nbsp; I&#039;ve also seen other main page weirdness before and it&#039;s never been a big deal, though.&nbsp; I&#039;ve several times had situations where the picture does not match the actual listing when you click on it.&nbsp; So I&#039;m not tripping, at least not at this point.<br /><br />I wonder where limetless is in this thread.&nbsp; Usually he&#039;s got like 3-4 posts in a thread like this.&nbsp; Im thinking he&#039;s sleeping, but based on his post count, I&#039;m not sure he actually sleeps.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>truenull</strong> on <strong>July 19, 2012, 05:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355400#msg355400">Quote from: sourman on July 19, 2012, 05:10 am</a></div></div><blockquote class="bbc_standard_quote">I concur on the possible DB issues. At some point, I too experienced the session cookie invalidation followed by having to re-login at the home page. Only numbers appeared in the CAPTCHA as opposed to the usual combination of both.<br /><br />SR could be moving servers, or they might be making big changes to the site that require the main DB to be taken offline while leaving a copy to handle interim transactions. This could be a response to increased LE scrutiny, or it could be a hack. Could be LE pulling the plug on the site after leaving it up as a honeypot. Remember, there have been several reports of btc transfers not making it to SR accounts.<br /><br />As of now, SR is still completely down (hidden service is unavailable (try again later).). When it first went offline, I was getting an error from tor about the server fingerprint or key being different than expected. Either the server was moved or somehow refreshed, or I dunno....<br /><br />****EDIT: SR just came back as of Thursday 19th of July 2012 04:51:02 AM UTC****<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yep. I&#039;ll give it an hour, see if it stays up.<br /><br />SR need to announce scheduled maintenance (if this was scheduled maintenance), otherwise threads like these happen.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>Dread Pirate Roberts</strong> on <strong>July 19, 2012, 05:45 am</strong>
+			</dt>
+			<dd class="postbody">
+				didn&#039;t get a message from you truenull, just stumbled on this thread.&nbsp; All of the phenomena you have mentioned in this thread actually makes some sense with some back-end configuration changes that have been made in the past couple of months.&nbsp; You know I value your input, so if you have anything you didn&#039;t put here, please contact me on the main site.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>nomad bloodbath</strong> on <strong>July 19, 2012, 05:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				I contacted you on truenull&#039;s behalf DPR.<br /><br /><br />:)<br />nomad
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>3kingdommaster</strong> on <strong>July 19, 2012, 05:52 am</strong>
+			</dt>
+			<dd class="postbody">
+				While writing my script today, I also discovered that the captchas are not unique to each session. I can use the same captcha for around 5 minutes to log in and out. This make it easy to initiate brute force attacks. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>Creamsicle</strong> on <strong>July 19, 2012, 08:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				Fuck. Please don&#039;t let this be happening now. The fact that no admins are chiming in is not a good sign. Admins please let us know what is going on if and when you can.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>Spunkaroo</strong> on <strong>July 19, 2012, 10:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				I consider myself technical, but no where near as technical as a lot of people here. So I have a question for people better than myself. If LE did somehow take control of SR, how much risk would there actually be for those of us who are taking the precautions we should all be taking anyway? Not saying it has or hasn&#039;t happened here, but hypothetically speaking.<br /><br />As buyers, as long as we&#039;re using PGP when placing orders, and obviously keeping any of our personal information on a need to know basis, what could LE actually do? Same with sellers, as long as they take the normal precautions could LE actually do much to catch them? If I&#039;m missing something obvious please let me know, unless it&#039;s potentially sensitive in some way (no need to give LE ideas they haven&#039;t thought of already...)<br /><br />I&#039;m not trying to stop people worrying (paranoia keeps me safe) but I like to be realistic about threats.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>thepotroast</strong> on <strong>July 19, 2012, 12:03 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355718#msg355718">Quote from: Creamsicle on July 19, 2012, 08:37 am</a></div></div><blockquote class="bbc_standard_quote">Fuck. Please don&#039;t let this be happening now. The fact that no admins are chiming in is not a good sign. Admins please let us know what is going on if and when you can.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Look up 3 posts from yours, posted 3 hours prior.<br /><br />DPR is THE admin of all admin&#039;s...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>TheBusiness</strong> on <strong>July 19, 2012, 12:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				SR is a site like any other, with the same uptime + security issues but the stakes are a lot higher. <br /><br />I suspect LE is only one of DPR&#039;s concerns. There&#039;s a lot of bitcoin here waiting to be stolen if someone technical and without scruples does so. Watch the BTC drop out if / when that happens. <br /><br />Good luck guys. In the meantime, I hope you are all using PGP for your comms! If the DB is compromised, that&#039;s exactly why you&#039;d want to be encrypted. <br /><br />&nbsp;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>mybodymychoice</strong> on <strong>July 19, 2012, 02:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg355718#msg355718">Quote from: Creamsicle on July 19, 2012, 08:37 am</a></div></div><blockquote class="bbc_standard_quote">Fuck. Please don&#039;t let this be happening now. The fact that no admins are chiming in is not a good sign. Admins please let us know what is going on if and when you can.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />easy there creamsicle. DPR and nomad both chimed in. the site is back up. relax. it was just changes DPR and co were making. take your tin foil hats off now! its time to buy some drugs again! : ) <br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>n0dialtone</strong> on <strong>July 19, 2012, 03:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Settle down, DPR was just applying a Windows Update. :) But seriously, can I recommend Xanax?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>truenull</strong> on <strong>July 19, 2012, 08:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Bumpity bump: it&#039;s happening again.<br /><br />(Also, I PM&#039;d DPR on the forums with a link to the SR PM I sent- it probably fell into the database bitbucket or something.)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>July 19, 2012, 09:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Fuck me, just went out to get some blocks of paper and a McDonalds, come back and THERE&#039;S PANIC ON THE STREETS OF LONDON! Lol. <br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>forgot my password</strong> on <strong>July 19, 2012, 09:18 pm</strong>
+			</dt>
+			<dd class="postbody">
+				SHIT IS GOING DOWN, DESTROY YOUR HARD DRIVES AND SEND ME ALL YOUR DRUGS A.S.A.P
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>July 19, 2012, 09:24 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg357006#msg357006">Quote from: forgot my password on July 19, 2012, 09:18 pm</a></div></div><blockquote class="bbc_standard_quote">SHIT IS GOING DOWN, DESTROY YOUR HARD DRIVES AND SEND ME ALL YOUR DRUGS A.S.A.P<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Haven&#039;t got a big enough box to ship you mine at the moment mate. ;)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>July 19, 2012, 09:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg357068#msg357068">Quote from: Guru on July 19, 2012, 09:45 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg357016#msg357016">Quote from: Limetless on July 19, 2012, 09:24 pm</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg357006#msg357006">Quote from: forgot my password on July 19, 2012, 09:18 pm</a></div></div><blockquote class="bbc_standard_quote">SHIT IS GOING DOWN, DESTROY YOUR HARD DRIVES AND SEND ME ALL YOUR DRUGS A.S.A.P<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Haven&#039;t got a big enough box to ship you mine at the moment mate. ;)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />There&#039;s a use for your armoured car... :-)<br /><br />Guru<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />See! I knew it was a good idea to advertise it on here.....
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>Christy Nugs</strong> on <strong>July 19, 2012, 10:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				U will have to take ur used socks and shorts out of it first Lim ... :P<br />rofl
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>July 19, 2012, 10:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg357112#msg357112">Quote from: Christy Nugs on July 19, 2012, 10:09 pm</a></div></div><blockquote class="bbc_standard_quote">U will have to take ur used socks and shorts out of it first Lim ... :P<br />rofl<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Pass me my gun and the Smirnoff Christie.....could be an interesting night.....
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>forgot my password</strong> on <strong>July 19, 2012, 10:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Probably gonna be a new gawker article tomorrow talking about the database has been compromised because of this thread.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>July 19, 2012, 10:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg357126#msg357126">Quote from: forgot my password on July 19, 2012, 10:17 pm</a></div></div><blockquote class="bbc_standard_quote">Probably gonna be a new gawker article tomorrow talking about the database has been compromised because of this thread.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If they did that I may have to email them a picture of my erect cock (META data scrubbed of course) just to see if they did an article on that.<br /><br />&quot;Mods penis....is this the key to SR?&quot; no Gawker....it&#039;s just the key to a vagina.....
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>ilovelsd69</strong> on <strong>July 19, 2012, 11:24 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg357131#msg357131">Quote from: Limetless on July 19, 2012, 10:19 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg357126#msg357126">Quote from: forgot my password on July 19, 2012, 10:17 pm</a></div></div><blockquote class="bbc_alternate_quote">Probably gonna be a new gawker article tomorrow talking about the database has been compromised because of this thread.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If they did that I may have to email them a picture of my erect cock (META data scrubbed of course) just to see if they did an article on that.<br /><br />&quot;Mods penis....is this the key to SR?&quot; no Gawker....it&#039;s just the key to a vagina.....<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />HAHAHA fucking priceless&nbsp; ;D
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>Christy Nugs</strong> on <strong>July 19, 2012, 11:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg357114#msg357114">Quote from: Limetless on July 19, 2012, 10:10 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg357112#msg357112">Quote from: Christy Nugs on July 19, 2012, 10:09 pm</a></div></div><blockquote class="bbc_alternate_quote">U will have to take ur used socks and shorts out of it first Lim ... :P<br />rofl<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Pass me my gun and the Smirnoff Christie.....could be an interesting night.....<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />yea that one is getting a little old but i just tried some new hash i made&nbsp; x.x<br />i&#039;ll come up with something better...:P<br /><br />Edit: When ima rested lol
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>spasmolytic</strong> on <strong>July 20, 2012, 12:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				Forgive me if this is a noob question, but are there any plans for all SR members in place if (HYPOTHETICALLY) anything important is seized or compromised, for us to follow, besides preventive maintenance (PGP, etc)? or is preventive maintenance enough?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Something's up. Database corruption, possibly caused by security breach.</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>July 20, 2012, 01:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg357298#msg357298">Quote from: Christy Nugs on July 19, 2012, 11:48 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg357114#msg357114">Quote from: Limetless on July 19, 2012, 10:10 pm</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31439.msg357112#msg357112">Quote from: Christy Nugs on July 19, 2012, 10:09 pm</a></div></div><blockquote class="bbc_standard_quote">U will have to take ur used socks and shorts out of it first Lim ... :P<br />rofl<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Pass me my gun and the Smirnoff Christie.....could be an interesting night.....<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />yea that one is getting a little old but i just tried some new hash i made&nbsp; x.x<br />i&#039;ll come up with something better...:P<br /><br />Edit: When ima rested lol<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yeah true-say, new material is needed.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

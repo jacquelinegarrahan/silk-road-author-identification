@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=20036.0" />
+		<title>Print Page - Using Bitcoin on an encrypted USB (windows)</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: jaco7 on April 22, 2012, 06:25 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Using Bitcoin on an encrypted USB (windows)</strong><br />
+				Post by: <strong>jaco7</strong> on <strong>April 22, 2012, 06:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hello this is my first thread, I just learned this and thought it would be useful to share. This tutorial shows you how to run and use Bitcoin solely on a usb stick in windows. This will work in any folder as well it doesn&#039;t have to be on a usb stick. You can encrypt that folder and your Bitcoin wallet will be very secure.<br /><br />What you will need-<br /><br />1 - USB stick (At least 4GB because the app data directory is about 1.6GB and empty space is useful)<br />2 - Truecrypt installed on your computer<br />3 - Bitcoin installed on your computer<br /><br />Tutorial<br /><br />Step 1 - Encrypt your usb stick, I recommend using Truecrypt<br /><br />Step 2 - Go to your usb stick in windows explorer and create a new folder, name the name folder &quot;Bitcoin&quot;<br /><br />Step 3 - Inside your &quot;Bitcoin&quot; folder create 2 more folders, name them &quot;App&quot; and &quot;Data&quot;<br /><br />Step 4 - Open notepad and paste the following code into it:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">start %cd%\APP\bitcoin-qt.exe -server -datadir=&quot;%cd%\DATA&quot;<br />EXIT</code><br />Step 5 - Save the file into the &quot;Bitcoin&quot; folder as &quot;launch.bat&quot; (make sure the &quot;All files&quot; option is selected in the save interface)<br /><br />Step 6 - Go to the windows folder from my computer, make your way to &quot;\Program files\Bitcoin&quot; and copy the contents to the &quot;App&quot; folder (If you are using a 64bit computer the location is &quot;\Program files(x86)\Bitcoin&quot;)<br /><br />Step 7 - Return to the windows folder from my computer and now go to &quot;\users\&lt;your username&gt;\AppData\Roaming\Bitcoin&quot; and copy the contents to the &quot;Data&quot; folder (If you do not see the AppData folder make sure you have the &quot;show hidden folders option&quot; turned on in control panel)<br /><br />Step 8 - Double click &quot;launch.bat&quot; to start bitcoin<br /><br />Note: If you get an error when you run &quot;launch.bat&quot; that says it cannot find the file &quot;bitcoin-qt.exe&quot; replace the text in the file with this:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">start %cd%\APP\bitcoin.exe -server -datadir=&quot;%cd%\DATA&quot;<br />EXIT</code><br />Hope this comes in handy for someone, here is the original tutorial which I edited only slightly and hopefully made it easier: <br /><br />https://bitcointalk.org/index.php?PHPSESSID=6d01f1dba0740f9235d4da3e7ace594b&amp;topic=4868.msg71216#msg71216
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Using Bitcoin on an encrypted USB (windows)</strong><br />
+				Post by: <strong>Delta11</strong> on <strong>April 22, 2012, 07:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you! I was wondering how to do this but never had time to figure it out&nbsp; :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Using Bitcoin on an encrypted USB (windows)</strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>April 22, 2012, 07:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Nice work Jaco, +1 Karma for a clear and easy to use guide on how to keep your BTC wallet safe. Can I suggest that people also encrypt their wallet, even if it is on a USB stick in case you want to make a backup. Only the Wallet.dat file needs to be saved in order to restore your funds.<br /><br />V.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Using Bitcoin on an encrypted USB (windows)</strong><br />
+				Post by: <strong>Prawl42</strong> on <strong>April 22, 2012, 07:14 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hi Jaco, welcome to the forums!<br /><br />Great post with a easy to use guide, nice work :)
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

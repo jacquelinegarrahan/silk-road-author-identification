@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=214035.0" />
+		<title>Print Page - Public PGP Key Version Info</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: IDoNotLikeProhibition on September 22, 2013, 11:31 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Public PGP Key Version Info</strong><br />
+				Post by: <strong>IDoNotLikeProhibition</strong> on <strong>September 22, 2013, 11:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hey dear SilkRoaders,<br /><br />do headers like &quot;Version: GnuPG v2.0.17 (MingW32)&quot; mean that the one I am writing to is using windows?<br /><br />I see many vendors with Version Info like that and I would not feal that comfortable if my vendor is running his operation on windows.<br />I know that it is not showing his actual used system put it could be an indicator to see if he is taking security seriously. Or give a reason to ask before buying ;)<br /><br />Thanks for your replies&nbsp; :)<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Public PGP Key Version Info</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 22, 2013, 12:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yep. Unless they are faking their version info, those are the Windows users.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Public PGP Key Version Info</strong><br />
+				Post by: <strong>IDoNotLikeProhibition</strong> on <strong>September 30, 2013, 08:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				+1 for you now that I am able to do it ;)<br /><br />So in my view this should be added to one of the &quot;secure buying&quot; threads.<br />I don&#039;t know much about programming but I bet windows is saving more hidden info than other systems.<br />It is like the concerns I once asked myself and already read about in these forums, wether printers have internal memory and are saving print jobs or not.<br />As I can count many vendors with MingW32 they all will get some questioning before I trust them with my order&nbsp; ;D
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Public PGP Key Version Info</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>October 01, 2013, 05:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=214035.msg1555796#msg1555796">Quote from: IDoNotLikeProhibition on September 22, 2013, 11:31 am</a></div></div><blockquote class="bbc_standard_quote">Hey dear SilkRoaders,<br /><br />do headers like &quot;Version: GnuPG v2.0.17 (MingW32)&quot; mean that the one I am writing to is using windows? <br /><br />I see many vendors with Version Info like that and I would not feal that comfortable if my vendor is running his operation on windows.<br />I know that it is not showing his actual used system put it could be an indicator to see if he is taking security seriously. Or give a reason to ask before buying ;)<br /><br />Thanks for your replies&nbsp; :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The MingW32 does indicate that the key owner is using a version of Gnu Privacy Guard for Windows <br /><br />Here&#039;s another one to stay away from: BCPG.&nbsp; The BCPG&nbsp; is used in the version string of PGP software which used the Java BouncyCastle crypto libraries.&nbsp; As I said in some previous posts: <br /><br />Java based PGP/GPG implementations based on the BouncyCastle Java&nbsp; crypto libraries should be avoided like the proverbial plague. These versions, as a general rule, are out of date, and produce dangerously undersized PGP keys. The current standard calls for a minimum RSA PGP key size of 2048-bits; many versions using the BouncyCastle libraries (BCPG) default to 1024-bits. Some BCPG versions that _do_ make use of encryption sub-keys (and many don&#039;t) even default to encryption sub-keys as small as 512-bits.&nbsp; &nbsp; &nbsp;(FWIW, 512-bit RSA encryption keys were abandoned almost 20 years ago due to insecurity.) <br /><br />* 1024-bit keys (RSA or DSS/Elgamal) are way too small. Even the National Institute on Standards and Technology (NIST), said that 1024-bit keys should not be used after 2010. They further stated that 1024-bit keys could continue to be used, with increased security risks, no later than the end of 2013, after which time they were not to be used at all, period. (Just in case you haven&#039;t noticed, the end of 2013 is only about 3 months away.)<br />&nbsp; &nbsp;<br />* Several years back, somewhere between 2007 and 2008, a flaw was found in PGP RSA keys that were used for both signing and encryption. It was discovered that some secret key bits were being leaked, making such keys easier to break. Many BCPG versions generate such weak keys. <br />&nbsp; &nbsp;<br />* Starting in the fall of 2009, both the PGP and Gnu Privacy Guard developers changed the default key formats from DSS/Elgamal to dual-RSA, and changed the default key size from 1024-bits to 2048-bits. <br /><br />Anyone that finds PGP/GPG &quot;too hard to use&quot; and relies on such broken BCPG software because it is &quot;easy to use&quot; is fooling themelves -- they are trading security for ease of use. <br /><br />Nightcrawler<br />4096R/BBF7433B 2012-09-22 Nightcrawler &lt;Nightcrawler@SR&gt;<br />PGP Key: http://dkn255hz262ypmii.onion/index.php?topic=174.msg633090#msg633090&nbsp; &nbsp; &nbsp;(Silk Road Forums PGP Key Link)<br />PGP Key Fingerprint = 83F8 CAF8 7B73 C3C7 8D07&nbsp; B66B AFC8 CE71 D9AF D2F0<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Public PGP Key Version Info</strong><br />
+				Post by: <strong>bluedev1</strong> on <strong>October 02, 2013, 02:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				&nbsp;See how long those vendors are around for... don&#039;t see many using Windows that have been around for years to be honest.&nbsp; &nbsp;Guessing they&#039;re in jail or they have other means of keeping things secure.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

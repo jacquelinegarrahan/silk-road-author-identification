@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=14666.0" />
+		<title>Print Page - Terminal Automation/MAC Spoofing help on OSX?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: inscape on March 08, 2012, 09:30 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Terminal Automation/MAC Spoofing help on OSX?</strong><br />
+				Post by: <strong>inscape</strong> on <strong>March 08, 2012, 09:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				so for whatever reason it&#039;s been years since i&#039;ve been able to get MacDaddy or ChangMac to work on multiple macbooks/os&#039;s. and they are the only to programs i know for OSX that claim to spoof your MAC addy. the next best option i know is to type in terminal:<br /><br />ifconfig en1 | grep ether<br /><br />(to get your current MAC addy)<br /><br />sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -z<br /><br />(where you must type in your admin password)<br /><br />sudo ifconfig en1 ether 00:11:62:73:24:59<br /><br />(to select/change your MAC addy)<br /><br />ifconfig en1 | grep ether<br /><br />(to verify your new addy)<br /><br />-----<br /><br />only problem is you gotta type each command separately, manually change your mac addy,&nbsp; along with your admin pass each time you log in. i&#039;ve looked into automating terminal, ect. and it&#039;s doable, but it seems it would take a decent amount of time to learn. although im not above learning it myself, i just thought perhaps someone already in the know about these things could perhaps recommend some easy way to perhaps tie these commands together so i could maybe copy/paste one single block of code each time when i log in? which would of course leave me the option to manually change may MAC addy at will before pasting.<br /><br />would it be very difficult to perhaps even throw these few commands together with a basic gui? there seems to be a void for a simple easy to use MAC spoofer for mac users atm. would be nice to be able to just set it as a login-item, like i used to do with macdaddy, ect....<br /><br />any thoughtz?<br /><br />thanks..
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Terminal Automation/MAC Spoofing help on OSX?</strong><br />
+				Post by: <strong>inscape</strong> on <strong>March 10, 2012, 06:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				bump. anyone? perhaps i&#039;ll try some mac forums. i&#039;ll report back if i figure it out since it&#039;s more relevant to users here than pretty much anywhere.<br /><br />peace
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Terminal Automation/MAC Spoofing help on OSX?</strong><br />
+				Post by: <strong>Spedly</strong> on <strong>March 11, 2012, 05:09 am</strong>
+			</dt>
+			<dd class="postbody">
+				Why not edit your sudoers file so that the ifconfig and airport commands can be executed by your normal user (as root) without entering a password and just creating a bash script?<br /><br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

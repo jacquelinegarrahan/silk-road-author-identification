@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=85379.0" />
+		<title>Print Page - TAILS and PGP</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: tooconscious on November 26, 2012, 12:08 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>TAILS and PGP</strong><br />
+				Post by: <strong>tooconscious</strong> on <strong>November 26, 2012, 12:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				Anyone here using tails instead of liberte? Are you using a vpn with it or just relying on TOR? Finally, what&#039;s a good pgp tool for tails? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TAILS and PGP</strong><br />
+				Post by: <strong>midwestmedical</strong> on <strong>November 26, 2012, 01:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				Im pretty sure Tails has a pgp tool built in to the software
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TAILS and PGP</strong><br />
+				Post by: <strong>tablechair215</strong> on <strong>November 26, 2012, 04:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				I use Tails and use the tor browser that is built in.&nbsp; Also, has stated above Tails has a built-in PGP tool under applications --&gt; gedit.&nbsp; <br /><br />Remember that every session&#039;s info is lost each time so you have to put your PGP info onto a separate USB stick and add that to the tails amnesia folder each time you boot.&nbsp; <br /><br />Guru explains this very well on the bottom of the 1st page of the PGP club thread.&nbsp; <br /><br />If you have any other questions, message me
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TAILS and PGP</strong><br />
+				Post by: <strong>Leapfrogger</strong> on <strong>November 26, 2012, 05:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				Just put gpg4usb in your Persistent directory and run start_linux.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TAILS and PGP</strong><br />
+				Post by: <strong>DogStar</strong> on <strong>November 26, 2012, 06:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				the latest tails already has pgp built in - you don&#039;t need to install anything else to use it.<br /><br />when you boot into tails, do the following to use built-in pgp (nb: i boot into tails on usb and use a persistent volume):<br /><br />1.&nbsp; navigate to system/preferences/passwords and encryption keys and when it opens, create your own public/private key using file/new/pgp key (i use rsa, 4096 bits, and use a LONG and hard to remember password - remember, pgp is virtually USELESS if you use short, easy to guess, passwords - i suggest not using one you use IRL either as you can guarantee these will be tried by LE!);<br />2. go to sr and copy the sellers public key, then paste it into gedit before saving it to a file on your persistent volume (i use sellername.pub for the filename, but you can use what you like);<br />3. go back to &#039;passwords and encryption keys&#039; and choose file/import to import the saved public key into your keyring;<br />4. go to file/new in gedit to create a new workspace and type your message;<br />5. highlight the text you&#039;ve just typed and then select edit/encrypt (if you don&#039;t highlight the text you will get an error);<br />6. check the checkbox against the public key for the seller and click ok.<br /><br />your message should then be encrypted using the public key of the seller. copy and post this into the address field in your order and you should be sweet!<br /><br />you do not need to complete step 1 if you only want to use pgp for ordering.<br /><br />consider deleting the public keys from your keyring and persistent volume after placing an order to reduce any evidence of who you have dealt with on sr - you can always get them again.<br /><br />hope this helps!<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TAILS and PGP</strong><br />
+				Post by: <strong>tooconscious</strong> on <strong>November 26, 2012, 08:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				Just what I was looking for. Thanks!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TAILS and PGP</strong><br />
+				Post by: <strong>TurpenT</strong> on <strong>June 19, 2013, 07:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				well done. i switched from liberte to tails and wow is it more smooth. but yea, couldn&#039;t find the ol&#039; pgp engine. thank you sir +1
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TAILS and PGP</strong><br />
+				Post by: <strong>Whistleblowers</strong> on <strong>June 19, 2013, 12:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				it can be cracked.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TAILS and PGP</strong><br />
+				Post by: <strong>PerPETualMOtion</strong> on <strong>June 20, 2013, 12:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=85379.msg1253490#msg1253490">Quote from: Whistleblowers on June 19, 2013, 12:58 pm</a></div></div><blockquote class="bbc_standard_quote">it can be cracked.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Everything can and will be &quot;cracked&quot;... <br /><br />Fake ID, throwaway accounts/phones, &quot;employees&quot;, etc.<br /><br />Thanks for the update, Snowden. I mean &quot;Whistleblowers&quot;.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

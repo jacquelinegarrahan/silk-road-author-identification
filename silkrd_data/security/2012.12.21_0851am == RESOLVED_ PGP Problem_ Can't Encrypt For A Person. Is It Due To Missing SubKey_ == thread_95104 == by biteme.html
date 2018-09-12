@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=95104.0" />
+		<title>Print Page - RESOLVED: PGP Problem: Can't Encrypt For A Person. Is It Due To Missing SubKey?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: biteme on December 21, 2012, 08:51 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>RESOLVED: PGP Problem: Can't Encrypt For A Person. Is It Due To Missing SubKey?</strong><br />
+				Post by: <strong>biteme</strong> on <strong>December 21, 2012, 08:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m using GPGTools on a Mac running OS X 10.7.<br /><br />I imported a person&#039;s PGP Public Key into my GPG Keychain. <br /><br />When I tried to encrypt a block of text for this person, they were not shown in the list of possible recipients. As a result, I could not encrypt anything for this user.<br /><br />Next, I went to my GPG Keychain and checked the list. The user with whom I had this problem is listed in my Keychain, but when I dig deeper, I find that this is the only name in my Keychain that has no SubKey. Every other name I&#039;ve imported has three components to their listing: a Public Key (pub), a User ID (uid) and a SubKey (sub). This one problem name has only two components: a Public Key (pub) and a User ID (uid); they don&#039;t have a SubKey (sub).<br /><br />I brought this issue up with the person and they didn&#039;t seem to be aware of any problems. They did not mention whether or not other people are having the same problem that I&#039;m having with being unable to encrypt text for them. I suggested that they might need to generate a new PGP Key and make sure that it includes a SubKey. I don&#039;t want to be rude to this person but since I can&#039;t encrypt anything for them, I am concerned about our communications being insecure.<br /><br />Does anyone know if this lack of a SubKey could be the reason why I can&#039;t choose them as a recipient for encrypted text? Could there be a way for me to fix this on my end or does the other person need to fix it on their end? I only recently learned how to use PGP and generated my own Key and it included a SubKey, so it doesn&#039;t seem like it&#039;s rocket science. How did this other user end up without a SubKey?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP Problem: Can't Encrypt For A Particular Person. Is It Due To Missing SubKey?</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>December 21, 2012, 11:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=95104.msg674376#msg674376">Quote from: biteme on December 21, 2012, 08:51 am</a></div></div><blockquote class="bbc_standard_quote">I&#039;m using GPGTools on a Mac running OS X 10.7.<br /><br />I imported a person&#039;s PGP Public Key into my GPG Keychain. <br /><br />When I tried to encrypt a block of text for this person, they were not shown in the list of possible recipients. As a result, I could not encrypt anything for this user.<br /><br />Next, I went to my GPG Keychain and checked the list. The user with whom I had this problem is listed in my Keychain, but when I dig deeper, I find that this is the only name in my Keychain that has no SubKey. Every other name I&#039;ve imported has three components to their listing: a Public Key (pub), a User ID (uid) and a SubKey (sub). This one problem name has only two components: a Public Key (pub) and a User ID (uid); they don&#039;t have a SubKey (sub).<br /><br />I brought this issue up with the person and they didn&#039;t seem to be aware of any problems. They did not mention whether or not other people are having the same problem that I&#039;m having with being unable to encrypt text for them. I suggested that they might need to generate a new PGP Key and make sure that it includes a SubKey. I don&#039;t want to be rude to this person but since I can&#039;t encrypt anything for them, I am concerned about our communications being insecure.<br /><br />Does anyone know if this lack of a SubKey could be the reason why I can&#039;t choose them as a recipient for encrypted text? Could there be a way for me to fix this on my end or does the other person need to fix it on their end? I only recently learned how to use PGP and generated my own Key and it included a SubKey, so it doesn&#039;t seem like it&#039;s rocket science. How did this other user end up without a SubKey?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;ll wager your correspondent generated their key with Kleopatra; Kleopatra is notorious for generating non-standard PGP keys.&nbsp; DPR&#039;s key was generated with Kleopatra, and has no sub-key. Try importing his key, and see if that works. (I&#039;ll include his key at the end of this message.) <br /><br />I&#039;m also running Lion, and I can use DPR&#039;s key no problem.&nbsp; What is most likely happening are one of two things: <br /><br />- You may need to be running the latest nightly build of GPGTools. Try installing the latest nightly build of GPGTools: https://nightly.gpgtools.org/GPGTools_Installer-latest.dmg<br /><br />- The other possibility is that the copy of the PGP key may be malformed or corrupted; it doesn&#039;t often happen, but is is not unheard of for keys to become mangled or corrupted in transit.&nbsp; <br /><br />PM me a copy of the key, and I&#039;ll try it on my box. <br /><br />NC<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP Problem: Can't Encrypt For A Particular Person. Is It Due To Missing SubKey?</strong><br />
+				Post by: <strong>biteme</strong> on <strong>December 22, 2012, 09:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve tried to install the latest nightly build of GPGTools but it won&#039;t run correctly for me. Apparently there is a bug that makes it crash if there is some problem with the entries in the keychain. It&#039;s not that there is technically anything wrong with the keychain entries, but it&#039;s a compatibility issue that they are supposed to fix in a future build.<br /><br />&nbsp;I guess I could try to use a different brand of PGP encryption tool but I think for now I&#039;ll just wait for the next build of GPGTools. If that doesn&#039;t fix it, I might need to explore other options.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP Problem: Can't Encrypt For A Particular Person. Is It Due To Missing SubKey?</strong><br />
+				Post by: <strong>biteme</strong> on <strong>December 24, 2012, 12:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				RESOLVED!<br /><br />Nightcrawler helped me figure out a solution. I obtained the October 10th nightly build of GPGTools and installed it. Everything seems to be working now and I can even encrypt for users with Keys that don&#039;t have SubKeys.<br /><br />Thanks! This is a great community to be a part of.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

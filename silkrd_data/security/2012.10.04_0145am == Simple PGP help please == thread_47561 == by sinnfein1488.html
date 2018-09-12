@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=47561.0" />
+		<title>Print Page - Simple PGP help please</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: sinnfein1488 on October 04, 2012, 01:45 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Simple PGP help please</strong><br />
+				Post by: <strong>sinnfein1488</strong> on <strong>October 04, 2012, 01:45 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hello, I have PGP all set up, I understand how to use someone&#039;s key and what not; But once I have their key imported into my &quot;clipboard&quot; and I &quot;sign&quot; it with my key or what not, how do I actually go about transmitting the message to said user? Is this GPG program actually capable of sending the message or do I need to be doing something else? Thank you very much.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Simple PGP help please</strong><br />
+				Post by: <strong>OrganicConnection</strong> on <strong>October 04, 2012, 01:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				No, PGP just takes data and encrypts it. It does that specifically so you can send it via any [insecure] medium you want and have some assurance that even if the message is intercepted, it can only be read by someone who has the private key and passphrase.<br /><br />On the command line to encrypt you would do something like:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --armor --recipient whomever --encrypt filename.txt</code><br />This will take the contents of filename.txt, encrypt it using the public key of whomever, and output the ciphertext in ASCII (printable, alphanumeric characters) format so you can copy paste it into an email or wherever. In the case of SR, you just click the username and &quot;Send ____ a message&quot;, and copy paste the output of the encryption into the box.<br /><br />Good luck, keep encrypting!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Simple PGP help please</strong><br />
+				Post by: <strong>farmer1</strong> on <strong>October 04, 2012, 02:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				You want to select their key and &#039;import&#039; it. Then you write your message. Select it and &#039;encrypt&#039; it using their public key. Do not sign it (very important, most common issue I have had receiving PGP encrypted orders).<br /><br />Once encrypted, simply copy and paste it into the address field.<br /><br />The GPG program you have doesn&#039;t send or receive. It only imports, decrypts, and encrypts (some other features of course, but these are the main three). Everything comes and goes from the GPG program via the clipboard.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Simple PGP help please</strong><br />
+				Post by: <strong>seshat</strong> on <strong>October 04, 2012, 07:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				Farmer 1 put it well.<br /><br />Allz ya have to do is write your message in a plain text text edit file, highlight that message, encrypt it with &#039;dudes&#039; public key, then copy and paste that encrypted message to the address field, or wherever you are sending it for that matter. This allows &#039;dudes&#039; to Decrypt this message with his secret key, because of the derivative nature of the public key in relation to the secret key.<br /><br />Cheers<br /><br />-Seshat
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Simple PGP help please</strong><br />
+				Post by: <strong>sinnfein1488</strong> on <strong>October 04, 2012, 10:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				Farmer1, thank you very much. Very helpful info you gave me there. I should be good to go now!!
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

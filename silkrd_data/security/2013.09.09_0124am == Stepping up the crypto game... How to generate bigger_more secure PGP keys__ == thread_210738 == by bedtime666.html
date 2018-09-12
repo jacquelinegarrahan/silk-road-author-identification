@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=210738.0" />
+		<title>Print Page - Stepping up the crypto game... How to generate bigger/more secure PGP keys??</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: bedtime666 on September 09, 2013, 01:24 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Stepping up the crypto game... How to generate bigger/more secure PGP keys??</strong><br />
+				Post by: <strong>bedtime666</strong> on <strong>September 09, 2013, 01:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				So I am using the GnuPG/GPA package from gpg4win.. I will soon be switching to a linux OS and I want to know PGP more intimately to be dependent of these &quot;plug n play&quot; options and to have a harder key to break..<br /><br />So where/how are these vendors generating those BIG ASS pgp keys? <br /><br />Thanks 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Stepping up the crypto game... How to generate bigger/more secure PGP keys??</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 09, 2013, 01:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				GUI PGP apps should have an option when you create the key to increase the key size. If your app doesn&#039;t have that option, it&#039;s a piece of shit and you should stop using it.<br /><br />GPG4USB lets you change the key size when you create it.<br /><br />On Linux, using the command line gpg, it will ask you for the key size when you run gpg --gen-key.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Stepping up the crypto game... How to generate bigger/more secure PGP keys??</strong><br />
+				Post by: <strong>bedtime666</strong> on <strong>September 09, 2013, 02:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				Wow yeah, just tried to generate a new key and saw this wasn&#039;t an option.. At least by default, the key just generates. I definitely want to learn more about command line GPG.. Can you use GPG4USB on Linux in the command line? I definitely want to get more acquainted with what the actual process looks like, I understand an app like GPA is just entering the text into the command line for me, more or less.. <br /><br />Thank you for the repl(y[ies]) Astor, I truly appreciate your presence here. I swear you are a saint for not offering a donation addy in your sig LOL!! 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Stepping up the crypto game... How to generate bigger/more secure PGP keys??</strong><br />
+				Post by: <strong>bedtime666</strong> on <strong>September 09, 2013, 02:16 am</strong>
+			</dt>
+			<dd class="postbody">
+				Aha, I just found that in GPG4WIN&nbsp; there is a tab &quot;Preferences&quot;, you must click &quot;use advanced mode&quot; and &quot;show advanced options&quot; to get the prompt for bit-count.. Thank you for prompting this simple trouble shoot Astor :D<br /><br />I would really appreciate being able to pick someones brain in PM about these subjects, would especially be willing to donate BTC for this privilege of some free time.. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Stepping up the crypto game... How to generate bigger/more secure PGP keys??</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 09, 2013, 03:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210738.msg1525181#msg1525181">Quote from: bedtime666 on September 09, 2013, 02:05 am</a></div></div><blockquote class="bbc_standard_quote">Wow yeah, just tried to generate a new key and saw this wasn&#039;t an option.. At least by default, the key just generates. I definitely want to learn more about command line GPG.. Can you use GPG4USB on Linux in the command line?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />GPG4USB is a GUI app. The whole point is to not use the command line, otherwise you can use gpg directly. Most GUI apps are just graphical interfaces that send commands to gpg. Even on Windows, they come with gpg.exe, a Windows port of gpg that you can actually use from the command prompt. Type:&nbsp; gpg.exe --gen-key, and it works the same way.<br /><br />That being said, GPG4USB runs on 32 bit Linux, but it&#039;s harder to get working on 64 bit Linux, because it isn&#039;t built for 64 bit so you have to install like 200 MB of multiarch libraries.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Thank you for the repl(y[ies]) Astor, I truly appreciate your presence here. I swear you are a saint for not offering a donation addy in your sig LOL!!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well, one reason not to list an address is that I use Bitcoin the right way and create a new address for each transaction. ;)<br /><br />Even if you don&#039;t care about privacy, you should do that to protect the privacy of the people you transact with. SR should create a new bitcoin address for you after each deposit, like MtGox and other services do. Although there are so many clueless people in this community that a lot of them would send coins to the old addresses.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Aha, I just found that in GPG4WIN&nbsp; there is a tab &quot;Preferences&quot;, you must click &quot;use advanced mode&quot; and &quot;show advanced options&quot; to get the prompt for bit-count.. Thank you for prompting this simple trouble shoot Astor <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Awesome. That should be on the SR wiki.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210738.msg1525297#msg1525297">Quote from: Jeks on September 09, 2013, 02:44 am</a></div></div><blockquote class="bbc_standard_quote">Is there a way to generate an 8192 key with this? A way to change the limit of 4096 in the program?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No, even gpg is limited to 4096 bits, unless you change the source code and compile your own version.<br /><br />I have done it and created a 16384 bit key. See here: http://dkn255hz262ypmii.onion/index.php?topic=157004.msg1102015#msg1102015<br /><br />Problem is that other people&#039;s PGP clients don&#039;t properly create a message when encrypting with the key. I don&#039;t know what pine was using, but her client failed silently. I couldn&#039;t decrypt the messages that she encrypted with my 16384 bit key, although I could decrypt messages that I encrypted, so I know my gpg was working.<br /><br />So until everyone is using PGP clients that support larger key sizes, there&#039;s not much point to doing it yourself.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Stepping up the crypto game... How to generate bigger/more secure PGP keys??</strong><br />
+				Post by: <strong>bedtime666</strong> on <strong>September 09, 2013, 03:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210738.msg1525348#msg1525348">Quote from: astor on September 09, 2013, 03:04 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210738.msg1525181#msg1525181">Quote from: bedtime666 on September 09, 2013, 02:05 am</a></div></div><blockquote class="bbc_alternate_quote">Wow yeah, just tried to generate a new key and saw this wasn&#039;t an option.. At least by default, the key just generates. I definitely want to learn more about command line GPG.. Can you use GPG4USB on Linux in the command line?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />GPG4USB is a GUI app. The whole point is to not use the command line, otherwise you can use gpg directly. Most GUI apps are just graphical interfaces that send commands to gpg. Even on Windows, they come with gpg.exe, a Windows port of gpg that you can actually use from the command prompt. Type:&nbsp; gpg.exe --gen-key, and it works the same way.<br /><br />That being said, GPG4USB runs on 32 bit Linux, but it&#039;s harder to get working on 64 bit Linux, because it isn&#039;t built for 64 bit so you have to install like 200 MB of multiarch libraries.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Aha, do you know where I could find any recommended reading on using PGP command line? I found a cheat sheet I&#039;m going to print out, but I&#039;d like some more in depth reading.. Also how would I use GPG on a Linux OS? I am going to switch over to Linux as soon as I have read enough on installing/operating it... I am going to try doing it in windows command prompt now... Thank you for the homework Astor :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Stepping up the crypto game... How to generate bigger/more secure PGP keys??</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 09, 2013, 04:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				First, do yourself a favor and replace the gpg.conf that came with your app with this:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">no-greeting<br />no-emit-version<br />no-comments<br /><br />utf8-strings<br />armor<br /><br />expert<br />trust-model always<br />no-mdc-warning<br /><br />personal-cipher-preferences AES256 TWOFISH CAMELLIA256 AES192 CAMELLIA192 AES CAMELLIA128 CAST5 3DES BLOWFISH<br />personal-digest-preferences SHA512 SHA384 SHA256 SHA224 RIPEMD160 SHA1<br />personal-compress-preferences BZIP2 ZLIB ZIP Uncompressed<br />cert-digest-algo SHA512<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If you have multiple keys, you can set a default with:<br /><br />default-key &lt;key ID&gt;<br /><br /><br />Command line gpg is easy to use. There are a handful of basic commands, and gpg will ask you for any input that it needs if you haven&#039;t provided it. I can give you a run down of the basic commands right now. For the commands that require input, you can either specify a file or type/paste stuff directly in the command prompt window.<br /><br />I will use the &quot;gpg&quot; command, but on Windows you&#039;ll have to use &quot;gpg.exe&quot;.<br /><br />To import a key:<br /><br />gpg --import<br /><br />If you just type that, you&#039;ll see a cursor in the command window and can paste the key in the window. After pasting it in, hit CTRL+D. Otherwise you can save the key in a file and specify that:<br /><br />gpg --import buddy.key<br /><br />To print out your public key, so you can give it to other people:<br /><br />gpg --export KEYINFO<br /><br />Where KEYINFO is either the name, email address or key ID. gpg will search your key ring and use the first match. If it&#039;s a long name, you only need to supply a part of it, enough that it uniquely matches that key.<br /><br />The previous command will print it in the command window. You can put the output in a file with redirection:<br /><br />gpg --export KEYINFO &gt; pub.key<br /><br /><br />Ok, with the basic importing and exporting out of the way, we&#039;re ready to do encryption. The simplest command to encrypt is:<br /><br />gpg -e<br /><br />Yep, that&#039;s it. If you don&#039;t supply the recipients, it will ask you for them. Just type in some key info, like above, either part of the name, email address, or key ID. You can add as many recipients as you want, and hit enter (blank recipient) to stop adding recipients.<br /><br />Then you&#039;ll get a cursor to type your message. and when you&#039;re done, hit CTRL+D, and it will spit the encrypted block into the command window.<br /><br />Alternatively you can type your message in a text file and specify that.<br /><br />gpg -e message.txt<br /><br />And you can specify the recipients too, although I&#039;m too lazy to do that and let it prompt me. :)<br /><br />gpg -r astor -r bedtime666 -e message.txt<br /><br />It will create a file called message.txt.asc which contains the encrypted message.<br /><br />To decrypt a message:<br /><br />gpg -d<br /><br />And you can paste the message in the command window, then hit CTRL+D.&nbsp; Or specify the file:<br /><br />gpg -d encrypted_message.txt<br /><br />That&#039;s enough to get you started.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Stepping up the crypto game... How to generate bigger/more secure PGP keys??</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 09, 2013, 04:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				Oh yeah, one more thing:<br /><br />gpg --list-keys<br /><br />You&#039;ll use that a lot. Should be obvious what it does. :)<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Stepping up the crypto game... How to generate bigger/more secure PGP keys??</strong><br />
+				Post by: <strong>bedtime666</strong> on <strong>September 09, 2013, 10:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I fucking love you. I couldn&#039;t seem to get a response last night out of gpg.exe, before reading that though.. Gonna try and implement my new l33t hax skills tonight, thank you so much bro :)
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

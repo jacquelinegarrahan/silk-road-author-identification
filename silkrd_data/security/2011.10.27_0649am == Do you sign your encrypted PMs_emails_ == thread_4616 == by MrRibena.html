@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=4616.0" />
+		<title>Print Page - Do you &quot;sign&quot; your encrypted PMs/emails?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: MrRibena on October 27, 2011, 06:49 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Do you &quot;sign&quot; your encrypted PMs/emails?</strong><br />
+				Post by: <strong>MrRibena</strong> on <strong>October 27, 2011, 06:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				Im not sure if that would make it impossible to the recipient to read, or if it should be done. So far ive just used their public key and sent back the encrypted message. Any thoughts/help appreciated.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Do you &quot;sign&quot; your encrypted PMs/emails?</strong><br />
+				Post by: <strong>mito</strong> on <strong>October 27, 2011, 12:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				This is also a question I have.<br /><br />When I encrypt a message to someone, should I sign it?<br /><br />If I do, then does the recipient have to have my public key imported in order to decrypt it?<br /><br />If I don&#039;t, am I sure only the recipient will be able to open it?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Do you &quot;sign&quot; your encrypted PMs/emails?</strong><br />
+				Post by: <strong>crib</strong> on <strong>October 27, 2011, 03:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I always sign my communications - what this does is allow the recipient to verify that the communication is actually from you, using your public key.<br /><br />If it&#039;s the first time you&#039;ve communicated with the person, then it makes no difference (you have no history with them)... but say someone phishes your account and is posing as you - someone who has already has your public key would be able to detect that the sender *may* have changed.<br /><br />Recap;<br />Encrypt with recipient&#039;s public key -&gt; they decrypt with their private key<br />Sign with your private key -&gt; recipient can verify that you sent it using your public key<br /><br /><br />Recipients will be able to decrypt whether it&#039;s signed or not. IMO, sign your communications.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Do you &quot;sign&quot; your encrypted PMs/emails?</strong><br />
+				Post by: <strong>Wolverine</strong> on <strong>October 27, 2011, 09:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				are you supposed to send your public key to the recipient? i figured out how to encrypt the message but to decrpyt it i have to enter the passphrase i created? how does the recipient get my password?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Do you &quot;sign&quot; your encrypted PMs/emails?</strong><br />
+				Post by: <strong>CrunchyFrog</strong> on <strong>October 28, 2011, 01:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=4616.msg38915#msg38915">Quote from: Wolverine on October 27, 2011, 09:58 pm</a></div></div><blockquote class="bbc_standard_quote">are you supposed to send your public key to the recipient?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Yes, if you&#039;d like an encrypted response (which you probably do).<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=4616.msg38915#msg38915">Quote from: Wolverine on October 27, 2011, 09:58 pm</a></div></div><blockquote class="bbc_standard_quote">i figured out how to encrypt the message but to decrpyt it i have to enter the passphrase i created?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Yes, to decrypt a message sent to you that&#039;s been encrypted with your public key.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=4616.msg38915#msg38915">Quote from: Wolverine on October 27, 2011, 09:58 pm</a></div></div><blockquote class="bbc_standard_quote">how does the recipient get my password?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>The recipient doesn&#039;t get the passphrase to your keys -- just as you don&#039;t get the passphrase to hers -- she gets only your public key.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Do you &quot;sign&quot; your encrypted PMs/emails?</strong><br />
+				Post by: <strong>LexusMiles</strong> on <strong>October 28, 2011, 02:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				I read somewhere to avoid signing. You&#039;re better protected if you don&#039;t sign or something. Hardly a convincing argument I know. But I see error messages in kleopatra when people start signing anyways so I always avoid it.<br /><br />Also, none the sellers I&#039;ve dealt with have been signing. If in doubt, follow your local seller.&nbsp; Nah change that.. if in doubt just don&#039;t sign. Need a security expert to step in and save us here, but its a topic thats been done before at least once, so I take in upon myself to spread the word to &quot;not sign&quot; even though I can&#039;t quote the specific technical reasons. For me its just easier, and less errors etc.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Do you &quot;sign&quot; your encrypted PMs/emails?</strong><br />
+				Post by: <strong>Gruzel</strong> on <strong>October 30, 2011, 04:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				Do not sign.<br /><br />Here is a brief overview of how signing works:<br /><br />Step 1) You make a public/private keypair<br /><br />Step 2) You give out your public keypair<br /><br />Step 3) *Not technically required--but the next crypto step* The recipient contacts you via a trusted channel to verify the fingerprint of your public key.<br /><br />Step 4) The recipient installs your public key<br /><br />Step 5) You sign something with your private key<br /><br />Step 6) ANYONE who has your public key can validate that it came from you (if it is something encrypted they can&#039;t read the content, just the signature).<br /><br />It is very easy for you to accidentally do step 1 wrong, and include information you don&#039;t really want public in there (e.g. your email addry)<br /><br />If your recipient isn&#039;t going to do steps 3/4/6 it serves no purpose for you.<br /><br />If you are not expecting your recipient to reply back to you with encrypted messages then you don&#039;t have to do any of the above. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

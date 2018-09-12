@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=150450.0" />
+		<title>Print Page - PGP encryption software for Macs?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: grahamwilliam on April 21, 2013, 12:41 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>PGP encryption software for Macs?</strong><br />
+				Post by: <strong>grahamwilliam</strong> on <strong>April 21, 2013, 12:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				I haven&#039;t been able to find any encryption software for mac users, and it&#039;s really frustrating. Are there any apple guys out there that can help me out, give me some suggestions? <br /><br />Also, if any of you could give me some quick tips on how to get started with this software, it would be greatly appreciated.<br /><br />Thanks so much!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP encryption software for Macs?</strong><br />
+				Post by: <strong>halflingsleaf</strong> on <strong>May 16, 2013, 01:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				Try GPG. Downloaded it earlier and am still playing around with it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP encryption software for Macs?</strong><br />
+				Post by: <strong>ExperienceAll</strong> on <strong>May 16, 2013, 05:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				TRY THIS<br /><br />GPGTools is highly version dependent -- depending on which version of OS X you have, it may or may not work as expected.&nbsp; If you have Leopard (10.5) then you&#039;re pretty much out of luck. Your only option then will be using the command-line.<br /><br />If you have Snow Leopard (10.6), Lion (10.7) or Mountain Lion (10.8), the following instructions should be sufficient to allow you to get up and running.<br /><br />Click on the GPG installer: https://gpgtools.org/<br /><br />Once you have installed GPGTools,&nbsp; what you want to do is to go into System Preferences --&gt; Keyboard --&gt; Services.<br /><br />Scroll down until you find the following entries. Be sure to put a check mark in the boxes to activate each keyboard shortcut.<br /><br />Keyboard shortcuts:<br />================<br /><br />OpenPGP: Decrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-D<br /><br />OpenPGP: Encrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-E<br /><br />OpenPGP: Import Key from Selection:&nbsp; &nbsp; &nbsp;Shift-Command-I<br /><br />OpenPGP: Insert My Fingerprint:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-F<br /><br />OpenPGP: Insert My Key:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-K<br /><br />OpenPGP: Sign Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Shift-Command-R<br /><br />OpenPGP: Verify Signature of Selection: Shift-Control-V<br /><br />REMEMBER, THESE SHORTCUTS ONLY OPERATE ON HIGHLIGHTED OR SELECTED TEXT.<br /><br />N.B.: To properly be able to import PGP into GPGChain (via TextEdit) you need to change the default on TextEdit from .rtf to plain text. You can do that through the Format menu, or you can go through the main configuration menu, accessible by using Command-comma. Ensure the plain text radio button is selected.<br /><br />Also ensure that the following are UNCHECKED in TextEdit preferences: smart quotes, smart dashes, smart links.<br /><br />To select text within TextEdit, use Command-A to highlight the entire document, or use your mouse to selection the section that you want to verify/sign/encrypt/decrypt. It is highly recommended that you use only plain-text, as opposed to Rich Text (.rtf) format. Use Command-comma to bring up Preferences and ensure that the plain text radio button is checked.<br /><br />Once your text is highlighted in TextEdit, (by pressing Comand-A) you then encrypt using Shift-Command-E. You will then be presented with a list of keys to encrypt to, that you have added to your PGP keyring:<br /><br />Other Commands You May Need:<br />==========================<br /><br />OpenPGP: Decrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-D<br /><br />OpenPGP: Encrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-E<br /><br />OpenPGP: Sign File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Control-Command-S<br /><br />OpenPGP: Verify Signature of File:&nbsp; &nbsp; &nbsp; &nbsp;Control-Command-V<br /><br /><br />Once you have setup these shortcuts, you can begin using GPG.<br /><br />To encrypt a message to someone using GPG, you first need a copy of the recipient&#039;s PGP public key.<br /><br />Once you have located someone&#039;s PGP public key, you should copy and paste it into TextEdit. Save the PGP key to a file; you can call the file, import.asc (or import.txt), for example. This saved file will usually be found in the Documents folder.<br /><br />Launch GPG Keychain Access from the Applications folder. click on the Import icon in the upper left hand corner. GPG Keychain Access will then prompt you for the name of the file which contains the key to import. It will usually show you a list of files in the Documents folder. Click on the file named import.asc (or import.txt), and click ok. The PGP public key will then be imported into your PGP keyring.<br /><br />To encrypt a message to a person, the message must be contained in a TextEdit document. Use Command-A to hightlight the entire document. Then use Shift-Command-E to encrypt. GPG will pop-up a list of public keys in your PGP keyring. Each key will have a little checkbox beside it which you can check, to select that particular key. If you were encrypting a message to me, you would put a check in the box beside my PGP key (Guru@SR).<br /><br />When you click on OK, the plaintext (unencrypted) message in TextEdit will be replaced with the encrypted message. You can then copy and paste the encrypted message to enter it into a form on Silk Road, or anywhere else that it needs to go.<br /><br />To decrypt a message sent to you by other people, you need to copy that message to the clipboard, and paste it into a TextEdit document. Again use Command-A to highlight all the encrypted message. Then use Shift-Command-D to decrypt the message. If the message is encrypted to your PGP public key, you will be prompted to enter your passphrase. Once the correct passphrase has been entered, and you click OK, then the message will be decrypted, and the decrypted text will be placed in the TextEdit document, replacing the encrypted message that was there previously.<br /><br />Nightcrawler (Tutorial originally written by Guru)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP encryption software for Macs?</strong><br />
+				Post by: <strong>moonsafari</strong> on <strong>May 16, 2013, 10:39 am</strong>
+			</dt>
+			<dd class="postbody">
+				I use http://sourceforge.net/projects/ppgp/ and it works perfectly.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

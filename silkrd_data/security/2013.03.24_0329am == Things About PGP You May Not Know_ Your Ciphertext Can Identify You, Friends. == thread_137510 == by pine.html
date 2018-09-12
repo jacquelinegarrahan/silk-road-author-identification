@@ -1,0 +1,659 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=137510.0" />
+		<title>Print Page - Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: pine on March 24, 2013, 03:29 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>pine</strong> on <strong>March 24, 2013, 03:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hello folks.<br /><br />Some people know this and some don&#039;t, so this is in the nature of a PGP public service announcement.<br /><br />As kmfkewm recently pointed out to a forum poster a ciphertext can have identifiers embedded into it. This is how it works, try this at home with your own PGP key on a test message to see for yourself.<br /><br />Example: <br /><br />This is a PGP ciphertext encrypted to myself using the PGP Club public key.<br /><br />-----BEGIN PGP MESSAGE-----<br /><br />hQGMA7pmVyGp4Z9uAQv/Y7fCVqUChMnji1g4Tm4zirTSoBvzoaoB8pmshcFVFYMh<br />Mx0W8fKVrMOU/TxzSjIhaUvVmxRTAF4MxMNrLg7ncTBWVDeBjrOQCNYUMCrGt//d<br />0u/HqWn6EfUCADuaxLd52WmF1CIs2ezXJo6XXfwfJCStiel0tek0vpKINlllXwlx<br />YdgvUZKB3BpE3K2abNfSkaeBHlPvRgUGWI+VAkNpwsNq+y1RXOIVyC0p38Rcpxuv<br />Bp6iMKoxE30SPOVzYR29bCA8I/+/sRvlOSDTKnDEkiFl7/rezheBJT2+OiJlOIkx<br />6wTv1HSeWNtrH9jnOGfGUKUgId0eEyKUgnHh1Z9IJlMqnvCNIUreTuylI4/v0izh<br />5oqA6dHO7S2YPrm1TtDnihBsVrexq6/fv0mBApTR9LChP/0pkDHVKdfkuoUYXjg2<br />E30Je4iyPSnfD1J597/Aqvv+cOlj5JyAkQ2vFnywYw5s6O/DB93h2jz4XU8KYZmZ<br />3+slR6o1wV/kDEKg/iFe0lIBdHmum3nEzfSN8kFqRAT/1sMyDBPPs7g7phNPe7lP<br />NACp4iUHdca8n419dDFDCoqJIXeM4gYqaj5njVvETt73car1l/p/h/GMKptK+CH/<br />nzlv<br />=tTJA<br />-----END PGP MESSAGE-----<br /><br />If you store this as a text file such as encrypted_msg.asc somewhere, and then open the terminal/command line and type this code:<br /><br />gpg -v encrypted_msg.asc<br /><br />The result is this information:<br /><br />gpg: public key is A9E19F6E<br />gpg: encrypted with RSA key, ID A9E19F6E<br /><br />A9E19F6E is the key ID for my public key. <br /><br />Of course, normally we do not encrypt messages using our own public keys. But there are possible negative consequences for anonymity due to this feature of PGP.<br /><br />--<br /><br />Many PGP or GPG software products (most Macintosh software appears to be setup this way for example) automatically encrypt a message to yourself as well as the other person you&#039;re sending the message to. So if anybody knows an association between you and your public key e.g. you uploaded it to a key server, or you use the same PGP key for both life inside and outside of SR, then if they intercept your message they&#039;ll know it is from you. They won&#039;t know what is inside the message, but they&#039;ll know it is you who sent it. Not good.<br /><br />The point is that you really want 1 PGP key for SR, and only SR. Never use that key anywhere else otherwise you&#039;ll be linkable between those two places.<br /><br />Note: One thing that can catch people out is signing. Unless you sign a public key locally, the signature will be uploaded to a keyserver automatically as part of a Web of Trust deal. This is pretty standard among most PGP/GPG software. So, if you are signing people&#039;s public keys, ensure you only do this locally. There is an option for this. Otherwise you can be hypothetically traced back from the keyserver. Yes, you could Torify your GPG client, but that&#039;s a whole other discussion.<br /><br />--<br /><br />Finally, consider that if a message is encrypted to somebody else&#039;s public key, that if the Feds know the source of the message, then they have evidence for a connection between you and that person. Sometimes that is all that is required.<br /><br />-----BEGIN PGP MESSAGE-----<br /><br />hQGMA7pmVyGp4Z9uAQv9EvfKCl1k8lEDcfgQNR7t/iNg1RaGaQyEShmfgBFkFVWx<br />r4wjOTxo2Pl5I826Rhzv8axbSom/+K41WRRV38LiHT65RNrPQmyozV/vWOmo18eE<br />coXqdBzmuOIVbqUkd/oV0bgSxESmbSVc/cTmXDrniZZ/svcD+jbd+oSUCl8yp4U7<br />xor7ojdpAcL5QFPz8jy7sDU/+7fsDCsgoHW8OTPwcrPckqpFJUZFJd7/9qbbwdE6<br />BuyJYDmvFgqQAjB8qecYcpzUMzQzvYEbzMP1QHZ1XaAPIy2mB2FYXF44Am4JNgXY<br />sA7/FG27CPwd9RkxzPQrldMMgZuhs8x8/vVGxf7/tUusrQrSCMHnlRKE95vT5ffY<br />f2NsDvs24dOLZjCx2jfrr9W1MREUkja0wZPWaIjzhjAuKTaPWRQFWFVjOzacz3ca<br />6EYEzWFO09VRvb3RBBNIXJcJCM1HdfVcNtGSj7gspSlr1YWJSA1WuMmHzhy4KWNH<br />nfGUzY/8rAzinhT3AG9jhQEMA5jmn5iuBkvEAQf/b6ZunD7Sfwu+N2UEujF2WQGk<br />QsOfzAoy4bMSEt5l7bLLXzvjtsvCPWQIlbxQO2qZqUucGKH/rBwmakPtFoqNo03S<br />d/FCJts8Wtrxd5QNV8GhYSn3+fij6MHIkG2GjCSL344CAR/NQakQhEyvDPJNBUhH<br />Gmns7grYQXAWoG0ClIHrYIkFIH6L2pMvUBxfGXN2Hq2MiG735CLbKnT8aIUhIDib<br />/b4SFQ74LqV5L7E5g9P5e7iX/95Cro+SYCkAchpXtJlqtTscWBXWC426bW+3Q2rP<br />bPzLpageTiDiqGJJgWb8LzI2Zp3hKNbqLYm5vvSqfQAnh53K1Q0P6ZaDKPvKYtJL<br />AXidPBUIYvzDpC3N/8mdM4GRXOenVeXVGc9SBfxcyoYxis4syC9UcQ7Regl7m7Si<br />lpOVHOnHR1mPMwiZbJxas1WBQWqcTTb7UUA4<br />=D12u<br />-----END PGP MESSAGE-----<br /><br />The above message is encrypted to my public key and some random member of Club PGP. The result is: <br /><br />gpg: public key is A9E19F6E<br />gpg: public key is AE064BC4<br />gpg: encrypted with RSA key, ID AE064BC4<br />gpg: encrypted with RSA key, ID A9E19F6E<br /><br />Which proves that Pine sent a message to the person with PGP key ID AE064BC4, in this case AnonymousMan. <br /><br />Now, if AnonymousMan knew Pine in real life, and the Feds knew AnonymousMan, they could beat on AnonymousMan to give up Pine. Fortunately this is not the case.<br /><br />The point remains though, that this embedded Key ID business is an unhappy affair for us denizens of the Darknet. The next post shall address how to circumvent this inconvenience.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>pine</strong> on <strong>March 24, 2013, 03:48 am</strong>
+			</dt>
+			<dd class="postbody">
+				Continuing with my example of encrypting a message to myself and AnonymousMan. This message has been encrypted to us both.<br /><br />-----BEGIN PGP MESSAGE-----<br /><br />hQEMA5jmn5iuBkvEAQf/W/0+u3mm6TH7HoJ/QdWwEFXVCW1O61hGIGahKol1y8D+<br />wxM2fRE1ZJydJ6XY/jC2kF8vXcHyqNZxRgrftho9ydUrBDBNiy4lPB5PeA5IIkKg<br />wulKIOtvCDhDkZgybP21LtF9T5fBOsANYmIU9y9clc7enUooqHoHYmldOsS/0Uwx<br />MCDKEgT2NUN4FATk1Mp0yA4IIoLP11SBt1y+yqAppXE+b40Cx/0YMywk3VaSOIeB<br />sjrA/LLRIyIZs7q2pIhekp2aeGzNt41ghvz4sy+xx/90O24otNONWmfohiOmLS+s<br />nGKtp+F8KTYdqx1R/qhPocIKhb+k9OLHiDMf9ThR/YUBjAMAAAAAAAAAAAEL/0S3<br />EW+X1KAwm8wKH6Akmm5fE7vbGZ5ePKl0NEUOIrbN5BW1LsmPPaznFRQDBraZ5mOZ<br />vctOToYat2WGU8uNp0U4zcXoQEY+6Xzlk9aeCm0Spx7a+1dn0qEulrHrMxE7rj0e<br />RqGUQveoDdWe6woV2Jd2RdItphtMxhKjtLtGnuFygL0eLS/rd85xis+ebzZCOEf4<br />yjggAHkOtrDR4Gg1OOh7Ux2dX6Qm4cvSkLjgl1X0fg404NYuuoPaFO/EDxYyoG9k<br />4isaSMaYhLbDqq/t1jUFwV4fImadqP/0d6yHmASjo2U46esSHW41GAf0nzuLa8cY<br />9ZJIfvz5wF70f55gnhZWc+pvO0/EH80ojJPHj2b1IjCFmlfwEiJMfKDvK4NGD5Ql<br />GlMCZzF1pr4SHK1xHQdsUaDSulX4QqGoAF3Br7/YGz3yIgOMb59LHNTEmbmhNBj/<br />JdLTpxr71Msz37VoqrghWoHM5J1cMoSg55MYVBkLcsqi7WnR61lTEZC5mpIPLNJT<br />AcSFPV2fLpvAbgzctptRUC/6M2/7tSSEtQPrQJD/yEbzayVkq0VDuc7rRMo9EPlG<br />T+46ipMv3luhFTCxs229Da5rPe4o4F9G+TmbtTiKY2R3N/o=<br />=Sm8m<br />-----END PGP MESSAGE-----<br /><br />Let&#039;s open the command line/terminal and run gpg -v again on a file containing this message.<br /><br />gpg -v encrypted_msg.asc<br /><br />The result is:<br /><br />gpg: public key is AE064BC4<br />gpg: public key is 00000000<br />gpg: encrypted with RSA key, ID 00000000<br />gpg: encrypted with RSA key, ID AE064BC4<br /><br />Interesting! WTF is a public key with an ID of 00000000? Anonymous, that is what. There is no way to prove that Pine encrypted that message. Of course I&#039;m telling you that I did so. But there is absolutely no evidence for it.<br /><br />How did I achieve this?<br /><br />There exists a configuration file in your PGP or GPG setup called gpg.conf or similar. If you don&#039;t know the location of this file on your computer, google &quot;gpg.conf&quot; and the name of your GPG or PGP distribution and you should find it. The location differs from operating system and PGP/GPG setup, so I won&#039;t describe where it generally hides out here.<br /><br />In any case, open it with a plaintext text editor like Notepad or Gedit and append this line to the file, then save it. <br /><br />hidden-encrypt-to &lt;YOUR GPG PUBLIC KEY ID HERE&gt;<br /><br />The result is twofold.<br /><br />1. All messages you now encrypt to others can be decrypted by yourself also e.g. in case you needed to add something and only remembered after you encrypted it, a common occurrence. Or to correct spelling. Whatever.<br /><br />2. There is no evidence your public key was used to encrypt the message.<br /><br />Highly useful I think.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 24, 2013, 04:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				Nice explanation, pine. You can also use throw-keyid to anonymize all recipients.<br /><br />Since you mentioned gpg.conf, here are some other options that make working with gpg easier, safer, or less annoying:<br /><br />trust-model always<br />utf8-strings<br />no-greeting<br />no-emit-version<br />no-comments<br />no-mdc-warning<br />armor<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>scout</strong> on <strong>March 24, 2013, 04:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				Great info, both of you!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>pine</strong> on <strong>March 24, 2013, 04:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				There is one outstanding issue.<br /><br />In some situations, with very sensitive emails perhaps, you do not want &#039;AnonymousMan&#039; to be identified either. So in this situation a Fed coming across a message encrypted in this way would not be able to tell either the sender nor the receiver. Ideal! (but there is a caveat)<br /><br />Append this line to the gpg.conf file.<br /><br />throw-keyids<br /><br />The result when I encrypt to myself and AnonymousMan? <br /><br />-----BEGIN PGP MESSAGE-----<br /><br />hQEMAwAAAAAAAAAAAQgAlxsQMCvYXE9niDYUrdIonSomWxWcNBKEZ2Z/BoH3YF9M<br />lD2Kgs70evqVvUvMCFS4cwbW0lraT4lkNTChkNydyFK/xWkY23TqeoPBrkAV3mL5<br />teo1758jfRE0l77PSjP45dupQCWSR53IGlkIfxvauMCmIxIdDhBSshK/r+V2hGKz<br />85WJ79CGmbmCRWGs6MZ8/CAFJLkDEYj2N7z00Q84GIIc2wx4+J07Y1zchBLbCzYA<br />2ds3u47TbjyvvG7MWtHs5IZFfpNndtrWM/kOJAUUB7UX5WydPD3vVqIeRILflAyn<br />IAAEYvF9qKxD9DkWWgTE5lmUboC3bjv9MFSsuhOyPYUBjAMAAAAAAAAAAAEL/i8D<br />GIDvraq6+9OuwzXHBZ3CMNTwqd53Zyi9G+1pJhVAADJOY4IDoQRDkSRxVI5GDRoJ<br />F/8I/72C7F19Cmlnj/tLJPrhfqiYRmvfG5tl9a7NKLefhKo6D5/5XzlwHBFuEJ2V<br />8ZxyzrQgB24701pxAhDhN8V4lrBCVk4YyCnTIIDd7By5nu15kXzoyyOP+KEyBUCW<br />IDG9N4eZJEsgxP95pQqk1GLpyswkydHlWXZA12+FSF/tKjHumNiiEhv9mWOOphD7<br />6nGC/ZAI7uT5i6uJ4S9V531gc1xWlIPSaZkx3ogGXyhE5xPWLh4VbhEa6UL76KkV<br />PIpYQngiwmSNAziL5Pzd3IV0fxN5JoJt1T8VTwbIKCepqn/uR7EKVFZE8PEBfb+l<br />VIdr7jueJVaSxFwFq8WHV3QAVPSx7KBFUbaWSSlkbCU4kIRaqJQXKsRZU9/nIqfQ<br />PWhzzQjDY9FCbXWxv2OBwW3TOhDBjb7y3HBsKCga16pKueEyFfFtjKW1JF/nvNJB<br />AbuPpTjcitnSN63dIbvmDeUMr8qc+1zDXYb6gxVva/gNgIuPQDG9l7XRSchLpVHH<br />JmPhz4c/1buwGPSaQlB60C8=<br />=oyUv<br />-----END PGP MESSAGE-----<br /><br />for which gpg -v only gives us: <br /><br />gpg: public key is 00000000<br />gpg: public key is 00000000<br />gpg: encrypted with RSA key, ID 00000000<br />gpg: encrypted with RSA key, ID 00000000<br /><br />Perfect! Anonymity all around.<br /><br />As I said, there is a caveat. It&#039;s that to decrypt the message, GPG or PGP will have to try every single private key in your keychain (or the recipient&#039;s keychain), which appears alarming at first due to a dozen or so password requests, and then just plain annoying. But that is a small inconvenience really, unless you have a lot of private keys on your keychain, which to be honest you shouldn&#039;t, I would recommend you keep your PGP SR key all by its lonesome and use an entirely different copy of GPG for work/other purposes. Having a portable copy of GPG for a memory stick is a good way to achieve that. Then fat finger errors are not possible, like encrypting with your SR public key as well as to your boss, with your PGP public key up on SR for all to see. <br /><br />Finally if you don&#039;t want to use the gpg.conf file (good for setting up long term, consistent, default options) I do believe you can use throw-keyids and hidden-encrypt-to statements as flags on the command line/terminal so they are invoked only for the encryption of specific messages.<br /><br />Long live the platypus and the association of aquatic mammals. Our enemies fear the tread of our furry paws and inquisitive noses. Oh yes.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>pine</strong> on <strong>March 24, 2013, 04:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg933140#msg933140">Quote from: astor on March 24, 2013, 04:14 am</a></div></div><blockquote class="bbc_standard_quote">Nice explanation, pine. You can also use throw-keyid to anonymize all recipients.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Ack, didn&#039;t see you&#039;d already posted before I duplicated the same information. I suppose given the lack of awareness it is no harm. Spent too long supping coffee, a duck-bill can be most inconvenient sometimes. In any case you&#039;re right, throw-keyid is a very useful command, one some of us should use long and often, certainly when using email, even or perhaps especially Tormail-like anonymity services.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg933140#msg933140">Quote from: astor on March 24, 2013, 04:14 am</a></div></div><blockquote class="bbc_standard_quote">Since you mentioned gpg.conf, here are some other options that make working with gpg easier, safer, or less annoying:<br /><br />trust-model always<br />utf8-strings<br />no-greeting<br />no-emit-version<br />no-comments<br />no-mdc-warning<br />armor<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes absolutely, I, as you can tell from my PGP messages, am quite fond of not shouting what edition/version of GPG I&#039;m using (AAM strength encryption, which is over 9000 bits at all times). I am certain clandestine creatures have gone to the death for not knowing some of this information, imagine you are a spy, your messages are intercepted and you are the only one who uses an OSX version of PGP! Admittedly in this case the use of a Mac moderates some of my sympathy, but even so. :D<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg933145#msg933145">Quote from: scout on March 24, 2013, 04:17 am</a></div></div><blockquote class="bbc_standard_quote">Great info, both of you!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Cheers! The Revolution rumbles on. PGP or Death! :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>DanDanTheIceCreamMan</strong> on <strong>March 24, 2013, 04:59 am</strong>
+			</dt>
+			<dd class="postbody">
+				subbed.. there&#039;s a wealth of information in this thread. Very informative. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 24, 2013, 05:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah, sorry I scooped you on throw-keyid. Your explanation was more thorough anyway. :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>scout</strong> on <strong>March 24, 2013, 05:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				You two - astor and pine - make the most awesome security contributions to this community.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>Empathy101</strong> on <strong>March 24, 2013, 07:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				subbed.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 24, 2013, 07:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg933201#msg933201">Quote from: pine on March 24, 2013, 04:54 am</a></div></div><blockquote class="bbc_standard_quote">imagine you are a spy, your messages are intercepted and you are the only one who uses an OSX version of PGP! Admittedly in this case the use of a Mac moderates some of my sympathy, but even so. :D<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I did an analysis of the Version strings in the PGP keys that have been posted in the &quot;Post PGP keys here&quot; thread. Many of them are unique.<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=98140.msg693758#msg693758<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>pine</strong> on <strong>March 24, 2013, 08:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg933512#msg933512">Quote from: astor on March 24, 2013, 07:14 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg933201#msg933201">Quote from: pine on March 24, 2013, 04:54 am</a></div></div><blockquote class="bbc_alternate_quote">imagine you are a spy, your messages are intercepted and you are the only one who uses an OSX version of PGP! Admittedly in this case the use of a Mac moderates some of my sympathy, but even so. :D<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I did an analysis of the Version strings in the PGP keys that have been posted in the &quot;Post PGP keys here&quot; thread. Many of them are unique.<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=98140.msg693758#msg693758<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thanks, looks like a great thread, I have it bookmarked and will read it closely later.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>1mIcedout</strong> on <strong>March 24, 2013, 12:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Great info.. <br /><br />Thanks..
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>Geezy_Weezy</strong> on <strong>March 24, 2013, 03:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				@pine<br />i can not locate my gpg.conf location.., could you please help me. im using Mac OS X
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>jagfug</strong> on <strong>March 24, 2013, 04:22 pm</strong>
+			</dt>
+			<dd class="postbody">
+				What if LE is sitting in your neighborhoods central office monitoring your activity?<br /><br />They&#039;d see everything. Your PGP codes, every keystroke, becomes &quot;Exhibit A&quot; for evidence in your prosecution. <br /><br />Assuming you&#039;re doing something illegal, of course. <br /><br />It&#039;s like locking your front door. <br /><br />If they really want to get in. They&#039;re going to get in.<br /><br />Just a reality check. There are no absolutes in life. <br /><br />Except death and taxes of course. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>EarlyCuylerTOR</strong> on <strong>March 25, 2013, 12:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				Replying so I can come back and read this in more detail later.&nbsp; Thanks for the information.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>lelmeriodici</strong> on <strong>March 25, 2013, 02:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				As long as you have a Tormail account used exclusively for illicit business and all traces of PGP tools, TorBrowser, Vidalia, etc. are well encrypted, disguised, and hidden then you&#039;re fine.&nbsp; And besides, I view the Bitcoins trail and messaging as ancillary evidence to an actual package.&nbsp; You won&#039;t get indicted because of a plaintext email discussing drugs, certainly not a PGP encrypted one signed with your public key.&nbsp; You&#039;ll get indicted because you have a kilo of coke on your doorstep.<br /><br />Nonetheless, it is important that when you do get arrested (and everyone should be ready for it&nbsp; ;) ), everything is going in your favor.&nbsp; Having a clean record of activity on your computer is vital, so thanks for the info pine.&nbsp; I wasn&#039;t aware that you could trace who encrypted a message.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 25, 2013, 02:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				Anonymizing the key IDs doesn&#039;t offer extra protection in some cases. For example, if you send a message to a vendor, or an email to someone on TorMail, anyone with access to the SR or TorMail servers knows who the recipient is, so there&#039;s no reason to hide the key IDs from them.<br /><br />However, I can think of cases where it is useful. A vendor may want to send an encrypted announcement to several customers, but he doesn&#039;t want them to know who the others are. That&#039;s as much for their protection as his. The recipients would only be able to deduce the number of other recipients, but they couldn&#039;t compare the key IDs to people in their key chain.<br /><br />Another example is if someone gains access to your computer, but not your TorMail account. Let&#039;s say you saved encrypted messages in a text file, as a back up. Then the attacker would only know how many messages you sent, but not who the recipients are.<br /><br />BTW, if you think you can only be charged for physical drugs in your possession, you should review the Farmers Market case. They were charged for a lot of shit that they talked about in their Hushmail accounts, and that was the only evidence of those crimes. An email counts as a confession.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>lelmeriodici</strong> on <strong>March 25, 2013, 04:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg935910#msg935910">Quote from: astor on March 25, 2013, 02:27 am</a></div></div><blockquote class="bbc_standard_quote">BTW, if you think you can only be charged for physical drugs in your possession, you should review the Farmers Market case. They were charged for a lot of shit that they talked about in their Hushmail accounts, and that was the only evidence of those crimes. An email counts as a confession.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>There was a lot more evidence than just emails.&nbsp; They used Paypal and Western Union, and the records for transactions were dug up.&nbsp; And, of course, upon being raided, the houses of suspects were found filled with drugs.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>quinone</strong> on <strong>March 25, 2013, 06:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg934489#msg934489">Quote from: Geezy_Weezy on March 24, 2013, 03:44 pm</a></div></div><blockquote class="bbc_standard_quote">@pine<br />i can not locate my gpg.conf location.., could you please help me. im using Mac OS X<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg933094#msg933094">Quote from: pine on March 24, 2013, 03:29 am</a></div></div><blockquote class="bbc_standard_quote">....<br /><br />Many PGP or GPG software products (most Macintosh software appears to be setup this way for example) automatically encrypt a message to yourself as well as the other person you&#039;re sending the message to.<br />....<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I don&#039;t think there ever can be the degree of customization command line flags and argument&#039;s afford a linux user.&nbsp; If there&#039;s anything you can do to alter your completely packaged GUI Mac program you&#039;ll just have to go hunting through it&#039;s settings and whatnot and hope the app you&#039;re using is either highly customizable or can be accessed to append flags and argument&#039;s to the app&#039;s configuration files.<br /><br />That&#039;s why Linux is superior to all other OS&#039;s (cept UNIX from which it came, but the number of distro&#039;s and open community openness of linux makes it a better operating system then UNIX).<br /><br />If you&#039;re interested in taking these ultra steps with GPG (what they&#039;ve suggested isn&#039;t REQUIRED, but they&#039;re definitely nice way&#039;s of covering your tracks).&nbsp; If you want to use tor on linux I suggest you go download Liberte (believe it&#039;s based off of Debian Linux) or Tails (dunno what distro it uses ... Fedora?)<br /><br /><br /><br />Oh and thanks Pine and Astor.&nbsp; I was never aware that it was that easy to obtain the public key ID used to encrypt a msg.&nbsp; I&#039;m definitely a noob when it comes to GPG and know the basics + a tiny bit more.&nbsp; Given it&#039;s simplicity to do though I might have to take your advice into consideration on some msgs.<br /><br />I thought I was a weirdo hyper paranoid hypocrit because i&#039;ve always kept my ONE AND ONLY key in one place and would alway&#039;s use another instance of GPG with my keychain (I keep it small, moreso actually to remember the really good vendor&#039;s i&#039;ve worked with).&nbsp; But you just put my mind at ease, now i&#039;m just a weirdo hyper paranoid ... human being, no more hypocrisy !
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>NickNack</strong> on <strong>March 25, 2013, 08:25 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Let&#039;s open the command line/terminal and run gpg -v again on a file containing this message.<br /><br />gpg -v encrypted_msg.asc<br /><br />The result is:<br /><br />gpg: public key is AE064BC4<br />gpg: public key is 00000000<br />gpg: encrypted with RSA key, ID 00000000<br />gpg: encrypted with RSA key, ID AE064BC4</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Forgive me for being ignorant at this level of expertise... Is there a way to do/check this in Gpg4win?&nbsp; (I cannot find it)<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg933140#msg933140">Quote from: astor on March 24, 2013, 04:14 am</a></div></div><blockquote class="bbc_standard_quote">Nice explanation, pine. You can also use throw-keyid to anonymize all recipients.<br /><br />Since you mentioned gpg.conf, here are some other options that make working with gpg easier, safer, or less annoying:<br /><br />trust-model always<br />utf8-strings<br />no-greeting<br />no-emit-version<br />no-comments<br />no-mdc-warning<br />armor<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Could you explain more about these commands please?&nbsp; Obviously the &quot;no-emit-version&quot; hides the version info when a message is encrypted, but I&#039;m not clear about the rest of those.&nbsp; I tried to do some searching on my own, but only come up with:&nbsp; (which really doesn&#039;t explain much)<br /><br />&quot;4.2.6 Doing things one usually doesn&#039;t want to do.&quot;<br />http://www.gnupg.org/documentation/manuals/gnupg-devel/GPG-Esoteric-Options.html#GPG-Esoteric-Options<br /><br />For Gpg4win... just adding &quot;no-emit-version&quot; to the config file does work, I just don&#039;t know what these other commands you listed really do for me.&nbsp; And from testing, it appears my encrypted messages do not encrypt in one of my keys along with the receiver (thank god)... which personally I&#039;d prefer.&nbsp; I cannot &quot;edit&quot; encrypted messages to recipients.&nbsp; Anyhow, If I need to edit messages to people, I&#039;ll just rewrite the whole thing... no need to give LE another crumb imo.&nbsp; So my question is; it would only be redundant to use &quot;hidden-encrypt-to &lt;YOUR GPG PUBLIC KEY ID HERE&gt;&quot;, correct?&nbsp; Or if I were to use that command to be extra safe, I would need multiple lines... one line for each key?<br /><br />Oh... and how would someone make use of the command &quot;secret-keyring&quot;?&nbsp; Or even make multiple keyrings? <br /><br />Thanks in advance
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 25, 2013, 03:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg936357#msg936357">Quote from: quinone on March 25, 2013, 06:19 am</a></div></div><blockquote class="bbc_standard_quote">If you&#039;re interested in taking these ultra steps with GPG (what they&#039;ve suggested isn&#039;t REQUIRED, but they&#039;re definitely nice way&#039;s of covering your tracks).&nbsp; If you want to use tor on linux I suggest you go download Liberte (believe it&#039;s based off of Debian Linux) or Tails (dunno what distro it uses ... Fedora?)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Tails is based on Debian and Liberte is based on Gentoo. Both offer security hardened features that mainstream distros don&#039;t, such as scrambling RAM on shut down. Liberte uses a specially hardened kernel, too, though I don&#039;t know the details of that. The trade off is that these specialist &quot;distros&quot; are experimental and can be buggy.<br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg936524#msg936524">Quote from: NickNack on March 25, 2013, 08:25 am</a></div></div><blockquote class="bbc_standard_quote">Forgive me for being ignorant at this level of expertise... Is there a way to do/check this in Gpg4win?&nbsp; (I cannot find it)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Windows GUIs don&#039;t have these advanced options in their interface. It&#039;s been a while since I&#039;ve used GPG4Win, but it *should* come with gpg.exe, I know GPG4USB does. You can run these options at a command prompt.<br /><br />&nbsp; &nbsp; gpg -v encrypted_msg.asc<br /><br />becomes<br /><br />&nbsp; &nbsp; gpg.exe -v encrypted_msg.asc<br /><br />in whatever folder gpg.exe is located.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg936524#msg936524">Quote from: NickNack on March 25, 2013, 08:25 am</a></div></div><blockquote class="bbc_standard_quote">Could you explain more about these commands please?&nbsp; Obviously the &quot;no-emit-version&quot; hides the version info when a message is encrypted, but I&#039;m not clear about the rest of those.&nbsp; I tried to do some searching on my own, but only come up with:&nbsp; (which really doesn&#039;t explain much)<br /><br />For Gpg4win... just adding &quot;no-emit-version&quot; to the config file does work, I just don&#039;t know what these other commands you listed really do for me.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Edit: I&#039;m replacing what I wrote here before with my current recommended gpg.conf:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">o-greeting&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# suppress the copyright notice in command line gpg<br />no-emit-version&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# remove the version string from keys and messages<br />no-comments&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# remove the comment lines from keys and messages<br /><br />utf8-strings&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # interpret all command line arguments as UTF-8 encoded<br />armor&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# ASCII armor encrypted output<br /><br />expert&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # allow incompatible actions<br />trust-model always&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # suppress warnings about unsigned keys<br />no-mdc-warning&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # suppress warnings about MDC integrity protection, since no one uses it<br /><br /><br />## Ordered lists of preferred ciphers. Your GPG will pick the first one that it supports,<br />## which should be the first one on each list.<br /><br />personal-cipher-preferences AES256 TWOFISH CAMELLIA256 AES192 CAMELLIA192 AES CAMELLIA128 CAST5 3DES BLOWFISH<br />personal-digest-preferences SHA512 SHA384 SHA256 SHA224 RIPEMD160 SHA1<br />personal-compress-preferences BZIP2 ZLIB ZIP Uncompressed<br />cert-digest-algo SHA512<br /><br />default-key &lt;keyid&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# set this if you have multiple keys. newbies should not use multiple keys!<br />#encrypt-to &lt;keyid&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# automatically encrypt with a specific key<br /><br />## Optional<br /><br />#throw-keyid&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # anonymize all recipients by zeroing out the key IDs<br />#hidden-encrypt-to&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # anonymize a specific key ID<br /><br /><br />## Use the IndyMedia key server hidden service. This prevents accidentally connecting over clearnet.<br />## You need an HTTP proxy like Privoxy listening on port 8118, or adjust the lines below accordingly.<br />## The HTTP proxy forwards to Tor&#039;s SockPort. Here&#039;s a Privoxy config for that:<br />## https://trac.torproject.org/projects/tor/wiki/doc/PrivoxyConfig<br /><br />keyserver hkp://2eghzlv2wwcq7u7y.onion<br />keyserver-options http-proxy=http://127.0.0.1:8118,debug,verbose<br /></code><br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg936357#msg936357">Quote from: quinone on March 25, 2013, 06:19 am</a></div></div><blockquote class="bbc_standard_quote">Oh... and how would someone make use of the command &quot;secret-keyring&quot;?&nbsp; Or even make multiple keyrings? <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You can, but it&#039;s too easy for newbs to fuck up and deanonymize themselves, or mix up their identities. It&#039;s better to extract GPG4USB in separate folders and use them separately. Name one folder MY ILLEGAL IDENTITY and the other MY REAL IDENTITY, so you absolutely don&#039;t mix them up. :)<br /><br />Oh, and don&#039;t name any folder &quot;ILLEGAL&quot; unless it&#039;s on an encrypted volume.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>NW Nugz</strong> on <strong>March 25, 2013, 07:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Seems to me we need to have privacy-enabled version of software we can get that is already set up with the changes suggested in the OPs as defaults rather than options. Or, a handy user interface with buttons to push to implement these changes. Maybe sell the software on SR ? :-)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>thelorax</strong> on <strong>March 25, 2013, 08:04 pm</strong>
+			</dt>
+			<dd class="postbody">
+				MOTION TO PIN THREAD.. <br />LET THE I&#039;S HAVE IT<br /><br />I
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>EarlyCuylerTOR</strong> on <strong>March 25, 2013, 08:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg935910#msg935910">Quote from: astor on March 25, 2013, 02:27 am</a></div></div><blockquote class="bbc_standard_quote"><br />BTW, if you think you can only be charged for physical drugs in your possession, you should review the Farmers Market case. They were charged for a lot of shit that they talked about in their Hushmail accounts, and that was the only evidence of those crimes. An email counts as a confession.<br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>&nbsp; <br /><br />Charged sure, but convicted?&nbsp; They love to charge you with as much shit as they can dream up, making it stick in court is a whole different story.&nbsp; Any info on where their cases stand ATM?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>davidthegnome</strong> on <strong>March 25, 2013, 08:42 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Good knowledge to have. Thanks!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>zeus2425</strong> on <strong>March 25, 2013, 09:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				subbed..Awesome information! Thank you guys
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>Oompaloompa</strong> on <strong>March 25, 2013, 10:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Very interesting information Pine &amp; Astor,<br />I&#039;ve always known PGP keys were a unique identifier - it&#039;s part of the point - I&#039;d taken it as the price to be paid for having secure communications. Its useful to see a way to remove this downside (for SR).<br /><br />Is there a way to set the config file to ensure that when decrypting messages it tries a particular private key first?<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote from: Pine</div></div><blockquote class="bbc_standard_quote">There exists a configuration file in your PGP or GPG setup called gpg.conf or similar. <br /><br />In any case, open it with a plaintext text editor like Notepad or Gedit and append this line to the file, then save it.<br /><br />hidden-encrypt-to &lt;YOUR GPG PUBLIC KEY ID HERE&gt;<br /><br />The result is twofold.<br /><br />1. All messages you now encrypt to others can be decrypted by yourself also e.g. in case you needed to add something and only remembered after you encrypted it, a common occurrence. Or to correct spelling. Whatever.<br /><br />2. There is no evidence your public key was used to encrypt the message.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Is there a way to get 2 without 1? I&#039;m not keen on the ability to decrypt messages I encrypt to others.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote from: astor</div></div><blockquote class="bbc_standard_quote">Most of these options are only relevant to command line gpg. They get rid of annoyances like the greeting, which you don&#039;t need to see every time you run the program. Here&#039;s a run down.<br /><br />no-greeting -- removes the greeting, which as I said can be annoying<br />no-emit-version -- removes the version string<br />no-comments -- removes the comment line, both of these reduce your anonymity set, see my previous analysis about version strings<br />armor -- forces ASCII armor encoding of encrypted messages<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This may be a silly question astor but what&#039;s the difference between the version, greeting &amp; comments. <br />All I can see that would fit the bill is <br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Version: GnuPG v2.0.17 (MingW32)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>but that&#039;s just one line, the version. What is the comments &amp; greeting line?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 26, 2013, 12:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg938211#msg938211">Quote from: Oompaloompa on March 25, 2013, 10:47 pm</a></div></div><blockquote class="bbc_standard_quote">Is there a way to set the config file to ensure that when decrypting messages it tries a particular private key first?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Setting a default key should force gpg to try it first. Add this to gpg.conf:<br /><br />default-key &lt;key ID&gt;<br /><br />In any case, testing all the keys should take less than a second. Here&#039;s what the decryption process looks like, along with the processing time:<br /><br /><br />$ time gpg -d anon_message.pgp <br />gpg: anonymous recipient; trying secret key [REDACTED] ...<br />gpg: anonymous recipient; trying secret key [REDACTED] ...<br />gpg: anonymous recipient; trying secret key [REDACTED] ...<br />gpg: anonymous recipient; trying secret key [REDACTED] ...<br />gpg: anonymous recipient; trying secret key [REDACTED] ...<br />gpg: okay, we are the anonymous recipient.<br />gpg: encrypted with RSA key, ID 00000000<br />gpg: encrypted with RSA key, ID 00000000<br />gpg: encrypted with RSA key, ID 00000000<br /><br />It worked!<br /><br />real&nbsp;&nbsp;&nbsp;0m0.513s<br />user 0m0.508s<br />sys&nbsp;&nbsp;&nbsp;0m0.004s<br /><br /><br />So, half a second in this case. It will take less time if the message has been decrypted with fewer keys, or you have fewer private keys to test, or it hits a match sooner. <br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg938211#msg938211">Quote from: Oompaloompa on March 25, 2013, 10:47 pm</a></div></div><blockquote class="bbc_standard_quote">Is there a way to get 2 without 1? I&#039;m not keen on the ability to decrypt messages I encrypt to others.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If you don&#039;t encrypt the message with your key, then your key ID won&#039;t be in it. 2 is automatic without 1.<br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg938211#msg938211">Quote from: Oompaloompa on March 25, 2013, 10:47 pm</a></div></div><blockquote class="bbc_standard_quote">This may be a silly question astor but what&#039;s the difference between the version, greeting &amp; comments. <br />All I can see that would fit the bill is <br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">Version: GnuPG v2.0.17 (MingW32)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>but that&#039;s just one line, the version. What is the comments &amp; greeting line?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Comments are just that, you can make a comment about the message, yourself, whatever, but they are usually used to advertise for the PGP program, like this:<br /><br />-----BEGIN PGP SIGNATURE-----<br />Version: GnuPG v1.4.11<br />Comment: Using GnuPG with Mozilla - http://enigmail.mozdev.org<br /><br /><br />The greeting is a splash screen with copyright info that looks like this:<br /><br />gpg (GnuPG) 1.4.11<br />Copyright (C) 2010 Free Software Foundation, Inc.<br />License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;<br />This is free software: you are free to change and redistribute it.<br />There is NO WARRANTY, to the extent permitted by law.<br /><br /><br />Now why would you want to see that every time you run the program?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>PathSeeker</strong> on <strong>March 26, 2013, 01:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg933246#msg933246">Quote from: scout on March 24, 2013, 05:07 am</a></div></div><blockquote class="bbc_standard_quote">You two - astor and pine - make the most awesome security contributions to this community.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />&quot;Hero member&quot;s indeed.&nbsp; =)<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>NickNack</strong> on <strong>March 26, 2013, 02:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg937120#msg937120">Quote from: astor on March 25, 2013, 03:31 pm</a></div></div><blockquote class="bbc_standard_quote">Windows GUIs don&#039;t have these advanced options in their interface. It&#039;s been a while since I&#039;ve used GPG4Win, but it *should* come with gpg.exe, I know GPG4USB does. You can run these options at a command prompt.<br /><br />&nbsp; &nbsp; gpg -v encrypted_msg.asc<br /><br />becomes<br /><br />&nbsp; &nbsp; gpg.exe -v encrypted_msg.asc<br /><br />in whatever folder gpg.exe is located.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thanks, Astor... Gpg.exe was there and worked as mentioned.&nbsp; (yet the output was quite bit more verbose than the linux example)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>zenturtle</strong> on <strong>March 26, 2013, 03:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg937692#msg937692">Quote from: thelorax on March 25, 2013, 08:04 pm</a></div></div><blockquote class="bbc_standard_quote">MOTION TO PIN THREAD.. <br />LET THE I&#039;S HAVE IT<br /><br />I<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />i
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>pine</strong> on <strong>March 31, 2013, 07:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				<br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg934489#msg934489">Quote from: Geezy_Weezy on March 24, 2013, 03:44 pm</a></div></div><blockquote class="bbc_standard_quote">@pine<br />i can not locate my gpg.conf location.., could you please help me. im using Mac OS X<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Sorry for delay, overlooked your message. It should be under &quot;~/.gnupg/gpg.conf&quot;. This is an address, you need it (without quotations) to find the file but since you&#039;re using OSX, you&#039;ll need extra steps to find the address bar. <br /><br />http://superuser.com/questions/174297/how-can-i-get-an-address-bar-in-finder<br /><br />Read that, find one of their solutions and then copy paste that line into your address bar and it should take you to the folder in which the gpg.conf file is located in.<br /><br />If you choose to navigate to the file through the GUI manually, then you&#039;ll need to turn on the Show Hidden Files option in Mac, wherever that is. The ~ character is whatever your home directory is e.g. if your account is called &quot;geezy&quot; then the &quot;geezy&quot; directory is the home directory.<br /><br />Macs are perfectly easy to use until you want to do something Steve Jobs himself didn&#039;t think of personally.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg935910#msg935910">Quote from: astor on March 25, 2013, 02:27 am</a></div></div><blockquote class="bbc_standard_quote">Anonymizing the key IDs doesn&#039;t offer extra protection in some cases. For example, if you send a message to a vendor, or an email to someone on TorMail, anyone with access to the SR or TorMail servers knows who the recipient is, so there&#039;s no reason to hide the key IDs from them.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes, it very much depends on your use of this feature.<br /><br />To newbs: If I wrote down an encrypted message using throw-key-ids, put it into a letter and posted it to a friend with his address on the front of the envelope and mine on the back of it, then using throw-key-ids to prevent traffic analysis would be somewhat pointless. However, if I wrote a message using a one time account on SR, then you would successfully be able to communicate without revealing your (SR) identity to traffic analysis if LE hack the server. You&#039;d use a new account per instance of a two way chat communication. Although this sounds like work, it&#039;s probably worth the trouble for very important communications. That way only the compromise of the recipient can possibly leak information about the sender. You&#039;d have to mix up what algorithms and key lengths you were using as well for each new public key, since throw-key-ids doesn&#039;t get rid of that information (persistently using the same settings for each key would be a giveaway).<br /><br />The reason why I mention server hacking is important: nobody should assume that their messages will be &#039;hidden&#039; unless they are encrypted. If you were ordering a large amount from a vendor, you almost certainly should be using such methods as these. If a vendor doesn&#039;t &#039;get&#039; it, find one that does.<br /><br />Encryption can do more than merely hide your messages, if used properly it can also make it impossible to associate any identity with transmission importance within the network. That is the death knell for LE teams, there is then no earthly way to prioritize their pattern analysis algorithms beyond wild guesswork. They spend a great deal of time building a &quot;Who&#039;s Who&quot; of Darknet participants and they&#039;ll be infuriated if lots of people start adopting practices which remove PGP key ID information out of existence.<br /><br />Another good use of this feature is when using anonymous remailers (for the final message the sender receives). This is a network of email servers that serves to send anonymous email, a sort of pre-Tor anonymity project for email. <br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg936357#msg936357">Quote from: quinone on March 25, 2013, 06:19 am</a></div></div><blockquote class="bbc_standard_quote">I thought I was a weirdo hyper paranoid hypocrit because i&#039;ve always kept my ONE AND ONLY key in one place and would alway&#039;s use another instance of GPG with my keychain (I keep it small, moreso actually to remember the really good vendor&#039;s i&#039;ve worked with).&nbsp; But you just put my mind at ease, now i&#039;m just a weirdo hyper paranoid ... human being, no more hypocrisy !<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It&#039;s good to pay attention to your instincts, they are there for a reason.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg937552#msg937552">Quote from: NW Nugz on March 25, 2013, 07:10 pm</a></div></div><blockquote class="bbc_standard_quote">Seems to me we need to have privacy-enabled version of software we can get that is already set up with the changes suggested in the OPs as defaults rather than options. Or, a handy user interface with buttons to push to implement these changes. Maybe sell the software on SR ? :-)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I think so too. Although selling the software would be impossible. APG (anonPG) or something. It could have a list of requirements like:<br /><br />1. The inability to communicate with keyservers. Or route all such traffic via Tor with explanatory warnings.<br />2. Puts public keys you haven&#039;t used into a password protected encrypted volume after 30 days of non-use.<br />3. Transparent way to encrypt anonymously for you, and another option for your recipient<br />4. No meta data within the PGP headers.<br />5. 8912 bit available as standard.<br />6. Open source for code inspection. (hence the difficulty of selling it)<br />7. Steganography options for embedding message into audio, video, images etc.<br />8. Ability to setup anonymous remailers with ease.<br />9. Self destruct feature.<br /><br />I&#039;m sure you guys can think of lots of other things. Simply making it obvious what is what would lift a huge burden on the amount you have to know before you&#039;re doing what you want to be doing. Some of it sounds like heavy lifting like the steg and remailers, but actually most of this already exists in the form of open source projects, it&#039;s mostly a matter of building a clever GUI to let people access the power of such tools. I don&#039;t have the time for it, but it&#039;d make a great project for somebody.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>March 31, 2013, 08:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg959832#msg959832">Quote from: pine on March 31, 2013, 07:35 am</a></div></div><blockquote class="bbc_standard_quote">I think so too. Although selling the software would be impossible.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You can sell FOSS that uses the GPL.&nbsp; You can sell Linux too.&nbsp; I&#039;m not saying anyone will buy them, but you can do it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>pine</strong> on <strong>March 31, 2013, 08:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg959905#msg959905">Quote from: SelfSovereignty on March 31, 2013, 08:19 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg959832#msg959832">Quote from: pine on March 31, 2013, 07:35 am</a></div></div><blockquote class="bbc_alternate_quote">I think so too. Although selling the software would be impossible.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You can sell FOSS that uses the GPL.&nbsp; You can sell Linux too.&nbsp; I&#039;m not saying anyone will buy them, but you can do it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes, this was discussed extensively during the LouisCypher vendor software debacle.<br /><br />It&#039;s that some software written for use by members of this forum has to be rigorously examined for backdoors, exploits etc, so it cannot be &#039;open source&#039; to a small group of people in case of conspiracy exploiting vendor ignorance. So when I say open source I am referring to the colloquial understanding of the term: free software with source available to all to view. The moment we start appointing authorities to verify software, or we only release that software to those who almost certainly can&#039;t read the code we&#039;ve invented a systemic weakness.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>April 02, 2013, 10:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg959952#msg959952">Quote from: pine on March 31, 2013, 08:49 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg959905#msg959905">Quote from: SelfSovereignty on March 31, 2013, 08:19 am</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg959832#msg959832">Quote from: pine on March 31, 2013, 07:35 am</a></div></div><blockquote class="bbc_standard_quote">I think so too. Although selling the software would be impossible.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You can sell FOSS that uses the GPL.&nbsp; You can sell Linux too.&nbsp; I&#039;m not saying anyone will buy them, but you can do it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes, this was discussed extensively during the LouisCypher vendor software debacle.<br /><br />It&#039;s that some software written for use by members of this forum has to be rigorously examined for backdoors, exploits etc, so it cannot be &#039;open source&#039; to a small group of people in case of conspiracy exploiting vendor ignorance. So when I say open source I am referring to the colloquial understanding of the term: free software with source available to all to view. The moment we start appointing authorities to verify software, or we only release that software to those who almost certainly can&#039;t read the code we&#039;ve invented a systemic weakness.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Somehow I totally missed that entire LouisCyphre thing; I wasn&#039;t even aware he existed until today when I went looking for what you&#039;re talking about.&nbsp; I think I started really hanging around the forums very shortly after that.&nbsp; I also noticed that he and I sound very similar... I mean even some of our punctuation is almost identical.&nbsp; And I released a program as well, and popped up about a month after that whole affair.<br /><br />Frankly, Pine, I&#039;m a little surprised that you haven&#039;t mentioned any suspicions about me being the same person as him and just coming back to try again or something.&nbsp; Honestly I only mention it because it really does seem plausible.&nbsp; I mean I&#039;m certainly not him and didn&#039;t even know he existed, but after looking him up I&#039;m a little surprised that not a single person has even mentioned it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>pine</strong> on <strong>May 08, 2013, 12:45 am</strong>
+			</dt>
+			<dd class="postbody">
+				bump!<br /><br />Everybody should read this! Not a theoretical exercise!<br /><br />Forewarned is forearmed. Blah blah blah. Do it. :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>tree</strong> on <strong>May 17, 2013, 01:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Pretty interesting, I&#039;m gonna use &quot;throw-keyid&quot; from now on. If you use &quot;hidden-encrypt-to&quot; however, won&#039;t the recipient need your public key to decrypt your message?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>pine</strong> on <strong>May 19, 2013, 03:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1137537#msg1137537">Quote from: tree on May 17, 2013, 01:58 pm</a></div></div><blockquote class="bbc_standard_quote">Pretty interesting, I&#039;m gonna use &quot;throw-keyid&quot; from now on. If you use &quot;hidden-encrypt-to&quot; however, won&#039;t the recipient need your public key to decrypt your message?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No. Because that is not how public key cryptography works. <br /><br />Here is a link to a post I made to a fellow who made an identical mistake to yours:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=107219.msg1131314#msg1131314<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 19, 2013, 04:52 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg969130#msg969130">Quote from: SelfSovereignty on April 02, 2013, 10:38 pm</a></div></div><blockquote class="bbc_standard_quote">Frankly, Pine, I&#039;m a little surprised that you haven&#039;t mentioned any suspicions about me being the same person as him and just coming back to try again or something.&nbsp; Honestly I only mention it because it really does seem plausible.&nbsp; I mean I&#039;m certainly not him and didn&#039;t even know he existed, but after looking him up I&#039;m a little surprised that not a single person has even mentioned it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />haha, how did I miss this.<br /><br />I was convinced that pine and LC knew each other in real life, because they both disappeared around the same time and showed up on the same night, months later. I was not the only one who noticed this coincidence. It looked like they planned it. Also, the sexual tension in the &quot;LC is LE&quot; thread is unmistakable. ;)<br /><br />Since then it&#039;s pretty much been proven to me that they don&#039;t know each other. And no, I never thought you were LC either. IDK,&nbsp; your styles and technical expertise are distinctly different to me.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>SealTeam6</strong> on <strong>May 19, 2013, 05:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				Interesting!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>Copycats</strong> on <strong>May 19, 2013, 10:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				in case of losing URL 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>tree</strong> on <strong>May 19, 2013, 11:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1142914#msg1142914">Quote from: pine on May 19, 2013, 03:54 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1137537#msg1137537">Quote from: tree on May 17, 2013, 01:58 pm</a></div></div><blockquote class="bbc_alternate_quote">Pretty interesting, I&#039;m gonna use &quot;throw-keyid&quot; from now on. If you use &quot;hidden-encrypt-to&quot; however, won&#039;t the recipient need your public key to decrypt your message?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No. Because that is not how public key cryptography works. <br /><br />Here is a link to a post I made to a fellow who made an identical mistake to yours:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=107219.msg1131314#msg1131314<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I would&#039;ve thought so since you also encrypt the message to yourself when using the &quot;hidden-encrypt-to [your key]&quot;. I wasn&#039;t aware you could encrypt a message to different people at the same time and that they could decrypt it without the others&#039; keys. In the link to your post, the person thought you needed his key to decrypt a PGP message that was only encrypted to you (as far as I know), which is not what my question was about.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>pine</strong> on <strong>May 19, 2013, 11:45 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1143700#msg1143700">Quote from: tree on May 19, 2013, 11:13 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1142914#msg1142914">Quote from: pine on May 19, 2013, 03:54 am</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1137537#msg1137537">Quote from: tree on May 17, 2013, 01:58 pm</a></div></div><blockquote class="bbc_standard_quote">Pretty interesting, I&#039;m gonna use &quot;throw-keyid&quot; from now on. If you use &quot;hidden-encrypt-to&quot; however, won&#039;t the recipient need your public key to decrypt your message?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No. Because that is not how public key cryptography works. <br /><br />Here is a link to a post I made to a fellow who made an identical mistake to yours:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=107219.msg1131314#msg1131314<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I would&#039;ve thought so since you also encrypt the message to yourself when using the &quot;hidden-encrypt-to [your key]&quot;. I wasn&#039;t aware you could encrypt a message to different people at the same time and that they could decrypt it without the others&#039; keys. In the link to your post, the person thought you needed his key to decrypt a PGP message that was only encrypted to you (as far as I know), which is not what my question was about.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Ah! Now I understand how you made that mistake, yes, that makes perfect sense.<br /><br />This is actually a very interesting thing. To understand it you need to know a little more about PGP. Here is how it works:<br /><br />Normally, Alice encrypts to Bob&#039;s public key. Only Bob can read it.<br /><br />So what is happening with encrypted messages to multiple recipients? <br /><br />It turns out Pine is lying a bit by telling you guys that PGP is for encryption. Well, it is used for that, but it&#039;s far from the whole story. What is really happening is that PGP is a hybrid cryptosystem. It is composed of several parts, not just an encryption algorithm. If it were just an encryption algorithm we wouldn&#039;t be able to do a fraction of the things we do with it.<br /><br />When you encrypt a message with PGP, your message is encrypted using a symmetric block cipher, something like AES. This is very fast and very secure. If we used a public key algorithm such as RSA then it would take considerably longer to encrypt and decrypt data.<br /><br />However, we cannot send a symmetric key over the internets. If we did that, we wave the protection of encryption goodbye. So we encrypt the symmetric key (called a session key) with RSA, an asymmetric public key algorithm. A symmetric key is tiny, so this is much less data to encrypt than a typical message, and so it happens all in good time. <br /><br />Then, the symmetrically encrypted data and the asymmetrically encrypted session key are bundled into what we&#039;re calling a PGP message.<br /><br />At arrival, the encrypted session key is decrypted via the magic of public key cryptography. The decrypted symmetric session key is then used to decrypt the main body of the message. Results!<br /><br />Now for the clever part. In order to encrypt to multiple recpients, you only need to encrypt the message 1 time with the session key. You then encrypt the session key, a tiny amount of information, to each recipient&#039;s public key individually. If you encrypted to a 1000 people, then there are 1000 encrypted session keys in the PGP message (and it looks a good bit larger!). This way, everybody can decrypt it, and it doesn&#039;t matter whether it&#039;s 1 kilobyte or 1 terabyte of data.<br /><br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>pine</strong> on <strong>May 19, 2013, 11:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				You can actually see that this is going on with PGP, even with the padding.<br /><br />If you encrypt to 3 people, copy paste the result into a plaintext file.<br /><br />Now encrypt individually to 3 people. Copy paste and append the results together into a different plaintext file.<br /><br />Now compare the lengths. Even though it is the same information, it is clear that the first plaintext file is much shorter than the second one.<br /><br />Compression can only account for so much since ciphertexts are intended to look as much as possible like random noise to prevent cryptanalysis. So now you know why :-)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>Iliveinthekhole</strong> on <strong>May 19, 2013, 01:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Holy cow Pine! Youd be harder to find then Bin Laden!<br /><br />This thread blows my mind, gunna read it again tomorrow when the vitamin K wears off wowsers!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>tree</strong> on <strong>May 19, 2013, 04:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1143732#msg1143732">Quote from: pine on May 19, 2013, 11:45 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1143700#msg1143700">Quote from: tree on May 19, 2013, 11:13 am</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1142914#msg1142914">Quote from: pine on May 19, 2013, 03:54 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1137537#msg1137537">Quote from: tree on May 17, 2013, 01:58 pm</a></div></div><blockquote class="bbc_alternate_quote">Pretty interesting, I&#039;m gonna use &quot;throw-keyid&quot; from now on. If you use &quot;hidden-encrypt-to&quot; however, won&#039;t the recipient need your public key to decrypt your message?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No. Because that is not how public key cryptography works. <br /><br />Here is a link to a post I made to a fellow who made an identical mistake to yours:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=107219.msg1131314#msg1131314<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I would&#039;ve thought so since you also encrypt the message to yourself when using the &quot;hidden-encrypt-to [your key]&quot;. I wasn&#039;t aware you could encrypt a message to different people at the same time and that they could decrypt it without the others&#039; keys. In the link to your post, the person thought you needed his key to decrypt a PGP message that was only encrypted to you (as far as I know), which is not what my question was about.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Ah! Now I understand how you made that mistake, yes, that makes perfect sense.<br /><br />This is actually a very interesting thing. To understand it you need to know a little more about PGP. Here is how it works:<br /><br />Normally, Alice encrypts to Bob&#039;s public key. Only Bob can read it.<br /><br />So what is happening with encrypted messages to multiple recipients? <br /><br />It turns out Pine is lying a bit by telling you guys that PGP is for encryption. Well, it is used for that, but it&#039;s far from the whole story. What is really happening is that PGP is a hybrid cryptosystem. It is composed of several parts, not just an encryption algorithm. If it were just an encryption algorithm we wouldn&#039;t be able to do a fraction of the things we do with it.<br /><br />When you encrypt a message with PGP, your message is encrypted using a symmetric block cipher, something like AES. This is very fast and very secure. If we used a public key algorithm such as RSA then it would take considerably longer to encrypt and decrypt data.<br /><br />However, we cannot send a symmetric key over the internets. If we did that, we wave the protection of encryption goodbye. So we encrypt the symmetric key (called a session key) with RSA, an asymmetric public key algorithm. A symmetric key is tiny, so this is much less data to encrypt than a typical message, and so it happens all in good time. <br /><br />Then, the symmetrically encrypted data and the asymmetrically encrypted session key are bundled into what we&#039;re calling a PGP message.<br /><br />At arrival, the encrypted session key is decrypted via the magic of public key cryptography. The decrypted symmetric session key is then used to decrypt the main body of the message. Results!<br /><br />Now for the clever part. In order to encrypt to multiple recpients, you only need to encrypt the message 1 time with the session key. You then encrypt the session key, a tiny amount of information, to each recipient&#039;s public key individually. If you encrypted to a 1000 people, then there are 1000 encrypted session keys in the PGP message (and it looks a good bit larger!). This way, everybody can decrypt it, and it doesn&#039;t matter whether it&#039;s 1 kilobyte or 1 terabyte of data.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Wow PGP is a lot more complicated than I thought! <br />But why can we send symmetric keys over teh internetz? How would that compromise the encryption? SSL is encrypted using AES so if it wasn&#039;t secure over the internet, why would we use it?<br />Thanks for this great explanation!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>May 19, 2013, 06:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				SSL/TLS session keys are negotiated with asymmetric cryptography, usually RSA or ECDH. You pretty much never use a symmetric algorithm for multi-party communications without also using a key exchange algorithm (or without sharing an original key face to face at least). Usually the only time you use symmetric algorithms alone is for&nbsp; encrypted data storage like FDE or Truecrypt containers.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>jorgecassio</strong> on <strong>May 20, 2013, 01:16 am</strong>
+			</dt>
+			<dd class="postbody">
+				Is there a way to get this technique to work with windows?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>P2P</strong> on <strong>May 20, 2013, 03:55 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg933094#msg933094">Quote from: pine on March 24, 2013, 03:29 am</a></div></div><blockquote class="bbc_standard_quote">The point is that you really want 1 PGP key for SR, and only SR. Never use that key anywhere else otherwise you&#039;ll be linkable between those two places.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Pine, I understand what you&#039;re saying here, and I by no means claim to have known what you have presented here previously, but wasn&#039;t this fact just understood already? Even without all of this &quot;ciphertext&quot; business, couldn&#039;t one identify someone just via the name on the PGP key? I mean, most will put their username on their PGP key, to my knowledge, because it makes it easier for one with a large keyring to identify them (I believe you&#039;ve brought this up before as well). Plus, just based on the basic rules of SR, you don&#039;t associate anything you do here with your real life identity. Thank you, however, for going more into detail on this. It definitely bolsters our safety ideology here on SR. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>hitit</strong> on <strong>July 28, 2013, 07:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hey Guys<br /><br />Pretty new to SR and trying to keep my security to a maximum! I have read pine&#039;s very informative post and have attempted to configure my Gpg4win program with hidden-encrypt-to as well as throw-keyid.<br /><br />After many attempts and many, many hours of attempting to configure, evidence that my key was used to encrypt the message is still evident in command prompt.&nbsp; I am obviously appending the lines to the configuration file incorrectly.. I am using gpg-conf.skel - should I add the lines in at the beginning of that file, the middle somewhere or at the end?<br /><br />Sorry if its a silly question - i&#039;m not a real computer wizz. Any help anyone can give would be great!<br /><br />Many thanks in advance&nbsp; :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 28, 2013, 09:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				hitit, did you rename the file to gpg.conf?<br /><br />It doesn&#039;t matter where you put it in the file, as long as it doesn&#039;t a # at the beginning.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 28, 2013, 09:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				One thing I noticed is that zeroing out the key ID breaks some (crappy) PGP programs. Rather than testing every available private key, they just fail to decrypt the PGP block. Keep that in mind. If you use it all the time, even when you don&#039;t have to, you may get complaints or people will think you don&#039;t know how to create a PGP message and they may ignore you for wasting their time.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>hitit</strong> on <strong>July 28, 2013, 10:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				@astor<br /><br />You are a real legend mate - you have been on numerous posts of mine providing very valuable assistance and asking nothing in return. If I could +1 I would&nbsp; :)<br /><br />No I never renamed the file - that sounds like it is the problem then! Although I am now considering GPG4USB as apparently you can create a stronger-bit key with that program. Would I have those aforementioned problems with it? What configuration file would I be looking at using if I switched to this?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 29, 2013, 01:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				It&#039;s the same configuration file for GPG4USB. It&#039;s located at&nbsp; \wherever\you\extracted\gpg4usb\keydb\gpg.conf<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>hitit</strong> on <strong>July 29, 2013, 09:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				Awesome - too easy. Thanks again astor&nbsp; :D
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>meta</strong> on <strong>July 29, 2013, 09:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				This is all fine and dandy, but.... are you reeeeaally a lady pine?<br /><br />Completely irrelevant but completely on my mind.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>/I_Surf_Worm_Holes</strong> on <strong>July 29, 2013, 04:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Just chiming in... I happened upon this thread and wanted to subscribe for further parsing, and in the course of subscribing to also say some thanks for the OP and other technically factual folk posting here in this forum.&nbsp; <br /><br />For what it&#039;s worth, again I say a truly heartfelt &quot;Thanks&quot;&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>PrincessButtercup</strong> on <strong>July 29, 2013, 09:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Excellent post.<br /><br />... now if only I could figure out thow to emit the pgp version on TAILS (seahorse)<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>PrincessButtercup</strong> on <strong>July 30, 2013, 01:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m having a difficult time locating the gpg.conf file on TAILS ... can anyone help?<br /><br />-- never mind, found it! --
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>PrincessButtercup</strong> on <strong>July 30, 2013, 02:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve appended the gpg.conf file as follows:<br /><br />hidden-encrypt-to &lt;my key id&gt;<br />throw-keyid<br />use-agent<br />no-auto-key-locate<br />trust-model always<br />utf8-strings<br />no-greeting<br />no-emit-version<br />no-comments<br />no-mdc-warning<br />armor<br /><br />The output looks like this &lt;&lt;I have redacted the key ids &gt;&gt;:<br /><br />gpg -v Test.asc<br />gpg: public key is 00000000<br />gpg: anonymous recipient; trying secret key 18XXXXXX ... <br />gpg: anonymous recipient; trying secret key 2EXXXXXX ...<br />gpg: using subkey 2EXXXXXX instead of primary key 18XXXXXX<br />gpg: anonymous recipient; trying secret key 65XXXXXX ...<br />gpg: anonymous recipient; trying secret key 6CXXXXXX ...<br />gpg: using subkey 6CXXXXXX instead of primary key 65XXXXXX<br />gpg: anonymous recipient; trying secret key B1XXXXXX ...<br />gpg: anonymous recipient; trying secret key 6DXXXXXX ...<br />gpg: using subkey 6DXXXXXX instead of primary key B1XXXXXX<br />gpg: public key is 00000000<br />gpg: anonymous recipient; trying secret key 18XXXXXX ...<br />gpg: anonymous recipient; trying secret key 2EXXXXXX ...<br />gpg: anonymous recipient; trying secret key 65XXXXXX ...<br />gpg: anonymous recipient; trying secret key 6CXXXXXX ...<br />gpg: anonymous recipient; trying secret key B1XXXXXX ...<br />gpg: anonymous recipient; trying secret key 6DXXXXXX ...<br />gpg: encrypted with RSA key, ID 00000000<br />gpg: encrypted with RSA key, ID 00000000<br />gpg: decryption failed: secret key not available<br /><br /><br />Any help very welcome!<br /><br />pb.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>JofSpades</strong> on <strong>July 30, 2013, 05:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Astor,<br /><br />You have some mistakes in your config ...<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg937120#msg937120">Quote from: astor on March 25, 2013, 03:31 pm</a></div></div><blockquote class="bbc_standard_quote">trust-model always&nbsp; -- prevents gpg from confirming to use a key, which it will if you haven&#039;t signed it (or there&#039;s no web of trust behind it)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Users should not use &#039;trust model always&#039; by default, it hides changed keys. Better is for them to locally sign the key.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg937120#msg937120">Quote from: astor on March 25, 2013, 03:31 pm</a></div></div><blockquote class="bbc_standard_quote">utf8-strings -- ensures you use a standard character encoding, if everybody uses that there will be fewer fuck ups based on char encoding<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That affects the cli arguments, not the message body. From the man page:<br /><br />&#039;utf8-strings Assume that command line arguments are given as UTF8 strings.&#039;<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg937120#msg937120">Quote from: astor on March 25, 2013, 03:31 pm</a></div></div><blockquote class="bbc_standard_quote">no-mdc-warning&nbsp; -- removes a warning about the PGP block not being message digest protected, which nobody in my experience uses anyway<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />NO NO NO, don&#039;t do this!!!!<br /><br />The mdc is a security check for message integrity, from the man page:<br /><br />&quot;disable-mdc Disable the use of the modification detection code. Note that by using this option,&nbsp; the&nbsp; encrypted&nbsp; message becomes vulnerable to a message modification attack.&quot;<br /><br />Any user who has no-mdc-warning in their config file should remove it.<br /><br />JofSpades<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 30, 2013, 05:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1393716#msg1393716">Quote from: PrincessButtercup on July 30, 2013, 02:45 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;ve appended the gpg.conf file as follows:<br /><br />hidden-encrypt-to &lt;my key id&gt;<br />throw-keyid<br />use-agent<br />no-auto-key-locate<br />trust-model always<br />utf8-strings<br />no-greeting<br />no-emit-version<br />no-comments<br />no-mdc-warning<br />armor<br /><br />The output looks like this &lt;&lt;I have redacted the key ids &gt;&gt;:<br /><br />gpg -v Test.asc<br />gpg: public key is 00000000<br />gpg: anonymous recipient; trying secret key 18XXXXXX ... <br />gpg: anonymous recipient; trying secret key 2EXXXXXX ...<br />gpg: using subkey 2EXXXXXX instead of primary key 18XXXXXX<br />gpg: anonymous recipient; trying secret key 65XXXXXX ...<br />gpg: anonymous recipient; trying secret key 6CXXXXXX ...<br />gpg: using subkey 6CXXXXXX instead of primary key 65XXXXXX<br />gpg: anonymous recipient; trying secret key B1XXXXXX ...<br />gpg: anonymous recipient; trying secret key 6DXXXXXX ...<br />gpg: using subkey 6DXXXXXX instead of primary key B1XXXXXX<br />gpg: public key is 00000000<br />gpg: anonymous recipient; trying secret key 18XXXXXX ...<br />gpg: anonymous recipient; trying secret key 2EXXXXXX ...<br />gpg: anonymous recipient; trying secret key 65XXXXXX ...<br />gpg: anonymous recipient; trying secret key 6CXXXXXX ...<br />gpg: anonymous recipient; trying secret key B1XXXXXX ...<br />gpg: anonymous recipient; trying secret key 6DXXXXXX ...<br />gpg: encrypted with RSA key, ID 00000000<br />gpg: encrypted with RSA key, ID 00000000<br />gpg: decryption failed: secret key not available<br /><br /><br />Any help very welcome!<br /><br />pb.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Looks like it tested all of your private keys, and none were the complement of the public key. Did you encrypt the message with your own public key? Or if someone else wrote it, did they encrypt it one of your public keys?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 30, 2013, 05:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				JofSpades, that one is months old. I have an updated version here:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=114141.msg1130505#msg1130505
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>PrincessButtercup</strong> on <strong>July 30, 2013, 06:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1394117#msg1394117">Quote from: astor on July 30, 2013, 05:25 pm</a></div></div><blockquote class="bbc_standard_quote"><br />Looks like it tested all of your private keys, and none were the complement of the public key. Did you encrypt the message with your own public key? Or if someone else wrote it, did they encrypt it one of your public keys?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hi astor, and thanks for helping.<br />I encrypted a message using my key first, and then my key and a random public other for another test. I&#039;ve tried all my keys now and I get the same output ... ?<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 30, 2013, 09:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If you encrypt with your own public key, and you have the private key available in your key ring, then it should test all of them and find the right one. Don&#039;t know what else to tell you, except make sure the private key is there and you&#039;re encrypting with the right public key.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>JofSpades</strong> on <strong>July 30, 2013, 10:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1394126#msg1394126">Quote from: astor on July 30, 2013, 05:30 pm</a></div></div><blockquote class="bbc_standard_quote">JofSpades, that one is months old. I have an updated version here:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=114141.msg1130505#msg1130505<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That&#039;s good but your earlier posts in this active thread still has errors and people are duplicating them.<br /><br />See the post by PrincessButtercup a few posts back for just 1 example.<br /><br />I humbly suggest that you fix the errors in your posts in this thread because not everybody will read to page 5 before&nbsp; &nbsp; &nbsp; &nbsp; <br />changing their config.<br /><br />JofSpades<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>Jason Bourne</strong> on <strong>July 30, 2013, 10:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Subbed, will read later.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 30, 2013, 10:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I don&#039;t consider there to be any errors. Some of the comments were wrong, which were fixed in the other version, but I&#039;ll copy it over to this thread.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 30, 2013, 10:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You learned PGP from the documentation. I configured my client to work in the real world, specifically the anonymous darknets.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1394027#msg1394027">Quote from: JofSpades on July 30, 2013, 05:01 pm</a></div></div><blockquote class="bbc_standard_quote">Users should not use &#039;trust model always&#039; by default, it hides changed keys. Better is for them to locally sign the key.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />We don&#039;t use a web of trust here, so it&#039;s irrelevant. You have no need to re-import a key multiple times, as none of them are signed, and signing them yourself is a useless chore. The whole key signing mechanism can and should be ignored with trust-model always.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">That affects the cli arguments, not the message body. From the man page:<br /><br />&#039;utf8-strings Assume that command line arguments are given as UTF8 strings.&#039;<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That comment was fixed in a newer version that I posted a few months ago.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">The mdc is a security check for message integrity, from the man page:<br /><br />&quot;disable-mdc Disable the use of the modification detection code. Note that by using this option,&nbsp; the&nbsp; encrypted&nbsp; message becomes vulnerable to a message modification attack.&quot;<br /><br />Any user who has no-mdc-warning in their config file should remove it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Since most PGP programs don&#039;t use it, you will constantly see these warnings, and they will be false positives. They are mostly useless and can be ignored.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>RaFaeL5</strong> on <strong>July 30, 2013, 10:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				sub&#039;ing for later use... but damn, this is hot!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>JofSpades</strong> on <strong>July 30, 2013, 11:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1395168#msg1395168">Quote from: astor on July 30, 2013, 10:48 pm</a></div></div><blockquote class="bbc_standard_quote">You learned PGP from the documentation. I configured my client to work in the real world, specifically the anonymous darknets.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />GPG is GPG, darknet or clear<br /><br />=== snip stuff I don&#039;t care to argue about ====<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1395168#msg1395168">Quote from: astor on July 30, 2013, 10:48 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">The mdc is a security check for message integrity, from the man page:<br /><br />&quot;disable-mdc Disable the use of the modification detection code. Note that by using this option,&nbsp; the&nbsp; encrypted&nbsp; message&nbsp; &nbsp; &nbsp;<br />becomes vulnerable to a message modification attack.&quot;<br /><br />Any user who has no-mdc-warning in their config file should remove it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Since most PGP programs don&#039;t use it, you will constantly see these warnings, and they will be false positives. They are&nbsp; &nbsp; &nbsp; <br />mostly useless and can be ignored.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The gpg developers state that this option makes messages vulnerable to attack.<br /><br />I don&#039;t see how you can continue to recommend&nbsp; it to new users if you care about their security.<br /><br />Do whatever you want, I&#039;ve said my piece.<br /><br />JofSpades<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 30, 2013, 11:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=137510.msg1395303#msg1395303">Quote from: JofSpades on July 30, 2013, 11:37 pm</a></div></div><blockquote class="bbc_standard_quote">GPG is GPG, darknet or clear<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It makes a big difference in use cases. We will never attend key signing parties. We don&#039;t upload our keys to key servers. The web of trust as envisioned by the PGP developers doesn&#039;t work here. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">The gpg developers state that this option makes messages vulnerable to attack.<br /><br />I don&#039;t see how you can continue to recommend&nbsp; it to new users if you care about their security.<br /><br />Do whatever you want, I&#039;ve said my piece.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Because, as I stated, the vast majority of PGP programs don&#039;t use it. Blame their developers. The MDC integrity feature is already disabled on their end, my option just turns off the warning, so it doesn&#039;t annoy you every time you see it, which would be every time you decrypt a message.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>July 31, 2013, 12:16 am</strong>
+			</dt>
+			<dd class="postbody">
+				Not sure what MDC is but I am going to go out on a limb and guess that it has to do with message authentication codes, in which case it should be left enabled. I don&#039;t know if some GPG programs don&#039;t use it or not, but if they don&#039;t it is a security flaw on their end. <br /><br />Okay just looked up MDC<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">A modification detection code (MDC) is a message digest that can prove the integ-<br />rity of the message. A message authentication code (MAC) ensures the integrity of<br />the message and the data origin authentication. The difference between an MDC<br />and a MAC is that the second includes a secret between Alice and Bob.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />So pretty much the MDC is to make sure that the ciphertext is not modified in such a way that the plaintext changes. All in all I don&#039;t think it is a huge threat but MDC detects it. <br /><br />It is probably something like hashing the plaintext message and then concatenating the hash to the plaintext prior to encryption, and during decryption removing the hash then hashing the plaintext and comparing the hash to the concatenated hash. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>July 31, 2013, 12:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">It makes a big difference in use cases. We will never attend key signing parties. We don&#039;t upload our keys to key servers. The web of trust as envisioned by the PGP developers doesn&#039;t work here.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yeah that is true. We use GPG significantly differently than many others do. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>bluedev1</strong> on <strong>July 31, 2013, 09:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				thank you for posting this.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>GotGas</strong> on <strong>July 31, 2013, 01:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks.<br /><br />Probably some reasons went into calling it Pretty Good Privacy rather than Best Ever Privacy.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>PrincessButtercup</strong> on <strong>August 10, 2013, 06:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				**subbed**<br /><br />excellent information here for those upgrading to TAILS 0.20 - might as well adjust the GPG config as well!<br /><br />pb.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>bluedev1</strong> on <strong>August 17, 2013, 11:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				bump
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Things About PGP You May Not Know: Your Ciphertext Can Identify You, Friends.</strong><br />
+				Post by: <strong>rockwaterwind</strong> on <strong>August 18, 2013, 09:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				subbed
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

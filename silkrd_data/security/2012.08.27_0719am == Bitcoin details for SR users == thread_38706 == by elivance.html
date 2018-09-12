@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=38706.0" />
+		<title>Print Page - Bitcoin details for SR users</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: elivance on August 27, 2012, 07:19 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Bitcoin details for SR users</strong><br />
+				Post by: <strong>elivance</strong> on <strong>August 27, 2012, 07:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve been on SR for a while and I realized that we should have a sticky topic discussing the technical details behind bitcoins.&nbsp; I&#039;m not trying to pretend that I&#039;m an expert, but I may be able to help out a few of you.&nbsp; Even better, we can use this topic to keep track of our questions and answers.<br /><br /><br />So, what are bitcoins?<br /><br />A bitcoin is, essentially, a chain of cryptographic signatures.&nbsp; Your &quot;address&quot; is simply a public key.&nbsp; Your wallet is just a list of the private keys corresponding to your public keys.<br /><br />Let&#039;s not go too far into public-key cryptography.&nbsp; It suffices to say that you can take your private key and &quot;sign&quot; a digital document and anyone with your public key can verify the signature you made with the private key.&nbsp; That should be all we need from cryptography.<br /><br />Bitcoins are assigned to an address.&nbsp; If you know the private key for that address, those are your bitcoins.&nbsp; If you own bitcoins, you can assign them to other addresses -- i.e., &quot;spend&quot; them.&nbsp; Each time you send a bitcoin to an address, you sign the bitcoin and the address you are sending it to with your private key.<br /><br />With a normal currency, you would have to send this transaction to some sort of central authority like a bank.&nbsp; The bank would check their database to make sure there was enough money in the account and then they would debit one account and credit the other in the database.<br /><br />Bitcoins don&#039;t have a central authority.&nbsp; In fact, that was one of the main design goals.&nbsp; But since we still need to verify that each transaction is valid, we still need to be able to track how much money is in each address.&nbsp; The way we do it is to distribute the database to everyone!&nbsp; Every transaction made is sent to everyone and when the miners find a new block, they include all the transactions they know about in the new block.&nbsp; This way every transaction made is written to the permanent record, the block chain, that we all share.&nbsp; (This is why it takes about 60 minutes for a transaction to be confirmed.&nbsp; We need to wait for about 6 blocks to be generated until we are sure that our transaction is in the permanent record.)<br /><br />So, a bitcoin is a chain of signatures and everybody knows how to track all the bitcoins.&nbsp; Except, when we say, &quot;track,&quot; all we are tracking are public keys; that&#039;s it.&nbsp; This is why the currency is considered anonymous.&nbsp; All anybody really knows is just a chain of one number after another -- one public key signing the next.<br /><br />Ah, but if at some point your actual identity is associated with an address, all transactions associated with that address can be tracked in the public record.&nbsp; Because we all have the entire record, we all see every time bitcoins are assigned to that address and every time that address assigns bitcoins to another address.&nbsp; If an address gets associated with you in RL, then the transactions made with that address can also be associated with you.&nbsp; (To a certain extent.&nbsp; Keep reading.)<br /><br />So when people tell you that bitcoins aren&#039;t as &quot;private&quot; as you think they may be, this is what they are talking about.&nbsp; If an address is known to be yours, any money you send from that address can be tracked.&nbsp; Forever.&nbsp; Publicly and forever.<br /><br />I can hear you now, &quot;oh shit, I need a method to get completely anonymous bitcoin.&quot;&nbsp; But, wait.<br /><br />We can track that money forever, but the only thing that we can definitively say is that you sent that money to another address.&nbsp; Period.&nbsp; End of line.<br /><br />Did you send it to yourself?&nbsp; No idea.&nbsp; All you did was attach a random-ish looking number to a bitcoin and sign it with your public key.&nbsp; If anyone asks you where you sent it, your answer should be, &quot;none of your business.&quot;&nbsp; If LE asks where you sent it, don&#039;t tell them anything.&nbsp; If LE has a warrant, get a lawyer.&nbsp; I could tell you that you could say something like, &quot;I have a gambling problem.&nbsp; This is my account at &lt;insert bitcoin gambling place here&gt; and I lost everything.&quot;&nbsp; However, really, don&#039;t say anything.&nbsp; The only way they can associate you with any following addresses is if you tell them.&nbsp; I repeat, don&#039;t talk to cops.&nbsp; Just, don&#039;t.<br /><br />Listen, if you don&#039;t think you can talk to LE in a stressful situation (and believe me, I understand how you feel) just don&#039;t say anything.&nbsp; They are going to make you feel very uncomfortable when you don&#039;t say anything -- they are very good at that.&nbsp; In fact, that could be considered their job requirement.&nbsp; &quot;Are you good at getting people to admit crimes they may not have committed?&nbsp; You&#039;re hired!&quot;<br /><br />Okay, TL;DR.<br /><br />Executive Summary:<br />&nbsp;&nbsp;&nbsp;1.&nbsp; Bitcoins are chains of cryptographic signatures.<br />&nbsp;&nbsp;&nbsp;2.&nbsp; Don&#039;t talk to LE for any reason.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bitcoin details for SR users</strong><br />
+				Post by: <strong>paddymiller</strong> on <strong>August 27, 2012, 08:48 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=38706.msg433891#msg433891">Quote from: elivance on August 27, 2012, 07:19 am</a></div></div><blockquote class="bbc_standard_quote">I&#039;ve been on SR for a while and I realized that we should have a sticky topic discussing the technical details behind bitcoins.&nbsp; I&#039;m not trying to pretend that I&#039;m an expert, but I may be able to help out a few of you.&nbsp; Even better, we can use this topic to keep track of our questions and answers.<br /><br /><br />So, what are bitcoins?<br /><br />A bitcoin is, essentially, a chain of cryptographic signatures.&nbsp; Your &quot;address&quot; is simply a public key.&nbsp; Your wallet is just a list of the private keys corresponding to your public keys.<br /><br />Let&#039;s not go too far into public-key cryptography.&nbsp; It suffices to say that you can take your private key and &quot;sign&quot; a digital document and anyone with your public key can verify the signature you made with the private key.&nbsp; That should be all we need from cryptography.<br /><br />Bitcoins are assigned to an address.&nbsp; If you know the private key for that address, those are your bitcoins.&nbsp; If you own bitcoins, you can assign them to other addresses -- i.e., &quot;spend&quot; them.&nbsp; Each time you send a bitcoin to an address, you sign the bitcoin and the address you are sending it to with your private key.<br /><br />With a normal currency, you would have to send this transaction to some sort of central authority like a bank.&nbsp; The bank would check their database to make sure there was enough money in the account and then they would debit one account and credit the other in the database.<br /><br />Bitcoins don&#039;t have a central authority.&nbsp; In fact, that was one of the main design goals.&nbsp; But since we still need to verify that each transaction is valid, we still need to be able to track how much money is in each address.&nbsp; The way we do it is to distribute the database to everyone!&nbsp; Every transaction made is sent to everyone and when the miners find a new block, they include all the transactions they know about in the new block.&nbsp; This way every transaction made is written to the permanent record, the block chain, that we all share.&nbsp; (This is why it takes about 60 minutes for a transaction to be confirmed.&nbsp; We need to wait for about 6 blocks to be generated until we are sure that our transaction is in the permanent record.)<br /><br />So, a bitcoin is a chain of signatures and everybody knows how to track all the bitcoins.&nbsp; Except, when we say, &quot;track,&quot; all we are tracking are public keys; that&#039;s it.&nbsp; This is why the currency is considered anonymous.&nbsp; All anybody really knows is just a chain of one number after another -- one public key signing the next.<br /><br />Ah, but if at some point your actual identity is associated with an address, all transactions associated with that address can be tracked in the public record.&nbsp; Because we all have the entire record, we all see every time bitcoins are assigned to that address and every time that address assigns bitcoins to another address.&nbsp; If an address gets associated with you in RL, then the transactions made with that address can also be associated with you.&nbsp; (To a certain extent.&nbsp; Keep reading.)<br /><br />So when people tell you that bitcoins aren&#039;t as &quot;private&quot; as you think they may be, this is what they are talking about.&nbsp; If an address is known to be yours, any money you send from that address can be tracked.&nbsp; Forever.&nbsp; Publicly and forever.<br /><br />I can hear you now, &quot;oh shit, I need a method to get completely anonymous bitcoin.&quot;&nbsp; But, wait.<br /><br />We can track that money forever, but the only thing that we can definitively say is that you sent that money to another address.&nbsp; Period.&nbsp; End of line.<br /><br />Did you send it to yourself?&nbsp; No idea.&nbsp; All you did was attach a random-ish looking number to a bitcoin and sign it with your public key.&nbsp; If anyone asks you where you sent it, your answer should be, &quot;none of your business.&quot;&nbsp; If LE asks where you sent it, don&#039;t tell them anything.&nbsp; If LE has a warrant, get a lawyer.&nbsp; I could tell you that you could say something like, &quot;I have a gambling problem.&nbsp; This is my account at &lt;insert bitcoin gambling place here&gt; and I lost everything.&quot;&nbsp; However, really, don&#039;t say anything.&nbsp; The only way they can associate you with any following addresses is if you tell them.&nbsp; I repeat, don&#039;t talk to cops.&nbsp; Just, don&#039;t.<br /><br />Listen, if you don&#039;t think you can talk to LE in a stressful situation (and believe me, I understand how you feel) just don&#039;t say anything.&nbsp; They are going to make you feel very uncomfortable when you don&#039;t say anything -- they are very good at that.&nbsp; In fact, that could be considered their job requirement.&nbsp; &quot;Are you good at getting people to admit crimes they may not have committed?&nbsp; You&#039;re hired!&quot;<br /><br />Okay, TL;DR.<br /><br />Executive Summary:<br />&nbsp;&nbsp;&nbsp;1.&nbsp; Bitcoins are chains of cryptographic signatures.<br />&nbsp;&nbsp;&nbsp;2.&nbsp; Don&#039;t talk to LE for any reason.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />+1 Good post for beginners and seasoned campainers alike :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bitcoin details for SR users</strong><br />
+				Post by: <strong>elivance</strong> on <strong>September 01, 2012, 05:40 am</strong>
+			</dt>
+			<dd class="postbody">
+				I recently had an interesting conversation with angelkiller about sending bitcoins to SR.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=38839.msg439543#msg439543">Quote from: angelkiller on August 30, 2012, 12:26 am</a></div></div><blockquote class="bbc_standard_quote">[...]<br />So my overall point was that you don&#039;t have to mix coins coming in. They need 2 confirmed identities before someone can talk about proving I sent money to someone.<br />[...]<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Angelkiller&#039;s point was that not only would LE need to be able to associate his real identity with the sending address but they would also have to compromise SR.&nbsp; That is, &quot;you need two confirmed identities.&quot;<br /><br />I think he&#039;s right on point.&nbsp; My argument is that I still like using coin-mixing services that try and completely remove the association between the source and destination.&nbsp; I&#039;m the first to admit my position is based on paranoia, but I think a little paranoia is healthy.&nbsp; There is a difference between proof and intuition.&nbsp; Someone might not be able to prove that you had a transaction with SR, but they might suspect it, and that might be enough.<br /><br />Anyway, I&#039;m mostly in agreement with Angelkiller.&nbsp; You really can send Bitcoins directly to your SR address and not worry.&nbsp; But a little paranoia is a good thing and mixers can be your friends too.&nbsp; Check out https://blockchain.info/wallet or http://nci2szjrwjqw2zbi.onion for two good mixers.&nbsp; I&#039;m not associated with either but I&#039;ve sent coin through both and I give each my recommendation.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bitcoin details for SR users</strong><br />
+				Post by: <strong>fl0gg3r</strong> on <strong>September 04, 2012, 07:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				+1. Excellent easy to read summary. Thanks!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bitcoin details for SR users</strong><br />
+				Post by: <strong>Omega Rushmore</strong> on <strong>September 04, 2012, 04:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hey Elivance, great post!!! <br /><br />Now, I have a question, and I don&#039;t want it to turn into a hijacked thread, but I think its relevant to our current discussion:<br /><br />You mention blockchain.info&#039;s wallet service...great stuff.&nbsp; Within the wallet is a tool which will track the &quot;taint&quot; of a transaction.<br /><br />Do you know exactly what TAINT is?&nbsp; Does it have to do with the bitcoin public key itself, or is it somehow tracking the sending IP address associated with that particular public key during the sending process?&nbsp; <br /><br />I had sent a few coins from SR to the TOR-accessed blockchain.info wallet, and looked at the TAINT, and WOW, it shows every single IP address which had ever transferred coins ending in the transaction I made!&nbsp; <br /><br />Is this where we should be focusing our security concerns, regarding btc transfers, namely, if the coins are associated with our IRL IP address, and we start moving them around, there is one of the links you&#039;ve been talking about.<br /><br />Do tell more....!<br /><br />Omega<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bitcoin details for SR users</strong><br />
+				Post by: <strong>Fat_Speedy_Guy</strong> on <strong>September 04, 2012, 05:14 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Good info.<br /><br />I don&#039;t use a mixer for some of the reason&#039;s you&#039;ve addressed. If you&#039;ve bought bitcoins through a traceable method, then that&#039;s it, the evidence of your purchasing bitcoins and sending it to an address is there, regardless of whether you use the mixer or not, as it&#039;s not like one address has a big red flashing light that says &#039;SilkRoad&quot; and the mixer&#039;s address doesn&#039;t. There&#039;s no more or less evidence of buying drugs with or without the mixer. Unless in the unlikely event Silkroad gets compromised and all Bitcoin deposits and addresses become known - now that would be a problem that a mixer would help with, but I don&#039;t see SR ever being compromised to that extent in all honesty.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bitcoin details for SR users</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>September 04, 2012, 06:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=38706.msg448776#msg448776">Quote from: Omega Rushmore on September 04, 2012, 04:31 pm</a></div></div><blockquote class="bbc_standard_quote">Hey Elivance, great post!!! <br /><br />Now, I have a question, and I don&#039;t want it to turn into a hijacked thread, but I think its relevant to our current discussion:<br /><br />You mention blockchain.info&#039;s wallet service...great stuff.&nbsp; Within the wallet is a tool which will track the &quot;taint&quot; of a transaction.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Oh, that&#039;s *very* relevant.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=38706.msg448776#msg448776">Quote from: Omega Rushmore on September 04, 2012, 04:31 pm</a></div></div><blockquote class="bbc_standard_quote">Do you know exactly what TAINT is?&nbsp; Does it have to do with the bitcoin public key itself, or is it somehow tracking the sending IP address associated with that particular public key during the sending process?&nbsp; <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Unfortunately the Blockchain site does not explain what the taint beyond the statement on the taint analysis page:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">This pages shows the addresses which have sent bitcoins to &lt;BTC address&gt;. The data can be used to evaluate the anonymity provided by a mixing service. For example Send Coins from Address A to a Mixing service then withdraw to address B. If you can find Address B on the taint list of Address A then the mixing service has not sufficiently severed the link between your addresses. The more &quot;taint&quot; the stronger the link that remains.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I could be wrong, but I believe that it is determined according to the history of the coins and their origin.&nbsp; So coins that may have been part of the Mt. Gox attack last year will be tainted as a result of being stolen and then returned to the Bitcoin economy.&nbsp; While coins that have just been mined will be completely free of taint because they are new.<br /><br />I&#039;m not certain how Blockchain can guarantee 100% untainted coins with their mixing service.<br /><br />This thread on the Bitcoin Talk forum indicates that taint is correlated to stolen coins:<br /><br />https://bitcointalk.org/index.php?topic=86225.0<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=38706.msg448776#msg448776">Quote from: Omega Rushmore on September 04, 2012, 04:31 pm</a></div></div><blockquote class="bbc_standard_quote">I had sent a few coins from SR to the TOR-accessed blockchain.info wallet, and looked at the TAINT, and WOW, it shows every single IP address which had ever transferred coins ending in the transaction I made!&nbsp; <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I strongly suspect that most Bitcoin users have or have had tainted coins, even if they have never done anything illegal.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=38706.msg448776#msg448776">Quote from: Omega Rushmore on September 04, 2012, 04:31 pm</a></div></div><blockquote class="bbc_standard_quote">Is this where we should be focusing our security concerns, regarding btc transfers, namely, if the coins are associated with our IRL IP address, and we start moving them around, there is one of the links you&#039;ve been talking about.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Maybe, I think we&#039;d need to know more about how this taint is judged and who or what does the judging.&nbsp; It would also depend on whether other organisations, such as exchanges, set a policy to not accept coins above a certain threshold of taint.<br /><br />The thread I linked to above indicates that at least some organisations may not accept transactions using tainted coins.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bitcoin details for SR users</strong><br />
+				Post by: <strong>elivance</strong> on <strong>September 05, 2012, 12:48 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=38706.msg448776#msg448776">Quote from: Omega Rushmore on September 04, 2012, 04:31 pm</a></div></div><blockquote class="bbc_standard_quote">Now, I have a question, and I don&#039;t want it to turn into a hijacked thread, but I think its relevant to our current discussion:<br /><br />You mention blockchain.info&#039;s wallet service...great stuff.&nbsp; Within the wallet is a tool which will track the &quot;taint&quot; of a transaction.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Not a hijack at all.&nbsp; This is a very pertinent question.&nbsp; This is, in fact, how we measure how well a mixer works.<br /><br />The definition at blockchain.info is: &quot;The taint is the percentage of funds received by an address that can be traced back to another address.&quot;&nbsp; I think a few examples will sufficiently illustrate this.<br /><br />Suppose, for example, we want to transfer 100BTC from address A to address B.&nbsp; If we simply transfer 100 coins directly from A to B, then the taint should be %100.&nbsp; That is, this transaction is %100 tainted by coins from A.<br /><br />If instead we transferred 50BTC from address A to B, 50BTC from address A to C, and 50BTC from address C to B, then we have again transferred 100 coins from A to B, but this time it looks like the taint is %50.&nbsp; That is, only %50 of the coins in that &quot;transaction&quot; come from A.&nbsp; However, it is pretty obvious that %100 of the coins came from A.&nbsp; Of course only %50 of the coins came directly from A, but if we look one transaction back we find that all the coins actually come from A.&nbsp; If we want &quot;taint&quot; to make sense, this calculation should be %100.<br /><br />Here is where the clause, &quot;that can be traced back to another address&quot; takes effect.&nbsp; Even though C sent 50BTC to B, we can track all those coins back to A.&nbsp; Since every coin in that transaction came from A at some point, that transaction is also %100 tainted by coins from A.<br /><br />The idea is that we trace back every address that paid B in that transaction and try and find A anywhere there.<br /><br />For example, say that address A, at some point in the past, paid address A_1 which in turn paid address A_2, who forwarded it on to A_3, and so on.&nbsp; Say that these transactions end at address A_(n-1) sending funds to address A_n.&nbsp; Now, if A_n pays B, what is the taint from A?&nbsp; (Assuming, to make things easier, that the entire balance was transferred at each point.)&nbsp; Well, it should be obvious that the funds sent to B are still %100 tainted by coins from A.&nbsp; That is, even though we had n addresses in between, this transaction to B consists entirely of coins from A.<br /><br />Why do I bring this up?&nbsp; Well, at least at blockchain.info, they only track transactions back 250 blocks.&nbsp; Hence if n is 250, then blockchain.info will say that there is 0% taint in that transaction.&nbsp; Obviously my example there is contrived.&nbsp; While blockchain.info would claim 0% taint in that transaction, that is not how it mixes coins.&nbsp; It does serve to illustrate the details and, perhaps, where things could break down.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Do you know exactly what TAINT is?&nbsp; Does it have to do with the bitcoin public key itself, or is it somehow tracking the sending IP address associated with that particular public key during the sending process?&nbsp; <br /><br />I had sent a few coins from SR to the TOR-accessed blockchain.info wallet, and looked at the TAINT, and WOW, it shows every single IP address which had ever transferred coins ending in the transaction I made!&nbsp; <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Holy crap, another excellent, excellent observation!&nbsp; What you have noticed is that, not only do we have a chain of transactions, but we can also sometimes identify those transactions with IP addresses!<br /><br />The question is, &quot;if this is supposed to be a pseudo-anonymous currency, why the hell can we associate IP addresses with transactions?!?!&quot;<br /><br />Well, the answer is obvious if we walk through what happens when we make a transaction.&nbsp; I have an address A and I am going to send funds to address B.&nbsp; What I do is concatenate address B with the coins and then sign them using the private key corresponding to address A.&nbsp; However, the coins aren&#039;t spent yet.&nbsp; For address B to get the coins, that transaction has to get into the next block the miners find.&nbsp; To make sure that the miners have this transaction, we send it everywhere we can.&nbsp; This transaction won&#039;t become part of the official record unless everybody sees it, checks it, and includes it in the next block.&nbsp; (Then the transaction won&#039;t become final until we have about 5 blocks built after that one.)<br /><br />The point is, you are sending that transaction everywhere!&nbsp; Everywhere you can or this just doesn&#039;t work.<br /><br />Okay, what this means is that if an adversary is connected to every bitcoind and is listening for transactions, the first IP address that announces a transaction is most likely the source of that transaction.<br /><br />Let me make sure I am absolutely clear.&nbsp; When you _receive_ a transaction, you are totally anonymous.&nbsp; The transaction is just part of the block chain that everyone has.&nbsp; There is no way for anyone to tell that you received a transaction.&nbsp; When you _send_ a transaction, the IP address that actually sends that transaction can be identified.<br /><br />This means that if you are using a private wallet stored on your own computer you can receive anything you want without worry about identification.&nbsp; If you send funds from a private wallet, you have to think about exposing your IP address.<br /><br />Of course the answer here is Tor.&nbsp; It is (fairly) easy to setup bitcoind or bitcoin-qt to use your Tor SOCKS5 connection.&nbsp; If you are going to send funds from your private wallet, simply send them through the Tor network.<br /><br />I have about 1000 other things but I think I need to stop to let people digest the above.&nbsp; I love Bitcoins and it is one of the things, besides my kids, that really give me hope for the future.<br /><br />Please, send me questions.&nbsp; If I don&#039;t know the answer, we&#039;ll work it out.&nbsp; I&#039;m having fun.&nbsp; :)<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bitcoin details for SR users</strong><br />
+				Post by: <strong>Shroomeister</strong> on <strong>September 05, 2012, 12:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				very good intro. Nice to see others aren&#039;t afraid of creating long winded posts in the name of greater good like me.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bitcoin details for SR users</strong><br />
+				Post by: <strong>Omega Rushmore</strong> on <strong>September 05, 2012, 04:09 am</strong>
+			</dt>
+			<dd class="postbody">
+				Wow, Elivance and LouisCyphre, what great info indeed!&nbsp; <br /><br />So, to get real here, once one takes the first step and breaks through the concept of bitcoins themselves, these are the subjects we should all concern ourselves with, namely true anonymity and security.<br /><br />And yeah, Elivance, I&#039;m going to have to digest that wonderful post longer than the digestion process of the fat rib-eye I ate this past weekend, lol...<br /><br />But then, to stay truly &quot;anonymous&quot; and keep the traces of the use of bitcoins away from our IRL identities, looks like we&#039;ll have to stay in TOR-land, based on the &quot;taint&quot; analysis you&#039;ve thoroughly outlined above.&nbsp; <br /><br />I love Tor, and yet, I want to use my smart cell phone and access my wallet and check balances and shit, but I now know I can&#039;t do that since I&#039;ll be forever &quot;linked&quot; to those coins that pass through my cell-phone wallet!&nbsp; ARRG!<br /><br />And if they happen to hit the &#039;Road, am I fucked??&nbsp; Are we all &#039;fucked&#039; by the use of bitcoins on the &#039;Road???<br /><br />Keep the awesome info coming, my expert friends!!!<br /><br />&nbsp; <br /><br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

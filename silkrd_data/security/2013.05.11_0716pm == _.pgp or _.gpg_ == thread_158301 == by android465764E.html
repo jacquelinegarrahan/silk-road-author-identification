@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=158301.0" />
+		<title>Print Page - *.pgp or *.gpg? </title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: android465764E on May 11, 2013, 07:16 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>*.pgp or *.gpg? </strong><br />
+				Post by: <strong>android465764E</strong> on <strong>May 11, 2013, 07:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So I&#039;m playing around with an Android app called APG. <br /><br />Basically I paste a key into a text file, and save it as KEY.PGP&nbsp; ..I then import it into the app, and encrypt a message. <br />The encrypted message is dumped onto the clipboard and I paste that back to the key&#039;s owner. Simples. <br /><br />However, sometimes the message is unreadable, unless I rename the extension of the key to .GPG instead. <br /><br />Can someone explain, how do I know/find out, when to use which extension? <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>livestr0ng</strong> on <strong>May 12, 2013, 04:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				bumping for you
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>Hungry ghost</strong> on <strong>May 12, 2013, 05:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				I have used APG, and various other versions of GPG. I always paste keys into .asc&nbsp; files or .txt files , as well as the encrypted message. I think the .gpg extension is for encrypting data, .asc extension encrypts the text within a file.<br />&nbsp; &nbsp; &nbsp; &nbsp; Not sure how this apply to your problem, but if I use APG, I would copy the key into a notepad type app and save it as a .asc or . txt file, import the key from there.&nbsp; <br />&nbsp; &nbsp; &nbsp; Not used it for a while let me go have a play, but I never had any problems. I remember from using command line GPG that . gpg extension would cause it to encrypt files as data
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>Hungry ghost</strong> on <strong>May 12, 2013, 05:59 am</strong>
+			</dt>
+			<dd class="postbody">
+				After a quick check, if you are copying a public key block of text to a file you should use .asc extension to import it to APG. .gpg and .pgp key files are something different. The person would have to export his key as a keyfile with one of those extensions; you can&#039;t just rename a text file .gpg. <br />&nbsp; &nbsp; &nbsp; &nbsp;Also when you encrypt, select encrypt message, rather than encrypt file. Encrypt file will encrypt the data, outputting a .gpg file. Encrypt message will encrypt the text with &#039;ASCII armour&#039;, outputting a -BEGIN PGP MESSAGE type text block<br />&nbsp; &nbsp; &nbsp; If you know this already, please excuse. I&#039;m not trying to patronize, hope I helped
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>Hungry ghost</strong> on <strong>May 12, 2013, 06:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hmmm just read your post again, so sometimes naming the .txt file .pgp&nbsp; doesn&#039;t work but naming it .gpg does? I am baffled. By my understanding neither of those should import a working key..... You might have to wait for Astor or pine or Louis cypher to come along.<br /><br /><br />Just to clarify, how I would use APG:<br /><br />select the public key block text.<br /><br />Copy it into notepad type app and save as .asc file (or save it as .txt then rename it.)<br /><br />Open APG and go to settings&gt;manage public keys&gt;import key<br /><br />Navigate to .asc file and import<br /><br />Then go back to main page and select Encrypt message. In window that opens either type or paste message. Select imported key and then Encrypt to Clipboard.<br /><br />Paste wherever required.<br /><br />Like I say, .gpg extension usually means you are dealing with data encryption, and for SR purposes we want to encrypt text.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>android465764E</strong> on <strong>May 12, 2013, 09:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=158301.msg1117570#msg1117570">Quote from: Hungry ghost on May 12, 2013, 06:04 am</a></div></div><blockquote class="bbc_standard_quote">Hmmm just read your post again, so sometimes naming the .txt file .pgp&nbsp; doesn&#039;t work but naming it .gpg does? I am baffled. By my understanding neither of those should import a working key..... You might have to wait for Astor or pine or Louis cypher to come along.<br /><br /><br />Just to clarify, how I would use APG:<br /><br />select the public key block text.<br /><br />Copy it into notepad type app and save as .asc file (or save it as .txt then rename it.)<br /><br />Open APG and go to settings&gt;manage public keys&gt;import key<br /><br />Navigate to .asc file and import<br /><br />Then go back to main page and select Encrypt message. In window that opens either type or paste message. Select imported key and then Encrypt to Clipboard.<br /><br />Paste wherever required.<br /><br />Like I say, .gpg extension usually means you are dealing with data encryption, and for SR purposes we want to encrypt text.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div> <br /><br /><br />Thanks for your efforts, appreciate it.<br />&nbsp;★<br /><br />I realise I need to encrypt a message and not a file but the problem I have is that if I use the .asc or .txt extension, then the app won&#039;t even recognize the files. ie. They don&#039;t even show up when I choose the import key option. Which I am dumbfounded by tbh because the app itself shows a message saying &quot;please choose the .asc or .txt file.... etc&quot; <br /><br />I was under the impression that pgp and gpg were different things from the same book, as it were. I know when using other pgp software on a PC for example, you just paste the key and the program does the rest. <br />I HAVE to choose between pgp and gpg when saving/creating the keys. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>astor</strong> on <strong>May 12, 2013, 03:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It doesn&#039;t bode well for this app that its functionality depends so much on the file extension. It should depend on identifying actual PGP metadata:<br /><br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br /><br />-----BEGIN PGP MESSAGE-----<br /><br />-----BEGIN PGP SIGNED MESSAGE-----<br /><br />That&#039;s what it should be looking for, regardless of the extension. I can point GPG (the reference implementation of OpenPGP) at any file with any name, and it will process it, as long as the block delineators are there.<br /><br />Just saying.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>Hungry ghost</strong> on <strong>May 13, 2013, 06:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				Android, that does sound weird, as you say it asks for a .asc or .gpg. Mine will also accept a .txt. <br /><br />Astor not sure what you mean? Surely even for GPG it has to be either a .gpg or a vanilla text file? You couldn&#039;t for instance save the key block text as a .doc or a .pdf? the versions of GPG I have used&nbsp; will import keys from either<br />a) clipboard b) .txt or .asc&nbsp; file or c) .gpg key file.&nbsp; &nbsp; APG is exactly the same.&nbsp; I&#039;m pretty sure it uses the open source GPG code and just puts a fairly basic GUI on top of it
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>Hungry ghost</strong> on <strong>May 13, 2013, 06:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				Sorry Astor, I stand corrected, just tried doc and docx and it imported them just the same! You were right. <br /><br />Android, try navigating to the keyfile through a file manager such as ES and opening it with APG. Mine will import from .txt .asc and .doc as above. <br />Also, when I first navigate to file (in various apps, google drive etc.) it gives meoption to pick up file in (normal android way) or (file way). only (file way) will work with APG.&nbsp; maybe this is the problem? Try installing ES file manager and doing it that way.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>Hungry ghost</strong> on <strong>May 13, 2013, 06:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				I just renamed it .PDF and APG recognised it just the same....I have wondered for a while, why, whichever file I tap on, APG is always one of the options. Now I know why!<br />Android, are you using a tablet or a phone? And is it rooted? Not sure if that&#039;s relevant but thought I&#039;d ask
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>Hungry ghost</strong> on <strong>May 13, 2013, 06:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				Just to belabour the point as I&#039;m rather pleased with this discovery:<br />I just renamed the key with a .fatherchristmas extension and APG still imported it. Hours of fun I will have with this!&nbsp; &nbsp; <br />The only suggestion I have for your problem is that perhaps it is picking up the files in the (GMAIL, MMS) way rather than (FILE) way. Like I say, whenever I select a file via ES file manager to upload to google drive, or attach to email, it gives me these options. I&#039;d recommend you install ES file manager anyway as it rocks. It will let you navigate any computer on your WiFi network(obviously only sharing enbabled folders), and stream video to your android device from its hard drive, also cloud services such as Google drive, and FTP servers.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>Hungry ghost</strong> on <strong>May 13, 2013, 06:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				&quot;enbabled&quot; LOL I just invented a new word for encrypted.<br /><br />.....edit: god its far to early and I&#039;m talking absolute shite I&#039;m afraid. Sorry.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>android465764E</strong> on <strong>May 13, 2013, 08:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				Issue is now sorted. <br /><br />I downloaded a different file manager and now all is well.<br />I was previously using File Manager XT, I tried ES instead and it picks up the files no problem. <br /><br />ffs, if only I&#039;d tried that earlier. lol<br /><br /><br />Thanks for all the input guys, much appreciated. ★ 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>android465764E</strong> on <strong>May 13, 2013, 08:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				ES is pretty awesome actually. Allows easy backup for the market app refund hack. <br />Can&#039;t believe I haven&#039;t already been using this. lol 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>Hungry ghost</strong> on <strong>May 13, 2013, 03:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hmm tell me more about this &quot;app refund hack&quot; I&#039;m fairly new to android. I take it you just copy the .apk somewhere and then get your refund within 15 mins? A lot of apps have a licence check now though?&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: *.pgp or *.gpg? </strong><br />
+				Post by: <strong>android465764E</strong> on <strong>May 13, 2013, 04:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=158301.msg1122431#msg1122431">Quote from: Hungry ghost on May 13, 2013, 03:45 pm</a></div></div><blockquote class="bbc_standard_quote">Hmm tell me more about this &quot;app refund hack&quot; I&#039;m fairly new to android. I take it you just copy the .apk somewhere and then get your refund within 15 mins? A lot of apps have a licence check now though?&nbsp; <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div> <br /><br />That&#039;s it exactly.<br />Buy an app, back it up with ES, get a refund, re-install the backup.<br /><br />I&#039;ve not yet had a problem with licence checks. The only issue is when you need to update the app. You get a &quot;you haven&#039;t paid for this app blah blah&quot; message. In this instance I repeat the process.<br /><br />Got sooooooooooo many games this way. <br /><br />Open ES. Click &quot;app manger&quot; &gt; long-press on any app/game &gt; click &quot;backup&quot;. Done. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

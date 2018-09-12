@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=3639.0" />
+		<title>Print Page - How does my security look?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: 1as3df4gh on September 27, 2011, 07:08 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>How does my security look?</strong><br />
+				Post by: <strong>1as3df4gh</strong> on <strong>September 27, 2011, 07:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				I am trying to protect my system and my data as much as possible, can you run your eye over my setup and let me know what you think please?<br /><br />OS: Debian based<br />Hard disk: Fully encrypted 256bit, except /boot partition<br /><br />AES 256 bit encrypted container on HD holding Tor bundle, copy of all log in details and copy of wallet.dat, password is random 36 characters committed to memory (not as hard as it sounds!)<br />The above container is mirrored on a USB in my safe, as well as on Dropbox (I know its not secure but if &quot;they&quot; can break AES 256 w/ 36 character pwd they deserve my money!)<br />Email account is Hushmail with 25 character pwd.<br />Bitcoins purchased for cash at a branch of a bank which I never use for another purpose.<br />All login details are unconnected to my RL persona, passwords are all random 25 characters.<br />All SR related activity is through Tor browser, including registering for Hushmail etc.<br /><br />I think I have all bases fairly well covered, I welcome any thoughts or opinions on my setup.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How does my security look?</strong><br />
+				Post by: <strong>1as3df4gh</strong> on <strong>September 27, 2011, 07:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				ETA:<br />After purchasing Bitcoins I will run them through two online wallets before going in to my Bitcoin wallet on my computer, then run them through two more online wallets before sending them to anyone on SR.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How does my security look?</strong><br />
+				Post by: <strong>Modoki</strong> on <strong>September 27, 2011, 12:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Not bad, you understood the general security mechanisms. However, I recommend using something else than hushmail, because they ACTIVELY cooperate with the feds. Of course, like others, you can just say that you don&#039;t care because you communicate encrypted anyway, but well - you don&#039;t need to serve them with your emails, do you.<br /><br />On another note, your method of bitcoin laundry does only launder by chance. If you have large amounts of bitcoins to clean, you should consider doing that with a commercial exchanger that will take care you don&#039;t get the same coins back that you put in. However, this is expensive and for the normal customer with &lt;200 btc per month it should be sufficient to do it as you wanted to.<br /><br />Something else is your lack of a bridge, which is again something to consider if you are a vendor or some other high value target. A bridge is a VPN or some kind of tunnel which hides your TOR traffic from eavesdropping on you by your ISP. I.E., you are weak to correlation attacks if you don&#039;t use them, for example if you live in a 10k citizen town and are one out of 100 people that use TOR, this reduces the set size LE has to chose their suspicious persons from substantial. A bridge helps you to mix in a larger set size and make correlation attacks via this mostly useless.<br />However, please note that commercial VPN services may always be very well honeypots and thus you shouldn&#039;t trust them too much. I believe that they still are better than no VPN/bridge, but well. Best method would be to rent a VPS in an anonymous way, make it secure and set up a VPN over it, but this is really fucking much of an act.<br />I hope I could help,<br />much love and good luck<br />M
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How does my security look?</strong><br />
+				Post by: <strong>1as3df4gh</strong> on <strong>September 27, 2011, 01:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Many thanks for the in depth reply there.<br />I am not some big-time supplier, more a security conscious consumer, so I believe that I have my bases fairly well covered. The VPN thing may or may not be an issue, I live in a city in excess of 8million people so I think one or two may be using TOR.<br />I will look at changing from Hushmail, although everything I have ever sent through that account has been PGP encrypted and through TOR, so I cant see any trail back home from there?<br />The only Bitcoins at the moment will be coming from my personal funds, that may change in the future but all I want ATM is to break the connection between me and SR purchases so I think that a couple of splits and recombinations through a couple of wallets would work maybe?<br />I am new to all this but learning fast, its an exciting place to be!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How does my security look?</strong><br />
+				Post by: <strong>experimental333</strong> on <strong>September 27, 2011, 07:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				do not use hushmail! they can decrypt your messages.<br />if you want to know more on this topic, do some research on safe mail, they work in the same way.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How does my security look?</strong><br />
+				Post by: <strong>1as3df4gh</strong> on <strong>September 28, 2011, 06:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				I understand that they can decrypt messages used with keys stored on their servers, but if I encrypt a message on my computer to Mr X&#039;s public key, then copy/pasta into the send field in Hushmail how can they decrypt it? All I am looking for is an IP scrubbing email provider to be honest, I will look at SafeMail.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How does my security look?</strong><br />
+				Post by: <strong>experimental333</strong> on <strong>September 28, 2011, 09:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I didn;t recommend safemail... it&#039;s even worse than hushmail. It&#039;s israeli based, and I bet they have backdoors built in.<br />Israelis don&#039;t like encryption :)<br /><br />It would work if you paste the encrypted message, but I would avoid anyone who is eager to cooperate with LE.<br />I recommend tormail.net
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How does my security look?</strong><br />
+				Post by: <strong>CrunchyFrog</strong> on <strong>September 29, 2011, 03:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yup, experimental333, Tor Mail [ jhiwjjlqpyawmpjx.onion ] is hard to beat: POP3, IMAP, SMTP, web-mail (with or without javascript), and sign-up requires no other e-mail address.&nbsp; Pretty cool.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How does my security look?</strong><br />
+				Post by: <strong>wannabud</strong> on <strong>September 29, 2011, 06:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				Does somebody have a good free VPN/VPS service to recommend?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How does my security look?</strong><br />
+				Post by: <strong>Paperchasing</strong> on <strong>September 29, 2011, 07:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				Not bad.&nbsp; No such agency is the only ones that can crack AES and frankly they don&#039;t give a crap about in country non-threat to national security activities.&nbsp; They will never give away their secrets to the other alphabet soup agencies, if they did they would have to institute a new standard for US military comms.&nbsp; Not ever gonna happen.&nbsp; I would add that you should only connect to tor/SR from an anonymous prepaid throwaway 3g cell usb tethered on a laptop while mobile (not while YOUR driving, or driving to your house/outposts hahhaaaa)&nbsp; Track that shit LE &lt;--&nbsp; Have fun, and be sure to put that in your report to Senators Dip and Stick lol... &quot;Ummm we tracked them all over Atlanta, there everywhere sir&quot; hahahaaaa<br /><br />This advice is why I laughed so much when I heard the tune &quot;9 Piece&quot; by Rick Ross/lil wayne/MJG (I just had to add it to my signature lol) while I was on SR on my prepaid 3g throwaway rollin around town...&nbsp; I was like, this dude pretty smart in a strange kinda way.&nbsp; Someone needs to tell these rappers about Silk Road, I swear they would advertise for us for free!<br />&nbsp;<br />We str8 ballin&#039;,<br />Paperchasing<br /><br />PS - run don&#039;t walk away from hushmail, straight up bro.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

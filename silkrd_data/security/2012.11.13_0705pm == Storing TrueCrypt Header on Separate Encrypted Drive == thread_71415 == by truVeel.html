@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=71415.0" />
+		<title>Print Page - Storing TrueCrypt Header on Separate Encrypted Drive</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: truVeel on November 13, 2012, 07:05 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Storing TrueCrypt Header on Separate Encrypted Drive</strong><br />
+				Post by: <strong>truVeel</strong> on <strong>November 13, 2012, 07:05 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hey hey.<br /><br />I&#039;m new here, obviously. I have been lurking, learning and thinking.<br /><br />TrueCrypt is great. It works. people use it. Hidden volume is cool, too. I understand how it works from a higher level, but I may very well have many things wrong. Fair warning.<br /><br />The encryption algorithms that TC uses have not yet been broken. A brute-force attack on the encrypted data is not feasible and I believe most would find it to be a worthless endeavor and give up even before beginning. Right?<br /><br />So the usual method of cracking an encrypted file is to crack the password. TC uses a salt and user-entered password to generate the key and decrypt the container, right?<br /><br />By using a salt, an attacker cannot use a pre-generated hash table. The attacker has to generate the table by using the specific salt of the encrypted container that the attacker wishes to crack, right?<br /><br />The first 64bytes of the TC container contains the salt. So an attacker can use that salt to generate the hash table when brute-force attacking. This seems like no big deal, since the time it takes to run through every iteration of a strong password is too long for a feasible attack. However, it is possible for the attacker to get lucky and get the right password within a short time.<br /><br />That scenario is what worries me a little bit.<br /><br />I was a-thinking and then I thunk, &quot;Hey. Why not cut the salt from the TC header and store it in another encrypted contatiner on a separate drive?&quot; That way, an attacker would have to break the password of the container containing the salt and then use the salt to break the password of the container to which the salt belongs. An attacker would unlikely be so lucky as to break both strong passwords within a short time.<br /><br />A script could be written to add the salt back on to the container&#039;s header file, reducing the amount of work needed to access the container.<br /><br />Does this make sense? Is it flawed in some way that I have overlooked?<br /><br />Could the container be cracked even without knowing the salt? I assume the answer is &#039;yes&#039; , but I do not know if this causes any more work for an attacker. My guess is that it does.<br /><br />What are your thoughts?<br /><br />EDIT:<br />I did some more thinking and if I&#039;m going to go through all of the trouble of modifying the header, I should really just go for the master key. If I copy the master key data, store it somewhere else and then overwrite the data on the TC container with random data, the TC container wil be unopenable. Only a full crack of the encryption scheme would do the trick.<br /><br />I was also thinking, why not just nest TC containers. Create an outer container with a unique password and then, within the outer container, create another TC container with a unique password. This would mitigate the likelyhood of an attacker cracking both strong passwords within a short time.<br /><br />I have seen a bit of discussion around the clearnets about these methods, but most of the time the ideas are dismissed as pointless and the converstaion is steered in a direction dictated by those calling the idea pointless. It usually ends up being about how you shouldn&#039;t worry about this attack vector because you should be more worried about having a truly random password of sufficient length and how passphrases are so much better (but they just said random was the best) and how keyloggers are the monster under your bed and that&#039;s what you should be afraid of and your&#039;re dumb for thinking otherwise. Also, the resources it would take to break AES are so tremendous that it&#039;s totally, absolutely impossible to break and so long as your random passphrase has the same bit-strength as your encryption algorythm, an attacker will always be foiled.<br /><br />There are many points to be considered and a lot of good advice in those responses but the question never gets answered.<br /><br />What I want to know is whether there is any weakness introduced that would not otherwise exist by nesting TC containers.<br />I would also like affirmation of my hypothesis that removing the TC master key from the TC container&#039;s header would remove any attack vector other than directly cracking the encryption scheme.<br /><br />Also remember that I am most worried about the statistical anomaly that would cause a strong password to be cracked within a short time. That is what is driving the ideas presented.<br /><br />I will surrely continue my own search, but if anyone has any info, it would be greatly appreciated.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Storing TrueCrypt Salt on Separate Encrypted Drive</strong><br />
+				Post by: <strong>thebakertrio</strong> on <strong>November 13, 2012, 09:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				i need to keep a eye on this as its a good question 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Storing TrueCrypt Salt on Separate Encrypted Drive</strong><br />
+				Post by: <strong>Bungee54</strong> on <strong>November 14, 2012, 10:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ask bruce schneier ?&nbsp; very interesting question..<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Storing TrueCrypt Salt on Separate Encrypted Drive</strong><br />
+				Post by: <strong>truVeel</strong> on <strong>December 27, 2012, 07:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I decided to go for the first 131072bytes of the TrueCrypt container (the whole header). I have successfully cut the header off and pasted it back on. There was no loss of data.<br /><br />When the header was cut off, TC could not decrypt the container.<br /><br />Additionally, I tried creating two containers with different passwords and put container1&#039;s header on to container2 and vice versa. Container1&#039;s password then was accepted by container2. However, since the data in container2 was encrypted with a different key than that which was included in container1&#039;s header, the data was not decrypted and TC returned an error stating that a filesystem had to be specified.<br /><br />This brought up some interesting ideas.<br /><br />If no filesystem is specified during the creation of a TC container, the empty space will be filled with random data. To a third party, this random data is indistinguishable from encrypted data.<br /><br />Let&#039;s say we have two TC containers, tcc1 and tcc2.<br />The passwords and master keys are wholly different from each other.<br />tcc1 contains encrypted data. It&#039;s pw is: USEFUL<br />tcc2 contains only useless, random data. it&#039;s pw is: CRAP<br />When the pw USEFUL is used on tcc1, the data is decrypted, the filesystem is mounted and the data contained can be used as needed.<br />When the pw CRAP is used on tcc2, TC tries to decrypt the data, but since there is no filesystem or any usable data, an error returns stating that a filesystem must be specified.<br /><br />Now if we replace tcc1&#039;s header with tcc2&#039;s header, tcc1 will now be decrypted with the pw CRAP. TrueCrypt will accept this pw and believe that it is correct, however when the data is decrypted, the master key will be incorrect and so the data will appear to be useless, random data. TC will return an error stating that a filesystem must be specified. We know that there actually is good data stored there, but TC doesn&#039;t. It bcomes hidden by attaching the wrong header.<br /><br />If we do the same thing for tcc2, it will be decrypted using the pw USEFUL. Again, TC will accept the pw and believe it to be correct. Since the data appears to be random (and actually is this time) the same error will return stating that a filesytem must be scpecified.<br /><br />I see this method as another layer of deniability and/or secrecy.<br />Say I have some old hdd&#039;s laying around. I want to overwrite the old data on them. The data is mainly some freaky porn that I used to be in to but now I&#039;m not and I don&#039;t want my wife to see it one day and think that I&#039;m still in to that stuff. So I use TrueCrypt to make the whole drive into a TC volume. When it asks for a password to use, I just mash the keyboard a few times because I don&#039;t need to rememebr what I enter. I&#039;m just trying to overwrite old data. So I continue with the wizard and when it asks what filesystem I want, I specify &#039;None&#039;. Again, I do this because I am just using TC to overwrite old data. At the end of the process I have a hdd filled with random data and a TC header on the front. If the correct pw was ever somehow enetered, TC would return an error stating that a filesystem must be specified.<br /><br />Now let&#039;s say I take a hdd and use TC to turn the whole thing into an encrypted volume but this time I actually want to store my SR and BTC info on it. I go through the volume creation process, remember the pw I enter and specify a filesystem. Now I have a useable TC volume where I keep my secret data. If I put a different header on there, then it would be impossible to tell whether this drive has real data or if it&#039;s just another old hdd that I have laying around.<br /><br />There are a few other variations on this, but you get the idea.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Storing TrueCrypt Salt on Separate Encrypted Drive</strong><br />
+				Post by: <strong>astor</strong> on <strong>December 27, 2012, 10:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=71415.msg587669#msg587669">Quote from: truVeel on November 13, 2012, 07:05 pm</a></div></div><blockquote class="bbc_standard_quote">EDIT:<br />I did some more thinking and if I&#039;m going to go through all of the trouble of modifying the header, I should really just go for the master key. If I copy the master key data, store it somewhere else and then overwrite the data on the TC container with random data, the TC container wil be unopenable. Only a full crack of the encryption scheme would do the trick.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That&#039;s what I was going to suggest as I was reading the first part of your post. Why not store the encryption key on a USB thumb drive? I believe TC already has a tutorial for that, or you can find them on the internet.<br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=71415.msg685871#msg685871">Quote from: truVeel on December 27, 2012, 07:43 pm</a></div></div><blockquote class="bbc_standard_quote">I decided to go for the first 131072bytes of the TrueCrypt container (the whole header). I have successfully cut the header off and pasted it back on. There was no loss of data. When the header was cut off, TC could not decrypt the container.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Are you using dd to make a bit for bit copy? And how are you &quot;removing&quot; it, just zeroing it out?<br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=71415.msg685871#msg685871">Quote from: truVeel on December 27, 2012, 07:43 pm</a></div></div><blockquote class="bbc_standard_quote">Additionally, I tried creating two containers with different passwords and put container1&#039;s header on to container2 and vice versa. Container1&#039;s password then was accepted by container2. However, since the data in container2 was encrypted with a different key than that which was included in container1&#039;s header, the data was not decrypted and TC returned an error stating that a filesystem had to be specified.<br /><br />This brought up some interesting ideas.<br /><br />If no filesystem is specified during the creation of a TC container, the empty space will be filled with random data. To a third party, this random data is indistinguishable from encrypted data.<br /><br />Let&#039;s say we have two TC containers, tcc1 and tcc2.<br />The passwords and master keys are wholly different from each other.<br />tcc1 contains encrypted data. It&#039;s pw is: USEFUL<br />tcc2 contains only useless, random data. it&#039;s pw is: CRAP<br />When the pw USEFUL is used on tcc1, the data is decrypted, the filesystem is mounted and the data contained can be used as needed.<br />When the pw CRAP is used on tcc2, TC tries to decrypt the data, but since there is no filesystem or any usable data, an error returns stating that a filesystem must be specified.<br /><br />Now if we replace tcc1&#039;s header with tcc2&#039;s header, tcc1 will now be decrypted with the pw CRAP. TrueCrypt will accept this pw and believe that it is correct, however when the data is decrypted, the master key will be incorrect and so the data will appear to be useless, random data. TC will return an error stating that a filesystem must be specified. We know that there actually is good data stored there, but TC doesn&#039;t. It bcomes hidden by attaching the wrong header.<br /><br />If we do the same thing for tcc2, it will be decrypted using the pw USEFUL. Again, TC will accept the pw and believe it to be correct. Since the data appears to be random (and actually is this time) the same error will return stating that a filesytem must be scpecified.<br /><br />I see this method as another layer of deniability and/or secrecy.<br />Say I have some old hdd&#039;s laying around. I want to overwrite the old data on them. The data is mainly some freaky porn that I used to be in to but now I&#039;m not and I don&#039;t want my wife to see it one day and think that I&#039;m still in to that stuff. So I use TrueCrypt to make the whole drive into a TC volume. When it asks for a password to use, I just mash the keyboard a few times because I don&#039;t need to rememebr what I enter. I&#039;m just trying to overwrite old data. So I continue with the wizard and when it asks what filesystem I want, I specify &#039;None&#039;. Again, I do this because I am just using TC to overwrite old data. At the end of the process I have a hdd filled with random data and a TC header on the front. If the correct pw was ever somehow enetered, TC would return an error stating that a filesystem must be specified.<br /><br />Now let&#039;s say I take a hdd and use TC to turn the whole thing into an encrypted volume but this time I actually want to store my SR and BTC info on it. I go through the volume creation process, remember the pw I enter and specify a filesystem. Now I have a useable TC volume where I keep my secret data. If I put a different header on there, then it would be impossible to tell whether this drive has real data or if it&#039;s just another old hdd that I have laying around.<br /><br />There are a few other variations on this, but you get the idea.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That&#039;s pretty advanced. :) I assume you&#039;d write a script to automate switching the headers before and after use.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Storing TrueCrypt Salt on Separate Encrypted Drive</strong><br />
+				Post by: <strong>truVeel</strong> on <strong>December 27, 2012, 10:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=71415.msg686173#msg686173">Quote from: astor on December 27, 2012, 10:30 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=71415.msg587669#msg587669">Quote from: truVeel on November 13, 2012, 07:05 pm</a></div></div><blockquote class="bbc_alternate_quote">EDIT:<br />I did some more thinking and if I&#039;m going to go through all of the trouble of modifying the header, I should really just go for the master key. If I copy the master key data, store it somewhere else and then overwrite the data on the TC container with random data, the TC container wil be unopenable. Only a full crack of the encryption scheme would do the trick.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That&#039;s what I was going to suggest as I was reading the first part of your post. Why not store the encryption key on a USB thumb drive? I believe TC already has a tutorial for that, or you can find them on the internet.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Yea, I was thinking to store the header on a mobile or even disposable/easily-destroyable medium.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=71415.msg686173#msg686173">Quote from: astor on December 27, 2012, 10:30 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=71415.msg685871#msg685871">Quote from: truVeel on December 27, 2012, 07:43 pm</a></div></div><blockquote class="bbc_alternate_quote">I decided to go for the first 131072bytes of the TrueCrypt container (the whole header). I have successfully cut the header off and pasted it back on. There was no loss of data. When the header was cut off, TC could not decrypt the container.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Are you using dd to make a bit for bit copy? And how are you &quot;removing&quot; it, just zeroing it out?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Yep. This is how it goes:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">dd if=/dev/sdb of=tc_hdr1 bs=131072 count=1<br /></code><br />Then to remove the header:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">dd if=/dev/zero of=/dev/sdb bs=131072 count=1<br /></code>You could also specify the header of another TC container for the input instead of zeros.<br /><br />This also works with head, tail and cat, btw.<br />dd is much easier, though.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=71415.msg686173#msg686173">Quote from: astor on December 27, 2012, 10:30 pm</a></div></div><blockquote class="bbc_standard_quote">That&#039;s pretty advanced. :) I assume you&#039;d write a script to automate switching the headers before and after use.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Yea I probably would, but the dd commands are quick and easy enough. I could just alias them, too.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Storing TrueCrypt Salt on Separate Encrypted Drive</strong><br />
+				Post by: <strong>astor</strong> on <strong>December 27, 2012, 10:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You seem to know what you&#039;re doing, so let me ask your opinion.<br /><br />I believe that encrypted volumes (files, partitions, external media) are not as safe as full disk encryption. Information about the contents of those volumes can leak onto the unencrypted drive. In your example, playing FreakyPorn.avi with VLC would put the path of that file in the Recent Media list. At least with VLC you can disable it, but with a lot of programs you can&#039;t. So if you open WhistleBlowerEvidence.doc, the path to that will be in Recent Documents in Word. That&#039;s just one way data can leak. Browsing the FreakyPornPics folder with a file manager can put thumbnails on the unencrypted drive. That is why I don&#039;t believe encrypted volumes are safe, and I prefer FDE.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Storing TrueCrypt Salt on Separate Encrypted Drive</strong><br />
+				Post by: <strong>truVeel</strong> on <strong>December 28, 2012, 12:12 am</strong>
+			</dt>
+			<dd class="postbody">
+				Very true. All of those examples are paths to revealing one&#039;s secrets.<br /><br />Full Disk Encryption takes care of that problem, but only so long as the computer isn&#039;t booted up. I&#039;m sure you are aware of that, however.<br />My approach is to do the activities I want kept secret ONLY on a live cd. No unencrypted hdd&#039;s or other media are connected to the computer while doing those activities. The only time that a trace is left is when I want it to be left on the encrypted hdd or media.<br /><br />I advocate separating all secret activities and information from any public activity and information. So FDE is fine, but it&#039;s a good idea to use that system either for secret activities or public activities; not both.<br /><br />Also, by straying from the quick-and-easy route, I find it&#039;s easier to ensure I take the proper precautions with my anonymity and don&#039;t get lazy.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Storing TrueCrypt Salt on Separate Encrypted Drive</strong><br />
+				Post by: <strong>astor</strong> on <strong>December 28, 2012, 12:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah, admittedly I just find it inconvenient to reboot all the time, but it would be safer to use a bootable distro on a CD or a VM with FDE and to not have it running when you&#039;re not using it. At least I turn it off when I leave the house. But encrypted volumes are the least safe.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Storing TrueCrypt Salt on Separate Encrypted Drive</strong><br />
+				Post by: <strong>truVeel</strong> on <strong>December 29, 2012, 11:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=71415.msg686419#msg686419">Quote from: astor on December 28, 2012, 12:30 am</a></div></div><blockquote class="bbc_standard_quote">But encrypted volumes are the least safe.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Agreed.<br /><br />Thanks for the +1, btw. I assume that was you.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Storing TrueCrypt Header on Separate Encrypted Drive</strong><br />
+				Post by: <strong>acider</strong> on <strong>December 29, 2012, 11:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It was me, your posts are hard to follow but very interesting. Keep &#039;em coming. :)
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

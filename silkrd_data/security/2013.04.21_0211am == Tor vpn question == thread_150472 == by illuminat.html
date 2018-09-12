@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=150472.0" />
+		<title>Print Page - Tor vpn question</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: illuminat on April 21, 2013, 02:11 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Tor vpn question</strong><br />
+				Post by: <strong>illuminat</strong> on <strong>April 21, 2013, 02:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				I read somwhere I should use me+tor+vpn&nbsp; &nbsp;not me+vpn+tor&nbsp; is this correct, how do I do it?<br /><br />also is it safe to use with mtgox<br /><br />one more thing, anyone know how to get an invite from intersango.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor vpn question</strong><br />
+				Post by: <strong>astor</strong> on <strong>April 21, 2013, 03:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				Depends on what you want to accomplish. Tor over a VPN will hide your Tor use from a local observer like your ISP, since they will only see an encrypted connection to the VPN server. A VPN over Tor gives you an IP address that isn&#039;t a Tor exit node, so you *may* be able to access MtGox that way.<br /><br />How you do it depends on the VPN protocol and software that you use. For OpenVPN, you would add these lines to the configuration:<br /><br />socks-proxy 127.0.0.1 9150&nbsp; &nbsp; # or 9050 for the Tor daemon<br />proto tcp&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # because Tor doesn&#039;t carry UDP packets<br /><br />Keep in mind that a VPN over Tor is useless unless you paid anonymously.<br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor vpn question</strong><br />
+				Post by: <strong>illuminat</strong> on <strong>April 21, 2013, 04:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				I paid with bitcoin.&nbsp; I have mullvad vpn on tcp mode, tor is set to use 9050, what am I doing?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor vpn question</strong><br />
+				Post by: <strong>astor</strong> on <strong>April 21, 2013, 04:16 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hmmm yeah, won&#039;t connect for me either. Apparently it&#039;s more complicated than that, because OpenVPN changes the routing table, and thus the way Tor itself works. So the Tor instance should be on a different machine, like a gateway / anonymizing middle box.<br /><br />I&#039;ll have to look into it.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor vpn question</strong><br />
+				Post by: <strong>illuminat</strong> on <strong>April 21, 2013, 04:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				I am using tor with mullvad vpn, is this safe?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor vpn question</strong><br />
+				Post by: <strong>astor</strong> on <strong>April 21, 2013, 05:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				That&#039;s fine.<br /><br />I tried to follow these instructions to run a VM over Tor on the host OS: <br /><br />http://www.howtoforge.com/how-to-set-up-a-tor-middlebox-routing-all-virtualbox-virtual-machine-traffic-over-the-tor-network<br /><br />The idea is to setup the VPN in the VM. Unfortunately, I haven&#039;t gotten it to work, but you may have more luck.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor vpn question</strong><br />
+				Post by: <strong>BloodThinner</strong> on <strong>April 21, 2013, 06:09 am</strong>
+			</dt>
+			<dd class="postbody">
+				How do you advertise SR in the streets when people think you fool of it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor vpn question</strong><br />
+				Post by: <strong>Yoda</strong> on <strong>April 21, 2013, 12:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=150472.msg1038111#msg1038111">Quote from: BloodThinner on April 21, 2013, 06:09 am</a></div></div><blockquote class="bbc_standard_quote">How do you advertise SR in the streets when people think you fool of it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Why would you want to advertise SR at all???<br /><br /><br />OP:<br />Some reading you may want to check out...<br />https://trac.torproject.org/projects/tor/wiki/doc/TorPlusVPN<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">you -&gt; Tor -&gt; x<br /><br />This is generally a really poor plan.<br /><br />Some people do this to evade Tor bans in many places. (When Tor exit nodes are blacklisted by the remote server.)<br /><br />(Read first for understanding: How often does Tor change its paths?.)<br /><br />Normally Tor switches frequently its path through the network. When you choose a permanent destination X, you give away this advantage, which may have serious repercussions for your anonymity.<br /><br />you -&gt; Tor -&gt; VPN/SSH<br /><br />....in our experience, establishing VPN connections through Tor is chancy, and requires much tweaking. <br />.....the VPN/SSH can build a profile of everything you do, and over time that will probably be really dangerous.&nbsp; </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor vpn question</strong><br />
+				Post by: <strong>astor</strong> on <strong>April 21, 2013, 07:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So I tried it with Tor running on a separate machine and listening for Socks connections on its public IP.<br /><br />I confirmed that the SocksPort was working by pointing my web browser and it and getting an exit node on the other end.<br /><br />However, when I pointed OpenVPN at it, I got this error:<br /><br />socks_handshake: server asked for username/login auth but we were not provided any credentials<br /><br />It thinks that Tor is asking for a user/pass. Still investigating.<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

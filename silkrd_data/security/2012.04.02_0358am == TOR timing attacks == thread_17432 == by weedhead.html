@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=17432.0" />
+		<title>Print Page - TOR timing attacks</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: weedhead on April 02, 2012, 03:58 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>TOR timing attacks</strong><br />
+				Post by: <strong>weedhead</strong> on <strong>April 02, 2012, 03:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				About 3 or 4 days ago, I noticed my system time was acting funny.&nbsp; I had noticed how tails adjusted the time to UTC since it had no way to tell what timezone I am in, and that&#039;s cool.&nbsp; One day however, after tails would set the system time, it would not remain across boots.&nbsp; Furthermore, I noticed that after initially connecting to the internet, tails would ALWAYS set my time to 1:30AM for a small amount of time, and then to the correct UTC time.<br /><br />I&#039;m concerned that LEO may be trying some timing attacks as described below:<br /><br />&quot;TLS attacks<br /><br />Various deviations of system time can be detected in TLS traffic (e.g. HTTPS traffic). Attacker can modify system time of the target computer (or group of them) via NTP and easily trace TLS connections from anonymous network. &quot;<br /><br />from : http://www.forensicswiki.org/wiki/The_Onion_Router<br /><br />Seems like an NTP Man in the Middle attack would be able to accomplish this..?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR timing attacks</strong><br />
+				Post by: <strong>What-A-deaL</strong> on <strong>April 02, 2012, 04:32 am</strong>
+			</dt>
+			<dd class="postbody">
+				I noticed the same thing on my computer as well but I had/have no idea this was a security concern. Im a pretty paranoid person and this place is the shit, but scary at the same time.<br /><br />Any more info on this would be appreciated by me as well.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR timing attacks</strong><br />
+				Post by: <strong>envious</strong> on <strong>April 02, 2012, 04:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				or the more logical explanation... tails is a piece of shit.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR timing attacks</strong><br />
+				Post by: <strong>ProudCannabian</strong> on <strong>April 02, 2012, 05:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				I don&#039;t use tails either... if it will save settings, turn off automatic time updates.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR timing attacks</strong><br />
+				Post by: <strong>QTC</strong> on <strong>April 02, 2012, 02:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				This is normal behavior for amnesia. https://tails.boum.org/contribute/design/Time_syncing/ Authority consensus can&#039;t be validated if there&#039;s too much clock skew so Tor will shit a brick.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR timing attacks</strong><br />
+				Post by: <strong>lex</strong> on <strong>April 02, 2012, 02:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Guys please, it&#039;s &quot;Tor&quot;, not &quot;TOR&quot;, you can even check on the official Tor website or Wikipedia.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR timing attacks</strong><br />
+				Post by: <strong>Prawl42</strong> on <strong>April 02, 2012, 03:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=17432.msg173438#msg173438">Quote from: envious on April 02, 2012, 04:38 am</a></div></div><blockquote class="bbc_standard_quote">or the more logical explanation... tails is a piece of shit.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />haha made me laugh :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR timing attacks</strong><br />
+				Post by: <strong>Addy</strong> on <strong>April 03, 2012, 04:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=17432.msg173849#msg173849">Quote from: lex on April 02, 2012, 02:16 pm</a></div></div><blockquote class="bbc_standard_quote">Guys please, it&#039;s &quot;Tor&quot;, not &quot;TOR&quot;, you can even check on the official Tor website or Wikipedia.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>It&#039;s an abbreviation for the name of something, so it&#039;s understandable why people like to capitalize it. Sure, it&#039;s technically &quot;Tor,&quot; but it&#039;s also technically &quot;Lego bricks&quot; and not &quot;Legos,&quot; yet tons of people use the latter. It&#039;s not a big deal.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR timing attacks</strong><br />
+				Post by: <strong>mdmamail</strong> on <strong>April 03, 2012, 05:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Tails has problems with time setting if riseup servers or the tails servers are down, no big deal<br />More likley a timing attack would be somebody in control of this site, or your email noting the time when you logged in, then getting your ISP records showing you connecting to Tor at that same time, over a period of six months. If you had a shitty lawyer that didn&#039;t know anything about Tor could be a problem.<br /><br />Use a bridge, press tab and boot tails in bridge mode or if extremely paranoid use Obfsproxy though it&#039;s mainly reserved for democracy activists. Can also use a Tor socks proxy there&#039;s plenty you can buy for bitcoins<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR timing attacks</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>April 03, 2012, 05:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=17432.msg173909#msg173909">Quote from: Prawl42 on April 02, 2012, 03:28 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=17432.msg173438#msg173438">Quote from: envious on April 02, 2012, 04:38 am</a></div></div><blockquote class="bbc_alternate_quote">or the more logical explanation... tails is a piece of shit.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />haha made me laugh :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It&#039;s funny because its true 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR timing attacks</strong><br />
+				Post by: <strong>sourman</strong> on <strong>April 03, 2012, 05:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Timing attacks don&#039;t rely on your system time. All they have to do is watch the server they suspect you of connecting to while simultaneously monitoring your internet connection. If they see an incoming connection to the server at around the same time your internet connection shows corresponding activity on the Tor network, they now have one more reason to raid your ass.<br /><br />The best defense is driving around a big city in a car while hoping onto random hotspots using a different local MAC address each time. Combine this with (relatively) private Tor bridges and you should be good.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

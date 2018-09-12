@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=20440.0" />
+		<title>Print Page - Delete items in Recycle Bin</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: theonetheonlyandy on April 25, 2012, 12:06 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Delete items in Recycle Bin</strong><br />
+				Post by: <strong>theonetheonlyandy</strong> on <strong>April 25, 2012, 12:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				anyone know how to access that after they have emptied the bin??????? to possibly scrub it??? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Delete items in Recycle Bin</strong><br />
+				Post by: <strong>0x00</strong> on <strong>April 25, 2012, 02:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Once you delete some data on an NTFS/FAT filesystem (valid for many others as well) - it is not really removed, only the link (a file record) is purged. Basically, the reference is gone, but the content persists. This is typical behavior for a wide variety of filesystems. Meaning, you only need to recreate the link, so that you could get to the data. Various utilities are capable of successfully performing such operations (&quot;testdisk&quot; / &quot;photorec&quot; suite for Debian, &quot;GetDataBack&quot; for Windows, etc).<br /><br />The reason this happens is that once you delete a file, the occupying space (content) is simply declared as free - it is not overwritten. The OS might use this space in order to save another file, when it receives an instruction to do so. Or, it might save it at another location (that is free, of course). This is also what causes fragmentation.<br /><br />Take a look at this utility:<br /><br />http://technet.microsoft.com/en-us/sysinternals/bb897443<br /><br />One of its features is to &quot;clean&quot; free space (option -c) - what it does is zero-fill the according sectors. This should achieve what you&#039;re looking for and is pretty secure. The only downside to it, is that it might take a noticeable amount of time to complete on a HDD - but that is largely dependant on the &quot;unallocated&quot; space left on the device in question.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Delete items in Recycle Bin</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>April 25, 2012, 03:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				you could try running heidi eraser and setting it to wipe free space , but you are most likely fucked on data destruction unless you wipe the entire drive with ATA secure erase
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Delete items in Recycle Bin</strong><br />
+				Post by: <strong>0x00</strong> on <strong>April 25, 2012, 03:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=20440.msg207223#msg207223">Quote from: kmfkewm on April 25, 2012, 03:12 pm</a></div></div><blockquote class="bbc_standard_quote">you could try running heidi eraser and setting it to wipe free space , but you are most likely fucked on data destruction unless you wipe the entire drive with ATA secure erase<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I do not believe this to be true. Perhaps, you could provide proof to back up this claim? A single run of &quot;sdelete&quot; should be sufficient from what I know. ATA SE is only suitable for full surface wipes.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Delete items in Recycle Bin</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>April 25, 2012, 04:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				First, it does seem that a single pass with random data is enough to securely erase data. This was widely debated for quite a while (in the computer forensics community at that), but today all the literature I can find supports this, as far as modern hard drive platters are concerned anyway. However, there are two things to take into consideration<br /><br />A. Only parts of the drive that are overwritten are overwritten.<br /><br />This should go without saying. And there is a nice paper...somewhere (maybe I will dig it up later if nobody else has a link on hand) that discusses how normal hard drive wiping software (ie: with no firmware component) can not put the head off the center of the track, leaving magnetic residue that is not actually overwritten along the edge of the track. Even if a file leaves only trace amounts of magnetic residue after it is wiped, in some cases it could be enough to recover partial data (and in some cases partial data is all that is required to determine the entire file that was wiped if there is a reference, at least to a high probability, fuzzy hashing comes to mind). ATA secure erase has a firmware component that allows it to wipe off track center.<br /><br />B. Only parts of the drive that are overwritten are overwritten<br /><br />This should go without saying. And depending on your filesystem, you never really know where all traces of files are going to leak to. So even if you wipe the file itself, are you sure you wiped all remnants of it ? Probably not, unless you wipe the entire drive. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Delete items in Recycle Bin</strong><br />
+				Post by: <strong>0x00</strong> on <strong>April 25, 2012, 07:04 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=20440.msg207329#msg207329">Quote from: kmfkewm on April 25, 2012, 04:28 pm</a></div></div><blockquote class="bbc_standard_quote">First, it does seem that a single pass with random data is enough to securely erase data. This was widely debated for quite a while (in the computer forensics community at that), but today all the literature I can find supports this, as far as modern hard drive platters are concerned anyway. However, there are two things to take into consideration<br /><br />A. Only parts of the drive that are overwritten are overwritten.<br /><br />This should go without saying. And there is a nice paper...somewhere (maybe I will dig it up later if nobody else has a link on hand) that discusses how normal hard drive wiping software (ie: with no firmware component) can not put the head off the center of the track, leaving magnetic residue that is not actually overwritten along the edge of the track. Even if a file leaves only trace amounts of magnetic residue after it is wiped, in some cases it could be enough to recover partial data (and in some cases partial data is all that is required to determine the entire file that was wiped if there is a reference, at least to a high probability, fuzzy hashing comes to mind). ATA secure erase has a firmware component that allows it to wipe off track center.<br /><br />B. Only parts of the drive that are overwritten are overwritten<br /><br />This should go without saying. And depending on your filesystem, you never really know where all traces of files are going to leak to. So even if you wipe the file itself, are you sure you wiped all remnants of it ? Probably not, unless you wipe the entire drive.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thank you for your comment. Hmm, well. What can I tell you on this. First of all, please refer to this thread:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=15952<br /><br />As I have already stated the majority of the essential information surrounding this thematic, in there. There&#039;s plenty of links provided. I believe you are still slightly off on the facts, because even a single pass with just 0&#039;s (NUL / 0x00 bytes) is enough to securely erase data, irrecoverably. Not with a random pattern. It adds nothing more to the process. <br /><br />The original research by Gutmann is severely outdated and obsolete, in regards to the modern day storage. In fact, it is obsolete for a decade. Writing density and the data recording technology have changed quite a bit. It is extremely unlikely (basically impossible) to recover any data with a magnetic-force microscope (after it has been zero-filled) - the error rate is ridiculous to a point, where you simply can not make any sense of the presumably acquired data.<br /><br />http://en.wikipedia.org/wiki/Gutmann_method<br /><br />You are right by saying, that this has seen a lot of debate and controversy, mostly due to the vast amount of myths and misconceptions, that still flourish today. Anyway, a good computer forensics expert should also be a good hard drive repair specialist. And in the midst of such - this is known for ages, so I&#039;m not sure who debated this for quite a while, probably just beginners or hopeless theorists in the field, I guess.<br /><br />Regarding your point A - I would really like to look at that paper. Evaluate it and assess its validity. Because so far it sounds very vague. There&#039;s a lot of sites/papers flowing around that even still misinterpret the Gutmann&#039;s method for today&#039;s use. <br /><br />&quot;can not put the head off the center of the track, leaving magnetic residue that is not actually overwritten along the edge of the track&quot; - um, honestly, I would say &quot;what&quot;. The track itself consists of servo data (embedded for the modern day) , that compose the actual sectors with positioning metadata (so physically, a sector is not really 512B in size). So I don&#039;t see where is the buildup of the &quot;magnetic residue&quot; going to happen on the &quot;edge of the track&quot;, especially with perpendicular recording. In fact, I don&#039;t see how the heads are even supposed to be doing anything on the &quot;edge of the track&quot;. Like I said - seems very vague and stinks of unproven theoretical speculations.<br /><br />http://ultraparanoid.wordpress.com/2007/09/12/securely-erase-hard-drives/<br /><br />If we look at the paragraph from here:<br /><br />&quot;In the paper, the reader is led to believe that ATA-SE can wipe the off-track areas of the HDD platters while BEWTs cannot. The actual phrasing in the paper is:”It is difficult for external software to reliably sanitize user data stored on a hard disk drive. [...] Off-track overwrites could be effective in some drives, but there is no such drive external command for a software utility to move heads offtrack.“While it is certainly true that BEWTs cannot write to off-track areas, ATA-SE cannot overwrite off-track areas either. ATA-SE does a single on-track erasure of the data on the disk drive&quot;<br /><br />Regarding your point B - you can be sure if you know how your filesystem works. That is why &quot;sdelete&quot; also cleans the MFT. I think there is little point to make assumptions here, it is of our best interest to talk facts, instead. But generally I agree with this statement, except that it loses its charm when the filesystem has been thoroughly researched.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Delete items in Recycle Bin</strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>April 25, 2012, 07:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				An excellent post, thank you 0x00, I had always wanted more information about the Gutmann thread.<br /><br />I too was a fan of Heidi Eraser back in the day but the point is moot in any case. A detailed forensic analysis of your hard drive may indeed reveal deleted files on an unencrypted file system however using a Full Disk Encryption program like Truecrypt negates this problem entirely as all free space is filled with random &quot;chaff&quot; data.<br /><br />As such I suggest we take the attitude that prevention is better than cure and say to the OP that this shouldn&#039;t be an issue as your file system should be encrypted anyway! :)<br /><br />V.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Delete items in Recycle Bin</strong><br />
+				Post by: <strong>CaptainSensible</strong> on <strong>April 25, 2012, 09:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If you&#039;re really worried about whether or not your files are recoverable you might want to use an operating system that&#039;s more secure.&nbsp; Tails, Liberte Linux, or the use of a virtual machine will at least give you a good chance of keeping your data safe from recovery.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Delete items in Recycle Bin</strong><br />
+				Post by: <strong>theonetheonlyandy</strong> on <strong>April 27, 2012, 04:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				i use tail and liberte. but before the forums was here the forums was in SR. So i just used the bundle. and i know that is in the hhd somewhere and i just want to scrub it just in case. im going to try Sdelete and see how that works. thanks for the help guys. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Delete items in Recycle Bin</strong><br />
+				Post by: <strong>PiggyPie</strong> on <strong>April 27, 2012, 06:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I use a piece of freeware called CCleaner. It says it does multiple (between 1 and 36) pass overwrites just leaving &#039;0&#039; i think. I run it everytime i want to empty my recycle bin and whenever im deleting my browser history
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Delete items in Recycle Bin</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>April 27, 2012, 06:56 pm</strong>
+			</dt>
+			<dd class="postbody">
+				http://www.tomcoughlin.com/Techpapers/Secure%20Erase%20Article%20for%20IDEMA,%20042502.pdf<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">....positioning the heads ± 5-10% off-track. This defeats exotic recovery techniques, and also erases the track<br />edge signals (which will be shown to be primarily transition noise in the tests here, not signal).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Track edges can contain highly distorted original data as well as transition noise and are therefore difficult to<br />recover data from. Figure 2 shows a crosstrack scan of the residual signal, when a swath of tracks is DC-erased<br />(blue curve) and when a 20 MHz square wave is overwritten by 10.5 MHz (red curve), chosen so the<br />overwriting signal doesn’t have harmonics at 20 MHz. The scan does not change if the 20 MHz signal is not<br />written at all (black curve), so it must be entirely due to the overwriting 10.5 MHz. This means that although the<br />amplitude peaks 4-6 dB at the track edges, this cannot be unerased 20 MHz signal. A full spectral analysis<br />(Figure 3) shows that these track edge peaks are primarily ac-erased transition noise (the noise floor at 20 MHz<br />rises 4 dB above the DC erase level, when 10.5 MHz is recorded). The poor write field gradients off the head<br />sides ac erases a higher level of transition noise than the well-written 10.5 MHz transitions in the main track.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Actually this paper makes it seem like there are actual exotic attacks that using random data in the wipe helps protect from<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">One erasure pass appears to be sufficient to make old data unrecoverable. A two-pass erasure can provide an<br />additional level of security. Writing LF helps erase the track edges, and then overwriting with random data<br />defeats exotic techniques (see later section of this article). The two passes can be slightly off-track in the<br />positive and negative direction in order to ensure elimination of the track edges<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br />in the end they do conclude that one pass is enough to make data unrecoverable, but they also say using random data and putting the head off center can add additional protection from exotic attacks<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">One erasure pass appears to be sufficient to make old data unrecoverable. A two-pass erasure can provide an<br />additional level of security. Writing LF helps erase the track edges, and then overwriting with random data<br />defeats exotic techniques (see later section of this article). The two passes can be slightly off-track in the<br />positive and negative direction in order to ensure elimination of the track edges.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />even a very small partial recovery of data can be enough to do a full recovery in some cases, let&#039;s say you have the anarchists cookbook and you erase your drive but they get a few 512 bit segments of it from the track edges, that is potentially enough for a fuzzy hash match to identify it (provided they have a reference) <br /><br />hm seems like if they don&#039;t know the overwrite pattern then they can&#039;t do it<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Drive information can sometimes be recovered that has been erased using a single erasure pass on-track. It<br />should be first pointed out that single-frequency squarewave overwrite tests are not meaningful indicators of<br />information recovery. A spectrum analyzer can see -60 dB overwritten signals but it can’t recover data. The<br />CMRR technique requires reading a data block many times, computer averaging the playback waveforms, then<br />erasing the block and re-recording the overwrite data to obtain its averaged playback waveform data, which is<br />subtracted from the first waveform. The demonstration shown below merely means that it is possible, not that it<br />is practical or will work on any drive. It requires knowing the data pattern being looked for, and also knowing<br />the overwriting data pattern. So it “begs the question.” It can be defeated by using a random data overwrite<br />pattern.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Data recovery techniques showed that SE overwritten user data is beyond recovery by normal drive read<br />channels. But CMRR could recover overwritten user data by digital scope signal waveform averaging, software<br />correlation techniques. These recording experiments were done on a spinstand using a dual stripe MR head<br />2.5 μm write width, 1.8 μm read width, 2500 Oe/0.65 Mrt disk. These had 38 dB overwrite and a playback<br />noise floor -69 dB.<br />First a swath of tracks was DC erased, then arbitrary user bits “HELPHELP” were written, the playback<br />waveform was averaged 100 times to improve SNR, and saved as waveform 1. Then a random bits overwrite,<br />the same signal averaging, and saved as waveform 2. Another DC erase followed by overwriting with the same<br />random bits and signal averaging, is saved as waveform 3.<br />Figure 4 shows the averaged initial playback waveform 1, and the residual wave 3 minus wave 2. Not much<br />residual signal left!<br /><br />Figure 5 shows results from a correlation detector. The residual correlation has a correct peak at zero offset,<br />which is about twice the second highest peak. This indicates that “helphelphelphelp” is correctly detected (but a<br />2:1 signal-to-“noise” ratio means high error rate). (When this was repeated with TWO random overwrites,<br />correlation detection did not work.)<br />Beyond these data recovery techniques which use drive hardware, other exotic techniques can be proposed such<br />as putting recorded discs into scanning magnetic force microscopes. It is easy to obtain pictures that appear to<br />show unerased track edge data. But no one has shown complete recovery of a data sector, including the data<br />synchronization preamble, bit de-randomizer, partial response and modulation codes, and error correction code.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br /><br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">“While it is certainly true that BEWTs cannot write to off-track areas, ATA-SE cannot overwrite off-track areas either. ATA-SE does a single on-track erasure of the data on the disk drive&quot;</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />ATA-SE has two versions standard and enhanced. The standard version does a single pass wipe, enhanced does on track and off track wipe, and it can do this because it is firmware. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

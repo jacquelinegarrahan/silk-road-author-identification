@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=5225.0" />
+		<title>Print Page - Liberte / Security Questions</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Isa on November 09, 2011, 04:44 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Liberte / Security Questions</strong><br />
+				Post by: <strong>Isa</strong> on <strong>November 09, 2011, 04:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I installed Liberte Linux as a virtual machine inside a truecrypt container.&nbsp; Well, at least I think I did.&nbsp; I&#039;m completely new to linux and internet security. <br /><br />I&#039;m currently booting off of the .iso, is that acceptable or a security concern?&nbsp; I put the .iso in a truecrypt container.&nbsp; Is that more or less secure than making the VM hard drive bootable?&nbsp; Should I boot from the VM hard drive?&nbsp; Did I even install the OS or am I basically LiveCD booting?&nbsp; At this point, the instructions are over my head to be honest, I need to learn more about it. What does the .vdi file do if I&#039;m booting off of the .iso?<br /><br />I don&#039;t have any persistence.&nbsp; I want some just to have the ability to save bookmarks, how can I accomplish this?&nbsp; Currently, I&#039;m sharing a truecrypt container with the host, but I don&#039;t want to be able to access these bookmarks from the host when the VM isn&#039;t running.&nbsp; Is this because I&#039;m booting off of an .iso?&nbsp; I did notice when Liberte starts up, it says &#039;skipping&#039; persistence setup or something like that.<br /><br />Is there anything inherently more secure about operating inside a VM environment?<br /><br />Do I need to have Tor running on the host if it&#039;s running in the VM?&nbsp; <br /><br />Being a novice, what tools should I learn how to use to test my security?&nbsp; Does Liberte have any built in tools for that?&nbsp; Am I decently protected using Liberte right out of the box?&nbsp; If I&#039;m only using Liberte for browsing these forums and an occasional SR purchase, do I need to do anything more than keeping everything up to date?<br /><br />When starting Liberte in the VM, it says &#039;Failed to start splash daemon&#039;?&nbsp; What is that and how do I fix it?<br /><br />I don&#039;t recall making a password for Liberte, for instance, for executing terminal commands.&nbsp; I&#039;m signed in as anon, is that a security feature, or am I just missing something?<br /><br />One last question, is the traffic sent to .onion sites encrypted? I don&#039;t see https:// only http:// in the address.&nbsp; Can the Tor exit nodes read this post for instance?<br /><br />Thanks in advance for any answers you can provide.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte / Security Questions</strong><br />
+				Post by: <strong>lazypeepsarebusted</strong> on <strong>November 10, 2011, 09:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=5225.msg44291#msg44291">Quote from: Isa on November 09, 2011, 04:44 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;m currently booting off of the .iso, is that acceptable or a security concern? <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That is how live CD&#039;s work. Well, at least when you run them in virtual machines. It isn&#039;t in itself a security concern, but it does indicate that you are using a live CD instead of a custom configuration. I haven&#039;t seen any live CD&#039;s that are exceptionally secure, but if you are a noob or just need something to work with and don&#039;t have time to configure everything properly yourself, live CD is fine.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote"> I put the .iso in a truecrypt container.&nbsp; Is that more or less secure than making the VM hard drive bootable? </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well, you could put the virtual hard drive in a truecrypt container. Putting the .iso in a truecrypt container is borderline pointless considering it is a read only disc image and not illegal or necessarily indicative of illegal activity. Things that are saved in your VM shouldn&#039;t be leaving volatile memory if you are using a live CD .iso ... I think. I really should ask someone who knows for sure to confirm this though, but I am pretty sure. Of course the standard worries about SWAP space and such still apply, but you should have encrypted SWAP on the host anyway. And have FDE actually. Anyway it isn&#039;t really a black and white more or less secure question. It depends on what you are doing, in regards to if you should have a virtual machine that boots from a virtual drive or a live cd .iso. A lot goes into the answer too, if you get very detailed.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote"> Should I boot from the VM hard drive?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Depends on your use case. For now I think it is smarter to use a persistent bootable hard drive then a live cd .ISO, because if you use a live CD .iso with Tor it selects new entry guards every time you boot it. Entry guards are not supposed to change that much, and by changing that much it makes you *far* more vulnerable to an active attacker re: your anonymity. If you select three good entry guards, you are not at risk of an active timing attack linking you to the servers you visit. Tor normally selects new entry guards once a month or so, and I think even this is probably more than it should. It also probably should only use two entry guards instead of three, I think. When you use a VM and a live .iso, every time you boot it Tor selects new entry guards because as far as it is concerned it is running for the first time. Until solutions to this problem are implemented in live CD distros, I would hesitate about using them. One solution is to use a snapshot of the VM and always load the snapshot. This will let you keep persistent entry guards, but it will also open you up to a different attack after a period of time, because your Tor client will eventually need to bootstrap at the directory authorities to get consensus. Normally if you don&#039;t have breaks greater than ~24 hours between times you run Tor, it connects to a mirror of the DA servers which could be on pretty much any of the Tor relay nodes. If ~24 hours pass, it connects directly to the directory authority nodes to bootstrap. An attacker who can monitor the directory authorities can use the bootstrapping information for a variety of attacks. It is much easier to monitor all of the DA servers than it is to monitor the DA servers and all of the mirror servers. If you take a snapshot now, in 24 more hours the Tor client of the snapshot will start connecting to directory authority server every single time you load the snapshot. Of course every time you load the .iso without a snapshot Tor connects to the DA&#039;s to bootstrap as well, but my point is that taking a snapshot can solve the entry guard issue but it can&#039;t prevent increasing direct bootstrapping frequency. Using a virtual hard drive with Tor doesn&#039;t have either of these issues. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Did I even install the OS or am I basically LiveCD booting?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You are Live CD booting...obviously. Do you remember installing the OS ;)?<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">At this point, the instructions are over my head to be honest, I need to learn more about it. What does the .vdi file do if I&#039;m booting off of the .iso?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You don&#039;t need a .vdi file if you are booting off of the .iso, and I would even go as far as to suggest removing any .vdi if you are booting off .iso<br />learning is fun. Spend as much time learning security as you can and teach those who know less than you so we can all continue to evolve as a network and protect ourselves from the fascists and their mercenaries. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">I don&#039;t have any persistence.&nbsp; I want some just to have the ability to save bookmarks, how can I accomplish this?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You can use snapshots to accomplish this. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Currently, I&#039;m sharing a truecrypt container with the host, but I don&#039;t want to be able to access these bookmarks from the host when the VM isn&#039;t running.&nbsp; Is this because I&#039;m booting off of an .iso?&nbsp; I did notice when Liberte starts up, it says &#039;skipping&#039; persistence setup or something like that.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Sharing a truecrypt container with the host? Elaborate please. If you use snapshots, or even if you decide to use a virtual hard drive, you can keep the entire virtual machine inside a truecrypt container. Then you will need to mount the container and point virtualbox at it prior to launching the VM, but it will keep it encrypted :). <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Is there anything inherently more secure about operating inside a VM environment?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No, but you can use advanced VM configurations to enormously increase your security. For example, I suggest that you run Tor in one VM and every other sensitive network facing application in its own VM [ie; a vm for firefox, a vm for pidgin, etc]. You can then use host only routing and firewall rules on the host, to force all traffic from firefox etc to either go through Tor or be dropped. The big benefit of this is that even if your firefox is hacked and the VM rooted, the attacker will only be able to get your internal IP address from it...the actual VM isn&#039;t even aware of your external IP address. This is a strong line of defense against application layer attacks, and if the presentations given to law enforcement at intelligence support service conference are anything to judge by we need to really start doing things like this fast if we expect to stay ahead of LE. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Do I need to have Tor running on the host if it&#039;s running in the VM? </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It depends on what you want to do. Short answer is no. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Being a novice, what tools should I learn how to use to test my security?&nbsp; Does Liberte have any built in tools for that?&nbsp; Am I decently protected using Liberte right out of the box?&nbsp; If I&#039;m only using Liberte for browsing these forums and an occasional SR purchase, do I need to do anything more than keeping everything up to date?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I would use amnesia tails over liberte honestly. Are you decently protected by using these live cd solutions? It depends on who you ask I guess. Compared to the majority of internet users, yes you are more secure than them if you use these live cd solutions. Compared to the majority of cyber criminals you are more secure than them as well. Are you exceptionally secure though? No. It takes more work on your part to be exceptionally secure. Are you secure enough to resist LE? So far, but times are changing fast and federal police are quickly becoming pseudo-intelligence agencies and using the same sorts of techniques to spy on the people as intelligence agencies use to spy on foreign governments. Remember, we are the enemy of the government after all ;). <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">When starting Liberte in the VM, it says &#039;Failed to start splash daemon&#039;?&nbsp; What is that and how do I fix it?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Not sure<br /><br />[/quote]I don&#039;t recall making a password for Liberte, for instance, for executing terminal commands.&nbsp; I&#039;m signed in as anon, is that a security feature, or am I just missing something?[/quote]<br /><br />It&#039;s a live CD.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">One last question, is the traffic sent to .onion sites encrypted? I don&#039;t see https:// only http:// in the address.&nbsp; Can the Tor exit nodes read this post for instance?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Tor hidden service connections are end to end encrypted [between client and server, not client to client]. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte / Security Questions</strong><br />
+				Post by: <strong>1as3df4gh</strong> on <strong>November 10, 2011, 11:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				I think you are over complicating things.<br />All I do is have Liberte installed to a MicroSD card as per the instructions on the project site. Get a MicroSD to USB adapter and you are laughing. You dont need to hide the card as it is all encrypted anyway but if you cant manage to hide a MicroSD card then you have bigger problems! I think that having virtual machines and truecrypt containers is becoming largely irrelevant with the advent of Liberte, but I could be wrong.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte / Security Questions</strong><br />
+				Post by: <strong>lazypeepsarebusted</strong> on <strong>November 10, 2011, 12:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=5225.msg44720#msg44720">Quote from: 1as3df4gh on November 10, 2011, 11:24 am</a></div></div><blockquote class="bbc_standard_quote">I think you are over complicating things.<br />All I do is have Liberte installed to a MicroSD card as per the instructions on the project site. Get a MicroSD to USB adapter and you are laughing. You dont need to hide the card as it is all encrypted anyway but if you cant manage to hide a MicroSD card then you have bigger problems! I think that having virtual machines and truecrypt containers is becoming largely irrelevant with the advent of Liberte, but I could be wrong.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hm, just looked into liberte in depth. It is based on hardened gentoo kernel which is really nice, has PAX and grsecurity fully enabled etc. This is very good for security from hackers, some of the features are automatic [like ASLR, SSP, etc] others require customized configuration though [like MAC profiles]. I don&#039;t know how the MAC system is configured with liberte but it is possibly well secured. Technically liberte actually looks far superior to tails, so I take back what I said about suggesting tails over it. I wonder why Tor project suggests Amnesia instead of Liberte now that I have looked at the Liberte spec. However, The issue about Tor persistence still stands for Amnesia and Liberte. I don&#039;t know if you can use Libertes persistence for persistent Tor entry guards though, although in that case it would be a live USB ;). <br /><br />Regardless your reply is still naive. Truecrypt and virtual machines are not made irrelevant by an operating system, anymore than GPG is. There are multiple things to take into consideration when it comes to security. Traffic analysis, communications interception, hackers / application layer attacks, computer forensics, etc. Hardened Gentoo can do a great job of protecting from hackers / application layer attacks. It is definitely one of the best security oriented operating systems. I actually was recently discussing it with some security experts / researching it, although not in the context of liberte. Some of the people I talked with seem to think that it is the number one choice for security if properly configured, although extremely difficult to properly configure. Liberte is preconfigured, so that is a big advantage...I assume the people who made the live cd know what they are doing as well, so it is probably properly configured. Of course other people will disagree that it is the best, a lot of people prefer OpenBSD for example. The operating systems gain their security in different ways, and in some cases in the same ways, but it seems to be fairly commonly agreed that hardened gentoo is at least one of the best operating systems for security. One thing I am not sure of is if Liberte is 32 or 64 bit, if it isn&#039;t 64 bit it isn&#039;t going to be getting much from ASLR though. <br /><br />Using a live CD without Tor persistence makes you more vulnerable to a number of traffic analysis attacks, as I already explained. A properly configured hardened gentoo based distro may protect significantly from hackers, due to its security features. But you also need to worry about being traced via traffic analysis.<br /><br />Application layer attack: Firefox is hacked and the attacker EOPs to Tor, gets your IP address<br />Traffic analysis attack: Your adversary owns your entry guard and monitors SR, they correlate timing information from the entry guard to timestamps on SR and link your IP address to SR<br /><br />Liberte tries to protect from traffic analysis by using Tor, but because it is a live CD it has limitations versus a persistent configuration. Every time you boot it, your entry guards change. This majorly increases the risk that an attacker will eventually own one of them. You can protect from this by loading from a snapshot, but you still are at increased risk because you will be bootstrapping at the DAs more than normal. Hopefully liberte and other live CDs start finding ways to get around these problems. Tor can also fix the problem of increased bootstrapping by using directory authority guards, I think they are already headed in this direction. These are not inherent limitations of live CD, but they are limitations of all the live CDs out there today, afaik anyway.&nbsp; <br /><br />Storage encryption is still required as well. Liberte does not replace the need for this.<br /><br />Application layer attack: Firefox is haxxored and feds remotely spy on the contents of your hard drive<br />Meatspace attack: Feds kick down your door and steal your hard drive<br /><br />On the application layer, using a hardened gentoo based OS can offer protection from various attacks. It doesn&#039;t protect from the feds kicking down your door and stealing your drive though, assuming they can find you anyway [maybe they found you because you used 90 different entry guards in one month instead of the 3 you would have used with a persistent Tor installation :P]. <br /><br />Also, I think a MAC system can get similar results but I don&#039;t think liberte is currently configured in such a way....<br /><br />virtualbox can be used to offer strong isolation. If you run Tor in one VM and firefox in another, and use host only routing to connect the two, you can make it so even if firefox is hacked the attacker can not get to your external IP address without breaking out of the virtual machine. This is really good protection from application layer attacks<br /><br />application layer attack: Haxx0r pwns your firefox, EOPs to Tor user and gets your IP address<br /><br />protection: Attacker pwns your firefox, now they need to break out of the VM before they can get to your IP address. This makes it a lot harder for them. <br /><br />So liberte does not make virtualbox irrelevant, and if you have the skills to configure hardened gentoo yourself I would suggest not using liberte and rather configuring multiple VM&#039;s in the manner I previously described [with hardened gentoo host, and hardened gentoo guests for each critical process that needs isolated away from your IP address]. This is actually the configuration that I plan to go with for myself, I didn&#039;t realize that liberte was so similar until just now, before I thought it was just another tor live CD on the level of amnesia...but not endorsed by the Tor devs...which is why I suggested using amnesia over liberte. <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte / Security Questions</strong><br />
+				Post by: <strong>lazypeepsarebusted</strong> on <strong>November 10, 2011, 12:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I should also add that I personally suggest not using their cables system for communications, simply because it requires you to run as a tor hidden service. Deanonymizing hidden services is much easier than deanonymizing Tor clients. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte / Security Questions</strong><br />
+				Post by: <strong>lazypeepsarebusted</strong> on <strong>November 10, 2011, 01:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				okay looks like liberte supports persistent entry guards if it is run as a live USB, obviously not as a live CD though. This fixes at least one of the major flaws in Tails. I really guess I should have researched this more before commenting, instead of assuming it was just another tails clone that wasn&#039;t endorsed by the Tor devs. I had seen it before, but didn&#039;t do indepth reading on it. I think I saw its &quot;cables&quot; system and immediately wrote it off because I really think it is a bad idea to form networks of hidden services for communications, hidden services ARE too easily traced versus tor clients. <br /><br />I still plan to configure my own hardened gentoo with multiple virtual machines for isolation, but I suggest liberte for anyone who doesn&#039;t have the time for this ;P. It is funny because I was just about to make a post about hardened gentoo and suggest people try to configure it + VM isolation. Now I suggest that as well, but liberte looks like an excellent alternative for people who don&#039;t have the time or skills required to configure hardened gentoo themselves. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte / Security Questions</strong><br />
+				Post by: <strong>Isa</strong> on <strong>November 10, 2011, 05:34 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for the replies, lazypeeps and 1as3df4gh.<br /><br />Here&#039;s the what and why.&nbsp; I&#039;m booting Liberte from the .iso using VirtualBox.&nbsp; The reason I put the .iso in a Truecrypt container is to hide it and prevent being able to boot Liberte without the Truecrypt container being open, since the .vhd isn&#039;t really necessary at this point.&nbsp; What I&#039;d like it to be able to do is boot Liberte in the VM from the .vhd, to have persistence for bookmarks (and now for the added security of keeping the same entry guards).&nbsp; I&#039;d rather keep everything Liberte, Tor, etc. separate, hidden and secure from my host regardless.&nbsp; Once everything is nice and secure inside an encrypted container, I plan to clean up my host, shred free space, etc.&nbsp; Obscurity might not be security, but I have some family members who occasionally use my computer.&nbsp; I&#039;m hiding in plain sight, if you will.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Sharing a truecrypt container with the host? Elaborate please. If you use snapshots, or even if you decide to use a virtual hard drive, you can keep the entire virtual machine inside a truecrypt container. Then you will need to mount the container and point virtualbox at it prior to launching the VM, but it will keep it encrypted :). </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This was the solution for gaining persistence inside my VM.&nbsp; VirtualBox gives the option to designate Shared Folders on the host accessible to the VM.&nbsp; I selected a Truecrypt container on the host to share with the VM, so I have access to bookmarks.&nbsp; Even though it&#039;s encrypted, I don&#039;t want any access to this data from the host directly without first booting the VM.&nbsp; When I find a way to install Liberte on the .vhd, this issue should be resolved.<br /><br />So, at this point, I&#039;m searching for a way to install Liberte to the .vhd.&nbsp; Unlike Ubuntu, there isn&#039;t an easy &quot;Install Liberte&quot; option when booting from the disk.&nbsp; See how much of a noob I am?&nbsp; While inside the the VM, I have don&#039;t seem to have access to the .vhd at all.&nbsp; It may have something to do with persistence support being disabled, so copying files to the top level drive and running sh setup.sh /dev/sda1 in terminal isn&#039;t working for me.&nbsp; I tried searching for a way to access the .vhd from the host, however, it&#039;s proving difficult.&nbsp; Now that I&#039;m fully awake, I&#039;ll see if I can figure it all out. <br /><br />1as3df4gh, I really like the MicroSD option and will probably pick one up soon enough.&nbsp; For my limited purposes, it would probably work out well.&nbsp; Although, this is as much a learning endeavor as it is a SR buying endeavor for me.&nbsp; Three weeks ago, I was set up on OS X with little security knowledge and I&#039;m paranoid by nature.&nbsp; I&#039;ve created an encrypted partition, installed Ubuntu, I&#039;m learning as much as I can about Linux, networking, security all of which has led me to running Liberte inside a virtual machine.&nbsp; It&#039;s absolutely fantastic.<br /><br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

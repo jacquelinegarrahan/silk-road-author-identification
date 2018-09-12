@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=48493.0" />
+		<title>Print Page - Raspberry Pi Working! (Dark Pi)</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: jameslink2 on October 07, 2012, 12:33 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>October 07, 2012, 12:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				For those that do not know, the raspberry pi is a small single board open source computer costing $35. It is about the size of a credit card!<br />&nbsp;Full info can be found here --&gt;http://elinux.org/R-Pi_Hub#About<br /><br />I have had mine for a while and have been playing with it and ideas of how it could be used. I finally have something that works and works well.<br /><br />I started with Raspbian which is a version of Debian Wheezy for the Raspberry pi. All the software repos are there and most of the software is available.<br /><br />Lets start with a screen shot. This is the raspberry pi with Tor, Browser with tor button installed, GPA for gpg/pgp via the gui, and Electrum bitcoin wallet.<br /><br />http://xfq5l5p4g3eyrct7.onion/view.php?image=e35859ec2a0279c1c5a8269288379918.jpg<br /><br />So, here is what you have to do to get one working for your self.<br /><br />I started by making the boot-able sd card of raspbian, you can find instructions on that at the raspberry pi site. <br /><br />I only plugged mine into the network and did not hook up a keyboard or a monitor. So I checked my dhcp host (router) and got the ip that was assigned to the unit. Then connected to it via ssh.<br /><br />I started by updating the repo lists using the following command.<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo apt-get update</code><br />Next I installed tightvncserver to get a graphical connection via vnc<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo apt-get install tightvncserver</code><br />Once it is installed you have to run the &quot;tightvncserver&quot; command to set it up and configure the password. It only asks for the password and if you want it to be readonly. Make sure to run this as your user, in my case it was the default user pi.<br /><br />Now we need to set it so that the vncserver starts at boot. <br /><br />I created a start up file by first doing the command<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo nano /etc/init.d/vncboot</code><br />You can paste the following code into the window to create the start up file<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">### BEGIN INIT INFO<br /># Provides: vncboot<br /># Required-Start: $remote_fs $syslog<br /># Required-Stop: $remote_fs $syslog<br /># Default-Start: 2 3 4 5<br /># Default-Stop: 0 1 6<br /># Short-Description: Start VNC Server at boot time<br /># Description: Start VNC Server at boot time.<br />### END INIT INFO<br /><br />#!/bin/sh<br /># Set the VNCUSER variable to the name of the user to start tightvncserver under<br />VNCUSER=&#039;pi&#039;<br />case &quot;$1&quot; in<br />&nbsp;start)<br />&nbsp; &nbsp;su $VNCUSER -c &#039;/usr/bin/tightvncserver :1&#039;<br />&nbsp; &nbsp;echo &quot;Starting TightVNC server for $VNCUSER &quot;<br />&nbsp; &nbsp;;;<br />&nbsp;stop)<br />&nbsp; &nbsp;pkill Xtightvnc<br />&nbsp; &nbsp;echo &quot;Tightvncserver stopped&quot;<br />&nbsp; &nbsp;;;<br />&nbsp;*)<br />&nbsp; &nbsp;echo &quot;Usage: /etc/init.d/vncboot {start|stop}&quot;<br />&nbsp; &nbsp;exit 1<br />&nbsp; &nbsp;;;<br />esac<br />exit 0<br /></code><br />Once you save the file and exit the editor you need to set permissions and start the vnc server<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo chmod 755 /etc/init.d/vncboot<br />&nbsp;sudo update-rc.d vncboot defaults<br />sudo /etc/init.d/vncboot start</code><br />Now you can connect with any vnc client over to the raspberry pi. It will prompt you for your password but once connected you should see the following screen.<br /><br />http://xfq5l5p4g3eyrct7.onion/view.php?image=b1d9830f0527fd5306f9be944041ce0c.jpg<br /><br />From here you can ether continue in the ssh window or open a terminal via the gui by going to accessories--&gt;LXTerminal<br /><br />For the rest of the setup you will need to install the packages in this order.<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo apt-get install vidalia<br />sudo apt-get install xul-ext-torbutton<br /></code><br />These two will install tor, vidalia, the browser and tor-button. After it is installed and before you can use it you will need to reboot the unit but you can wait and do the rest of the install before you reboot.<br /><br />Now we start installing the packages needed for electrum bitcoin wallet. I chose this wallet because it is a thin client and does not require you download the bitcoin chain. However, it also does not support proxy so it will come from your IP. I would suggest using an online wallet if you can or transferring the btc to bitfog before sending it to SR.<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo apt-get install python-pip python-qt4 pyqt4-dev-tools<br />sudo pip install ecdsa slowaes<br />sudo pip install http://electrum-desktop.com/files/Electrum-1.0.tar.gz?\#md5\=1796e04ba458e23b587a2d08535c9cbd<br /></code><br />Once that is done there are a few items we can clean up. Stuff that is not needed because we are using it for tor and with tor button. This stuff is extra browsers that come installed but do not support proxying via SOCKS so they can not be used with Tor.<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo apt-get remove midori<br />sudo apt-get remove dillo<br />sudo apt-get remove netsurf-gtk<br />sudo apt-get autoremove<br /></code><br />Now that we have cleaned up a bit, we install gpa the gpg/pgp client<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo apt-get install gpa<br /></code><br />Once you have gotten here, you can reboot the raspberry pi with the following command<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo reboot</code><br />Once it comes back up (less than 1 min) and you can connect with the vnc viewer, you are ready to roll on SR!<br /><br />http://xfq5l5p4g3eyrct7.onion/view.php?image=e35859ec2a0279c1c5a8269288379918.jpg<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>hootsmon</strong> on <strong>October 07, 2012, 09:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				I love my raspberry pi<br /><br />Personally I don&#039;t run any gui stuff on it, it&#039;s a little too slow for me atm, but that will improve with later revisions.<br />atm I use it as a file server and proxy.<br /><br />anyway,<br /><br />I just wanted to say that tightvnc is unencrypted,&nbsp; so I wouldn&#039;t connect it to a wifi or switch, I guess a cat5 cable laptop to rpi would be fine though.&nbsp; <br /><br />thanks for writing it up. nice work.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>Shroomeister</strong> on <strong>October 07, 2012, 09:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				[2cents]<br />You should call this project/idea &quot;Burnt Pie&quot; (Dark Pi)<br />[/2cents]<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>October 07, 2012, 03:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=48493.msg506728#msg506728">Quote from: hootsmon on October 07, 2012, 09:19 am</a></div></div><blockquote class="bbc_standard_quote">I love my raspberry pi<br /><br />Personally I don&#039;t run any gui stuff on it, it&#039;s a little too slow for me atm, but that will improve with later revisions.<br />atm I use it as a file server and proxy.<br /><br />anyway,<br /><br />I just wanted to say that tightvnc is unencrypted,&nbsp; so I wouldn&#039;t connect it to a wifi or switch, I guess a cat5 cable laptop to rpi would be fine though.&nbsp; <br /><br />thanks for writing it up. nice work.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I had not even realized that tightvnc did not use the stock ssl connection. crap.... Guess Ill have to firewall the 590x port then use ssh to forward the local machine port to the remote machine port and pump the vnc traffic through the ssh encrypted pipe. Wonder if I can get that to work across tor and give a reasonable response time?<br /><br />I overclocked the pi just a bit during install and to be honest, it is handling the gui and setup quite well. The load average is low and it is responsive.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=48493.msg506743#msg506743">Quote from: Shroomeister on October 07, 2012, 09:35 am</a></div></div><blockquote class="bbc_standard_quote">You should call this project/idea &quot;Burnt Pie&quot; (Dark Pi)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That is a great idea!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>hootsmon</strong> on <strong>October 07, 2012, 03:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				ssh would work, turning off compression would help with interactivity, and blowfish encryption is quicker but weaker.<br /><br />the other option is openvpn or ipsec, but openvpn is easier to set up.<br /><br />what I also do is firewall outgoing traffic on port 80 and 53 (udp and tcp)<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>Bungee54</strong> on <strong>October 08, 2012, 07:45 am</strong>
+			</dt>
+			<dd class="postbody">
+				WOHOOO !&nbsp; THANKS OP!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>pine</strong> on <strong>October 08, 2012, 12:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Great idea James! In a way I guess &quot;disposable computing thin client&quot;projects like this is the future. Here&#039;s some idea.<br /><br />Imagine something like the Raspberry Pi, only smaller, more powerful and equipped with a powerful wi-fi srouter capability. Pi 2 or something. Then you obtain a pay as you go PAYG access in cash for net access to some city broadband provider (or you could scape some broadband some open providers I guess). Then you equip your Pi with the access instructions and drop it half way across the city or however far you can get it. (the geo caching people may have some badass ideas here)<br /><br />Then back at the bat cave (you don&#039;t have a bat cave?) you have a holographic display widget combined with a laser keyboard + a super network card to connect to your proxy Pi. Pretty sure all this exists, must check out how expensive holographic displays are! Probably not strictly necessary I guess, but they and the keyboard look cool.<br /><br />Result: When the LE agents come to visit, they have literally nothing to go on... There is no physical evidence you even have a machine, let alone the data you have on it. The actual computer is inside a canister magnetically attached on the outside of a building 4km away or something like that. Great reception and total anonymity unless our LE agents turn into spidermen and crawl up the walls of every building in the city. No messing around with various portable media anymore. That would mean you need to trust literally no 3rd party on any level I can think of (the helper software is open source and the binary of it would be cryptographically hashed etc).<br /><br />--<br /><br />I know you can do this &quot;thin client solution&quot; today in a way by using virtual machines on server farms and sshing into them (big advantage being this can be in a different country), but it requires some technical expertise that frankly 9/10 of the population don&#039;t have. The solution above could be used by literally anybody (they need to obtain Pi + PAYG card, there might be helper software for config), it could all be set up in such a way to be completely seamless. You have complete control and you don&#039;t need to trust anybody. You can&#039;t subpoena the virtual machine server farm provider or anything. Only trouble is obtaining the equipment to do this anonymously. I guess we could use the virtual office idea to dispose of that problem.<br /><br />Maybe we can come up with a bunch of workshops like this at some point, come up with a couple of &quot;packages&quot; to provide physical operational anonymity of this kind depending on your budget. I bet there&#039;s a mini-router widget with a powerful signal we can attach to the Pi right now in fact. And you could do this a dozen times because it&#039;d be so cheap! Lots of installations everywhere. More research! SR should have a R&amp;D division, let&#039;s promote James to Chief Scientist of SRRD&#039;s directorate :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>October 08, 2012, 09:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=48493.msg508605#msg508605">Quote from: damaged on October 08, 2012, 03:28 pm</a></div></div><blockquote class="bbc_standard_quote">Nice tutorial james. I just have one quibble:<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=48493.msg506131#msg506131">Quote from: jameslink2 on October 07, 2012, 12:33 am</a></div></div><blockquote class="bbc_alternate_quote">For the rest of the setup you will need to install the packages in this order.<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo apt-get install vidalia<br />sudo apt-get install xul-ext-torbutton<br /></code><br />These two will install tor, vidalia, the browser and tor-button. After it is installed and before you can use it you will need to reboot the unit but you can wait and do the rest of the install before you reboot.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The TorBrowser included in the browser bundle is more than just a portable version of Firefox with Torbutton. It&#039;s actually a fork of Firefox with lots of patches to plug potential leaks. It&#039;s supposed to be much safer than running vanilla Firefox with Torbutton. The Tor Project highly recommends running only the TBB and not a stock version of Firefox.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I agree but it is not bundled for the pi (arm based processor) and I was unable to find a port with the tor browser available. The tor button on IceWeasel was about as close as I could get.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>October 08, 2012, 10:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=48493.msg508478#msg508478">Quote from: pine on October 08, 2012, 12:40 pm</a></div></div><blockquote class="bbc_standard_quote">Great idea James! In a way I guess &quot;disposable computing thin client&quot;projects like this is the future. Here&#039;s some idea.<br /><br />Imagine something like the Raspberry Pi, only smaller, more powerful and equipped with a powerful wi-fi srouter capability. Pi 2 or something. Then you obtain a pay as you go PAYG access in cash for net access to some city broadband provider (or you could scape some broadband some open providers I guess). Then you equip your Pi with the access instructions and drop it half way across the city or however far you can get it. (the geo caching people may have some badass ideas here)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Try this, stock Raspberry Pi set up as a tor proxy with a Pay as you go 3g internet dongle. All you would need is a 5v USB to plug it into. The physical system could be anywhere and you could do the whole thing for less than $100. You could even mount it in one of the commercial rat traps. The black weather resistant ones that they put around businesses and simple stake it to the ground and plug it in on an outside plug at some business. You could hide one at grandma&#039;s house, or a friends place, I bet you could double face tape it to the under side of a bar at a pub and plug it in and no one would notice it for weeks. If you really want to have fun with it, get a sticker printed that says something like &quot;Property of the Phone company, Tampering prohibited by law.&quot; Then find a way to mount it in some utility closet some where. I would bet it would go years without being touched.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=48493.msg508478#msg508478">Quote from: pine on October 08, 2012, 12:40 pm</a></div></div><blockquote class="bbc_standard_quote">Then back at the bat cave (you don&#039;t have a bat cave?) you have a holographic display widget combined with a laser keyboard + a super network card to connect to your proxy Pi. Pretty sure all this exists, must check out how expensive holographic displays are! Probably not strictly necessary I guess, but they and the keyboard look cool.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />True Holographic displays are still a ways off, however you can get video glasses that take the pi&#039;s output as well as a projection keyboard. I have been looking at this for a wearable computer.<br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=48493.msg508478#msg508478">Quote from: pine on October 08, 2012, 12:40 pm</a></div></div><blockquote class="bbc_standard_quote">Result: When the LE agents come to visit, they have literally nothing to go on... There is no physical evidence you even have a machine, let alone the data you have on it. The actual computer is inside a canister magnetically attached on the outside of a building 4km away or something like that. Great reception and total anonymity unless our LE agents turn into spidermen and crawl up the walls of every building in the city. No messing around with various portable media anymore. That would mean you need to trust literally no 3rd party on any level I can think of (the helper software is open source and the binary of it would be cryptographically hashed etc).<br /><br />--<br /><br />I know you can do this &quot;thin client solution&quot; today in a way by using virtual machines on server farms and sshing into them (big advantage being this can be in a different country), but it requires some technical expertise that frankly 9/10 of the population don&#039;t have. The solution above could be used by literally anybody (they need to obtain Pi + PAYG card, there might be helper software for config), it could all be set up in such a way to be completely seamless. You have complete control and you don&#039;t need to trust anybody. You can&#039;t subpoena the virtual machine server farm provider or anything. Only trouble is obtaining the equipment to do this anonymously. I guess we could use the virtual office idea to dispose of that problem.<br /><br />Maybe we can come up with a bunch of workshops like this at some point, come up with a couple of &quot;packages&quot; to provide physical operational anonymity of this kind depending on your budget. I bet there&#039;s a mini-router widget with a powerful signal we can attach to the Pi right now in fact. And you could do this a dozen times because it&#039;d be so cheap! Lots of installations everywhere. More research! SR should have a R&amp;D division, let&#039;s promote James to Chief Scientist of SRRD&#039;s directorate :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I bet a simple web interface could be done to provide ease of setup as well as a .onion address to communicate with it. It is not that far off or hard to set one up as a tor proxy. Many years ago we used to build small switches that would detect an incoming call and connect two phone lines. Then clip them on at a phone box. The upshot of which was you could tall the first number and get the dial-tone of the second then use it to make calls. But that was a different time and you could still find x-bar switches back then. lol<br /><br />Heck the Asterisk VOIP PBX will run on a raspberry pi so there is a lot of fun stuff you can do with one of these little things.<br /><br />I bought a bunch of SD cards so I can play with setups and test some of the ideas I have! 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>thebakertrio</strong> on <strong>October 09, 2012, 02:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				thanks for this!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>Bungee54</strong> on <strong>October 09, 2012, 09:39 am</strong>
+			</dt>
+			<dd class="postbody">
+				FOR PINE &amp; JAMES<br /><br />-----BEGIN PGP MESSAGE-----<br />Version: GnuPG v2.0.17 (GNU/Linux)<br /><br />hQGMA0P3BMLjijOqAQwAmHwHmxXIr9FBz567gTGoXbrfHzmogjGsaxJN97wFGP25<br />vcBTBiohHXOga2Jc43x10vxteevETpuSop1/wqELFrKHO9D3fw+00ndWbT7fIufX<br />gvQu8XMWwa5ugZtX9lwhIKRIzgzYw1iZkw3Zxmq8oee8aK5qgwEn3QT4jgNfrGnT<br />oIag9MRBPGBD2gs2ihi6AjfdaBJjc7eopPIFcg1bvrPKMrq5iskvGOKWkErCKyKA<br />hOpkHx64/4QrgueMVxc4Q07pPMtS+orgFrjq16j+BnS4Jhq5c8eAUqD0D241ex+E<br />Ea4Apy0FkgTfkebpxBv6U4hT3P7DkULkyJdAowsyKy0cIfSbzGoKQxmmC9AZ2CVG<br />tpMpYQlM6VZmoNpVsaXsaRab+X7hziYu7dIM9idLnmdkK4WiKCqOTBp+/VOi/Vev<br />88g/BbD0e119lTZrXyAVCGRnOYify3MZipt92bg2ojhgSLMp6KPmz/EjRcYZc2Wf<br />/C15A9vybBOQfLzrGT7KhQIMA0+6jEiXxNMGARAAuCwfZpc1F96PiyFd8JamIZOH<br />zXBM3Nt02OsJnbi5gRR84Yvm4z4ICURoTOsSpZ35uu/MXwBtbdbdd/1VPh/I2tF7<br />w4mVpST8FAT9b44eqCDCi43ErYPq8wMx7ODXvmKOx8m/ron7kOcVP2xNF7ZBslv1<br />HR7FKSNkOZKfHnUbdI8ZdDPk4BFwSFU33h3VQ06bj7Eo/JY8EXryelwoUw5/dftE<br />HMrsF0bfGQ6r4uEIKS1y25bXqtStp8UM80rFQfKyMcyLfnjNPp5P0eKE2ve1Y3dA<br />gDagBBpkHrc76dv2I3yCBeWah7g69rWwIGLKrlN0OME4coxrk2epoVDKjOUyyOUR<br />u+PPKuWRdgRvHicPfyjcfRYdz/70+eQHdsmNTTE9jiy7v+QKJgARW0rfUktu0W/Y<br />glsV5/AvGJJlivaRLqS+LEFZ1yUHKANeJHqLZ56k15MGwjjL+McTIFwLlbw7HQXJ<br />g3TgL72y2BRzkMeGBeygPRtLheHSTENf6ATZf1SclahcUvn7YV6xVrUXZfTbrkd8<br />2DB3jYFiy0ytZwTvN3eJqEYuIJAh11io0+n3ZXQJKdSwCwu+4Udc737Yh6j5OUZD<br />WAhzoLdUH9lwMTEsB1DyBpxwNTggoMco8Ip1dgjgZI/nDHRzgXzDT2A3IoGClccX<br />gnj23KK11XXIDXneD1jSwMQBQzqpTYEekKwfY+oFT5W6ka16k4ROiV5u+Gct932T<br />g6GuVhqqspxfSyDTeEuKanQ0VdMYBfVMGyeKlvu4wTz1Bk2gkA4ENSXUnV7FWmy2<br />ICdXfVzgac+ZK9oh36XhIPgiDNQ93lQIfpf1d3fSpeLC84+pz6uFJessBM36cIgD<br />49NubJ5u3VQPOdO6tQgNZMHABlcpkvnnpzejnYlcBLWn8mBGIJrwwzX2M8dpoxPB<br />gxLK3KsnlQIUEtZS6CtNw8AxrP73C/uTa5ymblIRyG1ovk6HIEBjh/l0/N5JHTLK<br />uAYhTbXirrjUpIht3MlC9Py/sLINky3uhA8wCXS3Y7UNNLaJEr0ViZQmeHBwD1OE<br />k95XwRKgdKXQcrLNjktIUjbrzbJvXadO8jMWZX2NGMPW86xAYzO8Ls71lWmMxaSt<br />UFOM/QBX8bqTRzKeUaAO6adXTHqur5pJYqEUcHnJK5eEau/V0rO88WIgMsOi4DTJ<br />3qmDqRdjptbP7CmgjsnBvaPXW5rt<br />=3k1Z<br />-----END PGP MESSAGE-----<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>pine</strong> on <strong>October 09, 2012, 09:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=48493.msg510803#msg510803">Quote from: Bungee54 on October 09, 2012, 09:39 am</a></div></div><blockquote class="bbc_standard_quote">FOR PINE &amp; JAMES<br /><br />-----BEGIN PGP MESSAGE-----<br />Version: GnuPG v2.0.17 (GNU/Linux)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Sorry Bungee, it isn&#039;t encrypted to my public key. (PGPClubRevolution)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>pine</strong> on <strong>October 09, 2012, 12:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=48493.msg510911#msg510911">Quote from: Bungee54 on October 09, 2012, 10:49 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=48493.msg510844#msg510844">Quote from: pine on October 09, 2012, 09:53 am</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=48493.msg510803#msg510803">Quote from: Bungee54 on October 09, 2012, 09:39 am</a></div></div><blockquote class="bbc_standard_quote">FOR PINE &amp; JAMES<br /><br />-----BEGIN PGP MESSAGE-----<br />Version: GnuPG v2.0.17 (GNU/Linux)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Sorry Bungee, it isn&#039;t encrypted to my public key. (PGPClubRevolution)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It is encrypted to pine (at) sr.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yeah, that was an old public key I used, but it&#039;s deleted now :)<br /><br />This is my new public key:<br /><br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br /><br />mQGNBFADOKYBDADV/2Sube83ObzlrxXO0Cq7mL8+999Xeclm9CMGKiKrR19OMcDt<br />3e8RL7yMuiwsfA9RSFhhxdmCJk0V+hiZt46atNtfZCuN54cGh7hw9j2ZdcPNYPr0<br />SlgqsFgEHnoVAVGHB6Eq7cQ2ZyLiHl2QCyYQecX5CFA1eRj2l2pZxcBcT9Gp0f64<br />b81CB8vSn3CaWWJpXOuzk2RMjPCVWyIrsFXtqf+ABGRsZm6HCg2t34vrGK7CiAtM<br />Tv1X4i75sfBYETyaa1ny7rbkKDMgEitLMFp7W33wQNM18Hoa571pJXbN5g9x1MBy<br />G/jh0bJSoLZKFIV0MI9a52RtpnprFLBR7nAtc8nAJvkOzUzDM7usvJdlhfwaPpN0<br />jEbjE5sVSMcAcVZVnmiXO/YXrLahvwHQJ55CUUo2cndSQCYhLKI5BQxAwp220aJo<br />PeAmNLQ5/nFD9u8GpT9uVG1ecjvUUy6d5ApVbYl9h8Rl9NVxuz0fF/awa+9hh3ni<br />sjnPhCuDiGhnguUAEQEAAbQ/UEdQQ2x1YlJldm9sdXRpb24gKFdlbGNvbWUgY29t<br />cmFkZSEpIDxub3N1Y2hlbWFpbEBub3doZXJlLm5hZGE+iQG4BBMBAgAiBQJQAzim<br />AhsDBgsJCAcDAgYVCAIJCgsEFgIDAQIeAQIXgAAKCRAZtjtx6QlK+cn2DADFFDXb<br />Qky92Bvz1QfLFKb71Pughu8aVNxRbZpZDSE6M+dqJjic0gwPUvTX6tpTFw3I7muv<br />YD3WcgAqN0f3r9PvshQDF5iE0k+ABVqbzGnQKBOr+5YUEsIQM7w54W8JM0KOaAnQ<br />W8B453YqF0+CJOCQwi+aorfXyhZFuUUaH9BXBnyeG9IdFQyJ+FFGVAF3Jmxvl9Km<br />gpbHTIcn8y3SzGL9UzABHq4m+h6o5M/lb+wn5y7cfvg0TDtxg4naexygHUBcaBb0<br />xX2mYvp+SN6/Yxuwa6ZQ9p+m9A3GVnjeNI1JwOtGA4EWhsm7eABbfrVOwRHl4Yt1<br />BlW4ywosCYxNPhb6JYh443zJ1eofDE9Ry3PcQwrZfz1lNlf5TDr79GrO1bbjAFS0<br />MjJrqvfdMuSqAs8hRCVZLKzLOvTpk/04j1RsaT8VItxXEEf9+y8QmMf1DGG/egqx<br />9CCiWz5zcJr2TUPuKbO/4vyP2BLS6DxFp3vYe81WUCkdz2Yf6frBtpXILWC5AY0E<br />UAM4pgEMALVCbCJ9ndwNaDbOyScLJfz5sRX8Ti0TZlX58DIPNlW0l2cMjeE3CeOM<br />qyxqvZ6hG9U2u33Dd69vVj68MVdPPHQxv4oK0jg0oMC2EjfB6LxHIC2B9jlnHffa<br />gjN+98M5VC9GWDBB7vQbzoKaZ8lBW92gNjelcxuJjHTw3ftzbGLEY2O/p5q0+V/J<br />XXcGSIJdS93LJKxdmmi1wecMjjfggcx4tpPkiE3FdOChwUftpV2wcTwjNT1PO7bx<br />eP7AwhTokPNPgvmzNrO/jkgFJB6kIPo0EofrGykticDeLm/ytx3mq6GroZ39YOd0<br />Mdz0Kn31a/sjZmfkb1ygaAHVZP/YHVMGSff2I5FvkxfFm8kKb3uKUfpBnZzIGmpF<br />D4tV5lSXE7b4+ElBHGbBp59qpvarOrepe/S8+mrRi6/IBdqecBZT7V3QjfNFkeLw<br />i59//B8KySthgJkNw+XJ1f32gV+gzwuLe9x1PNmCSYgnnqiw4b2dyvwZBn6FrsEy<br />obyAG2WGLQARAQABiQGfBBgBAgAJBQJQAzimAhsMAAoJEBm2O3HpCUr5U+8L/ied<br />exLDTb4MMjQSy9Vibt8zOQF1e9eARpg8NqFFaBfpfmkwzQJA/e4QfDAkz+Leq+W8<br />fgEzUBBTta8DRh41ZP4e3+snxUd4y9zJU/xy5t+e4oALN/SZ83kAMdhQvSlvr8yZ<br />0x6S5Xp4g6/qVgfbO/ZP+C1SM6X4Zyja4JJqL2ArpQC9u2nz0wktbHQMdxlNrKzf<br />PoKRiESkjcX/Ljs/3hvO3Ih3Ur7iuOpS+Od35kuEfWZYJ/xYlI4ZSKOyM9gvZdce<br />Dhz/SeUL2wuOZ7BjOUF0u3gbKQrD9c5GpASDVPUSOT0PwRWSktvfL30O1Y85ep1e<br />/oXR5V5j9/ClfgxNMr8MJxVABWNBrjRoaukpHrpRg77p8zE5uG00Q9VAHvWc4aox<br />/De1UN2goWfQhvSHVqdZJSGdwqOP92K8bGhTmhfld//wND/Ea9pLEt5t842EVnb3<br />BG5vhT4X+KT9wUwTMolwGTB/qae/5gL4U3MhN9WLCcoW+1zPxQigmzh4+EaNjw==<br />=FH7/<br />-----END PGP PUBLIC KEY BLOCK-----<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>Bungee54</strong> on <strong>October 09, 2012, 12:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Damn :)<br /><br />You sent us that one some time ago :)<br /><br />No we cannot remember what we exactly wrote lol<br /><br /><br />James ..can you be so kind and forward the message to Pine?<br /><br />and then we can clean up our posts to stay on topic :)<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>pine</strong> on <strong>October 09, 2012, 01:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=48493.msg511020#msg511020">Quote from: Bungee54 on October 09, 2012, 12:47 pm</a></div></div><blockquote class="bbc_standard_quote">Damn :)<br /><br />You sent us that one some time ago :)<br /><br />No we cannot remember what we exactly wrote lol<br /><br /><br />James ..can you be so kind and forward the message to Pine?<br /><br />and then we can clean up our posts to stay on topic :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hi Bungee, <br /><br />There is a solution for this kind of problem!<br /><br />Find your gpg.conf file and append this to it:<br /><br />hidden-encrypt-to KEYID<br /><br />where KEYID is your SR PGP key&#039;s key ID.<br /><br />Advantages:<br /><br />1. Every message you encrypt is also encrypted to yourself automatically. Makes life easier with troubleshooting of this kind.<br />2. Even though (1) is true, if the enemy intercepts your messages, they won&#039;t be able to figure out that your public key was used to encrypt the message, that information will be hidden, (you can also hide the other public key used to encrypt (person receiving the message) so no information is available for traffic analysis. This makes sense in certain situations).
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>Bungee54</strong> on <strong>October 09, 2012, 01:42 pm</strong>
+			</dt>
+			<dd class="postbody">
+				VERY NICE! thx a bunch!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>October 09, 2012, 11:04 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ok I messaged it over to her
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi Working! (Dark Pi)</strong><br />
+				Post by: <strong>Bungee54</strong> on <strong>October 10, 2012, 09:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=48493.msg511984#msg511984">Quote from: jameslink2 on October 09, 2012, 11:04 pm</a></div></div><blockquote class="bbc_standard_quote">Ok I messaged it over to her<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thank you Sir !
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

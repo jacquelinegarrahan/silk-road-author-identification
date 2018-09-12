@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=174030.0" />
+		<title>Print Page - TOR meant to hide your IP something I dont get?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: slash on June 18, 2013, 05:23 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>TOR meant to hide your IP something I dont get?</strong><br />
+				Post by: <strong>slash</strong> on <strong>June 18, 2013, 05:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Every website that I went on using tor does recognize the IP is suspect or they say I am using an anonymous proxy<br />So here is my question If they are able to recognize this they surely are able to find your real IP?<br />If anyone can get into specifics would be very nice?<br /><br />thank you
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR meant to hide your IP something I dont get?</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 18, 2013, 05:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Tor is the most popular anonymity network and widely used by spammers and other abusers. The exit node IPs are added to block lists that thousands of web sites use. Of course the web site can see the exit node IP, which it matches to an IP on its block list. That doesn&#039;t mean it can see your IP. There are attacks that could reveal your IP, but there&#039;s nothing in the default way Tor works that reveals your IP.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR meant to hide your IP something I dont get?</strong><br />
+				Post by: <strong>CaptainSensible</strong> on <strong>June 18, 2013, 05:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				That&#039;s why you can&#039;t use Tor to log into your account at sites like MtGox, PayPal, or (probably) your bank.&nbsp; These websites have a copy of the blacklist previously mentioned and even if they allow you to log in, your account may be locked down immediately.&nbsp; I&#039;ve had websites throw up a &quot;No Tor or Proxy Access Allowed&quot; banner. <br />I logged into my MtGox account via Tor a few years ago and immediately I couldn&#039;t make trades or send money. Same thing happened with PayPal, and I had to talk to a representative to get my account restored (this was back in the early days when you actually could use PayPal to buy Bitcoins&nbsp; ;D ). <br /><br />This just goes to show that while your identity is (probably) safe, the websites you visit may be well aware of the fact that someone is using Tor to access their content. <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR meant to hide your IP something I dont get?</strong><br />
+				Post by: <strong>slash</strong> on <strong>June 18, 2013, 06:04 pm</strong>
+			</dt>
+			<dd class="postbody">
+				thanks for the replies<br />I got it a little better<br /><br />ok that means there is a difference between real IP and proxy right<br />I though that using a proxy was using someone elses IP<br />Can I use a real IP as a proxy?<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR meant to hide your IP something I dont get?</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 18, 2013, 06:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Proxies have real IP addresses, they&#039;re just not *your* real IP address.<br /><br />If you want a response from the web site, you have to put a real IP address in the packet header. The only time people don&#039;t is if they&#039;re doing syn floods and stuff like that (basically DOS attacks).<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR meant to hide your IP something I dont get?</strong><br />
+				Post by: <strong>KevinMitnick</strong> on <strong>June 18, 2013, 08:26 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=174030.msg1250476#msg1250476">Quote from: astor on June 18, 2013, 06:33 pm</a></div></div><blockquote class="bbc_standard_quote">Proxies have real IP addresses, they&#039;re just not *your* real IP address.<br /><br />If you want a response from the web site, you have to put a real IP address in the packet header. The only time people don&#039;t is if they&#039;re doing syn floods and stuff like that (basically DOS attacks).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well put.<br /><br />KM
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

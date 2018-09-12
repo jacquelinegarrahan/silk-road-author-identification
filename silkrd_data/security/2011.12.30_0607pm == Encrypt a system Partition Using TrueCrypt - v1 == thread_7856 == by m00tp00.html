@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=7856.0" />
+		<title>Print Page - Encrypt a system Partition Using TrueCrypt - v1</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: m00tp00 on December 30, 2011, 06:07 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Encrypt a system Partition Using TrueCrypt - v1</strong><br />
+				Post by: <strong>m00tp00</strong> on <strong>December 30, 2011, 06:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				For this tutorial, I will be demonstrating how you can use truecrypt to completely encrypt a Windows OS partition. To start of you are going to need the following.<br /><br />- virtualbox https://www.virtualbox.org/wiki/Downloads<br />- A windows .iso file. I am using XP home sp3<br /><br />After downloading and installing virtualbox. Click new, and then follow the setup boxes. <br /><br />-set ram to be around 3/4 of the green area.<br />-When asked click the VDI radio button<br />-I suggest to use 25GB of dynamically allocated space.<br /><br />After you have created the new VM run it.<br />The first run wizard will appear. You can either Mount the .iso you downloaded or burn it to a disk(what i do). Select the correct option to boot the Windows setup in the first run wizard drop box.<br /><br />Follow the windows setup installer. Press &#039;c&#039; to create the new partition (xp) and the enter to install to it. Quick format always. Wait for windows to be installed and boot up into environment.<br /><br />After windows is fully installed go ahead and install and download truecrypt http://www.truecrypt.org/downloads .<br /><br />When you run the download. Select it to install.<br /><br />In virtualbox. Select devices &gt; shared folders. <br />Click on the + button to add a new shared folder. I usually just shared my User/Desktop folder. You will need to inorder to burn the Rescue Disk when encrypting you OS.<br /><br />Run truecrypt and System &gt; Encrypt Partition<br /><br />Go through the walkthrough.<br /><br />-Type of System Encryption - Select Normal<br />-Area to Encrypt - Select Encrypt the whole drive<br />-Encryption of Host Protected Area - Up to you, I chose yes.<br />-Number of Operating Systems - Select Single-boot<br />-Encryption Options - Encryption Algorithm (AES-Twofish-Serpent) , Hash Algorithm(RIPEMD-160)<br />-Click Yes when it asks &quot;Are you sure you want to use a cascade of ciphers?&quot; &lt;- It appears after pressing next in the Encryption Options Page. Then ok at the next message box.<br />-Input a strong password - Use a sentence. 20 characters.<br />-Next screen be sure to read. Move your mouse to randomly generate pool content.<br />-Click next at the generated keys<br />-Rescue Disk - I made it save on my desktop.<br />&nbsp; &nbsp; &nbsp;* Now after you see the .iso on your desktop, right-click &gt; copy it into the shared folder you recently created. You can map the drive by right-clicking my computer, Map network drive. And Select the vboxsrv. Paste it onto your host machine desktop. Then burn it onto a disk using iso burner. If you have win7 as host, you can just use the built in image burner. After you disk is successfully burnt, goto your virtual machine and goto Devices -&gt; CD/DVD - and select the &#039;host drive&#039; which is your disk drive. <br />-Next screen will verify that the rescue disk is good.<br />-Now it will do a pretest, it will reboot your computer. (if the reboot hangs at the &quot;Windows is now shutting down&quot;, simply Goto Machine - Reset). <br />-After rebooting, you will be in the TrueCrypt boot-loader, type in your password that you created previously to boot into your OS. After you are all logged into windows, you will get the Pretest Completed Window. Press the encrypt button.<br />- After a good long time of waiting you will now have a encrypted OS.<br /><br />What next?<br /><br />Customize ? <br />Download and install tor<br /><br />Questions? Comments? let me know what you think. Remember the best encryption is yourself. CHEERS!<br /><br />LONG LIFE SR.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encrypt a system Partition Using TrueCrypt - v1</strong><br />
+				Post by: <strong>rocketdog</strong> on <strong>January 04, 2012, 01:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Very nice tutorial. Thank you. Unfortunately for me, I have an old Athlon 64 (single core) laptop so no virtual machines for me. I may try Truecrypt on my existing XP SP3 partition. I wonder if this will work after I install linux on two other partitions on the same HD. I assume GRUB2 will be the bootloader.<br /><br />Do you think Truecrypt (on the Win XP partition) will work in this multi-boot scenario?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encrypt a system Partition Using TrueCrypt - v1</strong><br />
+				Post by: <strong>Horizons</strong> on <strong>January 04, 2012, 02:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Great resource for Windows users! I&#039;m sure it will be much appreciated!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encrypt a system Partition Using TrueCrypt - v1</strong><br />
+				Post by: <strong>m00tp00</strong> on <strong>January 08, 2012, 01:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				truecrypt should be able to install to any OS. they have downloads for linux, mac, and windows. I just recommend using a virtual box. but you can use the same method to encrypt your host OS (the main). <br /><br />1. Boot with linux distro.<br />2. install.<br />3. head to truecrypt.org to download truecrypt for linux. use drop down to specify x86(32 bit) or x64.<br />Now just follow the tut above and you will have your main os encryted.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encrypt a system Partition Using TrueCrypt - v1</strong><br />
+				Post by: <strong>Laughing Man</strong> on <strong>January 08, 2012, 02:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=7856.msg73887#msg73887">Quote from: rocketdog on January 04, 2012, 01:41 pm</a></div></div><blockquote class="bbc_standard_quote">Very nice tutorial. Thank you. Unfortunately for me, I have an old Athlon 64 (single core) laptop so no virtual machines for me. I may try Truecrypt on my existing XP SP3 partition. I wonder if this will work after I install linux on two other partitions on the same HD. I assume GRUB2 will be the bootloader.<br /><br />Do you think Truecrypt (on the Win XP partition) will work in this multi-boot scenario?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Doesn&#039;t work. Truecrypt installs its own bootloader so that it can decrypt the encrypted disk.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encrypt a system Partition Using TrueCrypt - v1</strong><br />
+				Post by: <strong>Horizons</strong> on <strong>January 08, 2012, 01:21 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=7856.msg75982#msg75982">Quote from: Laughing Man on January 08, 2012, 02:57 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=7856.msg73887#msg73887">Quote from: rocketdog on January 04, 2012, 01:41 pm</a></div></div><blockquote class="bbc_alternate_quote">Very nice tutorial. Thank you. Unfortunately for me, I have an old Athlon 64 (single core) laptop so no virtual machines for me. I may try Truecrypt on my existing XP SP3 partition. I wonder if this will work after I install linux on two other partitions on the same HD. I assume GRUB2 will be the bootloader.<br /><br />Do you think Truecrypt (on the Win XP partition) will work in this multi-boot scenario?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Doesn&#039;t work. Truecrypt installs its own bootloader so that it can decrypt the encrypted disk.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />In principle it should be possible. If there&#039;s a way to install the Truecrypt bootloader somewhere other than the MBR, GRUB2 could chainload it. Or, if the TC bootloader supports chainloading, you could install GRUB2 outside the MBR instead, and then do a full-disk encryption and chainload GRUB2 from the truecrypt bootloader instead.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encrypt a system Partition Using TrueCrypt - v1</strong><br />
+				Post by: <strong>m00tp00</strong> on <strong>January 08, 2012, 07:03 pm</strong>
+			</dt>
+			<dd class="postbody">
+				if your looking to dual boot with a true crypt encrypted partition and a non encrypted OS. I would highly advise not doing this, since forensic data could be gathered off of the unencrypted volume and evidence could help build a case against you.<br /><br />also to add to the whole getting better with forensics i would recommend reading http://www.iiiweb.net/forensic-services/ . the whole website for that matter! Has tons of information that is really, really well wrote. Even though they have good writing and information there security sucks toad buttholes :P... need to practice what they preach....<br /><br />Any who, the best protection with truecrypt is anti forensics....
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encrypt a system Partition Using TrueCrypt - v1</strong><br />
+				Post by: <strong>rocketdog</strong> on <strong>January 10, 2012, 10:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks to all for the replies.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encrypt a system Partition Using TrueCrypt - v1</strong><br />
+				Post by: <strong>Tranzshipper</strong> on <strong>January 11, 2012, 01:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				if you care about your fingers never do such things, besides in such country as UK for example, not telling a password for encrypted info on your computer is a punishable crime in itself. <br /><br />best system I&#039;ve come across is Liberte Linux, it works fine on most computers from pen drive, all data already encrypted and system ready for TOR, not such shit as security Updates, and hardened Linux. only downside of that system (which maybe be problem for some one) is that GPG have to be done from command line. best to use it from USB adapter for flash cards. small card easy to hide and destroy if necessary.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encrypt a system Partition Using TrueCrypt - v1</strong><br />
+				Post by: <strong>m00tp00</strong> on <strong>January 20, 2012, 02:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=7856.msg78274#msg78274">Quote from: Tranzshipper on January 11, 2012, 01:23 am</a></div></div><blockquote class="bbc_standard_quote">if you care about your fingers never do such things, besides in such country as UK for example, not telling a password for encrypted info on your computer is a punishable crime in itself. <br /><br />best system I&#039;ve come across is Liberte Linux, it works fine on most computers from pen drive, all data already encrypted and system ready for TOR, not such shit as security Updates, and hardened Linux. only downside of that system (which maybe be problem for some one) is that GPG have to be done from command line. best to use it from USB adapter for flash cards. small card easy to hide and destroy if necessary.<br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Good input...but <div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=7856.msg78274#msg78274">Quote from: Tranzshipper on January 11, 2012, 01:23 am</a></div></div><blockquote class="bbc_standard_quote">if you care about your fingers never do such things, besides in such country as UK for example, not telling a password for encrypted info on your computer is a punishable crime in itself. <br /><br />best system I&#039;ve come across is Liberte Linux, it works fine on most computers from pen drive, all data already encrypted and system ready for TOR, not such shit as security Updates, and hardened Linux. only downside of that system (which maybe be problem for some one) is that GPG have to be done from command line. best to use it from USB adapter for flash cards. small card easy to hide and destroy if necessary.<br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thanks for you input, however. Truecrypt is able to setup a &#039;ghost&#039; system. So if you have to give up a password, it boots to a separate OS.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=183594.0" />
+		<title>Print Page - My 50th post: Navigating the Roaed Safely - Anonimity Tutorial for Newbies</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: ingloriouslibertine on July 12, 2013, 10:02 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>My 50th post: Navigating the Roaed Safely - Anonimity Tutorial for Newbies</strong><br />
+				Post by: <strong>ingloriouslibertine</strong> on <strong>July 12, 2013, 10:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				Ing&#039;s Quick-Start Mini Guide to Encryption – Windows Host (Work in Progress)<br /><br />Hey all, thought I&#039;d do something special for my 50th post (other than venture forth into the real forums, that is) and I figure a mini “getting started with encryption&quot; guide would be a good place to start. This guide will be written for a Windows host machine, with a debian linux guide to follow.&nbsp; Personally I use Linux, but I&#039;m starting with a Windows walkthrough since I&#039;m assuming thats what most users who would need this guide are going to be working with.&nbsp; This guide should be applicable to any Windows versions, with slight (and obvious) differences in procedure.<br /><br />What this guide entails<br /><br />This guide will provide a step by step walkthrough illustrating how to properly set up and work within a multi-level encrypted and hidden linux virtual machine, which will run simultaneously on 2 different VM volumes.&nbsp; One VM acts as the “workstation” while the other acts as a “gateway”, thereby providing another layer of security between your main linux OS and the scary, scary world outside.<br /><br />What this guide assumes you know<br /><br />I assume that anyone reading this guide, having been able to get TOR up and running in the first place, is going to be familiar with basic to intermediate computing terms and operations.&nbsp; If VM&#039;s and gateways had you lost above that&#039;s no problem as we&#039;ll be exploring each piece of software and what it contributes to our overall security, but I won&#039;t be explaining what a driver is or going over the basics of Linux. Whonix is based on Debian linux, the same distro that spawned the likes of Ubuntu and Mint.&nbsp; As some of the most popular distros around all run Debian, you have a lot of reference material at your disposal.&nbsp; Besides, Linux has been steadily gaining ground for the last two decades but is now starting to enter the mainstream.&nbsp; Now is a good of a time as any to check it out.<br /><br /><br />What this guide will show you<br /><br />I aim to make this guide a full-fledged, veritable paranoid-schizophrenic-tin-foil-hat-wearing-SR-user&#039;s wet dream of a security and anonymity. For now:<br /><br />Virtualbox – Hardware virtualization program that allows us to run our VM – Virtual Machines that will run an OS of our choice inside a “virtual” environment. Think of it a computer within a computer; for all intents and purposes, our virtual machine is its own separate entity.&nbsp; I enjoy using VMs over secondary drives or USB live installations not only because it allows us to switch rapidly between OS&#039; s without having to power down our “host” machine -the Windows PC we&#039;re running VB on- but also because it allows us to have a wide array of completely different systems at our disposal without looking like we do.&nbsp; We will be using VB to allow us to run:<br /><br />Whonix – By far my favorite linux distro for all things cryptography.&nbsp; I&#039;ll switch between Kali, Tails, and Ubuntu depending on what I&#039;m up to at the moment, but if I&#039;m running Tor, I&#039;m working in Whonix.&nbsp; This amazing little OS comes as two .iso&#039;s meant to be run in tandem within Virtualbox...the linux distro itself acts as the “workstation” while there&#039;s a seperate text-only command console that acts as a “gateway” - just like the router you&#039;re connected to now but with added levels of security.&nbsp; With minimal customization, this work of cryptographic art comes loaded with damn near everything you&#039;ll need to commit whatever debaucherous acts have brought you to the darknets.&nbsp; A list of the most useful pre-configured software included with Whonix is at the end of this section.<br /><br />Keepass – A random password generator which utilizes one master password to access a securely encrypted database containing a unique, randomly generated password for every webservice we use.&nbsp; <br /><br />TrueCrypt – Free, open-source virtual disk encryption software.&nbsp; Creates virtual disks that, once unencrypted, can be accessed and written to like ordinary hard-drives.&nbsp; Once unmounted these virtual disks are inaccessible,&nbsp; hidden amongst innocuous files scattered around our hard-drive.&nbsp; That makes TC our the first layer of stealth, hiding the very existence of our nefarious setup.&nbsp; Can also be used to secure USB drives, partitiions, and/or entire drives with various government level encryption schemes. <br /><br /><br />Software packages included in Whonix:<br />------------------------------------------------<br />Always-on TOR and ARM anonymizing all out-going connections<br />TorBrowser, TorChat<br />Pidgin instant messanger, supporting end-end encryption<br />Xchat IRC client<br />Hidden service hosting capabilities<br />Webmail, Thunderbird, and TorBirdy e-mail clients<br />BTC wallet<br />Metadata scrubber<br />OpenPGP, Kgpg<br /><br />and of course the standard: text editor, media player, image viewer, etc.&nbsp; <br /><br />Getting Started: Installing TrueCrypt<br />http://www.truecrypt.org/<br /><br />I&#039;m going to assume anyone reading can handle the installation, so lets jump right in.&nbsp; There are a few ways to configure Truecrypt that will meet our needs, but this is the method I prefer.&nbsp; TC is a fairly in depth program with a lot of little nuances if you like to tinker, but here I&#039;m going to outline a basic, all-purpose first volume. <br /><br />After starting TC, click “Create volume” ---&gt;””Create an encrypted file container”.&nbsp; Choose Standard Truecrypt Volume.&nbsp; Pick where you&#039;ll want to store the container...we can always move it later.&nbsp; I wouldn&#039;t mess with the default hash/encryption settings..there&#039;s really no need to.&nbsp; When it comes to volume size, choose whatever you think you might need.&nbsp; At the next screen you&#039;ll select your password, and you should obviously make sure it&#039;s a strong one.&nbsp; I use a windows version of Keepass to create mine, but if you don&#039;t want to mess with the key progs just make sure your passphrase has different punctuation, numbers, and symbols. Select “I will store files larger than....” and then your corresponding filesystem type that matches your OS.&nbsp; When asked about cross-platform support, go with “I will mount the volume only on [OS]”, meaning that this particular volume will not be able to be accessed on any other PC than the one you&#039;re on now.&nbsp; All that&#039;s left is to select the file that you&#039;re going to “hide” this volume in.&nbsp; Pick somewhere randomish (a usb key works great for this)and make note of where it is. On to VB.. <br /><br />Getting Started 2: Installing Virtualbox<br />https://www.virtualbox.org/<br /><br />VB isn&#039;t too hard to install or use, but if you&#039;ve never played around with VM programs before it might take some getting used to.&nbsp; A good idea might be to make a test install using an operating system that you&#039;re aleady familiar with in order to get a feel for how Vbox operates.&nbsp; Not going to go into too much detail here, refer to the documentation on their website if needed.<br /><br />Getting Started 3: Installing Whonix<br />http://sourceforge.net/projects/whonix/<br /><br />If you took my advice and set up a virtual machine of your own real quick, you&#039;ll soon see that we&#039;re going to be setting Whonix up entirely differently.&nbsp; We&#039;re going to be downloading whonix-0.5.6 for this guide, and make sure you download both the workstation and gateway .ova files.<br /><br />We&#039;ll start by going to file ---&gt; Import Appliance.&nbsp; When the wizard opens up, select choose, and then click next.&nbsp; Click Import and that&#039;s it.&nbsp; Repeat the process with the other appliance, and then go back to the Virtualbox main window.&nbsp; Select Whonix-Gateway and click start.&nbsp; After the gateway starts up click back to the main windows and start up the Wokstation as well.&nbsp; Here we go!<br /><br />The default username is “user” and password will be “changeme”.&nbsp; In order to change the default username/password, you&#039;re going to have to jump into the command line.<br /><br />Whonix is based on Debian linux (same distro as Ubuntu and several other of the more popular linux variants), so there&#039;s a good chance you may have worked on a similar OS before. I said in the beginning I&#039;m not going to be giving a Linux primer, but I&#039;ve included some links at the end of the guide that will give new users a good starting point.&nbsp; The documentation on the Whonix sourceforge is very helpful as well.&nbsp; <br /><br /><br />-------------------------------------------------------------------------------------------<br />Keepass is very simple and straightforward, so I’ll end this mini how-to here.&nbsp; I plan to keep this guide updated and add more of the tools I use for my own set up...As I update the guide it will eventually get into PgP options, securing email/irc/im communications, choosing and configuring additional VPNs and Proxy services, and more. <br /><br />Feel free to send me any questions you might have about the software listed above or cryptography/privacy/anonymity in general.&nbsp; Now that I’m a full member of the forums I’d like to try to contribute as much info as I take.&nbsp; &nbsp;Being new to the road, I’m best suited to answer questions regarding privacy, anonymity, linux, and the like.&nbsp; Also contributions feel free to contribute...send me any&nbsp; suggestions, feedback, programs, websites, or other resources to include, etc....any suggestions to make this guide more comprehensive and informative are more than welcome.<br /><br />Thanks for everything newbie forum, Im off!<br /><br />-Ing
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: My 50th post: Navigating the Roaed Safely - Anonimity Tutorial for Newbies</strong><br />
+				Post by: <strong>bouclelan</strong> on <strong>July 18, 2013, 09:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				^^ Thanks for that, nice stuff!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: My 50th post: Navigating the Roaed Safely - Anonimity Tutorial for Newbies</strong><br />
+				Post by: <strong>keysoflight</strong> on <strong>July 18, 2013, 09:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Rockin&#039;!
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

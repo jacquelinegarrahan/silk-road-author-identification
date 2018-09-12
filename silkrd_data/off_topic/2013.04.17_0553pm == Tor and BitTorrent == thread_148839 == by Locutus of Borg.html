@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=148839.0" />
+		<title>Print Page - Tor and BitTorrent</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Off topic => Topic started by: Locutus of Borg on April 17, 2013, 05:53 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Tor and BitTorrent</strong><br />
+				Post by: <strong>Locutus of Borg</strong> on <strong>April 17, 2013, 05:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hey, just wondering if it is possible using just 2 devices or even a VM player to show that using BitTorrent over Tor can reveal your IP address. I&#039;m running very low on time to complete a research report on Tor and need some sort of practical. This is the only thing I can think of and I&#039;d appreciate any advice or even recommendations for another simple practical regarding the Tor network. It&#039;s for a basic networking course if that helps.<br /><br />Cheers
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor and BitTorrent</strong><br />
+				Post by: <strong>astor</strong> on <strong>April 17, 2013, 06:14 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Here&#039;s some published research on the topic: http://hal.inria.fr/docs/00/47/15/56/PDF/TorBT.pdf<br /><br />And if you don&#039;t trust that link, it&#039;s posted on the official Tor blog: https://blog.torproject.org/blog/bittorrent-over-tor-isnt-good-idea<br /><br />I think you could run wireshark in a VM to show the leakage. One of the problems is the bittorrent client bypassing the proxy settings to connect to the tracker, because that is usually done via UDP while Tor only carries TCP streams.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor and BitTorrent</strong><br />
+				Post by: <strong>Locutus of Borg</strong> on <strong>April 17, 2013, 06:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Just stumbled across that there funnily enough, but I&#039;m still a bit unsure as to how I set everything up so that I can provide screenshots, etc. showing that both the port and Ip address of the device using BitTorrent are visible. I&#039;m not all that clued in on the workings of the likes of BitTorrent, how I can obtain the tracker of a torrent used by the &#039;victim&#039; and so on. All in all I&#039;m struggling to figure out how to put it into practice.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor and BitTorrent</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>April 17, 2013, 07:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Seems to me that you don&#039;t even need a VM. Just setup your torrenting program, find a tracker that uses UDP (my brief searching reveals these torrents include lines such as : udp://tracker-url.com:port/announce ) , configure the torrent program to use Tor and take a screenshot of this configuration, now run wireshark , filter for UDP connections to the port from the torrent file, filter for connections to your Tor entry guards (and take a screenshot showing your entry guards and their IP addresses, or of you selecting to use strict guards in torrc), then when UDP connections are made to the tracker they will by pass Tor and you can see this in the Wireshark logs filtering for connections to the tracker, meanwhile you can see that some of the traffic goes over Tor as well from filtering for connections to the entry guards and taking a screenshot of vidalia with circuits open. It really isn&#039;t that hard at all and if you need to ask for help figuring this out it is a strong sign of not having done any real research into it yourself. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor and BitTorrent</strong><br />
+				Post by: <strong>astor</strong> on <strong>April 17, 2013, 07:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Good advice kmf. Another thing is that some bittorrent programs send the user&#039;s IP address in their data, even when it is sent over Tor. Not sure exactly how they do that, but you could filter for your own IP address to see if it shows up.<br /><br />And of course, pick a FOSS torrent for your experiment. :)<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor and BitTorrent</strong><br />
+				Post by: <strong>Locutus of Borg</strong> on <strong>April 17, 2013, 07:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks a million for the replies. And you&#039;re right about that last part too, kmf. I&#039;ve been under heaps of pressure lately as assignments and exams are just stacking up so I&#039;ve found it difficult to make time to do much research (although I do concede that I could&#039;ve managed my schedule much better than I had done). Also, it was only very recently that I decided to do my practical on BitTorrent as most of my other ideas either involved too much work for the time I have remaining or were just well beyond my level of expertise.<br /><br />But anyway thanks for helping again.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

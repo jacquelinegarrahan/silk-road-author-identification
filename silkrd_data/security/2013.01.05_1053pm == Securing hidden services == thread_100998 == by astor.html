@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=100998.0" />
+		<title>Print Page - Securing hidden services</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: astor on January 05, 2013, 10:53 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Securing hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>January 05, 2013, 10:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Does anybody want to brainstorm about securing hidden services? Here&#039;s my ideal setup.<br /><br />You need two dedicated servers. One is the workstation and the other is the gateway. The workstation hosts the web and database servers. It runs the web site. The gateway hosts two Tor clients. One client is directed at the SOCKS port of the other client, so its Tor circuits run through the other client&#039;s Tor circuits. The gateway has two network interface cards. One is connected to the internet, the other is connected via a crossover ethernet cable to the workstation. The workstation can only access the internet through the gateway. The gateway contains iptables rules to force all connections from the workstation over Tor. That way, even if the workstation is pwned, the attacker can&#039;t determine the IP address. Running Tor over Tor makes certain attacks on hidden service entry guards harder.<br /><br />Both servers run security-hardened kernels with patches like TRESOR to put encryption keys in CPU registers instead of RAM. They use full disk encryption and SE Linux or AppArmor with strict access control policies. <br /><br />I haven&#039;t found a good example of how to do this, but I would prefer to booby trap the cases with a special lock. A specific key or code must be entered. If the case is opened any other way, it initiates a shut down sequence that scrambles RAM and overwrites the first gigabyte of the hard disk, destroying the encryption key. Alternatively, the key could be stored in the TPM, but I don&#039;t know how safe that is. Hardware manufacturers may provide backdoors for LE.<br /><br />All of this is setup in a secure, private location and the servers are shipped to the data center. The technician simply installs the servers in a rack, connects the ethernet cables and turns them on.<br /><br />What am I missing? How could this be made safer?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>January 06, 2013, 01:32 am</strong>
+			</dt>
+			<dd class="postbody">
+				That is pretty much the ideal setup. If you do a colocation and send the server in yourself, which of course has a lot of risk of its own, you can use chassis intrusion detection switches. Many modern motherboards support that. Then you can have the server run some script that shuts down / memory wipes as soon as the case is opened. Additionally you could put the RAM in encapsulation material. Tor via Tor is great for hidden services, at least while they are still allowing it anyway. It should add quite a lot of anonymity for hidden services. Hardware based isolation how you describe is a good way to go about things as well to prevent hackers who root the hidden service from determining its external IP address. Mandatory access controls like SElinux provides are great for server security as well. A lot of modern processors have nifty security features that you can use to further isolate things as well. Of course you need to use a 64 bit OS so that you get the full advantage of ASLR. And you need to pick the right OS, possibly hardened Gentoo would be nice although there are other things to consider as well. <br /><br />I have not heard of a more secure method of hosting servers, I think that is pretty much the diamond standard. Of course you need to make sure you keep everything patched as well, intrusion detection systems can help identify hacking attempts prior to the hackers totally pwning the system as well. There may be some advantage to adding yet another layer of isolation with virtualization, or it might not be worth the disadvantages this brings since you already have hardware based isolation anyway. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>January 06, 2013, 01:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks. I&#039;ll have to look into intrusion detection switches.<br /><br />One thing I didn&#039;t describe is how you access the servers for administrative purposes. Both the gateway and workstation would have hidden services for ssh, and the daemons would be listening only on localhost, so the gateway sshd wouldn&#039;t accept any connections from the public internet (the workstation of course doesn&#039;t face the public internet at all).<br /><br />Further, the HiddenServiceAuthorizeClient option would be turned on and set to stealth, meaning that the admin has to include a &quot;cookie&quot; (basically a password) in his torrc to access the ssh hidden service. If the cookie is not provided, the hidden service appears not to be running, so it&#039;s deniable that these ssh hidden services exist at all. Connecting to the gateway and workstation would be a matter of pointing one&#039;s ssh client, over Tor, at the right onion domain.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>dbz4u</strong> on <strong>January 10, 2013, 12:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=100998.msg706035#msg706035">Quote from: astor on January 06, 2013, 01:56 am</a></div></div><blockquote class="bbc_standard_quote">Thanks. I&#039;ll have to look into intrusion detection switches.<br /><br />One thing I didn&#039;t describe is how you access the servers for administrative purposes. Both the gateway and workstation would have hidden services for ssh, and the daemons would be listening only on localhost, so the gateway sshd wouldn&#039;t accept any connections from the public internet (the workstation of course doesn&#039;t face the public internet at all).<br /><br />Further, the HiddenServiceAuthorizeClient option would be turned on and set to stealth, meaning that the admin has to include a &quot;cookie&quot; (basically a password) in his torrc to access the ssh hidden service. If the cookie is not provided, the hidden service appears not to be running, so it&#039;s deniable that these ssh hidden services exist at all. Connecting to the gateway and workstation would be a matter of pointing one&#039;s ssh client, over Tor, at the right onion domain.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Silk road needs to hire you as a consultant, or at least implement some of these solutions
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>Joy</strong> on <strong>January 10, 2013, 12:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				cool reading.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>talawtam</strong> on <strong>January 10, 2013, 12:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Silk road needs to hire you as a consultant, or at least implement some of these solutions</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />How do you know what security features Silkroad already has in place? These solutions may already be implemented.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>January 10, 2013, 01:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				DPR can&#039;t exactly hire random people from the forums.&nbsp; I mean I have no doubt there have been people in suits lurking here since very shortly after SR was launched -- the fact that someone&#039;s active here and sounds sympathetic to the SR philosophy means essentially nothing.&nbsp; That&#039;s how they take things like SR down -- deception and undercover agents.<br /><br />I&#039;m sure it makes things extremely difficult, but the fact remains: it would be awfully foolish to trust somebody just because they have a bunch of posts on the forums.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>January 10, 2013, 01:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Another way to go about it would be to use a KVM switch set up as a hidden service. Then you can use FDE with the chassis intrusion detection and something like Tresor perhaps. With a KVM switch you get remote access to the entire boot cycle, since you have full remote access to the keyboard monitor and mouse. Then you can do neat things like set bios passwords , and additionally and most importantly you can have FDE. Without a KVM switch you cannot have a remote server with FDE because if it powers off you have no ability to remotely type the password in. I think controlling the server with a hidden service KVM switch and disabling SSH all together would be the better solution. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>January 10, 2013, 04:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yep, I forgot about reboots. I guess I assumed a VNC session would be sufficient for that. I&#039;m also assuming that the hardware is colo&#039;d under a real identity so connecting to the machines directly is not a security threat. I was more worried about someone getting into the machines through a public facing sshd. Of course, that can be secured by turning password authentication off and only using RSA keys, but with ssh hidden services in stealth mode, you can deny there is any ssh at all.<br /><br />What would make this even safer is if you hosted it in your home. The major drawback is the really low outbound bandwidth. It&#039;s possible with a forum like this, which is mostly text. Turn off avatars for even better performance. I doubt a few hundred simultaneous users create more than a few 10s of kilobytes of sustained traffic, since they are not requesting data all the time.<br /><br />The main benefit is that a private residence is the best legally protected location. With dedicated servers, you don&#039;t own the hardware and the provider can hijack your servers at their discretion. Even with colo there will be terms and conditions and they can cut service, block your network connection, or shutdown the server whenever LE decides to do a correlation attack.<br /><br />When the hardware is hosted in your home, locked in a cage, with yourself and a few guns standing by, you can&#039;t beat that kind of protection.<br /><br />Edit: It&#039;s also safer for reboots because you do it directly through a keyboard/monitor connected to the machine, and maintenance issues / hardware upgrades are a lot easier to deal with.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>January 10, 2013, 04:26 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Another thing is, the best way to deal with a correlation attack via a blocked internet connection is to run 2 or more hidden services (2 or more sets of servers as described above) in different locations. Consider 3 hidden services with the same private key and corresponding onion domain. The way that works is, whoever publishes their hidden service descriptor last gets the connections. Hidden services publish their descriptors every half hour. So if you start them 10 minutes apart, users will be connecting to a different set of servers every 10 minutes. If LE somehow identifies one of the servers (despite the protections described above) and cuts the internet connection, a few minutes later they will be able to access &quot;the&quot; hidden service again, creating confusion and plausible deniability.<br /><br />The problem to solve is syncing the databases. For a blog that only gets updated a few times a day at most, that&#039;s easy. For a forum like this, that&#039;s a lot harder.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>lucymylove</strong> on <strong>January 10, 2013, 05:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Nice reading, I had almost the same thoughts about hidden svc-s layout, except Tor-through-Tor.<br />But what I didn&#039;t see, are some points about:<br />1. You need periodically make NTP update on server where hidden service is running. Cause hidden services depend on time sync.<br />2. How Backup-ing data is organized ? Two keypoints for backup, it must be made quick and in safe mannner.<br />Possible solution to make it harder for hack:<br />At some random moment of time, send signaling email to e.g. Tormail showing, that there&#039;s some open port-forwarding on gateway to ssh and there&#039;s 30-min time window to download encrypted backup files, thus service which checks Tormail,&nbsp; downloads backup data within given time-frame.<br /><br />3. Bitcoin wallet and related data must be secured even higher on another dedicated server or VM, than eShop.<br />All connections with Bitcoin server, must be made via well-defined and well-tested interface, the simpler, the better, for example JSON<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>PintoX</strong> on <strong>January 10, 2013, 06:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Great thread i think it actually saved my life or freedom by making me understand i SHOULD NOT use some onion site i created at my current setup -&nbsp; Thanks!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>January 10, 2013, 06:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=100998.msg716920#msg716920">Quote from: lucymylove on January 10, 2013, 05:47 pm</a></div></div><blockquote class="bbc_standard_quote">1. You need periodically make NTP update on server where hidden service is running. Cause hidden services depend on time sync.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Every Linux distro comes at least with ntpdate by default, which updates the clock once a day. That should be sufficient, since clocks don&#039;t drift more than a second or two in a 24 hour period unless you have a really fucked up hardware clock. Alternatively you could run ntp. I don&#039;t see a security threat in allowing these services to update over clearnet. Almost every server has them running so there&#039;s nothing out of the ordinary about that. However, you would definitely want to keep the time correct, because as you said, Tor needs an accurate clock to run, but also because clock skew is a known attack on hidden services.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=100998.msg716920#msg716920">Quote from: lucymylove on January 10, 2013, 05:47 pm</a></div></div><blockquote class="bbc_standard_quote">2. How Backup-ing data is organized ? Two keypoints for backup, it must be made quick and in safe mannner.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />In the case of a multiple hidden service setup, the 3 servers would be backups to each other. If LE seized one, the others would continue operating normally, syncing to each other while getting sync errors to the third server. Also, if an intrusion detection system is configured to destroy the data on the seized server, then LE couldn&#039;t prove it was part of the hidden service. Users would observe no change, because the other 2 servers would continue publishing their descriptors and users would connect to them.<br /><br />However, you probably want a dedicated backup server anyway. One benefit is that you could put it in stealth mode, like the ssh services described above. So even if someone is crawling the Tor network for hidden service descriptors, they would get an error that the hidden service is down whenever they tried to connect to it (unless they had the cookie/password). They couldn&#039;t determine what type of service was running on it, let alone that it was the backup server for hidden service X.<br /><br />As for the backup procedure, there are a variety of backup tools for Linux, but a lot of them are based on rsync. Why not run rsync over ssh? You would have to configure ssh to run over Tor, which can be done with connect-proxy, among other things. So rsync -&gt; ssh -&gt; connect-proxy -&gt; Tor -&gt; backup hidden service. Set an hourly cron job for that.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=100998.msg716920#msg716920">Quote from: lucymylove on January 10, 2013, 05:47 pm</a></div></div><blockquote class="bbc_standard_quote">Possible solution to make it harder for hack:<br />At some random moment of time, send signaling email to e.g. Tormail showing, that there&#039;s some open port-forwarding on gateway to ssh and there&#039;s 30-min time window to download backup files, thus service which checking Tormail downloads backup data within given time-frame.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Seems overly complicated for something that should be straight forward, and relies on a third party service that increases the attack surface.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=100998.msg716920#msg716920">Quote from: lucymylove on January 10, 2013, 05:47 pm</a></div></div><blockquote class="bbc_standard_quote">3. Bitcoin wallet and related data must be secured even higher on another dedicated server or VM, than eShop.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I haven&#039;t given much thought to that, but yeah, you would probably want to run that on separate hardware.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>January 10, 2013, 06:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=100998.msg716745#msg716745">Quote from: astor on January 10, 2013, 04:01 pm</a></div></div><blockquote class="bbc_standard_quote">Yep, I forgot about reboots. I guess I assumed a VNC session would be sufficient for that. I&#039;m also assuming that the hardware is colo&#039;d under a real identity so connecting to the machines directly is not a security threat. I was more worried about someone getting into the machines through a public facing sshd. Of course, that can be secured by turning password authentication off and only using RSA keys, but with ssh hidden services in stealth mode, you can deny there is any ssh at all.<br /><br />What would make this even safer is if you hosted it in your home. The major drawback is the really low outbound bandwidth. It&#039;s possible with a forum like this, which is mostly text. Turn off avatars for even better performance. I doubt a few hundred simultaneous users create more than a few 10s of kilobytes of sustained traffic, since they are not requesting data all the time.<br /><br />The main benefit is that a private residence is the best legally protected location. With dedicated servers, you don&#039;t own the hardware and the provider can hijack your servers at their discretion. Even with colo there will be terms and conditions and they can cut service, block your network connection, or shutdown the server whenever LE decides to do a correlation attack.<br /><br />When the hardware is hosted in your home, locked in a cage, with yourself and a few guns standing by, you can&#039;t beat that kind of protection.<br /><br />Edit: It&#039;s also safer for reboots because you do it directly through a keyboard/monitor connected to the machine, and maintenance issues / hardware upgrades are a lot easier to deal with.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I would certainly avoid using a server registered to my real name, and most definitely would avoid hosting anything remotely illegal out of my house. Using Tor Via Tor should give the hidden service about the same anonymity as a normal Tor client, so it would be less of a horrible idea to host out of your house with such a configuration versus a standard hidden service configuration (which would be an absolutely horrible idea), but I would still avoid it. Having the hidden service registered to some fake identity and hosted out of some random data center in some random country brings a lot of security and anonymity advantage imo. I would be hesitant to even do a colocation unless I was dead sure I did not leave fingerprints or other forensic evidence on the server, but there are quite a lot of security benefits to doing colocation as well. The biggest disadvantages are that you could contaminate the server with biological information and also that you need to reveal your location by shipping the server. However you could perhaps use snail mail remailers to try and obfuscate your location somewhat. The nicest advantage that you get is the ability to be certain that your configuration is how you think it is, and to be able to set the intrusion detection system while it is in such a state (I believe these are powered by the motherboards on board battery and thus an attacker can not merely cut power to circumvent them). <br /><br />On the other hand you can get a lot of the same advantages with a KVM switch on a non colocated server. I believe you can get servers that have intrusion detection systems already configured in them, although I believe then you will need to trust that the server was ever properly configured in the first place. With a KVM switch you can remotely install your entire OS so you do not need to trust that the preinstalled OS from the hosting provider was not root kitted. Mainly the advantage to using colocation is simply that you can have more faith in the chassis intrusion detection system, and that you can do things like protect the memory with encapsulation material. I really would spend a lot of time thinking about the best option, and honestly I would lean more toward getting a non-colocated server with a KVM switch under a fake identity.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>lucymylove</strong> on <strong>January 10, 2013, 07:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=100998.msg717000#msg717000">Quote from: astor on January 10, 2013, 06:39 pm</a></div></div><blockquote class="bbc_standard_quote">As for the backup procedure, there are a variety of backup tools for Linux, but a lot of them are based on rsync. Why not run rsync over ssh? You would have to configure ssh to run over Tor, which can be done with connect-proxy, among other things. So rsync -&gt; ssh -&gt; connect-proxy -&gt; Tor -&gt; backup hidden service. Set an hourly cron job for that.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Imagine you have several gigabytes of data to backup ?<br />It would take a life time to download it via hidden service, that&#039;s I was talking about that gateway must open ports at random point in time, so another server could directly download it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>lucymylove</strong> on <strong>January 10, 2013, 07:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=100998.msg717051#msg717051">Quote from: ahuhol on January 10, 2013, 07:25 pm</a></div></div><blockquote class="bbc_standard_quote">Port knocking would be an excellent solution to this problem.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thanks for clarifying, I suspected, that there must be a such mechanism for safe port opening 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>January 10, 2013, 08:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If you backup over clearnet, then the location of your backup server can be discovered. Port knocking doesn&#039;t solve that problem and is not much more secure than RSA keys. Backing up over Tor to a stealth mode hidden service not only hides the location of the backup server, its very existence is deniable, even to anyone who crawls the network and finds its descriptor. Obviously that&#039;s a problem if you&#039;re backing up gigabytes of data, but there&#039;s no simple solution to that. There is no solution that is secure AND fast.<br /><br />kmf, you bring up some goods points, however most dedicated server providers won&#039;t do exotic server configurations, like crossover cables, unless you&#039;re willing to pay a lot of money. They have preconfigured packages to choose from. Further, a strange setup like that might draw unwanted attention, since I doubt crossover cables and servers with no internet access are common. The same problem exists for colo&#039;ing as you would have to give the technician special instructions.<br /><br />Certainly, there are trade offs to hosting at home.<br /><br />Positives: You don&#039;t have to deal with paying for a server/colo anonymously, obfuscating your shipping location, sending your biological data on the server to a remote location, exotic server configurations raising interest or suspicion, capricious third party TOS and AUP, and third parties willing to work with LE (well, you only have to deal with your ISP).<br /><br />Negatives: bandwidth, and if your server is identified, you&#039;re fucked.<br /><br />IF you&#039;re confident that Tor over Tor and perhaps a few anonymously rented VPSes acting as bridges can protect you, and you have a low bandwidth service, I think it&#039;s an excellent option. You can basically host a hidden service for free on some old computers.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>January 10, 2013, 08:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Many hosts provide KVM over IP with their default dedicated server packages. It also isn&#039;t exceptionally rare to have two servers at a data center with one hooked up to the other on a LAN, some websites have dedicated database servers that have no reason to be directly connected to the internet.&nbsp; A quick google search reveals this host, although there are several others like them:<br /><br />http://www.svwh.net/kvmoverip.php<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Most SVWH Dedicated servers can be ordered with &quot;Lights Out&quot; IPMI KVM over IP Remote Management support built into the motherboard. IPMI (Intelligent Platform Management Interface) is a hardware-level interface specification that provides remote provides remote Keyboard-Video-Mouse access to your server for complete hardware control, including reboots - even if the server is powered off. The control console provides hardware monitoring, diagnostics, and the ability to remotely load ISOs from your local PC. With IPMI server administrators can view a server&#039;s hardware status remotely, receive an alarm automatically if a failure occurs, and power cycle a system that is non-responsive.<br />Key Features:<br /><br />&nbsp; &nbsp; IPMI with KVM Over LAN **<br />&nbsp; &nbsp; Serial Over LAN (SOL)<br />&nbsp; &nbsp; VSC 2.0 supports Video Solutions up to 1024 x 768 @ 60Hz **<br />&nbsp; &nbsp; Virtual Media Over LAN (Virtual USB Floppy/CD and Drive Redirection) **<br />&nbsp; &nbsp; LAN Alert-SNMP Trap<br />&nbsp; &nbsp; Event Log<br />&nbsp; &nbsp; OS Independent<br />&nbsp; &nbsp; Hardware Health Monitor<br />&nbsp; &nbsp; Remote Power Control<br />&nbsp; &nbsp; Management Tools - IPMIView, CLI (Command Line Interface)<br />&nbsp; &nbsp; Support RMCP &amp; RMCP + Protocols<br /><br />How does it work?<br /><br />IPMI defines the protocols used for interfacing with an embedded service processor. This service processor – also known as Baseboard Management Controller (BMC) – resides on the server motherboard. The BMC links to a main processor and other onboard elements via a simple serial bus.<br />What does it do?<br /><br />A Motherboard with an onboard Intelligent Management controller monitors onboard instrumentation such as temperature sensors, power status, voltages and fan speed, and provides remote power control capabilities to reboot and/or reset the server. It also includes remote access to the BIOS configuration and operating system console information via SOL (Serial over LAN) or embedded KVM capabilities. Because the controller is a separate processor, the monitoring and control functions work regardless of CPU operation or system power-on status.<br />Anytime and Anywhere!<br /><br />An administrator accesses the BMC by using an IPMI-compliant management application loaded on a PC or via a web interface on a management appliance that includes IPMI management and KVM. The IPMI protocol leverages an out-of-band network (typically dedicated for server monitoring and management), which provides a secure path for mission-critical applications when regular in-band connectivity is lost or is unresponsive. IPMI messages follow the same format whether they are received through an operating system or are sent and received out-of-band.<br />Remote OS installation from an ISO<br /><br />Use SSL or the Supermicro Intelligent Management web interface to install an OS from an ISO on your local machine.<br />Additional Features<br /><br />The IPMI 2.0 specification supports Serial over LAN to redirect serial console functionality into IPMI over IP. Administrators can then gain full remote access to text-based system information and control for BIOS, utilities, operating systems and applications. IPMI 2.0 also offers major security enhancements. In summary, SIM includes the following key features.<br /><br />&nbsp; &nbsp; Embedded microprocessor providing optional out-of-band KVM capabilities, extending the use of a single keyboard/monitor/mouse to the entire network.<br />&nbsp; &nbsp; Enhanced authentication support that provides stronger processes for establishing secure remote sessions and authenticating users.<br />&nbsp; &nbsp; Enhanced encryption support that allows for secure remote password configuration and protects sensitive system data when transferred over the network<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">These high disk density servers can be configured as either Database Servers utilizing 15,000 RPM SAS drives for faster seek times and high I/O speeds or as Storage Servers utilizing low cost SATA drives to maximize storage capacity; add to either of these server platforms a choice of multiple RAID options and you have servers designed to meet your Business Critical database and storage needs.&nbsp; All SVWH Dedicated DB and Storage Server offerings have 64-bit Quad Core processors and can support up to 32GB of RAM.<br /><br />Dedicated Storage Servers provide a dedicated back-up solution for web infrastructure environments that typically include web, application, and database servers. Many companies choose to have a dedicated storage server solution to maximize capacity, improve manageability, and enhance security.<br /><br />If a dedicated high capacity storage server is unnecessary or is beyond your budget Silicon Valley Web Hosting also offers managed back-up services in the form of private partitions on our shared Network Attached Storage servers. These servers are redundant RAID array servers connected to our private network within our data center, and are not publicly accessible via the Internet. As part of our managed backup data storage solution, you can purchase from 10 GB to 1 TB or more of network storage for backups and data storage external to your dedicated servers. To learn more about SVWH Managed Back-up Services click here.<br /><br />Dedicated Database Servers are computer systems that provide database services to other computers. A typical scenario is for web and/or applications servers to access a database server or servers over a private network.<br /><br />Database servers typically allow concurrent access by end users or applications to improve performance, they maintain the integrity of the data, and handle transaction support and user authorization.&nbsp; The database server manages the processor-intensive work such as data manipulation, compilation, and optimization, and sends only the final results back to the web and/or application server.<br /><br />For higher levels of redundancy or availability multiple database servers can be clustered or federated letting you spread the processing load across a group of servers by horizontally partitioning the data .<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />So they have two standard packages, one includes KVM over IP for dedicated servers, and the other includes a server on their LAN to be used as a database server that is not connected to the internet (of course you don&#039;t need to actually use it as a database server). So that right there is exactly what you need pretty much, although I am not sure how to configure the KVM to be accessed as a hidden service I am pretty sure it can indeed be done. <br /><br />Pretty much the only advantage I see to doing colocation is that you can set the chassis intrusion detection system yourself, and also you can be sure that everything is how you think it is from the get go instead of having to have any initial trust in the hosting provider. However KVM significantly reduces how much you need to trust the host, since you can remotely install the entire OS yourself etc etc. <br /><br />Don&#039;t get me wrong, there are some clear cut benefits to doing colocation or even running the hardware in your own house, but I just do not think those benefits outweigh the major advantages of using a server that has no way of being tied to your real identity even if it is totally compromised. Having the server registered with fake info and unlinkable to you is a last line of defense that I personally would not feel comfortable without. <br /><br />Also it doesn&#039;t look like this host offers chassis intrusion detection, but plenty do. You need to keep in mind that legitimate corporations use servers in data centers, and sometimes they have quite valuable information in the data center. There are many non-criminal reasons for wanting your server to immediately encrypt all of its persistent data / wipe its RAM if the case is breached without authorization...and thus the service is provided by plenty of hosts. The thing is though you sort of need to trust that they have properly configured things in the first place if you do not use colocation and configure it yourself, but another thing to keep in mind is that if the hosting provider is legitimate there is a high chance they are going to have things configured properly simply because they will expect that you are running a legitimate business, not a criminal website that they may someday want to assist law enforcement in attacking. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>January 10, 2013, 09:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				All good points, and a legitimate looking business is a good cover for anon purchases. :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>Deutsche Bank</strong> on <strong>January 26, 2013, 05:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				Wow, I&#039;m simply amazed by all your ideas and thoughts, really appreciated.<br />It helps me to understand the complexity of this topic, thank you very much.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Securing hidden services</strong><br />
+				Post by: <strong>raynardine</strong> on <strong>January 26, 2013, 09:55 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=100998.msg717099#msg717099">Quote from: astor on January 10, 2013, 08:11 pm</a></div></div><blockquote class="bbc_standard_quote">Certainly, there are trade offs to hosting at home.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Personally, I would suggest a private backyard datacenter with Metro Ethernet. Have a dummy hosting company as an excuse, if you feel you need some.<br /><br />I think pretending you&#039;re a rich nerd with too much money will be excuse enough.<br /><br />If you really cannot afford Metro Ethernet, you can try offering a Tor + Bitcoin anonymous VPS service, using multiple layers of anonymity and obfuscation in order to pay for it.<br /><br />If you cannot get Metro Ethernet where you live, move to a place that offers it. Seriously.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

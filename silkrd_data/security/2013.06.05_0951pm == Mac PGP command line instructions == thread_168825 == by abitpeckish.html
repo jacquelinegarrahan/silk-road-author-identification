@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=168825.0" />
+		<title>Print Page - Mac PGP command line instructions</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: abitpeckish on June 05, 2013, 09:51 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Mac PGP command line instructions</strong><br />
+				Post by: <strong>abitpeckish</strong> on <strong>June 05, 2013, 09:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m not going to go deep into why I think you shouldn&#039;t be using your Mac for SR-related purposes or why I think it&#039;s best to use the CLI tools, at least not for the purposes of this post. Suffice it to say that I believe it behooves anyone participating in a legal grey area to know not only the tools of the trade, but the concepts/philosophies that drive those tools. That being said, if you absolutely must use your Mac to craft your encrypted communications, here are some instructions on how to get the gnupg command line tools installed. If you&#039;re interested.<br /><br />---<br /><br />1. Install the OS X developer tools. This can be done on modern Macs by simply installing &quot;XCode&quot; from the Mac App Store.<br /><br />2. Install Homebrew, an easy to use package manager for OS X. The install instructions are located at the website below under the &quot;Install Homebrew&quot; header. (go figure)<br />&nbsp;&nbsp;&nbsp;(Clearnet) http://brew.sh<br />&nbsp;&nbsp;&nbsp;* you may or may not need to install the command line tools, which can be found in XCode preferences under &quot;Downloads&quot;<br />&nbsp;&nbsp;&nbsp;<br />3. From Terminal.app, install gnupg by entering &quot;brew install gnupg&quot;<br /><br />4. Learn how to use the command line tool (gpg). Some examples are provided below.<br /><br />Generate your own privkey/pubkey pair:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --gen-key</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br /><br />Import a public key: <br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --import</code> <br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: blahpointsix (GNU/YourMom)<br />blahblahblah<br />ladfjaldjfadfaldjfladjfkjadkf<br />dafjladkfladkfadkfad<br />=blah<br />-----END PGP PUBLIC KEY BLOCK-----</code>(press ctrl-d to tell gpg that you have finished inputting)<br /><br />Export a public key in text format:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --export -a RECIPIENT_NAME_OR_EMAIL</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />List the public keys in your keyring:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --list-keys</code>&nbsp;&nbsp;&nbsp; <br />Encrypt text from a .txt file for a certain person whose pubkey you have imported:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg -a -r RECIPIENT_NAME_OR_EMAIL -o - -se INPUTFILE.txt</code>&nbsp;&nbsp;&nbsp;<br />(&quot;-o -&quot; makes this output directly to the terminal, which you can then copy/paste)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />---<br /><br />So anyway, there you go. Maybe no one will care, but the information is now available to you. themoreyouknow.jpg
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Mac PGP command line instructions</strong><br />
+				Post by: <strong>modziw</strong> on <strong>June 09, 2013, 10:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=168825.msg1204023#msg1204023">Quote from: abitpeckish on June 05, 2013, 09:51 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;m not going to go deep into why I think you shouldn&#039;t be using your Mac for SR-related purposes or why I think it&#039;s best to use the CLI tools, at least not for the purposes of this post. <br />&nbsp;themoreyouknow.jpg<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Bro,<br /><br />Why no Mac? Come on, spill it.<br /><br />Modzi
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Mac PGP command line instructions</strong><br />
+				Post by: <strong>abitpeckish</strong> on <strong>June 09, 2013, 04:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It&#039;s not about the Mac, per se. I love my Macs, and use them constantly. For the majority of people, however, your Mac is your personal machine. It&#039;s just good practice to keep all your SR-related and other illicit internet practices away from your personal shit.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Mac PGP command line instructions</strong><br />
+				Post by: <strong>modziw</strong> on <strong>June 09, 2013, 09:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks man.<br /><br />Modzi
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Mac PGP command line instructions</strong><br />
+				Post by: <strong>/I_Surf_Worm_Holes</strong> on <strong>July 08, 2013, 04:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Kudos for the info<br /><br />Any decryption commands?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Mac PGP command line instructions</strong><br />
+				Post by: <strong>abitpeckish</strong> on <strong>July 10, 2013, 02:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --decrypt file</code><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --decrypt</code>(ctrl-d when finished pasting)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Mac PGP command line instructions</strong><br />
+				Post by: <strong>saulgood</strong> on <strong>July 10, 2013, 04:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Random tips:<br /><br />1. When you run gpg --gen-key, select a key length of 4096 bits! This makes the key more future-proof against decryption.<br /><br />2. Do NOT enter your real name or email address when generating keys! These stay along with you. The email address doesn&#039;t have to actually point anywhere, fake@example.com is a good one as it&#039;s permanently owned by IANA (won&#039;t change) and they don&#039;t have an MX record. So any email to that address will forever bounce back.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Mac PGP command line instructions</strong><br />
+				Post by: <strong>modziw</strong> on <strong>July 12, 2013, 03:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m not sure if anyone else posted this, but on my MAc here are the two pertinent commands:<br /><br />Encrypt: Shift+Command+E<br /><br />Decrypt: Shift+Command+D<br /><br />Modzi
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

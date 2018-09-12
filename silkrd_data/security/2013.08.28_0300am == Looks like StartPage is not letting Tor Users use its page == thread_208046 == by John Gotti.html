@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=208046.0" />
+		<title>Print Page - Looks like StartPage is not letting Tor Users use its page</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: John Gotti on August 28, 2013, 03:00 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Looks like StartPage is not letting Tor Users use its page</strong><br />
+				Post by: <strong>John Gotti</strong> on <strong>August 28, 2013, 03:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				Overwhelmed? Or something else? This is what happens when using &quot;StartPage&quot; (Tor&#039;s Default search engine). You get a page that says this.<br /><br />&quot;<br />Welcome Tor Users!<br /><br />We are happy to welcome you to Startpage, the world&#039;s most private search engine. Startpage now serves well over 2 million searches per day, making us the biggest private search service on the Internet.<br /><br />Like Tor, Startpage was private long before privacy was cool. We have a fourteen-year company track record, and we are the only search engine that can back up our privacy promises with third-party certification.<br /><br />Here are just a few of our powerful, privacy-protecting features:<br /><br />&nbsp; &nbsp; We do not record anything about you — not your IP address, not your search queries, and we never use tracking cookies.<br />&nbsp; &nbsp; We provide 100% Google results — We submit your search anonymously to Google and return their results to you in total privacy.<br />&nbsp; &nbsp; We encrypt all traffic — using HTTPS, so even your ISP can&#039;t snoop on your searches.<br />&nbsp; &nbsp; We offer a powerful free proxy — that lets you anonymously view third-party websites with every search.<br />&nbsp; &nbsp; We&#039;re third-party certified and independently audited — by EuroPrise and Certified Secure, so you can take our privacy promises to the bank.<br /><br />We love Tor!<br /><br />We believe in the Tor project and its privacy mission and we applaud your efforts to pursue serious Internet privacy.<br /><br />As you know, Tor recently included Startpage as the default search engine in the new Tor Browser Bundles. Thank you! We&#039;re honored to be associated with all of you like-minded, hard-core privacy fanatics.<br />Just One Small Catch...<br /><br />However, the avalanche of new Tor users has created an issue with the algorithm we use to detect and reject automated screen-scraping programs. When multiple Tor users are searching through the same end node, Startpage may wrongly conclude that the searches are coming from a scraper.<br /><br />The unfortunate result is that Startpage may occasionally not return results with Tor. But don&#039;t panic, we&#039;re committed to fixing it.<br />Here&#039;s a Temporary Solution<br /><br />We are reaching out to the Tor developers to find a permanent solution. In the meantime, here is a workaround for Tor users:<br /><br />&nbsp; &nbsp; If you use the Tor Browser Bundle:<br />&nbsp; &nbsp; &nbsp; &nbsp; Switching to a new Tor identity is easy and fast. Click the green onion icon next to your address bar, then click &quot;New Identity&quot; and try your search again. In some cases, you may have to switch identities a few times for this to work.<br /><br />We want Tor users to have a great private search experience with Startpage, and we appreciate your patience while we develop a long-term solution. As you use Startpage, we&#039;d love to hear from you and get your impressions.<br /><br />Meanwhile, thanks for supporting the vision of Tor and Startpage and a completely private Internet!<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Looks like StartPage is not letting Tor Users use its page</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>August 28, 2013, 03:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				Seems like a fair way to let everyone know what&#039;s going on, though.&nbsp; &nbsp;I can see why a specific exit node looks a lot like a scraping bot to them.&nbsp; &nbsp; Lots of simultaneous queries from identical browsers., and I&#039;m guessing most of their anti-scraping methods work based on source IP, request metadata (browser header, etc), and frequency of access.&nbsp; &nbsp;A dozen folks using Tor Browser look something up at the same instant via the same exit, and it looks like a bot.&nbsp; Identical headers, identical source, etc.<br /><br />I&#039;d guess it has as much to do with DoS attack mitigation as it does anti-scraping.&nbsp; &nbsp; Search engines especially have issues with DoS attacks since the act of performing a single search consumes many more resources (CPU, db, etc) than just returning cachable content.<br /><br />I somewhat expect a certain amount of annoying IP-based bans using Tor..&nbsp; Even Tor-friendly sites occasionally have a specific exit-node IP banned.&nbsp; &nbsp;Use a new identity, pick a new exit node, and hopefully it works.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Looks like StartPage is not letting Tor Users use its page</strong><br />
+				Post by: <strong>Ticket</strong> on <strong>August 28, 2013, 04:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				This title is misleading. They&#039;re not forbidding Tor users from using startpage, they just currently have a technical problem which is *easily and quickly* solved by hitting the new identity button (which I can verify from personal experience). <br /><br />Startpage, as is apparent by the tone of the copy and paste above, strongly supports Tor and its users.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Looks like StartPage is not letting Tor Users use its page</strong><br />
+				Post by: <strong>deep987</strong> on <strong>August 28, 2013, 06:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Not new. I&#039;ve had this happen maybe 8 months ago. It&#039;s a server reliability mechanism.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Looks like StartPage is not letting Tor Users use its page</strong><br />
+				Post by: <strong>John Gotti</strong> on <strong>August 28, 2013, 09:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				my bad. too much wax while surfing
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Looks like StartPage is not letting Tor Users use its page</strong><br />
+				Post by: <strong>CaptianKirk</strong> on <strong>August 28, 2013, 10:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=208046.msg1497410#msg1497410">Quote from: John Gotti on August 28, 2013, 03:00 am</a></div></div><blockquote class="bbc_standard_quote">Overwhelmed? Or something else? This is what happens when using &quot;StartPage&quot; (Tor&#039;s Default search engine). You get a page that says this.<br /><br />&quot;<br />Welcome Tor Users!<br /><br />We are happy to welcome you to Startpage, the world&#039;s most private search engine. Startpage now serves well over 2 million searches per day, making us the biggest private search service on the Internet.<br /><br />Like Tor, Startpage was private long before privacy was cool. We have a fourteen-year company track record, and we are the only search engine that can back up our privacy promises with third-party certification.<br /><br />Here are just a few of our powerful, privacy-protecting features:<br /><br />&nbsp; &nbsp; We do not record anything about you — not your IP address, not your search queries, and we never use tracking cookies.<br />&nbsp; &nbsp; We provide 100% Google results — We submit your search anonymously to Google and return their results to you in total privacy.<br />&nbsp; &nbsp; We encrypt all traffic — using HTTPS, so even your ISP can&#039;t snoop on your searches.<br />&nbsp; &nbsp; We offer a powerful free proxy — that lets you anonymously view third-party websites with every search.<br />&nbsp; &nbsp; We&#039;re third-party certified and independently audited — by EuroPrise and Certified Secure, so you can take our privacy promises to the bank.<br /><br />We love Tor!<br /><br />We believe in the Tor project and its privacy mission and we applaud your efforts to pursue serious Internet privacy.<br /><br />As you know, Tor recently included Startpage as the default search engine in the new Tor Browser Bundles. Thank you! We&#039;re honored to be associated with all of you like-minded, hard-core privacy fanatics.<br />Just One Small Catch...<br /><br />However, the avalanche of new Tor users has created an issue with the algorithm we use to detect and reject automated screen-scraping programs. When multiple Tor users are searching through the same end node, Startpage may wrongly conclude that the searches are coming from a scraper.<br /><br />The unfortunate result is that Startpage may occasionally not return results with Tor. But don&#039;t panic, we&#039;re committed to fixing it.<br />Here&#039;s a Temporary Solution<br /><br />We are reaching out to the Tor developers to find a permanent solution. In the meantime, here is a workaround for Tor users:<br /><br />&nbsp; &nbsp; If you use the Tor Browser Bundle:<br />&nbsp; &nbsp; &nbsp; &nbsp; Switching to a new Tor identity is easy and fast. Click the green onion icon next to your address bar, then click &quot;New Identity&quot; and try your search again. In some cases, you may have to switch identities a few times for this to work.<br /><br />We want Tor users to have a great private search experience with Startpage, and we appreciate your patience while we develop a long-term solution. As you use Startpage, we&#039;d love to hear from you and get your impressions.<br /><br />Meanwhile, thanks for supporting the vision of Tor and Startpage and a completely private Internet!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br /><br /><br />i just left startpage and i havent seen any of this ......
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

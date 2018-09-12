@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=71792.0" />
+		<title>Print Page - PGP..... Lots of help needed</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: 2Leftfeet on November 14, 2012, 02:54 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>PGP..... Lots of help needed</strong><br />
+				Post by: <strong>2Leftfeet</strong> on <strong>November 14, 2012, 02:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Please could some kind soul point me in the right direction?<br />I&#039;m using windows, and have had a go at creating a key with a prog called Kleopatra......<br />Not sure if its the right tool for the job or not&nbsp; :o<br /><br />I&#039;ve tried searching the forum for PGP, but all I seem to find is keys that have already been generated.<br /><br />What I&#039;m looking for is some kind of tutorial and a little hand holding....... <br /><br />Hope someone can help a very confused 50 something hippy<br /><br />2Lf
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>Moldybread</strong> on <strong>November 14, 2012, 04:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It really isn&#039;t that hard.<br /><br />first, you have to import the vendors public key. Copy it from his vendor page and save as .txt file. Then, in Kleopatra, click on file/import certificate (or simply press Strg+I) and select the .txt file.<br /><br />Now you have to encrypt your message. To do this, save the message you want to encrypt as a .txt file, and in Kleopatra click on file/sign or encrypt file and choose the .txt you want to encrypt. In the next window Kleopatra asks you what you want to do. Encrypt the file only, do not sign it. Also it is important that you select the field where it says output as text (!).<br />In the next window, choose your vendors certificate you have imported before.<br />The encrypted message is saved as a .txt.asc file, open this file with text editor or notepad, it contains your PGP encrypted message.<br /><br /><br />(Its possible that there is a faster way to do this, but this has always worked for me.)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>MaRyLaMb</strong> on <strong>November 14, 2012, 04:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Just bought a laptop for pgp. Between that and tormail I want to slit my wrists!&nbsp; :((
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>randomOVDB#2</strong> on <strong>November 14, 2012, 06:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Stop using Kleopatra. <br /><br />Download gpg4usb and follow this guide here: https://securityinabox.org/en/gpg4usb_portable
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>TreeSpirit</strong> on <strong>November 15, 2012, 10:25 am</strong>
+			</dt>
+			<dd class="postbody">
+				I was totally lost as well. I use Kleopatra, it is easy with this &#039;holding your hand each step of the way&#039; guide, found here: http://p3lr4cdm3pv4plyj.onion/guides/kleotxt.html
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>WinterMoon</strong> on <strong>November 15, 2012, 12:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=71792.msg590562#msg590562">Quote from: randomOVDB#2 on November 14, 2012, 06:59 pm</a></div></div><blockquote class="bbc_standard_quote">Stop using Kleopatra. <br /><br />Download gpg4usb and follow this guide here: https://securityinabox.org/en/gpg4usb_portable<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I agree.&nbsp; AND:&nbsp; Prior to downloading, make sure the box for GPA is ticked as an option to be included with the download or you won&#039;t get a clipboard.&nbsp; Still indebted to member Nightcrawler for turning me onto to gpg4usb&nbsp; :-*<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>2Leftfeet</strong> on <strong>November 15, 2012, 12:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Many thanks folks,<br />Havin&#039; a look at the guides and gpg4usb.....<br />Starting to understand what its all about.<br /><br />Cheers
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>WinterMoon</strong> on <strong>November 15, 2012, 06:22 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=71792.msg593477#msg593477">Quote from: 2Leftfeet on November 15, 2012, 12:58 pm</a></div></div><blockquote class="bbc_standard_quote">Many thanks folks,<br />Havin&#039; a look at the guides and gpg4usb.....<br />Starting to understand what its all about.<br /><br />Cheers<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />pgp4usb has it&#039;s own set of tutorials w/ screenshots - a real bonus!&nbsp; Once you get going, if you want to practice please feel free to send me encrypted PMs if you want&nbsp; :)<br />/moon
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>2Leftfeet</strong> on <strong>November 16, 2012, 09:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<br /><br />Thanks to WinterMoon I&#039;ve got the hang of it.....<br /><br />If anyone with enough posts reads this, the guy deserves some +1 karma <br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>farmer1</strong> on <strong>November 16, 2012, 10:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				+1 WinterMoon&nbsp; :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>iisthisisi</strong> on <strong>November 16, 2012, 10:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Or install Linux liberte on USB. Leaves no trace and everything for encryption has been build in.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>jnemonic</strong> on <strong>November 17, 2012, 10:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ah so happy i found this thread. have been looking at all the codes thinking wtf. Just downloaded gpg4usb and sorting it out, awesome.<br />Thanks. ;D
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>gypsy</strong> on <strong>November 17, 2012, 11:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Glad I found this too. pgp4usb is so easy to learn - like they said - only 10 mins.&nbsp; Thank you everyone for posting :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>jnemonic</strong> on <strong>November 17, 2012, 11:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve just generated the key, etc, but after that i&#039;m stuck? Arrgh.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>November 17, 2012, 11:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=71792.msg602773#msg602773">Quote from: jnemonic on November 17, 2012, 11:33 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;ve just generated the key, etc, but after that i&#039;m stuck? Arrgh.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If you really expect anyone to help you out, you&#039;re going to have to provide a little more information.<br /><br />- OS:&nbsp; Windows, Mac, Linux? <br /><br />- GPG front-end: Kleopatra, GPA, GPG4USB? <br /><br />Really, if you&#039;re running Windows or Linux, you should be using GPG4USB -- you can be up and running in 10 minutes, flat. <br /><br />Nightcrawler<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>jnemonic</strong> on <strong>November 18, 2012, 12:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hi NightCrawler, i&#039;m running windows and downloaded GPG4USB. I generated the keys but just not sure what to do next.<br />But will look at another thread which i&#039;ve just found and will try again. I&#039;m a noob so its all new to me. :-[<br />I want to make my first order soon so need to sort this out. Thanks again.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>wicked420</strong> on <strong>November 18, 2012, 01:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				you can always head over to : http://p3lr4cdm3pv4plyj.onion/ and read through the guides there.&nbsp; <br /><br />GPG4USB seems to be the newer better way to go though, so if you&#039;ve got it all setup and you&#039;ve made some keys you can just test your setup here:<br /><br />http://p3lr4cdm3pv4plyj.onion/test.php<br /><br />Good luck to ya !
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>jnemonic</strong> on <strong>November 18, 2012, 10:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks wicked, i just tried that link and its taking a long time to load after i pressed test...ah server went down, next time i&#039;ll see if it works. I managed to sort it out, but i dont seem to have a clipboard to paste the encrypted&nbsp; message to? Does it have to be pasted to a clipboard first? ??? ;)<br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>wicked420</strong> on <strong>November 18, 2012, 07:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				the clipboard is the windows clipboard - when you copy something (crtl+c) you&#039;re copying it TO your clipboard, and when you paste (crtl+v) you&#039;re pasting off your clipboard.<br /><br />if you need to see whats on your clipboard, open up notepad, and goto edit, then paste.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>jnemonic</strong> on <strong>November 18, 2012, 09:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Aha, got it!<br /><br />WICKED, wicked. ;) ;D 8)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>tommbstone</strong> on <strong>November 19, 2012, 01:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m running Windows and gpa <br />i followed this guide http://p3lr4cdm3pv4plyj.onion/guides/shepj.html<br /><br />I have a public key its in my sig below.&nbsp; But I need to know whats next? <br /><br />I guess what I need is someone&#039;s public key so i can try to send them a message or have them send me a test message.<br /><br />I&#039;m pulling my freaking hair out with this as well as others.&nbsp; But I got the key so that must be half the battle.&nbsp; I&#039;m not even gonna mess with kleopatra thingy<br />that don&#039;t make any sense either.<br /><br />thx for any help
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>Leapfrogger</strong> on <strong>November 19, 2012, 02:59 am</strong>
+			</dt>
+			<dd class="postbody">
+				GPA is shit- just download gpg4usb. It&#039;s cross compatible with Linux and you can import keys straight from your clipboard, meaning you don&#039;t need to create dozens of little text files for every key you import like you do with GPA.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP..... Lots of help needed</strong><br />
+				Post by: <strong>jnemonic</strong> on <strong>November 19, 2012, 03:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				I actually thought i had it. I sent a message to a local vendour and must look like an idiot.<br />I dont want my PGP fuck ups to hinder any future, and of course my first purchase.... :(<br /><br />A window pops up and says no key found? I dont even know what my own key is, etc.<br /><br />I gotta stop smoking weed, surely its not that freakin hard.... :-[ :-[ :-[<br /><br />Whoa late edit, i did the test and it worked, i just had the clipboard shit going wrong..phew..<br /><br />But how do i get my key so i can paste in my sig and look cool like everyone else..? I&#039;ve posted it in the main PGP thread, but how do i post the short version of it?<br /><br />I swear i just heard numerous face palming going on..hey what can i say, its suddenly a new WORLD!!&nbsp; ;D ;D ;D
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

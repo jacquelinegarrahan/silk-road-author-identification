@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=28763.0" />
+		<title>Print Page - NEW WORKAROUND FOR USING PGP IN UBUNTU 11.10 AND UP</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: DrGonzoII on June 30, 2012, 07:24 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>NEW WORKAROUND FOR USING PGP IN UBUNTU 11.10 AND UP</strong><br />
+				Post by: <strong>DrGonzoII</strong> on <strong>June 30, 2012, 07:24 pm</strong>
+			</dt>
+			<dd class="postbody">
+				As some of you may noticed, the primary PGP program in Ubuntu and its derivatives (Seahorse/ Passwords and Keys) has been somewhat broken since 11.10. It will make, import and sign keys. and do pretty much everything else, except for actually encrypting and decrypting messages.<br /><br />After struggling with this for a while, I finally found a workaround. And since it appears that I am not the only that has had this problem, I decided to write this up in case anyone else needs help with this.<br /><br />All you need to complete Ubuntu&#039;s PGP functionality is a program called geany and its PGP plugin<br />just type in the code:<br /><br />Sudo apt-get install geany geany-plugin-pg<br /><br />Now you still use seahorse to actually make, import and sign keys (that info is available elsewhere but feel free to PM me if still need help) but you will use geany to actually write, encrypt/decrypt and sign your messages<br /><br />When you open up geany you will notice that it is basically a fancy text editor that was made with code writing in mind<br /><br />Before we get started you should already have made a key in seahorse and imported (and signed) at least one persons public key that you want to send messages to. After you have done that&nbsp; you can then do the following<br /><br /><br />TO ENCRYPT MESSAGES:<br />Just open a new document and write your message.<br />Once you are done click on the &quot;Tools&quot; menu<br />Go to the &quot;GeanyPG&quot; sub-menu and choose encrypt<br />You can then select who you want to encrypt it for, from any of the keys that you have imported into Seahorse<br />And you can also choose to sign the message with one of your keys<br />now you have the encrpyted message and you can just copy and paste it into your email/PM <br /><br />TO DECRYPT MESSAGES:<br />This is even easier<br />Just copy your message into a blank geany document<br />Navigate back to the GeanyPG menu and click Decrypt<br />If the message was for you, that it will automatically decrypt it for you and tell who sent it and some other useful info<br /><br /><br /><br />There you go.....I hope at least one person finds this useful
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: NEW WORKAROUND FOR USING PGP IN UBUNTU 11.10 AND UP</strong><br />
+				Post by: <strong>AimHigh</strong> on <strong>July 12, 2012, 07:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				AWESOME. Thanks for the help. What a pain in the ass I&#039;ve had trying to get seahorse to encrypt so I can copy and paste into messages/e-mail.<br /><br />A few notes that I found during my setup (YMMV):<br /><br />&nbsp; &nbsp; &nbsp;Geany-PG did not originally show up in my tools menu. I had to enable it through Tools -&gt; Plugin Manager<br /><br />&nbsp; &nbsp; &nbsp;I found that Geany-PG reported &quot;Unusable public key&quot; if I tried to encrypt with a recipient key which I hadn&#039;t signed yet. I only tested this once, so it may not /always/ be the case.<br /><br />In any case, OMFG THANK YOU.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: NEW WORKAROUND FOR USING PGP IN UBUNTU 11.10 AND UP</strong><br />
+				Post by: <strong>DrGonzoII</strong> on <strong>July 12, 2012, 07:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Glad to see that I helped at least one other person.<br /><br />And yes.....You have to sign EVERYONE&#039;S KEY......EVERY TIME
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

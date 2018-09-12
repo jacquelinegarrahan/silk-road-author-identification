@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=18788.0" />
+		<title>Print Page - Disguising Tor Traffic as Skype Video Calls </title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: vlad1m1r on April 13, 2012, 09:14 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Disguising Tor Traffic as Skype Video Calls </strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>April 13, 2012, 09:14 pm</strong>
+			</dt>
+			<dd class="postbody">
+				A really excellent article from Bruce Schneier&#039;s security blog:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">April 13, 2012<br />Disguising Tor Traffic as Skype Video Calls<br /><br />One of the problems with Tor traffic is that it can de detected and blocked. Here&#039;s SkypeMorph, a clever system that disguises Tor traffic as Skype video traffic.<br /><br />&nbsp; &nbsp; To prevent the Tor traffic from being recognized by anyone analyzing the network flow, SkypeMorph uses what&#039;s known as traffic shaping to convert Tor packets into User Datagram Protocol packets, as used by Skype. The traffic shaping also mimics the sizes and timings of packets produced by normal Skype video conversations. As a result, outsiders observing the traffic between the end user and the bridge see data that looks identical to a Skype video conversation.<br /><br />&nbsp; &nbsp; The SkypeMorph developers chose Skype because the software is widely used throughout the world, making it hard for governments to block it without arousing widespread criticism. The developers picked the VoIP client&#039;s video functions because its flow of packets more closely resembles Tor traffic. Voice communications, by contrast, show long pauses in transmissions, as one party speaks and the other listens.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />See more here (http://www.schneier.com/blog/archives/2012/04/disguising_tor.html)<br /><br />So now there&#039;s finally a way to have Plausible deniability for Tor... except in all those oppressive regimes where Skype is banned too!<br /><br />V.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Disguising Tor Traffic as Skype Video Calls </strong><br />
+				Post by: <strong>QTC</strong> on <strong>April 13, 2012, 09:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				This is really cool but I can&#039;t see where it&#039;s undergone extensive review. So I would continue to use the Tor Project&#039;s protocol obfuscator which is being actively maintained and took no small amount of effort to review and push out.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Disguising Tor Traffic as Skype Video Calls </strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>April 13, 2012, 09:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=18788.msg188763#msg188763">Quote from: QTC on April 13, 2012, 09:27 pm</a></div></div><blockquote class="bbc_standard_quote">This is really cool but I can&#039;t see where it&#039;s undergone extensive review. So I would continue to use the Tor Project&#039;s protocol obfuscator which is being actively maintained and took no small amount of effort to review and push out.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thanks for the post QTC. I&#039;ve just had a peek at ObfuscaTOR and it seems that this is a way of disguising the identity of Tor Bridges. Forgive my ignorance but surely it would still be possible to detect someone was using a Torified connection if they did this? It just wouldn&#039;t be possible to block them from accessing Tor bridges?<br /><br />V.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Disguising Tor Traffic as Skype Video Calls </strong><br />
+				Post by: <strong>QTC</strong> on <strong>April 13, 2012, 09:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It&#039;s obfsproxy, not obfuscator.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Disguising Tor Traffic as Skype Video Calls </strong><br />
+				Post by: <strong>supersecretsquirrel</strong> on <strong>April 13, 2012, 09:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=18788.msg188763#msg188763">Quote from: QTC on April 13, 2012, 09:27 pm</a></div></div><blockquote class="bbc_standard_quote">This is really cool but I can&#039;t see where it&#039;s undergone extensive review.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It hasn&#039;t. Think of it as a prototype that still needs testing and debugging and long term maintenance. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Disguising Tor Traffic as Skype Video Calls </strong><br />
+				Post by: <strong>Dr.HellNo</strong> on <strong>April 14, 2012, 11:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Indeed, in the past many of us considered Skype a security risk due to its behavior and protocol construction. There were also suspicions that, after eBay acquisition, that it was operated by the NSA. How ironic that they would proxy an anonymity system through a privacy-defeating, possibly government run product. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Disguising Tor Traffic as Skype Video Calls </strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>April 14, 2012, 11:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=18788.msg190132#msg190132">Quote from: Dr.HellNo on April 14, 2012, 11:25 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">Indeed, in the past many of us considered Skype a security risk due to its behavior and protocol construction. There were also suspicions that, after eBay acquisition, that it was operated by the NSA. How ironic that they would proxy an anonymity system through a privacy-defeating, possibly government run product. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Skype Technologies unwillingness to share their source code was a little suspicious. In the past it&#039;s been fairly trivial for Police to intercept Skype calls - the German Police had publicly admitted as much. <br /><br />I have posted about secure VOIP in another thread - my personal favourite is using the app Jitsi which supports ZRTP encrypted calls. <br /><br />V.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

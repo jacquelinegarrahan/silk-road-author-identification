@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=210559.0" />
+		<title>Print Page - Majority of Tor crypto keys COULD  be broken </title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Bazille on September 07, 2013, 11:15 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 07, 2013, 11:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				The majority of devices connected to the Tor privacy service may be using encryption keys that can be broken by the National Security Agency, a security researcher has speculated.<br /><br />Rob Graham, CEO of penetration testing firm Errata Security, arrived at that conclusion by running his own &quot;hostile&quot; exit node on Tor and surveying the encryption algorithms established by incoming connections. About 76 percent of the 22,920 connections he polled used some form of 1024-bit Diffie-Hellman key. The analysis came a day after revelations the NSA can circumvent much of the encryption used on the Internet. While no one knows for sure exactly what the NSA is capable of cracking, educated speculation has long made a case that the keys Graham observed are within reach of the US spy agency.<br /><br />&quot;Everyone seems to agree that if anything, the NSA can break 1024 RSA/DH keys,&quot; Graham wrote in a blog post published Friday. &quot;Assuming no &#039;breakthroughs,&#039; the NSA can spend $1 billion on custom chips that can break such a key in a few hours. We know the NSA builds custom chips, they&#039;ve got fairly public deals with IBM foundries to build chips.&quot;<br /><br />He went on to cite official Tor statistics to observe that only 10 percent of Tor servers are using version 2.4 of the software. That&#039;s the only Tor release that implements elliptical curve Diffie-Hellman crypto, which cryptographers believe is much harder to break. The remaining versions use keys that are presumed to be weaker.<br /><br />Graham called on Tor Project leaders to do a better job of getting end users to upgrade to version 2.4, but he also couched his findings with a word of caution.<br /><br />&quot;Of course, this is just guessing about the NSA&#039;s capabilities,&quot; he wrote. &quot;As it turns out, the newer elliptical keys may turn out to be relatively easier to crack than people thought, meaning that older software may in fact be more secure. But since 1024 bit RSA/DH has been the most popular SSL encryption for the past decade, I&#039;d assume that it&#039;s that, rather than curves, [it&#039;s 1024 RSA/DH] that the NSA is best at cracking.&quot;<br /><br />http://arstechnica.com/security/2013/09/majority-of-tor-crypto-keys-could-be-broken-by-nsa-researcher-says/
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 07, 2013, 11:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				Fortunately, a solution of sorts does exist. A family of encryption algorithms called elliptic curve cryptography (ECC) exists. ECC is similar to the other asymmetric algorithms, in that it&#039;s based on a problem that&#039;s assumed to be hard (in this case, the elliptic curve discrete logarithm). ECC, however, has the additional property that its hard problem is sufficiently different from integer factorization and the regular discrete logarithm that breakthroughs in either of those shouldn&#039;t imply breakthroughs in cracking ECC.<br /><br />However, support for ECC is still very problematic. Much of the technology is patented by BlackBerry, and those patents are enforced. There are certain narrow licenses available for implementations of ECC that meet various US government criteria, but the broader patent issues have led some vendors to refuse to support the technology.<br /><br />Further, support of protocols that can use ECC, such as TLS 1.2 (the latest iteration of SSL technology) is still not widely available. Certificate authorities have also been slow to offer ECC certificates.<br /><br />As such, the researchers are calling for the computer industry as a whole to do two things. First, embrace ECC today. Second, ensure that systems that use cryptography are agile. They must not be lumbered with limited sets of algorithms and obsolete protocols. They must instead make updating algorithms and protocols quick and easy, to ensure that software systems can keep pace with the mathematical research and adapt quickly to new developments and techniques. The cryptopocalypse might never happen—but we should be prepared in case it does.<br /><br />http://arstechnica.com/security/2013/08/crytpo-experts-issue-a-call-to-arms-to-avert-the-cryptopocalypse/
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 07, 2013, 11:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Certificate authorities have also been slow to offer ECC certificates.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If certain certificate authorities are deliberately slowing the process, then elliptical curve keys are probably good.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 07, 2013, 11:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				I just want to point out that technically ECDH and DH are not asymmetric algorithms, but rather are secret derivation algorithms. ECDH and DH are not even encryption algorithms. You cannot encrypt or decrypt anything with them. <br /><br />Symmetric Encryption (AES) = Encrypt and Decrypt with single key<br />Asymmetric Encryption (RSA) = Encrypt with public key, Decrypt with private key<br />Secret Derivation (ECDH) = Pubkey-A and Privkey-B = Secret1, Pubkey-B And Privkey-A = Secret1<br /><br />I just point this out because it is extremely common misconception that asymmetric encryption = anything with public and private key. Not all public-private algorithms are asymmetric cryptography, and some of the most popular ones are not even encryption algorithms at all. <br /><br />A few ECC algorithms are included in OpenSSL, a few other libraries as well. I don&#039;t know if they are in violation of BlackBerrys patents or not, but I doubt it as ECDH and ECDSA are widely used. There is really no reason for any new software to use RSA or DH imo, ECDH and ECDSA are both easily utilized and have some significantly superior properties to RSA, including key size, security, and speed. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>September 07, 2013, 12:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1522269#msg1522269">Quote from: Bazille on September 07, 2013, 11:15 am</a></div></div><blockquote class="bbc_standard_quote">&quot;Everyone seems to agree that if anything, the NSA can break 1024 RSA/DH keys,&quot; Graham wrote <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>That&#039;s the crux of the whole discussion right there.<br /><br />If *anything*, NSA can &quot;break&quot; 1024 DH to discover symmetric session keys.<br /><br />Or they can&#039;t.&nbsp; I&#039;m not saying I don&#039;t think there&#039;s exposure there long-term&nbsp; But based on reported tone of the Snowden crypto-related documents that Schneier and everyone else has seen, there&#039;s nothing to indicate that NSA has the ability to directly break DH, much less break it on a broad scale.<br /><br />And if they can, I&#039;m close to positive that they can&#039;t do it on an epic scale.&nbsp; Which brings us down to the same basic truisms when it comes to Tor and other technologies:<br />1. If an adversary with capabilities remotely approaching NSA&#039;s is *specificially targeting you as an individual*, under a microscope, and they&#039;re motivated, you are fucked.&nbsp; That&#039;s not a function of 1024-bit vs 4096-bit.&nbsp; &nbsp;It&#039;s a function of capabilities and resources.&nbsp; And it will always be true.&nbsp; There&#039;s not a gap in technology that&#039;s going to protect against that.&nbsp; They can spend billions and employ armies of people smarter than you.<br />2. The risk that everyone should be concerned about is NSA/etc&#039;s ability to target classes/types of users across the board.&nbsp; Throwing out a net.&nbsp; &nbsp;And while I believe that through traffic analysis and other capabilities, they should be able to target Tor users on a fairly broad scale, I think it would require a level of effort that may or may not be worth it from their perspective.<br /><br />Personally, I think NSA probably records all Tor traffic they can see, and given the right motivation, can crunch that saved traffic to deanonymize a high percentage of users and draw significant conclusions about what they&#039;re probably doing.&nbsp; Once that boils down to a handful of individuals they care about, they can own them.<br /><br />There&#039;s just not some silver encryption bullet that will ever protect you against smart people that can spend $11 billion dollars a year and devote 35,000 people to hosing *you*.&nbsp; &nbsp; But we can make it increasingly harder and more expensive for them to do it.&nbsp; And when we raise the cost for them to do it, we decrease the likelihood that &quot;our&quot; traffic (whatever that means) is where they want to spend their money.&nbsp; <br /><br />NSA has real problems to solve, and Tor users browsing SR isn&#039;t one of their problems.&nbsp; &nbsp;Tor users browsing CP on FH sites might get tasked as one of their problems, but that&#039;s a side project and a distraction to their core focus.&nbsp; <br /><br />Their true goal is maintaining long-term access to every interesting bit of information they can so they can appear omniscient. <br /><br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken - time to update to Tor 0.2.4</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 07, 2013, 01:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If NSA spends resources to bust people viewing CP they probably willing to spend just about as much resources to bust people ordering drugs. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken - time to update to Tor 0.2.4</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>September 07, 2013, 02:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1522331#msg1522331">Quote from: kmfkewm on September 07, 2013, 01:01 pm</a></div></div><blockquote class="bbc_standard_quote">If NSA spends resources to bust people viewing CP they probably willing to spend just about as much resources to bust people ordering drugs.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Fair enough, and I have a hard time disagreeing with your point.&nbsp; &nbsp;The only practical difference as it gets quietly thrown over the wall to LE is that with CP, the allegation/arrest is pretty much the conviction, where with drugs, the societal/legal stigma (and percentage of defendants actively fighting the charges instead of taking a plea, and more importantly, risk of discovery at trial) is very much different.&nbsp; &nbsp;And I think there&#039;s zero chance that NSA is burning a useful capability (monitoring darknets) without a clear method to allow &quot;parallel reconstruction&quot; of the events.&nbsp; &nbsp;Which is why I think that even if NSA was involved in the FH/CP busts behind the scenes, the TBB exploit will be the parallel reconstruction of &quot;how the FBI identified users accessing those sites&quot;.&nbsp; &nbsp;If NSA was involved in the FH bust, their output could have been as simple as a Post-It note with FH&#039;s actual deanonymized IPs scribbled on it, or the FH owner&#039;s name and info.<br /><br />My primary point was that *even if* NSA has the ability to &quot;break&quot; DH 1024 under a microscope right now, until that capability scales to an epic degree (doing it to hundreds of thousands of connections in near-realtime), using *that specific* capability to target SR users ranks way down there on their list of targets.&nbsp; The cost/benefit ratio has to be way off, unless they&#039;re a decade ahead of where the Snowden documents apparently say they are.&nbsp; &nbsp; NSA&#039;s DH decryption capabilities rank way, way, way down there on the list of risks people buying illegal drugs over darknets and shipping them through the postal system face.<br /><br />Traffic analysis?&nbsp; Different story.&nbsp; Thinking through your points from other threads a while back, at the point where the Manning/Assange/Wikileaks saga started unfolding, and Wikileaks opened a Tor-facing submission site, I have a hard time imagining NSA not aggressively developing the capability to use traffic analysis to specifically deanonymize Tor users of a hidden service.&nbsp; Because catching people leaking valuable/top-secret US Government secrets is smack in the middle of what NSA is supposed to be focusing on.&nbsp; Their benefit clearly outweighs the cost.&nbsp; &nbsp;And since that was quite a while ago, it&#039;s an easy leap to guess that whatever mechanism they have has grown more scalable and cheaper to operate on a large scale.<br /><br />A scenario where they&#039;d parallel reconstruct a bust on DPR or a handful of very large vendors?&nbsp; Relatively easy to imagine. If the US government is that pissed at you, they&#039;re capable of almost anything.&nbsp; Viktor Bout figured that out.&nbsp; Every SR user/consumer?&nbsp; Not impossible, just unlikely.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken - time to update to Tor 0.2.4</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 07, 2013, 02:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Parallel reconstruct is way easier on drug users than CP viewers. Random interception, dog hit on the package, etc. For CP viewer what are they gonna say? I guess that they hacked the computer. But that would entail that the computer seized was actually hackable. And I don&#039;t think the NSA is gonna burn zero days busting people for CP. And in fact the exploit that was used against people going to FH servers was a month old and had already been patched. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken - time to update to Tor 0.2.4</strong><br />
+				Post by: <strong>FreedomOutlaw</strong> on <strong>September 07, 2013, 03:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote"> Tor users browsing CP on FH sites might get tasked as one of their problems, but that&#039;s a side project and a distraction to their core focus.&nbsp; </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br />I don&#039;t believe that they were after CP. I think they wanted Tormail. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken - time to update to Tor 0.2.4</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>September 07, 2013, 04:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				kmfkewm is right again as usual :)&nbsp; Parallel reconstruction is probably *easiest* for drugs.&nbsp; &nbsp;But on a broad scale, it would be relatively difficult to pull off, except for large vendors.&nbsp; Too many LE agents involved to keep the parallel reconstruction lie alive successfully.&nbsp; At least, there&#039;s that risk from their perspective.<br /><br />And the whole &quot;They were after Tormail, not CP&quot; is a definitely valid point if the attack actually involved NSA.&nbsp; It would take exactly one high value target using it to make the whole thing worth it. <br /><br />But we&#039;re all just guessing.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken - time to update to Tor 0.2.4</strong><br />
+				Post by: <strong>Bungee54</strong> on <strong>September 07, 2013, 06:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				sbbed
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 07, 2013, 08:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Apparently the NSA has been promoting elliptical curve cryptography since 2009. That could mean that they have a way to break it already. But they don&#039;t seem to push the certificate authorities to introduce ECC keys.<br /><br />Bruce Schneier:<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Certainly the fact that the NSA is pushing elliptic-curve cryptography is some indication that it can break them more easily.<br /><br />If we think that&#039;s the case, the fix is easy: increase the key lengths.<br /><br />Assuming the hypothetical NSA breakthroughs don&#039;t totally break public-cryptography -- and that&#039;s a very reasonable assumption -- it&#039;s pretty easy to stay a few steps ahead of the NSA by using ever-longer keys. We&#039;re already trying to phase out 1024-bit RSA keys in favor of 2048-bit keys. Perhaps we need to jump even further ahead and consider 3072-bit keys. And maybe we should be even more paranoid about elliptic curves and use key lengths above 500 bits.<br /><br />One last blue-sky possibility: a quantum computer. Quantum computers are still toys in the academic world, but have the theoretical ability to quickly break common public-key algorithms -- regardless of key length -- and to effectively halve the key length of any symmetric algorithm. I think it extraordinarily unlikely that the NSA has built a quantum computer capable of performing the magnitude of calculation necessary to do this, but it&#039;s possible. The defense is easy, if annoying: stick with symmetric cryptography based on shared secrets, and use 256-bit keys.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />https://www.schneier.com/blog/archives/2013/09/the_nsas_crypto_1.html<br /><br />However the reason why the NSA was pushing ECC may not be because they can attack ECC generally, but because they put a backdoor into one ECC pseudo random generator. I assume there can be lots of different methods of generating random numbers for ECC. Unfortunately I don&#039;t understand enough about it to see if the method Tor uses is flawed.<br /><br />http://www.wired.com/politics/security/commentary/securitymatters/2007/11/securitymatters_1115
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>MarcelKetman</strong> on <strong>September 07, 2013, 11:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So much good news to be found on these pages these days! 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 08, 2013, 09:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				Tor 0.2.4.x uses the Curve25519 method for elliptical curve cryptography. That seems to be safe against side-channel attacks by the NSA.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">This elliptic curve follows all of the standard IEEE P1363 security criteria. It also follows new recommendations that achieve &quot;side-channel immunity&quot; and &quot;twist security&quot; while improving speed. What this means is that secure implementations of Curve25519 are considerably simpler and faster than secure implementations of (e.g.) NIST P-256; there are fewer opportunities for implementors to make mistakes that compromise security, and mistakes are more easily caught by reviewers.<br /><br />An attacker who spends a billion dollars on special-purpose chips to attack Curve25519, using the best attacks available today, has about 1 chance in 1000000000000000000000000000 of breaking Curve25519 after a year of computation. One could achieve similar levels of security with 3000-bit RSA&nbsp; </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />http://dnscurve.org/crypto.html
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>bho4ever</strong> on <strong>September 08, 2013, 09:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				As a small time buyer of cannabis through the SR, these kind of stories make me realize it&#039;s much safer for me to just buy in RL or move to a MMJ state. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 08, 2013, 10:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				@bho4ever<br />As a small time buyer you will probably not get targeted by the NSA, even when they know what you do. I don&#039;t think you need to be overly paranoid. Just try to make it as hard for them as possible. And try to make other people use Tor. The more people use it, the more anonymous the rest will become. Don&#039;t believe the end-of-world proclamations who say Tor is dead. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>astor</strong> on <strong>September 08, 2013, 11:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1524121#msg1524121">Quote from: Bazille on September 08, 2013, 09:57 am</a></div></div><blockquote class="bbc_standard_quote">Tor 0.2.4.x uses the Curve25519 method for elliptical curve cryptography. That seems to be safe against side-channel attacks by the NSA.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I believe that was rransom&#039;s idea. Probably the smartest and most crypto knowledgeable guy to ever be involved with the Tor Project.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken - time to update to Tor 0.2.4</strong><br />
+				Post by: <strong>kittenfluff</strong> on <strong>September 09, 2013, 10:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1522331#msg1522331">Quote from: kmfkewm on September 07, 2013, 01:01 pm</a></div></div><blockquote class="bbc_standard_quote">If NSA spends resources to bust people viewing CP they probably willing to spend just about as much resources to bust people ordering drugs.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I disagree. For starters I don&#039;t think the FH bust was all about CP at all. Just like the &#039;drug war&#039; was used as an excuse for decades for authoritarian police action in certain circles (black/poor, but not rich white guys work on Wall St), I think CP is starting to be used as an excuse to stamp all over the internet in digital jack-boots. Sure, the people at the FBI probably believe in what they&#039;re doing, but someone signs the funding orders - that&#039;s ultimately how priorities are arranged. And if the NSA have plants in commercial software companies inserting backdoors into encryption implementation, you can bet they&#039;ll have some HumInt in the FBI on digital matters like CP.<br /><br />So, on to drugs; the government never intended to stop drug-trade, they simply wanted it illegal. That way they have an excuse to do things they&#039;d otherwise have problems with. In fact, there is some good evidence that the US government (or branches of it at least) have encouraged the drug trade. Certainly, it was not always true that Afghanistan grew so much opium - it used to grow as much marijuana, but this was stamped out and replaced with opium so that black ghettos could be flooded with heroin, in an attempt to stem civil rights movements and groups like the Black Panthers. So, I seriously doubt there is much impetus to go around busting buyers/sellers on SR (though I imagine if they could, they would collect all the info in case they feel like busting you). I&#039;ll bet they would love to get their hands on DPR and the SR servers though, but I also bet they&#039;d leave them up and running and none of us here would know the difference - just another reason to encrypt you&#039;re address manually with PGP when buying....<br /><br />And one last thing, look at the latest leaks. Look at what they&#039;re actually targeting; HTTPS and SSL - these are not so they can catch CPers or drug users, these are commercial standards used by the general public. In fact, the documents (as far as I have understood them) mention inserting weaknesses and backdoors into commercial products alot, but mentions open-source very little. Now, either they&#039;re not really interested in the kind of open-source encryption that a minority of internet users use (but the majority of illicit users use), or they&#039;ve hidden that intent/capability much better than the rest of the project. I&#039;m inclined to the former, since weakening commercial products is MUCH more controversial as it undermines modern banking and commerce, but is far more useful as far as wide-ranging spying is concerned. Open-source is only used by weirdos, lefty-liberals, CPers, deviants, and those with something to hide, so would be fairly uncontroversial as a target...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 10, 2013, 03:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">but because they put a backdoor into one ECC pseudo random generator. I assume there can be lots of different methods of generating random numbers for ECC. </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Any RNG can be used for ECC keys. <br /><br /><br />sha256(&quot;fijewfeifjewijfiewjfiewiwegj9&quot;) = 70c99bd41eac18009667fba5b1bfaeff720c08eb3dfac081f0fe3758a87af1b8<br /><br />I just generated an ECDH-256 private key with sha256 and random typing on the keyboard. The trickier part is making the public key from the private key. I can do that too, but would need to write a little C program and use OpenSSL. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 10, 2013, 03:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1524720#msg1524720">Quote from: bho4ever on September 08, 2013, 09:36 pm</a></div></div><blockquote class="bbc_standard_quote">As a small time buyer of cannabis through the SR, these kind of stories make me realize it&#039;s much safer for me to just buy in RL or move to a MMJ state.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You think it is better to have a cellphone that makes an unencrypted call to a known drug dealers phone, than it is to have a computer that bounces layer encrypted communications through six nodes prior to connecting to a known drug dealing site? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 10, 2013, 04:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1524919#msg1524919">Quote from: astor on September 08, 2013, 11:19 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1524121#msg1524121">Quote from: Bazille on September 08, 2013, 09:57 am</a></div></div><blockquote class="bbc_alternate_quote">Tor 0.2.4.x uses the Curve25519 method for elliptical curve cryptography. That seems to be safe against side-channel attacks by the NSA.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I believe that was rransom&#039;s idea. Probably the smartest and most crypto knowledgeable guy to ever be involved with the Tor Project.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I think D. J. Bernstein and Ian Goldberg might disagree with you ;). DJB designed and implemented Curve25519, rransom decided it should be used. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>September 10, 2013, 04:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1527665#msg1527665">Quote from: kmfkewm on September 10, 2013, 04:04 am</a></div></div><blockquote class="bbc_standard_quote">I think D. J. Bernstein and Ian Goldberg might disagree with you ;). DJB designed and implemented Curve25519, rransom decided it should be used.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>While we&#039;re on that topic, there&#039;s something I&#039;ve been wondering for a few years now.. What has prevented more widespread use of NaCl?&nbsp; Lack of peer-review, lack of confidence, or just lack of perceived need? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 10, 2013, 04:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				Lack of cross platform support would be my number one guess. I wanted to use it for my project, but I also want my project to work on Windows. OpenSSL is the best crypto library imo, not because it is the best implemented, but because it has so much implemented and works on so many different platforms. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>September 10, 2013, 05:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1527750#msg1527750">Quote from: kmfkewm on September 10, 2013, 04:56 am</a></div></div><blockquote class="bbc_standard_quote">Lack of cross platform support would be my number one guess. I wanted to use it for my project, but I also want my project to work on Windows. OpenSSL is the best crypto library imo, not because it is the best implemented, but because it has so much implemented and works on so many different platforms.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>That makes perfect sense.&nbsp; I forget that there are Windows users in the world.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>bho4ever</strong> on <strong>September 10, 2013, 09:09 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1527641#msg1527641">Quote from: kmfkewm on September 10, 2013, 03:57 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1524720#msg1524720">Quote from: bho4ever on September 08, 2013, 09:36 pm</a></div></div><blockquote class="bbc_alternate_quote">As a small time buyer of cannabis through the SR, these kind of stories make me realize it&#039;s much safer for me to just buy in RL or move to a MMJ state.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You think it is better to have a cellphone that makes an unencrypted call to a known drug dealers phone, than it is to have a computer that bounces layer encrypted communications through six nodes prior to connecting to a known drug dealing site?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I hear ya. I also think about the other shit like neighbors or police taking down a plate number or being there if a raid happens, been close a couple times in my 20+ years of RL dealings. But, none of my potential problem would have been a federal charge/felony.&nbsp; I&#039;m very grateful though to know about and use the Silk Road, i don&#039;t ever want to go back to RL dealings. Just being a bit paranoid (mostly when I&#039;m stoned) is all.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>astor</strong> on <strong>September 10, 2013, 11:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1527665#msg1527665">Quote from: kmfkewm on September 10, 2013, 04:04 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1524919#msg1524919">Quote from: astor on September 08, 2013, 11:19 pm</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210559.msg1524121#msg1524121">Quote from: Bazille on September 08, 2013, 09:57 am</a></div></div><blockquote class="bbc_standard_quote">Tor 0.2.4.x uses the Curve25519 method for elliptical curve cryptography. That seems to be safe against side-channel attacks by the NSA.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I believe that was rransom&#039;s idea. Probably the smartest and most crypto knowledgeable guy to ever be involved with the Tor Project.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I think D. J. Bernstein and Ian Goldberg might disagree with you ;). DJB designed and implemented Curve25519, rransom decided it should be used.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That&#039;s what I meant. He didn&#039;t invent it, but he argued for its use in Tor.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 10, 2013, 12:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I know but you said he is probably the most knowledgeable crypto guy to be involved with Tor, but DJB and Ian Goldberg are involved with Tor and they are the people the Tor developers get some of their encryption algorithms from, and also the ones they turn to for crypto advice the most I would say. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>astor</strong> on <strong>September 10, 2013, 02:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				How are they involved? I guess it depends on how you define &quot;involved&quot;, but rransom wrote code for Tor and managed bug tickets and stuff like that. DJB and Goldberg would be more like consultants.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Majority of Tor crypto keys COULD  be broken </strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 10, 2013, 03:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				DJB wrote the ECC code that Tor uses.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

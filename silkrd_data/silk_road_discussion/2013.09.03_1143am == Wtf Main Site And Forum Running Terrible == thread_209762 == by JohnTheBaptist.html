@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=209762.0" />
+		<title>Print Page - Wtf Main Site And Forum Running Terrible</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Silk Road discussion => Topic started by: JohnTheBaptist on September 03, 2013, 11:43 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>JohnTheBaptist</strong> on <strong>September 03, 2013, 11:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				This is so fucking annoying, what the fuck is going on, constant time outs, repeated error your last posting from this I,P&nbsp; <br />Why is this running like a bag of shite? You try and click on a post or thread and its timed out. Can somebody tell me what on gods green fucking earth is happening?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>gazwel</strong> on <strong>September 03, 2013, 11:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				Main site won&#039;t load for me just now at all.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>JohnTheBaptist</strong> on <strong>September 03, 2013, 11:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				I know its terribly frustrating, all the time the site&#039;s been here, and we cant have it running smooth yet.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>gazwel</strong> on <strong>September 03, 2013, 11:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				It is never going to be perfect though with a constant steam of attacks by &quot;hackers&quot; and LE.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 03, 2013, 12:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It&#039;s probably due to the massive increase in the number of clients connecting to the Tor network, which has gone from 500K per day to over 2 million per day.<br /><br />https://metrics.torproject.org/direct-users.png?start=2013-01-01&amp;events=off&amp;end=2013-09-03&amp;country=all<br /><br />At the same time, the advertised bandwidth in the network has actually decreased.<br /><br />https://metrics.torproject.org/bandwidth.png?start=2013-01-01&amp;end=2013-09-03<br /><br />Tor is mostly CPU-bound, meaning that the crypto operations used to build circuits and push encrypted traffic are the limiting factor on the network. High bandwidth relays max out their CPUs long before they max out their bandwidth. Even with 1 Gbit ports, they can only push about 200-300 Mbit of traffic per core.<br /><br />Some relay operators have posted to the tor-relays mailing list:<br /><br />https://lists.torproject.org/pipermail/tor-relays/2013-August/002594.html<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">&nbsp; &nbsp; I&#039;m currently seeing more than a doubling of connections (from a mean of<br />&nbsp; &nbsp; c. 2000 established connections to just over 5000) on my relay at<br />&nbsp; &nbsp; 0xbaddad. The log is full of the (expected) messages:<br /><br />&nbsp; &nbsp; &quot;Your computer is too slow to handle this many circuit creation requests!&quot;<br /><br />&nbsp; &nbsp; I guess this is related to the massive jump in connected clients<br />&nbsp; &nbsp; in the past few days and I assume that everyone else is seeing<br />&nbsp; &nbsp; something similar.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br />So even though the new clients don&#039;t seem to be doing much (bandwidth isn&#039;t increasing), maintaining open circuits for 4 times as many clients is straining the relays. The whole network is slowed down with increased lag and a high percentage of failures when connecting to sites. Because circuits to hidden services use twice as many relays as circuits to clearnet sites, we should expect hidden service to be affected more by this.<br /><br />As for what&#039;s causing so many clients to connect, nobody knows yet.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>Mitch Kumstien</strong> on <strong>September 03, 2013, 12:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				This is a wrinkle that needs to be ironed out somehow...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>Mitch Kumstien</strong> on <strong>September 03, 2013, 01:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Is it possible that bots are being used to overload the tor network in an attempt by either L.E. or some other group as a form of attack or frustration for those who use sites like The Silk Road?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>spunjtom</strong> on <strong>September 03, 2013, 02:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				we have always heard that the more people on Tor the better it will run, but then now that it has happened we see that it doesn&#039;t run worth a shit!&nbsp; it is what it is, as they say- but as of right now we still do not know why so many more users, or how to fix the almost crippling effects, right?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>zcabw58</strong> on <strong>September 03, 2013, 03:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If everyone sets up relaying it will run much better. Simple to do and helps everyone.<br /><br />Try setting up a non exit relay, if enough people with bandwidth/processing power do it we will be back to normal.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>Enemycraft</strong> on <strong>September 03, 2013, 05:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513887#msg1513887">Quote from: zcabw58 on September 03, 2013, 03:10 pm</a></div></div><blockquote class="bbc_standard_quote">If everyone sets up relaying it will run much better. Simple to do and helps everyone.<br /><br />Try setting up a non exit relay, if enough people with bandwidth/processing power do it we will be back to normal.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>exactly...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>pinto43</strong> on <strong>September 03, 2013, 05:22 pm</strong>
+			</dt>
+			<dd class="postbody">
+				this happens all the time for me too. Happening right now, it normally only last a day though. it&#039;ll pass
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>anontoker</strong> on <strong>September 03, 2013, 05:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I have had the same issue last few days. Two days ago I could not access SR or the forums. Yesterday I had to refresh a few times and logged on both sites.<br />Hope it improves soon, there is dope for me to smoke. :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>SmokesHisBroccoli</strong> on <strong>September 03, 2013, 06:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I can&#039;t get to SR at all right now.&nbsp; Forums seem to be OK for me
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>pinto43</strong> on <strong>September 03, 2013, 08:22 pm</strong>
+			</dt>
+			<dd class="postbody">
+				someone said it was up for them now.. still down for me though :/
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>jescowhite</strong> on <strong>September 03, 2013, 08:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Took hours to get on this morning just to get addresses/fill orders. Then it took hours again just to get on to mark em shipped when i got home. This is getting ridiculous, not sure how business can go on like this. Is anything being done to fix this? Its becoming almost a daily issue.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>danb15</strong> on <strong>September 03, 2013, 08:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				When are we going to get word on what has being happening the last 2 days? is the site under attack again should we be worried? seen another thread about Tor sites being shut down so would like to know before i out coins on here, feel sorry for the vendors no warnings or anything loosing out on lots of money and no warnings or answers thanks..
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>JohnTheBaptist</strong> on <strong>September 03, 2013, 08:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513822#msg1513822">Quote from: astor on September 03, 2013, 12:48 pm</a></div></div><blockquote class="bbc_standard_quote">It&#039;s probably due to the massive increase in the number of clients connecting to the Tor network, which has gone from 500K per day to over 2 million per day.<br /><br />https://metrics.torproject.org/direct-users.png?start=2013-01-01&amp;events=off&amp;end=2013-09-03&amp;country=all<br /><br />At the same time, the advertised bandwidth in the network has actually decreased.<br /><br />https://metrics.torproject.org/bandwidth.png?start=2013-01-01&amp;end=2013-09-03<br /><br />Tor is mostly CPU-bound, meaning that the crypto operations used to build circuits and push encrypted traffic are the limiting factor on the network. High bandwidth relays max out their CPUs long before they max out their bandwidth. Even with 1 Gbit ports, they can only push about 200-300 Mbit of traffic per core.<br /><br />Some relay operators have posted to the tor-relays mailing list:<br /><br />https://lists.torproject.org/pipermail/tor-relays/2013-August/002594.html<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">&nbsp; &nbsp; I&#039;m currently seeing more than a doubling of connections (from a mean of<br />&nbsp; &nbsp; c. 2000 established connections to just over 5000) on my relay at<br />&nbsp; &nbsp; 0xbaddad. The log is full of the (expected) messages:<br /><br />&nbsp; &nbsp; &quot;Your computer is too slow to handle this many circuit creation requests!&quot;<br /><br />&nbsp; &nbsp; I guess this is related to the massive jump in connected clients<br />&nbsp; &nbsp; in the past few days and I assume that everyone else is seeing<br />&nbsp; &nbsp; something similar.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br />So even though the new clients don&#039;t seem to be doing much (bandwidth isn&#039;t increasing), maintaining open circuits for 4 times as many clients is straining the relays. The whole network is slowed down with increased lag and a high percentage of failures when connecting to sites. Because circuits to hidden services use twice as many relays as circuits to clearnet sites, we should expect hidden service to be affected more by this.<br /><br />As for what&#039;s causing so many clients to connect, nobody knows yet.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Is this the affect of the Forbes thing we were expecting? I bet running tails or whonix comes into its own, it wasn&#039;t down for you no?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>skeezoo8586</strong> on <strong>September 03, 2013, 08:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It&#039;s been hit or miss with me. I tried logging all morning and after using a new identity I got in both forums and main and they are running smooth, right now.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>Rastaman Vibration</strong> on <strong>September 03, 2013, 09:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Both forums and main site have been intermittent and slow for me.&nbsp; &gt;:( Also doing lots of Tor surfing, and that seems to be running just fine
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>InbetweenWaves</strong> on <strong>September 03, 2013, 09:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ughhhh. So frustrating. Hopefully see her back up n running here soon.<br /><br /><br />Will report back if I get anywhere past a Problem Loading Screen.<br /><br />- IW
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>pinto43</strong> on <strong>September 03, 2013, 09:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				still isnt working. im about to get pretty upset :( I&#039;ve done everything imaginable and it still wont pull up for me. Im going to try again tonight and oh my god it better be up.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>JohnTheBaptist</strong> on <strong>September 03, 2013, 09:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Now the forums are intermittent, and the main site is down again...ARRRGGGGGGHHH....why does this happen in the middle of the most important deal?<br />Sods law? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>InbetweenWaves</strong> on <strong>September 03, 2013, 09:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				ITS UP FOR ME!<br /><br />GOGOGOGOGOGO<br /><br />no joke.<br /><br />- IW
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 03, 2013, 09:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513828#msg1513828">Quote from: Mitch Kumstien on September 03, 2013, 01:02 pm</a></div></div><blockquote class="bbc_standard_quote">Is it possible that bots are being used to overload the tor network in an attempt by either L.E. or some other group as a form of attack or frustration for those who use sites like The Silk Road?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Are you suggesting that LE infected over 2 million people&#039;s computers in order DOS the Tor network and prevent people from using SR? That&#039;s a class action lawsuit of epic proportions. No, these are probably some Russian/Eastern European hacker shitheads.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513873#msg1513873">Quote from: spunjtom on September 03, 2013, 02:11 pm</a></div></div><blockquote class="bbc_standard_quote">we have always heard that the more people on Tor the better it will run, but then now that it has happened we see that it doesn&#039;t run worth a shit! <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The more people that run Tor, the bigger our anonymity set, but some of them also have to run relays. If 4000 relays can support 500K daily users, then we need 16,000 relays for 2 million users. The number of relays hasn&#039;t increased to keep up with the number of clients.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514048#msg1514048">Quote from: danb15 on September 03, 2013, 08:39 pm</a></div></div><blockquote class="bbc_standard_quote">When are we going to get word on what has being happening the last 2 days?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Keep an eye on the tor-talk, tor-dev and tor-relays mailing lists at https://lists.torproject.org. They are trying to figure out what&#039;s going on and how to stop it.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514050#msg1514050">Quote from: JohnTheBaptist on September 03, 2013, 08:41 pm</a></div></div><blockquote class="bbc_standard_quote">Is this the affect of the Forbes thing we were expecting? <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Almost certainly not. The increase started on August 19, and I don&#039;t know if the print article has even come out yet. The online article has received fewer than 400,000 views, not enough to account for an increase of 2 million clients.<br /><br />Why does everyone thing SR is so big and special? It is really a tiny part of the Tor network and pretty much nothing that happens at a global network level is due to SR. When SR got DOSed in April, it didn&#039;t affect the rest of the Tor network at all.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>InbetweenWaves</strong> on <strong>September 03, 2013, 09:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514120#msg1514120">Quote from: astor on September 03, 2013, 09:25 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513828#msg1513828">Quote from: Mitch Kumstien on September 03, 2013, 01:02 pm</a></div></div><blockquote class="bbc_alternate_quote">Is it possible that bots are being used to overload the tor network in an attempt by either L.E. or some other group as a form of attack or frustration for those who use sites like The Silk Road?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Are you suggesting that LE infected over 2 million people&#039;s computers in order DOS the Tor network and prevent people from using SR? That&#039;s a class action lawsuit of epic proportions. No, these are probably some Russian/Eastern European hacker shitheads.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513873#msg1513873">Quote from: spunjtom on September 03, 2013, 02:11 pm</a></div></div><blockquote class="bbc_alternate_quote">we have always heard that the more people on Tor the better it will run, but then now that it has happened we see that it doesn&#039;t run worth a shit! <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The more people that run Tor, the bigger our anonymity set, but some of them also have to run relays. If 4000 relays can support 500K daily users, then we need 16,000 relays for 2 million users. The number of relays hasn&#039;t increased to keep up with the number of clients.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514048#msg1514048">Quote from: danb15 on September 03, 2013, 08:39 pm</a></div></div><blockquote class="bbc_alternate_quote">When are we going to get word on what has being happening the last 2 days?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Keep an eye on the tor-talk, tor-dev and tor-relays mailing lists at https://lists.torproject.org. They are trying to figure out what&#039;s going on and how to stop it.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514050#msg1514050">Quote from: JohnTheBaptist on September 03, 2013, 08:41 pm</a></div></div><blockquote class="bbc_alternate_quote">Is this the affect of the Forbes thing we were expecting? <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Almost certainly not. The increase started on August 19, and I don&#039;t know if the print article has even come out yet. The online article has received fewer than 400,000 views, not enough to account for an increase of 2 million clients.<br /><br />Why does everyone thing SR is so big and special? It is really a tiny part of the Tor network and pretty much nothing that happens at a global network level is due to SR. When SR got DOSed in April, it didn&#039;t affect the rest of the Tor network at all.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I appreciate all the information. If I could karma you I would!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>eddiethegun</strong> on <strong>September 03, 2013, 09:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514120#msg1514120">Quote from: astor on September 03, 2013, 09:25 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513828#msg1513828">Quote from: Mitch Kumstien on September 03, 2013, 01:02 pm</a></div></div><blockquote class="bbc_alternate_quote">Is it possible that bots are being used to overload the tor network in an attempt by either L.E. or some other group as a form of attack or frustration for those who use sites like The Silk Road?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Are you suggesting that LE infected over 2 million people&#039;s computers in order DOS the Tor network and prevent people from using SR? That&#039;s a class action lawsuit of epic proportions. No, these are probably some Russian/Eastern European hacker shitheads.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513873#msg1513873">Quote from: spunjtom on September 03, 2013, 02:11 pm</a></div></div><blockquote class="bbc_alternate_quote">we have always heard that the more people on Tor the better it will run, but then now that it has happened we see that it doesn&#039;t run worth a shit! <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The more people that run Tor, the bigger our anonymity set, but some of them also have to run relays. If 4000 relays can support 500K daily users, then we need 16,000 relays for 2 million users. The number of relays hasn&#039;t increased to keep up with the number of clients.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514048#msg1514048">Quote from: danb15 on September 03, 2013, 08:39 pm</a></div></div><blockquote class="bbc_alternate_quote">When are we going to get word on what has being happening the last 2 days?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Keep an eye on the tor-talk, tor-dev and tor-relays mailing lists at https://lists.torproject.org. They are trying to figure out what&#039;s going on and how to stop it.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514050#msg1514050">Quote from: JohnTheBaptist on September 03, 2013, 08:41 pm</a></div></div><blockquote class="bbc_alternate_quote">Is this the affect of the Forbes thing we were expecting? <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Almost certainly not. The increase started on August 19, and I don&#039;t know if the print article has even come out yet. The online article has received fewer than 400,000 views, not enough to account for an increase of 2 million clients.<br /><br />Why does everyone thing SR is so big and special? It is really a tiny part of the Tor network and pretty much nothing that happens at a global network level is due to SR. When SR got DOSed in April, it didn&#039;t affect the rest of the Tor network at all.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Very possibly a state-level military/intelligence-run botnet. Attention has been drawn to the conspicuous absence of the traffic spike in one particular country: https://metrics.torproject.org/users.html?graph=direct-users&amp;start=2013-05-29&amp;end=&amp;country=il&amp;events=off#direct-users<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 03, 2013, 09:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Here&#039;s the warning the relay operators are getting:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">[warn] Your computer is too slow to handle this many circuit creation requests! Please consider using the MaxAdvertisedBandwidth config option or choosing a more restricted exit policy.<br />[5700 similar message(s) suppressed in last 60 seconds]<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />5700 of those messages in a minute! <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>JohnTheBaptist</strong> on <strong>September 03, 2013, 09:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Cheers astor, them Albanians, Lithuanians, Kosovans (jesse) know how to give the rest of Europe a bad name. This is the worst I&#039;ve seen since last summer.<br />Yes the rest of tor hidden wiki and tor library are fine.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>aphxkcd</strong> on <strong>September 03, 2013, 09:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Are we sure it&#039;s the TOR network if other tor sites are working?<br />What kind of attacks are possible on sites like the SR?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 03, 2013, 09:42 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514131#msg1514131">Quote from: eddiethegun on September 03, 2013, 09:36 pm</a></div></div><blockquote class="bbc_standard_quote">Very possibly a state-level military/intelligence-run botnet. Attention has been drawn to the conspicuous absence of the traffic spike in one particular country: https://metrics.torproject.org/users.html?graph=direct-users&amp;start=2013-05-29&amp;end=&amp;country=il&amp;events=off#direct-users<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If they made it that obvious, then they&#039;re not very smart, are they?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>eddiethegun</strong> on <strong>September 03, 2013, 10:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514139#msg1514139">Quote from: astor on September 03, 2013, 09:42 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514131#msg1514131">Quote from: eddiethegun on September 03, 2013, 09:36 pm</a></div></div><blockquote class="bbc_alternate_quote">Very possibly a state-level military/intelligence-run botnet. Attention has been drawn to the conspicuous absence of the traffic spike in one particular country: https://metrics.torproject.org/users.html?graph=direct-users&amp;start=2013-05-29&amp;end=&amp;country=il&amp;events=off#direct-users<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If they made it that obvious, then they&#039;re not very smart, are they?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />maybe they didn&#039;t want to muck up their silk road access :P<br /><br />fuckers are doing a number on mine tho...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>Baraka</strong> on <strong>September 03, 2013, 10:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I don&#039;t know. Snowden v. NSA maybe?&nbsp; ;D<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513822#msg1513822">Quote from: astor on September 03, 2013, 12:48 pm</a></div></div><blockquote class="bbc_standard_quote">It&#039;s probably due to the massive increase in the number of clients connecting to the Tor network, which has gone from 500K per day to over 2 million per day.<br />.....<br />As for what&#039;s causing so many clients to connect, nobody knows yet.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>offbeatadam</strong> on <strong>September 03, 2013, 10:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It&#039;s not some invasion, its not some military botnet. Though its possible anonymous is joining in the CP fight - I&#039;d bet that more than anything else. The military has a new scapegoat: Syria. Money has instantaneously and completely stopped moving towards the fight against us, and has instantaneously been set aside to shoot some incendiary at stockpiles and generally go &quot;oh hai, you used chemical weapons. bai!&quot;<br /><br />On a more serious note, I&#039;ve been noticing issues opening the SR URL for longer than the past couple of days. I don&#039;t think the forbes article has anything to do with it, but the increased TOR traffic could be a reply to some of the things DPR said. I&#039;ve had a significantly easier time accessing the forums than the main site. Unfortunately we can&#039;t see traffic directly to the site or know what is going on. *** I mean to say that, I don&#039;t think the forbes article has increased popularity. If anything, I would think and be happier to believe its a DOS attack, or a competitive thing, as a reply from Atlantis (though, I don&#039;t give them that much credit, and I don&#039;t think they were behind the original one either). <br /><br />RE: The israel thing. Israel is in a state of military alert, moreso than the rest of the world. I wouldn&#039;t be surprised if the lack of spike is due to that.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>Kiwikiikii</strong> on <strong>September 03, 2013, 10:21 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514120#msg1514120">Quote from: astor on September 03, 2013, 09:25 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513828#msg1513828">Quote from: Mitch Kumstien on September 03, 2013, 01:02 pm</a></div></div><blockquote class="bbc_alternate_quote">Is it possible that bots are being used to overload the tor network in an attempt by either L.E. or some other group as a form of attack or frustration for those who use sites like The Silk Road?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Are you suggesting that LE infected over 2 million people&#039;s computers in order DOS the Tor network and prevent people from using SR? That&#039;s a class action lawsuit of epic proportions. No, these are probably some Russian/Eastern European hacker shitheads.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513873#msg1513873">Quote from: spunjtom on September 03, 2013, 02:11 pm</a></div></div><blockquote class="bbc_alternate_quote">we have always heard that the more people on Tor the better it will run, but then now that it has happened we see that it doesn&#039;t run worth a shit! <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The more people that run Tor, the bigger our anonymity set, but some of them also have to run relays. If 4000 relays can support 500K daily users, then we need 16,000 relays for 2 million users. The number of relays hasn&#039;t increased to keep up with the number of clients.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514048#msg1514048">Quote from: danb15 on September 03, 2013, 08:39 pm</a></div></div><blockquote class="bbc_alternate_quote">When are we going to get word on what has being happening the last 2 days?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Keep an eye on the tor-talk, tor-dev and tor-relays mailing lists at https://lists.torproject.org. They are trying to figure out what&#039;s going on and how to stop it.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514050#msg1514050">Quote from: JohnTheBaptist on September 03, 2013, 08:41 pm</a></div></div><blockquote class="bbc_alternate_quote">Is this the affect of the Forbes thing we were expecting? <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Almost certainly not. The increase started on August 19, and I don&#039;t know if the print article has even come out yet. The online article has received fewer than 400,000 views, not enough to account for an increase of 2 million clients.<br /><br />Why does everyone thing SR is so big and special? It is really a tiny part of the Tor network and pretty much nothing that happens at a global network level is due to SR. When SR got DOSed in April, it didn&#039;t affect the rest of the Tor network at all.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Rly astor, u want to come up with a super technical explaination for why theres problems even though i can use tor for anything else just fine, u must be a computer wizzerd. face it SR has always been a piece of shit, but hey we have to FOCUS ON FEEDBACK.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>joolz</strong> on <strong>September 03, 2013, 10:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				https://silkroadvb5piz3r.onion.to/silkroad/home&nbsp; &nbsp; new address?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>DarlaHarrington</strong> on <strong>September 03, 2013, 10:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It seems to be working fine. I was having issues earlier.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>sourman</strong> on <strong>September 04, 2013, 01:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514196#msg1514196">Quote from: joolz on September 03, 2013, 10:23 pm</a></div></div><blockquote class="bbc_standard_quote">https://silkroadvb5piz3r.onion.to/silkroad/home&nbsp; &nbsp; new address?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No j00lz, that is not a new URL. DO NOT use onion.to -- it is an insecure darknet web proxy for those without tor. It is NOT anonymous.<br /><br />As for this slowdown, I don&#039;t think it&#039;s an attack of any kind. Probably just the flood of new tor users hammering relays with 10,000 crypto requests every 15 nanoseconds, overloading their CPUs like astor said. <br /><br />Then again you never know, it could be another DoS attack or worse. Hopefully it gets cleared up soon. The problem seems to be abating as of a few hours ago. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>SynthesisWizard</strong> on <strong>September 04, 2013, 03:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The site is definetily down. I have been trying to access it for the last hour or so to no avail. I see no mods stating this is meant to be happening for any reason, And when maintenance is happening they take it down and leave an update page notifiying you when you try to sign in, Im just getting cannot connect. I have btc I need access to and this is seriously messing everything up.<br /><br />For the last few days the site has been abnormaly slow to access, working but taking 5 refreshes and a new identity via vidalia to access, Now it&#039;s not working at all, It has been building up to this. Im just not sure what could have caused it. <br /><br />As people are saying about the forbes article, It would make no difference, the TOR network gets better the more users it has, Well that is my understanding anyway. Astor also said the other day that the number of relays has increased, So I would have thought that would have sped things up as well. Correct me if I am wrong however. <br /><br />I have no clue what the hell is going on. Mods?<br /><br />Just as I was about to post I got the login page, Who knows what the hell is going on here. Thank fuck. <br />The Btc price went down to 83 quid, then back up to 87, perhaps that has something to do with it. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>Poobanator</strong> on <strong>September 04, 2013, 03:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Whatever been happening it&#039;s seems to let off a bit for the day.&nbsp; I have been quickly browsing the main site for the last 10 minutes. *crosses fingers*
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>SmokesHisBroccoli</strong> on <strong>September 04, 2013, 04:04 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Having trouble myself today once again.&nbsp; Took me a good 15 minutes to get on here and the main site isn&#039;t loading for me.&nbsp; Nothing to purchase or finalize right now but I still like to do my daily browsing
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>September 04, 2013, 04:22 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1514185#msg1514185">Quote from: offbeatadam on September 03, 2013, 10:15 pm</a></div></div><blockquote class="bbc_standard_quote">It&#039;s not some invasion, its not some military botnet. Though its possible anonymous is joining in the CP fight - I&#039;d bet that more than anything else. The military has a new scapegoat: Syria. Money has instantaneously and completely stopped moving towards the fight against us, and has instantaneously been set aside to shoot some incendiary at stockpiles and generally go &quot;oh hai, you used chemical weapons. bai!&quot;<br /><br />On a more serious note, I&#039;ve been noticing issues opening the SR URL for longer than the past couple of days. I don&#039;t think the forbes article has anything to do with it, but the increased TOR traffic could be a reply to some of the things DPR said. I&#039;ve had a significantly easier time accessing the forums than the main site. Unfortunately we can&#039;t see traffic directly to the site or know what is going on. *** I mean to say that, I don&#039;t think the forbes article has increased popularity. If anything, I would think and be happier to believe its a DOS attack, or a competitive thing, as a reply from Atlantis (though, I don&#039;t give them that much credit, and I don&#039;t think they were behind the original one either). <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m surprised to see you say this, frankly, Adam.&nbsp; You impressed me with a few of your messages recently.&nbsp; This one doesn&#039;t impress me -- don&#039;t get me wrong, we all make mistakes... but yes, to be clear, I believe your statements here are mistaken.<br /><br />For everybody else who&#039;s saying it&#039;s the site:<br /><br />HEY!!!&nbsp; ALL OF YOU SHORT ATTENTION SPAN FOOLS WHO AREN&#039;T READING THE THREAD!&nbsp; IT IS NOT THE GODDAMN SITE: it&#039;s the network itself, now stop making yourselves look like idiots by blaming SR or the mods, will you.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>danb15</strong> on <strong>September 04, 2013, 04:24 pm</strong>
+			</dt>
+			<dd class="postbody">
+				When can we get answers? honestly TOR is not the problem&nbsp; was on BMR fine all day and once again SR and the forums are acting the cunt yet again no answers why cant DPR or the admins just put our minds at ease?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>thelorax</strong> on <strong>September 04, 2013, 04:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				pirate bay fucked us..<br /><br />fucking cunts.. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>JohnTheBaptist</strong> on <strong>September 04, 2013, 04:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513822#msg1513822">Quote from: astor on September 03, 2013, 12:48 pm</a></div></div><blockquote class="bbc_standard_quote">It&#039;s probably due to the massive increase in the number of clients connecting to the Tor network, which has gone from 500K per day to over 2 million per day.<br /><br />https://metrics.torproject.org/direct-users.png?start=2013-01-01&amp;events=off&amp;end=2013-09-03&amp;country=all<br /><br />At the same time, the advertised bandwidth in the network has actually decreased.<br /><br />https://metrics.torproject.org/bandwidth.png?start=2013-01-01&amp;end=2013-09-03<br /><br />Tor is mostly CPU-bound, meaning that the crypto operations used to build circuits and push encrypted traffic are the limiting factor on the network. High bandwidth relays max out their CPUs long before they max out their bandwidth. Even with 1 Gbit ports, they can only push about 200-300 Mbit of traffic per core.<br /><br />Some relay operators have posted to the tor-relays mailing list:<br /><br />https://lists.torproject.org/pipermail/tor-relays/2013-August/002594.html<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">&nbsp; &nbsp; I&#039;m currently seeing more than a doubling of connections (from a mean of<br />&nbsp; &nbsp; c. 2000 established connections to just over 5000) on my relay at<br />&nbsp; &nbsp; 0xbaddad. The log is full of the (expected) messages:<br /><br />&nbsp; &nbsp; &quot;Your computer is too slow to handle this many circuit creation requests!&quot;<br /><br />&nbsp; &nbsp; I guess this is related to the massive jump in connected clients<br />&nbsp; &nbsp; in the past few days and I assume that everyone else is seeing<br />&nbsp; &nbsp; something similar.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br />So even though the new clients don&#039;t seem to be doing much (bandwidth isn&#039;t increasing), maintaining open circuits for 4 times as many clients is straining the relays. The whole network is slowed down with increased lag and a high percentage of failures when connecting to sites. Because circuits to hidden services use twice as many relays as circuits to clearnet sites, we should expect hidden service to be affected more by this.<br /><br />As for what&#039;s causing so many clients to connect, nobody knows yet.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This ^^^^^^
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>SmokesHisBroccoli</strong> on <strong>September 04, 2013, 04:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1515877#msg1515877">Quote from: JohnTheBaptist on September 04, 2013, 04:46 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513822#msg1513822">Quote from: astor on September 03, 2013, 12:48 pm</a></div></div><blockquote class="bbc_alternate_quote">It&#039;s probably due to the massive increase in the number of clients connecting to the Tor network, which has gone from 500K per day to over 2 million per day.<br /><br />https://metrics.torproject.org/direct-users.png?start=2013-01-01&amp;events=off&amp;end=2013-09-03&amp;country=all<br /><br />At the same time, the advertised bandwidth in the network has actually decreased.<br /><br />https://metrics.torproject.org/bandwidth.png?start=2013-01-01&amp;end=2013-09-03<br /><br />Tor is mostly CPU-bound, meaning that the crypto operations used to build circuits and push encrypted traffic are the limiting factor on the network. High bandwidth relays max out their CPUs long before they max out their bandwidth. Even with 1 Gbit ports, they can only push about 200-300 Mbit of traffic per core.<br /><br />Some relay operators have posted to the tor-relays mailing list:<br /><br />https://lists.torproject.org/pipermail/tor-relays/2013-August/002594.html<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">&nbsp; &nbsp; I&#039;m currently seeing more than a doubling of connections (from a mean of<br />&nbsp; &nbsp; c. 2000 established connections to just over 5000) on my relay at<br />&nbsp; &nbsp; 0xbaddad. The log is full of the (expected) messages:<br /><br />&nbsp; &nbsp; &quot;Your computer is too slow to handle this many circuit creation requests!&quot;<br /><br />&nbsp; &nbsp; I guess this is related to the massive jump in connected clients<br />&nbsp; &nbsp; in the past few days and I assume that everyone else is seeing<br />&nbsp; &nbsp; something similar.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br />So even though the new clients don&#039;t seem to be doing much (bandwidth isn&#039;t increasing), maintaining open circuits for 4 times as many clients is straining the relays. The whole network is slowed down with increased lag and a high percentage of failures when connecting to sites. Because circuits to hidden services use twice as many relays as circuits to clearnet sites, we should expect hidden service to be affected more by this.<br /><br />As for what&#039;s causing so many clients to connect, nobody knows yet.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This ^^^^^^<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Why like someone mentioned are other sites like BMR running like butter?&nbsp; Why am I getting quick page loads on these forums but the SR site won&#039;t even load up for me?&nbsp; It would just be nice to know if SR is having tech difficulties or if it is actually tor related.&nbsp; Initially I agreed and was thinking tor related but every other site I try to get on runs smooth and fast.&nbsp; Is SR under attack?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>FearTheReaper</strong> on <strong>September 04, 2013, 05:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Just now got logged in to main site after several hours of trying.&nbsp; &nbsp;Whew...&nbsp; &nbsp;<br /><br />Looks like it&#039;s just a congestion problem.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>khorne flake</strong> on <strong>September 04, 2013, 05:05 pm</strong>
+			</dt>
+			<dd class="postbody">
+				No signed message from DPR.&nbsp; Definitely seems like the site is under attack to me.&nbsp; This can&#039;t simply be congestion I&#039;ve been trying to get on for hours.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>SmokesHisBroccoli</strong> on <strong>September 04, 2013, 05:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1515890#msg1515890">Quote from: khorne flake on September 04, 2013, 05:05 pm</a></div></div><blockquote class="bbc_standard_quote">No signed message from DPR.&nbsp; Definitely seems like the site is under attack to me.&nbsp; This can&#039;t simply be congestion I&#039;ve been trying to get on for hours.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m having trouble making up my mind.&nbsp; First I thought tor issues then an attack and now it appears to just be a server over load or something because I was finally able to login and it&#039;s running pretty slow.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>FearTheReaper</strong> on <strong>September 04, 2013, 05:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Well, sonofabitch, I was logged on, but now pages won&#039;t reload.&nbsp; &nbsp;Yeah, something no bueno is going on.... 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>DefyCode</strong> on <strong>September 04, 2013, 05:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah I havent been able to even see the login screen all day today
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>c0py</strong> on <strong>September 04, 2013, 05:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Just loaded for me!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>khorne flake</strong> on <strong>September 04, 2013, 05:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				DPR needs to add some more juice to the cluster or SR business will come to a halt.&nbsp; No vendor is going to be able to get anything done today.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>FearTheReaper</strong> on <strong>September 04, 2013, 05:34 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1515915#msg1515915">Quote from: c0py on September 04, 2013, 05:28 pm</a></div></div><blockquote class="bbc_standard_quote">Just loaded for me!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Cool.&nbsp; While you&#039;re logged on, would you mind checking on my order for me?&nbsp; Thx.&nbsp; ;-)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>james frazer</strong> on <strong>September 04, 2013, 06:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1513822#msg1513822">Quote from: astor on September 03, 2013, 12:48 pm</a></div></div><blockquote class="bbc_standard_quote">It&#039;s probably due to the massive increase in the number of clients connecting to the Tor network, which has gone from 500K per day to over 2 million per day.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />+1 and thanks Astor for all the info.<br /><br />From the Tor Project Blog (4th September 2013): &quot;The tremendous influx of new clients that started mid-August is stretching the current Tor network and software to its limits. Several relay operators reported their relays to be saturated by the amount of connections and circuits that relays currently have to handle.&quot;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>sourman</strong> on <strong>September 04, 2013, 06:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Tor is under attack, at least according to one of our resident experts (kmf): http://dkn255hz262ypmii.onion/index.php?topic=209957.0<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote from: kmfkewm</div></div><blockquote class="bbc_standard_quote">A huge botnet is attacking Tor, nobody is sure exactly what it is doing but some think it could be trying to trace hidden services by tracing to entry guards and knocking them out until the HS&#039;s select attacker guards.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I know they&#039;re trying to figure this out over at tor talk, although I&#039;m not sure if they&#039;re going with the &quot;it&#039;s an attack&quot; angle or if the tor devs are still assuming this problem is caused by the large influx of users eating up CPU.<br /><br />EDIT: ...and the tor project just released their latest newsletter addressing the issue: https://blog.torproject.org/blog/ (CLEARNET)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>spunjtom</strong> on <strong>September 05, 2013, 06:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				it looks like from that newsletter that too many people are using the old Tor software.&nbsp; update, people, update!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>bluedev1</strong> on <strong>September 05, 2013, 09:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				&quot;Use a New Identity&quot; until you get a fast response.&nbsp; It&#039;s not the site it seems, it&#039;s the routes to the site, I think.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 05, 2013, 12:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1517343#msg1517343">Quote from: spunjtom on September 05, 2013, 06:13 am</a></div></div><blockquote class="bbc_standard_quote">it looks like from that newsletter that too many people are using the old Tor software.&nbsp; update, people, update!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Having the clients update their Tor version won&#039;t help. It&#039;s the relays which have to update. <br /><br />In case it wasn&#039;t already clear, it&#039;s not just the Silk Road which suffers. It&#039;s all hidden services. Even the hidden service of the OFTC (clearnet) IRC network suffers, so it&#039;s not targeted at any specific hidden services.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>acr115</strong> on <strong>September 05, 2013, 12:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1517904#msg1517904">Quote from: Bazille on September 05, 2013, 12:45 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=209762.msg1517343#msg1517343">Quote from: spunjtom on September 05, 2013, 06:13 am</a></div></div><blockquote class="bbc_alternate_quote">it looks like from that newsletter that too many people are using the old Tor software.&nbsp; update, people, update!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Having the clients update their Tor version won&#039;t help. It&#039;s the relays which have to update. <br /><br />In case it wasn&#039;t already clear, it&#039;s not just the Silk Road which suffers. It&#039;s all hidden services. Even the hidden service of the OFTC (clearnet) IRC network suffers, so it&#039;s not targeted at any specific hidden services.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>+1
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>Mitch Kumstien</strong> on <strong>September 06, 2013, 11:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you for everyone who has joined this discussion. <br /><br />I feel that if it is a traffic or relay problem then it is time for me to do my part and get a relay going, I mean it&#039;s only right; I enjoy the site and want others to do so too. <br /><br />If it is a traffic problem demand will grow and so will the number of relays to match demand; it&#039;s either keep up with the growth of the network or risking a possible crash (I am not an expert on computer programming or networking so if it is not possible to crash the tor network forgive my ignorance).<br /><br />Like anything else that we hold dear we each have a role in insuring the survival and prosperity of the thing.<br /><br />And if it is an attacker it is sad that in a world with all the things available to us that such an individual cannot find any fulfillment in anything&nbsp; other than impeding the growth of other beings..
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Wtf Main Site And Forum Running Terrible</strong><br />
+				Post by: <strong>Mitch Kumstien</strong> on <strong>September 06, 2013, 11:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				&nbsp;Malware botnet confirmed: Why Silk Road is down<br />« on: September 05, 2013, 01:00 pm »<br /><br />&nbsp; &nbsp; Quote<br /><br />Quote<br /><br />&nbsp; &nbsp; In recent days, we have indeed found evidence which suggests that a specific and rather unknown botnet is responsible for the majority of the sudden uptick in Tor users.<br /><br />Quote<br /><br />&nbsp; &nbsp; . It does however originate from a Russian spoken region, and is likely motivated by direct or indirect financial related crime.<br /><br /><br />http://blog.fox-it.com/2013/09/05/large-botnet-cause-of-recent-tor-network-overload/<br /><br />&nbsp;Recently, Roger Dingledine described a sudden increase in Tor users on the Tor Talk mailinglist. To date there has been a large amount of speculation as to why this may have happened. A large number of articles seem to suggest this to be the result of the recent global espionage events, the evasion of the Pirate Bay blockades using the PirateBrowser or the Syrian civil war.<br /><br />At the time of writing, the amount of Tor clients actually appears to have more than quintupled already. The graph shows no signs of a decline in growth, as seen below:<br /><br />An alternative recurring explanation is the increased usage of botnets using Tor, based on the assertion that the increase appears to consist of mostly new users to Tor that apparently are not doing much given the limited impact on Tor exit performance. In recent days, we have indeed found evidence which suggests that a specific and rather unknown botnet is responsible for the majority of the sudden uptick in Tor users. A recent detection name that has been used in relation to this botnet is “Mevade.A”, but older references suggest the name “Sefnit”, which dates back to at least 2009 and also included Tor connectivity. We have found various references that the malware is internally known as SBC to its operators.<br /><br /><br /><br />Previously, the botnet communicated mainly using HTTP as well as alternative communication methods. More recently and coinciding with the uptick in Tor users, the botnet switched to Tor as its method of communication for its command and control channel. The botnet appears to be massive in size as well as very widespread. Even prior to the switch to Tor, it consisted of tens of thousands of confirmed infections within a limited amount of networks. When these numbers are extrapolated on a per country and global scale, these are definitely in the same ballpark as the Tor user increase.<br /><br />Thus one important thing to note is that this was an already existing botnet of massive scale, even prior to the conversion to using Tor and .onion as command and control channel.<br /><br />As pointed out in the Tor weekly news, the version of Tor that is used by the new Tor clients must be 0.2.3.x, due to the fact that they do not use the new Tor handshake method. Based on the code we can confirm that the version of Tor that is used is 0.2.3.25.<br /><br />The malware uses command and control connectivity via Tor .onion links using HTTP. While some bots continue to operate using the standard HTTP connectivity, some versions of the malware use a peer-to-peer network to communicate (KAD based).<br /><br />Typically, it is fairly clear what the purpose of malware is, such as banking, clickfraud, ransomware or fake anti-virus malware. In this case however it is a bit more difficult. It is possible that the purpose of this malware network is to load additional malware onto the system and that the infected systems are for sale. We have however no compelling evidence that this is true, so this assumption is merely based on a combination of small hints. It does however originate from a Russian spoken region, and is likely motivated by direct or indirect financial related crime.<br /><br />This specific version of the malware, which includes the Tor functionality, will install itself in:<br /><br />%SYSTEM%\config\systemprofile\Local Settings\Application Data\Windows Internet Name System\wins.exe<br /><br />Additionally, it will install a Tor component in:<br /><br />%PROGRAMFILES%\Tor\Tor.exe<br /><br />A live copy for researchers of the malware can be found at:<br /><br />hxxp://olivasonny .no-ip .biz /attachments/tc.c1<br /><br />This location is regularly updated with new versions.<br /><br />Related md5 hashes:<br /><br />2eee286587f76a09f34f345fd4e00113 (August 2013)<br />c11c83a7d9e7fa0efaf90cebd49fbd0b (September 2013)<br /><br />Related md5 hashes from non-Tor version:<br /><br />4841b5508e43d1797f31b6cdb83956a3 (December 2012)<br />4773a00879134a9365e127e2989f4844 (January 2013)<br />9fcddc45ae35d5cdc06e8666d249d250 (February 2013)<br />b939f6ef3bd292996f97aa5786757870 (March 2013)<br />47c8b85a4c82ed71487deab68de196ba (March 2013)<br />3e6eb9f8d81161db44b4c4b17763c46a (April 2013)<br />a0343241bf53576d18e9c1329e6a5e7e (April 2013)<br /><br />Thank you to our partners for the help in investigating this threat.<br /><br />ProtACT Team &amp; InTELL Team<br />« Last Edit: September 05, 2013, 01:12 pm by Bazille »<br />Report to moderator&nbsp; &nbsp;Logged<br />Tutorial: Encrypted and Torified Linux Virtual Machine on a Windows USB Stick: http://dkn255hz262ypmii.onion/index.php?topic=201405.0<br />Tutorial: Bootable and Encrypted Whonix on 8GB USB Stick: http://dkn255hz262ypmii.onion/index.php?topic=209572.0<br /><br />Repost of Bazille&#039;s post.<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

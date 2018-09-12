@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=5287.0" />
+		<title>Print Page - New to pgp, help needed</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Tommyhawk on November 10, 2011, 09:31 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>New to pgp, help needed</strong><br />
+				Post by: <strong>Tommyhawk</strong> on <strong>November 10, 2011, 09:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve been on silk road for a while now, but I&#039;m only just now getting into pgp encryption and keeping my data safe.<br /><br /><br />I had some curiousities though. Many sites that give guides tell me I should use my completely full legal name when using my PGP key... now... maybe this is a dumb question, but should I use my full name for creating my public key for silk road? It might seem like a dumb question but I&#039;m asking because it is so stressed on other sites. <br /><br />Right now I&#039;m using seahorse on ubuntu 10.10 linux to generate my keys, yet, I can not figure out how to actually encrypt text and then send that text to someone for them to decrypt.<br /><br />I have been able to encrypt files, drives, etc... but I don&#039;t know how to encrypt text that can be copied and pasted and sent to someone for say... when I&#039;m giving them my private information for shipping such as my address.<br /><br />Any tips?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New to pgp, help needed</strong><br />
+				Post by: <strong>brainstew</strong> on <strong>November 10, 2011, 09:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				go here, great guide. Don&#039;t use your real name. Fake name, fake email address.<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=131.0<br /><br />Test encrypting messages here, also from the same thread above.<br /><br />http://p3lr4cdm3pv4plyj.onion/test.php
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New to pgp, help needed</strong><br />
+				Post by: <strong>phubaiblues</strong> on <strong>November 11, 2011, 08:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				Once you get the idea of pgp it won&#039;t seem so hard.&nbsp; Use fake stuff, since it&#039;s for here.&nbsp; I just use my username from here, however, so people will know it&#039;s from me...u know, my email, could be phubaiblues@texas.com or something like that...doesn&#039;t matter...once you get the key made, you&#039;ll have your public and your private key....your public key is what you send to everybody...I found it handy to *export* my public key to a file on my desktop, and call it publickey.asc or publickey.pgp as I&#039;m always sending it off to people.&nbsp; They need my public key, so they can encrypt messages and send them to me...if they send me their public key, then I can encrypt messages to them...which they can decypher with their private key.<br /><br />So once you get your public key made, post it on here, or pm it to me, and I&#039;ll send you an encrypted message which you can decrypt....I&#039;ll send my public key in that message, so you can then send me an encrypted message with it....with my public key, you can encrypt messages to me, which I decrypt with my private key...make sense....wiki article is handy...<br /><br />For example, on SR, some/most of the sellers will post their *public* key: you use that to encrypt messages, which they then can decrypt...with, like, your address.&nbsp; :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New to pgp, help needed</strong><br />
+				Post by: <strong>cruzer</strong> on <strong>November 11, 2011, 09:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				To encrypt a message that you can cut/past into a PM/message on the Silk Road you can do it like this form the shell. The command line always works, so I&#039;ll just tell you how to use it. Also, I am assuming you know how to import the public key someone gives you i.e. you cut past the whole pgp public key block into a text file and save it as sellername.asc&nbsp; Then import it with your GUI and give it Ultimately trust.<br /><br /># 1 - Make a text file with your message in it like this...<br /><br />$ cd /tmp<br />$ nano message<br />Ctrl+X , Y (yes save) , Enter<br /><br /># 2 - Export your gpg key to a file with your GUI... It sould save as .asc&nbsp; &nbsp;file type, aka ASCII<br /><br /># 3 - Now copy that public key you made to the bottom of your message so the person has your key to encrypt messges back to you. You can do this like this<br /><br />$ cat pubkey.asc &gt;&gt; message<br /><br /># 4 - Encrypt the message in ASCII format<br /><br />$ gpg2 -ae message -r userID<br /><br />NOTE- the &#039;userID&#039; is the 8 character string of #&#039;s and letters that should be listed as ID in the GUI you are using<br /><br /># 5 - Now open the message.asc file that was created and cut past the encrypted ASCII text into the PM/message and your good to go.<br /><br /># 6 - When you receve a PM/message back in the same ASCII form, just cut/past into a text file and save it as message.asc and decrypt it with your GUI<br /><br />Anyway, I use KDE and it has a right click option in the Dolphin file manage to encrypt files. I bet Gnome dose too. In any case KDE4 is really nice these days. I&#039;d sugjest giving it a shot. Try like Kubuntu or Linux Mint w/KDE4.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New to pgp, help needed</strong><br />
+				Post by: <strong>Sonitchka</strong> on <strong>April 25, 2012, 12:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				Cruzer - I know this post is really old but it really helped me.&nbsp; Thanks!&nbsp; If I had karma giving powers I&#039;d give you +1
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

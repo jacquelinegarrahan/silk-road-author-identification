@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=189810.0" />
+		<title>Print Page - PGP / gpg.conf help needed</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: esoteric69 on July 24, 2013, 09:25 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>PGP / gpg.conf help needed</strong><br />
+				Post by: <strong>esoteric69</strong> on <strong>July 24, 2013, 09:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hey, complete noob to SR and PGP etc and need a little help. <br /><br />I&#039;m using Tails and about to set up my new PGP and it&#039;s asking for my full name/email address. Obviously not going to use any real info but should I just put fake details in? Is it better to say use a name the can be identifiable to future vendors etc and should I include say my Tormail address?<br /><br />Second little thing, I&#039;m just looking into making my gpg.conf as secure as possible, I&#039;ve copied this info from another thread, at the bottom it mentions that I need a HTTP proxy? Is that the part where it shows the keyserver-options? Do I need to change anything else? thanks<br /><br /><br />no-greeting&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />no-emit-version&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />no-comments&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />utf8-strings&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />armor&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />expert&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />trust-model always&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />no-mdc-warning&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br /><br />personal-cipher-preferences AES256 TWOFISH CAMELLIA256 AES192 CAMELLIA192 AES CAMELLIA128 CAST5 3DES BLOWFISH<br />personal-digest-preferences SHA512 SHA384 SHA256 SHA224 RIPEMD160 SHA1<br />personal-compress-preferences BZIP2 ZLIB ZIP Uncompressed<br />cert-digest-algo SHA512<br /><br />throw-keyid&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />hidden-encrypt-to&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br /><br /><br />## Use the IndyMedia key server hidden service. This prevents accidentally connecting over clearnet.<br />## You need an HTTP proxy like Privoxy listening on port 8118, or adjust the lines below accordingly.<br />## The HTTP proxy forwards to Tor&#039;s SockPort. Here&#039;s a Privoxy config for that:<br />## https://trac.torproject.org/projects/tor/wiki/doc/PrivoxyConfig<br /><br />keyserver hkp://2eghzlv2wwcq7u7y.onion<br />keyserver-options http-proxy=http://127.0.0.1:8118,debug,verbose<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP / gpg.conf help needed</strong><br />
+				Post by: <strong>ShApEsHiFtInGsHaPeS</strong> on <strong>July 24, 2013, 09:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				just put in fake email or leave it blank. it it is useful to put in a name that is recognizable for the people you want to exchange messages with.<br />you can create as much keys as you want so you can use different keys for different identities. make yourself a testkey and try it out at the newbie pgp thread http://dkn255hz262ypmii.onion/index.php?topic=107219.0&nbsp; &nbsp;<br /><br />cheers
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP / gpg.conf help needed</strong><br />
+				Post by: <strong>Wernher</strong> on <strong>August 24, 2013, 05:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				Note: Compression before encryption can prevent some kinds of cryptanalysis and attacks, and the s2k settings make dictionary attacks more difficult; the the maximum s2k-count is 65011712.<br /><br />Some of the things listed below can break compatibility, and I do NOT know if AES256 is better than TWOFISH and CAMELLIA256. Also, &#039;cipher-algo AES256&#039; can override the preferences others have set on their public keys.<br /><br /><br />force-mdc<br />utf8-strings<br />charset utf-8<br />throw-keyids<br />no-auto-key-locate<br />no-emit-version<br />no-comments<br />no-greeting<br />no-allow-non-selfsigned-uid<br />ask-cert-expire<br />armor<br />default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 TWOFISH AES CAST5 BZIP2 ZLIB ZIP Uncompressed<br />personal-cipher-preferences AES256 AES192 TWOFISH AES CAST5<br />personal-digest-preferences SHA512 SHA384 SHA256 SHA224<br />personal-compress-preferences BZIP2 ZLIB ZIP Uncompressed<br />cipher-algo AES256<br />digest-algo SHA512<br />cert-digest-algo SHA512<br />compress-algo BZIP2<br />bzip2-compress-level 9<br />compress-level 9<br />s2k-cipher-algo AES256<br />s2k-digest-algo SHA512<br />s2k-count 65011712<br />s2k-mode 3 <br /><br />You can check to see how a file was encrypted. Here is an example: <br /><br />wernher@debian:~$ gpg --list-packets --show-session-key TestMessage.txt.asc <br />:symkey enc packet: version 4, cipher 9, s2k 3, hash 10<br />&nbsp;&nbsp;&nbsp;salt 3ae52f293ec7042b, count 65011712 (255)<br />gpg: AES256 encrypted data<br />:encrypted data packet:<br />&nbsp;&nbsp;&nbsp;length: unknown<br />&nbsp;&nbsp;&nbsp;mdc_method: 2<br />gpg: encrypted with 1 passphrase<br />:compressed packet: algo=3<br />:literal data packet:<br />&nbsp;&nbsp;&nbsp;mode b (62), created 1377313290, name=&quot;TestMessage.txt&quot;,<br />&nbsp;&nbsp;&nbsp;raw data: 4800 bytes<br />gpg: session key: `9:30C7B45852E39514E9C02A1721FDC740B4489F1A0ECC97BB356183FB65BEB907&#039;<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

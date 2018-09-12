@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=160141.0" />
+		<title>Print Page - My guide to getting free LTC/BTC</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Off topic => Topic started by: yearziro on May 15, 2013, 11:06 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>My guide to getting free LTC/BTC</strong><br />
+				Post by: <strong>yearziro</strong> on <strong>May 15, 2013, 11:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If this helps you feel free to send me a couple spare coins or pm me a moneypak code so i can buy a few beers or throw it towards my ASIC....OR be a dick and hit the - button the choice is yours....<br /><br />My BTC....15G9TtW3ZrwRuXwQqQAPWKPV6DUiYc8Hiu<br /><br />Good whatever it is morning,afternoon,evening wherever you are just thought id share this with everyone because it benefits us all so here we go....(yes it is long and <br /><br />boring but its free BTC or LTC)<br /><br />-Some Pre-Resequites<br />-You have a basic knowledge of computers<br />-Know what BTC and LTC are<br />-You have a wallet either BTC or LTC (And know how to use it)<br />-Have a USB Flash Drive<br />-Have or Can make a bootable linux cd (ubuntu,BT,w/e)<br /><br />Ok Let&#039;s Go.....<br /><br /><br />-Get a fresh tor-mail account something that you will only use to create and register for your mining pool.<br /><br />-Find a Bitcoin pool or Lite Coin Pool. (LTCs are easier to mine but cheaper BTC are harder to mine but worth more money)<br /><br />-Once you have found your pool (BTC or LTC) you will want to Create an account and make a decent amount of workers this will come in to play later and the more workers <br /><br />you have the more coins you get. (I created 10 to start you can always create more later)<br /><br />-Download reaper (i have found this to be the easiest way so far as it isnt hardware specific) <br /><br />-Once you have reaper downloaded and unziped you need to set it up to work with your pool and workers which is fairly simple i am mining LTC because its quicker then <br /><br />BTC or you can mine BTC if you want by simply modifiying a different .conf file within reaper.....(bitcoin.conf) instead of the litecoin.conf file<br /><br />-Unzip and Open the folder you have reaper in....<br /><br />-Open the reaper.conf file with notepad or whatever txt editor you use and it will look like this....<br /><br />kernel reaper.cl<br />save_binaries yes<br />enable_graceful_shutdown no<br />long_polling yes<br /><br />mine bitcoin<br />mine litecoin<br />mine solidcoin<br /><br />delete bitcoin and solidcoin so it looks like this.....(remember im using the LTC method you can delete the others you dont need)<br /><br />kernel reaper.cl<br />save_binaries yes<br />enable_graceful_shutdown no<br />long_polling yes<br /><br /><br />mine litecoin<br /><br />-Now save this file and close the txt editor<br /><br />-Open up the litecoin.conf and make sure to edit yours so it looks something like this....(once again im using litecoin if your using BTC use the BTC.conf)<br /><br />host www.whatever-pool-you-choose.com<br />port XXXX (every pool is different)<br />user xxxxxx (this will be one of the workers you created) (ex. worker.1)<br />pass xxxxxx (make this the same password for everyworker you have it doesnt matter if someone gets it the worst someone can do is mine for you) <br /><br /><br />protocol litecoin<br /><br />worksize 256<br />aggression 18<br />threads_per_gpu 1<br />sharethreads 18<br />lookup_gap 2<br />gpu_thread_concurrency 6144<br /><br />-Now save this file and close the txt editor<br /><br /><br />-Still with me??? Good......Cause this is the tedious part...<br /><br />-Copy your WHOLE reaper file like 10 times (or how ever many workers you made)<br /><br />-Inside of each one of those copies you just made you have to do (3) things <br />(1) edit the litecoin.conf file part where it says USER so copy-1 is user/worker.2 and so on....you need to make sure each folder you have copied has a different <br /><br />user/worker and that user is registered to mine on the pool you signed up for.<br />(2) then make a shortcut for the reaper.exe file you have inside EACH copied folder.<br /><br />(3)THIS IS IMOPORTANT: Goto the - Shortcut you just made and modifiy the properties part where it says run and change it to MINIMIZED so a window doesnt pop up on the <br /><br />desktop only on the toolbar (most public computers toolbars are disabled no one will be able to tell what it is or stop it.) (You have to do this to every copy)<br />------------------------------------------------------------------------------<br /><br /><br /><br /><br />-Ok now lets recap you have a new annoymous email that you registered for a litecoin or bitcoin/ltc pool?<br /><br />-You have signed up for a pool and created a good amount of workers to mine for you?<br /><br />-You have downloaded reaper? and edited to proper files to reflect your workers and pool?<br /><br />-Made the shortcut of the reaper.exe file? and modified each one??<br /><br />-copied all the copys of reaper to the flash drive.<br /><br />-Have a location?<br /><br /><br />-Methods to install....<br /><br />1)Try popping in the usb drive and seeing if the machine see&#039;s the usb drive if YES then you can copy the WHOLE REAPER FOLDER to an indiscret folder somewhere no one <br /><br />will find it (i like to put stuff in the System32 folder) so if you can copy the reaper folder by just putting the usb drive in the computer GOOD then simply remove it <br /><br />and then re-insert it and copy the reaper.exe shortcut to the following folder.....<br /><br /><br />-Put (a) copy of one of your reaper shortcuts you made in this directory of each machine you will use for mining so it starts everytime the computer turns on <br />(C:\Users/xxxx/AppData/Roaming/Microsoft/Windows/StartMenu/Programs/StartUp)<br /><br />(some systems have the usb pop-up disabled so you wont be able to do this....if this happens you can use method 2)<br /><br /><br />2)Use your live linux cd and copy the WHOLE REAPER FOLDER to an indiscret folder somewhere no one will find it (i like to put stuff in the System32 folder) then copy <br /><br />the reaper.exe shortcut to the following folder.....<br /><br />-Put (a) copy of one of your reaper shortcuts you made in this directory so it starts everytime the computer turns on <br />(C:\Users/xxxx/AppData/Roaming/Microsoft/Windows/StartMenu/Programs/StartUp)<br /><br />(with the linux live cd you will have to do a TWO things 1)reboot the computer hit F2 to get into setup change the boot order to boot from CD then HD 2) once ubuntu or <br /><br />whatever you are using loads goto the file explorer find the windows partition and navigate to the folders specified and insert the appropriate files <br /><br /><br /><br /><br /><br />-Once you get to the location where you plan on installing each of these copies of reaper keep in mind a couple things<br /><br />1)Dont be greedy dont try to install to many copies at once people see you leap frogging computers you are probably going to get caught <br /><br />2)Try to scout your location for slow times you dont want people walking by looking over your shoulder and possibly alerting people to what your doing<br /><br />3)I have done this at several libraries because well the staff are usually senior citizens who know nothing about computers and are less likely to bother you <br /><br />4)Dont log into the PC with your own cred (ex. if you goto a library and somehow someone checks the records and sees that reaper was installed on this date and time <br /><br />they can see you were the last person to use the computer...unlikely but better safe then sorry)<br /><br />5)Dont install this on computers where people know a little about computers it will slow them down and they will probably alert someone to this and you did all this <br /><br />work for nothing.<br /><br />6)The best time to do this is morning or late evening when not many people are around to see what your doing.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: My guide to getting free LTC/BTC</strong><br />
+				Post by: <strong>tree</strong> on <strong>May 16, 2013, 07:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Nice guide! I don&#039;t really plan to mine anything anytime soon but if I wanna start I&#039;ll have this thread bookmarked. The result aren&#039;t astonishing from what I hear.. So there&#039;s that.<br />+1 for making a good guide though :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: My guide to getting free LTC/BTC</strong><br />
+				Post by: <strong>Somepup</strong> on <strong>May 16, 2013, 09:21 pm</strong>
+			</dt>
+			<dd class="postbody">
+				How to make free BTC/LTC<br /><br />1.Make a thread on how to make free BTC/LTC
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: My guide to getting free LTC/BTC</strong><br />
+				Post by: <strong>yearziro</strong> on <strong>May 16, 2013, 11:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=160141.msg1134949#msg1134949">Quote from: Somepup on May 16, 2013, 09:21 pm</a></div></div><blockquote class="bbc_standard_quote">How to make free BTC/LTC<br /><br />1.Make a thread on how to make free BTC/LTC<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Or i could have just done what other people do make worthless threads offering to sell people stuff they can get for free themselves or i make this thread show people how to make coins and buy from the sellers here and help the forum....
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: My guide to getting free LTC/BTC</strong><br />
+				Post by: <strong>Fallkniven</strong> on <strong>May 17, 2013, 11:09 am</strong>
+			</dt>
+			<dd class="postbody">
+				You sneaky little devil! That&#039;s a great guide, thanks! +1<br /><br />How many coins have you made off the libraries power supply? ;)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: My guide to getting free LTC/BTC</strong><br />
+				Post by: <strong>yearziro</strong> on <strong>May 17, 2013, 10:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=160141.msg1137230#msg1137230">Quote from: Fallkniven on May 17, 2013, 11:09 am</a></div></div><blockquote class="bbc_standard_quote">You sneaky little devil! That&#039;s a great guide, thanks! +1<br /><br />How many coins have you made off the libraries power supply? ;)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />27 coins this week (20 workers currently mining 24 hours a day)
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

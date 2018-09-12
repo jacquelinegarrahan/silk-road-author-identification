@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=202427.0" />
+		<title>Print Page - Running Tails/Tor Browser on an Android Tablet</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: VersacePandaEgg on August 16, 2013, 12:35 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Running Tails/Tor Browser on an Android Tablet</strong><br />
+				Post by: <strong>VersacePandaEgg</strong> on <strong>August 16, 2013, 12:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				Has anyone successfully been able to run Tails on an Android tablet? I recently obtained one and have been trying to figure out how to browse securely on it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Running Tails/Tor Browser on an Android Tablet</strong><br />
+				Post by: <strong>awhiteknight</strong> on <strong>August 16, 2013, 02:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				First root your tablet so you have real access to the network stack. Now install Orbot and grant it root access. The Tor browser is shit so grab a copy of Firefox and turn the secuirty settings up to 11 (always start in private browsing mode, don&#039;t remember anything etc etc). Set Firefox home page to check.torproject.org. In Orbot settings choose applications and select Firefox for transparent proxying. Reboot tablet, start Orbot, start Firefox.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Running Tails/Tor Browser on an Android Tablet</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>August 16, 2013, 02:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				Mobile operating systems are the opposite of &quot;amnesic&quot;, and it&#039;s damned near impossible to use them without leaving a trace.&nbsp; Tails only boots on PC hardware (non UEFI PC hardware, from my experience).<br /><br />On Android, Orbot is your best bet, but I wouldn&#039;t stake my life on my activities not being forensically recoverable on Android (or IOS, or...).<br /><br />I have no clue how much data from an Android device gets sent back to Google, but it&#039;s at least some traffic.<br /><br />I headed quite a ways down the anonymous Android path, and finally gave up.&nbsp; &nbsp; &nbsp;Probably you could get close with something like a Nexus 7, paying cash for it, installing a self-built version of Cyanogenmod/etc, and never using Google Play or giving Google an idea who you were, using Orbot for all traffic.&nbsp; And reimaging it nightly or the like.<br /><br />But the show-stopper is Android&#039;s full disk encryption.&nbsp; It&#039;s using dmcrypt (like most Linux FDE solutions), but by default it uses the lock PIN code as the key to the encryption.&nbsp; That&#039;s a big problem.&nbsp; &nbsp;At least on an IOS device (which I&#039;m NOT recommending for anonymity, mind you), you have hardware encryption and the PIN is just protecting the keys to the storage encryption. <br /><br />I&#039;d love to hear about better ideas somebody has, because tablets are handy as hell.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Running Tails/Tor Browser on an Android Tablet</strong><br />
+				Post by: <strong>Hungry ghost</strong> on <strong>August 16, 2013, 07:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202427.msg1455556#msg1455556">Quote from: awhiteknight on August 16, 2013, 02:04 am</a></div></div><blockquote class="bbc_standard_quote">First root your tablet so you have real access to the network stack. Now install Orbot and grant it root access. The Tor browser is shit so grab a copy of Firefox and turn the secuirty settings up to 11 (always start in private browsing mode, don&#039;t remember anything etc etc). Set Firefox home page to check.torproject.org. In Orbot settings choose applications and select Firefox for transparent proxying. Reboot tablet, start Orbot, start Firefox.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Do you mean orweb is shit for security or just not as featureful as Firefox?. I use it because I assumed a purpose built tor browser would be more secure. My tablet is rooted etc but I haven&#039;t really played around with transparent proxying.<br />&nbsp; &nbsp; &nbsp; &nbsp;Orweb and orbot are both part of the guardian project to build a secure ROM for android devices. Last I heard the dev was making it UNrooted for security reasons (I&#039;m thinking more exploits might be available on a rooted device)<br />&nbsp; &nbsp; &nbsp; &nbsp;Using a modification called Multirom, (only available for a couple of devices) you can have a multi boot android device that can be booted into several different ROMs. You can also install some Linux distros, and boot from USB. I have Bodhi Linux alongside some android ROMs; can&#039;t get it to do much, I don&#039;t know if this is because the installation doesn&#039;t work properly with multirom, or more probably, because I know nearly fuck all about Linux. Got command line gpg working but that&#039;s about it. It doesn&#039;t seem to be able to &#039;see&#039; any of the other files on my storage. When I had a dual boot Linux/windows xp box, you could browse the windows files from the Linux side. Anyway.....<br />&nbsp; &nbsp; &nbsp; &nbsp;What I&#039;m saying is it seems like in theory someone with the skills (not me) could get tails or liberte working on android devices. Its worth keeping an eye on the guardian project and multirom, to see if anything more useful develops
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Running Tails/Tor Browser on an Android Tablet</strong><br />
+				Post by: <strong>Psyche</strong> on <strong>August 16, 2013, 07:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202427.msg1455611#msg1455611">Quote from: ECC_ROT13 on August 16, 2013, 02:19 am</a></div></div><blockquote class="bbc_standard_quote"><br />But the show-stopper is Android&#039;s full disk encryption.&nbsp; It&#039;s using dmcrypt (like most Linux FDE solutions), but by default it uses the lock PIN code as the key to the encryption.&nbsp; That&#039;s a big problem.&nbsp; &nbsp;At least on an IOS device (which I&#039;m NOT recommending for anonymity, mind you), you have hardware encryption and the PIN is just protecting the keys to the storage encryption. <br /><br />I&#039;d love to hear about better ideas somebody has, because tablets are handy as hell. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>You can actually &quot;fix&quot; this design flaw if you&#039;re rooted.<br /><br />First you set a simple pin, the one which you will be unlocking the phone with(unfortunately pattern or face unlocks don&#039;t work). Then you encrypt the phone normally, then you download EncPassChanger from the play store. Then give it root priviledge and change your encryption password to something more complex. Only use up to a 16 digit passcode for your encryption or it will fuck up big time and you&#039;ll have to factory reset(another design flaw). The EncPassChanger doesn&#039;t even try and stop you from using a passphrase larger than 16 characters either.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Running Tails/Tor Browser on an Android Tablet</strong><br />
+				Post by: <strong>awhiteknight</strong> on <strong>August 16, 2013, 04:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202427.msg1456514#msg1456514">Quote from: Hungry ghost on August 16, 2013, 07:11 am</a></div></div><blockquote class="bbc_standard_quote">Do you mean orweb is shit for security or just not as featureful as Firefox?. I use it because I assumed a purpose built tor browser would be more secure. My tablet is rooted etc but I haven&#039;t really played around with transparent proxying.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It may have changed recently but when I was messing with it I found it cumbersome, it didn&#039;t integrate into the OS well, navigation was clunky, multiple tabs were unsupported and so on. It was like someone just stuck WebKit in a window and left it at that.<br /><br />Firefox is less secure, but it was actually useable when I tried it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Running Tails/Tor Browser on an Android Tablet</strong><br />
+				Post by: <strong>mejulie2</strong> on <strong>August 16, 2013, 05:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202427.msg1455611#msg1455611">Quote from: ECC_ROT13 on August 16, 2013, 02:19 am</a></div></div><blockquote class="bbc_standard_quote">Mobile operating systems are the opposite of &quot;amnesic&quot;, and it&#039;s damned near impossible to use them without leaving a trace.&nbsp; Tails only boots on PC hardware (non UEFI PC hardware, from my experience).<br /><br />On Android, Orbot is your best bet, but I wouldn&#039;t stake my life on my activities not being forensically recoverable on Android (or IOS, or...).<br /><br />I have no clue how much data from an Android device gets sent back to Google, but it&#039;s at least some traffic.<br /><br />I headed quite a ways down the anonymous Android path, and finally gave up.&nbsp; &nbsp; &nbsp;Probably you could get close with something like a Nexus 7, paying cash for it, installing a self-built version of Cyanogenmod/etc, and never using Google Play or giving Google an idea who you were, using Orbot for all traffic.&nbsp; And reimaging it nightly or the like.<br /><br />But the show-stopper is Android&#039;s full disk encryption.&nbsp; It&#039;s using dmcrypt (like most Linux FDE solutions), but by default it uses the lock PIN code as the key to the encryption.&nbsp; That&#039;s a big problem.&nbsp; &nbsp;At least on an IOS device (which I&#039;m NOT recommending for anonymity, mind you), you have hardware encryption and the PIN is just protecting the keys to the storage encryption. <br /><br />I&#039;d love to hear about better ideas somebody has, because tablets are handy as hell. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />android has its own implementation of dmcrypt which works kind of like iOS - the pin itself isnt the key but its used to encrypt the key which is used on the data itself<br />thats why you can root your tablet and change the password (which will actually take all alphanumerics and symbols except \ for some reason...) without reencrypting independently to your lock screen pin
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

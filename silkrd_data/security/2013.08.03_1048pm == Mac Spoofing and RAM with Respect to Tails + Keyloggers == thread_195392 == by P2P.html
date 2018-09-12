@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=195392.0" />
+		<title>Print Page - Mac Spoofing and RAM with Respect to Tails + Keyloggers</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: P2P on August 03, 2013, 10:48 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Mac Spoofing and RAM with Respect to Tails + Keyloggers</strong><br />
+				Post by: <strong>P2P</strong> on <strong>August 03, 2013, 10:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I am interested to know what Tails does about one&#039;s mac address and RAM. Is RAM automatically encrypted on Tails? For example, if I ctr+c this message I am writing, is that text file encrypted before being stored in RAM?<br /><br />In addition, I have heard about macchanger, but I do not know how to use it. I cannot find it in applications. And I do not know if it is just something that Tails runs automatically. Please advise with respect to having a mac changer on Tails.<br /><br />Last but not least, I am interested in how one would go about protecting against keyloggers. Yes, we all know the obvious answers, but our enemies are not schoolyard hackers. They are some of the biggest and most powerful entities in the world, with nearly unlimited money and manpower. Would a prudent internet surfer not assume that, even with antivirus software, the government would not make a deal with all major AV providers to &quot;ignore&quot; certain brands, or even to make up their own unknown &quot;strains&quot; themselves? Taking it a step further, how can one ENSURE (100%) there is no software/hardware keyloggers on one&#039;s comp?<br /><br />Thank you for any and all contributions.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Mac Spoofing and RAM with Respect to Tails + Keyloggers</strong><br />
+				Post by: <strong>comsec</strong> on <strong>August 03, 2013, 11:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The best way to avoid software keyloggers is use a stored media which can&#039;t be rewritten (CD/DVD-R) or use a virtual snapshot (you store encrypted) to guarantee you will load a fresh snapshot everytime free of previous software keyloggers. Tails on USB can also be used but only if it&#039;s always on you, or hidden somewhere you hope nobody will find and alter when you aren&#039;t around. It also helps to remove all java plugins from your browser and javascript or don&#039;t even use a graphical browser. Use lynx. You can also configure a firewall to look for anything phoning home, though they can hide their keylogger traffic in regular browser or linkedin/facebook app traffic. <br /><br />Another method is encrypt your hard drive, and if using linux keep the boot loader on you at all times on a usb keychain so there&#039;s just encrypted disks, and nothing to sabotage. OpenBSD (softraid0) allows you encrypt the entire disc including boot loaders now starting with 5.3 so carrying around a usb isn&#039;t needed unless you opt to also use a keyfile + password combo to unlock drives.<br /><br />This of course doesn&#039;t defeat all sorts of other keyloggers that can exist:<br />- hardware keylogger either backdoored by manufacturer or snuck into your device. buy Taiwanese hardware, avoid proprietary whenever you can. avoid all HP, Dell and other American products.<br />- power cable keyloggers, either a malicious power bar like this: http://pwnieexpress.com/products/power-pwn or physical altering of your power socket that can be used for cryptanalysis keylogging<br />- sound attacks, a special microphone set up to record the sound of keystrokes and determine what they are by freq. laptops all have internal mics that can be turned on but as far as I know, only work on OSX/Windows machines<br />- accelerometer attacks. your phone sitting on your desk can record keystrokes using the accelerometer. phone security is terrible, they can remotely access this information (don&#039;t keep phone on your desk)<br />- a camera put in your space that records everything<br />- TEMPEST attack, where feds in the next room beside your hotel or apartment can read your screen <br /><br />It&#039;s unlikely any of the above will be used against somebody who isn&#039;t a terrorist or julian assange/snowden, but gang task force where I live has broken into safe houses and installed cameras/mics numerous times. They&#039;ve also reprogrammed air cards to install keyloggers. Don&#039;t ever use an internet usb or dongle with a sim card. You have no control over the firmware in it nor the sim card, which runs it&#039;s own O/S system on chip.<br /><br />macchanger I&#039;m not sure if Tails includes it, but you can read their design document to find out everything they&#039;ve done to alter MAC addresses if you&#039;re using wifi https://tails.boum.org/contribute/design/<br /><br />[EDIT]it looks like they DON&#039;T change the MAC: https://tails.boum.org/contribute/design/MAC_address/ so if you want to do it yourself: open terminal (or admin terminal)<br /><br />sudo ifconfig eth0 down sudo macchanger -a -e eth0 sudo ifconfig eth0 up<br /><br />where eth0 is assumed to be the network interface with the Internet connection. this will set a random mac. of course you can also make this into a script and keep it in persistent USB drive. <br /><br />I don&#039;t know of any O/S that does encrypted RAM but they do encrypted swap, and have memory protection in place like malloc to prevent users accessing each other&#039;s RAM (can be circumvented). I don&#039;t think Tails encrypts the swap, but you can set this up yourself if you want just look up any debian how-to to turn on encrypted swap. OpenBSD does this by default since years ago. The best option is use DDR3 ram, since once they are powered down they don&#039;t hold any voltage thus no info to recover during a cold boot attack. Even if you had encrypted RAM, the o/s needs to read it so if a malicious application stole pieces of memory (while O/S was turned on) it would be unencrypted anyways. <br /><br />Check out their design document maybe there&#039;s more info in there. <br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

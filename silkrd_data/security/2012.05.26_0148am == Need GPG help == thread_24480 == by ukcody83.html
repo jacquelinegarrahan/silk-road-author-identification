@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=24480.0" />
+		<title>Print Page - Need GPG help</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: ukcody83 on May 26, 2012, 01:48 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Need GPG help</strong><br />
+				Post by: <strong>ukcody83</strong> on <strong>May 26, 2012, 01:48 am</strong>
+			</dt>
+			<dd class="postbody">
+				Would like to be able to purchase a few things but am having a hell of a time trying to figure the GPG thing out,I&#039;m kind of a computard so if anyone could send me an easy to understand walkthrough it would be much appreciated. LOVE the site
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Need GPG help</strong><br />
+				Post by: <strong>kingston</strong> on <strong>May 26, 2012, 07:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				This site http://p3lr4cdm3pv4plyj.onion/ is great for testing and getting the hang of how GPG works.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Need GPG help</strong><br />
+				Post by: <strong>ukcody83</strong> on <strong>May 26, 2012, 09:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you for all the help everyone,I&#039;m sure I&#039;ll get the hang of it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: DO NOT USE THIS SOFTWARE, IT IS BROKEN!</strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>May 27, 2012, 10:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				+1 to the Guru for showing me and others the way. An excellent and easy to use program is GPG4USB which will let you generate 2048 bit keys.<br /><br />V.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=24480.msg260505#msg260505">Quote from: Guru on May 27, 2012, 10:03 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=24480.msg259241#msg259241">Quote from: Duffman on May 26, 2012, 05:32 am</a></div></div><blockquote class="bbc_alternate_quote">- Download PortablePGP here: http://sourceforge.net/projects/ppgp/files/ppgp/1.0.6/PortablePGP-1.0.6_decompress_on_a_usb_drive.zip/download<br /><br />- Unzip the file somewhere on your hard drive.<br /><br />- After opening it click on the button which says &quot;This is the first time i use PGP. Please generate a new private / public key pair&quot;.<br /><br />- Fill in your SR username, a fake email address, leave the comment field blank, leave the key size as it is, enter a strong passphrase/password you want to use to decrypt encrypted messages sent to you and click generate.<br /><br />- Copy the vendor&#039;s public key into notepad, save it somewhere (the name doesn&#039;t matter), in PortablePGP you should be in the keyring tab where you&#039;ll see private keys and public keys listed, click on the downward arrow listed next to public keys and open the text file you just saved, the key should now be added.<br /><br />- Click on the Encrypt tab on the left, fill in your address in the Encrypt Text field, choose the vendor&#039;s key in the Target list, leave the sign option on &quot;No signature, just encrypt&quot; and then click the Encrypt button.<br /><br />- Copy/paste the message you got into the order form.<br /><br />Hope this helps. :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />DO NOT USE THIS SOFTWARE, IT IS BROKEN. <br /><br />I have noticed many people who generated PGP keys with this software whose ElGamal encryption sub-keys have only a 512-bit modulus.&nbsp; NIST has deprecated 1024-bit keys as of the end of December 2010. 512-bit keys have not been in common use since about 1993-94, and for good reason. <br /><br />Cypherpunk and remailer operator Lucky Green caused quite a flap when, in March of 2002, he revoked all his 1024-bit keys. <br /><br />Bruce Schneier . the developer of the Blowfish and Twofish encryption algorithms, wrote in his newsletter in April 2002 commenting on this: <br /><br />In this newsletter article, &quot;Is 1024 bits enough?&quot; he states: <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote"> http://www.schneier.com/crypto-gram-0204.html<br /><br />&nbsp; Is 1024 Bits Enough?<br /><br />&nbsp; Last month [March 2002] I wrote about Dan Bernstein&#039;s factoring research,&nbsp; and how it might affect RSA key lengths. Recently there&#039;s been a discussion on BugTraq, as cypherpunk Lucky Green cited the research as his primary&nbsp; motivation for revoking his 1024-bit PGP keys.<br /><br />&nbsp; This brings up the interesting question: are 1024-bit RSA keys insecure,&nbsp; and what should we do about them?<br /><br />&nbsp; The current public factoring record is 512 bits, using general purpose computers. Prudence requires us to suspect that institutions like the NSA can do better, although we don&#039;t know how much better. Way back in 1995, I estimated key lengths required to be secure from different adversaries: individuals, corporations, and governments&nbsp; (Applied Cryptography, 2nd Edition, table 7.6, page 162). Back then I suggested that people migrate towards 1280-bit keys, and even 1536-bit keys, if they were concerned about large corporate or government <br />adversaries:<br /><br />&nbsp; Recommended Public-Key Key Lengths (in bits)<br /><br />&nbsp; Year&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Ind.&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Corp.&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; Govt.<br /><br />&nbsp; 1995&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;768&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 1280&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;1536<br />&nbsp; 2000&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 1024&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 1280&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;1536<br />&nbsp; 2005&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 1280&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 1536&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;2048<br />&nbsp; 2010&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 1280&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 1536&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;2048<br />&nbsp; 2015&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 1536&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 2048&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;2048<br /><br />&nbsp; Looking back on those numbers written seven years ago, I think they were conservative but not unduly so. Factoring, at least in the academic community, has not progressed as fast as I expected it to. But mathematical progress is bursty, and a single breakthrough could more than make up for lost time. So if I were making recommendations today, I would still stand by my 2000 estimates above.<br /><br />I have long believed that a 1024-bit key could fall to a machine costing $1 billion. And that a 1024-bit RSA key is approximately equivalent to a 80-bit symmetric key. (In Applied Cryptography, I wrote that a 768-bit RSA key is equivalent to an 80-bit symmetric key; that&#039;s probably too low an RSA key.)<br /><br />Comparing symmetric and public-key keys is a lot like comparing apples and oranges. I recommend 128-bit symmetric keys because they are just as fast at 64-bit keys. That&#039;s not true for public-key keys. Doubling the key size roughly corresponds to a six-times speed slowdown in software. This might not matter with PGP, but it will make client-server applications like SSL slow to a crawl. I&#039;ve seen papers claiming that you need 3072-bit RSA keys to correspond to 128-bit symmetric keys and 15K-bit RSA keys for 256-bit symmetric keys. This kind of thinking is ridiculous; the performance trade-offs and attack models are so different that the comparisons don&#039;t make sense. <br /><br />&nbsp; But there&#039;s no reason to panic, or to dump existing systems. I don&#039;t think Bernstein&#039;s announcement has changed anything. Businesses today could reasonably be content with their 1024-bit keys, and military institutions and those paranoid enough to fear from them should have upgraded years ago.<br /><br />To me, the big news in Lucky Green&#039;s announcement is not that he believes that Bernstein&#039;s research is sufficiently worrisome as to warrant revoking his 1024-bit keys; it&#039;s that, in 2002, he still has 1024-bit keys to revoke.<br /><br />This discussion highlights the huge inertia in key rollover. Many people are still using short keys. Lucky Green&#039;s e-mail sheds a light on this phenomenon. He wrote &quot;In light of the above, I reluctantly revoked all my personal 1024-bit PGP keys and the large web-of-trust that these keys have acquired over time.&quot; The web of trust attached to those keys was of great value, and reestablishing it with a new set of keys will be difficult and time-consuming. <br /><br />To Green, that pain was more important than having a &quot;long enough&quot; key.<br /><br />&nbsp; Lucky Green&#039;s BugTraq announcement:<br />&nbsp; &lt;http://online.securityfocus.com/archive/1/263924&gt;<br /><br />&nbsp; [ N.B. Link no longer works, use this one instead: <br />&nbsp; http://www.mail-archive.com/cryptography@wasabisystems.com/msg01950.html ]<br /><br />&nbsp; My essay on Bernstein&#039;s factoring paper:<br />&nbsp; &lt;http://www.schneier.com/crypto-gram-0203.html#6&gt;<br /><br />&nbsp; News coverage:<br />&nbsp; &lt;http://zdnet.com.com/2110-1105-863643.html&gt;<br />&nbsp; &lt;http://www.infosecuritymag.com/2002/apr/...&gt;<br /><br />&nbsp; Other essays on the Bernstein paper:<br />&nbsp; &lt;http://www.rsasecurity.com/rsalabs/technotes/...&gt; <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote"> <br /><br />So, as you can see from the first row of Schneier&#039;s table, a 768-bit key was judged necessary to protect oneself from threats mounted by *individuals* in 1995 -- some 17 years ago, now. A 512-bit ElGamal encryption sub-key is immeasurably weaker than the 768-bit RSA key that Schneier felt was adequate against attacks by individuals 17 years ago. <br /><br />The money quote from Schneier&#039;s newsletter was this:&nbsp; &quot;To me, the big news in Lucky Green&#039;s announcement is not that he believes that Bernstein&#039;s research is sufficiently worrisome as to warrant revoking his 1024-bit keys; it&#039;s that, in 2002, he still has 1024-bit keys to revoke.&quot; <br /><br />In 2003, about a year or so later, Schneier and colleague Ferguson wrote&nbsp; in Practical Cryptography, stating: <br /><br />&quot;The absolute minimum size for n is 2048 bits or so if you want to protect your data for 20 years. [...] If you can afford it in your application, let n be 4096 bits long, or as close to this size as you can get it.&quot; (p. 233) <br /><br />It is worthy of note that, starting in 2009, the default key generated by current versions of both PGP and GPG are 2048-bits. <br /><br />Some of you may quibble that a 512-bit ElGamal key is not the same as a 512-bit RSA key. That is true, however I would point out that the work factor for breaking an ElGamal key is believed to be on a par with the work factor for breaking an equivalent-sized RSA key. 512-bit RSA keys have been factored by small groups, as in the factoring of a 512-bit RSA key&nbsp; used to sign software/firmware of certain Texas Instruments calculators. Some of the owners of these calculators were annoyed that&nbsp; they could not install their own software, as it was not signed by Texas Instruments.&nbsp; From Wikileaks: <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote"> Suppressed Texas Instruments cryptographic signing keys, 28 Aug 2009<br /><br />Texas Instruments, a large US electronics company, is the market leader for sophisticated programable calculators used by millions of students and engineers. Recently, TI has served internet publishers with DMCA legal threats for distributing cryptographic keys that permit owners of TI calculators to install third-party system software on TI calculators -- an anti-competitive, and arguably unethical act by TI.<br /><br />The file here presents the Operating System signing keys for different Texas Instruments calculators. The key for the TI-83 calculator was first published by someone at the unitedti.org forum [1]. He or she needed several months to crack it. The other keys were found after a few weeks by the unitedti.org community through a distributed computing project. The keys make it possible for people to create new OS software to be used on Texas Instruments calculators.<br /><br />Texas Instruments contacted several people with DMCA notices to take down the keys from their websites. Some of the websites which got a DMCA notice are: unitedti.org, brandonw.net and reddit.com. One of these DCMA notices can be found here: http://brandonw.net/calcstuff/DMCA_notice.txt<br /><br />See: http://www.unitedti.org/index.php?showtopic=8888 </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Guru<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

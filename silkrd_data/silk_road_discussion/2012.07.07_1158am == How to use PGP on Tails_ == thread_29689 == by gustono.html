@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=29689.0" />
+		<title>Print Page - How to use PGP on Tails? </title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Silk Road discussion => Topic started by: gustono on July 07, 2012, 11:58 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>How to use PGP on Tails? </strong><br />
+				Post by: <strong>gustono</strong> on <strong>July 07, 2012, 11:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				Haven&#039;t seen a thread on this and need to find out how to use it before I place another order.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How to use PGP on Tails? </strong><br />
+				Post by: <strong>Wazup7</strong> on <strong>July 08, 2012, 10:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You can use Tails to create a LiveUSB--Applications --&gt; Tails --&gt; Tails USB Installer --&gt; Clone and Install.<br /><br />Once it&#039;s on USB, boot into your LiveUSB, and go to Tails --&gt; Configure Persistent Volume.&nbsp; This creates an Truecrypt encrypted partition on the USB stick that sits alongside the main LiveUSB parition.&nbsp; Then, you would can just create a private key like you normally would through the gnome keyring, and it will remain on your USB, and be persisted each time you boot from it.&nbsp; <br /><br />I was wondering the same thing when I first started using Tails, as they originally didn&#039;t have that functionality, and I had to copy over my private key, which I had saved on a seperate encrypted USB, each time I wanted to place an order or send an encrypted message.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How to use PGP on Tails? </strong><br />
+				Post by: <strong>BigScrote</strong> on <strong>July 09, 2012, 12:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=29689.msg329955#msg329955">Quote from: gustono on July 07, 2012, 11:58 am</a></div></div><blockquote class="bbc_standard_quote">Haven&#039;t seen a thread on this and need to find out how to use it before I place another order.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It took me a while. Thank goodness for Guru - he patiently walked me through it.<br /><br />I&#039;m speaking as a complete Linux-noob, so I&#039;m going to type this out the way I&#039;d want someone to show me. So yeah, not so technical.<br /><br />At the top left of your screen you see a red swirl, Applications, Places, System. <br />Click on System.<br />Under preferences you&#039;ll see &quot;password and encryption&quot;. Click on it. You will be required to generate a new key for yourself before you can import anyone else&#039;s. I may have made that up, but it seems that I had to. Then just copy their PGP key and paste it in the open window where you generated your key. That&#039;s the first part.<br /><br />Under the red swirl, select Accessories and then gedit Text Editor. Type your business in there. Under edit, select Encrypt. You will then see a list of PGP keys you have. Select the box with the one you want, and hit enter. Boom - it&#039;s encrypted and you&#039;re done. <br /><br /><br />Oh, if you want to save all these after you shut down, you&#039;ll have to create a partition (it&#039;ll save some data to your USB key, to be unlocked with a password upon starting up). I can&#039;t remember how off-hand, but it&#039;s not that tough. <br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How to use PGP on Tails? </strong><br />
+				Post by: <strong>Wazup7</strong> on <strong>July 09, 2012, 04:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Is the LiveUSB with a persistent partition insecure in some way that I don&#039;t know of?&nbsp; <br /><br />Is there a benefit of manually backing up the keyring, rather than using the Tails bulit-in persistent drive to back up the keyring (and your home folder, etc.)?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How to use PGP on Tails? </strong><br />
+				Post by: <strong>Wazup7</strong> on <strong>July 09, 2012, 05:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ahh I gotcha, Guru.&nbsp; Thanks for clearing that up.&nbsp; ;)<br /><br />Backing up the whole keyring...I originally had only backed up my secret key, and would re-add any public keys from other users as I needed them.&nbsp; I guess backing up the whole keyring would have saved me some time...<br /><br />But, like you said, the USB persistent partition works fine for me, so I&#039;m gonna stick with that.&nbsp; <br /><br />On a more general note, Gustono, always make sure you are using the lastest version of Tails.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

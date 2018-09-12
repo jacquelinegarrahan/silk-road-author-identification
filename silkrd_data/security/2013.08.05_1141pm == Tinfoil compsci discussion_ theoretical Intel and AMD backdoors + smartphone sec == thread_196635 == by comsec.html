@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=196635.0" />
+		<title>Print Page - Tinfoil compsci discussion: theoretical Intel and AMD backdoors + smartphone sec</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: comsec on August 05, 2013, 11:41 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Tinfoil compsci discussion: theoretical Intel and AMD backdoors + smartphone sec</strong><br />
+				Post by: <strong>comsec</strong> on <strong>August 05, 2013, 11:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				http://www.eteknix.com/expert-says-nsa-have-backdoors-built-into-intel-and-amd-processors/<br /><br />Statements like this were solidly considered tinfoil before Edward Snowden leaked that there were backdoors in HP products/Windows, and before Defcon last year where they presented how feasible and practical hardware backdooring of Intel CPUs is. Also before we found out about telecom carriers putting backdoors on SIM cards so they can OTA reprogram your internet stick to inject malware or give away your location. Also before we discovered backdoors in critical internet backbone routers and banking routers. There was also the revelation in 2007 that NIST had actually recommended an inferior PRNG algorithm on purpose as a backdoor, so that when combined with a secret skeleton key it can predict the RNs and unlock encryption: http://www.wired.com/politics/security/commentary/securitymatters/2007/11/securitymatters_1115<br /><br />It would actually not be difficult for the NSA to do this. You have proprietary Intel and AMD microcode with crypto signatures to prevent tampering and plenty of undocumented instructions. Nobody can brute force what these unknown instructions are doing but they definitely exist we can see them while debugging. They could be simple update instructions for manufacturer control. Or they could be:<br /><br />1. Not honoring NX bit<br />2. Messing with RNG<br />3. Dumping the entire state of the machine out to memory in SMI debug mode <br />4. Putting the machine into Ring 0 <br /><br />You could write obscure instructions that edits the right mask layers to access the microcode and patch your change in to do any of the above. Windows and OSX would be preferred deployment platforms since everything is hidden from the users anyways, but this is also possible in Linux/BSD. Once the hardware is backdoored there&#039;s no possible way you can protect it from userland when we have undocumented microcode and a long history of backdooring hardware, because creating a backdoor is much easier than breaking crypto or finding side channels. If this is true then all random number generation is useless if your adversary is the NSA. <br /><br />This is:<br /><br />A) Likely&nbsp; B) Tinfoil&nbsp; C) Unlikely because then NSA would be backdooring their own infrastructure (though they can use their own backdoors to patch the microcode to prevent any backdoors)<br /><br />In other news, for a different project (which got me thinking about Intel backdoors) I&#039;ve been reverse engineering Qualcomm basebands while attempting to secure smartphone devices, and discovered manufacturers are using GSM stacks from the 1990s and everything is running in ARM supervisor mode with no NX bit, therefore we have free reign to do anything like disabling the MMU. It would take a computer science student a couple of hours to figure out access to the interrupt vectors, injecting BKPT instructions and to pop the baseband stack to enable silent tracking or worse, figure out a way to jump out of the baseband processor and launch attacks on the application processor (or sim card) to steal voice and texts as a covert channel. The SIM cards are an obvious backdoor, since you have no control over carrier supplied cards running their own O/S and applications (and they are running tracking software which broadcasts ACK to type-0 silent SMS, giving away your location within 50m), but baseband operating systems like AMSS you&#039;d think would not be so purposely feeble. The only answer is they want them to be feeble and this is a side channel backdoor. <br /><br />thoughts? The only mitigation to this is using ARM processors only on open hardware boards like beagleboard until possibly they start installing backdoors too. They are afterall a multi billion dollar company, if MI6 approaches them on behalf of the NSA and says they won&#039;t be allowed to sell chips in the US anymore unless they comply to stop &quot;terrorism&quot; they&#039;ll bend over. Loongson Chinese CPUs would also prevent this, and probably why the Chinese wanted to develop their own CPUs because they know something is up with the Intel and AMD undocumented microcode. As for smartphones your only alternative is purchasing an expensive (EUR4,000) Cryptophone from GSMK that has a hardware baseband processor firewall to detect activity when the application CPU doesn&#039;t have activity, therefore something fishy going on and mitigation is deployed shutting down the GSM stack. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

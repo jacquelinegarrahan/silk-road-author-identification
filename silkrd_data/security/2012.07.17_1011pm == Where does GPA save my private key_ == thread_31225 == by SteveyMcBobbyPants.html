@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=31225.0" />
+		<title>Print Page - Where does GPA save my private key?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: SteveyMcBobbyPants on July 17, 2012, 10:11 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Where does GPA save my private key?</strong><br />
+				Post by: <strong>SteveyMcBobbyPants</strong> on <strong>July 17, 2012, 10:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Whenever I generate a key through PGP, where the hell does i save that key? I&#039;d rather copy and put that key in a truecrypt volume instead of on my unecrypted drive. Any help would be awesome. Thanks!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Where does GPA save my private key?</strong><br />
+				Post by: <strong>cacoethes</strong> on <strong>July 18, 2012, 01:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				The default folder is C:\Users\Username\AppData\Roaming\gnupg...&nbsp; AppData\Roaming\gnupg are hidden files, so you must enable &quot;show hidden files and folders&quot; to see them.&nbsp; Your Private key is stored on your keyring with other public keys.&nbsp; While it is not possible to move individual keys, it is possible to move the entire keyring:<br /><br />You can change the default home directory and store your keyring on an encrypted drive by following the directions on the following pages:<br /><br />http://blog.stefan-macke.com/2011/11/30/changing-the-path-to-the-key-files-in-gnupg-for-windows/<br /><br />http://blog.gauner.org/blog/2008/09/17/gnupg-change-the-keyring-location/<br /><br />http://lists.gnupg.org/pipermail/gnupg-users/2008-April/033224.html<br /><br />Hope this helps...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Where does GPA save my private key?</strong><br />
+				Post by: <strong>SteveyMcBobbyPants</strong> on <strong>July 18, 2012, 02:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=31225.msg352473#msg352473">Quote from: cacoethes on July 18, 2012, 01:24 am</a></div></div><blockquote class="bbc_standard_quote">The default folder is C:\Users\Username\AppData\Roaming\gnupg...&nbsp; AppData\Roaming\gnupg are hidden files, so you must enable &quot;show hidden files and folders&quot; to see them.&nbsp; Your Private key is stored on your keyring with other public keys.&nbsp; While it is not possible to move individual keys, it is possible to move the entire keyring:<br /><br />You can change the default home directory and store your keyring on an encrypted drive by following the directions on the following pages:<br /><br />http://blog.stefan-macke.com/2011/11/30/changing-the-path-to-the-key-files-in-gnupg-for-windows/<br /><br />http://blog.gauner.org/blog/2008/09/17/gnupg-change-the-keyring-location/<br /><br />http://lists.gnupg.org/pipermail/gnupg-users/2008-April/033224.html<br /><br />Hope this helps...<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Fantastic! That was just what I was looking for. If I could give karma, I&#039;d give you all the karma. Thanks mate!
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

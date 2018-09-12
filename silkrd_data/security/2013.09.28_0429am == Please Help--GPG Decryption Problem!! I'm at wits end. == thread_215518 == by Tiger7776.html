@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=215518.0" />
+		<title>Print Page - Please Help--GPG Decryption Problem!! I'm at wits end.</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Tiger7776 on September 28, 2013, 04:29 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Please Help--GPG Decryption Problem!! I'm at wits end.</strong><br />
+				Post by: <strong>Tiger7776</strong> on <strong>September 28, 2013, 04:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m using gpg4win running with windows 7. I have my private and public keys and all of the vendors I deal with keys as well on my keyring. I can encrypt messages just fine. Up until this point, I have never had to decrypt a message from another person. <br />When I open the program, I&#039;m in the GNU Privacy Assistant-Key Manager window. I open the clipboard and paste the message into the clipboard. I hit the decrypt logo and I get the message &quot;GPA Error-- Clipboard contained no valid encrypted data&quot; Just so everyone will know, I have searched everywhere for the answer. The tutorials will not load, they time out. I&#039;m at my wits end. It&#039;s got to be something simple. Could someone please walk me through the steps I need to use to get this message decrypted???<br />I know this question has probably been asked a thousand times, and I apologize. Please have pity on me?<br />Explain as you would to a child, because I feel like one.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Please Help--GPG Decryption Problem!! I'm at wits end.</strong><br />
+				Post by: <strong>motek</strong> on <strong>September 28, 2013, 04:55 am</strong>
+			</dt>
+			<dd class="postbody">
+				Unless&nbsp; you are trying&nbsp; to decrypt a message you used YOUR OWN KEY TO ENCRYPT .... this is what will happen!&nbsp; <br /><br />If someone else use your &#039;public key&#039; to encrypt a message to you, once you paste it onto the clipboard and press &#039;decrypt&#039; it will ask you with which key, you nominate your own, and presto!<br /><br />But, if you encrypt a message with another persons public key, and then try to decrypt it, you will get that message<br /><br />You can practice by writing a message on notepad to yourself, pasting it to the clipboard, encrypting it with your own key, copying that encrypted message to the notepad, clearing your clipboard, then pasting that encrypted message back onto the clipboard, pressing &#039;decrypt&#039;, it will ask you which key, say yours, put in password and voila!<br /><br />&nbsp;I&#039;m pretty sure this is your problem, using the wrong keys to decrypt<br /><br />good luck<br /><br />m m m motek
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Please Help--GPG Decryption Problem!! I'm at wits end.</strong><br />
+				Post by: <strong>This_is_not_SOCA</strong> on <strong>September 28, 2013, 12:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=215518.msg1570658#msg1570658">Quote from: Tiger7776 on September 28, 2013, 04:29 am</a></div></div><blockquote class="bbc_standard_quote">...When I open the program, I&#039;m in the GNU Privacy Assistant-Key Manager window. I open the clipboard and paste the message into the clipboard. I hit the decrypt logo and I get the message &quot;GPA Error-- Clipboard contained no valid encrypted data&quot; Just so everyone will know, I have searched everywhere for the answer. ..</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This is the error message you get when the encrypted text is not encrypted to you. The text is properly encrypted and formatted but is encrypted to somebody elses public key I am afraid.<br /><br />If you are 100% sure it has been encrypted to your public key then then only other thing to check is that your own key is installed properly in GPA as follows: <br /><br />1) Bring up the &#039;Key Manager&#039; in GPA<br />2) Find your key in the list<br />3) Check that your key has a different icon from the others (it should show two keys rather than one in the little icon - this shows that the key contains both the public and private parts)<br />4) Click on your key, in the &#039;Details&#039; tab that appears underneath the list of keys the first line should say &#039;This key has both a private and public part&#039;<br /><br />However, as I and the other poster have said - it is basically encrypted to somebody elses public key in all likelihood.<br /><br />get the sender to re-encypt and to make sure then encrypt using your public key.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Please Help--GPG Decryption Problem!! I'm at wits end.</strong><br />
+				Post by: <strong>IForgotMyFuckingPassword</strong> on <strong>September 28, 2013, 02:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=215518.msg1570658#msg1570658">Quote from: Tiger7776 on September 28, 2013, 04:29 am</a></div></div><blockquote class="bbc_standard_quote">I&#039;m using gpg4win running with windows 7. I have my private and public keys and all of the vendors I deal with keys as well on my keyring. I can encrypt messages just fine. Up until this point, I have never had to decrypt a message from another person. <br />When I open the program, I&#039;m in the GNU Privacy Assistant-Key Manager window. I open the clipboard and paste the message into the clipboard. I hit the decrypt logo and I get the message &quot;GPA Error-- Clipboard contained no valid encrypted data&quot; Just so everyone will know, I have searched everywhere for the answer. The tutorials will not load, they time out. I&#039;m at my wits end. It&#039;s got to be something simple. Could someone please walk me through the steps I need to use to get this message decrypted???<br />I know this question has probably been asked a thousand times, and I apologize. Please have pity on me?<br />Explain as you would to a child, because I feel like one.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m a Linux user, but I believe if you save the message as a text file, you can decrypt it in the Windows command line interface. I know most of the steps, but I&#039;m not sure about all of the DOS commands, so I don&#039;t want to fuck you up.<br /><br />There&#039;s always the standard windows fixes: unistall and reinstall GPA and/or restart your PC.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Please Help--GPG Decryption Problem!! I'm at wits end.</strong><br />
+				Post by: <strong>Tiger7776</strong> on <strong>September 28, 2013, 04:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you all. I&#039;ll bet that&#039;s what happened--he encrypted it with someone elses key. I&#039;m gonna have him send it again. It was just bugging the crap out of me.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Please Help--GPG Decryption Problem!! I'm at wits end.</strong><br />
+				Post by: <strong>medicineman684</strong> on <strong>September 28, 2013, 06:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				A lot of times its simple formatting issue. Here is an example message. The first line must be -----BEGIN PGP MESSAGE----- with no spaces and the exact amount of dashes (5 on each side). The second line should say version. The third line should be blank. The two last encrypted lines should be short and the last line should be -----END PGP MESSAGE-----&nbsp; (again no spaces before or after).<br /><br />-----BEGIN PGP MESSAGE-----<br />Version: GnuPG v2.0.21-beta27 (MingW32)<br /><br />hQEMA2NhAP0tPlbCAQf/VLO7tPZWozP6IT2D9Z6D8aDATHvP92tvMEQQOeUln/EA<br />2UkmPmeuCznGRZ/WWuYsgSDc8MNt75ALLK+/U6K8R9cpAjqN5kFJ0knxTQBoGBcr<br />lmnH+KdB0XhqbWUA9KUx6+bhD/LVKsdR9F83KK1p2tSYJWflQKFE0x0x3oxAESmR<br />Oi3vuD0MCROig9viC4su+HMgy70yEKe381CKmG9kuFMQJ/85UOd/ZitmjOfJmOYW<br />fbl+d+5cQeqaeT6HYmzCrCuMAzTv45Ew2klmvfS/szR3VlmHE7RLy0IC4FzqkXKy<br />hAzyoZ4dIusB0ybOaxzNU2kz4Wlk+mhmR8HvIyLOUdKuAZdSHF/uNA+5VCfqS3+V<br />yo0YqSlvs6EcGhtzYZrEmQtLzLdWpKGPX4KV0WecxAsRH1TtTYmMzCaTy3rGO9yu<br />Gl+LQ5q7zyykoB1qCHaiWU1trWjr8vwDAoG7VPch8UN5OAKeYLa34iBisYoyJ768<br />bRhuRQq/Xv7lgRJSGW+7QI1O4Nal2rFwdOljFPHbJXBARtMKMr/AGpk20HyR8Z7P<br />IO6ca1yMW7jhm8u4OaoU<br />=0L80<br />-----END PGP MESSAGE-----
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Please Help--GPG Decryption Problem!! I'm at wits end.</strong><br />
+				Post by: <strong>Tiger7776</strong> on <strong>September 28, 2013, 10:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				MedicineMan, you were absolutely correct. Once I got the spacing corrected, bingo, I got the decryption. I thank you!!!!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Please Help--GPG Decryption Problem!! I'm at wits end.</strong><br />
+				Post by: <strong>medicineman684</strong> on <strong>September 29, 2013, 04:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah took me a while to figure that out!&nbsp; :o
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

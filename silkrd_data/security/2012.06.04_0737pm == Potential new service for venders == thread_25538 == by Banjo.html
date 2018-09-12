@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=25538.0" />
+		<title>Print Page - Potential new service for venders</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Banjo on June 04, 2012, 07:37 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Potential new service for venders</strong><br />
+				Post by: <strong>Banjo</strong> on <strong>June 04, 2012, 07:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m thinking of creating a new .onion service that may be of use to vendors. Before I go to all the trouble of coding it though, I thought I&#039;d do a quick interest check to see if people would actually use it.<br /><br />Basically it would be a site to track and manage your orders, as well as create and (optionally) share buyer ban/blacklists.<br /><br />It will allow you to enter your wholesale and retail prices, as well as apply discounts. This way you can easily track your profit margin over time. Each username that you enter is encrypted with a one-way hash, so that if the database were ever compromised, it would be difficult (although not entirely impossible) to get a list of your customers.<br /><br />I have the whole framework done, so I&#039;ve got a pretty good idea of how everything will work. Especially from a security standpoint. Rather than making a giant post that no one will read, I&#039;ll leave it at this. I plan on being completely transparent with the whole security scheme, so please feel free to ask me anything regarding how I plan to handle a given problem/scenario.<br /><br />I plan on charging a one-time fee of 5BTC for this service.<br /><br />A bit about blacklists:<br />You can create as many blacklists as you want, and each list can have as many banned buyers as you want. When you enter a new order, the system will warn you that the user is on one of your blacklists. That&#039;s handy. But what&#039;s really handy is you can optionally share your blacklist with other vendors (you control who). If you&#039;re subscribed to another vendor&#039;s blacklist, and you get a new customer, it will check that username against all of the blacklists you&#039;re subscribed to.<br /><br />To make this a little more clear, let&#039;s say you subscribe to Banjo&#039;s &quot;Potential LE list&quot;. Banjo has added the user, &quot;John Doe&quot; to this list. You get a new order from John Doe, and go to the website to enter in his order. You&#039;d then get a warning: &quot;User John Doe is on Banjo&#039;s blacklist, &#039;potential LE list. The reason stated was: address was a police station&#039;. Are you sure you want to continue with this order?&quot;<br /><br />But here&#039;s the really good part. When you share a blacklist with someone, they don&#039;t actually get to see it. Not only do they not get to see the whole list, but it&#039;s also encrypted in the database, so that no one can see the list. Using a hash function (I&#039;ll be using SHA-512), I can compare uses that you enter against already encrypted users, but there would be no (reasonable) way to reverse the entire list.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Potential new service for venders</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>June 04, 2012, 07:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I wouldn&#039;t ever consider using this. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Potential new service for venders</strong><br />
+				Post by: <strong>Banjo</strong> on <strong>June 04, 2012, 07:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25538.msg273174#msg273174">Quote from: Limetless on June 04, 2012, 07:39 pm</a></div></div><blockquote class="bbc_standard_quote">I wouldn&#039;t ever consider using this.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Because you wouldn&#039;t want a record of your transactions stored somewhere that&#039;s out of your control? Especially controlled by someone you have no reason at all to trust?
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

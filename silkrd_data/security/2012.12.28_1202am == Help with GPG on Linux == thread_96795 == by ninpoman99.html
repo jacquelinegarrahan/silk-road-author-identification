@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=96795.0" />
+		<title>Print Page - Help with GPG on Linux</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: ninpoman99 on December 28, 2012, 12:02 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Help with GPG on Linux</strong><br />
+				Post by: <strong>ninpoman99</strong> on <strong>December 28, 2012, 12:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				&nbsp;I apologize if this question is answered somewhere else either here in the forums or on the wiki. If it is I can&#039;t find it and believe me I have searched. I finally successfully booted up on Linux from USB and I&#039;m having a problem getting GPG to run. The instructions say to &quot;open the gpg4usb-0.3.2-1.zip folder&quot; and then to ciick on the &quot;start_linux executable&quot;. The problem is that &quot;start_linux&quot; is not an executable file. When I click it opens an &quot;Open Files&quot; window with two sub windows &quot;Available application&quot; and &quot;Recent applications&quot; . Not at all sure what I&#039;m supposed to do with that? I&#039;m still searching for answers on the GPG site but in the mean time can anyone help me get GPG going on Linux? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with GPG on Linux</strong><br />
+				Post by: <strong>astor</strong> on <strong>December 28, 2012, 12:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				In the file manager, right click on the file and select Properties, then go to the Permissions tab and check &quot;Allow executing file as program&quot;.<br /><br />Alternatively, open a terminal<br /><br />cd /path/to/folder<br />chmod +x filename<br /><br />Edit: BTW, every Linux discro comes with gpg by default. You don&#039;t need to download GPG4USB, but I&#039;m sure it&#039;s easier to use than command line gpg.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with GPG on Linux</strong><br />
+				Post by: <strong>ninpoman99</strong> on <strong>December 28, 2012, 12:22 am</strong>
+			</dt>
+			<dd class="postbody">
+				Cool thanks much astor! Now embarrased that I didn&#039;t think to at least try the command line chmod of the file.&nbsp; :-[&nbsp; I&#039;m an old school unix person who prefers cmd line to app interfaces.&nbsp; ;D
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with GPG on Linux</strong><br />
+				Post by: <strong>ninpoman99</strong> on <strong>December 28, 2012, 12:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				Ok one step closer.&nbsp; I can now launch GPG and I was prompted to create a key pair. According to the message that was displayed I successfully created the key pair yet no keys show up in the &quot;Key Manager&quot; window.&nbsp; The same thing happens if i try to manually create the key pair using the &quot;Key Manager&quot;. Any ideas?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with GPG on Linux</strong><br />
+				Post by: <strong>astor</strong> on <strong>December 28, 2012, 01:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				I don&#039;t know. For some reason I can&#039;t start start_linux. It doesn&#039;t give an error, it just doesn&#039;t start, so that&#039;s not helpful. It may be because I have a system version of gpg. Can you do me a favor? Open a terminal and type this<br /><br />gpg --version<br /><br />And post the output.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with GPG on Linux</strong><br />
+				Post by: <strong>ninpoman99</strong> on <strong>December 28, 2012, 11:45 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yea problem solved! The issue was due to i had neglected to create a persistent volume first to save the zip download and extract into. Good to go now with all the sercurity and anonymity setup and can finally start ordering. Yeesh this was to much like work.&nbsp; :o. Thanks for the help astor!
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

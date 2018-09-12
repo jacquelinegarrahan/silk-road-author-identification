@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=7116.0" />
+		<title>Print Page - gpg4win alternative??</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: hazed on December 16, 2011, 07:03 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>gpg4win alternative??</strong><br />
+				Post by: <strong>hazed</strong> on <strong>December 16, 2011, 07:03 pm</strong>
+			</dt>
+			<dd class="postbody">
+				so i lost my passphrass password for gpg4win. i uninstalled and installed it twice trying to make a new one, but everytime i reinstall it somehow finds my old information..i also cleaned my registry..ideas?<br /><br />anyone know of a alternative program to encrypt and decrypt pgp??&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: gpg4win alternative??</strong><br />
+				Post by: <strong>wretched</strong> on <strong>December 16, 2011, 07:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				gpg4usb. I use it, just unzip it to a flash drive, it works with windows or linux in one simple package. it has a built in text editor for copy/paste encryption. the only thing It doesn&#039;t seem to do is sign or verify signed messages.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: gpg4win alternative??</strong><br />
+				Post by: <strong>CrunchyFrog</strong> on <strong>December 17, 2011, 03:25 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote from: hazed</div></div><blockquote class="bbc_standard_quote">so i lost my passphrass password for gpg4win. i uninstalled and installed it twice trying to make a new one, but everytime i reinstall it somehow finds my old information..i also cleaned my registry..ideas?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Do you mean you no longer have the passphrase for the keys you generated?&nbsp; If so, you could delete those keys from within GPG4win (highlight key, select Keys menu, select Delete Keys) and generate new ones (select Keys menu, select New Key).<br /><br />Anyway, as to your question: uninstalling GPG4win does *not* remove its data directory (which is where your keys are).&nbsp; To find the data directory, search your system for the files &quot;pubring.gpg&quot; and/or &quot;secring.gpg&quot;.&nbsp; Whatever directory those files live in -- for example, C:\Users\username\AppData\Roaming\gnupg in Windows7 -- is the directory you&#039;ll want to delete manually.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: gpg4win alternative??</strong><br />
+				Post by: <strong>fastcat</strong> on <strong>December 19, 2011, 04:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=7116.msg63378#msg63378">Quote from: wretched on December 16, 2011, 07:20 pm</a></div></div><blockquote class="bbc_standard_quote">gpg4usb. I use it, just unzip it to a flash drive, it works with windows or linux in one simple package. it has a built in text editor for copy/paste encryption. the only thing It doesn&#039;t seem to do is sign or verify signed messages.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I also use gpg4usb. Try updating to the latest version. Sign and verify functionality was added in v0.3.1.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: gpg4win alternative??</strong><br />
+				Post by: <strong>Dark_Quanta</strong> on <strong>December 19, 2011, 06:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Has anyone tried using FireGPG? It does require GPG installed on the machine but runs entirely as a Firefox plugin. You can sign, create keys etc all within the browser (it even includes a minimal text editor) just by using a right-click. <br /><br />The downside:<br />You have to downgrade Firefox to a v.6 series release to run. It hasn&#039;t been updated to work with FF 7 or 8<br /><br />Just my two bits
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: gpg4win alternative??</strong><br />
+				Post by: <strong>MaRyLaMb</strong> on <strong>November 14, 2012, 06:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m going to try gpg for USB tonight and give that a try. You all are so helpful !! Thanks for being patient. I promise to teach a fellow newbie how to do this when I figure it out. And I WILL figure it out!!!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: gpg4win alternative??</strong><br />
+				Post by: <strong>Publius</strong> on <strong>November 14, 2012, 08:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				gpg4usb seems to work for me. I was also having trouble with gpg4win.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

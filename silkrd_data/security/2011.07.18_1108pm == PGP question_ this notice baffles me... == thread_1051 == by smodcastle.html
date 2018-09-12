@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=1051.0" />
+		<title>Print Page - PGP question: this notice baffles me...</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: smodcastle on July 18, 2011, 11:08 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>PGP question: this notice baffles me...</strong><br />
+				Post by: <strong>smodcastle</strong> on <strong>July 18, 2011, 11:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				About every other person I attempt to send an encrypted message to, PGP gives me this message:<br /><br />It is NOT certain that the key belongs to the person named<br />in the user ID.&nbsp; If you *really* know what you are doing,<br />you may answer the next question with yes.<br /><br />I always give em the okay, but I thought I&#039;d ask some peeps that understand the system better, what exactly does this mean? And is it that big of a deal? Thanks! ~smod
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question: this notice baffles me...</strong><br />
+				Post by: <strong>g4bb3r</strong> on <strong>July 18, 2011, 11:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It means you haven&#039;t signed their public key with your private key so it&#039;s not sure if it has been tampered with or not.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question: this notice baffles me...</strong><br />
+				Post by: <strong>btcfreedom</strong> on <strong>July 19, 2011, 12:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				+1 g4bb3r
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question: this notice baffles me...</strong><br />
+				Post by: <strong>smodcastle</strong> on <strong>July 19, 2011, 01:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				hmm ok, i apologize. i actually kinda knew that much, only i thought each person was solely responsible for signing their own key. i know HOW to sign a key, in as much as i know the steps- im just not sure what it means once its done. i guess what im saying is i dont know what that really MEANS to me. so to clarify: a.) i sign THEIR key to make sure it hasnt been tampered with? what would that mean that it is tampered with? and b.) how important is it that i sign their key and why? thanks. ~smod
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question: this notice baffles me...</strong><br />
+				Post by: <strong>joeblow2</strong> on <strong>July 19, 2011, 03:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				Someone knowledgeable correct me if I&#039;m wrong but: the whole signature issue regarding PGP keys is only pertinent if you are getting the person&#039;s key from a public place where you&#039;re not sure THAT PERSON put it there or not?&nbsp; So, for example, if you download a seller&#039;s PGP key from SR, you KNOW that&#039;s the right one, because it&#039;s on their account.&nbsp; As long as you don&#039;t *change* that key, the seller can always read your messages and you have 100% confidence it&#039;s them.&nbsp; <br /><br />Signatures and verification come in when I might go to the Tor project and want to talk to a programmer and their key is up on some blog out in the nether regions.&nbsp; I download it, it has their name on it, but I don&#039;t have any idea who put it out there.&nbsp; So, I have to get them to verify it the first time I use it with them.<br /><br />That&#039;s what I&#039;ve always understood since 1998 or so when we first used PGP.&nbsp; &nbsp;Is that correct?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question: this notice baffles me...</strong><br />
+				Post by: <strong>Kind Bud</strong> on <strong>July 19, 2011, 04:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The warning is not a big deal, just mean you have not marked that you are sure you know them.<br /><br />signatures are useful if you want to prove you sent something. Webpages and accounts can get hacked, getting someone else&#039;s private pgp key is much harder. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

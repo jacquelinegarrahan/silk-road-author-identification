@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=169099.0" />
+		<title>Print Page - TOR &amp; OVPN </title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: flashlight5 on June 06, 2013, 11:09 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>TOR &amp; OVPN </strong><br />
+				Post by: <strong>flashlight5</strong> on <strong>June 06, 2013, 11:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Do not use Tor through VPN. People think that this is more secure. It is not more secure. This is a single point of attack and a method of tracking you. <br /><br />just read that on two different websites. can sb explain it? Dont get the point of attack thing. every website / service would just get a TOR IP, wouldnt it ?<br />thx!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR &amp; OVPN </strong><br />
+				Post by: <strong>TheGolden24</strong> on <strong>June 06, 2013, 11:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I have also heard the same and would like to learn more on the topic
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR &amp; OVPN </strong><br />
+				Post by: <strong>mbius298074</strong> on <strong>June 07, 2013, 01:04 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=169099.msg1208003#msg1208003">Quote from: flashlight5 on June 06, 2013, 11:09 pm</a></div></div><blockquote class="bbc_standard_quote">Do not use Tor through VPN. People think that this is more secure. It is not more secure. This is a single point of attack and a method of tracking you. <br /><br />just read that on two different websites. can sb explain it? Dont get the point of attack thing. every website / service would just get a TOR IP, wouldnt it ?<br />thx!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This advice was mainly for carders and &quot;freedom fighters&quot; (e.g., lulzsec). It is possible to locate someone using tor if you control/watch their entry (e.g., home ISP or VPN) and exit point (Tor exit node or the site they are attacking) using a correlation attack. The idea is that you show the traffic they send is equivalent to the traffic that is received.<br /><br />However, the security of using a VPN to connect to Tor depends on the method you use to connect to Tor in the first place. If you are connecting from a hacked or public WiFi then using a VPN is a security risk for the reason above as the entry is then fixed. If you are connecting from home it is maybe a little safer depending on your country, ISP and VPN.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR &amp; OVPN </strong><br />
+				Post by: <strong>flashlight5</strong> on <strong>June 07, 2013, 02:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				thx for the info, not really sure i follow you thou.<br /><br />Lets say I use a WLAN and connect directly to tor, then my entry point is fixed anyways... ? Ultimately I need a fixed entry point...?!<br /><br />Of do I have it wrong? <br /><br />I mean it like this:<br /><br />&nbsp; &nbsp; &nbsp;WLAN <br />&nbsp; &nbsp; &nbsp; &nbsp;IIIIIII<br />I____OVPN___I<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;V<br />-----TOR Server 1------<br />-----TOR Server 2------<br />-----TOR Server 3------<br /><br /><br />INTERNET<br /><br /><br />Every body just seeds the TOR exit.. in case somebody gets around TOR, they get my vpn ip. Or do I have it wrong?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR &amp; OVPN </strong><br />
+				Post by: <strong>mbius298074</strong> on <strong>June 08, 2013, 06:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=169099.msg1210350#msg1210350">Quote from: flashlight5 on June 07, 2013, 02:58 pm</a></div></div><blockquote class="bbc_standard_quote">thx for the info, not really sure i follow you thou.<br /><br />Lets say I use a WLAN and connect directly to tor, then my entry point is fixed anyways... ? Ultimately I need a fixed entry point...?!<br /><br />Of do I have it wrong? <br /><br />I mean it like this:<br /><br />&nbsp; &nbsp; &nbsp;WLAN <br />&nbsp; &nbsp; &nbsp; &nbsp;IIIIIII<br />I____OVPN___I<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;V<br />-----TOR Server 1------<br />-----TOR Server 2------<br />-----TOR Server 3------<br /><br /><br />INTERNET<br /><br /><br />Every body just seeds the TOR exit.. in case somebody gets around TOR, they get my vpn ip. Or do I have it wrong?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No problem. Glad to help.<br /><br />To answer your question, your entry point isn&#039;t fixed if you change public WiFi hotspots before connecting each time. However, if you use the same WiFi access point then your location is fixed, like using the same VPN, and you are more suseptible to a correlation attack.<br /><br />Basically, the statement about &quot;VPN before Tor is bad&quot; assumes that you connect to Tor from a changing IP each time. If you don&#039;t then the advice doesn&#039;t hold.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR &amp; OVPN </strong><br />
+				Post by: <strong>flashlight5</strong> on <strong>June 08, 2013, 06:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				What you say now makes sense. °,^<br /><br />A good VPN service have have several Servers so you can change too. <br /><br />But getting from a good VPN that many ppl use to my home Ip is still a long shot, right?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR &amp; OVPN </strong><br />
+				Post by: <strong>mbius298074</strong> on <strong>June 10, 2013, 02:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=169099.msg1214943#msg1214943">Quote from: flashlight5 on June 08, 2013, 06:16 pm</a></div></div><blockquote class="bbc_standard_quote">What you say now makes sense. °,^<br /><br />A good VPN service have have several Servers so you can change too. <br /><br />But getting from a good VPN that many ppl use to my home Ip is still a long shot, right?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The number of servers the vpn has doesn&#039;t matter. If you are traced to your VPN and someone wishes to identify you (e.g., the government) then they will watch everything from that VPN, not just the server you connect to.<br /><br />If your attacker is determined enough it is very easy to trace you from your VPN to your home IP if you are connecting from home.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR &amp; OVPN </strong><br />
+				Post by: <strong>flashlight5</strong> on <strong>June 10, 2013, 10:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				easy??!!!! for real!?! <br /><br />with a good vpn service? dont think so.. my provider has been raided several times because some morons did DOS attacks. but they didnt log so nobody got caught
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR &amp; OVPN </strong><br />
+				Post by: <strong>nosponser</strong> on <strong>June 11, 2013, 12:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				i thought it worked this way:&nbsp; Me ---&gt; VPN ---&gt; Entry node ---&gt; Relay Node ---&gt; Exit Node ----&gt; Internet<br />&nbsp;making it harder to go backwards stops at VPN ? no? at the least i thought being on the vpn hides TOR activity from ip and le
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR &amp; OVPN </strong><br />
+				Post by: <strong>mbius298074</strong> on <strong>June 11, 2013, 03:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=169099.msg1221303#msg1221303">Quote from: flashlight5 on June 10, 2013, 10:55 pm</a></div></div><blockquote class="bbc_standard_quote">easy??!!!! for real!?! <br /><br />with a good vpn service? dont think so.. my provider has been raided several times because some morons did DOS attacks. but they didnt log so nobody got caught<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes, very easy. All they need to do is attain the ability to watch the VPN traffic. The fact a VPN may have no or minimal logs is not helpful if the traffic is being monitored and logged in realtime by someone else. That is what happened with &quot;HideMyAss&quot; and the lulzsec hackers even though HMA said they kept no logs.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR &amp; OVPN </strong><br />
+				Post by: <strong>mbius298074</strong> on <strong>June 11, 2013, 03:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=169099.msg1221582#msg1221582">Quote from: nosponser on June 11, 2013, 12:20 am</a></div></div><blockquote class="bbc_standard_quote">i thought it worked this way:&nbsp; Me ---&gt; VPN ---&gt; Entry node ---&gt; Relay Node ---&gt; Exit Node ----&gt; Internet<br />&nbsp;making it harder to go backwards stops at VPN ? no? at the least i thought being on the vpn hides TOR activity from ip and le<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Again, it depends on how you are connecting to Tor. You must decide if you want a fixed entry point to the tor entry node.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR &amp; OVPN </strong><br />
+				Post by: <strong>whatsmyname</strong> on <strong>June 11, 2013, 04:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				i connect to swiss vpn then i use the tor portable<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR &amp; OVPN </strong><br />
+				Post by: <strong>mbius298074</strong> on <strong>June 12, 2013, 03:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=169099.msg1222165#msg1222165">Quote from: whatsmyname on June 11, 2013, 04:11 am</a></div></div><blockquote class="bbc_standard_quote">i connect to swiss vpn then i use the tor portable<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />OK, so a fixed location then.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR &amp; OVPN </strong><br />
+				Post by: <strong>THCKingCA</strong> on <strong>June 12, 2013, 03:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So what&#039;s the best way to stay safe out here??&nbsp; MAC vs PC???
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

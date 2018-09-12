@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=208229.0" />
+		<title>Print Page - Tails giving me sending unencrypted warning when trying to connect to SR</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: StaticTension on August 28, 2013, 11:11 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Tails giving me sending unencrypted warning when trying to connect to SR</strong><br />
+				Post by: <strong>StaticTension</strong> on <strong>August 28, 2013, 11:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve never used Tails before so I tried it out and when trying to connect to SR I put in my login details and then I get a warning saying that the information I&#039;m about to send is unencrypted and that a third party could potentially see it.<br /><br />&nbsp;Is this normal? Also the other thing is why is it that by default on something that is touted as a safe portable OS is Scripts enabled on Iceweasel by default and Javascript? Isn&#039;t that counter intuitive to their design purposes? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails giving me sending unencrypted warning when trying to connect to SR</strong><br />
+				Post by: <strong>StaticTension</strong> on <strong>August 28, 2013, 11:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				https://tails.boum.org/doc/anonymous_internet/iceweasel/index.en.html<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Protection against dangerous JavaScript<br />Having all JavaScript disabled by default would disable a lot of harmless and possibly useful JavaScript and render unusable many websites.<br /><br />That&#039;s why JavaScript is enabled by default in Tails.<br /><br />But we rely on Torbutton to disable all potentially dangerous JavaScript.<br /><br />We consider this as a necessary compromise between security and usability and as of today we are not aware of any JavaScript that would compromise Tails anonymity.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That doesn&#039;t make me feel good about using Tails at all. So this OS that I&#039;m supposed to trust my freedom is not aware of how Javascript that would comprise Tails anonymity? That seems like a vary laxed attitude to me considering recent events. Some of you might say well they don&#039;t update their site or w/e but how hard is it to change a line on a website? <br /><br />As far as I knew the main disadvantage of using Tails was a lack of persisent entry guards for Tor but the more I&#039;m look at it seems kinda well not that great.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails giving me sending unencrypted warning when trying to connect to SR</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>August 29, 2013, 10:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=208229.msg1499909#msg1499909">Quote from: StaticTension on August 28, 2013, 11:11 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;ve never used Tails before so I tried it out and when trying to connect to SR I put in my login details and then I get a warning saying that the information I&#039;m about to send is unencrypted and that a third party could potentially see it.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Yes, that&#039;s normal.&nbsp; From the browser&#039;s perspective, the content is being sent via HTTP, not HTTPS, so it views it as insecure.&nbsp; &nbsp; The browser isn&#039;t aware that since it&#039;s going to a .onion address, it&#039;s destined for a hidden site, and the Tor instance will take care of encrypting it in-transit.&nbsp; &nbsp; It&#039;s annoying, and it would be nice if they&#039;d change the browser on Tails to not warn on .onion addresses, but I can see why they don&#039;t want Yet Another fork of the browser just for Tails to implement that.<br /><br />&nbsp;<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Also the other thing is why is it that by default on something that is touted as a safe portable OS is Scripts enabled on Iceweasel by default and Javascript? Isn&#039;t that counter intuitive to their design purposes?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I don&#039;t think that hidden service users are necessarily the target market for Tails.&nbsp; &nbsp; They&#039;re more concerned with the very non-technical user (journalists in oppressive countries, etc) using it, and it being an easy enough experience that they keep using it.&nbsp; So they flip Javascript on.&nbsp; &nbsp; Aside from the persistent entry-guard issue, and the fact that if an attacker gets root, they can deanonymize you, Tails is still a decent fit for both use cases.<br /><br />I think that at this point, they&#039;ll keep JS enabled just so nobody says they were wrong to have it turned on by default.<br /><br />What Tails should do is to use the unencrypted OS partition to store a basic preferences file (that isn&#039;t replicated when Tails clones itself to new USB keys) that keeps a few things:&nbsp; entry guards/cache, Javascript preference, fake-XP-or-not preference, etc.&nbsp; &nbsp; Or try to load the persistent encrypted volume earlier in the boot process and if present, load those things from it. <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails giving me sending unencrypted warning when trying to connect to SR</strong><br />
+				Post by: <strong>StaticTension</strong> on <strong>August 30, 2013, 07:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thx for the reply...<br /><br />After mucking around on their website that&#039;s what I figured as well and you make a good point about the target audience that Tails developers had in mind. I&#039;m not sure if there would be a way to create a persisent volume that would keep info for static tor entry guards and enable it early on in the boot sequence. I just got into Linux myself a week ago but I&#039;d think if your intent was to customize Tails source code you&#039;d prolly be better off making your own hardened Gentoo live distro and add the stuff you want on it. That would be my ideal choice but at the current time my lack of knowledge is putting that idea on the back burner. I&#039;m just taking about if I need to use TOR when out and about, would never really on it for a main option... those twitchy entry guards are sketchy. I read a news article about a week ago saying that half of the entry guards are owned by intelligence agencies..I&#039;ll try to dig it up but then again I never believe media but in those rare times they can be right. Better safe than sorry&nbsp; 8)<br /><br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=14836.0" />
+		<title>Print Page - Howto Speed Up Tor for Faster Silk Road Forum Interaction</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: raveyote69 on March 10, 2012, 07:18 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Howto Speed Up Tor for Faster Silk Road Forum Interaction</strong><br />
+				Post by: <strong>raveyote69</strong> on <strong>March 10, 2012, 07:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				Edit your torrc file to include the following lines:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">AvoidDiskWrites 1<br />CircuitBuildTimeout 5<br />ControlPort auto<br />ControlPortWriteToFile ./Data/Tor/port.conf<br />DataDirectory ./Data/Tor<br />DirPort 9030<br />DirReqStatistics 0<br />ExitPolicy reject *:*<br />GeoIPFile ./Data/Tor/geoip<br />KeepalivePeriod 60<br />Log notice stdout<br />NewCircuitPeriod 15<br />NumEntryGuards 8<br />ORPort 9001<br />RelayBandwidthBurst 10485760<br />RelayBandwidthRate 5242880<br />SocksListenAddress 127.0.0.1<br />SocksPort auto<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I edited out information specific to me, such as contact info and nickname. but the rest of the lines make tor extremely fast.<br /><br />note: the tor config above sets up your node as a tor relay, which seems to speed it up quite a bit. if you connect to irc networks that scan for tor relay ports 9001 and 9030, you may want to delete those lines, so you dont get glined for running a &quot;tor exit node&quot; (which is such bullshit. fuck the RBL)<br /><br />as you can see from the exit policy, you arent allowing any outgoing connections from tor, so it&#039;s not an exit node. but whatever.<br /><br />if you find this useful, feel free to let me know you appreciate these little protips.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Howto Speed Up Tor for Faster Silk Road Forum Interaction</strong><br />
+				Post by: <strong>Blksheep</strong> on <strong>March 10, 2012, 08:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				Do you copy and paste this overtop what is already there or can it just be added to the end minus the duplicate lines?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Howto Speed Up Tor for Faster Silk Road Forum Interaction</strong><br />
+				Post by: <strong>raveyote69</strong> on <strong>March 10, 2012, 08:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				just add the non duplicate lines.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Howto Speed Up Tor for Faster Silk Road Forum Interaction</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 10, 2012, 05:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Speed up the rate at which the feds can trace you. It is highly dangerous to use this configuration. First of all using 8 entry guards sticks out since nobody uses 8 entry guards. Second of all using 8 entry guards greatly increases the probability that one of them is owned by an attacker, since normally you only pick 3 entry guards. Third of all running as a relay degrades anonymity of the client in multiple ways.&nbsp; Fourth of all you really don&#039;t want to fuck with your torrc unless you *really* know what you are doing (OP does not), because making even slight changes to it can totally degrade your anonymity (as in this case). Tor gives you anonymity by letting you blend in with others, changing your configuration makes your Tor behave in ways that are different from others and can make you stick out from the crowd. <br /><br />Take your noobtips and shove them :). 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Howto Speed Up Tor for Faster Silk Road Forum Interaction</strong><br />
+				Post by: <strong>curbshot</strong> on <strong>March 11, 2012, 12:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14836.msg145956#msg145956">Quote from: kmfkewm on March 10, 2012, 05:46 pm</a></div></div><blockquote class="bbc_standard_quote">Speed up the rate at which the feds can trace you. It is highly dangerous to use this configuration. First of all using 8 entry guards sticks out since nobody uses 8 entry guards. Second of all using 8 entry guards greatly increases the probability that one of them is owned by an attacker, since normally you only pick 3 entry guards. Third of all running as a relay degrades anonymity of the client in multiple ways.&nbsp; Fourth of all you really don&#039;t want to fuck with your torrc unless you *really* know what you are doing (OP does not), because making even slight changes to it can totally degrade your anonymity (as in this case). Tor gives you anonymity by letting you blend in with others, changing your configuration makes your Tor behave in ways that are different from others and can make you stick out from the crowd. <br /><br />Take your noobtips and shove them :).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br /><br />good advice.<br />i would only add that *if* you do mod the torrc file, make a backup first.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

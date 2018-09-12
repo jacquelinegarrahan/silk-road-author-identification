@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=141913.0" />
+		<title>Print Page - RFC: Anonymous probabilistic physical object delivery using geocaching</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: stecker on April 03, 2013, 04:10 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>RFC: Anonymous probabilistic physical object delivery using geocaching</strong><br />
+				Post by: <strong>stecker</strong> on <strong>April 03, 2013, 04:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				http://pastebin.com/raw.php?i=2xjBk7Be<br /><br />-----BEGIN PGP SIGNED MESSAGE-----<br />Hash: SHA1<br /><br />RFC: Anonymous probabilistic physical object delivery using geocaching<br /><br />The problem with buying illegal things using pseudonymous methods is that at some point you have to give someone an address to drop at, and if your seller is OPFOR engaging in a sting you get filled full of .40 S&amp;W lead by people in blue costumes.<br /><br />Alice (seller) wants to send a good to to Bob (buyer) without Eve catching either Alice or Bob.&nbsp; Eve can also pose as Alice in order to catch Bob when Bob reveals himself to pick up the good.<br /><br />This can be made more safe via one of a few ways:<br /><br />1. Bob uses his home address but uses another name to provide plausible deniability (&quot;What?&nbsp; That package?&nbsp; It arrived three days ago, it&#039;s not addressed to me, I haven&#039;t opened it and was going to give it back to the post office.&quot;)&nbsp; Bad in that the gang in blue costumes may not believe you.<br /><br />2. Bob uses a vacant house as a drop.&nbsp; Bad in that Bob has to stake out the place, and it&#039;s a single point of failure if the seller is actually Eve.<br /><br />3. Bob receives GPS coordinates from Alice for a dead drop.&nbsp; Bad in that it&#039;s a single point of failure and that it&#039;s not as easy as dropping something in the mail.&nbsp; Good in that it&#039;s more isolated than #2.<br /><br />4. Alice and Bob use a mixmaster type physical object delivery.&nbsp; This can sufficiently isolate sender from receiver, however, the fact that all of the relay couriers and mail station operators are vulnerable to being killed or kidnapped by Eve if Eve is the seller means that no one wants to be a courier or mail station.<br /><br />5. Alice and Bob use web-of-trust.&nbsp; However, Eve can build up a good reputation with the goal of killing Bob eventually, or compromise Alice and use Alice&#039;s identity to entrap Bob.<br /><br />We want to make it so even in the degenerate case Bob can buy things safely even if Bob *knows* he&#039;s buying from Eve.<br /><br />We will take it as a given that Eve does not care about &quot;probable cause&quot; and &quot;rights&quot;. <br /><br />However there is an option that involves using probability to transact anonymously in fungible physical goods even assuming that 100% of sellers are hostile agents like Eve that want to either kill or kidnap Bob and Alice and will stake out a single dead drop or follow a single package all the way to its destination.<br /><br />Therefore, we must generate enough transactions for Eve to attempt intercept that it overloads her available resources, knowing that Bob is only going to receive one of them.<br /><br />Fungible goods<br /><br />We consider a class of goods G that are fungible; that is, any G is interchangeable with any other G.<br /><br />G need not be all from the same seller, Alice may provide a service to aggregate several G into a pool with minimum parameters (“a G in good condition”) which Alice then sells from.<br /><br />A problem is that G cannot be unique goods, say, an original Picasso of which there is only one in the world.<br /><br />Some examples of fungible G, in order from “least illegal” to “most illegal” on a worldwide basis:<br /><br />100 rds of 5.56x45 mm ammunition<br />Glock 19 pistol<br />Weed in small amounts<br />Cocaine in small amounts<br />1kg of RDX<br />1 antipersonnel grenade<br />1 antitank mine<br />1 autonomous antipersonnel drone ala US .mil&#039;s “Switchblade” series<br />1 FIM-92 “Stinger” or other MANPADS weapon<br />Chemical weapons<br />Biological weapons<br />Nuclear weapons<br /><br />Probability of intercept function<br /><br />The probability of an intercept of a single transaction is defined by a function I(n) where n is the number of simultaneous transactions generated.&nbsp; I=I_0*I(n) where I_0 is the probability that Eve is the sender rather than Alice, and I(n) is the probability that Eve will be able to monitor all n drop points if she chooses to intercept.<br /><br />That is, given n simultaneous transactions, what is the likelihood I that Eve is waiting at the drop point for Bob to kidnap or kill him?<br /><br />Bob has develops his I(n) based on local knowledge as well as perhaps consulting a bookmaker.&nbsp; Alice is not willing to generate an unlimited number of transactions to make Bob perfectly safe, she is willing to generate only n transactions.&nbsp; If Bob&#039;s n is less than Alice&#039;s n, then the transaction goes forward.<br /><br />I(n) will also depend on the relative illegality of G, as the illegality of G determines the amount of resources that Eve can call upon to kidnap or kill Bob.&nbsp; If G is 100 g of fine bud, Bob may accept an n of 1 and use traditional mail.&nbsp; If G is 1kg of RDX, Bob may demand an n of 10 or 20, as Bob thinks that Eve cannot realistically call up more than 10-20 tactical teams.&nbsp; I(n) is a monotonic function. <br /><br />It is important to note that I(n) *is not* simply 1/n.<br /><br />I(n) is a monotonic function and varies by type of good G, the relative illegality of G, and the resources available to Eve&#039;s gang of thugs at different gang levels.&nbsp; An illustration of this can be found at http://li7qxmk72kp3sgz4.onion/image.php?img=ff4499f8&amp;key=mwfBDsmIxjhLegIn<br /><br />(Aside: As illegality increases, n increases.&nbsp; At some point, n demanded by Bob will exceed the number of G available on the market.&nbsp; Thus, the market is self-limiting and will not result in a nuclear weapons bazaar.)<br /><br />Method<br /><br />Alice wants to sell a good G to Bob.<br /><br />Bob communicates to Alice his number of simultaneous transactions n desired.<br /><br />Bob specifies a geographic centerpoint and radius within which he is willing to make a pickup, this describes area A.&nbsp; The centerpoint is not his home location, of course.<br /><br />Bob wants to make a pickup in Washington, DC.<br /><br />Bob consults a website to determine an I(n) for good G around Washington, DC.&nbsp; He finds the function,&nbsp; determines I_0 and figures he needs n=10 to achieve his acceptable level of risk.<br /><br />He communicates this to Alice:<br /><br />[x,y,r,n]= [38.89511&nbsp;&nbsp;&nbsp;-77.03637&nbsp;&nbsp;&nbsp;0.25&nbsp;&nbsp;&nbsp;10]<br /><br />Alice places in the area A greater than n goods G and records their GPS coordinates.<br /><br />[[n,x,y]]=<br /><br />[[1&nbsp;&nbsp;&nbsp;38.9956654199&nbsp;&nbsp;&nbsp;-76.7496878711]<br />[2&nbsp;&nbsp;&nbsp;38.7847584375&nbsp;&nbsp;&nbsp;-76.6999747363]<br />[3&nbsp;&nbsp;&nbsp;38.4052113184&nbsp;&nbsp;&nbsp;-76.9313895313]<br />[4&nbsp;&nbsp;&nbsp;39.3942249902&nbsp;&nbsp;&nbsp;-77.3364798633]<br />[5&nbsp;&nbsp;&nbsp;38.5848683008&nbsp;&nbsp;&nbsp;-76.8180777637]<br />[6&nbsp;&nbsp;&nbsp;38.7087086328&nbsp;&nbsp;&nbsp;-77.0772025195]<br />[7&nbsp;&nbsp;&nbsp;38.7008656152&nbsp;&nbsp;&nbsp;-77.3532034961]<br />[8&nbsp;&nbsp;&nbsp;39.3931263574&nbsp;&nbsp;&nbsp;-76.9202506152]<br />[9&nbsp;&nbsp;&nbsp;39.257597793&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-77.080712041]<br />[10&nbsp;&nbsp;&nbsp;38.6715077051&nbsp;&nbsp;&nbsp;-76.8146292773]]<br /><br />However Alice cannot tell the entire list to Bob and tell him to make a pickup at random, as this exposes her to Bob simply stealing them all.<br /><br />Alice instead sends Bob only the latitude of all the packages with their number.&nbsp; <br /><br />[[n,x]] = <br /><br />[[1&nbsp;&nbsp;&nbsp;38.9956654199]<br />[2&nbsp;&nbsp;&nbsp;38.7847584375]<br />[3&nbsp;&nbsp;&nbsp;38.4052113184]<br />[4&nbsp;&nbsp;&nbsp;39.3942249902]<br />[5&nbsp;&nbsp;&nbsp;38.5848683008]<br />[6&nbsp;&nbsp;&nbsp;38.7087086328]<br />[7&nbsp;&nbsp;&nbsp;38.7008656152]<br />[8&nbsp;&nbsp;&nbsp;39.3931263574]<br />[9&nbsp;&nbsp;&nbsp;39.257597793]<br />[10&nbsp;&nbsp;&nbsp;38.6715077051]]<br /><br />She also contacts Trent, an escrow agent for transactions of this type.&nbsp; Alice gives Trent only the longitude of the packages and tells Trent to pick one for Bob to pick up.<br /><br />[[n,y]]=<br /><br />[[1&nbsp;&nbsp;&nbsp;-76.7496878711]<br />[2&nbsp;&nbsp;&nbsp;-76.6999747363]<br />[3&nbsp;&nbsp;&nbsp;-76.9313895313]<br />[4&nbsp;&nbsp;&nbsp;-77.3364798633]<br />[5&nbsp;&nbsp;&nbsp;-76.8180777637]<br />[6&nbsp;&nbsp;&nbsp;-77.0772025195]<br />[7&nbsp;&nbsp;&nbsp;-77.3532034961]<br />[8&nbsp;&nbsp;&nbsp;-76.9202506152]<br />[9&nbsp;&nbsp;&nbsp;-77.080712041]<br />[10&nbsp;&nbsp;&nbsp;-76.8146292773]]<br /><br />Trent rolls some dice and sends Bob the longitude of package n_0 along with a number n.<br /><br />[n,y] = [6&nbsp;&nbsp;&nbsp;-77.0772025195]<br /><br />Bob then consults his list and finds the number and matches the lat/long.&nbsp; <br /><br />[x,y] = [38.7087086328&nbsp;&nbsp;&nbsp;-77.0772025195]<br /><br />Bob goes and digs up the package n_0.<br /><br />Bob sends Trent that he has picked up package n_0, Trent then sends Alice the number of the received package so she can remove it from her list.<br /><br />Now consider the problems Eve faces to trap Bob or just anyone that wants to receive a G.<br /><br />Eve both has to get Bob to buy from her in the first place, as well as have agents/teams/drones waiting at the right package at the right time to kidnap/kill Bob.&nbsp; At some n defined by Bob, there will be so many packages in the field that Eve cannot monitor them all, and Bob knows that even if Eve is trying to kidnap/kill him, he has specified an n that reduces his risk to an acceptable level.<br /><br />Eve can however service n transactions through n different escrow agents and wait in a single location in the hope of kidnapping/killing a single buyer, and she may succeed in this, however for each individual buyer the odds of being caught still meets their own value of n simultaneous transactions even if n is different for each buyer.<br /><br />Eve can compromise Trent as well, or impersonate Trent as well as Alice.&nbsp; This doubles the amount of work for Eve, as she has to be both a trustworthy escrow agent as well as a trustworthy buyer.<br /><br />It must also be known that Bob is the only one buying from Alice at a given time.&nbsp; This is ensured by buyer ratings of Alice – if Bob turns up an empty hole, he knows that Alice is cheating the system and reports her to Trent.<br /><br />It is also important to note that in order to transact in a class of goods G in an area with a given I(n) and an average probability of intercept I_avg, to even get started Alice must have on average n_avg of G in the field in order to attract buyers.&nbsp; When Bob buys one, she deploys another G in another location in A to maintain n_avg of G in the field available for sale.<br /><br />Comments welcome to klacker@tormail.org<br /><br />BTC address: 1AMXZef6ECpP75vGiLEtxdNXQWHHX1B6u6<br /><br />- -----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG v2.0.17 (MingW32)<br /><br />mQENBFFY9K0BCADqRDwmivZRenmfvtJ+KBVE/IZBp8gTKznhxZdegPRRjh3oJAZK<br />cFO3JyOVe57Dua1MVhFCQPK/43D2NenSdd6qN4tI1zveqMEGi5xRbkSps46AuMex<br />AjnR2JiWWMckqMr71q+w9xjwgITU1ySWbwqqbIs/Z45s7xwxh8B+RQnDpFKe6CTv<br />MF/79YHuQfCIcIN5GprmK89yCeJJ0n/cJp7n6+OGnNX7WeD05oCDgmrH5BYOLy5b<br />iDeNe0JJUzGGHOulAPUmecRZFAsjJj13j/y8c03mLYNRDq42jF4Fzi7ryPVzj0IE<br />kuh6cF4so4sv4gpnftP08DzOWPoVIiPRaTkfABEBAAG0HWtsYWNrZXIgPGtsYWNr<br />ZXJAdG9ybWFpbC5vcmc+iQE4BBMBAgAiBQJRWPStAhsPBgsJCAcDAgYVCAIJCgsE<br />FgIDAQIeAQIXgAAKCRC5ynMxFEwkTqsuB/4/arTOVe1bO42YdN/t41I+YQGe85OU<br />635ukamAfx+uBw7YJhVjIS2Gl7rNJHMcP6fugLFM5nujn77ORQPkQ/K/J7gP4MA0<br />HVUFODZuBLaQbi+Zf57gsnMKPIrDMHzYwKp22GZWJNiGDbc2v8KijJSFNE0qpCZN<br />SJoCg9RPiesyR789/8pHtz6kKmurC5sdpT7U5iiilPPXG0/x1s0+BCX/59zKoocl<br />oIrYtzUmh70jR7lHOayazy/pAr9kj5qXX15ZuRg4W89IzvY3l09SW9f508SUZ3Tq<br />WmsodckUW9+hqLiUyq1mZOaUEdFqgqRBARNNeveKC3c06z949efE9NhK<br />=Fuc9<br />- -----END PGP PUBLIC KEY BLOCK-----<br /><br /><br />-----BEGIN PGP SIGNATURE-----<br />Version: GnuPG v2.0.17 (MingW32)<br /><br />iQEcBAEBAgAGBQJRW6rHAAoJELnKczEUTCRO9yEH/32F9bmcSGFGdVJAoXu74/bE<br />TCH58/aDkm3rn4tHMZjovV0pWmsvvPihR/XP5Ix0noZRzsCGiBdgs8DYAktoudOm<br />Kpj7IglmKxX4dUPj1j4Wgwrz0+u+GYUr87JBNC/UrOhqEDZqQ0ib38dGmIv+CvmT<br />eLQRjphjhKT9jWLTtVf61FCckm0CNrkiaF8p8Rq/e9Zc/Bqrmi5VY0k3X670J4rB<br />A8VGMmCbWgISNUXqig4mXcP3T/cKGAV2YbSLgz+39pTGXVa5XrQDglEiKPHzoJj7<br />P1gg/YAJGR8WwL2xdbt5MJYfcHv820BnzEwFJO85rabM3uc5uzzTO1ZiqZ3OSqw=<br />=m6G3<br />-----END PGP SIGNATURE-----
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: RFC: Anonymous probabilistic physical object delivery using geocaching</strong><br />
+				Post by: <strong>aliceandacat</strong> on <strong>April 04, 2013, 08:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				Saved to my reader to read later. Looks interesting.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: RFC: Anonymous probabilistic physical object delivery using geocaching</strong><br />
+				Post by: <strong>stecker</strong> on <strong>April 19, 2013, 01:25 am</strong>
+			</dt>
+			<dd class="postbody">
+				Bump.&nbsp; Whitelist addition requested.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: RFC: Anonymous probabilistic physical object delivery using geocaching</strong><br />
+				Post by: <strong>anonypunk</strong> on <strong>April 19, 2013, 02:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				tldr
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: RFC: Anonymous probabilistic physical object delivery using geocaching</strong><br />
+				Post by: <strong>Patticake</strong> on <strong>April 19, 2013, 04:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				Holy Shit, nutbar factor 6 just for thinking all of that, no matter how sane it turns out to be in the end
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: RFC: Anonymous probabilistic physical object delivery using geocaching</strong><br />
+				Post by: <strong>Xennek</strong> on <strong>April 19, 2013, 04:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=141913.msg1030719#msg1030719">Quote from: Patticake on April 19, 2013, 04:00 am</a></div></div><blockquote class="bbc_standard_quote">Holy Shit, nutbar factor 6 just for thinking all of that, no matter how sane it turns out to be in the end<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Word. This is just a dead drop right? It&#039;s good but not if you want to send or sell to someone who isn&#039;t local. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: RFC: Anonymous probabilistic physical object delivery using geocaching</strong><br />
+				Post by: <strong>stecker</strong> on <strong>April 20, 2013, 03:48 am</strong>
+			</dt>
+			<dd class="postbody">
+				&quot;Word. This is just a dead drop right? It&#039;s good but not if you want to send or sell to someone who isn&#039;t local. &quot;<br /><br />Yes, a dead drop, but with the added factor of being able to compensate for the probability of a sting.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: RFC: Anonymous probabilistic physical object delivery using geocaching</strong><br />
+				Post by: <strong>stecker</strong> on <strong>April 20, 2013, 01:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The real purpose of this technique is not to replace regular mailing of contraband or APOD.&nbsp; <br /><br />The use of this technique is for things where the relative illegality and thus value is such that you would never use the mail or multiple third parties (mixmaster/APOD) to make delivery.&nbsp; <br /><br />In other words, both buyer and seller have 1000+ BTC on the line and as such it is worth their while to make and take delivery themselves by driving a couple hundred miles to a drop.&nbsp; They just need to do so in a way that reduces the probability of a sting to a relatively low level.<br /><br />This technique is for things like a crate of RPGs or a kilo of cocaine, not an ounce of bud.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

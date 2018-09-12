@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=16958.0" />
+		<title>Print Page - VPN?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: thedoctorisin on March 29, 2012, 01:42 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>VPN?</strong><br />
+				Post by: <strong>thedoctorisin</strong> on <strong>March 29, 2012, 01:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hi all,<br /><br />Can anyone suggest a VPN service to utilize while using TOR?&nbsp; I assume folks get a moneypak and pay for it in that manner; however, I&#039;m open to any suggestions.<br /><br />Thank you.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>mdmamail</strong> on <strong>March 29, 2012, 01:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				Why would you want to? Tor is it&#039;s own VPN your connection is encrypted while only using sites inside the network. Technically you would lose anonymity connecting to a VPN first, then launching Tor. Even the torproject site doesn&#039;t recommend this or the Tails Amnesic developers. <br /><br />Can always make your own private exit node, or your own VPN with a $4/mth VPS that takes bitcoins and configure tor to exit through it.<br /><br />Failing that, bitcoin wiki full of VPN providers:&nbsp; https://en.bitcoin.it/wiki/Trade<br />These guys do socks proxy to Tor: http://torvpn.com<br /><br />Keep in mind you are now trusting they aren&#039;t secretly decrypting your traffic and reading it in the clear. Also don&#039;t get a PPTP VPN they are useless, only OpenVPN
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Mistersketch</strong> on <strong>March 29, 2012, 03:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				I would recommend Mullvad, they accept bitcoin or try nVPN.com they will take LR both anonymous forms of payment, <br /><br />although VPN is told not to be used with tor it is another layer of anonymity if you are accessing internet from a source that is not your home or anything that has to do with you.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>thedoctorisin</strong> on <strong>March 31, 2012, 05:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you both, I was unaware that a VPN connection would actually do more harm than good.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>scouser</strong> on <strong>March 31, 2012, 04:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<br />Logging on to a VPN and then using TOR as usual (running on your computer), the VPN provider can only see you&#039;re communicating with TOR nodes, that&#039;s it.<br /><br />Maybe what the developers meant is that a VPN provider (if malicious) could in theory redirect your connections, connect you to a rogue TOR network and sniff your data like that.<br /><br />I trust my VPN provider to not be part of such a big conspiracy, so I&#039;m sleeping better knowing there is one extra layer and I&#039;m not communicating with TOR nodes from my home connection, but another server in another country that probably a dozen other people combine with TOR as well, making it more difficult for LE to tell them apart, even with advanced techniques.<br /><br />I agree, it&#039;s still a dilemma for those who don&#039;t know their providers because what-if. But I find it more probable that LE would keep adding more TOR nodes and catch a few people than to pick on a few VPN providers and make them set up a rogue TOR network and do whatever LE wants without a specific warrant.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>April 01, 2012, 11:18 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Does anyone here use HideMyAss?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>dkmonk</strong> on <strong>April 01, 2012, 11:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I don&#039;t use HIdeMyAss, but since you know a lot more about that kind of stuff then me maybe you can recommend the program unless you think I am safe from sending my IP out, I don&#039;t want to be hacked.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>April 01, 2012, 11:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				http://hidemyass.com/<br /><br />Check them out on their website. They have a lot of different servers you can choose from and a simple control panel as well. Nice prices as well especially on the 1 year subscription. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Prawl42</strong> on <strong>April 01, 2012, 11:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				yeah if you do decide to use a vpn dont use a free one :) just sayin
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>April 02, 2012, 12:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg173047#msg173047">Quote from: Prawl42 on April 01, 2012, 11:53 pm</a></div></div><blockquote class="bbc_standard_quote">yeah if you do decide to use a vpn dont use a free one :) just sayin<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />+1<br /><br />Yeah exactly, if you are going to get VPN doing it on the pennies is pointless because you may as well not have it as it wont work and when you can buy the software and subscription for £50 why be a cheap fuck about it? Fifty quid is a small price to pay.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>dkmonk</strong> on <strong>April 02, 2012, 12:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yah, so should I throw away my labtop since I downloaded a porn order off SR?<br /><br />I mean I already know it has a virus just by me being on this site,&nbsp; I don&#039;t know if there is a keylog in my porn so the hackers could steal my identity?<br /><br />I wish I had PGP, so I could order a book of information from one of you guys, so I knew what and what not to do about the virus.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>April 02, 2012, 12:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				You can get GnuPG from here fella: http://www.gpg4win.org/ <br /><br />When you download it make sure you download everything in the package (GPA is the main one you will need). Also as well if you haven&#039;t got it already get TrueCrypt, that way you can encrypt your hard drive and create encrypted containers too. If you have a virus then just reformat your hard drive. Job&#039;s a good&#039;un! Best antivirus I can recommend is Kaspersky Pure 2.0 (it the most comprehensive antivirus I have found) and finally get HideMyAss VPN and you should be good to go. :)<br /><br />Shoot me and PM if you have any questions about the above. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Bish0p</strong> on <strong>April 02, 2012, 12:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg167906#msg167906">Quote from: Mistersketch on March 29, 2012, 03:31 am</a></div></div><blockquote class="bbc_standard_quote">I would recommend Mullvad, they accept bitcoin<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I use Mullvad all the time, pay in bitcoins, works great.&nbsp; I have never run TOR through it but don&#039;t see any reason why it wouldn&#039;t work.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>dkmonk</strong> on <strong>April 02, 2012, 12:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yah, I will get a hold of you later. I am about to go to sleep<br /><br />I heard American computers come with a little preinstallled protection as opposed to the UK ones... Is that true?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>April 02, 2012, 01:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				Not 100% on that one. My laptops are all U.K but I&#039;ve heard rumors that U.S laptops can be back-doored easier than U.K ones? Dunno if that it true though. <br /><br />Yeah shoot me a PM whenever pal, s&#039;all good. <br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Arguekitty</strong> on <strong>April 02, 2012, 12:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I use AirVPN. You can pay in bitcoins as well but unlike Mullvad it&#039;s actually pretty fast, and you got 9 different servers.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>April 02, 2012, 12:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Only 9? HMA has over 35 I think, maybe nearer 40. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>DropGuy751</strong> on <strong>April 02, 2012, 01:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg173060#msg173060">Quote from: Limetless on April 02, 2012, 12:06 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg173047#msg173047">Quote from: Prawl42 on April 01, 2012, 11:53 pm</a></div></div><blockquote class="bbc_alternate_quote">yeah if you do decide to use a vpn dont use a free one :) just sayin<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />+1<br /><br />Yeah exactly, if you are going to get VPN doing it on the pennies is pointless because you may as well not have it as it wont work and when you can buy the software and subscription for £50 why be a cheap fuck about it? Fifty quid is a small price to pay.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>£50!!! where you buying from? I pay 6$ for one of the most secure vpn services available a month.<br /><br />A vpn in combination with TOR is awesome takes anonymity to a whole new level.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>April 02, 2012, 01:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg173784#msg173784">Quote from: DropGuy751 on April 02, 2012, 01:02 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg173060#msg173060">Quote from: Limetless on April 02, 2012, 12:06 am</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg173047#msg173047">Quote from: Prawl42 on April 01, 2012, 11:53 pm</a></div></div><blockquote class="bbc_standard_quote">yeah if you do decide to use a vpn dont use a free one :) just sayin<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />+1<br /><br />Yeah exactly, if you are going to get VPN doing it on the pennies is pointless because you may as well not have it as it wont work and when you can buy the software and subscription for £50 why be a cheap fuck about it? Fifty quid is a small price to pay.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>£50!!! where you buying from? I pay 6$ for one of the most secure vpn services available a month.<br /><br />A vpn in combination with TOR is awesome takes anonymity to a whole new level.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I only pay £50 a year dude. Doesn&#039;t seem overly expensive to me. I use HMA pro.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Reseller</strong> on <strong>April 02, 2012, 02:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				My mate Michael (BlackShadow) owns nVPN. I&#039;ll ask if he can give you a deal.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>April 02, 2012, 04:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Nice one brother! If you do that would be pretty good because I can refund HMA at the moment. How many servers has nVPN got?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Arguekitty</strong> on <strong>April 02, 2012, 07:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg173777#msg173777">Quote from: Limetless on April 02, 2012, 12:53 pm</a></div></div><blockquote class="bbc_standard_quote">Only 9? HMA has over 35 I think, maybe nearer 40.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>They actually have 240. But they don&#039;t accept bitcoins, so you got your credit card or paypal account directly linked to them<br />Also can you trust them, being the most popular vpn service around? Well that is up to debate<br />Another reason why I prefer minor VPNs is because they&#039;re rarely banned from popular sites.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>kakapo</strong> on <strong>April 02, 2012, 07:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg174204#msg174204">Quote from: Arguekitty on April 02, 2012, 07:20 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg173777#msg173777">Quote from: Limetless on April 02, 2012, 12:53 pm</a></div></div><blockquote class="bbc_alternate_quote">Only 9? HMA has over 35 I think, maybe nearer 40.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>They actually have 240. But they don&#039;t accept bitcoins, so you got your credit card or paypal account directly linked to them<br />Also can you trust them, being the most popular vpn service around? Well that is up to debate<br />Another reason why I prefer minor VPNs is because they&#039;re rarely banned from popular sites.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The main problem with them being so popular is a lot of their servers have been banned in multiple places. You can&#039;t use HMA on freenode irc for example, I&#039;ve come across websites notifying me that such VPN services have been banned. Or my particular IP has been banned for misuse etc etc. I personally wouldn&#039;t use HMA.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>goblin</strong> on <strong>April 02, 2012, 08:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I don&#039;t understand something. How exactly does VPN combine with tor? Both originate on one&#039;s computer, you download the VPN software and click on it from your ISP&#039;s connection and are routed through a secure tunnel that exits through a server in maybe another country. How can that route be made to go through tor as well since tor is started on your own computer? Help me out here, guys, what am I missing? I&#039;m no techie here, but it doesn&#039;t add up for me.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Limetless</strong> on <strong>April 03, 2012, 02:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg174295#msg174295">Quote from: goblin on April 02, 2012, 08:39 pm</a></div></div><blockquote class="bbc_standard_quote">I don&#039;t understand something. How exactly does VPN combine with tor? Both originate on one&#039;s computer, you download the VPN software and click on it from your ISP&#039;s connection and are routed through a secure tunnel that exits through a server in maybe another country. How can that route be made to go through tor as well since tor is started on your own computer? Help me out here, guys, what am I missing? I&#039;m no techie here, but it doesn&#039;t add up for me.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yeah I was wondering this myself. :s
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>June 28, 2012, 12:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hidemyass logs everything and gives the logs to law enforcement at the drop of a dime, don&#039;t you remember that lulzsec dude who got busted using them?<br /><br />If you use VPN to Tor, you exit from the VPN to the Tor entry guard. I am not sure how to explain it. The VPN software routes your outgoing traffic through the VPN servers, your outgoing traffic initiates a Tor circuit from an entry guard, so the last VPN node connects to the entry guard and then the Tor circuit extends from there. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>UKMJ</strong> on <strong>June 28, 2012, 01:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				A VPN gives you a new IP address, therefore Tor will eventually route your request back to this IP address. If they were monitoring SR and tracing connections back through Tor to their originating IP (difficult and laborious but not impossible they they would end up at your VPN IP address. Which for me is in mainland europe, and the company i use do not store logs of who connected or what IP address was assigned to any particular user at a particular time.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>June 28, 2012, 01:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg313592#msg313592">Quote from: UKMJ on June 28, 2012, 01:44 pm</a></div></div><blockquote class="bbc_standard_quote">A VPN gives you a new IP address, therefore Tor will eventually route your request back to this IP address. If they were monitoring SR and tracing connections back through Tor to their originating IP (difficult and laborious but not impossible they they would end up at your VPN IP address. Which for me is in mainland europe, and the company i use do not store logs of who connected or what IP address was assigned to any particular user at a particular time.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Is that provider in Sweden?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>goblin</strong> on <strong>June 28, 2012, 07:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg313617#msg313617">Quote from: Guru on June 28, 2012, 02:11 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg173008#msg173008">Quote from: Limetless on April 01, 2012, 11:18 pm</a></div></div><blockquote class="bbc_alternate_quote">Does anyone here use HideMyAss?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Not if they want to hide their ass, they don&#039;t. <br /><br />Guru<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Good one, Guru. I was thinking the same but I dared not write it. Chicken I guess.<br /><br />goblin
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>UKMJ</strong> on <strong>June 28, 2012, 09:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<br />[/quote]<br /><br />Is that provider in Sweden?<br />[/quote]<br /><br />Is Sweden in mainland europe?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>June 29, 2012, 06:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg314222#msg314222">Quote from: UKMJ on June 28, 2012, 09:32 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">Is that provider in Sweden?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Is Sweden in mainland europe?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Not really, but the description sounded a bit like a Swedish provider (I forget the name), which used to host Wikileaks and purges logs and other data to protect their clients.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>Gorgorotz</strong> on <strong>June 29, 2012, 06:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hi,<br /><br />I am using a VPN first before connecting to Tor. Regarding to the TOR Wiki about TOR+VPN (https://trac.torproject.org/projects/tor/wiki/doc/TorPlusVPN) it&#039;s not a bad idea to route your TOR Traffic through a VPN.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">you -&gt; VPN/SSH -&gt; Tor<br /><br />You can route Tor through VPN/SSH services. That prevents your ISP etc from seeing that you&#039;re using Tor. Generally, VPNs are more popular than Tor, so you won&#039;t stand out as much. SSH tunnels are not so popular.<br />Once the VPN client has connected, the VPN tunnel will be the machine&#039;s default Internet connection, and the Tor Browser Bundle will route through it.<br />This can be a fine idea, assuming your VPN/SSH provider&#039;s network is in fact sufficiently safer than your own network.<br /><br />Another advantage here is that it prevents Tor from seeing who you are behind the VPN/SSH. So if somebody does manage to break Tor and learn the IP address your traffic is coming from, but your VPN/SSH was actually following through on their promises (they won&#039;t watch, they won&#039;t remember, and they will somehow magically make it so nobody else is watching either), then you&#039;ll be better off.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: VPN?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>June 29, 2012, 08:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg173810#msg173810">Quote from: Limetless on April 02, 2012, 01:31 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg173784#msg173784">Quote from: DropGuy751 on April 02, 2012, 01:02 pm</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg173060#msg173060">Quote from: Limetless on April 02, 2012, 12:06 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16958.msg173047#msg173047">Quote from: Prawl42 on April 01, 2012, 11:53 pm</a></div></div><blockquote class="bbc_alternate_quote">yeah if you do decide to use a vpn dont use a free one :) just sayin<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />+1<br /><br />Yeah exactly, if you are going to get VPN doing it on the pennies is pointless because you may as well not have it as it wont work and when you can buy the software and subscription for £50 why be a cheap fuck about it? Fifty quid is a small price to pay.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>£50!!! where you buying from? I pay 6$ for one of the most secure vpn services available a month.<br /><br />A vpn in combination with TOR is awesome takes anonymity to a whole new level.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I only pay £50 a year dude. Doesn&#039;t seem overly expensive to me. I use HMA pro.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Do you really think it is wise to tell people which entry nodes you are using? Especially since the last criminal who publicly said they used hidemyass got raided shortly after ?? 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

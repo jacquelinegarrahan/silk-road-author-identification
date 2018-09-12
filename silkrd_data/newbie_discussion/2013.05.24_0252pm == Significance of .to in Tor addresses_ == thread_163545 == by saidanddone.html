@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=163545.0" />
+		<title>Print Page - Significance of &quot;.to&quot; in Tor addresses?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: saidanddone on May 24, 2013, 02:52 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Significance of &quot;.to&quot; in Tor addresses?</strong><br />
+				Post by: <strong>saidanddone</strong> on <strong>May 24, 2013, 02:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hi Everyone,<br /><br />I am new and I have learned a lot on these discussion boards. What a great community this is.<br /><br />I am wondering if anyone can shed light on the significance of the &quot;.to&quot; part of a Tor address? Lately, I have been having some trouble getting to the forum. In iceweasel browser (using TAILS), I generally do a search for &quot;silk road forums&quot; and then click on the appropriate link. The address that comes up is &quot;dkn255hz262ypmii.onion.to&quot;. But lately when I go there, I get the following error message: &quot;onion.to<br />A connection to dkn255hz262ypmii.onion could not be established. Connection refused by destination host.&quot; I just discovered that I can still get to the forums if I lop off the &quot;.to&quot; part of the address.<br /><br />Is the &quot;.to&quot; part of the address critical? Am I somehow unprotected if I access the forum in this way? In layman&#039;s terms, can anyone explain the significance of the &quot;.to&quot; extension?<br /><br />Thank kindly,<br />-saidanddone
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Significance of &quot;.to&quot; in Tor addresses?</strong><br />
+				Post by: <strong>rock_lobster</strong> on <strong>May 24, 2013, 03:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hey there<br />Dont use the &quot;.to&quot;, that is only for accessing tor sites, from a computer with no tor enabled. That is, its like accesing tor but from the clearnet, using a proxy which can make you into different kinds of trouble.<br /><br />So use only the &quot;.onion&quot; links, without the &quot;.to&quot; <br /><br />Tip: once you login to SR, there are a couple links on top (like who are your heros and sth else) and another link in the bottom of the page, that lead you directly to the forum. Or, you could bookmark it though that is a bit un-cypher behaviour ;)<br /><br />Hope this helped!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Significance of &quot;.to&quot; in Tor addresses?</strong><br />
+				Post by: <strong>snufkin</strong> on <strong>May 24, 2013, 03:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hi saidanddone.<br /><br />http://onion.to is a &quot;clearnet&quot; site. If you open it you&#039;ll see that they have pretty good description of what it does. <br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Onion.To is a web application that will forward your web request to the Tor network. Through this web application you can fetch websites from within the Tor network and interact with them without installing the Tor software on your computer. </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div> It&#039;s a nice feature for anyone who wishes to fetch a page from a tor hidden service without running their own tor client. However, this service will act as a middle man and can, if they would like to, inspect or even intercept traffic between you and the hidden service, and what&#039;s worse is that this traffic is not encrypted between you and onion.to. You ISP or network administrator could see that you&#039;re resolving &lt;some_known_and_shady_tor_service&gt;.onion.to and inspect traffic.<br /><br />In simple terms for anyone using Silk Road, using onion.to instead of running your own local tor client undoes most of the privacy benefits from using tor. In you case, and now I&#039;m assuming that this &quot;TAILS&quot; distribution is set up to run it&#039;s own tor client and wrap all browser traffic, you&#039;re using the tor network to access the clearnet site &lt;whatever&gt;.onion.to only to access a tor-hidden service again. It&#039;s completely unnecessary and I suggest you remove the .to ending. I would also recommend you write down somewhere the service string for SR and SR forums and type it in when you want to access SR instead of doing Google/whatever-search for these terms.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Significance of &quot;.to&quot; in Tor addresses?</strong><br />
+				Post by: <strong>saidanddone</strong> on <strong>May 24, 2013, 03:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				rock_lobster &amp; snufkin:<br /><br />Thank you so much, that clarifies a lot. I&#039;ve got it now. Simply copied the real &quot;.onion&quot; guts of the address into a text file on my persistent drive. I was always a bit mystified at the &#039;gateway to onion&#039; page that I would get in between my search and accessing silk road and/or the forums. Now I have a better understanding about what that is, and why and how to avoid it.<br /><br />Here&#039;s a follow-up question then. If I access tor directly through &quot;.onion&quot; addresses, does that mean that my ISP has no idea I was on the tor network? I thought they could always tell that. It would be really comforting to know if my use of tor was completely under the radar.<br /><br />Thanks again,<br />-saidanddone
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Significance of &quot;.to&quot; in Tor addresses?</strong><br />
+				Post by: <strong>rock_lobster</strong> on <strong>May 24, 2013, 04:42 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Your ISP will know you connect to tor, but they won&#039;t be able to know anything about whatever it is you do there. Afaik if you really want to hide you&#039;re using tor, you should use a vpn or a proxy service, and then connect to the tor network from there. That way your ISP will only see your first &quot;jump&quot; but not the entry point to tor network. <br /><br />But then you&#039;d have to hire and trust another service provider! (The vpn or proxie). I think I&#039;ve read that ppl who want or need greater stealth do it that way, first tunnelling through a vpn, and then entering tor at the other end of the tunnel, that way you have another layer of protection, and your isp only knows about the first one. <br /><br />And remember, you can always add layers... and be behind 7 proxies! ;D
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Significance of &quot;.to&quot; in Tor addresses?</strong><br />
+				Post by: <strong>Libertas</strong> on <strong>May 24, 2013, 05:24 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=163545.msg1160599#msg1160599">Quote from: saidanddone on May 24, 2013, 02:52 pm</a></div></div><blockquote class="bbc_standard_quote">Hi Everyone,<br /><br />I am new and I have learned a lot on these discussion boards. What a great community this is.<br /><br />I am wondering if anyone can shed light on the significance of the &quot;.to&quot; part of a Tor address? Lately, I have been having some trouble getting to the forum. In iceweasel browser (using TAILS), I generally do a search for &quot;silk road forums&quot; and then click on the appropriate link. The address that comes up is &quot;dkn255hz262ypmii.onion.to&quot;. But lately when I go there, I get the following error message: &quot;onion.to<br />A connection to dkn255hz262ypmii.onion could not be established. Connection refused by destination host.&quot; I just discovered that I can still get to the forums if I lop off the &quot;.to&quot; part of the address.<br /><br />Is the &quot;.to&quot; part of the address critical? Am I somehow unprotected if I access the forum in this way? In layman&#039;s terms, can anyone explain the significance of the &quot;.to&quot; extension?<br /><br />Thank kindly,<br />-saidanddone<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You&#039;re searching for the URL, and you&#039;re using onion.to?!?! :o Searching for the URL is a surefire way to get your account phished - there is only one Silk Road URL active at the moment and that is silkroadvb5piz3r.onion<br /><br />Silk Road will never ask you for your PIN except for when you&#039;re buying something on your &#039;Cart&#039; page. If you have ever logged in at a site other than silkroadvb5piz3r.onion then I would highly recommend that you change your passphrase and PIN immediately.<br /><br />Regarding onion.to, by using that you are potentially revealing your login details to the operators of the onion.to proxy and should never be used to access either the Silk Road marketplace or the Silk Road forums.<br /><br />Libertas
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Significance of &quot;.to&quot; in Tor addresses?</strong><br />
+				Post by: <strong>snufkin</strong> on <strong>May 24, 2013, 10:42 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote"> If I access tor directly through &quot;.onion&quot; addresses, does that mean that my ISP has no idea I was on the tor network? I thought they could always tell that. It would be really comforting to know if my use of tor was completely under the radar.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Your ISP will know you connect to tor</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>This is correct but I would like to clarify a little further. The ISP can inspect your traffic and detect tor traffic. However, when you shut down your tor client it wont be making any traffic like that anymore and unless the ISP actively logs down which one of their users are using tor, it&#039;d be hard for them to answer any law enforcement&#039;s question about whether you have used tor in the past. I would say it&#039;s safe. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Significance of &quot;.to&quot; in Tor addresses?</strong><br />
+				Post by: <strong>DoctorFate</strong> on <strong>May 24, 2013, 11:34 pm</strong>
+			</dt>
+			<dd class="postbody">
+				In this world majority rules, even if something is illegal if everyone is doing it then there really is no point in it being illegal any more.&nbsp; &nbsp;I don&#039;t know where that came from, basically the more people that use tor the better it will be for everyone.&nbsp; 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

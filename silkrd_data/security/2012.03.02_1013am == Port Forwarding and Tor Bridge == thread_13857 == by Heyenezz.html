@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=13857.0" />
+		<title>Print Page - Port Forwarding &amp; Tor Bridge</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Heyenezz on March 02, 2012, 10:13 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Port Forwarding &amp; Tor Bridge</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 02, 2012, 10:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				How do I make a working private Tor bridge?<br /><br />I&#039;ve made a bridge but can&#039;tget it to connect. I&#039;m thinking th issue might be port forwarding or Windows Firewall?<br /><br />How do I check?<br /><br />What else might be preventing the bridge from connecting?<br /><br />What would you do?<br /><br />Thanks for any help.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Port Forwarding &amp; Tor Bridge</strong><br />
+				Post by: <strong>topple</strong> on <strong>March 02, 2012, 09:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Is the bridge running on the same computer as the client?&nbsp; Is there a firewall between the bridge and client or between the bridge and the internet?<br /><br />What client are you using - you mention Windows, so I assume Vidalia?&nbsp; What does it say in the message log when it tries to connect?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Port Forwarding &amp; Tor Bridge</strong><br />
+				Post by: <strong>RunningLion</strong> on <strong>March 02, 2012, 09:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Can someone explain a bridge from the beginning please?&nbsp; I don&#039;t know how to create or use one but it sounds important.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Port Forwarding &amp; Tor Bridge</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 03, 2012, 12:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=13857.msg134684#msg134684">Quote from: topple on March 02, 2012, 09:15 pm</a></div></div><blockquote class="bbc_standard_quote">Is the bridge running on the same computer as the client?&nbsp; Is there a firewall between the bridge and client or between the bridge and the internet?<br /><br />What client are you using - you mention Windows, so I assume Vidalia?&nbsp; What does it say in the message log when it tries to connect?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Bridge is on different computer on same network. There&#039;s a firewall on the bridge computer. Vidalia&#039;s my client. The message log says that Tor penetration testing failed (bridges are automatically tested by Tor for Internet connectivity). 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Port Forwarding &amp; Tor Bridge</strong><br />
+				Post by: <strong>topple</strong> on <strong>March 03, 2012, 02:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=13857.msg134879#msg134879">Quote from: Heyenezz on March 03, 2012, 12:13 am</a></div></div><blockquote class="bbc_standard_quote">Bridge is on different computer on same network. There&#039;s a firewall on the bridge computer. Vidalia&#039;s my client. The message log says that Tor penetration testing failed (bridges are automatically tested by Tor for Internet connectivity).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You&#039;ll need to make sure Tor is permitted through Windows Firewall.&nbsp; On Windows 7, look under Control Panel &gt; System and Security &gt; Windows Firewall &gt; Allowed Programs.&nbsp; Not sure on other versions.<br /><br />Also, I assume the computer running the bridge has a public IP address?&nbsp; I don&#039;t think you can run it from behind NAT.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Port Forwarding &amp; Tor Bridge</strong><br />
+				Post by: <strong>CaptainSensible</strong> on <strong>March 03, 2012, 07:03 pm</strong>
+			</dt>
+			<dd class="postbody">
+				To get a Tor bridge/relay running on your home network you probably have to enable port forwarding on your router.&nbsp; To establish connectivity to the Tor network your bridge needs to be able to access two ports ~~ most likely ports 9001 &amp; 9030.&nbsp; <br /><br />When you start up the bridge the notices.log file will have any connectivity errors.&nbsp; It will show whether or not an attempt to connect via ports 9001 &amp; 9030 was successful.&nbsp; <br /><br />You&#039;ll have to access the router&#039;s management interface by entering it&#039;s IP address, which is most likely 192.168.1.1&nbsp; &nbsp;From there go to the Port Forwarding section &amp; create entries for the two previously mentioned ports.&nbsp; The Tor website has a few more tips on enabling port forwarding on a home router. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

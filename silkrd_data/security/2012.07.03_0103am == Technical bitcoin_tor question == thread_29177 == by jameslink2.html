@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=29177.0" />
+		<title>Print Page - Technical bitcoin/tor question</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: jameslink2 on July 03, 2012, 01:03 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Technical bitcoin/tor question</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>July 03, 2012, 01:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				I was digging around and playing with tor, bitcoin, and the perl bitcoin module on Linux. It seems straight forward, easy enough to write a perl script that interfaces to the bitcoin client and to have the bitcoin client proxy everything through tor. <br /><br />So, Here is what I was thinking I may not understand this completely and am looking for input.<br /><br />&nbsp;If I write a perl script that generates bitcoin addresses and randomly transfers amounts between 3 or 4 of my computers using the onion addresses for the transfers and say have it run them through 20 or 30 different addresses, is this the same as the mixing services, or would it require that they be mixed with other peoples coins?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Technical bitcoin/tor question</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>July 03, 2012, 08:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				A mix is at most as anonymous as the amount of people using it 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Technical bitcoin/tor question</strong><br />
+				Post by: <strong>TotalEcstasyUK</strong> on <strong>July 03, 2012, 03:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If someone wanted to trace your coins that method wouldn&#039;t really help. It would make it slightly more difficult for someone, but all they would have to do is track the individual bitcoins that you are transfering. What a mixing service does is give you completely different coins so they have no way of knowing which coins are going to which user. If you get coin A then put it through a mixing service, you get coin B back, so people trying to follow coin A would not be able to link it to you any more.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Technical bitcoin/tor question</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>July 03, 2012, 05:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">If someone wanted to trace your coins that method wouldn&#039;t really help. It would make it slightly more difficult for someone, but all they would have to do is track the individual bitcoins that you are transfering.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Looking at the block chains it seems that a group of coins transferred in small amounts to other addresses through tor, then moved or transferred to another address then returned to a new address on the original client, would be hard to trace and say that it was all the same person. The more they are transferred the more links in the chain, add the fact that they are never received by the address that sent them and you have, to my understanding, something that is described in the bitcoin wiki as a way of remaining anonymous.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Technical bitcoin/tor question</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>July 04, 2012, 04:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=29177.msg323090#msg323090">Quote from: jameslink2 on July 03, 2012, 05:38 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">If someone wanted to trace your coins that method wouldn&#039;t really help. It would make it slightly more difficult for someone, but all they would have to do is track the individual bitcoins that you are transfering.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Looking at the block chains it seems that a group of coins transferred in small amounts to other addresses through tor, then moved or transferred to another address then returned to a new address on the original client, would be hard to trace and say that it was all the same person. The more they are transferred the more links in the chain, add the fact that they are never received by the address that sent them and you have, to my understanding, something that is described in the bitcoin wiki as a way of remaining anonymous.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Plausible deniability is not anonymity. Mixing your own coins with themselves is not really mixing at all. Okay the most secure sort of mixing is with blind signature &quot;tokens&quot;. You give a bitcoin to the mix, it gives you a blind signature signed token saying &quot;IOU one bitcoin&quot;. Because of the blind signature algorithm, it can verify its signature at a later point in time but it does not know what the signature on your token actually looks like. This offers perfect unlinkability, but only to within the set size. If you use such a mix and only you use it, the mix operator (and anyone watching) will know that it is you redeeming the signed IOU for a bitcoin to another account, because you are the only one who ever got an IOU. Thus, even with provably unlinkable mixing systems, the anonymity provided is exactly correlated with the size of the user base. If a thousand people got tokens from the mix, someone redeeming the token for a bitcoin to another account could be any of the thousand people who got a token. <br /><br />Of course you could argue, but it was not me who redeemed the token it was someone I traded it to for one bitcoin worth of goods!!! But that is more plausible deniability than anonymity. If a thousand people had used the mix you could say &quot;But you have absolutely no way of proving it was me who redeemed this token, because there were a thousand issued and only the people who received them know what the signature on theirs looked like!!&quot; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Technical bitcoin/tor question</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>July 04, 2012, 01:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you kmfkewm, That explained what I was missing!<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

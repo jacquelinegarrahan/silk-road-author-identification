@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=20281.0" />
+		<title>Print Page - Generating keypair in TAILS need help</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: budpuck3t on April 24, 2012, 07:19 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Generating keypair in TAILS need help</strong><br />
+				Post by: <strong>budpuck3t</strong> on <strong>April 24, 2012, 07:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				Ok so I made a TAILS usb, figuring out how to use encryption. <br /><br />i figured out that i need to grab the vendor&#039;s public key, and import it so i can send them encrypted messages......but where the hell do I make my own public key so that they can respond with encrypted messages? <br /><br />also where do i find my private key?<br /><br />and finally, how would i go about importing both after i restard TAILS and it removes all the data?<br /><br />i used the search function and read the gpg tutorial and everything and couldn&#039;t find an answer, nor on google. <br /><br />thanks
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Generating keypair in TAILS need help</strong><br />
+				Post by: <strong>supersecretsquirrel</strong> on <strong>April 24, 2012, 08:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				Because Tails wipes disk and memory when shutting down, you will need to put the keypair on a USB stick. Here&#039;s a quick tutorial for you:<br /><br />Step 0: plug in a USB stick and wait for it to mount (or mount it yourself, if it doesn&#039;t happen automatically)<br />Step 1: open a terminal window<br />Step 3: assuming the USB stick is mounted on /media/usb, type the following to generate your keypair: gpg --homedir /media/usb/ --gen-key<br />Step 4: answer the questions, choose 4096 for key strength, let the key expire if you want to, set your SR nick as the name, leave the rest blank, set a long passphrase<br />Step 5: to import a key, save the key in a file (e.g. vendorname.asc) and run gpg --homedir /media/usb/ --import vendor.asc<br />Step 6: to export your public key, run gpg --homedir /media/usb/ --export -a &quot;Name you entered in 4&quot; &gt; mypubkey.asc<br /><br />Things to keep in mind:<br /><br />7. You will need to have the USB stick mounted whenever you want to encrypt/decrypt messages<br />8. You will need to specify the path to the USB stick whenever running gpg (i.e. --homedir /media/usb/)<br />9. Your private and public key will be located in /media/usb/.gnupg
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Generating keypair in TAILS need help</strong><br />
+				Post by: <strong>Euphoric Status</strong> on <strong>April 24, 2012, 04:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Didn&#039;t know Tails wipes disk and memory when shutting down, kind of ruined the plan I had. I like to keep all of my SR/Tor info in one single notepad file, what would be the best option for carrying this around? Having a secondary encrypted USB with this file in it?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Generating keypair in TAILS need help</strong><br />
+				Post by: <strong>Electric Kool-Aid</strong> on <strong>April 24, 2012, 06:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				+1 on keeping everything you need to know on a seperate encrypted USB also if you are feeling really paraniod you can encrypt each file but that is not nessacary as in the US you are not required to give &quot;THE MAN&quot; your passphrase 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Generating keypair in TAILS need help</strong><br />
+				Post by: <strong>budpuck3t</strong> on <strong>April 24, 2012, 08:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=20281.msg205950#msg205950">Quote from: Guru on April 24, 2012, 06:08 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=20281.msg205811#msg205811">Quote from: Euphoric Status on April 24, 2012, 04:08 pm</a></div></div><blockquote class="bbc_alternate_quote">Didn&#039;t know Tails wipes disk and memory when shutting down, kind of ruined the plan I had. I like to keep all of my SR/Tor info in one single notepad file, what would be the best option for carrying this around? Having a secondary encrypted USB with this file in it?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You could keep a copy of your Notepad file on a stick, and encrypt/decrypt it using facilities built-in to Tails. Tails has an excellent editor called Gedit; Gedit is supplied with a plugin that allows you to encrypt/decrypt/sign/verify GPG files from within the editor itself. <br /><br />That is, if you look at the Gedit menu, i.e. File, Edit, View, Search, Tools, Document, etc. Under Edit you will see Decrypt/Verify and Encrypt entries. These will invoke GPG and allow you to use a public key to encrypt or decrypt a file that has been opened with Gedit. <br /><br />Just use one of your own PGP keys to encrypt the file, and you should be good to go. (That said, try it on some practice files first, until you get the hang of it.)<br /><br />Guru<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />i remember reading that you can a persistant partition on the TAILS usb but it&#039;s fairly in depth. if you use the usb exclusively for SR might be a good idea&nbsp; to keep everything on one easily concealable/destroyable drive
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Generating keypair in TAILS need help</strong><br />
+				Post by: <strong>budpuck3t</strong> on <strong>April 24, 2012, 08:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=20281.msg205464#msg205464">Quote from: supersecretsquirrel on April 24, 2012, 08:58 am</a></div></div><blockquote class="bbc_standard_quote">Because Tails wipes disk and memory when shutting down, you will need to put the keypair on a USB stick. Here&#039;s a quick tutorial for you:<br /><br />Step 0: plug in a USB stick and wait for it to mount (or mount it yourself, if it doesn&#039;t happen automatically)<br />Step 1: open a terminal window<br />Step 3: assuming the USB stick is mounted on /media/usb, type the following to generate your keypair: gpg --homedir /media/usb/ --gen-key<br />Step 4: answer the questions, choose 4096 for key strength, let the key expire if you want to, set your SR nick as the name, leave the rest blank, set a long passphrase<br />Step 5: to import a key, save the key in a file (e.g. vendorname.asc) and run gpg --homedir /media/usb/ --import vendor.asc<br />Step 6: to export your public key, run gpg --homedir /media/usb/ --export -a &quot;Name you entered in 4&quot; &gt; mypubkey.asc<br /><br />Things to keep in mind:<br /><br />7. You will need to have the USB stick mounted whenever you want to encrypt/decrypt messages<br />8. You will need to specify the path to the USB stick whenever running gpg (i.e. --homedir /media/usb/)<br />9. Your private and public key will be located in /media/usb/.gnupg<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br />thanks!!! i will try this
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Generating keypair in TAILS need help</strong><br />
+				Post by: <strong>tootiefruitie</strong> on <strong>April 25, 2012, 12:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				non-command line method of generating new key:<br /><br />system-&gt;preferences-&gt;password and encryption keys<br /><br />file-&gt;new&nbsp; follow above settings to generate key<br /><br />after making it, to export complete key go to properties-&gt;details-&gt;export complete key<br /><br />to export public key go to file-&gt;export
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Generating keypair in TAILS need help</strong><br />
+				Post by: <strong>budpuck3t</strong> on <strong>April 25, 2012, 01:40 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=20281.msg206333#msg206333">Quote from: tootiefruitie on April 25, 2012, 12:11 am</a></div></div><blockquote class="bbc_standard_quote">non-command line method of generating new key:<br /><br />system-&gt;preferences-&gt;password and encryption keys<br /><br />file-&gt;new&nbsp; follow above settings to generate key<br /><br />after making it, to export complete key go to properties-&gt;details-&gt;export complete key<br /><br />to export public key go to file-&gt;export<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />i think i did it wrong?<br /><br />it only exporred the private key:<br /><br />-----BEGIN PGP PRIVATE KEY BLOCK-----<br />Version: GnuPG v1.4.10 (GNU/Linux)<br /><br />************************************************<br />-----END PGP PRIVATE KEY BLOCK-----<br /><br />(thats just a test key, ill make a new one)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Generating keypair in TAILS need help</strong><br />
+				Post by: <strong>budpuck3t</strong> on <strong>April 25, 2012, 05:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				nvm figured it out<br /><br /><br />so you would go to details and export the PRIVATE key and save it to the encrypted drive, then every time you restart tails just open that in gedit then verify it to import the key<br /><br /><br />also export the public key, then when you want to send a vendor a message, just open up the file with your public key, type in the message above the public key, then highlight it all and encrypt it with their public key.....and send via pm<br /><br />they get a pgp block only they can open, and then once they do it contains your&nbsp; message and your public key<br /><br />right?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Generating keypair in TAILS need help</strong><br />
+				Post by: <strong>tootiefruitie</strong> on <strong>April 25, 2012, 03:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				that&#039;s right<br /><br />although you should probably make a new key, because you just posted your private key above&nbsp; ;D<br /><br />no one could use it without your password, but it would definitely be more secure to use a private key that wasn&#039;t published
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Generating keypair in TAILS need help</strong><br />
+				Post by: <strong>Fah-Q</strong> on <strong>April 25, 2012, 03:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=20281.msg205811#msg205811">Quote from: Euphoric Status on April 24, 2012, 04:08 pm</a></div></div><blockquote class="bbc_standard_quote">Didn&#039;t know Tails wipes disk and memory when shutting down, kind of ruined the plan I had. I like to keep all of my SR/Tor info in one single notepad file, what would be the best option for carrying this around? Having a secondary encrypted USB with this file in it?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>use partion wizard to split the pendrive in half. Load tails on the first half. Used the pendrive to boot into tails.&nbsp; then use disk utility in tails to encrypt second partiton in the pendrive. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Generating keypair in TAILS need help</strong><br />
+				Post by: <strong>budpuck3t</strong> on <strong>April 26, 2012, 03:22 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=20281.msg207212#msg207212">Quote from: tootiefruitie on April 25, 2012, 03:06 pm</a></div></div><blockquote class="bbc_standard_quote">that&#039;s right<br /><br />although you should probably make a new key, because you just posted your private key above&nbsp; ;D<br /><br />no one could use it without your password, but it would definitely be more secure to use a private key that wasn&#039;t published<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />no worries it was just a throwaway key for testing purposes, i removed it from the thread though because i noticed keys generated on the same machine (or in the same session? not sure) tend to have the same first few letters......i wonder why that is. probably nothing to worry about but im paranoid. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

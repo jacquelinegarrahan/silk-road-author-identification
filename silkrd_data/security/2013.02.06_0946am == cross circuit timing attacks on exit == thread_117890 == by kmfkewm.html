@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=117890.0" />
+		<title>Print Page - cross circuit timing attacks on exit</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: kmfkewm on February 06, 2013, 09:46 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>cross circuit timing attacks on exit</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>February 06, 2013, 09:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				C = compromised node<br />g = good node<br />x = either/or<br /><br />any single circuit is good so long as it is not<br /><br />C &lt;-&gt; x &lt;-&gt; C<br /><br />Tor client keeps half a dozen to a dozen or so circuits open<br /><br />C &lt;-&gt; g &lt;-&gt; g<br />g &lt;-&gt; C &lt;-&gt; g<br />g &lt;-&gt; g &lt;-&gt; C<br />g &lt;-&gt; g &lt;-&gt; g<br />g &lt;-&gt; C &lt;-&gt; g<br />g &lt;-&gt; g &lt;-&gt; C<br /><br />by default the currently active circuit changes approximately once every ten minutes, other circuits are kept open to avoid delay of circuit construction when switching active circuit <br /><br />none of the open circuits presented are bad as none fall into the <br /><br />C &lt;-&gt; x &lt;-&gt; C <br /><br />pattern <br /><br />on exit Tor client sends close circuit packet down all circuits from entry to exit, informing nodes to shut down the open circuit <br /><br />assume active circuit is <br /><br />client &lt;-&gt; g &lt;-&gt; g &lt;-&gt; C &lt;-&gt; destination<br /><br />C can see client destination but not the client as entry and middle are good <br /><br />on shut down packet is sent down all circuits, including<br /><br />Client -&gt; C -&gt; g -&gt; g -&gt; Nil<br />Client -&gt; g -&gt; C -&gt; g -&gt; Nil<br />Client -&gt; g -&gt; g -&gt; C (&lt;-&gt;) Destination server<br /><br />timing attack on circuit shut down packet can probably be used to link traffic across multiple circuits, thus deanonymizing client traffic that exited from <br />g &lt;-&gt; g &lt;-&gt; C, even though none of the individual circuits are compromised circuits. <br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: cross circuit timing attacks on exit</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>February 06, 2013, 11:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				essentially what this means is that when you exit Tor, it is probably not correct to look at individual circuits, but rather positions across circuits. Imagine that each attacker controlled node is a 1 and each good node is a 0. Normally any circuit other than 1x1 means that you are fine, but when you close out of Tor it is like each of the positions on each of the circuits bitwise or with the nodes on your other open circuits at the same position. <br /><br />&nbsp; &nbsp; &nbsp;001<br />&nbsp; &nbsp; &nbsp;000<br />&nbsp; &nbsp; &nbsp;100<br />&nbsp; &nbsp; &nbsp;000 <br />&nbsp; &nbsp; &nbsp;000<br />&nbsp; &nbsp; &nbsp;001<br />|=____<br />&nbsp; &nbsp; &nbsp; 101 == compromised (exit traffic from circuits in pattern xx1 is linkable to you)<br /><br />this attack can also be used to break circuit isolation. Assume all letters are good nodes other than A which is attacker controlled node.<br /><br />BCA<br />DEA<br />FGA<br /><br />now you should already know that the controller of node A is capable of determining all of your exit traffic, but they can not trace you as the middle and entry nodes are good. However it is generally thought that the controller of node A is incapable of determining that traffic from node E C and G originates from the same entity, and thus there is per circuit traffic isolation. Well, on exit timing attack of circuit shut down packet probably can be used to link all three circuits together, and thus link all exit traffic from these circuits together to the same entity, breaking circuit exit traffic isolation. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: cross circuit timing attacks on exit</strong><br />
+				Post by: <strong>acider</strong> on <strong>February 06, 2013, 12:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Nice kmf, always good to read your technical posts.<br /><br />I am a little confused though. In the next scheme :<br />&quot;<br />&nbsp; &nbsp; &nbsp;001<br />&nbsp; &nbsp; &nbsp;000<br />&nbsp; &nbsp; &nbsp;100<br />&nbsp; &nbsp; &nbsp;000<br />&nbsp; &nbsp; &nbsp;000<br />&nbsp; &nbsp; &nbsp;001<br />|=____<br />&nbsp; &nbsp; &nbsp; 101 == compromised (exit traffic from circuits in pattern xx1 is linkable to you)&quot;<br /><br />One of those compromised nodes will know it&#039;s an exit node, but the other one how does he know he&#039;s an entry node and not a middle node? As far as I know a relay has no knowledge if you originated the data or you just passed them to him, right?<br />Did you put 2 compromised entry nodes for that reason, to narrow it down?<br /><br />Also does this apply to both clearnet and hidden service traffic?<br />Thanks
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: cross circuit timing attacks on exit</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>February 06, 2013, 12:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117890.msg797997#msg797997">Quote from: acider on February 06, 2013, 12:23 pm</a></div></div><blockquote class="bbc_standard_quote">Nice kmf, always good to read your technical posts.<br /><br />I am a little confused though. In the next scheme :<br />&quot;<br />&nbsp; &nbsp; &nbsp;001<br />&nbsp; &nbsp; &nbsp;000<br />&nbsp; &nbsp; &nbsp;100<br />&nbsp; &nbsp; &nbsp;000<br />&nbsp; &nbsp; &nbsp;000<br />&nbsp; &nbsp; &nbsp;001<br />|=____<br />&nbsp; &nbsp; &nbsp; 101 == compromised (exit traffic from circuits in pattern xx1 is linkable to you)&quot;<br /><br />One of those compromised nodes will know it&#039;s an exit node, but the other one how does he know he&#039;s an entry node and not a middle node? As far as I know a relay has no knowledge if you originated the data or you just passed them to him, right?<br />Did you put 2 compromised entry nodes for that reason, to narrow it down?<br /><br />Also does this apply to both clearnet and hidden service traffic?<br />Thanks<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Middle nodes know they are not exit nodes, that leaves them as either middle or entry nodes. Middle nodes only get connections from Tor relays and bridges, Entry nodes only get incoming connections from clients. A node operator who knows they are not an exit node could get connections from Tor relays, clients or bridges. If they are getting a connection from a Tor relay they know they are a middle node. If they get a connection that isn&#039;t from a Tor relay it could be from a client or a bridge. They can try to use the connecting party as a bridge to confirm if it is one, if the connecting party acts as a bridge then they know they are a middle node and if it doesn&#039;t then they know they are an entry node.<br /><br />Or they could just count the number of extend cells they have forwarded on. If they forwarded two extend cells they are an entry, if one they are a middle node.<br /><br />I am not sure if it applies to hidden service connections, I don&#039;t know if circuit shut down cells will end up being forwarded all the way up to the hidden services entry node or if they will stop at the clients exit node. If they are forwarded all the way to the hidden services entry nodes then it would work against hidden services as well.<br /><br />C = client<br />H = Hidden Service<br />M = Malicious Node<br />G = Good Node<br /><br />(open unused circuit)<br />Client &lt;-&gt; CM &lt;-&gt; CG &lt;-&gt; CG <br /><br />(active circuit to hidden service)<br />Client &lt;-&gt; CG &lt;-&gt; CG &lt;-&gt; CG &lt;-&gt; HG &lt;-&gt; HG &lt;-&gt; HM &lt;-&gt; Hidden Service<br /><br />if the circuit tear down cell goes all the way out to HM, which it PROBABLY does actually since hidden services make a new circuit per client and there would be no point in keeping the hidden services circuit up after the clients circuit is torn down (but I am not positive I will look into it more), then if the client exits Tor while the connection to the hidden service is still active, the attacker who owns CM and HM will see a shut down circuit packet at CM and then shortly after they will see a shut down packet at HM. All the current research I have read points to a single packet being enough to utilize a timing attack, and thus I believe that this attacker could probably link the client to the hidden services IP address. Of course the attacker in this scenario will need to additionally identify the hidden services IP address, but as they are one of its entry guards they could just send the .onion address of interest a watermarked stream and wait to see if they observe themselves relaying that stream back to the hidden service they are an entry guard for. <br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: cross circuit timing attacks on exit</strong><br />
+				Post by: <strong>acider</strong> on <strong>February 06, 2013, 01:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117890.msg798055#msg798055">Quote from: kmfkewm on February 06, 2013, 12:52 pm</a></div></div><blockquote class="bbc_standard_quote">Middle nodes know they are not exit nodes, that leaves them as either middle or entry nodes. Middle nodes only get connections from Tor relays and bridges, Entry nodes only get incoming connections from clients. A node operator who knows they are not an exit node could get connections from Tor relays, clients or bridges. If they are getting a connection from a Tor relay they know they are a middle node. If they get a connection that isn&#039;t from a Tor relay it could be from a client or a bridge. They can try to use the connecting party as a bridge to confirm if it is one, if the connecting party acts as a bridge then they know they are a middle node and if it doesn&#039;t then they know they are an entry node.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I knew I was missing something, I get it now.&nbsp; Interesting thoughts.<br />Like most threats it comes down to how many compromised nodes there are in the network and the possibility to use some of them.<br />Is there a board where people discuss such threats with the developers?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: cross circuit timing attacks on exit</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>February 06, 2013, 01:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				problem is that it is much more likely that two of your open circuits will fall into patterns<br /><br />GGC and CGG<br /><br />than it is that an individual circuit will fall into pattern<br /><br />CGC <br /><br />Tor devs are aware of this attack, they are going to research it further. One possible solution is to apply the circuit construction rules to ALL circuits rather than to individual circuits. Already you cannot use the same node at two positions on two different circuits, or two nodes from the same family on the same circuit for that matter. That said there are no rules regarding node selection across multiple circuits, and it is not rare to find that you have open circuits in the following pattern:<br /><br />GFG<br />GGF<br /><br />or even more worrying, <br /><br />FGG<br />GFG<br />GGF<br /><br />Where F == a node that is either the same node, or from the same family of nodes.&nbsp; <br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: cross circuit timing attacks on exit</strong><br />
+				Post by: <strong>astor</strong> on <strong>February 06, 2013, 01:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Interesting attack.<br /><br />Clients send most of their circuits through high bandwidth nodes, which maintain hundreds to thousands of simultaneous connections. So, what is the circuit close frequency on those nodes? If it is at least once per second, then a timing attack probably would not be effective. This also requires that your entry guard is pwned, and you cycle through them very slowly.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: cross circuit timing attacks on exit</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>February 06, 2013, 02:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117890.msg798137#msg798137">Quote from: astor on February 06, 2013, 01:51 pm</a></div></div><blockquote class="bbc_standard_quote">Interesting attack.<br /><br />Clients send most of their circuits through high bandwidth nodes, which maintain hundreds to thousands of simultaneous connections. So, what is the circuit close frequency on those nodes? If it is at least once per second, then a timing attack probably would not be effective. This also requires that your entry guard is pwned, and you cycle through them very slowly.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It doesn&#039;t require your entry guard to be pwnt for an attacker to enumerate your entry guards, although it does require a pwnt entry guard for it to be used to link a client to their destination. As far as I am aware, the current research shows that a single packet is enough to link two parts of an observed stream together. There are millions of packets going across the Tor network at any given time but this does not prevent an attacker who can see only two packets from linking them together. For this reason I highly doubt that noise of other users exiting Tor will be enough to protect from this attack. Also it doesn&#039;t require compromised entry or middle node if it is used to compromise circuit isolation for exit traffic linking. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: cross circuit timing attacks on exit</strong><br />
+				Post by: <strong>astor</strong> on <strong>February 06, 2013, 02:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117890.msg798148#msg798148">Quote from: kmfkewm on February 06, 2013, 02:01 pm</a></div></div><blockquote class="bbc_standard_quote">It doesn&#039;t require your entry guard to be pwnt for an attacker to enumerate your entry guards, although it does require a pwnt entry guard for it to be used to link a client to their destination. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Right, that&#039;s the main thing to worry about.<br /><br />How about this as a mitigation strategy: never close your client with circuits open to sensitive web sites. After you are done browsing sensitive web sites, do some mundane browsing for 15 minutes, then close your client. The attacker may be able to identity you, but you will be uninteresting.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: cross circuit timing attacks on exit</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>February 06, 2013, 06:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It does not matter if the circuit is still active , only that it is still open. So not closing out of Tor until the circuit used to exit to a sensitive site is no longer active will not help. Although perhaps you could manually close such circuits, surf for fifteen minutes, and then exit Tor. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: cross circuit timing attacks on exit</strong><br />
+				Post by: <strong>dex</strong> on <strong>February 09, 2013, 05:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				What does this mean for the future of sr. Can this be fixed
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: cross circuit timing attacks on exit</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>February 09, 2013, 07:18 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117890.msg809703#msg809703">Quote from: dex on February 09, 2013, 05:10 pm</a></div></div><blockquote class="bbc_standard_quote">What does this mean for the future of sr. Can this be fixed<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Not much and yes. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: cross circuit timing attacks on exit</strong><br />
+				Post by: <strong>ShardInspector</strong> on <strong>February 09, 2013, 10:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Don&#039;t close the circuits, just pull the Ethernet cable when your done surfing controversial web sites.<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

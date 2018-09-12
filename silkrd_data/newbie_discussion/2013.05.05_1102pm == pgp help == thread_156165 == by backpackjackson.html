@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=156165.0" />
+		<title>Print Page - pgp help</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: backpackjackson on May 05, 2013, 11:02 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>pgp help</strong><br />
+				Post by: <strong>backpackjackson</strong> on <strong>May 05, 2013, 11:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So I got kleopatra and made my key but how i use it to send encrypted messages?&nbsp; I have a feeling its really simple but I can&#039;t figure it out
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: pgp help</strong><br />
+				Post by: <strong>goldenrod</strong> on <strong>May 05, 2013, 11:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=156165.msg1092954#msg1092954">Quote from: backpackjackson on May 05, 2013, 11:02 pm</a></div></div><blockquote class="bbc_standard_quote">So I got kleopatra and made my key but how i use it to send encrypted messages?&nbsp; I have a feeling its really simple but I can&#039;t figure it out<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;ve copied and pasted the following:<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">2) Export your public key<br /><br />&nbsp; &nbsp; a) Under &#039;My certificates&#039; you should now see a listed name (should be your username, if you followed example)<br />&nbsp; &nbsp; b) Hilight your certificate, and click export cert at the top, and save this file somewhere (it&#039;ll be a .asc file)<br />&nbsp; &nbsp; &nbsp; &nbsp; (This file is your public certificate, open it up in notepad or something, <br />&nbsp; &nbsp; &nbsp; &nbsp; and you can copy/paste this to your profile, or to your friends in a public message.)<br /><br />3) Adding Other Peoples Keys:<br /><br />&nbsp; &nbsp; a) People will post their public keys so that you can copy/import them into your key manager (kleopatra in this case)<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keys start with:&nbsp; -----BEGIN PGP PUBLIC KEY BLOCK-----<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;keys end with:&nbsp; &nbsp; -----END PGP PUBLIC KEY BLOCK-----<br /><br />&nbsp; &nbsp; b) To get these keys into kleopatra, select the entire key (including the begin and end line), and copy them to your clipboard (crtl+c or edit=&gt;copy)<br />&nbsp; &nbsp; c) Right click your red kleopatra icon in your task bar<br />&nbsp; &nbsp; d) select Clipboard and then certificate import<br /><br />4) Decrypt a message sent from someone<br /><br />&nbsp; &nbsp; a) Again, like the public keys, people will post encrypted messages to you that you&#039;ll need to decrypt<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; messages start with: -----BEGIN PGP MESSAGE-----<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; messages end with:&nbsp; &nbsp;-----END PGP MESSAGE-----<br />&nbsp; &nbsp; b) Again, hilight and copy the entire message block, with the begin and end line<br />&nbsp; &nbsp; c) Right Click the red Kleopatra icon<br />&nbsp; &nbsp; d) Select Clipboard, then click decrypt <br />&nbsp; &nbsp; e) Enter the passphrase you used to create your key<br />&nbsp; &nbsp; &nbsp; &nbsp; The decrypted data is now in your clipboard<br />&nbsp; &nbsp; f) Open notepad or another text editor, and paste the contents of your clipboard (crtl+v , edit=&gt;paste)<br /><br />5) Encrypt a message to someone else<br /><br />&nbsp; &nbsp; a) First you need to make sure you have the public key saved for the person you want to communicate with, in section 3<br />&nbsp; &nbsp; b) Open notepad, or a text editor, and type the message you want encrypted<br />&nbsp; &nbsp; c) hilight the entire message, and copy it to your clipboard<br />&nbsp; &nbsp; d) Right Click Kleopatra , Goto Clipboard , Click on Encrypt<br />&nbsp; &nbsp; e) Click Add Recipient <br />&nbsp; &nbsp; f) Goto Other Certificates, and add the individual you would like.<br />&nbsp; &nbsp; g) Click Okay/next and it&#039;ll tell you its complete<br />&nbsp; &nbsp; h) The encrypted message is now in your clipboard<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;You can now paste that encrypted content into a private message to the person with crtl+v/edit=&gt;paste<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />hope it helps.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: pgp help</strong><br />
+				Post by: <strong>D3xalias</strong> on <strong>May 05, 2013, 11:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				a vendor has normally a public private key posted on SR you import that key and use that to encrypt message so only the vendor can decrypt that message<br />when messaging a vendor you also post your private key so he can reply with a message&nbsp; thats encrypted with your private key so only you can decrypt it 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: pgp help</strong><br />
+				Post by: <strong>manomanom</strong> on <strong>May 06, 2013, 12:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				Ok, just learning pgp, and this is what i understand so far. <br />Have not tried this yet, so any corrections are appreciated.<br /><br />-download a pgp program <br />-generate your personal key (file &gt; new key)<br />-copy recipients public key to clipboard and save to keyring<br />-open clipboard and write your message <br />-click encrypt button and choose which recipient key to use<br />-the message is encrypted using their key<br />-send the encrypted message, with your personal key, in an email or PM<br />-receive an encrypted message, and copy/paste into clipboard, click decrypt<br /><br />I still don&#039;t know what the &#039;sign&#039; and &#039;verify&#039; buttons do.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: pgp help</strong><br />
+				Post by: <strong>HighGirl</strong> on <strong>May 06, 2013, 12:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m still having trouble with PGP as well. Most people have trouble with Tor, SR, and Bitcoins, but all that was easy compared to this. It&#039;s just gonna take a little reading, and I think tonight I will do just that. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: pgp help</strong><br />
+				Post by: <strong>D3xalias</strong> on <strong>May 06, 2013, 12:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=156165.msg1093270#msg1093270">Quote from: manomanom on May 06, 2013, 12:36 am</a></div></div><blockquote class="bbc_standard_quote">Ok, just learning pgp, and this is what i understand so far. <br />Have not tried this yet, so any corrections are appreciated.<br /><br />-download a pgp program <br />-generate your personal key (file &gt; new key)<br />-copy recipients public key to clipboard and save to keyring<br />-open clipboard and write your message <br />-click encrypt button and choose which recipient key to use<br />-the message is encrypted using their key<br />-send the encrypted message, with your personal key, in an email or PM<br />-receive an encrypted message, and copy/paste into clipboard, click decrypt<br /><br />I still don&#039;t know what the &#039;sign&#039; and &#039;verify&#039; buttons do.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />when you sign a message you will sign a message with your&nbsp; pgp signature&nbsp; so when a person recieves it he can verify with your signature so he knows it you that signed that message 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: pgp help</strong><br />
+				Post by: <strong>backpackjackson</strong> on <strong>May 20, 2013, 01:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				thank you for your help, I think I got it figured out for the most part.&nbsp; &nbsp;:-\<br /><br /><br />Except this part...<br /><br />What is the difference between a public and private key?&nbsp; If I copy and paste my key online doesn&#039;t that mean other people could use it to read all the messages I encrypt with it?&nbsp; <br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: pgp help</strong><br />
+				Post by: <strong>Mindfry</strong> on <strong>May 20, 2013, 01:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				PGP was so obnoxious to learn. I took me a while to figure it out. I was using kleopatra and i finally decided to uninstall it and give GPA a shot. well, for some reason I figured GPA out within 15 minutes. I was pretty irate since i spent at least 5 hours tinkering with kleopatra ontop of countless guides I&#039;ve read and watched. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: pgp help</strong><br />
+				Post by: <strong>RobLoblaw</strong> on <strong>May 20, 2013, 02:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=156165.msg1093015#msg1093015">Quote from: D3xalias on May 05, 2013, 11:17 pm</a></div></div><blockquote class="bbc_standard_quote">a vendor has normally a public private key posted on SR you import that key and use that to encrypt message so only the vendor can decrypt that message<br />when messaging a vendor you also post your private key so he can reply with a message&nbsp; thats encrypted with your private key so only you can decrypt it<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />i&#039;m thinking you just mistyped but you mean send your public key with messages. never give out your private key
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: pgp help</strong><br />
+				Post by: <strong>RobLoblaw</strong> on <strong>May 20, 2013, 02:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				does anyone else find gpg4win to run like shit? mine always gives me errors and freezes sometimes lol i don&#039;t like if its missing files of something
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: pgp help</strong><br />
+				Post by: <strong>quixotist</strong> on <strong>May 20, 2013, 02:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				Here&#039;s a piece of trivia about digital signatures and how they work which isn&#039;t that important but I think is interesting:<br /><br />There&#039;s no real difference between a public key and a private key, they are just two different extremely large prime numbers.<br /><br />The &quot;public&quot; and &quot;private&quot; things are just a convention, they can work both ways around. If the software allowed it then you could share your private key and keep your public key secret, people could use your private key to send you a message which is readable only by the person who has your public key!<br /><br />This is how &quot;digital signatures&quot; work. Instead of encrypting a message with the recipient&#039;s public key to send them a secret message, you instead encrypt it with your own private key to send a public message. If people can decrypt this with your public key then they know it was you who sent it. If the thing being encrypted is a fingerprint (cryptographic hash) of some other message then the encrypted fingerprint is a &quot;digital signature&quot; which proves that you sent the message and that it has not been tampered with; it&#039;s the modern equivalent of using a signet ring.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: pgp help</strong><br />
+				Post by: <strong>RobLoblaw</strong> on <strong>May 20, 2013, 02:40 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=156165.msg1145777#msg1145777">Quote from: verdant_world on May 20, 2013, 02:28 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=156165.msg1145764#msg1145764">Quote from: RobLoblaw on May 20, 2013, 02:19 am</a></div></div><blockquote class="bbc_alternate_quote">does anyone else find gpg4win to run like shit? mine always gives me errors and freezes sometimes lol i don&#039;t like if its missing files of something<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>when i installed i was following a youtube tutorial &#039;pgp tutorial&#039; and this recommended installing only one element-GPA i think- but no kleopatra. t<br />the only issues i have had is sometimes the app gives an error and closes after i have done a function on the clipboard, but no info is lost and it starts up again no worries- i havent had a problem encrypting/decrypting<br />so perhas try a reinstall without the extra BS.<br />ALSO i have heard several times that gpg4usb is more friendly that gpg4win- i just havent gotten around to fucksin with it.<br />if you want please send me a msg - my key is in my signature- and i will reciprocate-<br />hope this helps!<br />vw<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />thanks, <br />the majority of my problems are happening with the clipboard. i have heard good things about gpg4usb. i am going to try that and see how it goes.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

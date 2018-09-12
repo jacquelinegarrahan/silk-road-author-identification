@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=104820.0" />
+		<title>Print Page - Proxychains with TBB</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Afrob on January 12, 2013, 05:34 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Proxychains with TBB</strong><br />
+				Post by: <strong>Afrob</strong> on <strong>January 12, 2013, 05:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hi,<br /><br />just trying to set something up to circumvent TOR-unfriendly sites.<br /><br />I use VPN -&gt; TOR on a debian based System.<br /><br />Now I want to setup a Socks5 Proxy after the TOR Exit Node, so I can&#039;t get blocked from certain services using TOR.<br /><br />This should work like this: VPN -&gt; TOR -&gt; not blacklisted Socks 5 Proxy<br /><br />I&#039;ve done some research on this and it should be doable with &quot;proxychains&quot;.<br /><br />Here is a tidbit of info how to setup proxychains:<br /><br />Proxychains<br /><br />First download &amp; install proxychains:<br /><br />sudo apt-get install proxychains<br /><br />Then configure proxychains to setup your chain:<br /><br />nano /etc/proxychains.conf<br /><br />Down towards the bottom you should see:<br /><br />[ProxyList]<br /># add proxy here ...<br /># meanwile<br /># defaults set to &quot;tor&quot;<br /><br />Just write your list in using Tor as the first listed:<br /><br />socks4 127.0.0.1 9050<br />socks5 ip.address.here port<br /><br />After that you should be done. Just go to terminal and set your browser to go through proxychains:<br /><br />proxychains firefox<br /><br /><br />Well this is straightforward, but I don&#039;t get how to do the last step with the Tor Browser Bundle.<br /><br />Some ideas? Thanks.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Proxychains with TBB</strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>January 12, 2013, 05:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				Er... it&#039;s telling you to set it as a socks4 proxy, not socks4a or socks5?&nbsp; I think that&#039;s... bad?&nbsp; I mean like, that could be a serious leak I think -- somebody else is gonna have to advise you on whether I&#039;m right or not though.<br /><br />So basically, firefox to proxychains, then from there to Tor...?&nbsp; Wait, wtf... that wouldn&#039;t help anything?&nbsp; Tor should be listening at 127.0.0.1:9050 if it&#039;s setup as usual (the port is randomized in the Tor browser bundle though).
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Proxychains with TBB</strong><br />
+				Post by: <strong>Afrob</strong> on <strong>January 14, 2013, 09:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				nobody? where are the cracks then you need them? 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

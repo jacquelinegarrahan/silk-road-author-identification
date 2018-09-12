@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=203135.0" />
+		<title>Print Page - Can't import a vendor's PGP key</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: DrugsAreFun on August 17, 2013, 07:06 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Can't import a vendor's PGP key</strong><br />
+				Post by: <strong>DrugsAreFun</strong> on <strong>August 17, 2013, 07:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				Vendor in question is ChiTownMafia:<br /><br />http://silkroadvb5piz3r.onion/silkroad/user/efb84d5c63<br /><br />I&#039;ve used PGP with every other vendor I&#039;ve delt with and had no problems.&nbsp; I shot him a message because I&#039;m thinking he has a problem with his key.&nbsp; I&#039;m using the command line GPG for Linux.<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">$ gpg --version<br />gpg (GnuPG) 2.0.20<br />libgcrypt 1.5.3</code><br />And this is the error I&#039;m getting:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">$ gpg --import ctm.key<br />gpg: invalid radix64 character 2D skipped<br />gpg: invalid radix64 character 2D skipped<br />gpg: invalid radix64 character 2D skipped<br />gpg: invalid radix64 character 2D skipped<br />gpg: invalid radix64 character 2D skipped<br />gpg: invalid radix64 character 2D skipped<br />gpg: invalid radix64 character 2D skipped<br />gpg: invalid radix64 character 2D skipped<br />gpg: invalid radix64 character 2D skipped<br />gpg: invalid radix64 character 2D skipped<br />gpg: no valid OpenPGP data found.<br />gpg: key DC3DE658: no valid user IDs<br />gpg: this may be caused by a missing self-signature<br />gpg: Total number processed: 1<br />gpg:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;w/o user IDs: 1</code><br />I copied the key straight off his vendor page.&nbsp; Tried putting it in another file.&nbsp; I&#039;m fairly certain I did everything right.&nbsp; Here&#039;s the key if any of you have PGP at the ready and want to see if you can import it.&nbsp; I haven&#039;t even tried encrypting a message with it because I can&#039;t even get the thing imported.<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG v2.0.21-beta27 (MingW32)<br /><br />mQENBFGyOtYBCADSTSyGcwu56Hpy7Rv8DBSJvD1AyJ/fsY5CLU9DYf9vQhcIfOk4<br />Z0VpUOACXkuVdjtYtn5tPXASg9RvgYfenerZWkXFqjSPQOm41SyKhdmZqnxb7H31<br />WSf1ccGv83b1UiTgzwLZ1Sad0E2AI3xh2s6mwEZUBDdYAib/3EfiwAeOzEiJtvNb<br />xF+QuG3+HhPcCopHNq1Hqiha5AmKrFyZM4nIVSV9g4BGF9TQRp65bghjTsML0JSo<br />WootnFvtYrMy6onKY0W+GDn36hw+BMDRrseKC3/yNLfAU/+RBwylyvWwf5vkG6pg<br />9gsFgFx3ew5CvuRL/tspro4a4Hn5t3k4YS2bABEBAAG0J0NoaVRvd25NYWZpYSA8<br />Y2hpdG93bm1hZmlhQHRvcm1haWwub3JnPokBOQQTAQIAIwUCUbI61gIbDwcLCQgH<br />AwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJEEN9rIncPeZYV0YH/0YL6TlWaPUoqJ7j<br />8uklylGpHtNYd7R28vhISJkvc3J5P3j9vZmlid1U732psFOrT1jYq7vNrng94CVs<br />3TWUFCvgjIU9D0WWdx0Gb/G02BCpKBxM3cNCLSBGJO2umSYm+qJUV8QM7x2tJdMo<br />rMHCOFN8cmYZ5ZmM0GHkh5cZH4tcT+WFheqiqch//jTvrchwnTNi0ie56BMwjj9o<br />8YIkwpnr3W+0DDe0Fyiyw9QJtyeNMWdbzXhUmt5Q+aXeJNJ5r4pRWPC8Yprd/DZA<br />5HjNftCuwRX4n8MpSfh6HcfSBdGk2gh6bpbtBqIlvkB2uJEHxTArb/IY55OGMGRX<br />IAte<br />-----END PGP PUBLIC KEY BLOCK-----</code><br />I&#039;m also considering the possibility that there&#039;s some kind of incompatibility with the beta version of GPG he&#039;s using but that&#039;s just a guess.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can't import a vendor's PGP key</strong><br />
+				Post by: <strong>therabbithole</strong> on <strong>August 17, 2013, 12:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				His key is cut off. It should end with -----END PGP PUBLIC KEY BLOCK-----
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can't import a vendor's PGP key</strong><br />
+				Post by: <strong>goblin</strong> on <strong>August 17, 2013, 01:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=203135.msg1460880#msg1460880">Quote from: therabbithole on August 17, 2013, 12:33 pm</a></div></div><blockquote class="bbc_standard_quote">His key is cut off. It should end with -----END PGP PUBLIC KEY BLOCK-----<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Doesn&#039;t it already have it?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can't import a vendor's PGP key</strong><br />
+				Post by: <strong>therabbithole</strong> on <strong>August 17, 2013, 01:22 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ops sorry you&#039;re right! I didn&#039;t scroll down. But the key still can&#039;t be imported.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can't import a vendor's PGP key</strong><br />
+				Post by: <strong>BlackIris</strong> on <strong>August 17, 2013, 01:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The key lack the &quot;=&quot; in the end. Usually all keys have always one or two &quot;=&quot; signs in the end phase, this one lacks them completely.<br />Probably the vendor didn&#039;t copy/paste the key in full or some error.<br /><br />This or it is a different new line carrier encoding but I never saw a key without &quot;=&quot; characters in the end as this one so at first glance (without trying to import it myself and dabble a little) this can be the problem here.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can't import a vendor's PGP key</strong><br />
+				Post by: <strong>chews13</strong> on <strong>August 18, 2013, 07:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				here is his proper public key. did you know there is another way to find a vendor or whoevers key by checking the key server.<br /><br />look at the bottom where Ate are and you will notice what was missing<br /><br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG v2.0.19 (MingW32)<br /><br />mQENBFGyOtYBCADSTSyGcwu56Hpy7Rv8DBSJvD1AyJ/fsY5CLU9DYf9vQhcIfOk4<br />Z0VpUOACXkuVdjtYtn5tPXASg9RvgYfenerZWkXFqjSPQOm41SyKhdmZqnxb7H31<br />WSf1ccGv83b1UiTgzwLZ1Sad0E2AI3xh2s6mwEZUBDdYAib/3EfiwAeOzEiJtvNb<br />xF+QuG3+HhPcCopHNq1Hqiha5AmKrFyZM4nIVSV9g4BGF9TQRp65bghjTsML0JSo<br />WootnFvtYrMy6onKY0W+GDn36hw+BMDRrseKC3/yNLfAU/+RBwylyvWwf5vkG6pg<br />9gsFgFx3ew5CvuRL/tspro4a4Hn5t3k4YS2bABEBAAG0J0NoaVRvd25NYWZpYSA8<br />Y2hpdG93bm1hZmlhQHRvcm1haWwub3JnPokBOQQTAQIAIwUCUbI61gIbDwcLCQgH<br />AwIBBhUIAgkKCwQWAgMBAh4BAheAAAoJEEN9rIncPeZYV0YH/0YL6TlWaPUoqJ7j<br />8uklylGpHtNYd7R28vhISJkvc3J5P3j9vZmlid1U732psFOrT1jYq7vNrng94CVs<br />3TWUFCvgjIU9D0WWdx0Gb/G02BCpKBxM3cNCLSBGJO2umSYm+qJUV8QM7x2tJdMo<br />rMHCOFN8cmYZ5ZmM0GHkh5cZH4tcT+WFheqiqch//jTvrchwnTNi0ie56BMwjj9o<br />8YIkwpnr3W+0DDe0Fyiyw9QJtyeNMWdbzXhUmt5Q+aXeJNJ5r4pRWPC8Yprd/DZA<br />5HjNftCuwRX4n8MpSfh6HcfSBdGk2gh6bpbtBqIlvkB2uJEHxTArb/IY55OGMGRX<br />IAteoNw=<br />=1gZm<br />-----END PGP PUBLIC KEY BLOCK-----<br /><br /><br />anyone who didn&#039;t know that there are other ways to find keys please take a break from the road do a little more reading about how to do certain things then come back not knowing something simple as this is very worrying to me and prolly worry some to the future of the road.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can't import a vendor's PGP key</strong><br />
+				Post by: <strong>SRtester</strong> on <strong>August 31, 2013, 04:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				This vendor&#039;s key confused the hell out of me too, then I read the very last line of their profile page and it said: <br /><br />ADD THE PART WITH THE LETTERS AND SYMBOLS ABOVE THE &quot;Welcome sign&quot; TO THE END OF THE KEY OR ELSE IT WILL NOT WORK<br /><br />So you scroll back up to the top to find the &quot;end&quot; of the key which you have to paste in.<br /><br />What a strange thing to do.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can't import a vendor's PGP key</strong><br />
+				Post by: <strong>PinnacleGoods</strong> on <strong>August 31, 2013, 10:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				Seems like a decent basic security measure.<br /><br />But I&#039;m sure the vendor doesn&#039;t like this chatter about their key here of all places, considering that they obscured the key when it was only available after logging in to a .onion site<br /><br />PS chews13 - not always multiple ways to get a key, it has to be uploaded to a key server first.&nbsp; But was it ever the case that everyone on the road ever grokked gpg?
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

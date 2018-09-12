@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=98140.0" />
+		<title>Print Page - Encrypted message not showing PGP version</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Capital1 on December 30, 2012, 11:54 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Encrypted message not showing PGP version</strong><br />
+				Post by: <strong>Capital1</strong> on <strong>December 30, 2012, 11:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Recently someone pointed out to me that my encrypted messages were not displaying the version of pgp I use.&nbsp; I can&#039;t seem to figure out how to change this, does anyone know how?<br /><br />Thanks
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encrypted message not showing PGP version</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>December 31, 2012, 06:16 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=98140.msg692946#msg692946">Quote from: Capital1 on December 30, 2012, 11:54 pm</a></div></div><blockquote class="bbc_standard_quote">Recently someone pointed out to me that my encrypted messages were not displaying the version of pgp I use.&nbsp; I can&#039;t seem to figure out how to change this, does anyone know how?<br /><br />Thanks<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Why would you want to change this?&nbsp; All the Version: string does is reveal which OS and which version of PGP/GPG you&#039;re using. This string is informational only -- in general, it has no bearing on whether or not you can encrypt/decrypt any particular message. Sometimes it is useful to know which version of PGP/GPG and which OS a user is running -- e.g. if a user&#039;s key bears the following version string: Version: GnuPG v2.0.17 (MingW32) then this is a giveaway that they are running Windows, and they likely are using GPG4WIN (and possibly Kleopatra) to boot. <br /><br />Likewise, if a user&#039;s key has the following Version: GnuPG/MacGPG2 v2.0.18 (Darwin) we know they&#039;re using Mac OS X. <br /><br />This information is nice to have, if the user is running into problems, so a proper recommendation can be made to help remedy the situation. One side effect is leaking a little information (i.e. your OS) to a potential adversary, but the risk from this is vanishingly small. <br /><br />NC<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encrypted message not showing PGP version</strong><br />
+				Post by: <strong>astor</strong> on <strong>December 31, 2012, 06:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=98140.msg693732#msg693732">Quote from: Nightcrawler on December 31, 2012, 06:16 am</a></div></div><blockquote class="bbc_standard_quote">One side effect is leaking a little information (i.e. your OS) to a potential adversary, but the risk from this is vanishingly small. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Not necessarily. This guy downloaded all the public keys in the Post PGP Keys thread up to that point:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=174.msg666607#msg666607<br /><br />1356 keys total. So, I downloaded all the keys and filtered them by version.<br /><br />Here are the results (I removed a few that were posted incorrectly):<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">grep -A1 BEGIN sr-2012-12-18-collection.asc | grep -v &quot;^\-&quot; | sort | uniq -c | sort -nr</code><br />&nbsp; &nbsp; 606 Version: GnuPG v2.0.17 (MingW32)<br />&nbsp; &nbsp; 106 <br />&nbsp; &nbsp; &nbsp;83 Version: GnuPG v2.0.19 (MingW32)<br />&nbsp; &nbsp; &nbsp;67 Version: GnuPG v2.0.17 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp;65 Version: GnuPG/MacGPG2 v2.0.18 (Darwin)<br />&nbsp; &nbsp; &nbsp;61 Version: GnuPG/MacGPG2 v2.0.17 (Darwin)<br />&nbsp; &nbsp; &nbsp;60 Version: GnuPG v1.4.11 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp;60 Version: GnuPG v1.4.10 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp;41 Version: GnuPG v1.4.12 (MingW32)<br />&nbsp; &nbsp; &nbsp;33 Version: GnuPG v1.4.11 (MingW32)<br />&nbsp; &nbsp; &nbsp;30 Version: GnuPG v2.0.19 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp;17 Version: GnuPG v2.0.14 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp;15 Version: BCPG v1.47<br />&nbsp; &nbsp; &nbsp;14 Version: BCPG v1.39<br />&nbsp; &nbsp; &nbsp; 8 Version: GnuPG v1.4.12 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp; 6 Version: GnuPG/MacGPG2 v2.0.19 (Darwin)<br />&nbsp; &nbsp; &nbsp; 5 Version: BCPG C# v1.6.1.0<br />&nbsp; &nbsp; &nbsp; 4 Version: GnuPG v2.0.18 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp; 4 Version: GnuPG v1.4.2 (MingW32)<br />&nbsp; &nbsp; &nbsp; 3 Version: PGPfreeware 6.5.8 for non-commercial use &lt;http://www.pgp.com&gt;<br />&nbsp; &nbsp; &nbsp; 3 Version: PGP Desktop 10.1.1 (Build 10)<br />&nbsp; &nbsp; &nbsp; 3 Version: GnuPG v1.4.9 (MingW32)<br />&nbsp; &nbsp; &nbsp; 3&nbsp; &nbsp; &nbsp;Version: BCPG v1.47<br />&nbsp; &nbsp; &nbsp; 2 Version: PGP Desktop 9.0.2 (Build 2424) - not licensed for commercial use: www.pgp.com<br />&nbsp; &nbsp; &nbsp; 2 Version: GnuPG v2.0.16 (MingW32)<br />&nbsp; &nbsp; &nbsp; 2 Version: GnuPG v2.0.14 (MingW32)<br />&nbsp; &nbsp; &nbsp; 2 Version: GnuPG v1.4.9 (Darwin)<br />&nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp;Version: GnuPG v1.4.2 (MingW32) - WinPT 1.4.2<br />&nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp;Version: GnuPG v1.4.12 (MingW32)<br />&nbsp; &nbsp; &nbsp; 2 Version: GnuPG v1.4.12 (Darwin)<br />&nbsp; &nbsp; &nbsp; 2 Version: GnuPG v1.4.11 (MingW32) - WinPT 1.4.3<br />&nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp;Version: GnuPG v1.4.11 (MingW32)<br />&nbsp; &nbsp; &nbsp; 2 Version: GnuPG/MacGPG2 v2.0.16 (Darwin)<br />&nbsp; &nbsp; &nbsp; 1 Version: SKS 1.1.1<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Universal 2.9.1 (Build 347)<br />&nbsp; &nbsp; &nbsp; 1 Version: PGPsdk version 1.7.1 (C) 1997-1999 Network Associates, Inc. and its affiliated companies.<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 9.9.0 (Build 397) - not licensed for commercial use: www.pgp.com<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.2.1 - not licensed for commercial use: www.pgp.com<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.2.0 (Build 1950)<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.2.0 (Build 1672)<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.1.2 (Build 9)<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.1.1 (Build 10) - not licensed for commercial use: www.pgp.com<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.0.3 (Build 1)<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.0.1 (Build 4020)<br />&nbsp; &nbsp; &nbsp; 1 Version: iPGMail (1.33)<br />&nbsp; &nbsp; &nbsp; 1 Version: iPGMail (1.29)<br />&nbsp; &nbsp; &nbsp; 1 Version: Hush 3.0<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v2.0.19 (Darwin)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v2.0.19<br />&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp;Version: GnuPG v2.0.17 (MingW32)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v2.0.13 (SunOS)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v2.0.13 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.4.5 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Version: GnuPG v1.4.3 (MingW32)<br />&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp;Version: GnuPG v1.4.2 (MingW32)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.4.12-SpecialBuild (MingW32) - WinPT 1.5.3<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.4.12 (MingW32) - WinPT 1.5.3<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.4.12 (MingW32) - WinPT 1.5.2<br />&nbsp; &nbsp; &nbsp; 1&nbsp; Version: GnuPG v1.4.12 (Darwin)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.4.12 (Cygwin)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.4.11 (OpenBSD)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.2.6 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp; 1 Version: FileAssurity OpenPGP 2.0.2<br />&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Version: BCPG v1.47<br />&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Version: BCPG v1.47<br />&nbsp; &nbsp; &nbsp; 1 Version: BCPG v1.45<br />&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp;Version: BCPG C# v1.6.1.0<br />&nbsp; &nbsp; &nbsp; 1 Version: 6.5.8ckt&nbsp; b9&nbsp; http://www.mccune.cc/PGP.htm<br />&nbsp; &nbsp; &nbsp; 1 Version: 6.5.8ckt b9&nbsp; http://cyberkt.tripod.com/<br />&nbsp; &nbsp; &nbsp; 1 Version: 10.1.2.50<br />&nbsp; &nbsp; &nbsp; 1 GnuPG v2.0.17 (MingW32)<br />&nbsp; &nbsp; &nbsp; 1 Comment: GnuPT-Portable 2.1.5.0<br />&nbsp; &nbsp; &nbsp; 1 Comment: Download: http://portable.gnupt.de<br /><br /><br />Windows is the largest anonymity set with over 50% combined share, and luckily the empty version is second most popular, though fewer than 10% of people use it.<br /><br />However, about 40 people had unique versions, and a bunch more had versions with less than 1% representation (14 keys) in that sample. That creates a potential correlation attack. If you&#039;re sending messages to an undercover LEO and later they raid your house, finding a unique version string in your PGP program is pretty good evidence that they have the right person.<br /><br />And yeah, I know some of those unique versions are created by offsets, but if that&#039;s what your PGP program does, that&#039;s forensic evidence.<br /><br />In light of this data, your best option is actually to fake the most popular version string, since even the no-version option puts you in a rather small anonymity set. But the point is that we are needlessly being divided into, in this case, about 80 smaller anonymity sets.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encrypted message not showing PGP version</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>December 31, 2012, 10:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=98140.msg693758#msg693758">Quote from: astor on December 31, 2012, 06:41 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=98140.msg693732#msg693732">Quote from: Nightcrawler on December 31, 2012, 06:16 am</a></div></div><blockquote class="bbc_alternate_quote">One side effect is leaking a little information (i.e. your OS) to a potential adversary, but the risk from this is vanishingly small. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Not necessarily. This guy downloaded all the public keys in the Post PGP Keys thread up to that point:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=174.msg666607#msg666607<br /><br />1356 keys total. So, I downloaded all the keys and filtered them by version.<br /><br />Here are the results (I removed a few that were posted incorrectly):<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">grep -A1 BEGIN sr-2012-12-18-collection.asc | grep -v &quot;^\-&quot; | sort | uniq -c | sort -nr</code><br />&nbsp; &nbsp; 606 Version: GnuPG v2.0.17 (MingW32)<br />&nbsp; &nbsp; 106 <br />&nbsp; &nbsp; &nbsp;83 Version: GnuPG v2.0.19 (MingW32)<br />&nbsp; &nbsp; &nbsp;67 Version: GnuPG v2.0.17 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp;65 Version: GnuPG/MacGPG2 v2.0.18 (Darwin)<br />&nbsp; &nbsp; &nbsp;61 Version: GnuPG/MacGPG2 v2.0.17 (Darwin)<br />&nbsp; &nbsp; &nbsp;60 Version: GnuPG v1.4.11 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp;60 Version: GnuPG v1.4.10 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp;41 Version: GnuPG v1.4.12 (MingW32)<br />&nbsp; &nbsp; &nbsp;33 Version: GnuPG v1.4.11 (MingW32)<br />&nbsp; &nbsp; &nbsp;30 Version: GnuPG v2.0.19 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp;17 Version: GnuPG v2.0.14 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp;15 Version: BCPG v1.47<br />&nbsp; &nbsp; &nbsp;14 Version: BCPG v1.39<br />&nbsp; &nbsp; &nbsp; 8 Version: GnuPG v1.4.12 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp; 6 Version: GnuPG/MacGPG2 v2.0.19 (Darwin)<br />&nbsp; &nbsp; &nbsp; 5 Version: BCPG C# v1.6.1.0<br />&nbsp; &nbsp; &nbsp; 4 Version: GnuPG v2.0.18 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp; 4 Version: GnuPG v1.4.2 (MingW32)<br />&nbsp; &nbsp; &nbsp; 3 Version: PGPfreeware 6.5.8 for non-commercial use &lt;http://www.pgp.com&gt;<br />&nbsp; &nbsp; &nbsp; 3 Version: PGP Desktop 10.1.1 (Build 10)<br />&nbsp; &nbsp; &nbsp; 3 Version: GnuPG v1.4.9 (MingW32)<br />&nbsp; &nbsp; &nbsp; 3&nbsp; &nbsp; &nbsp;Version: BCPG v1.47<br />&nbsp; &nbsp; &nbsp; 2 Version: PGP Desktop 9.0.2 (Build 2424) - not licensed for commercial use: www.pgp.com<br />&nbsp; &nbsp; &nbsp; 2 Version: GnuPG v2.0.16 (MingW32)<br />&nbsp; &nbsp; &nbsp; 2 Version: GnuPG v2.0.14 (MingW32)<br />&nbsp; &nbsp; &nbsp; 2 Version: GnuPG v1.4.9 (Darwin)<br />&nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp;Version: GnuPG v1.4.2 (MingW32) - WinPT 1.4.2<br />&nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp;Version: GnuPG v1.4.12 (MingW32)<br />&nbsp; &nbsp; &nbsp; 2 Version: GnuPG v1.4.12 (Darwin)<br />&nbsp; &nbsp; &nbsp; 2 Version: GnuPG v1.4.11 (MingW32) - WinPT 1.4.3<br />&nbsp; &nbsp; &nbsp; 2&nbsp; &nbsp; &nbsp;Version: GnuPG v1.4.11 (MingW32)<br />&nbsp; &nbsp; &nbsp; 2 Version: GnuPG/MacGPG2 v2.0.16 (Darwin)<br />&nbsp; &nbsp; &nbsp; 1 Version: SKS 1.1.1<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Universal 2.9.1 (Build 347)<br />&nbsp; &nbsp; &nbsp; 1 Version: PGPsdk version 1.7.1 (C) 1997-1999 Network Associates, Inc. and its affiliated companies.<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 9.9.0 (Build 397) - not licensed for commercial use: www.pgp.com<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.2.1 - not licensed for commercial use: www.pgp.com<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.2.0 (Build 1950)<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.2.0 (Build 1672)<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.1.2 (Build 9)<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.1.1 (Build 10) - not licensed for commercial use: www.pgp.com<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.0.3 (Build 1)<br />&nbsp; &nbsp; &nbsp; 1 Version: PGP Desktop 10.0.1 (Build 4020)<br />&nbsp; &nbsp; &nbsp; 1 Version: iPGMail (1.33)<br />&nbsp; &nbsp; &nbsp; 1 Version: iPGMail (1.29)<br />&nbsp; &nbsp; &nbsp; 1 Version: Hush 3.0<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v2.0.19 (Darwin)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v2.0.19<br />&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp;Version: GnuPG v2.0.17 (MingW32)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v2.0.13 (SunOS)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v2.0.13 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.4.5 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Version: GnuPG v1.4.3 (MingW32)<br />&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp;Version: GnuPG v1.4.2 (MingW32)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.4.12-SpecialBuild (MingW32) - WinPT 1.5.3<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.4.12 (MingW32) - WinPT 1.5.3<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.4.12 (MingW32) - WinPT 1.5.2<br />&nbsp; &nbsp; &nbsp; 1&nbsp; Version: GnuPG v1.4.12 (Darwin)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.4.12 (Cygwin)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.4.11 (OpenBSD)<br />&nbsp; &nbsp; &nbsp; 1 Version: GnuPG v1.2.6 (GNU/Linux)<br />&nbsp; &nbsp; &nbsp; 1 Version: FileAssurity OpenPGP 2.0.2<br />&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Version: BCPG v1.47<br />&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Version: BCPG v1.47<br />&nbsp; &nbsp; &nbsp; 1 Version: BCPG v1.45<br />&nbsp; &nbsp; &nbsp; 1&nbsp; &nbsp; &nbsp;Version: BCPG C# v1.6.1.0<br />&nbsp; &nbsp; &nbsp; 1 Version: 6.5.8ckt&nbsp; b9&nbsp; http://www.mccune.cc/PGP.htm<br />&nbsp; &nbsp; &nbsp; 1 Version: 6.5.8ckt b9&nbsp; http://cyberkt.tripod.com/<br />&nbsp; &nbsp; &nbsp; 1 Version: 10.1.2.50<br />&nbsp; &nbsp; &nbsp; 1 GnuPG v2.0.17 (MingW32)<br />&nbsp; &nbsp; &nbsp; 1 Comment: GnuPT-Portable 2.1.5.0<br />&nbsp; &nbsp; &nbsp; 1 Comment: Download: http://portable.gnupt.de </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>&nbsp; &nbsp; &nbsp; <br />Nice. Wish I&#039;d thought of doing that. Great use of Grep-fu. :-) <br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=98140.msg693758#msg693758">Quote from: astor on December 31, 2012, 06:41 am</a></div></div><blockquote class="bbc_standard_quote">Windows is the largest anonymity set with over 50% combined share, and luckily the empty version is second most popular, though fewer than 10% of people use it.<br /><br />However, about 40 people had unique versions, and a bunch more had versions with less than 1% representation (14 keys) in that sample. That creates a potential correlation attack. If you&#039;re sending messages to an undercover LEO and later they raid your house, finding a unique version string in your PGP program is pretty good evidence that they have the right person.<br /><br />And yeah, I know some of those unique versions are created by offsets, but if that&#039;s what your PGP program does, that&#039;s forensic evidence.<br /><br />In light of this data, your best option is actually to fake the most popular version string, since even the no-version option puts you in a rather small anonymity set. But the point is that we are needlessly being divided into, in this case, about 80 smaller anonymity sets.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />What surprised me, in the list above, is that there&#039;s actually people here using Cygwin and OpenBSD! <br /><br />While I appreciate your point about the potential correlation attack, if you happen to be corresponding with an undercover cop, you&#039;ve got a LOT more to worry about than a simple correlation attack. <br /><br />Frankly, the people who have the most to worry about in this list are those with the BCPG PGP versions. I&#039;d wager half to three-quarters of them have 512-bit Elgamal encryption keys. Also the congenital idiot with the Hush 3.0 key really needs his head examined -- Hush stores this guy&#039;s secret key and can capture their passphrase at the drop of a hat -- they have ZERO security. <br /><br />NC<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encrypted message not showing PGP version</strong><br />
+				Post by: <strong>astor</strong> on <strong>January 01, 2013, 04:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=98140.msg694996#msg694996">Quote from: Nightcrawler on December 31, 2012, 10:02 pm</a></div></div><blockquote class="bbc_standard_quote">While I appreciate your point about the potential correlation attack, if you happen to be corresponding with an undercover cop, you&#039;ve got a LOT more to worry about than a simple correlation attack. </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />True, and one thing I thought of after posting that is that if LE is looking at your computer and PGP program, they will probably find your PGP key. Matching the key ID will be much better evidence than the program version. Still, as I said, it&#039;s entirely avoidable. Publishing the version makes sense in the normal use case for PGP, which is distributed software development. Those people are not anonymous and have no reason to hide their PGP program. In that case, I understand the argument that posting the version can allow others to alert you if you are using vulnerable software. You have that benefit at no cost. In our case, the cost is a smaller anonymity set, sometimes down to a unique identifier.<br /><br />Think of it this way, most people would not dare to post their first name (even without the last name) publicly. Somehow that&#039;s a scary proposition, even though there are millions of Johns and Daniels in the world. But they have no problem posting a PGP version with no more than 1/1350 market share, which is like publicly posting that your first name is Kolten, Jensen or Yurem. <br /><br />http://babyfit.sparkpeople.com/baby_names_top1000.asp?page=2&amp;gender=0<br /><br />Not a good idea, in my opinion.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=98140.msg694996#msg694996">Quote from: Nightcrawler on December 31, 2012, 10:02 pm</a></div></div><blockquote class="bbc_standard_quote">Frankly, the people who have the most to worry about in this list are those with the BCPG PGP versions. I&#039;d wager half to three-quarters of them have 512-bit Elgamal encryption keys. Also the congenital idiot with the Hush 3.0 key really needs his head examined<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I literally laughed out loud :)
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

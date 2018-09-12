@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=98734.0" />
+		<title>Print Page - Concern about bitcoin safety</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: lithium on January 01, 2013, 08:40 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Concern about bitcoin safety</strong><br />
+				Post by: <strong>lithium</strong> on <strong>January 01, 2013, 08:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I found this paper on bitcoin graph analysis: <br />http://eprint.iacr.org/2012/584.pdf<br /><br />Which rises a few questions. In the analysis they state that they could see who owns the most number of bitcoins. Since bitcoin transactions are all public, the more transactions can be linked to physical entities the greater the chance that the owners of these large accounts can be identified. Further more, if somebody owns a bitcoin account with a large number of bitcoins and then orders something from a compromized source having to give out their real address, wouldn&#039;t it also mean that this persons all previous transactions can now be traced as well? <br /><br />They also seem to be able to join transactions that have gone through mixers. The paper states that it&#039;s quite easy to filter out large branches that are first separated and then joined back together into a lump sum of bitcoins - enabling them to assume that all the mixing nodes indeed belong to the same entity - as well as the ending node which is now connected to the starting node via all the branches inbetween. <br /><br />Since all of the transactions are public and can be analyzed in this way, how safe is the bitcoin system? Wouldn&#039;t it be possible to trace virtually all transactions ever made inside the system and connect them to outside events as the analysis tools for the public blocks database become more advanced?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Concern about bitcoin safety</strong><br />
+				Post by: <strong>astor</strong> on <strong>January 01, 2013, 09:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=98734.msg696172#msg696172">Quote from: lithium on January 01, 2013, 08:40 pm</a></div></div><blockquote class="bbc_standard_quote">Since bitcoin transactions are all public, the more transactions can be linked to physical entities the greater the chance that the owners of these large accounts can be identified.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Correct.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=98734.msg696172#msg696172">Quote from: lithium on January 01, 2013, 08:40 pm</a></div></div><blockquote class="bbc_standard_quote">Further more, if somebody owns a bitcoin account with a large number of bitcoins and then orders something from a compromized source having to give out their real address, wouldn&#039;t it also mean that this persons all previous transactions can now be traced as well?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It depends on how well they separated those transactions. All, some or none of their previous transactions could be linked.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=98734.msg696172#msg696172">Quote from: lithium on January 01, 2013, 08:40 pm</a></div></div><blockquote class="bbc_standard_quote">They also seem to be able to join transactions that have gone through mixers. The paper states that it&#039;s quite easy to filter out large branches that are first separated and then joined back together into a lump sum of bitcoins - enabling them to assume that all the mixing nodes indeed belong to the same entity - as well as the ending node which is now connected to the starting node via all the branches inbetween.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The large coin transactions that they analyzed didn&#039;t go through the mixing services that exist today. It was much more crude. They were probably manually broken up into many addresses and rejoined. The better mixing services today use separate pools of addresses, so there&#039;s zero taint or linkage between them. A temporary ledger that keeps account of which coins go to which addresses is maintained in a separate database, and supposedly they delete that info after 6 confirmations.<br /><br />However, it could still be possible to link transactions in separate address pools, assuming you can identify the addresses in them. If you know that a certain mixing service charges a 1.5% fee, and you see 100 bitcoins go in (in any number of transactions, from/to any number of addresses), then in the other pool you see 98.5 bitcoins come out (ditto), you could link the two. This is difficult with large mixing services and many transactions, but theoretically possible.<br /><br />The defense is to buy more bitcoins than you need. If you need 30 BTC, buy 50, send them to the mixing service and then send 30 to SR and 20 somewhere else. That makes the coins much harder to link.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=98734.msg696172#msg696172">Quote from: lithium on January 01, 2013, 08:40 pm</a></div></div><blockquote class="bbc_standard_quote">Since all of the transactions are public and can be analyzed in this way, how safe is the bitcoin system? Wouldn&#039;t it be possible to trace virtually all transactions ever made inside the system and connect them to outside events as the analysis tools for the public blocks database become more advanced?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Not all, because there isn&#039;t good data on a lot of purchases. Consider the people who use cash drops or buy through the mail. The addresses they use will always be hard if not impossible to link to an identity, and that&#039;s a matter of traditional detective work that no statistical analysis on the block chain can solve.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

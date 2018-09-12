@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=25094.0" />
+		<title>Print Page - Anyone familiar with setting up website on Ubuntu server?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Off topic => Topic started by: CapnJack on May 31, 2012, 10:48 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Anyone familiar with setting up website on Ubuntu server?</strong><br />
+				Post by: <strong>CapnJack</strong> on <strong>May 31, 2012, 10:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m trying to learn website programming and am having trouble with having it run the way I want.&nbsp; <br /><br />When I test the site on the server, it is browsing to localhost and there are no issues.&nbsp; However, if I go to the site from another computer on the network, localhost still comes up and I can&#039;t browse to the pages.&nbsp; How do I change the setting on the Ubuntu server so it points to the correct place and I can view the pages on the other computer?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone familiar with setting up website on Ubuntu server?</strong><br />
+				Post by: <strong>smartattack</strong> on <strong>May 31, 2012, 11:18 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m not sure to understand what you are asking. Did you put your website inside apache and configured it properly? Did you set your href as relative links and not absolute? Are you specifying the right ip address within the browser? And if you are trying to access your machine from outside your lan, did you forward the port 80 on your router?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone familiar with setting up website on Ubuntu server?</strong><br />
+				Post by: <strong>Ballzinator</strong> on <strong>May 31, 2012, 11:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267202#msg267202">Quote from: CapnJack on May 31, 2012, 10:48 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;m trying to learn website programming and am having trouble with having it run the way I want.&nbsp; <br /><br />When I test the site on the server, it is browsing to localhost and there are no issues.&nbsp; However, if I go to the site from another computer on the network, localhost still comes up and I can&#039;t browse to the pages.&nbsp; How do I change the setting on the Ubuntu server so it points to the correct place and I can view the pages on the other computer?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I&#039;m not sure if I got this right but I think you don&#039;t know what &quot;localhost&quot; means. &quot;localhost&quot; resolves to the IP address 127.0.0.1 which always points a computer to itself. So if you want to access the web server from another computer, you can&#039;t use localhost. Instead you have to use the server&#039;s IP address (e.g. 192.168.1.50). If you don&#039;t know the server&#039;s local IP address, open up a terminal windows and type &quot;ifconfig&quot;. This will list the configurations of all network devices. If you&#039;re using a wired connection it will be called eth0 and if you&#039;re using WiFi it will be called wlan0 or ath0 or something similar.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone familiar with setting up website on Ubuntu server?</strong><br />
+				Post by: <strong>CapnJack</strong> on <strong>May 31, 2012, 11:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yes the website is inside apache but I&#039;m not sure if I configured it the right way.&nbsp; If I remember correctly it asked for the server name and I left it as localhost (but I could be mistaken)&nbsp; <br /><br />If I understand relative vs absolute, the pages I programmed, and are working correctly, are absolute.&nbsp; The ones I downloaded (clipbucket) are the ones that I can&#039;t get to work.&nbsp; I&#039;m not sure how they are set up though.<br /><br />If I put the ip address of the server in the page I am browsing to I can access it.&nbsp; (Example 192.168.x.x/clipbucket) but then none of the links I click on work unless I change localhost in the beginning to the ip address.<br /><br />Eventually I will be accessing from outside the LAN but I&#039;m not as worried about that part right now.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone familiar with setting up website on Ubuntu server?</strong><br />
+				Post by: <strong>CapnJack</strong> on <strong>May 31, 2012, 11:42 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267251#msg267251">Quote from: Ballzinator on May 31, 2012, 11:31 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267202#msg267202">Quote from: CapnJack on May 31, 2012, 10:48 pm</a></div></div><blockquote class="bbc_alternate_quote">I&#039;m trying to learn website programming and am having trouble with having it run the way I want.&nbsp; <br /><br />When I test the site on the server, it is browsing to localhost and there are no issues.&nbsp; However, if I go to the site from another computer on the network, localhost still comes up and I can&#039;t browse to the pages.&nbsp; How do I change the setting on the Ubuntu server so it points to the correct place and I can view the pages on the other computer?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I&#039;m not sure if I got this right but I think you don&#039;t know what &quot;localhost&quot; means. &quot;localhost&quot; resolves to the IP address 127.0.0.1 which always points a computer to itself. So if you want to access the web server from another computer, you can&#039;t use localhost. Instead you have to use the server&#039;s IP address (e.g. 192.168.1.50). If you don&#039;t know the server&#039;s local IP address, open up a terminal windows and type &quot;ifconfig&quot;. This will list the configurations of all network devices. If you&#039;re using a wired connection it will be called eth0 and if you&#039;re using WiFi it will be called wlan0 or ath0 or something similar.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m aware localhost is referring to the computer itself.&nbsp; Someone told me that you could change what localhost pointed to such as www.sr.com if browsing from another computer.&nbsp; If this is not the case, what do i have to change in order for my page to display correctly without going through each page and changing localhost in the code?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone familiar with setting up website on Ubuntu server?</strong><br />
+				Post by: <strong>Ballzinator</strong> on <strong>May 31, 2012, 11:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267268#msg267268">Quote from: CapnJack on May 31, 2012, 11:42 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267251#msg267251">Quote from: Ballzinator on May 31, 2012, 11:31 pm</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267202#msg267202">Quote from: CapnJack on May 31, 2012, 10:48 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;m trying to learn website programming and am having trouble with having it run the way I want.&nbsp; <br /><br />When I test the site on the server, it is browsing to localhost and there are no issues.&nbsp; However, if I go to the site from another computer on the network, localhost still comes up and I can&#039;t browse to the pages.&nbsp; How do I change the setting on the Ubuntu server so it points to the correct place and I can view the pages on the other computer?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I&#039;m not sure if I got this right but I think you don&#039;t know what &quot;localhost&quot; means. &quot;localhost&quot; resolves to the IP address 127.0.0.1 which always points a computer to itself. So if you want to access the web server from another computer, you can&#039;t use localhost. Instead you have to use the server&#039;s IP address (e.g. 192.168.1.50). If you don&#039;t know the server&#039;s local IP address, open up a terminal windows and type &quot;ifconfig&quot;. This will list the configurations of all network devices. If you&#039;re using a wired connection it will be called eth0 and if you&#039;re using WiFi it will be called wlan0 or ath0 or something similar.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m aware localhost is referring to the computer itself.&nbsp; Someone told me that you could change what localhost pointed to such as www.sr.com if browsing from another computer.&nbsp; If this is not the case, what do i have to change in order for my page to display correctly without going through each page and changing localhost in the code?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Sorry, now I understand your problem. You&#039;ve made the mistake of using absolute links in your code. You need to use relative ones. Let&#039;s say in your index.html there is a link &quot;http://localhost/CapnJack&#039;sPorn/gay.png&quot;. If you upload your page to a host, let&#039;s say bla.org, you&#039;d have to change every occurrence of &quot;http://localhost&quot; to &quot;http://bla.org&quot;. To avoid that you can simply completely omit &quot;http://localhost&quot; and make the links &quot;CapnJack&#039;sPorn/gayfuck.png&quot; or &quot;guestbook.php&quot;.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone familiar with setting up website on Ubuntu server?</strong><br />
+				Post by: <strong>smartattack</strong> on <strong>May 31, 2012, 11:56 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ballzinator is right! Btw you can change what localhost means inside /etc/hosts but it&#039;s NOT recommended at all!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone familiar with setting up website on Ubuntu server?</strong><br />
+				Post by: <strong>CapnJack</strong> on <strong>June 01, 2012, 12:01 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267285#msg267285">Quote from: Ballzinator on May 31, 2012, 11:52 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267268#msg267268">Quote from: CapnJack on May 31, 2012, 11:42 pm</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267251#msg267251">Quote from: Ballzinator on May 31, 2012, 11:31 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267202#msg267202">Quote from: CapnJack on May 31, 2012, 10:48 pm</a></div></div><blockquote class="bbc_alternate_quote">I&#039;m trying to learn website programming and am having trouble with having it run the way I want.&nbsp; <br /><br />When I test the site on the server, it is browsing to localhost and there are no issues.&nbsp; However, if I go to the site from another computer on the network, localhost still comes up and I can&#039;t browse to the pages.&nbsp; How do I change the setting on the Ubuntu server so it points to the correct place and I can view the pages on the other computer?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I&#039;m not sure if I got this right but I think you don&#039;t know what &quot;localhost&quot; means. &quot;localhost&quot; resolves to the IP address 127.0.0.1 which always points a computer to itself. So if you want to access the web server from another computer, you can&#039;t use localhost. Instead you have to use the server&#039;s IP address (e.g. 192.168.1.50). If you don&#039;t know the server&#039;s local IP address, open up a terminal windows and type &quot;ifconfig&quot;. This will list the configurations of all network devices. If you&#039;re using a wired connection it will be called eth0 and if you&#039;re using WiFi it will be called wlan0 or ath0 or something similar.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m aware localhost is referring to the computer itself.&nbsp; Someone told me that you could change what localhost pointed to such as www.sr.com if browsing from another computer.&nbsp; If this is not the case, what do i have to change in order for my page to display correctly without going through each page and changing localhost in the code?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Sorry, now I understand your problem. You&#039;ve made the mistake of using absolute links in your code. You need to use relative ones. Let&#039;s say in your index.html there is a link &quot;http://localhost/CapnJack&#039;sPorn/gay.png&quot;. If you upload your page to a host, let&#039;s say bla.org, you&#039;d have to change every occurrence of &quot;http://localhost&quot; to &quot;http://bla.org&quot;. To avoid that you can simply completely omit &quot;http://localhost&quot; and make the links &quot;CapnJack&#039;sPorn/gayfuck.png&quot; or &quot;guestbook.php&quot;.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Awesome.&nbsp; Thanks for the reply.&nbsp; Is this something I can change through the .htaccess file or do I have to manually fix it in the code.&nbsp; <br /><br />Also, what would be the problems if I changed the /etc/host file?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone familiar with setting up website on Ubuntu server?</strong><br />
+				Post by: <strong>Ballzinator</strong> on <strong>June 01, 2012, 12:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267304#msg267304">Quote from: CapnJack on June 01, 2012, 12:01 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267285#msg267285">Quote from: Ballzinator on May 31, 2012, 11:52 pm</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267268#msg267268">Quote from: CapnJack on May 31, 2012, 11:42 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267251#msg267251">Quote from: Ballzinator on May 31, 2012, 11:31 pm</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25094.msg267202#msg267202">Quote from: CapnJack on May 31, 2012, 10:48 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;m trying to learn website programming and am having trouble with having it run the way I want.&nbsp; <br /><br />When I test the site on the server, it is browsing to localhost and there are no issues.&nbsp; However, if I go to the site from another computer on the network, localhost still comes up and I can&#039;t browse to the pages.&nbsp; How do I change the setting on the Ubuntu server so it points to the correct place and I can view the pages on the other computer?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I&#039;m not sure if I got this right but I think you don&#039;t know what &quot;localhost&quot; means. &quot;localhost&quot; resolves to the IP address 127.0.0.1 which always points a computer to itself. So if you want to access the web server from another computer, you can&#039;t use localhost. Instead you have to use the server&#039;s IP address (e.g. 192.168.1.50). If you don&#039;t know the server&#039;s local IP address, open up a terminal windows and type &quot;ifconfig&quot;. This will list the configurations of all network devices. If you&#039;re using a wired connection it will be called eth0 and if you&#039;re using WiFi it will be called wlan0 or ath0 or something similar.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m aware localhost is referring to the computer itself.&nbsp; Someone told me that you could change what localhost pointed to such as www.sr.com if browsing from another computer.&nbsp; If this is not the case, what do i have to change in order for my page to display correctly without going through each page and changing localhost in the code?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Sorry, now I understand your problem. You&#039;ve made the mistake of using absolute links in your code. You need to use relative ones. Let&#039;s say in your index.html there is a link &quot;http://localhost/CapnJack&#039;sPorn/gay.png&quot;. If you upload your page to a host, let&#039;s say bla.org, you&#039;d have to change every occurrence of &quot;http://localhost&quot; to &quot;http://bla.org&quot;. To avoid that you can simply completely omit &quot;http://localhost&quot; and make the links &quot;CapnJack&#039;sPorn/gayfuck.png&quot; or &quot;guestbook.php&quot;.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Awesome.&nbsp; Thanks for the reply.&nbsp; Is this something I can change through the .htaccess file or do I have to manually fix it in the code.&nbsp; <br /><br />Also, what would be the problems if I changed the /etc/host file?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Nope, the .htaccess file has nothing to do with that. Simply get a good code editor which can automatically search and replace text. Search for &quot;localhost/&quot; or &quot;http://localhost/&quot; or whatever it is that&#039;s superfluous, leave the &quot;replace with&quot; field blank and start the process.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone familiar with setting up website on Ubuntu server?</strong><br />
+				Post by: <strong>CapnJack</strong> on <strong>June 01, 2012, 12:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				I appreciate all the help!&nbsp; Looks like it&#039;s gonna be another long night of drinking and learning....
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=210170.0" />
+		<title>Print Page - Disabling images as a reasonable security precaution</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: boaclon224 on September 05, 2013, 09:56 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Disabling images as a reasonable security precaution</strong><br />
+				Post by: <strong>boaclon224</strong> on <strong>September 05, 2013, 09:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				One thing that I haven&#039;t seen mentioned on these forums is that specially designed images can be used to compromise computers, so there is some wisdom in disabling images by default (obviously forms with captchas require them to be enabled, though).<br /><br />This happens because image encoding and compression quite complex, so there are buffer overflows and similar vulnerabilities found quite regularly. It wouldn&#039;t be a very easy route to compromise a computer, but not the trickiest either. No more intrinsically difficult than the javascript exploit used in the Freedom Hosting compromises. So I&#039;d recommend disabling images by default, and turning them on when you need them (captchas, pretty pictures from product pages).
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Disabling images as a reasonable security precaution</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 05, 2013, 10:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				Browsing in incognito mode is the way to go. Besides what you mentioned, it speeds up page load times, sometimes quite noticeably, and the photos rarely match the product anyway. Even if they were real photos of a real product at one time, many are months old and no longer illustrate the product being sold, and many are stock images to begin with.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Disabling images as a reasonable security precaution</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 05, 2013, 11:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				you can disable the ability for websites to set a font as well. Doing these things protects you from various hacking attempts, but it does make your sessions very linkable as well. Probably close to 0% of Tor users disable loading images, so if you are the only person to do it don&#039;t be surprised when every single thing you do can be linked to a single entity. But you do protect yourself from image based exploits, or javascript based exploits, or font based exploits, etc. I think javascript being disabled is a no brainer, enough people do it that you will not really stick out horribly bad and it substantially protects you from hackers. On the other hand, it is less cut and dry with disabling images or fonts, because in this case you really will stick out like a sore thumb. If you are only using Tor to visit SR then it is probably best to disable images though, no need to have more attack surface than required and if you only go to one website and are always logged in when visiting it you don&#039;t need to worry about linkability between sessions because you are inherently linkable between sessions anyway. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Disabling images as a reasonable security precaution</strong><br />
+				Post by: <strong>boaclon224</strong> on <strong>September 05, 2013, 11:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				Incognito mode protects you from vendors posting exploit images, certainly, but as far as protecting yourself from a potential silkroad compromise it won&#039;t help - the site owner chooses which images you load.<br /><br />The linkability of sessions is indeed a cause for concern, but as you mentioned, if you log in you&#039;ve already perfected linkability for an adversary. That said, I suppose in a case of equipment seizure, finding a browser configuration that matches the &#039;fingerprint&#039; that had been recorded for a user then you&#039;re in a worse position. But that&#039;s just an argument for good client side encryption.<br /><br />As far as font setting, do you mean &#039;web fonts&#039;? Or just changing from the system&#039;s serif to sans-serif font? Because in the latter case I can&#039;t see how disabling that could be detected (presuming javascript was disabled). &#039;Web fonts&#039; are a different beast, though, and yes, disabling them would be a wise move. That wouldn&#039;t increase linkability much, as the browser would be expected to cache the font after the first page view anyway.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Disabling images as a reasonable security precaution</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 05, 2013, 11:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				You can tell Firefox to not load any images at all. Re: fonts, I mean like this: https://www.rapid7.com/db/vulnerabilities/linuxrpm-rhsa-2012-0515<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Mozilla Firefox is an open source web browser. XULRunner provides the XUL Runtime environment for Mozilla Firefox. A flaw was found in Sanitiser for OpenType (OTS), used by Firefox to help prevent potential exploits in malformed OpenType fonts. A web page containing malicious content could cause Firefox to crash or, under certain conditions, possibly execute arbitrary code with the privileges of the user running Firefox. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />not positive but I think not allowing websites to load their own fonts prevents attacks like this, as they require the user to load a malicious font. In firefox you can prevent websites from setting the font and force it to use a default font, which I think but am not certain prevents all or at least most of the font based attacks. If you know otherwise let me know. <br /><br />here is another:<br /><br />https://www.redhat.com/archives/enterprise-watch-list/2012-April/msg00016.html<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">A flaw was found in the way Firefox used its embedded Cairo library to<br />render certain fonts. A web page containing malicious content could cause<br />Firefox to crash or, under certain conditions, possibly execute arbitrary<br />code with the privileges of the user running Firefox. (CVE-2012-0472)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Disabling images as a reasonable security precaution</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 05, 2013, 12:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				you can disable CSS as well, although it requires some work to keep it disabled in Firefox. It makes sites look pretty ugly though. But I can use SR without fonts, javascript, images or CSS.<br />And I think that should protect from at least a huge amount of potential exploits. Not sure what else to disable after that :P. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Disabling images as a reasonable security precaution</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 05, 2013, 01:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Or just use Whonix.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Disabling images as a reasonable security precaution</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 05, 2013, 01:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Whonix is security by isolation, disabling all this crap is security by correctness (since having less things means there are less mistakes that can be exploited). Security by correctness prevents the attacker from gaining a foothold in your system, security by isolation makes it so if they gain a foothold it doesn&#039;t buy them much.&nbsp; 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

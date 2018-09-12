@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=93451.0" />
+		<title>Print Page - Hmmmm- Where is my Public Key??? ^.^ </title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: turningjapanese on December 14, 2012, 04:43 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Hmmmm- Where is my Public Key??? ^.^ </strong><br />
+				Post by: <strong>turningjapanese</strong> on <strong>December 14, 2012, 04:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				My keys say &quot;sec, uid, sub&quot;. WHen I clicked &quot; Show secret Keys Only&quot; All 3 of them were still visable...<br /><br />Whaddup? Tried to figure it out myself, and searched...But I&#039;m getting zzzZzzZYyy : )<br /><br />I;m afraid that I&#039;m going to export my public key- Well I&#039;m sure not going to try until I figure this out... or I get some help from this Joyous community ; ) Thanks You&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Hmmmm- Where is my Public Key??? ^.^ </strong><br />
+				Post by: <strong>turningjapanese</strong> on <strong>December 14, 2012, 02:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				17 Views, any takers?&nbsp; :) Could someone open up their GPG service and tell me what their key/keys are labeled as? Twould be Much appreciated.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Hmmmm- Where is my Public Key??? ^.^ </strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>December 14, 2012, 03:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So, I use the command line utility.&nbsp; These will both list all public keys matching the word(s) you give it (don&#039;t give it a search term and it lists them all):<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg -k [words]<br />gpg --list-keys [words]<br /></code><br />These will list all private keys matching words:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg -K [words]<br />gpg --list-secret-keys [words]<br /></code><br />To export your own public key:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --export -a YourID<br /></code><br />(replace YourID with your ID)<br /><br />To pipe that to a file:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --export -a YourID &gt; mypublickey.asc<br /></code><br />Believe it or not, it doesn&#039;t actually matter which key you use for the public &amp; private keys.&nbsp; As long as you keep them straight (as in if you use the public one as the private key, you have to always use that one for the private key -- you can&#039;t just switch at random).<br /><br />It&#039;s a math thing.&nbsp; I haven&#039;t verified it, but that&#039;s what I read, and I don&#039;t see why it wouldn&#039;t work.<br /><br />Enjoy. :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Hmmmm- Where is my Public Key??? ^.^ </strong><br />
+				Post by: <strong>turningjapanese</strong> on <strong>December 14, 2012, 03:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks! is the command line utility the same as terminal? all offense to me- This isn&#039;t simple enough for me : ( I SO appreciate you giving it a shot- I still don&#039;t feel comfortable exporting one key when I don&#039;t know where the other is. DO I just pic one of the subkeys like &quot;uid&quot; and then use &quot;Sec&quot; as secret?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Hmmmm- Where is my Public Key??? ^.^ </strong><br />
+				Post by: <strong>turningjapanese</strong> on <strong>December 14, 2012, 03:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				OK, I will try this when I&#039;m at the Other comp far away. do i put those commands in word for word/symbol? Very new to computers. Thx!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Hmmmm- Where is my Public Key??? ^.^ </strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>December 14, 2012, 03:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Well, replace the stuff with sharp brackets around it with the search term (as in&nbsp; &nbsp; &lt;SEARCHTERM&gt;).&nbsp; For example, for you:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --export -a turningjapanese &gt; turningjapanese-publickey.asc<br /></code><br />That&#039;s assuming your PGP ID is the same as your forum name, of course.&nbsp; Note that the other commands aren&#039;t really necessary.&nbsp; I just gave them to you because you were asking about where your public &amp; private keys are.<br /><br />They&#039;re in a file in your &quot;$HOME/.gnupg&quot; directory, by the way.&nbsp; &quot;$HOME&quot; is a Linux variable that will be replaced with your user account&#039;s &quot;home&quot; directory (basically like &quot;C:\Users\MyUserName&quot; on Windows 7).<br /><br />Copy &amp; paste the exact command above, and you can give out your public key to whoever you want.&nbsp; But don&#039;t forget, the only reason to need a public key is so that people can encrypt things TO YOU USING IT.&nbsp; If you want to encrypt things TO OTHERS, your use THEIR PUBLIC KEY to do that -- then only their private key can decrypt it.<br /><br />Good luck man :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Hmmmm- Where is my Public Key??? ^.^ </strong><br />
+				Post by: <strong>tetrizkube</strong> on <strong>December 15, 2012, 02:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hey there, to find my public key I opened a new window in Text Edit, right clicked, and went to insert my key. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

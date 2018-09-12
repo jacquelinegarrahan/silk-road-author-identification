@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=19337.0" />
+		<title>Print Page - Booting Liberte from a MicroSD card on an HP Notebook?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: dankology on April 18, 2012, 01:38 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Booting Liberte from a MicroSD card on an HP Notebook?</strong><br />
+				Post by: <strong>dankology</strong> on <strong>April 18, 2012, 01:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				I can&#039;t seem to figure out how to boot liberte, I&#039;ve followed the website&#039;s instructions to a T, my only problem is when I turn my computer on to boot it up I can&#039;t figure out what its on.&nbsp; I&#039;ve set my boot order usb hard drive first, and the other usb option 2nd but still nothing.&nbsp; My boot list only contains like floppy drive, cd rom drive, and hard drive (Im going to restart soon and write everything down)<br /><br />Anyone have a clue how to get me into liberte?&nbsp; Im using an hp pavillion g6-1c58dx notebook right now but I have access to a toshiba and another HP along with a couple PCs, all running windows vista/windows 7 (this one is windows 7)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Booting Liberte from a MicroSD card on an HP Notebook?</strong><br />
+				Post by: <strong>mdmamail</strong> on <strong>April 18, 2012, 01:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				You could &#039;chain load&#039; boot, meaning your USB drive has instructions to boot the MicroSD card. Just needs a copy of grub with instructions where to boot the SD card.<br /><br />I&#039;m assuming you have card readers that can&#039;t be booted in the BIOS. As microsd is different from usb<br />I just burn Liberte to disk, boot that and then use USB and MicroSD cards for the persistent drive encrypted.<br /><br />I&#039;ll look around for yous. Can also download Virtualbox and select your MicroSD card as holding the operating system <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Booting Liberte from a MicroSD card on an HP Notebook?</strong><br />
+				Post by: <strong>dankology</strong> on <strong>April 18, 2012, 01:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				Ill look into virtualbox now
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Booting Liberte from a MicroSD card on an HP Notebook?</strong><br />
+				Post by: <strong>mdmamail</strong> on <strong>April 18, 2012, 02:09 am</strong>
+			</dt>
+			<dd class="postbody">
+				It should work on an SD card though, with your ~/persist encrypted drive ready to go. Try another laptop with the BIOS updated to latest version.<br /><br />When I used Liberte I just burned it to disk, and plugged in a USB drive once it booted to desktop which automounted with my encrypted files on it. I used Applications-&gt;System Tools-&gt;Disk Utility to unencrypt and encrypt the drive which held GPG keys and other things. I stopped using Liberte because of it&#039;s bullshit root lockout. <br /><br />Tails works really well with this:<br />https://store.ironkey.com/<br /><br />Boot Tails/Amnesic in bridge mode (you get bridge IPs from Tor by emailing them, it autoresponds) then plug in the Ironkey and double click it&#039;s linux.sh file. Enter password, your hardware encrypted USB drive is now ready with all your Truecrypt hidden containers on it.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Booting Liberte from a MicroSD card on an HP Notebook?</strong><br />
+				Post by: <strong>philter3</strong> on <strong>April 18, 2012, 02:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19337.msg194856#msg194856">Quote from: mdmamail on April 18, 2012, 02:09 am</a></div></div><blockquote class="bbc_standard_quote"> I stopped using Liberte because of it&#039;s bullshit root lockout. <br /><br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hold up.. Liberte locks you out of root?&nbsp; How the hell does THAT work...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Booting Liberte from a MicroSD card on an HP Notebook?</strong><br />
+				Post by: <strong>mdmamail</strong> on <strong>April 18, 2012, 02:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19337.msg194862#msg194862">Quote from: philter3 on April 18, 2012, 02:14 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19337.msg194856#msg194856">Quote from: mdmamail on April 18, 2012, 02:09 am</a></div></div><blockquote class="bbc_alternate_quote"> I stopped using Liberte because of it&#039;s bullshit root lockout. <br /><br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hold up.. Liberte locks you out of root?&nbsp; How the hell does THAT work...<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You get a 4min root console when it firsts boots though.<br />I just make my own live CDs now and use persistence, all the docs available on Tails and Liberte how they do it.<br /><br />Somebody must run Liberte on a MicroSD card to answer this guy&#039;s question, I&#039;m guessing just his BIOS doesn&#039;t recognize it.. try another laptop/system
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Booting Liberte from a MicroSD card on an HP Notebook?</strong><br />
+				Post by: <strong>dankology</strong> on <strong>April 18, 2012, 02:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				Its looking like virtualbox works I havent started liberte yet but everything looks good to go....now how do I go about hiding virtualbox?&nbsp; <br /><br />Im about to try and boot liberte from the micro sd on another two laptops, one hp and one toshiba.&nbsp; Will it even boot on a PC?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Booting Liberte from a MicroSD card on an HP Notebook?</strong><br />
+				Post by: <strong>dankology</strong> on <strong>April 18, 2012, 03:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				VB works but I can&#039;t seem to actually connect to the internet.&nbsp; I can add my wifi spot but I can&#039;t connect to it....meh, ill continue working!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Booting Liberte from a MicroSD card on an HP Notebook?</strong><br />
+				Post by: <strong>QTC</strong> on <strong>April 18, 2012, 02:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19337.msg194880#msg194880">Quote from: dankology on April 18, 2012, 02:26 am</a></div></div><blockquote class="bbc_standard_quote">Its looking like virtualbox works I havent started liberte yet but everything looks good to go....now how do I go about hiding virtualbox?&nbsp; <br /><br />Im about to try and boot liberte from the micro sd on another two laptops, one hp and one toshiba.&nbsp; Will it even boot on a PC?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>try vboxportable in an encrypted truecrypt container. also liberte works best on bare metal not in a vm but that&#039;s something I&#039;ve kinda taken on faith from the liberte people. I will have to research/recall why exactly this is.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Booting Liberte from a MicroSD card on an HP Notebook?</strong><br />
+				Post by: <strong>UKGrower</strong> on <strong>April 18, 2012, 04:22 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I seem to recall that some laptops treat their internal card readers as floppy drives for booting purposes, so you could try that option.&nbsp; Another approach is to boot from a USB card reader, rather than the inbuilt one.<br /><br />I&#039;ve only used tails myself, so I can&#039;t offer much more input than that.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Booting Liberte from a MicroSD card on an HP Notebook?</strong><br />
+				Post by: <strong>dankology</strong> on <strong>April 19, 2012, 02:52 am</strong>
+			</dt>
+			<dd class="postbody">
+				Tried that, nothing seemed to work still.&nbsp; Im about to test a couple other computers and see if i can get it to work, is there some reason I can&#039;t connect to the internet on liberte on the VM?&nbsp; I can add my wireless connection but it won&#039;t connect to it at all.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Booting Liberte from a MicroSD card on an HP Notebook?</strong><br />
+				Post by: <strong>cacoethes</strong> on <strong>April 19, 2012, 03:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19337.msg194866#msg194866">Quote from: mdmamail on April 18, 2012, 02:15 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19337.msg194862#msg194862">Quote from: philter3 on April 18, 2012, 02:14 am</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19337.msg194856#msg194856">Quote from: mdmamail on April 18, 2012, 02:09 am</a></div></div><blockquote class="bbc_standard_quote"> I stopped using Liberte because of it&#039;s bullshit root lockout. <br /><br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hold up.. Liberte locks you out of root?&nbsp; How the hell does THAT work...<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You get a 4min root console when it firsts boots though.<br />I just make my own live CDs now and use persistence, all the docs available on Tails and Liberte how they do it.<br /><br />Somebody must run Liberte on a MicroSD card to answer this guy&#039;s question, I&#039;m guessing just his BIOS doesn&#039;t recognize it.. try another laptop/system<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I wanted to install Liberte on a tiny little micro SD card, but my laptop will not boot from the built-in card reader.&nbsp; I found an easy enough work around, though:<br /><br />Went to Walmart and got a micro SD card reader (Targus brand) for about nine bucks.<br /><br />Installed Liberte to the SD card, and updated it with the current snapshot, just as I did with a USB thumb drive.<br /><br />Copied my persist folder from the USB drive I had been using and onto the micro SD card.<br /><br />Stuck the micro SD card into the Targus card reader.<br /><br />Stuck the card reader into a USB port.&nbsp; BIOS boot order was already set to boot from FDD&nbsp; (old terminology- since there is no &quot;floppy disk drive&quot;, FDD is actually USB)<br /><br />Rebooted.<br /><br />Liberte fired right up, just as if it had when installed on a thumb drive.<br /><br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

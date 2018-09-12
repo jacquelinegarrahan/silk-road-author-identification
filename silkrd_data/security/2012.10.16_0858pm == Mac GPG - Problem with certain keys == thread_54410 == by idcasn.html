@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=54410.0" />
+		<title>Print Page - Mac GPG - Problem with certain keys</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: idcasn on October 16, 2012, 08:58 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Mac GPG - Problem with certain keys</strong><br />
+				Post by: <strong>idcasn</strong> on <strong>October 16, 2012, 08:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hi, I use a Macbook with Mac GPG. I am able to import keys into GPG Keychain Access with no problem. However, when I try to encrypt a message, only certain keys are displayed on the list of keys to choose from.<br /><br />I have found that the keys that work have a subkey. When listed in GPG Keychain Access the keys that work have a &quot;pub&quot;, &quot;uid&quot; and &quot;sub&quot; entry, while the ones that don&#039;t work only have &quot;pub&quot; and &quot;uid&quot;. If I check the details on a certificate, the ones that work have an entry on the &quot;Subkeys&quot; tab.<br /><br />Does anyone else have this problem? Is there a work-around on my end? <br /><br />Thanks<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Mac GPG - Problem with certain keys</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>October 16, 2012, 09:05 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=54410.msg526754#msg526754">Quote from: idcasn on October 16, 2012, 08:58 pm</a></div></div><blockquote class="bbc_standard_quote">Hi, I use a Macbook with Mac GPG. I am able to import keys into GPG Keychain Access with no problem. However, when I try to encrypt a message, only certain keys are displayed on the list of keys to choose from.<br /><br />I have found that the keys that work have a subkey. When listed in GPG Keychain Access the keys that work have a &quot;pub&quot;, &quot;uid&quot; and &quot;sub&quot; entry, while the ones that don&#039;t work only have &quot;pub&quot; and &quot;uid&quot;. If I check the details on a certificate, the ones that work have an entry on the &quot;Subkeys&quot; tab.<br /><br />Does anyone else have this problem? Is there a work-around on my end? <br /><br />Thanks<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Strictly speaking, the keys without an encryption sub-key no longer conform to the official specs.&nbsp; What you might try is to download and install the latest nightly build of GPGTools: <br />https://nightly.gpgtools.org/GPGTools_Installer-latest.dmg<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Mac GPG - Problem with certain keys</strong><br />
+				Post by: <strong>idcasn</strong> on <strong>October 16, 2012, 09:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yes, thanks for the info. After doing a better search I found this thread - http://dkn255hz262ypmii.onion/index.php?topic=26216.0 with the info about installing the nightly build.<br /><br />I would suggest to vendors that you update your keys to ones with subkeys as you may be losing customers without even knowing it cause they can&#039;t encrypt their message to you so they just pick someone else.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Mac GPG - Problem with certain keys</strong><br />
+				Post by: <strong>idcasn</strong> on <strong>October 16, 2012, 09:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m sure this has been posted in a more comprehensive thread. However, here are the steps for encrypting on the command line (which works without using the nightly build).<br /><br />1. Create a text file with the info to encrypt (in Text Edit) and save it (in this example, to &quot;addr.txt&quot;)<br />2. Open Terminal,<br />3. Find the user you want to encrypt to (their email address) by running &quot;gpg --list-keys&quot;<br />3. Encrypt with &quot;gpg --recipient user@domain.com --armor --encrypt addr.txt&quot;<br />4. Show the encrypted file with &quot;cat addr.txt.asc&quot;<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Mac GPG - Problem with certain keys</strong><br />
+				Post by: <strong>mmmmonkey</strong> on <strong>October 16, 2012, 11:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				YES! This works for me! I&#039;ve been trying to find a way to fix this and the nightly build works. Thank you guys alot!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Mac GPG - Problem with certain keys</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>October 17, 2012, 12:12 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=54410.msg526784#msg526784">Quote from: idcasn on October 16, 2012, 09:13 pm</a></div></div><blockquote class="bbc_standard_quote">Yes, thanks for the info. After doing a better search I found this thread - http://dkn255hz262ypmii.onion/index.php?topic=26216.0 with the info about installing the nightly build.<br /><br />I would suggest to vendors that you update your keys to ones with subkeys as you may be losing customers without even knowing it cause they can&#039;t encrypt their message to you so they just pick someone else.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Your mistake is in thinking that they give a rat&#039;s ass about it. Adding an encryption sub-key can be done in 30 seconds -- the instructions on how to do this were even posted by Guru some time ago. Now that DPR has stated that using&nbsp; PGP is optional, there will be even less incentive to use it than before. As I&#039;m beginning to learn, the sad fact of the matter is that people are far more interested in convenience than safety. <br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=211580.0" />
+		<title>Print Page - PGP for Iphone/smartphone open source help</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Altered Dimensions on September 12, 2013, 11:34 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>PGP for Iphone/smartphone open source help</strong><br />
+				Post by: <strong>Altered Dimensions</strong> on <strong>September 12, 2013, 11:34 pm</strong>
+			</dt>
+			<dd class="postbody">
+				hey guys so basically i am trying to find a decent PGP messaging app for the iphone, from what i can gather i should only use open source PGP programs right? Also i am not trying to find an app to send all my SR messages over, i simply love the idea of PGP encyption and want to be able to send a message to a friend about narcotics or a message with my bank details in over iphones that cannot be read by anyone except the sender and the recipent.<br /><br />Does anyone know of any good trusted ones?<br /><br />I have found this app:<br />(CLEARNET WARNING)<br />https://itunes.apple.com/us/app/opengp/id414003727?mt=8<br /><br />Here in the description it claims:<br />OpenPGP/MIME renderer (RFC 2045 Plain UTF-8 message bodies, RFC 2046 Attached files), for reading mail with attached files sent with GPGMail (open source plugin for Apple Mail).<br /><br />I assume this means it is open source? or is it just the GPGMail that is open source? sorry i&#039;m a bit confused<br />If it&#039;s just the GPGMail should i just use the GPGMail part of this app to send and recieve private info, text/photo?<br /><br />Just want to message someone completely private info over mobiles can anyone help me out?<br /><br />I also found this:<br />(CLEARNET WARNING)<br />https://chatsecure.org/<br /><br />And this:<br />(CLEARNET WARNING)<br />https://itunes.apple.com/us/app/ipgmail/id430780873?mt=8<br /><br />^ This one seems promising but can we be assured there is no backdoor ?<br /><br />Anyone had experience with any of these or a good PGP program i can use with my iphone?<br />Also whats the deal with non open source programs? should we not trust them?<br />As far as i knew PGP is safe because you need the persons PGP key to read any of the messages regardless if the program is open source or not right? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP for Iphone/smartphone open source help</strong><br />
+				Post by: <strong>Hungry ghost</strong> on <strong>September 13, 2013, 11:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Opengp works fine, you can just use the clipboard to do everything. To import a key, copy to clipboard and import.<br />To encrypt a message, select encrypt, type message and select key to encrypt to and then choose encrypt to clipboard.<br />To decrypt copy message to clipboard and select decrypt. Enter your pass phrase and read message. (I believe you can copy it to cliobiard, but if you close apo without doing this clear text will be gone.<br />&nbsp; &nbsp; &nbsp;It seems like a fairly decent GUI.<br /><br />If you want to be totally sure, jailbreak your device, install Mobile Terminal and use command line GPG.&nbsp; (It included as part of Cydia as I think repos use it to sign packages. Or something. Don&#039;t know really.) I wrote a brief tutorials which I will dig out if I can.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP for Iphone/smartphone open source help</strong><br />
+				Post by: <strong>Hungry ghost</strong> on <strong>September 14, 2013, 12:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				OK here it is. It is always cringy to go back through your newbie posts so I hope you appreciate my suffering. <br />&nbsp; &nbsp; &nbsp; I am not responsible for the consequences of following my advice. If your phone dies, turns into a remote monitoring device for the NSA, or emits a sedative gas and when you wake up you are on a mysterious island in a village full of extravagant architecture and men in blazers riding penny farthings who all call you Number Six, and thwart your escape attempts by means of an amorphous white orb, and the last episode is frankly confusing, then it is not my fault, and this preamble effectively waives all your rights and any others not specifically mentioned by name. That being said:<br /><br />Ok, so a while ago i was looking for a GPG app for the iPhone. Since I already have a Tor browser for it (Onion Browser) I thought it would be useful. I am away from my computer most days and only can use GPG at night. This means if I need to communicate with a vendor it takes a day for each message/reply cycle, causing me potentially to have to wait longer for my drugs. Not ideal I think you will agree.<br />&nbsp; &nbsp; &nbsp; &nbsp; I found two, one a official Symnatec PGP which requires you to already own PGP official software. The other was a low budget job that couldnt import the keys I wanted so no good.<br />&nbsp; &nbsp; &nbsp; &nbsp; However in the course of my research I discovered that my jailbroken phone already has a command line GnuPG installed as part of the Cydia software. At the time I left it alone but now I have got my head round it.<br /><br />PLEASE NOTE: if perfect security is important to you its probably best to stick to established methods. I am happy to use this as I am only a small time personal buyer.<br /><br />First to check you have this package: Open Cydia&gt;Manage&gt;packages and switch to &#039;expert&#039; setting. It should show up under the g&#039;s. I assumed it came with Cydia but it may have installed as a dependency for some other package I installed.<br /><br />To use it you will need Mobile Terminal (install latest version from xsellize repo) and iFile. Also a SSH program on your PC will be handy. I use iFunbox; it has a stupid name but is the most useful.<br /><br />Open Mobile Terminal. You do not need root privileges to use this. Type:<br /><br />gpg<br /><br />This will set up your pub and sec keyrings and a .conf file. These are in /var/mobile. in a folder .GnuPG which is invisible to iFile for some reason but will show up in iFunbox.<br /><br />From now on any file will be put in /var/mobile. I dont know if this is vital but it seems to make sense to me. <br /><br />To import your secret key, export it as a .asc file from your current GPG program. Put the .asc file in /var/mobile. You will probably want to shorten its name to something more managable: seckey.asc<br /><br />Open Mobile Terminal and type<br /><br />gpg --allow-secret-key-import --import seckey.asc<br /><br />this will add your public and private keys to your keyring.<br /><br />To import a public key:<br /><br />gpg --import pubkey.asc&nbsp; &nbsp;(where pubkey is the name of the file)<br /><br />If you want you can create a file in /var/mobile using iFile called &quot;pubkey.asc&quot; and just copy/paste the public key block into it.<br /><br />So now you have your private keys and whoevers public keys you want, to see them type<br /><br />gpg --list-keys<br /><br />gpg --list-secret-keys<br /><br />This will show a list of keys with User Names.<br /><br />Ok, now to encrypt a message.<br /><br />Create a file in /var/mobile. Call it msg.asc<br />Copy/paste or type your message in this file.<br /><br />then in MT type<br /><br />gpg -e -a -r &quot;recipients user name&quot; msg.asc<br /><br />the -a tells it to encrypt the text within the file and output another .asc file. If you dont use this it will treat the file as data and encrypt it to a .gpg file which is no good to us. (it is fairly easygoing about user names; it will recognise a small portion, like for me &quot;hungry&quot; would do)<br /><br />Return to /var/mobile in iFile. There will be a file called msg.asc.asc which will contain encrypted text which you can copy/paste to wherever you want it.<br /><br />To decrypt a message:<br /><br />Again, create msg.asc file in /var/mobile. Copy/paste encrypted text to it.<br /><br />Open MT. type:<br /><br />gpg -d -a msg.asc<br /><br />you will be prompted for passphrase, then it will output in MT.<br /><br />If you want it to output to a file:<br /><br />gpg -o output.asc -d -a msg.asc<br /><br />this will output to a file called output.asc<br /><br />Obviously you can use whatever filenames suit you.<br /><br />I think this also works with .txt files but since it outputs to .asc I thought keep it simple.<br /><br />There is obviously a lot more to command line GPG but this is a quick and dirty start up. <br />I am fed up typing now, will add more perhaps later. If anyone else would like to contribute who has more expertise in command line GPG I would welcome advice and help.<br /><br />I have already found this very useful. It might be an idea to delete public keys when not in use....<br /><br />gpg --delete-key &quot;User name&quot;<br /><br />...nothing worse than being caught with drugs in your letterbox and a SR vendors PGP key in your iPhone, i <br />imagine.<br /><br />Edit: I have found it useful to leave two files in var/mobile <br />One called msg.asc for messages<br />One called key.asc for keys<br /><br />You can then create shortcuts in mobile terminal for many basic functions using these files to copy paste messages or keys to. This saves a lot of typing. <br />I don&#039;t think that having GPG set up for use on your phone is in itself suspicious as long as you don&#039;t leave vendors keys on key rings. A casual examination of the phone by your average policeman isn&#039;t even going to show it. You&#039;d have to assume phone being seized and examined by experts. Which I hope won&#039;t happen at my level of small personal transactions.<br /><br />forgot to mention:<br />you can also generate a keypair:<br /><br />gpg --gen-key<br /><br />it will walk you through process.<br /><br />Also, to export a public key to a file called &quot;key.asc&quot;<br /><br />gpg --export -a &quot;user name&quot;&gt;key.asc<br /><br />You can then copy/paste it for example to the bottom of your message. I keep a copy of my public key for this purpose.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP for Iphone/smartphone open source help</strong><br />
+				Post by: <strong>Hungry ghost</strong> on <strong>September 14, 2013, 12:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				Other than the above if you search for a list of gpg commands they will mostly all work. Also you can edit your .conf file to do useful stuff. A user called Louis Cyphere posted some useful stuff about that, you will have to find that yourself my friend as I am going to bed
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

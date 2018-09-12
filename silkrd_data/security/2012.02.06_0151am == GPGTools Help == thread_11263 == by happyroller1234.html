@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=11263.0" />
+		<title>Print Page - GPGTools Help</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: happyroller1234 on February 06, 2012, 01:51 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>GPGTools Help</strong><br />
+				Post by: <strong>happyroller1234</strong> on <strong>February 06, 2012, 01:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				So I learned how to make a key, and how to import someone&#039;s key, but I don&#039;t understand how to send an encrypted message.&nbsp; I also am confused about getting my public key.&nbsp; Everyone else in Keychain Access has &quot;pub&quot; type, but mine is &quot;sec&quot;.&nbsp; And when I right-click and select &quot;Open PGP: Insert My Key&quot; it only lets me insert my private key.&nbsp; <br /><br />Two main questions:<br />HOW DO I SEND AN ENCRYPTED MESSAGE?<br />HOW DO I RETRIEVE MY PUBLIC KEY?<br /><br />I&#039;ve read on the forums, but I&#039;m still confused.&nbsp; Somebody help?&nbsp; :-\
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPGTools Help</strong><br />
+				Post by: <strong>TravellingWithoutMoving</strong> on <strong>February 06, 2012, 06:34 pm</strong>
+			</dt>
+			<dd class="postbody">
+				- too little information<br />- windooz, osx, linux ?!<br /><br />- don&#039;t know which app you are performing the steps you describe, there are loads of gpg / pgp threads on the subject have you followed any of them...?!<br /><br />&nbsp;:o
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPGTools Help</strong><br />
+				Post by: <strong>happyroller1234</strong> on <strong>February 06, 2012, 07:26 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=11263.msg105324#msg105324">Quote from: TravellingWithoutMoving on February 06, 2012, 06:34 pm</a></div></div><blockquote class="bbc_standard_quote">- too little information<br />- windooz, osx, linux ?!<br /><br />- don&#039;t know which app you are performing the steps you describe, there are loads of gpg / pgp threads on the subject have you followed any of them...?!<br /><br />&nbsp;:o<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m using a Mac.&nbsp; And yes, I have read all of the other threads.&nbsp; I&#039;m only making my own thread because they didn&#039;t answer my questions.&nbsp; I figured out how to send something encrypted.&nbsp; Now I&#039;m just confused about the private vs. public key.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPGTools Help</strong><br />
+				Post by: <strong>TravellingWithoutMoving</strong> on <strong>February 06, 2012, 07:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				- public / private key {public + private = key pair}<br />&nbsp; &nbsp;- you will only have the other party&#039;s public key they keep both, and their private is private.<br /><br />- you own created keys, yes you also have both but you ONLY EVER GIVE OUT THE PUBLIC portion.<br /><br />- &quot;Now I&#039;m just confused about the private vs. public key&quot;<br />&nbsp; &nbsp;- public + private = key pair<br />&nbsp; &nbsp;- you need your private key to decrypt messages sent to you by the 2nd party who encrypted the message with your public key.<br />&nbsp; &nbsp;- if its someone else&#039;s pub key you imported into your keyring you will only have the public key part cos they have the private cos it belongs to them<br />&nbsp; &nbsp;- hand out your public key for people to send you encrypted messages {when gpg/pgp msg recipient = you.}<br /><br />- try r/click or Option or alt and click, to export your own key - DON&#039;T EXPORT THE PRIVATE WITH IT, JUST THE PUBLIC<br />&nbsp; otherwise try the menu items, there has to be an option to export..<br /><br />does this not help:-<br />http://dkn255hz262ypmii.onion/index.php?topic=1210.0<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=7753.0<br />- GPG/OpenPGP/GPGTools Step-by-Step Guide for OS X users (for dummys ;o)<br /><br /><br />ok ?!<br />&nbsp;:o
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=155688.0" />
+		<title>Print Page - What is *NIX?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: budbud on May 04, 2013, 06:28 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>What is *NIX?</strong><br />
+				Post by: <strong>budbud</strong> on <strong>May 04, 2013, 06:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				hey everyone, i am interested in purchasing from a vendor that only accepts gpg version *NIX.&nbsp; I&#039;ve been using GNU privacy in my previous transactions with other vendors and had no problems. Does anyone know if my GNU privacy will be accepted or do i have to download a different program?&nbsp; Thank you all!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: What is *NIX?</strong><br />
+				Post by: <strong>narcocapitalist9</strong> on <strong>May 04, 2013, 06:42 pm</strong>
+			</dt>
+			<dd class="postbody">
+				*nix means &#039;unix-like operating systems&#039; which includes BSD, macos and linux.<br /><br />if they are running a linux (most likely) or even BSD or macos version of GPG, that simply means that they may have DSA/elgamal keys or RSA/DSA keys. just try and send them a message encrypted to the public key they provide. if your software can&#039;t do it, it will tell you. it is unlikely. the PGP crypto community has been trying to get people to use crypto for email, in particular, for a long time. unfortunately there is a small learning curve to using it but that is partly due to the lack of good interface coders writing wrappers for pgp/gpg encryption.<br /><br />in summary, just try and crypt a message to them anyway. if their gpg program can&#039;t decrypt your message, if they are reasonable and smart people they will tell you. just ask them exactly what type of keypair they have. if the transmission fails, find out what you need to do to get a crypto software that works with what they are using. it&#039;s unlikely you will have a problem. i&#039;ve been using both DSA/elgamal and RSA/DSA keypairs for years in both windows and linux. the security of both systems is pretty solid. RSA is reputed to be more secure, but on the other hand, RSA keys are limited to 3072bits where DSA keys can be 4096. as a consequence i used a 2048 bit RSA key for my vendor PGP public key, as i was under the impression that was the most compatible.<br /><br />both systems are pretty fuckin secure. the time required to crack the cryptography numbers in the thousands of years, even given an acceleration in computation capality.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: What is *NIX?</strong><br />
+				Post by: <strong>budbud</strong> on <strong>May 04, 2013, 07:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				ok, i will just encrypt the address as i usually did and see what they say from there. thanks a lot for&nbsp; the help narco...appreciate it
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: What is *NIX?</strong><br />
+				Post by: <strong>narcocapitalist9</strong> on <strong>May 05, 2013, 08:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah, I prefer my buyers to use GNUPG also but using privnote.com over tor on both sides is pretty secure too. Not quite as secure, but the parameters that are part of the links people share to give others access are actually the decryption key, so as long as this code is not made available publicly even if privnote doesn&#039;t delete the messages (i really doubt that) they are still useless without the decryption key. <br /><br />Sometimes when people send me their addresses with gnupg/pgp encryption, they forget to encrypt to my key, one or two out of about 15 who have sent me addresses this way used their own pgp key to encrypt to it, and I had to get them to resend it. Once you get used to using message encryption it gets a lot easier. Something that I learned recently that makes my job a lot easier so I don&#039;t have to use the commandline interface, on linux, is a programming text editor called &#039;geany&#039; which you can get a pgp plugin for (both are available on the main ubuntu repositories) and then combined with seahorse or kgpg, which you use to manage your keys, importing them from the clipboard and so on, and you can then decrypt and encrypt messages within the geany text window and not have to have either encrypted or decrypted messages land on your hard drive. <br /><br />I currently don&#039;t encrypt my hard drive, because it puts too much extra processing load on my 1.6ghz atom netbook, but I am also not in a jurisdiction where I am likely to have my laptop seized because I am not doing business on the street here where the police are involved in the local drug distribution monopolies, and so there&#039;s not an awful lot of ways in which I would come to their attention. However, I most certainly will encrypt my hard drives again once I have made enough money to finally upgrade to a decent desktop computer, and this netbook will either become a small dedicated server, as it is capable enough to run a fairly big website (maybe 100 users at a time sort of level) which may be a purpose I want to apply it to. I hope to get a new computer within a few weeks so the window of opportunity to get anything by seizing my physical hardware is pretty narrow.<br /><br />so yeah, I would recommend for most people that it is a good idea that they get a program called &#039;truecrypt&#039; and encrypt their hard drive of the computer they use to access SR and this forum, at least then you put an obstacle in front of LE with getting any information on your computer that may compromise other people&#039;s security as well. Most linux distributions now have the option to set up a fully encrypted filesystem at installation also. This is definitely advised. Sure, the courts can slap you with contempt for refusing to unlock the encryption but i&#039;d rather spend 3 years for contempt than 5-10 for drug charges and take down a bunch of other people at the same time.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: What is *NIX?</strong><br />
+				Post by: <strong>budbud</strong> on <strong>May 08, 2013, 06:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				wow.. interesting...i will def look into it...thank you
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

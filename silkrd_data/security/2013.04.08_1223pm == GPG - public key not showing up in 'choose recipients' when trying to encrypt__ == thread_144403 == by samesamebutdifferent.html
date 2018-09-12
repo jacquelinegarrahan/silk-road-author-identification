@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=144403.0" />
+		<title>Print Page - GPG - public key not showing up in 'choose recipients' when trying to encrypt??</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: samesamebutdifferent on April 08, 2013, 12:23 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>GPG - public key not showing up in 'choose recipients' when trying to encrypt??</strong><br />
+				Post by: <strong>samesamebutdifferent</strong> on <strong>April 08, 2013, 12:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I am having an issue with GPG, when I highlight the text in text editor ready to encrypt the public key of the person I want to send the message too is not showing in &#039;choose recipients&#039; however when I open GPG keychain access the key is there just fine.<br /><br />Before some smart arse flames for for using a mac I&#039;ve heard it all before so save it&nbsp; ;) but seriously if anyone has any ideas why this is happening I would really appreciate some assistance. <br /><br />I have had this issue before and eventually gave up trying to encrypt for the intended recipient but that&#039;s not an option on this occasion so any help will be much appreciated.<br /><br />Cheers.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG - public key not showing up in 'choose recipients' when trying to encrypt??</strong><br />
+				Post by: <strong>blackflash8686</strong> on <strong>April 08, 2013, 12:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				hey same, first off i appreciate the work you do here in the forums. secondly i have a mac and i encounered the same problem. I dont know why it happens but i got it to work by trying these methods in any order one at a time or whatever you want<br /><br />1. try turning off your wirless and resetting your internet closing gpg and re opening it<br />2. open a text edit and see if you can encrypt from there and transfer it to the message<br />3.if you have gpg set up through apple mail trying&nbsp; using that to encrypt and moving it to the message.<br />4. go to system preferences&nbsp; open gpgservices and try changing the key server then go to the gpg key chain access and click update to key server.<br />5. reset the computer and open text edit type your message and try to encrypt<br /><br /><br />&nbsp;i did all these things multiple times and sometimes it just pops back up. Its a pain in the ass and i dont understand it myself but I read a post on the gpg website that someone else had this problem and they suggested them to download the nightly build. i think its a bug.,, but restarting the internet or the computer and immediately trying works sometimes for me. <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG - public key not showing up in 'choose recipients' when trying to encrypt??</strong><br />
+				Post by: <strong>Wadozo</strong> on <strong>April 08, 2013, 12:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				SSBD, Here is a tutorial by Guru which helps with a lot of problems for those using a Mac. <br /><br />You would be a lot better off using Gpg4usb, which works on Windows, Mac and Linux OS.<br /><br />Download link&nbsp; - http://gpg4usb.cpunk.de/download.html<br /><br />Tutorial by astor - http://32yehzkk7jflf6r2.onion/gpg4usb/<br /><br />It&#039;s a great piece of software, simple yet robust.<br /><br /><br />This is a tutorial written by former member Guru that should help you.&nbsp; :)<br /><br /><br />This is a known issue with the standard build. What you want to do is install the latest nightly build, per the following instructions (originally written by Guru)<br /><br />GPGTools is highly version dependent -- depending on which version of OS X<br />you have, it may or may not work as expected.&nbsp; If you have Leopard (10.5)<br />then you&#039;re pretty much out of luck. Your only option then will be using<br />the command-line.<br /><br />If you have Snow Leopard (10.6), Lion (10.7) or Mountain Lion (10.8), the<br />following instructions should be sufficient to allow you to get up and<br />running.<br /><br />Download and install GPGTools: http://nightly.gpgtools.org/GPGTools_Installer-trunk.dmg<br /><br />Once you have installed GPGTools,&nbsp; what you want to do is to go into<br />System Preferences --&gt; Keyboard --&gt; Services.<br /><br />Scroll down until you find the following entries. Be sure to put a check<br />mark in the boxes to activate each keyboard shortcut.<br /><br />Keyboard shortcuts:<br /><br />OpenPGP: Decrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-D<br /><br />OpenPGP: Encrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-E<br /><br />OpenPGP: Import Key from Selection:&nbsp; &nbsp; &nbsp;Shift-Command-I<br /><br />OpenPGP: Insert My Fingerprint:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-F<br /><br />OpenPGP: Insert My Key:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-K<br /><br />OpenPGP: Sign Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Shift-Command-R<br /><br />OpenPGP: Verify Signature of Selection: Shift-Control-V<br /><br />Remember, these shortcuts only operate on highlighted or selected text.<br /><br />N.B.: To properly be able to import PGP into GPGChain (via TextEdit) you<br />need to change the default on TextEdit from .rtf to plain text. You can do<br />that through the Format menu, or you can go through the main configuration<br />menu, accessible by using Command-comma. Ensure the plain text radio button<br />is selected.<br /><br />Also ensure that the following are UNCHECKED in TextEdit preferences:<br />smart quotes, smart dashes, smart links.<br /><br />To select text within TextEdit, use Command-A to highlight the entire<br />document, or use your mouse to selection the section that you want to<br />verify/sign/encrypt/decrypt. It is highly recommended that you use only<br />plain-text, as opposed to Rich Text (.rtf) format. Use Command-comma to<br />bring up Preferences and ensure that the plain text radio button is<br />checked.<br /><br />Once your text is highlighted in TextEdit, (by pressing Comand-A) you then<br />encrypt using Shift-Command-E. You will then be presented with a list of<br />keys to encrypt to, that you have added to your PGP keyring:<br /><br />Other Commands You May Need:<br />============================<br /><br />OpenPGP: Decrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-D<br /><br />OpenPGP: Encrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-E<br /><br />OpenPGP: Sign File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Control-Command-S<br /><br />OpenPGP: Verify Signature of File:&nbsp; &nbsp; &nbsp; &nbsp;Control-Command-V<br /><br /><br />Once you have setup these shortcuts, you can begin using GPG.<br /><br />To encrypt a message to someone using GPG, you first need a copy of the<br />recipient&#039;s PGP public key.<br /><br />Once you have located someone&#039;s PGP public key, you should copy and paste<br />it into Text Edit. Save the PGP key to a file; you can call the file,<br />import.asc (or import.txt), for example. This saved file will usually be<br />found in the Documents folder.<br /><br />Launch GPG Keychain Access from the Applications folder. click on the<br />Import icon in the upper left hand corner. GPG Keychain Access will then<br />prompt you for the name of the file which contains the key to import. It<br />will usually show you a list of files in the Documents folder. Click on the<br />file named import.asc (or import.txt), and click ok. The PGP public key<br />will then be imported into your PGP keyring.<br /><br />To encrypt a message to a person, the message must be contained in a<br />TextEdit document. Use Command-A to highlight the entire document. Then<br />use Shift-Command-E to encrypt. GPG will pop-up a list of public keys in<br />your PGP keyring. Each key will have a little checkbox beside it which you<br />can check, to select that particular key. If you were encrypting a message<br />to me, you would put a check in the box beside my PGP key (Guru@SR).<br /><br />When you click on OK, the plaintext (unencrypted) message in TextEdit will<br />be replaced with the encrypted message. You can then copy and paste the<br />encrypted message to enter it into a form on Silk Road, or anywhere else<br />that it needs to go.<br /><br />To decrypt a message sent to you by other people, you need to copy that<br />message to the clipboard, and paste it into a Text Edit document. Again use<br />Command-A to highlight all the encrypted message. Then use Shift-Command-D<br />to decrypt the message. If the message is encrypted to your PGP public key,<br />you will be prompted to enter your passphrase. Once the correct passphrase<br />has been entered, and you click OK, then the message will be decrypted,<br />and the decrypted text will be placed in the Text Edit document, replacing<br />the encrypted message that was there previously.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG - public key not showing up in 'choose recipients' when trying to encrypt??</strong><br />
+				Post by: <strong>samesamebutdifferent</strong> on <strong>April 08, 2013, 01:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=144403.msg990054#msg990054">Quote from: blackflash8686 on April 08, 2013, 12:48 pm</a></div></div><blockquote class="bbc_standard_quote">hey same, first off i appreciate the work you do here in the forums. secondly i have a mac and i encounered the same problem. I dont know why it happens but i got it to work by trying these methods in any order one at a time or whatever you want<br /><br />1. try turning off your wirless and resetting your internet closing gpg and re opening it<br />2. open a text edit and see if you can encrypt from there and transfer it to the message<br />3.if you have gpg set up through apple mail trying&nbsp; using that to encrypt and moving it to the message.<br />4. go to system preferences&nbsp; open gpgservices and try changing the key server then go to the gpg key chain access and click update to key server.<br />5. reset the computer and open text edit type your message and try to encrypt<br /><br /><br />&nbsp;i did all these things multiple times and sometimes it just pops back up. Its a pain in the ass and i dont understand it myself but I read a post on the gpg website that someone else had this problem and they suggested them to download the nightly build. i think its a bug.,, but restarting the internet or the computer and immediately trying works sometimes for me.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Nice one thanks, I&#039;ll give some of those a go and see what happens, I read the blog re the nightly build too and it didn&#039;t fix it, I find it strange this can just happen periodically for some keys and not others.<br /><br />Thanks for taking the time to reply&nbsp; :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG - public key not showing up in 'choose recipients' when trying to encrypt??</strong><br />
+				Post by: <strong>samesamebutdifferent</strong> on <strong>April 08, 2013, 01:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=144403.msg990058#msg990058">Quote from: Wadozo on April 08, 2013, 12:52 pm</a></div></div><blockquote class="bbc_standard_quote">SSBD, Here is a tutorial by Guru which helps with a lot of problems for those using a Mac. <br /><br />You would be a lot better off using Gpg4usb, which works on Windows, Mac and Linux OS.<br /><br />Download link&nbsp; - http://gpg4usb.cpunk.de/download.html<br /><br />Tutorial by astor - http://32yehzkk7jflf6r2.onion/gpg4usb/<br /><br />It&#039;s a great piece of software, simple yet robust.<br /><br /><br />This is a tutorial written by former member Guru that should help you.&nbsp; :)<br /><br /><br />This is a known issue with the standard build. What you want to do is install the latest nightly build, per the following instructions (originally written by Guru)<br /><br />GPGTools is highly version dependent -- depending on which version of OS X<br />you have, it may or may not work as expected.&nbsp; If you have Leopard (10.5)<br />then you&#039;re pretty much out of luck. Your only option then will be using<br />the command-line.<br /><br />If you have Snow Leopard (10.6), Lion (10.7) or Mountain Lion (10.8), the<br />following instructions should be sufficient to allow you to get up and<br />running.<br /><br />Download and install GPGTools: http://nightly.gpgtools.org/GPGTools_Installer-trunk.dmg<br /><br />Once you have installed GPGTools,&nbsp; what you want to do is to go into<br />System Preferences --&gt; Keyboard --&gt; Services.<br /><br />Scroll down until you find the following entries. Be sure to put a check<br />mark in the boxes to activate each keyboard shortcut.<br /><br />Keyboard shortcuts:<br /><br />OpenPGP: Decrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-D<br /><br />OpenPGP: Encrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-E<br /><br />OpenPGP: Import Key from Selection:&nbsp; &nbsp; &nbsp;Shift-Command-I<br /><br />OpenPGP: Insert My Fingerprint:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-F<br /><br />OpenPGP: Insert My Key:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-K<br /><br />OpenPGP: Sign Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Shift-Command-R<br /><br />OpenPGP: Verify Signature of Selection: Shift-Control-V<br /><br />Remember, these shortcuts only operate on highlighted or selected text.<br /><br />N.B.: To properly be able to import PGP into GPGChain (via TextEdit) you<br />need to change the default on TextEdit from .rtf to plain text. You can do<br />that through the Format menu, or you can go through the main configuration<br />menu, accessible by using Command-comma. Ensure the plain text radio button<br />is selected.<br /><br />Also ensure that the following are UNCHECKED in TextEdit preferences:<br />smart quotes, smart dashes, smart links.<br /><br />To select text within TextEdit, use Command-A to highlight the entire<br />document, or use your mouse to selection the section that you want to<br />verify/sign/encrypt/decrypt. It is highly recommended that you use only<br />plain-text, as opposed to Rich Text (.rtf) format. Use Command-comma to<br />bring up Preferences and ensure that the plain text radio button is<br />checked.<br /><br />Once your text is highlighted in TextEdit, (by pressing Comand-A) you then<br />encrypt using Shift-Command-E. You will then be presented with a list of<br />keys to encrypt to, that you have added to your PGP keyring:<br /><br />Other Commands You May Need:<br />============================<br /><br />OpenPGP: Decrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-D<br /><br />OpenPGP: Encrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-E<br /><br />OpenPGP: Sign File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Control-Command-S<br /><br />OpenPGP: Verify Signature of File:&nbsp; &nbsp; &nbsp; &nbsp;Control-Command-V<br /><br /><br />Once you have setup these shortcuts, you can begin using GPG.<br /><br />To encrypt a message to someone using GPG, you first need a copy of the<br />recipient&#039;s PGP public key.<br /><br />Once you have located someone&#039;s PGP public key, you should copy and paste<br />it into Text Edit. Save the PGP key to a file; you can call the file,<br />import.asc (or import.txt), for example. This saved file will usually be<br />found in the Documents folder.<br /><br />Launch GPG Keychain Access from the Applications folder. click on the<br />Import icon in the upper left hand corner. GPG Keychain Access will then<br />prompt you for the name of the file which contains the key to import. It<br />will usually show you a list of files in the Documents folder. Click on the<br />file named import.asc (or import.txt), and click ok. The PGP public key<br />will then be imported into your PGP keyring.<br /><br />To encrypt a message to a person, the message must be contained in a<br />TextEdit document. Use Command-A to highlight the entire document. Then<br />use Shift-Command-E to encrypt. GPG will pop-up a list of public keys in<br />your PGP keyring. Each key will have a little checkbox beside it which you<br />can check, to select that particular key. If you were encrypting a message<br />to me, you would put a check in the box beside my PGP key (Guru@SR).<br /><br />When you click on OK, the plaintext (unencrypted) message in TextEdit will<br />be replaced with the encrypted message. You can then copy and paste the<br />encrypted message to enter it into a form on Silk Road, or anywhere else<br />that it needs to go.<br /><br />To decrypt a message sent to you by other people, you need to copy that<br />message to the clipboard, and paste it into a Text Edit document. Again use<br />Command-A to highlight all the encrypted message. Then use Shift-Command-D<br />to decrypt the message. If the message is encrypted to your PGP public key,<br />you will be prompted to enter your passphrase. Once the correct passphrase<br />has been entered, and you click OK, then the message will be decrypted,<br />and the decrypted text will be placed in the Text Edit document, replacing<br />the encrypted message that was there previously.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Wicked! thanks Wad you are a legend +1&nbsp; :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG - public key not showing up in 'choose recipients' when trying to encrypt??</strong><br />
+				Post by: <strong>blackflash8686</strong> on <strong>April 08, 2013, 01:14 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Woah i just did something cool. I dont know if you knew this but i started thinking why some keys where there and some where not when i open gpg keychain acess. so i copied a public key from a vendor and i pasted it in text edit. i saved it under their name. then i opened up gpg key chain access and clicked import and searched for the text edit file. and it imported the key info! and now it seem to be permanently&nbsp; on the list of imported keys! i guess it still doesnt explain why sometimes even if you want to sign with your key nothing comes up. but anyway hope it helps. i think it ha to do with the connection to the server but who knows
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG - public key not showing up in 'choose recipients' when trying to encrypt??</strong><br />
+				Post by: <strong>samesamebutdifferent</strong> on <strong>April 08, 2013, 01:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=144403.msg990085#msg990085">Quote from: blackflash8686 on April 08, 2013, 01:14 pm</a></div></div><blockquote class="bbc_standard_quote">Woah i just did something cool. I dont know if you knew this but i started thinking why some keys where there and some where not when i open gpg keychain acess. so i copied a public key from a vendor and i pasted it in text edit. i saved it under their name. then i opened up gpg key chain access and clicked import and searched for the text edit file. and it imported the key info! and now it seem to be permanently&nbsp; on the list of imported keys! i guess it still doesnt explain why sometimes even if you want to sign with your key nothing comes up. but anyway hope it helps. i think it ha to do with the connection to the server but who knows<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Right trying that now, nothing else has worked so far.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG - public key not showing up in 'choose recipients' when trying to encrypt??</strong><br />
+				Post by: <strong>samesamebutdifferent</strong> on <strong>April 08, 2013, 01:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=144403.msg990085#msg990085">Quote from: blackflash8686 on April 08, 2013, 01:14 pm</a></div></div><blockquote class="bbc_standard_quote">Woah i just did something cool. I dont know if you knew this but i started thinking why some keys where there and some where not when i open gpg keychain acess. so i copied a public key from a vendor and i pasted it in text edit. i saved it under their name. then i opened up gpg key chain access and clicked import and searched for the text edit file. and it imported the key info! and now it seem to be permanently&nbsp; on the list of imported keys! i guess it still doesnt explain why sometimes even if you want to sign with your key nothing comes up. but anyway hope it helps. i think it ha to do with the connection to the server but who knows<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Mate you are a fucking legend, that fixed it!! PM me your BTC wallet addy and I will send you a little thank you donation, you have no idea how many hours I have wasted today trying to sort this issues out.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG - public key not showing up in 'choose recipients' when trying to encrypt??</strong><br />
+				Post by: <strong>blackflash8686</strong> on <strong>April 08, 2013, 02:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				damn if feels good to be useful. more than grateful! sent the PM thank just for the acknowledgment!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG - public key not showing up in 'choose recipients' when trying to encrypt??</strong><br />
+				Post by: <strong>samesamebutdifferent</strong> on <strong>April 08, 2013, 07:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You should have a small thank you in your account soon ;)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG - public key not showing up in 'choose recipients' when trying to encrypt??</strong><br />
+				Post by: <strong>blackflash8686</strong> on <strong>April 08, 2013, 09:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				let it be know samesamebutdiffrent is a man of his word which is everything around these parts. thanks mate for your not so small gift! ill be sure to do my best to earn it. really thanks!
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

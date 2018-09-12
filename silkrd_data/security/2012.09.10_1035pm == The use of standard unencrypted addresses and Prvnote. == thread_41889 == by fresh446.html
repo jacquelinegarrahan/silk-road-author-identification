@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=41889.0" />
+		<title>Print Page - The use of standard unencrypted addresses and Prvnote.</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: fresh446 on September 10, 2012, 10:35 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>The use of standard unencrypted addresses and Prvnote.</strong><br />
+				Post by: <strong>fresh446</strong> on <strong>September 10, 2012, 10:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I think that everyone in here ought to learn how to use and be running PGP, and or GPG. Sending your addrress unencrypted to some guys that have the best &quot;C&quot; in the world might get you a few packages in the mail, but it could also lead to trouble with LE. I did a small test with a kid in here to see if Prvnote is safe enough. I sent the link both in the shipping label box, and in a message. A day later he cancelled my order and said that the link was invalid. Prvnote lets you read the message once for like 15 seconds or so, then self destructs. On the other hand if LE or someone else read the link, then would that not cause it to have been read by someone other than the intended receiptiant? Come on people get smart and use PGP, or GPG they are compatable with each other. You won&#039;t last forever sending out &quot;C&quot; or other high profile items forever just asking the buyer to put his name in the box unencoed. Get Smart, if you think this sounds paranoid the ask yourself how many paranoid people are in jail? Isn&#039;t it work your freedom and less dangerous to play it smart. An average PGP key like the one I use is 2048bits, the internet only uses 128bit. Thats what you should be thinking about instead of thinking it&#039;s too hard and cumbersome. It&#039;s really not that hard, if you were smart enough to find silk road than you should already be using it right now. Life, Liberty, and Freedom my friend. Or a well spent time in the pen for thinking it will never come to that. Every dog has his day, get smart and use encryption it&#039;s one of the last tools the public has to keep information private.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: The use of standard unencrypted addresses and Prvnote.</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 12, 2012, 05:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				You can use up to AES 256 with GPG :). GPG uses a combination of asymmetric and symmetric keys. The asymmetric key is used to encrypt a session key which is used to symmetrically decrypt the message data. When you encrypt a GPG message, first a PRNG generates a random session key, then your message is encrypted with a symmetric algorithm such as AES 256 using the random session key, then the random session key is encrypted with the asymmetric public key (something like RSA 4,096). When the person you communicate with gets the ciphertext, first the GPG program prompts them for their passphrase, which is actually used to symmetrically decrypt their private asymmetric key, which is then used to decrypt the session key which is then used to decrypt the message. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

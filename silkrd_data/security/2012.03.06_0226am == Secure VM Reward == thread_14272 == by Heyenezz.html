@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=14272.0" />
+		<title>Print Page - Secure VM Reward</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Heyenezz on March 06, 2012, 02:26 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Secure VM Reward</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 06, 2012, 02:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m offering 5 bitcoins to anyone who will tell me a step-by-step guide to creating a secure VM that meets the following specifications:<br /><br />-Leaves no traces on my computer. This especially means no traces of the USB drive password, of the VM being used, Tor, or anything else that could be incriminating.<br />-Resides on a hidden partition of a Truecrypt encrypted USB drive.<br />-Routes all its Internet traffic through Tor.<br />-Reveals no metadata identifying the owner in receiving or transmitting data.<br />-Holds the bookmark and password data I have now in my Tor browser (I&#039;d move all necessary data to this VM). <br />-If possible to meet the previous specifications, I&#039;d like to avoid using Linux (it&#039;s too complicated for me).<br />I&#039;m currently using Windows. <br /><br />The reward will be paid within a week of my receiving the instructions.<br /><br />Thanks so much for any assistance.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Secure VM Reward</strong><br />
+				Post by: <strong>QTC</strong> on <strong>March 06, 2012, 02:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				http://xqz3u5drneuzhaeo.onion/users/secureconfig/tutorial.html<br /><br />There are some changes to be made though. First off, use privoxy instead of polipo; second, send firefox traffic through tor&#039;s socks5 proxy. Also, you&#039;ll need to grab python from the openbsd repository and not compile it yourself, that probably won&#039;t work. To make the whole setup portable, use the vbox.me flavor of virtualbox (you will need to enable the network driver on your first run). To keep your bookmarks, you&#039;d have to create them before your master snapshot. And &quot;secure&quot; and &quot;Windows&quot; are mutually exclusive. :-p
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Secure VM Reward</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 06, 2012, 02:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14272.msg139154#msg139154">Quote from: QTC on March 06, 2012, 02:29 am</a></div></div><blockquote class="bbc_standard_quote">http://xqz3u5drneuzhaeo.onion/users/secureconfig/tutorial.html<br /><br />There are some changes to be made though. First off, use privoxy instead of polipo; second, send firefox traffic through tor&#039;s socks5 proxy. Also, you&#039;ll need to grab python from the openbsd repository and not compile it yourself, that probably won&#039;t work. To make the whole setup portable, use the vbox.me flavor of virtualbox (you will need to enable the network driver on your first run). To keep your bookmarks, you&#039;d have to create them before your master snapshot. And &quot;secure&quot; and &quot;Windows&quot; are mutually exclusive. :-p<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m a noob.<br /><br />I don&#039;t understand some of your terminology or where to find some of this stuff (e.g., python, openbsd, repository, compile, vbox.me, master snapshot).<br />I also don&#039;t know how to enable a network driver on my first run.<br /><br />Thanks for any clarification.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Secure VM Reward</strong><br />
+				Post by: <strong>QTC</strong> on <strong>March 06, 2012, 03:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				Maybe setting up a series of vms will be a little beyond you then. What&#039;s your current setup like? Using liberte on an encrypted thumb drive isn&#039;t bad by any means and is much easier to use.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Secure VM Reward</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 06, 2012, 03:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14272.msg139201#msg139201">Quote from: QTC on March 06, 2012, 03:02 am</a></div></div><blockquote class="bbc_standard_quote">Maybe setting up a series of vms will be a little beyond you then. What&#039;s your current setup like? Using liberte on an encrypted thumb drive isn&#039;t bad by any means and is much easier to use.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />What&#039;s liberte? I also need to save and open documents without leaving their traces on my computer. The same goes for PGP.<br /><br />I basically have only ever used Windows except for a few times trying Ubuntu in Virtualbox. It was too complicated for me (e.g., installing programs).<br /><br />I&#039;m using a Windows 7 64-bit computer.&nbsp; <br /><br />Thanks.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Secure VM Reward</strong><br />
+				Post by: <strong>QTC</strong> on <strong>March 06, 2012, 03:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				Liberte linux is a Linux distribution which can be stored on an encrypted usb drive and leaves no traces on the system it&#039;s running on. It&#039;s built on top of a very secure operating system (hardened Gentoo is my favorite actually) and all networking activity is automatically routed through Tor. There are also apps for editing documents, images, etc. http://dee.su/liberte<br /><br />Also see this guide: http://dkn255hz262ypmii.onion/index.php?topic=9067
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Secure VM Reward</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 06, 2012, 03:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14272.msg139209#msg139209">Quote from: QTC on March 06, 2012, 03:13 am</a></div></div><blockquote class="bbc_standard_quote">Liberte linux is a Linux distribution which can be stored on an encrypted usb drive and leaves no traces on the system it&#039;s running on. It&#039;s built on top of a very secure operating system (hardened Gentoo is my favorite actually) and all networking activity is automatically routed through Tor. There are also apps for editing documents, images, etc. http://dee.su/liberte<br /><br />Also see this guide: http://dkn255hz262ypmii.onion/index.php?topic=9067<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thanks. Liberte sounds pretty cool from the links. So, does &quot;Linux distribution&quot; mean a Linux based operating system?<br />So, are there apps that can handle word documents? Between a VM and Liberte, does one hold an advantage over the other in security terms?<br /><br />Edit: You&#039;ve earned the 5 bitcoins. Just pm me your bitcoin address, and I&#039;ll deposit them within a week from now. <br /><br />I might need your help later though when installing and running Liberte.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

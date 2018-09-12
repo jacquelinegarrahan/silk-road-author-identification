@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=210852.0" />
+		<title>Print Page - Working on tormail alternative.</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Eternal Sunshine on September 09, 2013, 09:15 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Working on tormail alternative.</strong><br />
+				Post by: <strong>Eternal Sunshine</strong> on <strong>September 09, 2013, 09:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				Ok, a bit offtopic (and I suppose this topic will be moved) but i wanted max visibility.<br /><br />With tormail down (freedomhost taken down) i&#039;ve taken on a project create a mail service for tor.<br /><br />Please check it for vulnerabilities. It is hosted on.<br /><br />http://7pj2o4o4adfyu2mr.onion<br /><br />If nobody is able to find out the real IP of the squirrelmail interface I will go through the next fase and put it on it&#039;s separate server (since i&#039;m a webdeveloper it&#039;s now sitting on a vps between clearnet projects) and allow user registrations.<br /><br />Also, any feedback is welcome. If anyone suggest a better webbased email client (WITHOUT JAVASCRIPT) i&#039;m willing to try it.<br /><br />Regards<br /><br />Eternal Susnhine
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Working on tormail alternative.</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>September 10, 2013, 04:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				My assumption here is that it ultimately would gate email from the Internet to a hidden service location, like tormail.&nbsp; If you&#039;re just building a mail server with a webmail interface to let &quot;local&quot; users email each other, with no inbound/outbound Internet email, disregard much of my message below (except for the hidden node isolation part)<br /><br />Anything approaching tormail in scope that provides anonymity for the server storing the messages requires 2+ nodes, with one acting as an Internet-accessible MX host (the public node), which then immediately shoves all received messages up to a hidden service address, delivering the message to the host responsible for acting as a hidden service (the hidden node).&nbsp; Then users connect to the hidden node to retrieve/send messages via webmail/pop/whatever, and all stored messages reside at the hidden node, only accessible via a hidden service.&nbsp; Outbound mail from the hidden node reaches the public node via a different hidden service, then the public node routes messages to Internet destinations.<br /><br />The hardest part about providing tormail-like services is the epic deanonymization exposure you get from the public node requiring public Internet connection at a known location.&nbsp; &nbsp;You have a registered domain name, and a whole chain leading back to you that way if you&#039;re not extremely careful.&nbsp; How you paid for the domain, the contact info the registrar has for you (paying them for &quot;private&quot; registration usually doesn&#039;t provide much anonymity.&nbsp; Social engineering, a subpoena, or a warrant will disclose all info they have on you, including the source IPs you registered it from). If you use an allegedly-privacy-protecting third-party to register a domain as a proxy, it&#039;s *their* domain from the registrar&#039;s perspective.&nbsp; &nbsp;If they decide to steal it, you may not be able to stop them.&nbsp; The DNS servers for the domain can also lead back to you (again, payment tracing, and source IPs used to manage DNS records).&nbsp; Obviously, the hosting of the public node itself can lead back to you (through payment as well as your remote connections to it.. if it&#039;s a VPS or dedicated node, logs of your connects to the console interface as well may show your source IPs).&nbsp; &nbsp;If the public node gets hacked or seized, any log entries showing your SSH connects/etc lead back to you.<br /><br />The hidden node has to stay anonymous, even if (when) it gets hacked.&nbsp; So it needs to have physical/virtual isolation from the Tor instance in front of it.&nbsp; Assume the adversary has root, can empty its iptables filters, and can send packets of their choosing out the network interface destined for their servers to deanonymize it.&nbsp; &nbsp;Only private IPs on it, be careful what other MAC addresses show up in its arp tables, be aware of hardware deanonymization (run &quot;lspci&quot; and &quot;dmidecode&quot; as root for a good idea of what I&#039;m talking about).<br /><br />And when you configure your MTAs, make sure you&#039;re scrubbing all of the mail headers properly.&nbsp; And test things like mailer-daemon messages, bounces, etc for deanonymizing content, behavior, and headers as well.<br /><br />If it achieves anything close to tormail-like popularity, you should pretty much assume that the traffic destined for the public node&#039;s IP is going to end up in every intelligence agency&#039;s queue of sniffed traffic, to grab the SMTP message contents.&nbsp; &nbsp;Which means that your remote management traffic to it may also end up in that net, so manage it through the hidden service you&#039;re accepting mail from the hidden node on, or via an out-of-band method that isn&#039;t going to end up in the same bucket.<br /><br />If that&#039;s what you&#039;re considering, it&#039;s great that you&#039;re considering providing a service like tormail..but just make sure you&#039;ve thought out what you&#039;re signing up for.&nbsp; &nbsp;Your primary risk is someone finding *you* through the public node, then coercing you into providing access to the hidden node.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=16189.0" />
+		<title>Print Page - GPG for Linux?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: pinkelephant on March 21, 2012, 05:03 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>GPG for Linux?</strong><br />
+				Post by: <strong>pinkelephant</strong> on <strong>March 21, 2012, 05:03 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I couldn&#039;t find much information on it, so I still don&#039;t have a PGP key yet, but it seems like working now. I still have some questions though.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>wretched</strong> on <strong>March 21, 2012, 05:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				what questions do you have?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>pinkelephant.</strong> on <strong>March 21, 2012, 09:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I want to know how to install, however the gpg --gen-key seems working, but I can&#039;t figure out what is my public key, and I also want to use some graphic interface, like gpa, but i get an error message when i make it. Also i forgot my forum password, this not a good day for me&nbsp; :(
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>Laughing Man</strong> on <strong>March 21, 2012, 09:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				What problems are you having with GPA? It&#039;s my preferred GPG frontend.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>pinkelephant.</strong> on <strong>March 21, 2012, 10:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I got this error message after typing make:<br /><br />gpa-0.9.0/src/server.c:1703: undefined reference to `assuan_init_socket_server_ext&#039;<br />gpa-0.9.0/src/server.c:1715: undefined reference to `assuan_deinit_server&#039;<br />server.o: In function `connection_finish&#039;:<br />gpa-0.9.0/src/server.c:1740: undefined reference to `assuan_deinit_server&#039;<br />server.o: In function `gpa_start_server&#039;:<br />gpa-0.9.0/src/server.c:1932: undefined reference to `assuan_set_assuan_err_source&#039;<br />collect2: ld returned 1 exit status<br />make[3]: *** [gpa] Error 1<br />make[3]: Leaving directory `gpa-0.9.0/src&#039;<br />make[2]: *** [all] Error 2<br />make[2]: Leaving directory `gpa-0.9.0/src&#039;<br />make[1]: *** [all-recursive] Error 1<br />make[1]: Leaving directory `gpa-0.9.0&#039;<br />make: *** [all] Error 2<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>OuterLimits</strong> on <strong>March 21, 2012, 10:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I prefer KGPG,<br />Go into the terminal and enter the following commands (without quotes)<br /><br />&quot;sudo apt-get install kgpg&quot;<br /><br />Once it installs enter<br /><br />&quot;kgpg&quot; <br /><br />To launch the gui, I find its much easier to use than GPA.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>QTC</strong> on <strong>March 21, 2012, 10:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				OP you need libassuan-dev
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>CharasBros</strong> on <strong>March 22, 2012, 04:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				GPA had some bugs before, but I&#039;m using 0.9.1 and it is fine now.<br />use LIberte LInux PGP and GPA is already there and all working fine.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>xl4</strong> on <strong>March 22, 2012, 05:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16189.msg159646#msg159646">Quote from: QTC on March 21, 2012, 10:54 pm</a></div></div><blockquote class="bbc_standard_quote">OP you need libassuan-dev<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />this....<br /><br /><br />call me old fashioned but i&#039;ve never been a fan of the graphical fe&#039;s. stick everything i need in one encrypted directory and enc/decyr from there and im as good as gold. i feel typing a few lines instead of clicking is actually faster for me and less resource dependent. but hell in this day and age if you can&#039;t utilize your wm/we then what&#039;s the point right? lol
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>pinkelephant.</strong> on <strong>March 22, 2012, 03:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I belive I have libassuan, it need for gpg also and needed for the ./configure. Maybe the problem, that with libassuan 2.x the gpa configure hasn&#039;t worked, so I also installed libassuan 1.x.<br />I think I try kpgp, if it&#039;s that simple, for gpa, the sudo apt-get hasn&#039;t worked, maybe for this it will be okay. It seems for me, that even if I never do anything else in this page just learn to use it, I gain a lot of knowledge at least :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>pinkelephant.</strong> on <strong>March 22, 2012, 04:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				For kgpg I also got the error message for sudo apt-get install, which states: unable to locate package.<br /><br />So, I still don&#039;t know how to use pgp in linux. Maybe it&#039;s easier to use if I switch to windows, but I am using an old computer, which is very slow with windows, so I don&#039;t want to change my linux back to windows. So i followed the steps from this site: http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-2.html<br />but at the ./configure got me error message, fortunately with possible solution, so i downloaded and installed several other programs, one of them libassuan. After that, I belive that the installation was successful, at least gpg --gen-key seems working. But I don&#039;t know what is my public key, I never saw anything remotely similar than the keys I saw here. I thought that maybe if I put on a gui, it will be better. So I tried sudo apt-get gpa, which not worked. I downloaded the source and extracted form the tarball. I tried to ./configure, it hasn&#039;t worked, I downloaded GTK+, and some other programs, which the ./configure missed, so it seems working now. But when I try to continue with make, I got the error message, I described earlier. I never used linux from terminal, when I was a kid like 15 years ago, I used command line in dos, I try to use google, but seems I need some help other than that.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>pinkelephant.</strong> on <strong>March 22, 2012, 05:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So, finally I installed seahorse, which worked with sudo apt-get, now I want to know how to encrypt/decrypt messages
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>smartattack</strong> on <strong>March 22, 2012, 06:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				My advice is to use gpg4usb: easy and portable (no dependencies)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>wretched</strong> on <strong>March 22, 2012, 07:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I used to use gpg4usb, and it is pretty easy. but it doesn&#039;t have functionality for signed messages, and that is important to verify DPR messages about outages, etc. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>smartattack</strong> on <strong>March 22, 2012, 07:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16189.msg160744#msg160744">Quote from: wretched on March 22, 2012, 07:48 pm</a></div></div><blockquote class="bbc_standard_quote">I used to use gpg4usb, and it is pretty easy. but it doesn&#039;t have functionality for signed messages, and that is important to verify DPR messages about outages, etc.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div> I assure you that right now (i don&#039;t know about previous versions) it&#039;s possible to sign and verify messages with gpg4usb.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG for Linux?</strong><br />
+				Post by: <strong>wretched</strong> on <strong>March 22, 2012, 08:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				i guess you are right. I switched from it (due to the lack of signature functionality) right after the URL change signature debacle! looks like they did implement it shortly after that. so I withdraw my opposition to gpg4usb. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=10824.0" />
+		<title>Print Page - Theory on why getting to Silk Road sucks lately</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Silk Road discussion => Topic started by: SpoonyBard on February 02, 2012, 05:17 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Theory on why getting to Silk Road sucks lately</strong><br />
+				Post by: <strong>SpoonyBard</strong> on <strong>February 02, 2012, 05:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				Here&#039;s my pet theory on SR&#039;s accessibility suckage. This came from reading the Tor Project&#039;s overview of how hidden services work (http://&quot;https://www.torproject.org/docs/hidden-services.html.en&quot;), and from staring too long at the &quot;View Network&quot; window as I bit my fingernails waiting to check my order status.<br /><br />I think the problem is not with the Web site. It&#039;s with the entry points. When you create a hidden service, Tor builds circuits to a random set of arbitrary relays, and says &quot;Hey, YOU guys, you&#039;re responsible for knowing how to find me.&quot;&nbsp; These entry points are published to the cloud as the &quot;location&quot; of the service.&nbsp; (The entry points still don&#039;t know the service&#039;s IP address or anything; they just know the start of an anonymous circuit that will eventually get to it.)<br /><br />When you or I want to buy some pot?&nbsp; We tell Tor the .onion address, and it uses that as the key to look up a list of entry points.&nbsp; Our Tor client then picks a totally different random relay, contacts one of those entry points, and says &quot;Can you please tell Silk Road to call me at this number?&quot;&nbsp; The entry point is supposed to deliver your message to Silk Road&#039;s hidden service. Silk Road then builds a circuit to that relay, where you&#039;ve been waiting for it, and that&#039;s when you finally get to see the crappy login captcha.<br /><br />The weak point in the system, I believe, is the dependency on those entry points.&nbsp; There are only a few of them, they&#039;re the only ones who know how to talk to Silk Road directly, and they can&#039;t change.&nbsp; (If they could, you could in theory substitute an evil one and use it for a site attack. Choosing them randomly at the start means you&#039;d need either to own a huge chunk of Tor or have a time machine to screw with a site this way.)&nbsp; <br /><br />The system works great as long as they&#039;re generally available and not overloaded.&nbsp; But Silk Road is very likely one of the most popular hidden services out there. Every request to connect to it means a request to one of those entry points, which then has to pass the message on, and then more stuff has to happen before we make a connection on neutral ground.&nbsp; This has to happen within the two minutes or so before Tor times out on us, and when we get frustrated and click the &quot;Reload&quot; button, we&#039;re generating more requests to those points and increasing their load more.<br /><br />(As a corroborating aside, this explains why it&#039;s always easy to connect to the forums whether or not you can connect to SR.&nbsp; Different hidden service; different entry points.&nbsp; Different problems, and I&#039;m sure the forums aren&#039;t as overloaded.)<br /><br />Are all of SR&#039;s entry points still up?&nbsp; I don&#039;t know.&nbsp; Are they solid relays with enough bandwidth and CPU to do the job?&nbsp; I don&#039;t know.&nbsp; Are they being found and DDoSed by the graybeards?&nbsp; I don&#039;t know.&nbsp; Will Lassie make it in time to save little Timmy in the well?&nbsp; I don&#039;t know and stopped watching.<br /><br />What I do know is this: Silk Road is (technically speaking) a lightweight piece of PHP shit that could probably run all right on a Playstation Portable. Processing hundreds of orders a day is nothing. There&#039;s no evidence that the server can&#039;t handle the load: once you can connect to it, it doesn&#039;t run much slower than anything else does over Tor.&nbsp; (Which is pretty damn slow.)&nbsp; The problem is connecting in the first place.&nbsp; To me that means an issue in the network, not an issue with the site.&nbsp; And &quot;the network&quot; in this case is Tor.<br /><br />If I&#039;m right, this means that yelling at the sysadmins to post downtime statuses or fix their servers isn&#039;t going to do any good.&nbsp; There isn&#039;t really any downtime, and the server&#039;s not at fault.&nbsp; Setting up as a new service and picking new entry points might help, but I doubt it&#039;s trivial, and might or might not mean another URL change.<br /><br />In any case, I thought I&#039;d share. I doubt it will calm everyone down, but it calmed me down.&nbsp; So there ya go.<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

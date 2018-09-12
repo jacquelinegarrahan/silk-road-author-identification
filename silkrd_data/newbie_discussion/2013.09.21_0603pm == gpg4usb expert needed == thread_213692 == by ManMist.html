@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=213692.0" />
+		<title>Print Page - gpg4usb expert needed</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: ManMist on September 21, 2013, 06:03 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>gpg4usb expert needed</strong><br />
+				Post by: <strong>ManMist</strong> on <strong>September 21, 2013, 06:03 pm</strong>
+			</dt>
+			<dd class="postbody">
+				OK, so I finally got gpg4usb loaded and am attempting to load a public key from the clipboard into the name/email area and keep receiving &gt;&gt;start_windows.exe has stopped working&lt;&lt;&nbsp; Check online for a solution and close the program.&nbsp; Any ideas?&nbsp; HELP&nbsp; &nbsp;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: gpg4usb expert needed</strong><br />
+				Post by: <strong>SimpleSky</strong> on <strong>September 21, 2013, 06:18 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Have you checked online for a solution?<br />Next - have you tried using another program?<br />and third - are you encrypting your usb drive with a second layer of encryption? I would - use TrueCrypt to hide the drive. Make sure you make two truecrypt folders (the second one is a secret allocation of the parent folder and is 100% undetectable) Should somebody force you to give up your first password they&#039;ll only be able to see the parent folder. Never give up your second password - just claim that you only have one encrypted file. Your hidden file should contain all of your keys.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: gpg4usb expert needed</strong><br />
+				Post by: <strong>ManMist</strong> on <strong>September 21, 2013, 06:24 pm</strong>
+			</dt>
+			<dd class="postbody">
+				No help from online solution and yes, I tried gpg4win and was told by several that gpg4usb was much easier, but alas just more issues.&nbsp; Don&#039;t worry about my keys, their secured.<br /><br />FYI. it&#039;s now been 3 weeks trying to get this pgp thing going.&nbsp; I do have limited access time to a computer but really - 3 weeks?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: gpg4usb expert needed</strong><br />
+				Post by: <strong>SimpleSky</strong> on <strong>September 21, 2013, 06:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				And you&#039;ve gone through all of this: http://gpg4usb.cpunk.de/docu.html<br />If it&#039;s like any other pgp program, I&#039;ll give you a quick tutorial if it&#039;s applicable. I&#039;ve not used this one, but I&#039;ve use many others.<br />You&#039;ll want to copy and paste the sellers pgp key into a blank plain text file. Don&#039;t use MS Word or anything like that. Simple text file. Use VIM, or Notepad, or some other plain text editor. Then save the file as &quot;sellerName&quot;.pgp - if you change it from a *.txt to *.pgp it will make the process a little easier depending on the program you&#039;re using.<br />Open your program and go to &quot;import&quot; it should be under the File menu.<br />When the browser window opens for you to select your file, make sure at the bottom you set it to show ALL files (some pgp programs will only show files with certain extensions, so you&#039;ll want to watch out for that.) Select your file and open it.<br />This should import it directly into your keyring.<br />This is a slightly different approach, however - sometimes that&#039;s all it takes to get around a bug.<br />Once you have the key, then you can encrypt your message by opening the programs text pad, typing out your message, then select &quot;encrypt&quot; from the File menu. <br />Let me know if that works. I&#039;ll be willing to step through a few possibilities with you.<br />I&#039;ll even load it on my other computer that runs windows and try to duplicate your error or find a less volitile way of doing it.<br />Few more Q&#039;s:<br />1) have you tried it on a different computer?<br />2) have you completely uninstalled it and re-installed it?<br />3) have you tried installing it under a different windows username to see if it might&nbsp; be an account specific bug?<br />If not, try that as well and let me know how it goes.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: gpg4usb expert needed</strong><br />
+				Post by: <strong>bigbangbudtheory</strong> on <strong>September 21, 2013, 10:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Copy the key and paste it into the clip board on pgp4usb<br /><br />Click on import Key in the top tool bar <br /><br />select and click &#039;clip board&#039; in the drop down panel.<br /><br />A &#039;key import details&#039; window should open up with the vendors name. Click &#039;ok&#039; if the details are right.<br /><br />&nbsp;You have now imported the key.<br /><br />Using&nbsp; the key is even simpler ...........
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: gpg4usb expert needed</strong><br />
+				Post by: <strong>Yoda</strong> on <strong>September 22, 2013, 05:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=213692.msg1554646#msg1554646">Quote from: bigbangbudtheory on September 21, 2013, 10:09 pm</a></div></div><blockquote class="bbc_standard_quote">Copy the key and paste it into the left hand box/editor on gpg4usb<br /><br />Click on &quot;import Key&quot; in the top tool bar <br /><br />select and click &quot;Editor&quot; in the drop down panel.<br /><br />A &#039;key import details&#039; window should open up with the vendors name. Click &#039;ok&#039; if the details are right.<br /><br />&nbsp;You have now imported the key.<br /><br />Using&nbsp; the key is even simpler ...........<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />^^Fixed<br /><br />That or you can just save the key in notepad.&nbsp; Then when you click on &quot;Import&quot;, chose &quot;File&quot;, and select the file.<br /><br />Or you can just highlight the key, right click, select copy... then go to gpg4usb, hit import, choose &quot;Clipboard&quot;<br /><br />3 different ways to import a key.<br /><br />You&#039;re not on a Mac, right?&nbsp; Cause gpg4usb only works with windows and linux. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

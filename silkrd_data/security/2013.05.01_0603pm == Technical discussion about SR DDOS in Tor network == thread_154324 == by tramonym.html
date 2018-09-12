@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=154324.0" />
+		<title>Print Page - Technical discussion about SR DDOS in Tor network</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: tramonym on May 01, 2013, 06:03 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Technical discussion about SR DDOS in Tor network</strong><br />
+				Post by: <strong>tramonym</strong> on <strong>May 01, 2013, 06:03 pm</strong>
+			</dt>
+			<dd class="postbody">
+				i would like to discuss about how this ddos works. <br /><br />back in march there was the biggest ddos attack so far in clearnet. the attack was against anti-spam organisation &quot;Spamhaus&quot;. method used was &quot;DNS Reflection Attack&quot;. this means that many faked DNS queries are made in parallel. the victims IP address is put as originator in the DNS query, leading to massive DNS query results flooding the victims IP address. because DNS query results are bigger than the query itself, the bandwith reaching the victim is even multiplied.<br /><br />i think this method seems not be valuable for onion hidden services since the name resolution is different inside the tor network. additionally i do think that the whole tor network bandwidth is not enough putting one site down without noticable performance decrease of the whole tor network. and i do not have the feeling that tor itself is slow.<br /><br />if the attacker using dos or ddos he must have a way to flood SR directly, without involving tor nodes (which i guess is very unlikely because of tor architecture). this lets me assume that the attacker does not flood SR with pure bandwidth. he might have found a way to disturb SR web server infrastructure directly. maybe he is using a buffer offerflow / sql injection or whatever of the many attacks possible.<br /><br />maybe someone here with deeper technical knowledge than my about tor and hidden service and has an idea about how this attack may work?<br /><br />there was also an interesting blog entry on torpoject.org where some tor hidden service flaws are mentioned<br /><br />https://blog.torproject.org/blog/hidden-services-need-some-love<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Technical discussion about SR DDOS in Tor network</strong><br />
+				Post by: <strong>NickNack</strong> on <strong>May 01, 2013, 06:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You might want to read through this thread---&gt;<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=153182.0
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

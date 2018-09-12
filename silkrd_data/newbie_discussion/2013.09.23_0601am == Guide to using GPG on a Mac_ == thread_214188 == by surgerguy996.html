@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=214188.0" />
+		<title>Print Page - Guide to using GPG on a Mac:</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: surgerguy996 on September 23, 2013, 06:01 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Guide to using GPG on a Mac:</strong><br />
+				Post by: <strong>surgerguy996</strong> on <strong>September 23, 2013, 06:01 am</strong>
+			</dt>
+			<dd class="postbody">
+				Guide to using GPG on a Mac:<br /><br />◍▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬◍<br /><br />I will assume that you have already installed GPG and you have already created a Public/Private key pair. I will also assume you have found your vendor&#039;s public key block. For the most part, this tutorial addresses how to encrypt a message using a vendor&#039;s public key.<br /><br />We will be using the mac&#039;s terminal in this tutorial.<br /><br />Summary:<br />gpg -a -e -o encrypted_message.txt -r DEALERNAME -u YOURNAME secret_message.txt<br /><br />◍▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬◍<br /><br />◾ Part 1: To install GPG go to: https://gpgtools.org/<br /><br />Scroll down past GPGMail and install GPGSuite.<br /><br /><br />_____<br /><br />◾ Part 2: Creating Your first Private &amp; Public key:<br /><br />GUIDE: http://support.gpgtools.org/kb/how-to/first-steps-where-do-i-start-where-do-i-begin<br /><br />Scroll down to the part labeled&nbsp; &quot;Create a New Key&quot; and read the tutorial.<br /><br />NOTE: Under &quot;Full Name&quot; put your Silk Road Username or Silk Road Alias.&nbsp; Under E-Mail Address just put Username@username. There is no need to put an actual email address.<br /><br /><br />_____<br /><br />◾ Part 3: Adding a vendor&#039;s PGP Public Key Block to your GPG Keychain Access:<br /><br />Open up a terminal: (In your list of Applications, find the folder titled &quot;Utilities&quot; and click on Terminal.app. Alternatively you can just type &quot;Terminal&quot; into the Spotlight/Magnifying glass in the upper right of your screen.)<br /><br />In the terminal, type &quot;pico key.asc&quot; without quotes and press enter. It should open up the Pico text editor. (if pico isn&#039;t working try nano).<br />Hit CMD + V to paste the vendor&#039;s public key into pico.<br />Hit Control + X to Exit.<br />Pico should say &quot;Save modified buffer&quot;. hit the Y key for yes and then press enter to save.<br /><br />Verify that you have created the file in the terminal; type &quot;cat key.asc&quot; without quotes into the terminal and then press enter.<br /><br />Go to your GPG Keychain Access. You can get to it by typing it into your spotlight in the upper right of your screen. In the keychain, where you can click on &quot;New&quot; , &quot;Import&quot;, and &quot;Export&quot;, click on &quot;Import.&quot; Find your key.asc file which will be saved in your home directory. (typing &quot;pwd&quot; into your terminal will let you know where you saved it) Or just type key.asc into the search and click open.<br /><br />Your vendor&#039;s Public Key Block should be added to your keychain!<br /><br />_____<br /><br />◾ Part 4: Writing your message.<br /><br />In a terminal type &quot;pico secret_message.txt&quot;.<br />Type in your Mailing Address to your vendor.<br /><br />Rightous, a seller of 25i-NBOMe suggests &quot;Avoid saying things please do not put useless information such as &quot;Please ship to:&quot; or &quot;United States of America&quot; or anything that is already duh. These just cause me a lot of backspacing every day. It is acceptable however to leave me a brief love letter describing how awesome your previous experience with me was. I love those.&quot;<br />Reference: http://silkroadvb5piz3r.onion/silkroad/item/0f81d52be7<br /><br />Hit Control + X to Exit the Pico Text Editor.<br />Pico should say &quot;Save modified buffer&quot;. hit the Y key for yes and then press enter to save.<br /><br />_____<br /><br />◾ Part 5: Encrypting your Message with GPG:<br /><br />In your terminal type the following but replace LunaC with the name of YOUR dealer and surgerguy996 (which is my name) with YOUR name.<br /><br />gpg -a -e -o encrypted_message.txt -r LunaC -u surgerguy996 secret_message.txt<br />This will encrypt your message as encrypted_message.txt. Hit the &quot;y&quot; key if it prompts you with a warning.<br /><br />Summary of switches:<br />-a = armor. Force print of ASCII characters only.. No non-printable characters.<br />-e = encrypt.<br />-o = name of output file.<br />-r = Intended Name of Recipient<br />-u = Your name (the one you assigned to your public key earlier)<br /><br />Use &quot;gpg --help&quot; to get a listing of all commands and options.<br /><br />_____<br />◾ Part 6: Read the encrypted message.<br /><br />Type &quot;cat encrypted_message.txt&quot; into your terminal.<br />(Tip: For speed, you can just type &quot;cat encry&quot; and then just hit the TAB key and the rest of the filename will be filled out for you.)<br />You will get a PGP message like this but it will be a LOT longer.<br />&nbsp;<br />-----BEGIN PGP MESSAGE-----<br />Version: GnuPG/MacGPG2 v2.0.19 (Darwin)<br />Comment: GPGTools - http://gpgtools.org<br /><br />hQEMA5oW/wPjmiHdAQgAl27ZhbGYmb8B96jkDB+RNwIgFuXcdRCN6TYwpgUcbNWd<br />M0DMQV+jUxgxSPBaglQGMTDQ0lbqrhxYs+ft5FvB4CC4yaEShEmbfdKqmYlvfmVY<br />et7cdWheEJVmZWOPPhZ+yIPMN0nQ8DhQh3t54Gw/njm9BcO2QgeW8BZ8erF83yAb<br />XwNuZopCwY7OgMfiV/BKt7SwBga4lumvNZWiApsCpetJDeX27WS1pkRNXYJzN7FZ<br />HpGZavxsRqDAc2Hm+a3SQu2QVa4lt7Ac7lJDeunz1J4ZGm1H2uS+h2XtemHbRxlD<br />GP0bgCxMmHqTHadjM01dzeqboFUh61weElWeA5paXNJdARhzfyLH2Pg8bFDvN1f7<br />uoZgVTFbKq808RstGbCU2CsbKtOrZiIh9mF4fUd85pZC6J49gLgtO8FgPLnHqApJ<br />idd32C/xyUdW+KnRGpDqPW70ccV8MgJm9wE4oStK<br />=ogZs<br />-----END PGP MESSAGE-----
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Guide to using GPG on a Mac:</strong><br />
+				Post by: <strong>weok83r8fd</strong> on <strong>September 23, 2013, 06:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				looks helpful, ty
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Guide to using GPG on a Mac:</strong><br />
+				Post by: <strong>gn0ssos</strong> on <strong>September 23, 2013, 10:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				I was able to import vendor&#039;s keychains without having to go through the terminal. I just copy and paste into TextEdit, save the file to my desktop as a .txt and import it that way, then delete the file. Seems to be working fine so far. All that terminal shit seems too complicated, you can just type your messages into TextEdit. You don&#039;t have to save the file. You can just highlight the text and click Command+Shift+E to encrypt, then select your vendor&#039;s keychain. Just be sure to tick off the check box, not just click on the name because that seemed to not work for me.<br /><br />I could be wrong, but using TextEdit has been the easiest way for me so far. It&#039;s not so difficult once you sit down and take the time to learn it.<br /><br />Also here&#039;s an added note that I had trouble with: To copy your own Public Keyblock (NOT just the short PGP Key in the info) you have to right click and click Copy. That took me forever to figure out.<br /><br />If anyone needs to practice their PGP encryption, feel free to use my PGP key in my sig.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Guide to using GPG on a Mac:</strong><br />
+				Post by: <strong>fakename709</strong> on <strong>September 23, 2013, 11:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				You deserve some Karma OP.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Guide to using GPG on a Mac:</strong><br />
+				Post by: <strong>oaktree6969</strong> on <strong>September 23, 2013, 11:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=214188.msg1558119#msg1558119">Quote from: gn0ssos on September 23, 2013, 10:19 am</a></div></div><blockquote class="bbc_standard_quote">I was able to import vendor&#039;s keychains without having to go through the terminal. I just copy and paste into TextEdit, save the file to my desktop as a .txt and import it that way, then delete the file. Seems to be working fine so far. All that terminal shit seems too complicated, you can just type your messages into TextEdit. You don&#039;t have to save the file. You can just highlight the text and click Command+Shift+E to encrypt, then select your vendor&#039;s keychain. Just be sure to tick off the check box, not just click on the name because that seemed to not work for me.<br /><br />I could be wrong, but using TextEdit has been the easiest way for me so far. It&#039;s not so difficult once you sit down and take the time to learn it.<br /><br />Also here&#039;s an added note that I had trouble with: To copy your own Public Keyblock (NOT just the short PGP Key in the info) you have to right click and click Copy. That took me forever to figure out.<br /><br />If anyone needs to practice their PGP encryption, feel free to use my PGP key in my sig.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I also use this same method. Pretty easy.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Guide to using GPG on a Mac:</strong><br />
+				Post by: <strong>DrWalterB</strong> on <strong>September 23, 2013, 12:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I just use text edit to :) nice and easy and the file can just be deleted right after. <br />Type your info, highlight then right click and choose encrypt and away you go :) 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

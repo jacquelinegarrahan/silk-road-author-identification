@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=258.0" />
+		<title>Print Page - Accidentally Lost My Private Key</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: g4bb3r on June 23, 2011, 08:00 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Accidentally Lost My Private Key</strong><br />
+				Post by: <strong>g4bb3r</strong> on <strong>June 23, 2011, 08:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				Well, fuck. I reformatted my computer to install a different OS and I thought I backed up my keys, but apparently I didn&#039;t backup my private keys. Either that or my new frontend that I don&#039;t like very much isn&#039;t recognizing them for whatever reason. <br /><br />Any help here? Or if I generate a new key is there some way to prove my legitimacy to you guys?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Accidentally Lost My Private Key</strong><br />
+				Post by: <strong>sandybridge</strong> on <strong>June 23, 2011, 11:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				No, there is no way unless you can somehow recover your private key. Or on the other hand you could get someone who knows you to vouch for you.<br /><br />have you tried:<br /><br />&gt;gpg --import-secret-key &quot;the-file-you-backed-your-secret-key-up-in.key&quot;<br /><br />?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Accidentally Lost My Private Key</strong><br />
+				Post by: <strong>g4bb3r</strong> on <strong>June 23, 2011, 09:05 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve tried every import option I could find unfortunately, it seems I messed up when exporting them. I guess I&#039;ll have to generate a new key. My email/torpm/etc. are all still the same though.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Accidentally Lost My Private Key</strong><br />
+				Post by: <strong>techlord</strong> on <strong>June 23, 2011, 10:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Damn. That really blows. It&#039;s a bit tricky backing up that private key. <br /><br />Here&#039;s the way I do it:<br /><br />Use this first command to find the KeyID:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --list-secret-keys</code><br />Output will look like this:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">&nbsp; &nbsp; /root/.gnupg/secring.gpg<br />&nbsp; &nbsp; ————————<br />&nbsp; &nbsp; sec&nbsp; 1024D/EE6E8046 2009-02-20<br />&nbsp; &nbsp; uid&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Bill Till (My GPG key) &lt;test@abc.com&gt;<br />&nbsp; &nbsp; ssb&nbsp; 2048g/AE3B1BD4 2009-02-20<br /><br />&nbsp; &nbsp; sec&nbsp; 1024D/E4635BBE 2009-03-16<br />&nbsp; &nbsp; uid&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; John Doe (My first key) &lt;gpg@abc.com&gt;<br />&nbsp; &nbsp; ssb&nbsp; 2048g/0AC353C2 2009-03-16</code><br />Bill&#039;s KeyID is EE6E8046 and John&#039;s is E4635BBE.<br /><br />Next enter this command to export the private key for Bill:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg -ao /desiredlocation/desiredfilename.key --export-secret-keys EE6E8046</code><br />Or for John Doe:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg -ao /desiredlocation/desiredfilename.key --export-secret-keys E4635BBE</code>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Accidentally Lost My Private Key</strong><br />
+				Post by: <strong>sandybridge</strong> on <strong>June 24, 2011, 12:21 am</strong>
+			</dt>
+			<dd class="postbody">
+				I wish everyone would use the CLI&#039;d GPG software, it makes things so much easier, both for the techie and the regular user. The main reason being that us CLI heads all speak the same language...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Accidentally Lost My Private Key</strong><br />
+				Post by: <strong>g4bb3r</strong> on <strong>June 24, 2011, 12:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m with you guys there. Had to deal with the horror that is windows for almost a whole year and finally have been able to move back to linux.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

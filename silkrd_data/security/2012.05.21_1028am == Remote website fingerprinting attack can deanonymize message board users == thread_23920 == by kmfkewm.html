@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=23920.0" />
+		<title>Print Page - Remote website fingerprinting attack can deanonymize message board users</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: kmfkewm on May 21, 2012, 10:28 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Remote website fingerprinting attack can deanonymize message board users</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>May 21, 2012, 10:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				This new research paper is scary. They can with substantially high accuracy remotely test a given IP address and determine if it is browsing a particular site (in the case of some types of website, forums are one type that is particularly vulnerable) , even if they are using Tor or other low latency solutions. This is the state of the art in website fingerprinting attacks and I believe this is the first time it has been shown possible to do them remotely, previously this sort of attacker had to have access to your ISP or entry guard, now they only need your IP address.<br /><br />http://freehaven.net/anonbib/papers/pets2012/paper_53.pdf 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Remote website fingerprinting attack can deanonymize message board users</strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>May 21, 2012, 12:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Scary stuff indeed!<br /><br />I was reading that a possible defence might be to pad data out with random bits, see below what the good people at Tor have to say about this:<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Alternate designs that we don&#039;t do (yet)<br />You should send padding so it&#039;s more secure.<br /><br />Like all anonymous communication networks that are fast enough for web browsing, Tor is vulnerable to statistical &quot;traffic confirmation&quot; attacks, where the adversary watches traffic at both ends of a circuit and confirms his guess that they&#039;re communicating. It would be really nice if we could use cover traffic to confuse this attack. But there are three problems here:<br /><br />&nbsp; &nbsp; Cover traffic is really expensive. And *every* user needs to be doing it. This adds up to a lot of extra bandwidth cost for our volunteer operators, and they&#039;re already pushed to the limit.<br />&nbsp; &nbsp; You&#039;d need to always be sending traffic, meaning you&#039;d need to always be online. Otherwise, you&#039;d need to be sending end-to-end cover traffic -- not just to the first hop, but all the way to your final destination -- to prevent the adversary from correlating presence of traffic at the destination to times when you&#039;re online. What does it mean to send cover traffic to -- and from -- a web server? That is not supported in most protocols.<br />&nbsp; &nbsp; Even if you *could* send full end-to-end padding between all users and all destinations all the time, you&#039;re *still* vulnerable to active attacks that block the padding for a short time at one end and look for patterns later in the path. <br /><br />In short, for a system like Tor that aims to be fast, we don&#039;t see any use for padding, and it would definitely be a serious usability problem. We hope that one day somebody will prove us wrong, but we are not optimistic. </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I found a paper the other day on disguising Tor use as Skype traffic, it sounded most promising although of course it would be obvious to any fool with the list of Tor relays could still see connections to their IP address and I imagine you&#039;d have a hard time convincing them you had a fulfilling VOIP conversation at these kind of speeds!<br /><br />V.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=23920.msg251279#msg251279">Quote from: kmfkewm on May 21, 2012, 10:28 am</a></div></div><blockquote class="bbc_standard_quote">This new research paper is scary. They can with substantially high accuracy remotely test a given IP address and determine if it is browsing a particular site (in the case of some types of website, forums are one type that is particularly vulnerable) , even if they are using Tor or other low latency solutions. This is the state of the art in website fingerprinting attacks and I believe this is the first time it has been shown possible to do them remotely, previously this sort of attacker had to have access to your ISP or entry guard, now they only need your IP address.<br /><br />http://freehaven.net/anonbib/papers/pets2012/paper_53.pdf<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

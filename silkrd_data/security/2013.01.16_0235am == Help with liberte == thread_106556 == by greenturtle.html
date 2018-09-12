@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=106556.0" />
+		<title>Print Page - Help with liberte</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: greenturtle on January 16, 2013, 02:35 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Help with liberte</strong><br />
+				Post by: <strong>greenturtle</strong> on <strong>January 16, 2013, 02:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hi,<br /><br />I have formated my USB, and everything. Now how do I do step 2, I mean how do I know im extracting it to the root?<br /><br />2. Install Liberte to USB<br /><br />Extract the &quot;.zip&quot; you just downloaded to the root of your USB flashdrive. Open the &quot;liberte&quot; folder, right-click over &quot;setup.bat&quot; and select &quot;Run as<br />administrator&quot;. The batch file will do its thing and will prompt you with a &quot;Press any key to continue...&quot; message once it&#039;s done.<br /><br />Next question is, once I change my boot order and set the USB drive on top will my computer boot up normaly without the USB present?<br /><br /><br />Next, how do I get kleopatra, and a few other documents off my computer and onto my USB? Do I do that after I get it all set up, or do I need new files once I have my live usb set up?<br /><br />Thanks for the help guys,<br />Greenturtle
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with liberte</strong><br />
+				Post by: <strong>impkin</strong> on <strong>January 16, 2013, 02:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=106556.msg730150#msg730150">Quote from: greenturtle on January 16, 2013, 02:35 am</a></div></div><blockquote class="bbc_standard_quote">I have formated my USB, and everything. Now how do I do step 2, I mean how do I know im extracting it to the root?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />When you extract the zip file, you&#039;ll need to specify the location where you&#039;d like to extract it to.&nbsp; Specify your USB drive (I&#039;m guessing you are in Windows, in which case it will mount as a new drive letter).&nbsp; So, if your USB drive mounts as drive E: then you should extract to E:/&nbsp; If you formatted there likely won&#039;t be any subfolders but, if there are, just extract to E:/ or whatever drive letter it uses.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=106556.msg730150#msg730150">Quote from: greenturtle on January 16, 2013, 02:35 am</a></div></div><blockquote class="bbc_standard_quote">Next question is, once I change my boot order and set the USB drive on top will my computer boot up normaly without the USB present?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Yes.&nbsp; It will keep moving down the list until it finds bootable media.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=106556.msg730150#msg730150">Quote from: greenturtle on January 16, 2013, 02:35 am</a></div></div><blockquote class="bbc_standard_quote">Next, how do I get kleopatra, and a few other documents off my computer and onto my USB? Do I do that after I get it all set up, or do I need new files once I have my live usb set up?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Once you are up and running in Liberte, you will be able to view and access other mounted drives such as your computer&#039;s hard disk.&nbsp; From within Liberte, locate the files you need and save them in the Persistent folder on the Liberte USB stick.&nbsp; The Persistent folder does what it says - that is, the contents remain from one session to the next.<br /><br />As for Kleopatra, you cannot install programs to Liberte as it is a hardened operating system.&nbsp; It comes with its own encryption tool called GPA.<br /><br />Please don&#039;t take offense, but it seems from your questions that you do not have much experience using Linux.&nbsp; If that&#039;s the case, you&#039;re probably going to find Liberte confusing and frustrating to start.&nbsp; There are other options like Tails that might be a better place to start.&nbsp; Or, if you are anxious to mess around with Linux just for the sake of running Linux, you could create an Ubuntu LiveUSB.&nbsp; Ubuntu, in my opinion, is a good place to start and has lots of documentation and support forums.<br /><br />Good luck, and keep at it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with liberte</strong><br />
+				Post by: <strong>Virmo</strong> on <strong>January 16, 2013, 02:59 am</strong>
+			</dt>
+			<dd class="postbody">
+				Your pc might not always boot correctly with usb first.<br />With some drives/sticks it won&#039;t boot, it just hangs. But then you can just easily power off/take out the usb drive, start pc and put the device back in...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with liberte</strong><br />
+				Post by: <strong>greenturtle</strong> on <strong>January 16, 2013, 10:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=106556.msg730202#msg730202">Quote from: impkin on January 16, 2013, 02:53 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=106556.msg730150#msg730150">Quote from: greenturtle on January 16, 2013, 02:35 am</a></div></div><blockquote class="bbc_alternate_quote">I have formated my USB, and everything. Now how do I do step 2, I mean how do I know im extracting it to the root?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />When you extract the zip file, you&#039;ll need to specify the location where you&#039;d like to extract it to.&nbsp; Specify your USB drive (I&#039;m guessing you are in Windows, in which case it will mount as a new drive letter).&nbsp; So, if your USB drive mounts as drive E: then you should extract to E:/&nbsp; If you formatted there likely won&#039;t be any subfolders but, if there are, just extract to E:/ or whatever drive letter it uses.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=106556.msg730150#msg730150">Quote from: greenturtle on January 16, 2013, 02:35 am</a></div></div><blockquote class="bbc_alternate_quote">Next question is, once I change my boot order and set the USB drive on top will my computer boot up normaly without the USB present?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Yes.&nbsp; It will keep moving down the list until it finds bootable media.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=106556.msg730150#msg730150">Quote from: greenturtle on January 16, 2013, 02:35 am</a></div></div><blockquote class="bbc_alternate_quote">Next, how do I get kleopatra, and a few other documents off my computer and onto my USB? Do I do that after I get it all set up, or do I need new files once I have my live usb set up?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Once you are up and running in Liberte, you will be able to view and access other mounted drives such as your computer&#039;s hard disk.&nbsp; From within Liberte, locate the files you need and save them in the Persistent folder on the Liberte USB stick.&nbsp; The Persistent folder does what it says - that is, the contents remain from one session to the next.<br /><br />As for Kleopatra, you cannot install programs to Liberte as it is a hardened operating system.&nbsp; It comes with its own encryption tool called GPA.<br /><br />Please don&#039;t take offense, but it seems from your questions that you do not have much experience using Linux.&nbsp; If that&#039;s the case, you&#039;re probably going to find Liberte confusing and frustrating to start.&nbsp; There are other options like Tails that might be a better place to start.&nbsp; Or, if you are anxious to mess around with Linux just for the sake of running Linux, you could create an Ubuntu LiveUSB.&nbsp; Ubuntu, in my opinion, is a good place to start and has lots of documentation and support forums.<br /><br />Good luck, and keep at it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />+1 exactly what I needed, you answered everything.<br /><br />You are right, the funny litttle icons are a little confusing, but Im in and able to connect to SR and the forums. Next I will be setting up my PGP and removing everything off my &quot;regular&quot; Hard drive that should not be on there. <br /><br />I really like the idea of being able to take this usb and everything thats on it with me, thanks again.<br /><br />Greenturtle
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with liberte</strong><br />
+				Post by: <strong>impkin</strong> on <strong>January 16, 2013, 01:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Great!&nbsp; Have fun and be safe!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with liberte</strong><br />
+				Post by: <strong>greenturtle</strong> on <strong>January 16, 2013, 08:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ok, I got the liberte working good yesterday. I figured out the pgp program on there, its really nice, I like it better than kleopatra.<br /><br />Now I am having a problem. Everytime I type my internet password and hit enter my computer freezes, anyone know a fix?<br /><br />This is like an emergency, all I got is my phone for now.<br /><br />Thanks for the help,<br />Greenturtle
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with liberte</strong><br />
+				Post by: <strong>Virmo</strong> on <strong>January 17, 2013, 08:56 pm</strong>
+			</dt>
+			<dd class="postbody">
+				What is with these images in the quotes? What am I seeing?<br /><br />No need to take drugs, just trip off the web?
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

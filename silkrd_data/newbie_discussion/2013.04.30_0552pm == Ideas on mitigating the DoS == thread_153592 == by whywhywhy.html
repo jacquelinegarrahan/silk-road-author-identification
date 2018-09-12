@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=153592.0" />
+		<title>Print Page - Ideas on mitigating the DoS</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: whywhywhy on April 30, 2013, 05:52 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Ideas on mitigating the DoS</strong><br />
+				Post by: <strong>whywhywhy</strong> on <strong>April 30, 2013, 05:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				hi there,<br /><br />i run a few popular hidden services and a friend of mine told me that I could be useful here in these dark times.<br />I just registered and I can only post in this forum, so I made a thread here. Sorry for the duplicates.<br /><br />In http://dkn255hz262ypmii.onion/index.php?topic=153182.0 kmfkewm suggested that the DoS is happening on the introduction points, which is likely since this is a known way of bringing down hidden services.<br /><br />if this is the case, there&#039;re a couple of ways of making the attacker&#039;s life harder:<br /><br />a) As astor suggested, increase the number of introduction points by tweaking the NUM_INTRO_POINTS_MAX variable in /src/or/rendservice.c. This will increase the number of boxes that the attacker has to DoS.<br /><br />b) You can also play around with INTRO_POINT_LIFETIME_MAX_SECONDS and INTRO_POINT_LIFETIME_INTRODUCTIONS to make Silk Road cycle through Introduction Points faster. if the attacker is a skiddie, then maybe he hasn&#039;t taken into account that introduction points ever change. in any case, this will make the attacker&#039;s life harder since he will have to keep track of the changing intro points.<br /><br />c) You can edit rend_services_introduce() to make it use some hardcoded introduction points of your own choosing. if you select some powerful Tor relays or if you setup some anti-DoS tor relays, the attacker might have a hard time bringing them down.<br /><br />all these changes seem easy to make, and they will make the situation much better. Note that some of those actions might increase the load of the Tor network, so you have to be careful. you really really really really don&#039;t want to DoS the whole Tor network.<br /><br />if you think this is worth doing, we can explore this attack a bit more. for example, we can fetch the list of intro points of SR and see what kind of load they currently have, to validate whether the intro points are actually getting DoSed.<br /><br />if an admin of this site finds this worthwile, i might write some code patches for the above ideas.<br /><br />i hope someone reads this thread.<br /><br />(Finally and least importantly, I&#039;m a new user in SR and i&#039;d like to try some of the merchandise when the site comes back up. if you people could donate me some bitcoins it would be awesome!)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Ideas on mitigating the DoS</strong><br />
+				Post by: <strong>MadScyentist</strong> on <strong>April 30, 2013, 07:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You should directly PM Scout or DPR himself with this information.<br /><br />It may be useful.<br /><br />Thanks for the insight!
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

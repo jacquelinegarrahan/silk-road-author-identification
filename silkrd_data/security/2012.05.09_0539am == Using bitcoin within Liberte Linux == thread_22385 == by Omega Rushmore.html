@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=22385.0" />
+		<title>Print Page - Using bitcoin within Liberte Linux</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Omega Rushmore on May 09, 2012, 05:39 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Using bitcoin within Liberte Linux</strong><br />
+				Post by: <strong>Omega Rushmore</strong> on <strong>May 09, 2012, 05:39 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hey All!<br /><br />Been lurking for a while here and gaining all the fantastic knowledge as to how to positively and successfully commandeer the SR.<br /><br />But I&#039;m at an impasse and I need some help.<br /><br />I got the concept down of Tor and anonymity, GPG/PGP and encryption, and alittle bit about bitcoin.&nbsp; &nbsp;<br /><br />But when it comes to working with bitcoins within my current liveUSB setup, I&#039;m completely lost!!<br /><br />So unless otherwise suggested, I am currently using Liberte Linux, and I cannot for the life of me decide/figure out how to either install a bitcoin client or possibly use an online wallet for my coins.&nbsp; <br /><br />I guess I&#039;ll struggle with figuring out how to actually use the coins once I have them, but I have scoured everywhere for even half an answer, and I cannot find one...<br /><br />Am I missing something simple?&nbsp; At this point I&#039;m assuming I cannot install anything into Liberte, so maybe the idea of a local client is out???<br /><br />So...to this wonderfully helpful community, please advise...<br /><br />Omega<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Using bitcoin within Liberte Linux</strong><br />
+				Post by: <strong>xXShadowXx</strong> on <strong>May 13, 2012, 12:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				You are correct about not being able to install anything in Liberte, for obvious security reasons there is no package manager included. I believe the only way to install Bitcoin Wallet in Liberte is to compile your own version, but I&#039;m thinking that&#039;s out of the question for ya. While digging in Liberte I found a text file with a list of packages and there remote locations, and I have no idea if this will work, but you might be able to add/remove packages from this list to install/remove programs from Liberte. I am not positive when Liberte reads the file to install packages, whether its every boot or just the first, but you could ask on the official forum. The dev is really really good at responding to questions.<br /><br />I also recommend using the latest snapshot of Liberte (liberte-snapshot-20120328) as they tend to include bug fixes (important), patches, new/updated software (important) (Also updates to the security features baked into the distro), updated kernel, updates to the settings for the software (important), the change log can be found on the forums. In my opinion its very important to stay up to date with the snapshots, especially since your using the distro for Silk Road. <br /><br />I don&#039;t see why you couldn&#039;t use an online wallet, as long as it doesn&#039;t require flash to operate. Flash is in the pipeline to be included in Liberte but does not work in the latest snapshot, or any other release. You CAN enable scripts in Midori in the lower left corner of the browser to allow some sites to load (Dropbox, ect...). *Only enabled scripts for as long as you need to use them, then turn them off* . There are 3 buttons in the bottom left of Midori, I believe two of them are Scripts and Images but I cannont recall the third. I believe that has to be enabled as well, treat it just like the script button. The load images button can be on indefinitely. <br /><br />The only other way I can think of is to use the Tor Browser for windows, then you can just get the official bitcoin wallet from there site. This is not recommended tho as it is not very secure, I definitely wouldn&#039;t use it as my main access point to Silk Road. To increase the security think about installing a firewall to block all other connections but the Tor Browser, having other unencrypted connections while Tor is running is not a good idea. <br /><br />Where are you buying your bitcoins from?<br /><br />Where are you getting them sent now?<br /><br />What I do is I buy my coins on my Windows 7 x64 install and get them sent to my Bitcoin Wallet which is encrypted. From there I send my Bitcoin&#039;s from my wallet to my Silk Road address, after sending the coins I immediately change my Bitcoin Address on Silkroad (Paranoia?). Using openVPN couldn&#039;t hurt either, I am actually currently in the process of re-evaluating my setup and making changes where needed.<br /><br />I hope that this has steered you in the right direction, and that this was indeed what you were asking lol. <br /><br />Lemme know if you have any questions.<br /><br />~§xXShadowXx§~<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Using bitcoin within Liberte Linux</strong><br />
+				Post by: <strong>phubaiblues</strong> on <strong>May 13, 2012, 01:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				Whether using Tails or liberte linux, I just use online wallets.&nbsp; Actually, I&#039;ve always been pretty happy with a couple of instawallets that have served me well...bounce the btc around a bit for fun, and SR has their own built in &#039;washing maching&#039; so I&#039;m happy with that.&nbsp; Works, and the less I have stashed on me &#039;puter, the happier I am.<br /><br />After using liberte a while, I went back to Tails.&nbsp; I found it a little snappier with my little netbooks and such, and Tails keeps me honest.&nbsp; Everything is right there, and if you have an online password account, then you can keep everything you need right there...or a bunch of bookmarks on swissdisk.com, or lastpass.&nbsp; &nbsp;Keep my pgp keys and anything else I&#039;ll need right away... I can log on, go to wherever I&#039;m stashing all the junk I&quot;ll need, download the folder, and I&quot;m good to go.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Using bitcoin within Liberte Linux</strong><br />
+				Post by: <strong>Omega Rushmore</strong> on <strong>May 13, 2012, 05:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hey Guys, thanks for all the valuable input!<br /><br />I like Liberte Linux and I&#039;ll check the snapshot version, but I am not too skilled at Linux in general so I won&#039;t be trying to compile anything on my own.<br /><br />And yes, Shadow, I am considering using just an online wallet, particularly Instawallet.<br /><br />RIght now I have no bitcoins whatsoever and I want to do it right from the beginning.&nbsp; &nbsp;Been wanting to DIVE right in to the SR and start checking off my Shopping List, but I want to involve as many security and anonymity features as possible.<br /><br />I&#039;m trying to get the PSA (Pine Seal of Approval) based on the info found in this link:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=21578.msg232837#msg232837<br /><br />So, how about this for a potential PSA:<br /><br />Take cash per BTC King&#039;s instructions and deposit anonymously into his bank account &gt; Have him send bitcoins to an Instawallet created on the non-tor clearnet with my pc and my IP address &gt; wait and rejoice once the bitcoins arrive...<br /><br />Then:&nbsp; <br /><br />On my tor-enabled pc go to Instawallet and get another wallet...<br /><br />Then:<br /><br />Back on the non-tor clearnet I go to the first Instawallet and send the whole lot to the second, tor&#039;ized Instawallet address...<br /><br />Then:<br /><br />Back on the tor-enabled pc send those newly deposited bitcoins to SR...<br /><br /><br />Will that provide enough anonymity and mixi-ness? (is that a word?), or am I too paranoid?<br /><br />Thanks in advance!<br /><br />Omega<br /><br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

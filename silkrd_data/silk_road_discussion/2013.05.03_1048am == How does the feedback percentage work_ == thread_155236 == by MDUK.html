@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=155236.0" />
+		<title>Print Page - How does the feedback percentage work?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Silk Road discussion => Topic started by: MDUK on May 03, 2013, 10:48 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>How does the feedback percentage work?</strong><br />
+				Post by: <strong>MDUK</strong> on <strong>May 03, 2013, 10:48 am</strong>
+			</dt>
+			<dd class="postbody">
+				So, I&#039;m a bit confused as to how the feedback percentage thing works - I&#039;ve had 84 5/5 feedbacks and one 3/5 (meh, you can&#039;t please some people&nbsp; ::) ), and that&#039;s apparently worked out to 97.5%? How does that work? Is it weighted towards the most recent feedback or something?<br />Vendor page:<br />http://silkroadvb5piz3r.onion/silkroad/user/53909a1737
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How does the feedback percentage work?</strong><br />
+				Post by: <strong>Libertas</strong> on <strong>May 03, 2013, 11:22 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=155236.msg1083710#msg1083710">Quote from: MDUK on May 03, 2013, 10:48 am</a></div></div><blockquote class="bbc_standard_quote">So, I&#039;m a bit confused as to how the feedback percentage thing works - I&#039;ve had 84 5/5 feedbacks and one 3/5 (meh, you can&#039;t please some people&nbsp; ::) ), and that&#039;s apparently worked out to 97.5%? How does that work? Is it weighted towards the most recent feedback or something?<br />Vendor page:<br />http://silkroadvb5piz3r.onion/silkroad/user/53909a1737<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hi MDUK,<br /><br />You can read more about the feedback score, including the formula used to calculate it, on the SR Wiki:<br />http://dkn255hz262ypmii.onion/wiki/index.php?title=Feedback_Score<br /><br />I have quoted it here for your convenience.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote from: SR Wiki</div></div><blockquote class="bbc_standard_quote">Feedback Score<br /><br />What is Feedback Scoring?<br /><br />You may have noticed the (100) next some vendors names, this is their Feedback Score. This is a quick way of finding out how reputable a vendor is, a step to take before reading some of their actual feedback. This score is a weighted average, based on many aspect of their transactions. The weights are determined by a few factors, and here they are, in order of importance:<br /><br />&nbsp; &nbsp; How active a buyer is in rating other vendors<br />&nbsp; &nbsp; The age of the rating<br />&nbsp; &nbsp; The price of the transaction <br /><br />In order for a vendor&#039;s rating to appear next to their name, they must be reviewed enough for it to be a meaningful average. This requires roughly 10 reviews per month, but can be more or less depending of the weights of the reviews.<br /><br />The Formula<br /><br />The buyer activity weight is determined by finding the average and standard deviation of the log of the number of vendors reviewed by buyers who&#039;ve ever left a review. If the log of the number of vendors reviewed by the buyer who left the feedback is greater than the average, the review has a &quot;buyer activity&quot; weight of the number of standard deviations above the average plus one. If it is below average, then the weight is the inverse of the number of standard deviations below the average minus one.<br /><br />The age weight is found by raising 1.02337 to the power of the review&#039;s age in days and then inverting it. We got 1.02337 by making a review half as valuable after one month as one that&#039;s just been posted.<br /><br />The price weight comes from the following formula: 0.2*log(0.02*($price)+1)+1 where $price is in dollars.<br /><br />You then multiply the weights together to get the total weight for that review. Add up all of the weighted reviews and divide by the total weight to get the weighted average, then do 25*(1-avg) to get &quot;percent positive reviews&quot; metric.<br /><br />To get the seller rank, we find the averages and standard deviations of the &quot;percent positive feedback&quot; and the log of the total weight of the reviews for all active sellers. We then average the number of standard deviations a seller has above or below the average with a 4 to 1 weight on their average feedback over their total weight. This is a seller&#039;s rating, and we rank everyone according to this rating.<br /><br />There are a few little details left out for brevity, but that&#039;s basically it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Libertas
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

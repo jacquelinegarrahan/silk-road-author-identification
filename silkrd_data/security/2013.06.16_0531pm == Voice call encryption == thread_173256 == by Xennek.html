@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=173256.0" />
+		<title>Print Page - Voice call encryption</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Xennek on June 16, 2013, 05:31 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Voice call encryption</strong><br />
+				Post by: <strong>Xennek</strong> on <strong>June 16, 2013, 05:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Anyone use VoIP or cell phone encryption? Please share your links to apps that enable secure calls. I know Silent Circle (created by the PGP founder) offers a service for iOS and android but it is $10-20 a month. Free is better.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>Baraka</strong> on <strong>June 16, 2013, 06:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				RedPhone for calls and TextSecure for texts. They&#039;re free and they&#039;re for Android only.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>MariosGramShoppe</strong> on <strong>June 30, 2013, 05:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				i wonder if those android app based voice encryption jobs are built with back doors? i contacted cellcrypt,silent circle,etc.and they claim that each phone creates its own key pair so they would have nothing to give if a adversary came knocking. what I want is a simple PHONE TO PHONE encryption that would work on a standard &#039;&#039;non smart phone&#039;&#039; eg nokia etc
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>Bungee54</strong> on <strong>June 30, 2013, 07:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Redphone is superb..and for text use Threema...<br /><br />otherwise setup voip via SIP
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>Baraka</strong> on <strong>June 30, 2013, 08:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Redphone and Textsecure are both open source and have been analyzed by lots of people. No backdoors in them. Silent Circle is NOT open source, so we can&#039;t be totally sure about it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>Baraka</strong> on <strong>June 30, 2013, 08:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">what I want is a simple PHONE TO PHONE encryption that would work on a standard &#039;&#039;non smart phone&#039;&#039;</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />In the late 90s an actual phone was developed that offered end to end encryption. But it never came out. The government killed it before anything could ship.<br /><br />You have to rely on software to do the encryption. You have no choice. Voice over IP is great because encrypting the call is easy.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>June 30, 2013, 09:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It&#039;s worth noting that a vulnerability was recently-ish found in GNU&#039;s ZRTPCPP library.&nbsp; That&#039;s the library that handles the encryption for Silent Circle&#039;s app... I don&#039;t think Open Whisper&#039;s RedPhone uses it, but frankly I never really bothered looking at what it uses...<br /><br />Anyway, if you&#039;re using old versions of a voice encryption application, you probably want to update if there&#039;s something newer available -- that or make sure your app of choice isn&#039;t using a version of ZRTPCPP that&#039;s vulnerable.<br /><br />It isn&#039;t the encryption that&#039;s the problem, BTW.&nbsp; Apparently it&#039;s possible for unauthenticated remote attackers to execute arbitrary code.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>comsec</strong> on <strong>July 01, 2013, 12:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				Obviously you would never trust silent circle. The CEO is ex military, they will bend over for the first law enforcement that comes along and feed you a MITM attack session handshake that records your key for easy LE decrypting later. <br /><br />Redphone is free, buy a Nexus 4, go on XDA forums and search for &quot;SECDROID&quot;. Flash it or just flash Cyanogenmod. <br />If you&#039;re using your phone for business, do not use it for browsing unless you only use Orbot + their browser. <br /><br />If you&#039;re worried about Google Play feeding you suspicious apps they won&#039;t without giving you a new TOS to agree to first. This was all covered on hacker news site when that guy was wanted by the NSA and noticed suddenly he was being fed new TOS and buried inside it &#039;you authorize us to hand over your info to law enforcement&#039;. Google is more resistant than we give them credit for.<br /><br />You can always download redphone source and build the .apk yourself in Eclipse, avoiding google. Full instructions on their git <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 01, 2013, 12:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173256.msg1292939#msg1292939">Quote from: comsec on July 01, 2013, 12:03 am</a></div></div><blockquote class="bbc_standard_quote">Obviously you would never trust silent circle. The CEO is ex military, they will bend over for the first law enforcement that comes along and feed you a MITM attack session handshake that records your key for easy LE decrypting later. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Then you shouldn&#039;t trust PGP, because it&#039;s the same guy.<br /><br />ZRTP, the underlying protocol, uses ephemeral session keys, so unless the Android app is bugged to send the keys to their servers, they can&#039;t decrypt your calls. You pay Silent Circle for the infrastructure that routes your calls, that&#039;s about it.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>comsec</strong> on <strong>July 01, 2013, 02:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173256.msg1293040#msg1293040">Quote from: astor on July 01, 2013, 12:35 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173256.msg1292939#msg1292939">Quote from: comsec on July 01, 2013, 12:03 am</a></div></div><blockquote class="bbc_alternate_quote">Obviously you would never trust silent circle. The CEO is ex military, they will bend over for the first law enforcement that comes along and feed you a MITM attack session handshake that records your key for easy LE decrypting later. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Then you shouldn&#039;t trust PGP, because it&#039;s the same guy.<br /><br />ZRTP, the underlying protocol, uses ephemeral session keys, so unless the Android app is bugged to send the keys to their servers, they can&#039;t decrypt your calls. You pay Silent Circle for the infrastructure that routes your calls, that&#039;s about it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Zimmerman partnered with the military guy who&#039;s current CEO. <br />Also PGP is open source, silent circle isn&#039;t. Doesn&#039;t matter to me if you want to use a blackbox enjoy your federal sentence. . I guarantee you now they aren&#039;t going to go under from the $25,000 per day fine the FBI levies them for not cooperating, they will sell anybody out here. Maybe if you were the CEO of GE you&#039;d have a chance. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 01, 2013, 03:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				hmm, I was under the impression that it was open source.<br /><br />Github: https://github.com/SilentCircle<br /><br />But yeah, it looks like parts of it are still closed source. Fuck that.<br /><br />http://log.nadim.cc/?p=89
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>comsec</strong> on <strong>July 01, 2013, 03:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				Zimmerman and the ex military guy &quot;swear up and down&quot; they will never backdoor users, but of course they are talking about legitimate users and not people the FBI or DEA want for trafficking, which is everybody here. They will slide in an update that replaces your key with their LE backdoored key or something just like how Hushmail presents you with a MITM attack login to get your crypto key and decrypt the entire inbox for the FBI.<br /><br />Redphone is the same thing as silent circle, just it&#039;s open source and designed for people not corporations. Moxie is going to release the server open source too so means you can run your own small circle of redphone users if you wanted, and could afford relays.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 01, 2013, 03:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				Nice. I&#039;ll be making a hidden service for it. :)<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>MariosGramShoppe</strong> on <strong>July 01, 2013, 04:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				I suppose in the end nothing is 100% safe,Comsec makes a good point they &#039;&#039;silent circle&#039;&#039; wold most likely change their tune if the letters came banging and making threats.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>Baraka</strong> on <strong>July 01, 2013, 05:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173256.msg1293568#msg1293568">Quote from: comsec on July 01, 2013, 03:27 am</a></div></div><blockquote class="bbc_standard_quote">Zimmerman and the ex military guy &quot;swear up and down&quot; they will never backdoor users, but of course they are talking about legitimate users and not people the FBI or DEA want for trafficking, which is everybody here. They will slide in an update that replaces your key with their LE backdoored key or something just like how Hushmail presents you with a MITM attack login to get your crypto key and decrypt the entire inbox for the FBI.<br /><br />Redphone is the same thing as silent circle, just it&#039;s open source and designed for people not corporations. Moxie is going to release the server open source too so means you can run your own small circle of redphone users if you wanted, and could afford relays.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />^^100%<br /><br />+1 An easy mod up.<br /><br />Silent Circle is an American company AFAIK. That means their liability is nearly unlimited when dealing with the government. If they don&#039;t cough up whatever the government wants when they want it, they&#039;ll be run into the ground. Permanently.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>comsec</strong> on <strong>July 01, 2013, 07:39 am</strong>
+			</dt>
+			<dd class="postbody">
+				It&#039;s probably better to use the regular Redphone app though and not your own server and private app to connect to it.<br /><br />The TURN servers are just relaying encrypted RTP packets from one device to another, and the more you get lost in a bunch of other Redphone traffic the better so they can&#039;t prove you talked to somebody. Guilt by association is a real possibility with the clownshoes (in)justice system most of us enjoy though with a private setup, you could double encrypt all traffic end to end inside a vpn and basically have James Bond strength communications. Just hope it&#039;s never seized or remotely analyzed to follow traffic which would reveal the entire crew since it&#039;s a private network and not the regular Redphone servers handling thousands of calls.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>foxen624</strong> on <strong>July 01, 2013, 09:25 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve got an Android phone and have been looking for a way to encrypt both voice calls and texts, but have not found anything that I can be certain I can really trust.&nbsp; I have PrivateInternetAccess VPN on my computer and phone...&nbsp; they claim to keep ISP&#039;s/service providers from being able to snoop... but for one thing, that would not cover voice calls... and another, they seem legit afaik, but still...&nbsp; &nbsp;I&#039;m sure they are subject to warrants from LE just the same as any third party that is not zero knowledge???
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>foxen624</strong> on <strong>July 01, 2013, 09:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				also, meant to mention (or ask) about encryption - voice and/or data that can be used effectively if the party being contacted does not have encryption on their end.&nbsp; Does anything like that even exist?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 01, 2013, 09:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173256.msg1294110#msg1294110">Quote from: comsec on July 01, 2013, 07:39 am</a></div></div><blockquote class="bbc_standard_quote">It&#039;s probably better to use the regular Redphone app though and not your own server and private app to connect to it.<br /><br />The TURN servers are just relaying encrypted RTP packets from one device to another, and the more you get lost in a bunch of other Redphone traffic the better so they can&#039;t prove you talked to somebody. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Depends. If your phone is rooted and you run your own app over Tor, they may not be able to tell that you are communicating with anyone at all.<br /><br />I don&#039;t have a need for it, personally, but the more services we run in onionland, the more people will use Tor.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>comsec</strong> on <strong>July 01, 2013, 07:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Tor I&#039;m pretty sure is too slow/laggy for voice. I don&#039;t even think Jondonym mixmaster would work with RTP packets fast enough to not just hear echoing static. <br /><br />I guess I can always transparently tunnel all traffic through Tor on my phone right now and call somebody with it as a test. I&#039;m expecting it to not to work though. I wouldn&#039;t root your phone either, if in the future it might be seized. You can bypass encryption, unlock screens and a whole bunch of evil with a rooted phone. Check out secdroid on XDA developers it&#039;s a pretty good replacement for standard carrier installs
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 01, 2013, 08:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173256.msg1295480#msg1295480">Quote from: comsec on July 01, 2013, 07:57 pm</a></div></div><blockquote class="bbc_standard_quote">Tor I&#039;m pretty sure is too slow/laggy for voice. I don&#039;t even think Jondonym mixmaster would work with RTP packets fast enough to not just hear echoing static. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />People have had success with Mumble servers. The main issue seems to be the lag between each person speaking, so they recommend using control words (&quot;Roger, over&quot;).<br /><br />Take a look at<br /><br />https://guardianproject.info/2013/01/31/anonymous-cb-radio-with-mumble-and-tor/<br /><br />I&#039;ve also heard some chatter about running Jitsi over Tor. It shouldn&#039;t be much worse than the few seconds delays you see when someone is being interviewed by satellite from a remote location.<br /><br />I think it&#039;s an acceptable trade off for the privacy that Tor provides, compared to routing your communications through open clearnet infrastructure.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">I wouldn&#039;t root your phone either, if in the future it might be seized. You can bypass encryption, unlock screens and a whole bunch of evil with a rooted phone. Check out secdroid on XDA developers it&#039;s a pretty good replacement for standard carrier installs<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />As opposed to the LE backdoors that they will download to your unrooted phone?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>comsec</strong> on <strong>July 01, 2013, 08:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">I wouldn&#039;t root your phone either, if in the future it might be seized. You can bypass encryption, unlock screens and a whole bunch of evil with a rooted phone. Check out secdroid on XDA developers it&#039;s a pretty good replacement for standard carrier installs<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />As opposed to the LE backdoors that they will download to your unrooted phone?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Most exploits rely on root being installed, and especially package manager + root. <br />To prevent this build with seandroid MAC or use another permissions check like Open-Pdroid<br />http://forum.xda-developers.com/showthread.php?p=42368298#post42368298<br /><br />The most important things :<br />- locked bootloader to prevent encryption key recovery<br />- no recovery mod or sabotaged one so they can&#039;t easily flash some forensics exploits<br />- disabling bluetooth, gps, google location service and NFC. disable wifi if not using it<br />-&nbsp; full encryption, then download 3rd party screen locker (or run your own) and uninstall it. now can use different pw for full disc and screen unlock instead of having to type in a gigantic unlock password <br />- not using a carrier install, installing anything else even Cyanogen mod (with su, pm and adb removed or chmod 000)<br />- not using the regular browser ever, only ORweb + Tor because Android is using old linux kernels full of known exploits<br />- turning off roaming to avoid Stingray fake FBI towers<br />- VPN or traffic through Tor to avoid carrier snooping and Stingray <br /><br />You can also run that Nexus 4 rom in an Android Emulator and probably use it to make calls with Redphone + a Google voice number. I haven&#039;t tried it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 01, 2013, 08:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173256.msg1295547#msg1295547">Quote from: comsec on July 01, 2013, 08:37 pm</a></div></div><blockquote class="bbc_standard_quote">Most exploits rely on root being installed, and especially package manager + root. <br />To prevent this build with seandroid MAC or use another permissions check like Open-Pdroid<br />http://forum.xda-developers.com/showthread.php?p=42368298#post42368298<br /><br />The most important things :<br />- locked bootloader to prevent encryption key recovery<br />- no recovery mod or sabotaged one so they can&#039;t easily flash some forensics exploits<br />- disabling bluetooth, gps, google location service and NFC. disable wifi if not using it<br />-&nbsp; full encryption, then download 3rd party screen locker (or run your own) and uninstall it. now can use different pw for full disc and screen unlock instead of having to type in a gigantic unlock password <br />- not using a carrier install, installing anything else even Cyanogen mod (with su, pm and adb removed or chmod 000)<br />- not using the regular browser ever, only ORweb + Tor because Android is using old linux kernels full of known exploits<br />- turning off roaming to avoid Stingray fake FBI towers<br />- VPN or traffic through Tor to avoid carrier snooping and Stingray <br /><br />You can also run that Nexus 4 rom in an Android Emulator and probably use it to make calls with Redphone + a Google voice number. I haven&#039;t tried it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This is great advice and I will have to look into it, but aren&#039;t there problems with Tor on unrooted phones? IDK, I&#039;ve never run it on a phone myself as I&#039;ve always considered phones too unsafe for that. Up until now, I&#039;ve simply avoided doing anything illegal on a phone, but if it&#039;s possible to make a phone safe, that&#039;s great. Occasionally people ask about it here on the forum.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>July 01, 2013, 10:22 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173256.msg1295547#msg1295547">Quote from: comsec on July 01, 2013, 08:37 pm</a></div></div><blockquote class="bbc_standard_quote">Most exploits rely on root being installed, and especially package manager + root. <br />To prevent this build with seandroid MAC or use another permissions check like Open-Pdroid<br />http://forum.xda-developers.com/showthread.php?p=42368298#post42368298<br /><br />The most important things :<br />- locked bootloader to prevent encryption key recovery<br />- no recovery mod or sabotaged one so they can&#039;t easily flash some forensics exploits<br />- disabling bluetooth, gps, google location service and NFC. disable wifi if not using it<br />-&nbsp; full encryption, then download 3rd party screen locker (or run your own) and uninstall it. now can use different pw for full disc and screen unlock instead of having to type in a gigantic unlock password <br />- not using a carrier install, installing anything else even Cyanogen mod (with su, pm and adb removed or chmod 000)<br />- not using the regular browser ever, only ORweb + Tor because Android is using old linux kernels full of known exploits<br />- turning off roaming to avoid Stingray fake FBI towers<br />- VPN or traffic through Tor to avoid carrier snooping and Stingray <br /><br />You can also run that Nexus 4 rom in an Android Emulator and probably use it to make calls with Redphone + a Google voice number. I haven&#039;t tried it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I think going to this level is overkill, but I don&#039;t plan to be actively hunted anytime soon, so my perspective is probably different... I also have no idea how you&#039;re going to route all traffic through Tor without any sort of superuser permissions -- that happens at the kernel level?&nbsp; Or are you saying that Cyanogen already does this these days?&nbsp; The problem is that every time you boot you need to re-apply it, so you&#039;re going to need root permissions every time you boot...?<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173256.msg1295583#msg1295583">Quote from: astor on July 01, 2013, 08:57 pm</a></div></div><blockquote class="bbc_standard_quote">This is great advice and I will have to look into it, but aren&#039;t there problems with Tor on unrooted phones? IDK, I&#039;ve never run it on a phone myself as I&#039;ve always considered phones too unsafe for that. Up until now, I&#039;ve simply avoided doing anything illegal on a phone, but if it&#039;s possible to make a phone safe, that&#039;s great. Occasionally people ask about it here on the forum.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Tor doesn&#039;t require root, but the transparent proxy stuff does (to the best of my knowledge).&nbsp; So basically the tor app runs exactly like it does on your PC, and your browser uses it exactly like on your PC too.&nbsp; By way of analogy, Tails would require root permissions because it fucks with the kernel NAT stuff.&nbsp; Er, that&#039;s ambiguous... not in a hacking way, in a &quot;uses as designed,&quot; way.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 01, 2013, 10:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173256.msg1295775#msg1295775">Quote from: SelfSovereignty on July 01, 2013, 10:22 pm</a></div></div><blockquote class="bbc_standard_quote">Tor doesn&#039;t require root, but the transparent proxy stuff does (to the best of my knowledge).&nbsp; So basically the tor app runs exactly like it does on your PC, and your browser uses it exactly like on your PC too.&nbsp; By way of analogy, Tails would require root permissions because it fucks with the kernel NAT stuff.&nbsp; Er, that&#039;s ambiguous... not in a hacking way, in a &quot;uses as designed,&quot; way.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Ah yeah, that&#039;s what it was. In cases where the app doesn&#039;t have configurable proxy settings, you&#039;d have to transproxy the connections by running Tor as root. So I wonder if Red Phone has configurable proxy settings.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>comsec</strong> on <strong>July 02, 2013, 07:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173256.msg1295775#msg1295775">Quote from: SelfSovereignty on July 01, 2013, 10:22 pm</a></div></div><blockquote class="bbc_standard_quote">I think going to this level is overkill, but I don&#039;t plan to be actively hunted anytime soon, so my perspective is probably different... I also have no idea how you&#039;re going to route all traffic through Tor without any sort of superuser permissions -- that happens at the kernel level?&nbsp; Or are you saying that Cyanogen already does this these days?&nbsp; The problem is that every time you boot you need to re-apply it, so you&#039;re going to need root permissions every time you boot...?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You can modify init.rc to start Orbot with permissions to transparently route all traffic or just modify iptables/netfilter. I&#039;ve never wanted to send all traffic through Tor though just Orweb traffic, Gibberbot, email and the twitter app all which you can individually set to use Orbot port.<br /><br />Best case scenario for a phone if can&#039;t custom build your own:<br />*flash Cyanogen ROM, and re-lock the bootloader (important)<br />*install Secdroid https://play.google.com/store/apps/details?id=com.shadcat.secdroid<br />*install Orweb, Orbot, Gibberbot (only use it with .onion jabber server), APG, Redphone and Textsecure<br />*install ObscuraCam to take product pics https://guardianproject.info/apps/obscuracam/ and never save to external SD card if your phone has one, because android doesn&#039;t encrypt it.<br />*encrypt your device.. wait for it to finish and use secure password, like first letters of song lyrics you won&#039;t forget.<br />*get a 3rd party screen locker w/wipe to enable a second password for faster online unlocking <br />*disable NFC, Bluetooth, GPS<br />*get Droidwall firewall and lockout shit you don&#039;t want connecting<br />*if it&#039;s Samsung s3 get Telstop to prevent known SMS exploit https://play.google.com/store/apps/details?id=org.mulliner.telstop<br />* disable roaming<br />* get a vpn to encrypt browsing traffic or only use orweb + tor<br /><br />That&#039;s good for average security. Cops won&#039;t be able to bypass your screen lock easily because android debugger bridge host is disabled by secdroid. They won&#039;t be able to brute force your encryption because you used a good password. Your bootloader is locked so they can&#039;t flash a custom forensic recovery image and fuck up your shit. You aren&#039;t using a carrier o/s install so no backdoors. All your comms are encrypted end to end so FBI stingray fake cell tower won&#039;t affect you (especially if you have a vpn to tunnel normal browser traffic). <br /><br />When not using this phone and having a meeting with your suppliers about biz stick it in a fridge so it can&#039;t record sound or something else soundproof. If you want to carry it around and not have cell towers always know your every movement get a $15 faraday phone bag off the internet. <br /><br />You&#039;re still vuln to:<br />- plenty of android exploits because you don&#039;t have Pdroid or SEandroid<br />- plenty of linux kernel exploits because android uses outdated kernels<br />- side channels galore because accelerometer is still installed, and other shit like bugmailer and screecap<br />- malware being able to activate camera or bluetooth without you knowing because you didn&#039;t rip it out<br />- future forensic methods because you have fastboot recovery mod and not sabotaged or removed<br />- proprietary exploits like Samsung s4 exploits over the web that can send secret SMS or the Samsung s4 bootloader exploit so they can unlock it without deleting everything and flash forensic mod. <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>July 02, 2013, 08:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173256.msg1297033#msg1297033">Quote from: comsec on July 02, 2013, 07:42 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173256.msg1295775#msg1295775">Quote from: SelfSovereignty on July 01, 2013, 10:22 pm</a></div></div><blockquote class="bbc_alternate_quote">I think going to this level is overkill, but I don&#039;t plan to be actively hunted anytime soon, so my perspective is probably different... I also have no idea how you&#039;re going to route all traffic through Tor without any sort of superuser permissions -- that happens at the kernel level?&nbsp; Or are you saying that Cyanogen already does this these days?&nbsp; The problem is that every time you boot you need to re-apply it, so you&#039;re going to need root permissions every time you boot...?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You can modify init.rc to start Orbot with permissions to transparently route all traffic or just modify iptables/netfilter. I&#039;ve never wanted to send all traffic through Tor though just Orweb traffic, Gibberbot, email and the twitter app all which you can individually set to use Orbot port.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well what I was thinking is that in order to modify anything with iptables, you need to be root to start with.&nbsp; And I don&#039;t imagine it would be easy to modify the start scripts unless you had root access either, but your point&#039;s taken.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Voice call encryption</strong><br />
+				Post by: <strong>foxen624</strong> on <strong>July 06, 2013, 12:26 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I see that comsec has posted a lot of info there and while it all makes sense in many ways, I&#039;ve currently got a Samsung Android based phone and maybe I&#039;m super-paranoid or not understanding the info entirely, but I have now and always have had an underlying skepticism about the true safety/privacy that can be achieved on any modern phone by any method, including using any of the growing number of apps that claim anonymity, the various DIY methods of encrypting your phone, also when there are settings right on the phone itself offering encryption of the whole phone and if you want, the SD card too...&nbsp; <br /><br />This is because I don&#039;t see how no matter how strong your password is for instance, since it must be entered at least once directly onto the phone, as well as any apps you download and the login information you type in for many apps, and any other programs you run, etc....&nbsp; It seems as if none of these would work if at least 1 or more of at least 3 different entities are not able to access at the very least your login info and if password protected, one or more of these three it seems to me would have to be able to access that as well:&nbsp; <br /><br />1) The phone manufacturer<br /><br />2) The service provider <br /><br />3) Google (in the case of phones using the Android OS)<br /><br />(not to mention the apps themselves - if using any sort of app for encryption/anonyminity/privacy - just about all of them claim to &quot;need&quot; permissions in order to work that usually include the ability to see, change, delete, add, modify, etc...&nbsp; just about anything at all on your phone)<br /><br />And afaik, all of the above are subject to complying with LE if asked for your info.... if they aren&#039;t already voluntarily supplying it to the various national and international cyberspy agencies....<br /><br />Am I wrong on this?<br /><br />Any thoughts?<br /><br />Thanks.....
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=32855.0" />
+		<title>Print Page - Correlation attacks and SR Tumbler wallets - SR staff please clarify</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: masterblaster on July 28, 2012, 08:43 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>July 28, 2012, 08:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				There&#039;s some fundamental security aspects that have not been documented properly by SR staff, one being what other sites are able to glean from our session cookies if we visit them in the same session, such as the fact we were on SR, our ID&#039;s, when and for how long we were on, etc... <br /><br />The second being the design of the tumbler, from the wiki description it forwards the transferred amount through a series of staggered dummy wallets. What this doesnt explain is whether the intermediate wallets are shared with other transfers (either simultaneously or reused) or are unique to each transfer; if there is a main intermediate wallet that is owned by SR where the coins get laundered through; and when is the tumbler used, such wallet address changes, person to person, FE&#039;s, incoming transfers and backup/outgoing transfers. Really what we need to know is how exactly this works. <br /><br />&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>ballervision</strong> on <strong>July 28, 2012, 10:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah, I agree.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>mybodymychoice</strong> on <strong>July 28, 2012, 11:16 am</strong>
+			</dt>
+			<dd class="postbody">
+				both points are very good questions. id love DPR and/or staff to weigh in on this. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>over_done_soup</strong> on <strong>July 28, 2012, 11:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				bitcoin history and transactions worry me, these are permaneny stored in the block chain (blockexplorer.com for example), and the only way to break the chain would be to somehow get new wallets and addresses that do not link to old ones, otherwise every transaction can be essentianlly linked and followed to SR &amp; user wallets, we need design or reassurance that periodically links are totally broken, so a complete trail cannot be done, currenty a fog or third party mixer achieves this, but from experience they all scam eventually,<br /><br />Any experts or SR team realise how serious this issue is? The exact tumbler techniques used by SR i doubt would be puplically explained but some reassurance at least would sufice.<br /><br />Any bitcoin pros got some good ideas/tricks that they could maybe suggest to SR and impiment to increase current security?<br /><br />just like database records , ony a certain lengh of timeframe should be stored and the rest deleted / not linked, storage times of 3-4 months are too long, some stats numbers can be stored this long but not full data?!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>tootiefruitie</strong> on <strong>July 28, 2012, 11:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				in regards to the cookie issue:&nbsp; this is something that is up to the end user.&nbsp; just an example of one of the many things a person should take into account when using SR.&nbsp; personally, i don&#039;t believe SR is at fault for anything here.&nbsp; just stop using browsers that rape you in public.<br /><br /><br />as for the tumbling system: we cannot really expect them to publicize the method in detail.&nbsp; giving LE that information could help them make a year&#039;s progress overnight.&nbsp; if you are truly that paranoid about it, then we come back to the same answer as we did with the cookies:&nbsp; do something about it on your end.<br /><br />SR provides a wonderful community and resource.&nbsp; they can&#039;t really be expected to babysit at a level below middle school.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>ENBOOM</strong> on <strong>July 28, 2012, 04:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				SR should not disclose the whole function of the tumbling system for a multitude of reasons.&nbsp; It is your job to ensure your protection.<br /><br />While yes it would help the users and vendors, it is toooo big of a vulnerability to give out such intelligence to LEO.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>sourman</strong> on <strong>July 28, 2012, 08:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Session cookies will only be exposed through major browser exploits, sophisticated MITM attacks, or targeted XSS attacks. The later one is probably the most worrying vector in this case since we can&#039;t review SR&#039;s codebase, and said attacks are easy to pull off relative to the other options. Most XSS attacks require user interaction , and the NoScript add-on included with the TBB makes it considerably more difficult to pull this off. That&#039;s not to say a clever attacker couldn&#039;t just convince some dumbass user to disable it. To help curb session abuse, just log out and sign in again at least every few hours, or whenever possible. Also, never set the forum session for longer than 60 minutes.<br /><br />As for bitcoin, it seems that every transaction is eventually traceable. SR shouldn&#039;t give away their technique (unless it&#039;s mathematically sound), but it would be nice if they detailed approximately what goes on and how much it protects us. In the end, it&#039;s up to the users to make sure they stay anonymous IRL so that btc don&#039;t come back to you. If, say, you obtain btc through cash deposits to random banks, and don&#039;t access the btc trading sites from anything that can be linked to you, there is only a slight chance you will be linked to SR. Even then, the case against you will likely be weak as long as you keep your mouth shut. Now if you&#039;re using your personal checking account to wire money to whatever in order to get bitcoins, your risk factor just went up like ten fold. Same goes for credit card transactions. You might as well buy drugs off the street at this point as there are now several permanent financial records tying you to SR. You know how US feds (cough DEA cough) bust most of these operations? Read that last DEA press release about the synthetic drug busts.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>daRwin</strong> on <strong>July 28, 2012, 09:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Also would be interested to learn more about the tumbler. Subscribing.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>fuckthepolice101</strong> on <strong>July 28, 2012, 09:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=32855.msg374553#msg374553">Quote from: ENBOOM on July 28, 2012, 04:59 pm</a></div></div><blockquote class="bbc_standard_quote"> It is your job to ensure your protection.<br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This is true. <br /><br />You agreed to the ToS and the disclaimer when you signed up for SR.<br /><br />It said it does not guarantee your anonymity 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>July 30, 2012, 08:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I understand the necessity for secrecy, but the difference between using shared/reused wallets for tumbling and using unique ones is the difference between freedom and imprisonment. This as much they need to disclose.<br /><br />The use of a sitewide wallet is a different beast, while this may break correlation attacks as a traditional fog might it would be easy to assess that the wallet was owned by SR and therefore create a strong correlation.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>daRwin</strong> on <strong>July 30, 2012, 09:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Considering the delay in processing the withdrawal, I would take that as some limited form of evidence that they are using unique wallet addresses. <br /><br />Think about it logically. First, lets assume that TSR proceed with zero confirmations on internal transactions through their tumbling software. This must be the case, or the transaction would literally take days to be confirmed by the network if they used quite a few transactions for the purposes of tumbling. <br /><br />So, assuming this, if the tumbler worked by reusing a bunch of pre-generated addresses then they would not have to wait for any network confirmation of these transactions because they own and trust the originating addresses, and could therefore proceed with zero confirmation on each transaction and the whole withdrawal would only take a few seconds more than a standard one would, depending on the complexity of their tumbling algorithms.<br /><br />Because it can take significantly longer than this, this might be attributable to the length of time it actually takes to generate multiple new address. Doing this would involve a lot of time consuming encryption algorithms and computation, and if you are generating say 50-100 new addresses (or even more) this time might add up to a significant delay before the final transaction is made to the destination wallet. I don&#039;t know the exact figures, but it seems plausible.<br /><br />Considering this, I would give TSR the benefit of the doubt that they actually are going the extra lengths for our security. It&#039;s unlikely they will respond to you in any way about the actual workings of their tumbler. So if you don&#039;t trust it (and you probably shouldn&#039;t, just to be cautious)&nbsp; you can still take further measures yourself to ensure your own anonymity. That would be&nbsp; advisable in any case, because you should never entrust your own personal security to someone else.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>July 30, 2012, 10:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=32855.msg378447#msg378447">Quote from: babyj4evar on July 30, 2012, 10:15 pm</a></div></div><blockquote class="bbc_standard_quote">What proof is there that the tumbler exists at all? <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Look at the bit-chain<br /><br />http://blockchain.info/<br /><br />Look at an address that paid out to you from SR, then to an address that you paid into SR with. It is all there for you to look at, and it looks to be doing a good job.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>paxpax</strong> on <strong>July 30, 2012, 11:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				One additional point on BTC transaction linked to SR. Should murphys law unfold on you and you are somehow caught up with evidence of transactions entering SR who is to say your purchases or money transfers where not perfectly legal. There are many items offered on SR that are perfectly legit. Visiting and having an SR account is not a crime, nor is purchasing SR branded T-Shirts because you are a fan of the movement. LEO would need evidence of the transaction, evidence of the material of the transaction, and evidence of your reception of material. Watching BTC fly through the either wouldn&#039;t cut it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>July 31, 2012, 12:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=32855.msg378474#msg378474">Quote from: jameslink2 on July 30, 2012, 10:35 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=32855.msg378447#msg378447">Quote from: babyj4evar on July 30, 2012, 10:15 pm</a></div></div><blockquote class="bbc_alternate_quote">What proof is there that the tumbler exists at all? <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Look at the bit-chain<br /><br />http://blockchain.info/<br /><br />Look at an address that paid out to you from SR, then to an address that you paid into SR with. It is all there for you to look at, and it looks to be doing a good job.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Can you determine from the block chain whether or not the intermediate wallet addresses are being reused and if there is a centralized wallet?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>daRwin</strong> on <strong>July 31, 2012, 12:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=32855.msg378636#msg378636">Quote from: masterblaster on July 31, 2012, 12:18 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=32855.msg378474#msg378474">Quote from: jameslink2 on July 30, 2012, 10:35 pm</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=32855.msg378447#msg378447">Quote from: babyj4evar on July 30, 2012, 10:15 pm</a></div></div><blockquote class="bbc_standard_quote">What proof is there that the tumbler exists at all? <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Look at the bit-chain<br /><br />http://blockchain.info/<br /><br />Look at an address that paid out to you from SR, then to an address that you paid into SR with. It is all there for you to look at, and it looks to be doing a good job.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Can you determine from the block chain whether or not the intermediate wallet addresses are being reused and if there is a centralized wallet?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yeah, its pretty easy to do. Just go to blockchain.info, copy and paste the address you want to find out about, and it will give you all the inputs into that address, the originating address as well as the total number of transactions to that address.<br /><br />From a quick glance of some of my SR withdrawals, it would appear that most of the addresses they use are single use, but it&#039;s hard to keep track as you go further and further back. Some addresses have just one input and one single output, but others have addresses with multiple inputs and outputs.<br /><br />They may filter the coins through some combination of both unique and shared addresses. Hard to tell really.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Correlation attacks and SR Tumbler wallets - SR staff please clarify</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>July 31, 2012, 12:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=32855.msg378636#msg378636">Quote from: masterblaster on July 31, 2012, 12:18 am</a></div></div><blockquote class="bbc_standard_quote">Can you determine from the block chain whether or not the intermediate wallet addresses are being reused and if there is a centralized wallet?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />#1) Yes you can look at the block chain and trace the addresses<br />#2) I do not see any central wallet being used but that does not mean there is not one.<br />#3) To determine if addresses are being reused you would have to track 1000&#039;s if not 100,000&#039;s of transactions There is no direct evidence of reuse of a wallet address.<br /><br />Because I have been playing with bitcoin server software I can tell you that it is doubtful that they would reuse an address because it is far simpler to create a new address. Add to that the fact that the current bitcoin server has the ability to move coins from one wallet address to another wallet address with out informing the bitcoin network of the move and you have a system that is difficult to follow. You may receive with one address, move the coin to another address and send from that second address. This means that the send and receive address can be different with no intermediary wallet address that the network is aware of.<br /><br />My guess is, from looking at the chain, that the coins are paid into the SR system. It then moves the coins from the paid to address to a holding address and maintains the count in a database as opposed to actually being in your bitcoin wallet. You pay someone on SR it transfers the numbers in the database and not through the bitcoin network. When the buyer extracts the coin from SR a send address is created and the coin is moved to the send address then sent out to the seller. The coins sent to the seller are not the same coins that you sent him or her as the pay out from any bitcoin wallet is always oldest coin first. <br /><br />Seeing as the received from address is always different and there is no correlation between the buying of one item and the payout of a coin I would conclude that it would be extremely difficult to identify that they came from SR let alone who bought what.<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

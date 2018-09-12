@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=14430.0" />
+		<title>Print Page - Different approach for plausible deniability.</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: gavrilov on March 07, 2012, 12:15 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Different approach for plausible deniability.</strong><br />
+				Post by: <strong>gavrilov</strong> on <strong>March 07, 2012, 12:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				For situations where plausible deniability is a top priority - e.g. if there is a risk of rubberhose cryptoanalysis if they find any encrypted data on you, no matter how hard you insist on it being just a filler rather than hidden partition - yet, there is a need to access persistent data, here is something I think could be used. Obviously, I invite comments and criticism.<br /><br />Preparation stage:<br />1. Create a Truecrypt -encrypted file container, small enough to just hold your private data (keys, contacts, bookmarks, any non-standard software you need).<br />2. Move the data to the container.<br />3. Upload the container over Tor to some anonymous storage provider.<br />4. Remove all traces of the container and data from your system.<br /><br />Now, to use:<br />1. Boot any live distro with Tor bundle and Truecrypt.<br />2. Start Tor.<br />3. Download the container<br />4. Work...<br />5. If private data were updated, dismount container and reupload it.<br />5. Clear memory &amp; reboot.<br /><br />For larger containers, step 3 could be replaced with mounting the file over nbd-http, with resulting read-only access to private data.<br /><br />Benefits:<br />- no encrypted data on any of your media,<br />- you&nbsp; only need to remember the URL and password<br />- you can access your data even if you have to build stuff from scratch<br /><br />Does it make sense?<br /><br />Max
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 07, 2012, 12:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				is a good technique 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>John Keats</strong> on <strong>March 07, 2012, 01:59 am</strong>
+			</dt>
+			<dd class="postbody">
+				What&#039;s to stop LE from demanding the password and encryption keys of the anonymous storage site once they discover you&#039;re using it?<br /><br />But on a positive note this is a really good idea. Are there any anonymous storage sites on the onion network now? I&#039;ve used something called infoencrypt.com before, which acts as encryption/decryption without any installation, however you have to save the cyphertext to a physical state.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>wretched</strong> on <strong>March 07, 2012, 02:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14430.msg140825#msg140825">Quote from: John Keats on March 07, 2012, 01:59 am</a></div></div><blockquote class="bbc_standard_quote">What&#039;s to stop LE from demanding the password and encryption keys of the anonymous storage site once they discover you&#039;re using it?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />in the US the 5th amendment 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>gavrilov</strong> on <strong>March 07, 2012, 02:21 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14430.msg140825#msg140825">Quote from: John Keats on March 07, 2012, 01:59 am</a></div></div><blockquote class="bbc_standard_quote">What&#039;s to stop LE from demanding the password and encryption keys of the anonymous storage site once they discover you&#039;re using it?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />How would they discover it? They can only see your Tor traffic, nothing more. BTW, it makes sense to have Tor installed on your main disk, and to keep some bookmarks to benign stuff, so that you have explanation for this traffic, too.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 07, 2012, 04:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				Sounds extremely secure and might be a good idea if you do any super illegal shit.<br /><br />That said, it seems like a real hassle, especially since you&#039;d have to download your info over the Tor network, which is really slow.<br /><br />My idea would be to create hidden partition on a USB drive containing Liberte.<br /><br />I&#039;d then double bag the USB drive into small baggies, then place the outer-most baggie inside a realistic-looking small fake rock, then place the rock somewhere away from my home and property outside of plain sight.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>John Keats</strong> on <strong>March 08, 2012, 04:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14430.msg140832#msg140832">Quote from: wretched on March 07, 2012, 02:05 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14430.msg140825#msg140825">Quote from: John Keats on March 07, 2012, 01:59 am</a></div></div><blockquote class="bbc_alternate_quote">What&#039;s to stop LE from demanding the password and encryption keys of the anonymous storage site once they discover you&#039;re using it?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />in the US the 5th amendment<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Lol.&nbsp; ---&gt;<br /><br />&quot;Courts have consistently held that defendants cannot be forced to divulge passwords. However, and more practically with respect to the end result, a defendant can sometimes be forced to use a decryption password—without divulging it—and then to provide the files in readable form. Whether the government can compel decryption in this manner depends on a legal doctrine called “foregone conclusion” that was first articulated in a 1976 Supreme Court ruling relating to paper documents in a tax fraud case.<br /><br />Under the “foregone conclusion” doctrine as applied to digital documents, handing over files is not considered testimony if the government already knows that the files exist and what machines they live on. And when there is no testimony, the protection of the Fifth Amendment’s self-incrimination clause is not available.&quot;<br /><br /><br />If you haven&#039;t noticed, our rights have been slowly but steadily taken away over the last decade.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>QTC</strong> on <strong>March 08, 2012, 04:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				o rly? http://blogs.wsj.com/law/2012/02/23/court-fifth-amendment-protects-suspects-from-decrypting-computers/
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 08, 2012, 04:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				It will eventually get to the supreme court. Lower courts have held people in contempt for not giving up password to hidden truecrypt volumes, even when their own experts admited they couldn&#039;t even prove there were hidden volumes. Essentially they ordered people to make ciphertext decrypt into things that would incriminate them, when they were not pleased with it decrypting into non incriminating things. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>John Keats</strong> on <strong>March 08, 2012, 04:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14430.msg142433#msg142433">Quote from: QTC on March 08, 2012, 04:07 am</a></div></div><blockquote class="bbc_standard_quote">o rly? http://blogs.wsj.com/law/2012/02/23/court-fifth-amendment-protects-suspects-from-decrypting-computers/<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That article doesn&#039;t elaborate on the situation very well... The issue is not directly one of incriminating yourself but rather whether or not law enforcement officials had a basis to suspect there was incriminating evidence on an encrypted drive. Courts have already ruled that a person can be forced to provide encryption passwords if there is a substantial enough basis. As quoted before, &quot;handing over files is not considered testimony if the government already knows that the files exist and what machines they live on.&quot;<br /><br />&quot;In another child pornography case, officials at a Vermont border crossing inspected a laptop in a car entering the United States from Canada. Upon seeing filenames suggesting illegal images, they seized the computer and arrested its owner. The laptop turned out to be encrypted, and in February 2009 a federal district court judge ordered the defendant to reveal its contents, largely on the grounds that the government already knew it contained incriminating files.&quot;<br /><br />Here officials had a basis to suspect criminal activity. In your example they did not. It&#039;s a subtle difference, but a substantial one.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>inscape</strong> on <strong>March 08, 2012, 05:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				i&#039;ve often considered only keeping any sensitive data stored on a hidden remote server in some way, and places tormail take care of the email aspect, but any recommended file-storage sites would be good..?<br /><br />but i gotta say there is &quot;something&quot; to be said for having 100% control of your information, stored, well-hidden at your discretion in your prefered format, at any given point in time....
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>gavrilov</strong> on <strong>March 08, 2012, 07:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14430.msg142499#msg142499">Quote from: inscape on March 08, 2012, 05:08 am</a></div></div><blockquote class="bbc_standard_quote">i&#039;ve often considered only keeping any sensitive data stored on a hidden remote server in some way, and places tormail take care of the email aspect, but any recommended file-storage sites would be good..?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Not sure how easy it is to get some space on freedomhosting these days, but if your data is not very large you could store it as an email attachment on tormail.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>zuckerberg</strong> on <strong>March 08, 2012, 08:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Do NOT store anything remotely - -this is asking to get man-in-the-middle attacked and have your data replaced with a trojan.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>Scot Walker</strong> on <strong>March 08, 2012, 08:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14430.msg142460#msg142460">Quote from: John Keats on March 08, 2012, 04:30 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14430.msg142433#msg142433">Quote from: QTC on March 08, 2012, 04:07 am</a></div></div><blockquote class="bbc_alternate_quote">o rly? http://blogs.wsj.com/law/2012/02/23/court-fifth-amendment-protects-suspects-from-decrypting-computers/<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That article doesn&#039;t elaborate on the situation very well... The issue is not directly one of incriminating yourself but rather whether or not law enforcement officials had a basis to suspect there was incriminating evidence on an encrypted drive. Courts have already ruled that a person can be forced to provide encryption passwords if there is a substantial enough basis. As quoted before, &quot;handing over files is not considered testimony if the government already knows that the files exist and what machines they live on.&quot;<br /><br />&quot;In another child pornography case, officials at a Vermont border crossing inspected a laptop in a car entering the United States from Canada. Upon seeing filenames suggesting illegal images, they seized the computer and arrested its owner. The laptop turned out to be encrypted, and in February 2009 a federal district court judge ordered the defendant to reveal its contents, largely on the grounds that the government already knew it contained incriminating files.&quot;<br /><br />Here officials had a basis to suspect criminal activity. In your example they did not. It&#039;s a subtle difference, but a substantial one.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This case was just ruled on on February 23 of this year stating that the fifth amendment does protect you against being forced to reveal your password due to incriminating yourself.<br /><br />http://www.ca11.uscourts.gov/opinions/ops/201112268.pdf<br /><br />Here&#039;s a link to a discussion going on about the subject:<br /><br />http://forums.truecrypt.org/viewtopic.php?t=25929
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>gavrilov</strong> on <strong>March 08, 2012, 09:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14430.msg143255#msg143255">Quote from: zuckerberg on March 08, 2012, 08:10 pm</a></div></div><blockquote class="bbc_standard_quote">Do NOT store anything remotely - -this is asking to get man-in-the-middle attacked and have your data replaced with a trojan. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Care to elaborate how you would put trojan on truecrypt container or replace it entirely without knowing the password?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>zuckerberg</strong> on <strong>March 08, 2012, 09:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Well I read that wrong&nbsp; ,and didn&#039;t notice the remote files were stored encrypted.&nbsp; &nbsp;If you store the remote files encrypted, you&#039;re probably okay.&nbsp; &nbsp;<br /><br />But why store the container remotely?&nbsp; What&#039;s the advantage here?&nbsp; You have to download it every time, you now add a pattern to your network traffic (container is of fixed size), etc etc so exactly X bytes with a precisely uniform distribution will be transferred via TCP every time you retrieve it.&nbsp; I just don&#039;t see how the benefits outweigh the risk / annoyance but maybe I&#039;m missing something. <br /><br />How is storing it remotely better than locally stored hidden volume / outer volume ?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>gavrilov</strong> on <strong>March 08, 2012, 10:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14430.msg143410#msg143410">Quote from: zuckerberg on March 08, 2012, 09:45 pm</a></div></div><blockquote class="bbc_standard_quote">But why store the container remotely?&nbsp; What&#039;s the advantage here?&nbsp; You have to download it every time, you now add a pattern to your network traffic (container is of fixed size), etc etc so exactly X bytes with a precisely uniform distribution will be transferred via TCP every time you retrieve it.&nbsp; I just don&#039;t see how the benefits outweigh the risk / annoyance but maybe I&#039;m missing something. <br /><br />How is storing it remotely better than locally stored hidden volume / outer volume ?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Again, this is not for everyone, but for those of us who are endangered by the very fact of carrying encrypted data around, and who would trade some convenience for increase in plausible deniability. If you are a dissident in Syria operated upon with hot pliers, your hope of stopping the investigation by saying you have no idea what hidden partition is may be overly optimistic.<br /><br />As for the network traffic, you could:<br /><br />- use tools like nbd-http to mount the volume remotely,<br />- use a number of volumes - each dedicated to specific data - and only download ones you need during given session,<br /><br />but generally - network traffic is transient and your adversary may or may not have access to it at the time of search/arrest, while he is almost certain to have a look at your media.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 08, 2012, 10:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				sshfs is worth looking into<br /><br />http://linux.die.net/man/1/sshfs<br /><br />Essentially it lets you treat a drive on a remote system like a local drive. Just encrypt the remote drive / container with Truecrypt or something and then you can decrypt it on your local machine do operations etc and it will all be persistent from the remote machine via sshfs. <br /><br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">SSHFS (Secure SHell FileSystem) is a file system for Linux (and other operating systems with a FUSE implementation, such as Mac OS X or FreeBSD) capable of operating on files on a remote computer using just a secure shell login on the remote computer. On the local computer where the SSHFS is mounted, the implementation makes use of the FUSE (Filesystem in Userspace) kernel module. The practical effect of this is that the end user can seamlessly interact with remote files being securely served over SSH just as if they were local files on his/her computer. On the remote computer the SFTP subsystem of SSH is used. </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>inscape</strong> on <strong>March 08, 2012, 11:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14430.msg143469#msg143469">Quote from: gavrilov on March 08, 2012, 10:12 pm</a></div></div><blockquote class="bbc_standard_quote">If you are a dissident in Syria operated upon with hot pliers, your hope of stopping the investigation by saying you have no idea what hidden partition is may be overly optimistic.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />in such a situation, and equally if you were say, caught with drugs in the US, you would have a whole other set of problems on your hand at that point regardless. if you have been invesitgated to the point where they have seized your encrypted flash/hard drive, there&#039;s a very good chance they would also be aware of any files, with tor/encrypted or not, you may be accessing regularly online. just sayin&#039;...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>John Keats</strong> on <strong>March 09, 2012, 02:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14430.msg143302#msg143302">Quote from: Scot Walker on March 08, 2012, 08:45 pm</a></div></div><blockquote class="bbc_standard_quote">This case was just ruled on on February 23 of this year stating that the fifth amendment does protect you against being forced to reveal your password due to incriminating yourself.<br /><br />http://www.ca11.uscourts.gov/opinions/ops/201112268.pdf<br /><br />Here&#039;s a link to a discussion going on about the subject:<br /><br />http://forums.truecrypt.org/viewtopic.php?t=25929<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Did you not read my post...? I&#039;m a case lawyer, I know what I&#039;m talking about. The hidden but true legal question in those articles was whether or not the police had any basis to suspect criminal activity on the laptops, i.e. sufficient suspicion to instigate a search and seize (or in this case the other way around...). The 5th amendment protects you from providing testimony against yourself (i.e. providing decryption passwords). Being forced to give up a password has been ruled as not considered testifying against yourself if the police already know that you have the child porn on said laptop.<br /><br />Do you get the difference? I hope I&#039;m explaining this well.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14430.msg143410#msg143410">Quote from: zuckerberg on March 08, 2012, 09:45 pm</a></div></div><blockquote class="bbc_standard_quote">&nbsp; <br />But why store the container remotely?&nbsp; What&#039;s the advantage here?&nbsp; You have to download it every time, you now add a pattern to your network traffic (container is of fixed size), etc etc so exactly X bytes with a precisely uniform distribution will be transferred via TCP every time you retrieve it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The encrypted storage of passwords, instawallet addresses, and pgp keys, etc, would take up very little room. The suggestion of storing it on tormail is fantastic really as the amount of traffic here would be miniscule. Sure one analyzing traffic could say, hmm he&#039;s downloading the same amount every time when he logs on to the network, but again this is so small that it could just be interpreted as e-mail.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Different approach for plausible deniability.</strong><br />
+				Post by: <strong>Nikodym</strong> on <strong>March 09, 2012, 04:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				You don&#039;t need persistence. It&#039;s convenient but unnecessary.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

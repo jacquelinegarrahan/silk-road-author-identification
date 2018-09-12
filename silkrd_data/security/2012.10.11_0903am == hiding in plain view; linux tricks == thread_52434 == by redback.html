@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=52434.0" />
+		<title>Print Page - hiding in plain view; linux tricks</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: redback on October 11, 2012, 09:03 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>hiding in plain view; linux tricks</strong><br />
+				Post by: <strong>redback</strong> on <strong>October 11, 2012, 09:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				First, this is up for discussion as I am far from a security or LE expert.<br /><br />ok, so we have a new laptop, this is what I would do<br /><br />install linux distro of your choice, mine is debian<br />set up encrypted lvm but don&#039;t use the whole disk, leave a few gigs at the end of the disk free.<br />this first bit of lvm encryption is just to stop people snooping if your laptop gets lost, the LE will see<br />your encryption and ask for the key. what happens next depends on which country you&#039;re in.<br />ie we aren&#039;t relying on it.<br /><br />after logging in add <br /><br />HISTCONTROL=ignoreboth<br /><br />to /etc/profile, then log out and log back in<br />this does two things but the thing we are interested in is it doesn&#039;t log commands to history if they start with a space. so every command you don&#039;t want logged will look like (eg) &quot; ps aux&quot;<br /><br />check it&#039;s working but running &quot; blah&quot; which will say command not found, then hit the up arrow, blah shouldn&#039;t appear.<br /><br />check out &quot; fdisk /dev/sda&quot; or whatever you should have some unallocated space at the end of the disk.<br />create a partition using the unallocated space. this is a bit trippy, but you can and will delete the partition after every time you exit the hidden vm we are about to make. deleting the partition doesn&#039;t delete data on the partition. if you create the partition exactly the same every time, your data will be in tact. <br /><br />so now run &quot; cryptsetup create temp /dev/sda5&quot; (where sda5 is the new partition you just created).<br /><br />just to test things are working as they should be,<br />&quot; mkfs,ext4 /dev/mapper/temp&quot;<br />&quot; mount /dev/mapper/temp /mnt&quot;<br />&quot; echo blah &gt; /mnt/test&quot;<br />&quot; umount /mnt&quot;<br />&quot; cryptsetup remove temp&quot;<br />&quot; fdisk /dev/sda&quot;<br />delete /dev/sda5 (or whatever)<br /><br />reboot<br /><br />log in<br />&quot; fdisk /dev/sda&quot;<br />create sda5<br />&quot; cryptsetup create temp /dev/sda5&quot;<br />&quot; mount /dev/mapper/temp /mnt&quot;<br />&quot; cat /mnt/test&quot;<br />and it should say blah.<br /><br />I guess the next step is to install the vm, but this will do for now, the trick is to be vigilant, always use a space before commands you don&#039;t want logged and always shutdown the vm and remove the cryptsetup map and delete the partition when it&#039;s not in use.<br />if you accidentally log a command, run &quot; history -c&quot;<br /><br />any thoughts?<br />&nbsp;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: hiding in plain view; linux tricks</strong><br />
+				Post by: <strong>redback</strong> on <strong>October 11, 2012, 01:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I was just thinking of the dangers of running a vm rather than dual boot, for one, with a vm it might be possible to install a key logger in the host os and log vm key strokes. and then I thought about wireless keyboards. don&#039;t use them, they can be sniffed.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: hiding in plain view; linux tricks</strong><br />
+				Post by: <strong>Bungee54</strong> on <strong>October 11, 2012, 03:26 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=52434.msg516842#msg516842">Quote from: redback on October 11, 2012, 01:30 pm</a></div></div><blockquote class="bbc_standard_quote">I was just thinking of the dangers of running a vm rather than dual boot, for one, with a vm it might be possible to install a key logger in the host os and log vm key strokes. and then I thought about wireless keyboards. don&#039;t use them, they can be sniffed.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />We&#039;##d like to correct you here :)<br />#<br />There are wireless keyboards available with AES128 &amp; 256 encryption. <br /><br />thx to the OP for&nbsp; &nbsp;the tricks !&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: hiding in plain view; linux tricks</strong><br />
+				Post by: <strong>Bungee54</strong> on <strong>October 11, 2012, 03:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Is it possible to put this all in a script which is hidden somewhere else through stegano?<br /><br />Assume we want to stay clear of any human error to recreate the &quot;hidden&quot; partition and delete all possible logs?<br /><br />One for start &amp; one for end of session?<br /><br />And this partition is not visivle to any forensic investiagtors?<br /><br />Of course the VM is also encrypted in itself :)<br /><br />But that would be a cool way probably !
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: hiding in plain view; linux tricks</strong><br />
+				Post by: <strong>redback</strong> on <strong>October 11, 2012, 05:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				i don&#039;t know of any stenography script thingy me bob, would be cool I guess, but it takes about 30 seconds once you&#039;ve typed it in a few times, and there&#039;s no fingerprint assuming you use a space every time.&nbsp; creating the partition is dead simple using fdisk, i think it&#039;s c then p or l for primary or logical, then probably a number, then enter twice, it will default to the first free block and the last, you don&#039;t need to type the blocks in, then w and q.<br /><br />seems there are still some fingerprints left behind by starting and stopping the vm in dmesg, I think syslog is OK.<br />there are for me, anyway, using kvm with nat networking, bridging would be the same.<br /><br />running &quot; dmesg -C&quot; would be a good idea as the last step, then I guess &quot; clear&quot;. On the plus side it doesn&#039;t get written to disk.<br /><br />I&#039;m thinking now dual boot if you really need to hide, apparently there is a way to have two passwords, one for a dummy boot you give the LE, and one for your hidden boot. but how that works I haven&#039;t read. I couldn&#039;t be bothered with that, anyway.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

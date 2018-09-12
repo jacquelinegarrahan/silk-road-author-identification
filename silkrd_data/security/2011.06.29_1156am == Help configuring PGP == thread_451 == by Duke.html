@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=451.0" />
+		<title>Print Page - Help configuring PGP</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Duke on June 29, 2011, 11:56 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Help configuring PGP</strong><br />
+				Post by: <strong>Duke</strong> on <strong>June 29, 2011, 11:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hi everyone,<br />Just trying to configure PGP and have become stuck.<br />I&#039;m on a new mac and am not familiar with macs.<br />I have installed the GPG for mac program and have almost gotten to the end of setup.<br />How do I view the ASCII file in the keymat directory? <br /><br />Im following the Robert Sosinski write up.<br /><br />Its probably really simple but I&#039;m not used to macs!!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help configuring PGP</strong><br />
+				Post by: <strong>Duke</strong> on <strong>June 29, 2011, 12:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ive found out that typing ls shows a file called publickey.asc<br /><br />Now I&#039;m trying to send the key to a key server but this message keeps coming up<br /><br />$ gpg --send-keys MY KEY NUMBER<br />gpg: no keyserver known (use option --keyserver)<br />gpg: keyserver send failed: Syntax error in URI<br /><br />What am I doing wrong?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help configuring PGP</strong><br />
+				Post by: <strong>Trojan Sounds</strong> on <strong>June 29, 2011, 10:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				In Linux it is:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">$ gpg --keyserver URI --send-key YOURKEY</code><br />should be the same in Mac.&nbsp; At the moment you&#039;re doing the electronic equivalent of sending a letter without an address on the envelope.&nbsp; Choose a public keyserver (GIYF) and substitute their server address for &#039;URI&#039; in the command above (and, of course, your key number for &#039;YOURKEY&#039;).
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help configuring PGP</strong><br />
+				Post by: <strong>g4bb3r</strong> on <strong>June 29, 2011, 11:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				DO NOT SEND YOUR KEY TO A KEYSERVER
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help configuring PGP</strong><br />
+				Post by: <strong>Trojan Sounds</strong> on <strong>June 30, 2011, 12:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah - quite right!&nbsp; My respectable work and personal keys are published, not my ones for &#039;other&#039; uses ;)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help configuring PGP</strong><br />
+				Post by: <strong>Dukes</strong> on <strong>July 01, 2011, 07:55 am</strong>
+			</dt>
+			<dd class="postbody">
+				So I forgot my password and tried to reset it but is seems like no emails are going to my email for some reason so now I have a new user name.<br /><br />Thanks g4bb3r for telling me not to publish my key on a key server. I&#039;m a little clueless!!! Ha!!<br /><br />So how do I find my public key???<br /><br />I have my key number ( something like A56774F5) and made it onto a ASCII file but don&#039;t know how to see it and make it available to other people on here.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help configuring PGP</strong><br />
+				Post by: <strong>Dukes</strong> on <strong>July 01, 2011, 08:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				Im at this step :<br /><br />3. After a short wait, you should have a publickey.asc file in your keymat directory. Take a look at it.<br /><br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG v1.4.8 (Darwin)<br /><br />mQGiBEe0cB0RBADScWGLrplJfLUrPBFNrBUqr8nh8AvTRcFaMt5ODK7c5G9JqNZd<br />oDSI9WcbDVl26bleda7p0ZGTraY8Dhg58JQa140Rjfq2dMNq9/Dlayl5WHEWhX2L<br />WhXz6HewOiI6T1ikDj9NBjLN72QYL/W57Zrf65IMvJxSjQEyu1BGPmbzfwCgkEC6<br />LWygY2KDliAwKQB7klj26VsEAMTdGqr1ObGwx4mu3t9Jej0+vcLBvNfKgoSB/Ewx<br />fShUNXkvxHk6yleaLKe8TlPERfhkxCj8A32AN+TJbjcwgka0gOXwCP0e2N8+niRK<br />RXkcooWRn7OOJ7Evw7dgQ722TCXJ+YsJya7mJ0oi61zsbQojrNk+7Y5P+jddm3tm<br />RHgLA/0TY4bLMK3p83As/mF3SSp8gsFTnf9QO2tsVVHrNDUpmNm3AcpLNyO5z8AX<br />C2vpuPlAjgQNLvOxCjZ2mSRq8329bnmMkoAs8u2rrBi0fVJ2FvvxLiA5CgqF2rWA<br />FKkWa2MZUUwOvlXzGzHSCJsIRYgRlMuPH6t8D7U1+sVrHfs9S7Q4Rmlyc3QgYW5k<br />IExhc3QgTmFtZSAoTWFjIEdQRyBUdXRvcmlhbCkgPG5hbWVAZG9tYWluLmNvbT6I<br /><br />How do I see my public key???????<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help configuring PGP</strong><br />
+				Post by: <strong>wicked420</strong> on <strong>July 02, 2011, 01:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				that is the top part of your public key...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help configuring PGP</strong><br />
+				Post by: <strong>Dukes</strong> on <strong>July 02, 2011, 07:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				^^^^ THats not my public key. THats copied and pasted from the PGP guide by Robert Sosiniski (sp).<br /><br />How do I get my public key????<br /><br />Whats the file called and where do I view it?<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help configuring PGP</strong><br />
+				Post by: <strong>wicked420</strong> on <strong>July 02, 2011, 03:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				you&#039;ll need to open the ascii file with your key in it, <br /><br />or in a terminal:<br /><br />cat filename.here.asc <br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help configuring PGP</strong><br />
+				Post by: <strong>Dukes</strong> on <strong>July 03, 2011, 05:01 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks wicked420.<br />Got it now!!!!<br /><br />Just have to work out how to de crypt and encrypt messgaes now!~!! 8)
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

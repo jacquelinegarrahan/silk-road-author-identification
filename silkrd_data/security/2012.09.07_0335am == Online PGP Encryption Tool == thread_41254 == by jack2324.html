@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=41254.0" />
+		<title>Print Page - Online PGP Encryption Tool</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: jack2324 on September 07, 2012, 03:35 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Online PGP Encryption Tool</strong><br />
+				Post by: <strong>jack2324</strong> on <strong>September 07, 2012, 03:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				Anyone ever tried this?&nbsp; Safe/effective?&nbsp; https://www.igolder.com/pgp/encryption/
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Online PGP Encryption Tool</strong><br />
+				Post by: <strong>pharmer_pete</strong> on <strong>September 07, 2012, 05:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				Put simply, you&#039;re uploading a message that you want to keep secret, and you&#039;re asking an untrusted third party to encrypt the message on your behalf and send you the result. This is a bad thing.<br /><br />As to the claim that they don&#039;t log or monitor activity on the site.. maybe they do, maybe they don&#039;t. They probably do.&nbsp; But even if they don&#039;t, the whole notion of encrypting messages this way is bad. Stay away.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Online PGP Encryption Tool</strong><br />
+				Post by: <strong>jack2324</strong> on <strong>September 07, 2012, 05:45 am</strong>
+			</dt>
+			<dd class="postbody">
+				Gotcha!&nbsp; The issue is I&#039;m on a Mac and haven&#039;t found a good reliable program for encrypting and decrypting :/
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Online PGP Encryption Tool</strong><br />
+				Post by: <strong>jack2324</strong> on <strong>September 07, 2012, 06:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				Done.&nbsp; I feel like an idiot, but what do I do now?&nbsp; Like how do I take a sellers PGP and send them a shipping address?&nbsp; <br /><br />I&#039;m generally pretty good with computers, but encryption is not my specialty... 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Online PGP Encryption Tool</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>September 07, 2012, 11:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=41254.msg453744#msg453744">Quote from: jack2324 on September 07, 2012, 06:44 am</a></div></div><blockquote class="bbc_standard_quote">Done.&nbsp; I feel like an idiot, but what do I do now?&nbsp; Like how do I take a sellers PGP and send them a shipping address?&nbsp; <br /><br />I&#039;m generally pretty good with computers, but encryption is not my specialty...<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Generate a PGP keypair, it comes in two parts: the public key and the secret key.&nbsp; The public key is the part you provide to people you want to be able to encrypt messages to you and the secret key (also called the private key) is the part you guard with your life.<br /><br />I suggest you read Guru&#039;s post on correctly labelling a PGP key before you make it:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=33566.0<br /><br />To generate the key open GPG Keychain Access and click on Key and then Generate.&nbsp; Leave it at &quot;RSA and RSA (default)&quot; and select &quot;4096&quot; in the drop down menu.&nbsp; Change the &quot;Full Name&quot; field to your SR and/or forum username (as per Guru&#039;s post).&nbsp; Put in an obviously fake email or a tormail.org address.&nbsp; Don&#039;t worry about the comment.<br /><br />You will need to import a vendor&#039;s key to be able to encrypt messages to them.<br /><br />A good list of the PGP and GPG related threads is here:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=38861.0<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Online PGP Encryption Tool</strong><br />
+				Post by: <strong>jack2324</strong> on <strong>September 07, 2012, 01:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				OK so I&#039;ve made my key, and have vendors keys off of Keyserver and SR.&nbsp; Now how do I encrypt a message into them?&nbsp; I&#039;m really have trouble with it because so many of the guides are written for windows&nbsp; ???
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Online PGP Encryption Tool</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>September 07, 2012, 02:24 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=41254.msg454054#msg454054">Quote from: jack2324 on September 07, 2012, 01:49 pm</a></div></div><blockquote class="bbc_standard_quote">OK so I&#039;ve made my key, and have vendors keys off of Keyserver and SR.&nbsp; Now how do I encrypt a message into them?&nbsp; I&#039;m really have trouble with it because so many of the guides are written for windows&nbsp; ???<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If you have set the hotkeys that Guru posted you can type your message in TextEdit, highlight it (Command+A) and then encrypt it.&nbsp; You should be prompted for which keys to encrypt it to, include the vendors key and your own (if you want to decrypt it later).<br /><br />The GPGTools website also has instructions on how to use it and some videos too.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Online PGP Encryption Tool</strong><br />
+				Post by: <strong>Shroomeister</strong> on <strong>September 07, 2012, 02:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=41254.msg454054#msg454054">Quote from: jack2324 on September 07, 2012, 01:49 pm</a></div></div><blockquote class="bbc_standard_quote">OK so I&#039;ve made my key, and have vendors keys off of Keyserver and SR.&nbsp; Now how do I encrypt a message into them?&nbsp; I&#039;m really have trouble with it because so many of the guides are written for windows&nbsp; ??? <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div> <br />&nbsp;Type your uber secret message in TextEdit (or any notepad app)<br />&nbsp;<br />&nbsp;Right click &gt; Highlight ubersecret message &gt;&gt;&gt;&gt; bottom of your right click context menu find &quot;services&quot; &gt;&gt;&gt;&gt;&gt;&quot;Encrypt selection&quot; &gt;&gt;&gt;choose the person you want to be able to decrypt it &gt;&gt;&gt;&gt;&gt;highlight and copy output&gt;&gt;&gt;paste said output into your message.<br />&nbsp;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Online PGP Encryption Tool</strong><br />
+				Post by: <strong>jack2324</strong> on <strong>September 07, 2012, 05:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ahhhhh TextEdit!&nbsp; I feel very stupid at the moment because I was using Notes.&nbsp; When I use TextEdit everything works except for encrypting for some reason.&nbsp; Like I can insert fingerprint, insert key, sign, verify, etc but for some reason nothing happens when I do shift-control-e or shift-control-d
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Online PGP Encryption Tool</strong><br />
+				Post by: <strong>jack2324</strong> on <strong>September 08, 2012, 02:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=41254.msg454913#msg454913">Quote from: Guru on September 08, 2012, 12:20 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=41254.msg454326#msg454326">Quote from: jack2324 on September 07, 2012, 05:40 pm</a></div></div><blockquote class="bbc_alternate_quote">Ahhhhh TextEdit!&nbsp; I feel very stupid at the moment because I was using Notes.&nbsp; When I use TextEdit everything works except for encrypting for some reason.&nbsp; Like I can insert fingerprint, insert key, sign, verify, etc but for some reason nothing happens when I do shift-control-e or shift-control-d<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />ARe those shortcut keys selected (i.e. are the boxes checked?)<br /><br />Are those keys assigned to other programs, by any chance? <br /><br />Guru<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br /><br />Not sure what happened because I didn&#039;t change anything, but after turning my computer off last night and back on this morning it works!&nbsp; Thanks for all your help!
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

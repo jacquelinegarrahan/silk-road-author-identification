@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=210242.0" />
+		<title>Print Page - New research paper: Content and popularity analysis of Tor hidden services</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: astor on September 05, 2013, 10:51 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 05, 2013, 10:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The hits just keep on coming. And by &quot;hits&quot; I mean data showing how weak the Tor network is.<br /><br />http://cryptome.org/2013/09/tor-analysis-hidden-services.pdf<br /><br />ABSTRACT<br /><br />Tor hidden services allow running Internet services while<br />protecting the location of the servers. Their main purpose<br />is to enable freedom of speech even in situations in which<br />powerful adversaries try to suppress it. However, providing<br />location privacy and client anonymity also makes Tor hid-<br />den services an attractive platform for every kind of imagin-<br />able shady service. The ease with which Tor hidden services<br />can be set up has spurred a huge growth of anonymously<br />provided Internet services of both types. In this paper we<br />analyse the landscape of Tor hidden services. We have stud-<br />ied Tor hidden services after collecting 39824 hidden service<br />descriptors on 4th of Feb 2013 by exploiting protocol and im-<br />plementation flaws in Tor: we scanned them for open ports;<br />in the case of HTTP services, we analysed and classified<br />their content. We also estimated the popularity of hidden<br />services by looking at the request rate for hidden service de-<br />scriptors by clients. We found that while the content of Tor<br />hidden services is rather varied, the most popular hidden<br />services are related to botnets.<br /><br /><br />They turned the Trawling for Hidden Services attack on the users, as we predicted could be done.<br /><br /><br />5. TRACKING CLIENTS<br /><br />In [6], the authors used a specific traffic signature for op-<br />portunistic deanonymisation of hidden services. The tech-<br />nique they used can be easily modified for opportunistic<br />deanonymisation of Tor clients.<br /><br />Assume that an attacker controls a responsible HS direc-<br />tory5 of a hidden service. Whenever it receives a descriptor<br />request for that hidden service, it sends it back encapsulated<br />in a specific traffic signature which will be then forwarded<br />to the client via its Guard node. With some probability, the<br />client’s Guard node is in the set of Guards controlled by the<br />attacker. Whenever an attacker’s Guard receives the traffic<br />signature, it can immediately reveal the IP address of the<br />client.<br /><br />This attack has several important implications. Suppose<br />that we can categorize users on Silk Road into buyers and<br />sellers. Buyers visit Silk Road occasionally while sellers visit<br />it periodically to update their product pages and check on<br />orders. Thus, a seller tends to have a specific pattern which<br />allows his identification. Catching even a small number of<br />Silk Road sellers can seriously spoil Silk Road’s reputation<br />among other sellers.<br /><br />As another application, one can collect IP addresses of<br />clients of a popular hidden service and compute a map rep-<br />resenting their geographical location. We have computed<br />such a map for one of the Goldnet hidden services – in Fig-<br />ure 3.<br /><br /><br />An informative commentary on the mailing list:<br /><br />[T]he paper has relevance beyond Tor network flaws:<br /><br />- It exposes an estimate on how manny hidden services existed at the time of the study.<br /><br />- It gives a breakdown of what services/some of the services those hidden services offered.<br /><br />- It categories HTTP(S) services by content type, which is interesting.<br /><br />- It describes what resources they required to perform the attack, which sound relatively modest.<br /><br />- It highlights the botnet and botnet command and control activity on Tor.<br /><br />- It describes server configuration issues that allowed easily correlating the shared hosting of many services<br /><br />- It describes server configuration issues that allowed easily deanonymizing the true IP Address of some hidden services.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>Wadozo</strong> on <strong>September 05, 2013, 11:05 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I get the feeling that Tor is fast reaching it&#039;s life expectancy. I hope it isn&#039;t but it&#039;s certainly getting a lot of unwanted attention recently. I really hope a more secure protocol will be released asap.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 05, 2013, 11:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210242.msg1518928#msg1518928">Quote from: astor on September 05, 2013, 10:51 pm</a></div></div><blockquote class="bbc_standard_quote">Whenever an attacker’s Guard receives the traffic<br />signature, it can immediately reveal the IP address of the<br />client.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />So basically if you have a few trusted entry guards in your EntryNodes (or bridges) option in Tor it will never reveal your IP address when connecting to hidden services.<br />Or is it enough to analyze the traffic between you and the entry guard?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>phunky</strong> on <strong>September 06, 2013, 12:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				The silver lining is that different parties in the government itself make important use of Tor, for legitimate purposes.&nbsp; So this is going to hurt the government as well, though we probably won&#039;t hear much about those aspects.&nbsp; Some parties in government have an interest in collecting and identifying everything, other parties have an interest in protecting the service that Tor supposes.&nbsp; &nbsp;<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 06, 2013, 12:16 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210242.msg1518942#msg1518942">Quote from: Wadozo on September 05, 2013, 11:05 pm</a></div></div><blockquote class="bbc_standard_quote">I get the feeling that Tor is fast reaching it&#039;s life expectancy. I hope it isn&#039;t but it&#039;s certainly getting a lot of unwanted attention recently. I really hope a more secure protocol will be released asap. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I had that feeling about a year or two ago. Today I feel like it is on life support in the hospice. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>sourman</strong> on <strong>September 06, 2013, 12:32 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah, I had those thoughts when I checked SR a few months after it opened to see that it was still there. Once tor came of age and got all that attention, it was a matter of time before it had to either adapt or be replaced. Tor can survive, but not in its present form. It certainly feels that way as of 2013...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>Totalpay</strong> on <strong>September 06, 2013, 12:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks Astor I really need to watch my ass now, might change some thing&#039;s around.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 06, 2013, 12:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210242.msg1518980#msg1518980">Quote from: Bazille on September 05, 2013, 11:31 pm</a></div></div><blockquote class="bbc_standard_quote">So basically if you have a few trusted entry guards in your EntryNodes (or bridges) option in Tor it will never reveal your IP address when connecting to hidden services.<br />Or is it enough to analyze the traffic between you and the entry guard?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Getting persistent entry guards is one of the best things you can do. kmf and I have been saying that for months, at least since the Trawling for Hidden Services paper came out, and as recently as a few days ago:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=209514.msg1512060#msg1512060<br /><br />That being said, if the adversary controls an AS or IXP between you and your entry guard / bridge, you can still be screwed (see the link above).<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>sourman</strong> on <strong>September 06, 2013, 01:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;d start building a list of working bridges, specifically those located outside the US. We all know the NSA can set up their own bridges wherever they want and that so much data crosses the US that the point is moot, but let&#039;s not make this easy for them.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>samesamebutdifferent</strong> on <strong>September 06, 2013, 09:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				sub&#039;d
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 06, 2013, 12:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210242.msg1519121#msg1519121">Quote from: sourman on September 06, 2013, 01:00 am</a></div></div><blockquote class="bbc_standard_quote">I&#039;d start building a list of working bridges, specifically those located outside the US. We all know the NSA can set up their own bridges wherever they want and that so much data crosses the US that the point is moot, but let&#039;s not make this easy for them.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I don&#039;t think normal bridges give you any advantage over public entry guards when the NSA is involved. Normal bridges only help against ISP&#039;s which block Tor. In China bridges get blocked easily, and they don&#039;t even have to collect a list for that. They just do some deep packet inspection and block the bridges automatically the first time a Chinese user connects to it.<br /><br />China can&#039;t block obfs3 bridges easily however. So if you use bridges, use obfs3 bridges. China probably spends a lot more money against Tor than the NSA.<br /><br />Instead of using obfs3 bridges you could use a VPN in a &quot;safe&quot; country where the internet cables,and the internet cables of the surrounding countries, are out of reach of the NSA/GCHQ. Connect Tor through the VPN, and maybe connect Bittorrent through the VPN too (but not through Tor), to create cover traffic, making traffic analysis harder. It would mostly look like you are hiding from the copyright mafia. Don&#039;t use PPTP VPN&#039;s, as they may be easily decryptable by NSA.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 06, 2013, 01:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210242.msg1520192#msg1520192">Quote from: Bazille on September 06, 2013, 12:19 pm</a></div></div><blockquote class="bbc_standard_quote">Instead of using obfs3 bridges you could use a VPN in a &quot;safe&quot; country where the internet cables,and the internet cables of the surrounding countries, are out of reach of the NSA/GCHQ. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Unfortunately for US, UK, Swedish, Chinese and Iranian citizens, and probably many others, there is no way to reach the wider internet without getting tapped. Only thing I can think of is to build an alternate, community-controlled network infrastructure. Something like a global meshnet that actually works.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 06, 2013, 01:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				@astor<br />Yes, but they can hide that they are using Tor and make traffic analysis harder. For that they could connect to a VPN where the cables inside the VPN country are not getting sniffed by the NSA. There should be other nearby countries with Tor relays, where the cables are not compromised by the NSA either. By that they can hide that they are using Tor. <br /><br />To make traffic analysis even harder they can download copyrighted torents over the clearnet through the VPN at the same time. Or even better, keep down and uploading copyrighted/porn torrents at low speed all day long through the VPN, or at least some time before you start using Tor and after you stopped using Tor through the VPN.<br /><br />I also don&#039;t consider Sweden a safe country for Tor through swedish VPN. Wouldn&#039;t surprise me if they automatically submit all Tor user data coming out of a VPN to the USA. And of course lots of Sweden&#039;s traffic goes through the UK, the #1 NSA outpost in Europe. The safest country for a VPN would probably be China, too bad they block all Tor traffic.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 06, 2013, 11:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210242.msg1520259#msg1520259">Quote from: Bazille on September 06, 2013, 01:48 pm</a></div></div><blockquote class="bbc_standard_quote">@astor<br />Yes, but they can hide that they are using Tor and make traffic analysis harder. For that they could connect to a VPN where the cables inside the VPN country are not getting sniffed by the NSA. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />But the connection between the user and the VPN server could still be sniffed. Let&#039;s say I live in Boulder, CO, and there&#039;s an IXP in Denver. Due to the hierarchical nature of the internet topology, my ISP&#039;s upstream link goes through that IXP. Every connection from every subscriber of my ISP goes through that IXP. So it doesn&#039;t matter if I&#039;m using a bridge that the NSA doesn&#039;t recognize as a Tor entry point, or the obfs3 protocol which they can&#039;t DPI, or a VPN server in Argentina. If they control SR&#039;s HSDir and the IXP, then when I fetch the SR descriptor, they can include a traffic signature that is detected by the IXP, which sees the IP address that the packets are headed to, which is me. It doesn&#039;t matter how many layers of encryption I add, or how many VPNs or proxy hops I add, as long as the IXP is between me and the first hop. Theoretically the NSA could inject a traffic signature that is detectable by the IXP through all those hops and layers of encryption.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">To make traffic analysis even harder they can download copyrighted torents over the clearnet through the VPN at the same time. Or even better, keep down and uploading copyrighted/porn torrents at low speed all day long through the VPN, or at least some time before you start using Tor and after you stopped using Tor through the VPN.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes, I think this could help. When the Chaos Computer Club published their results of Tor circuit fingerprinting, I read that it could be trivially defeated by loading pages in another tab.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>~o~WaterWalker~o~</strong> on <strong>September 07, 2013, 12:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				what this is shouting out is that we all have to hang out in coffee houses or anywhere else handing out wifi
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 07, 2013, 10:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				@astor<br />Right. So simply using a VPN without additional measures doesn&#039;t really prevent traffic analysis.<br /><br />However there is probably a lot more people using VPN than people using Tor, and using a VPN may be less suspicious. So to do traffic analysis they have to compare +2 million(?) VPN connections with the 100k(?) Tor connections they see. Using a VPN without torrent cover traffic would add at least a little bit more anonymity while using Tor, theoretically. Then again they are probably able to decrypt PPTP VPN&#039;s easily, because there&#039;s a NSA flaw in the encryption used by PPTP. And most VPN&#039;s may use PPTP? So they may know exactly what someone is doing when using a PPTP based VPN, and can concentrate on traffic analysis of the 1 million users who use other types of VPN&#039;s.<br /><br />Also, if you do use Tor through VPN, and the NSA understands that you are using Tor through VPN, then that of course makes you even more suspicious. So if you use Tor through VPN, make sure you do it right (cover traffic). And preferably stay away from clearnet sites while doing so.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>Bungee54</strong> on <strong>September 07, 2013, 06:21 pm</strong>
+			</dt>
+			<dd class="postbody">
+				sub
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>sourman</strong> on <strong>September 07, 2013, 06:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">To make traffic analysis even harder they can download copyrighted torents over the clearnet through the VPN at the same time. Or even better, keep down and uploading copyrighted/porn torrents at low speed all day long through the VPN, or at least some time before you start using Tor and after you stopped using Tor through the VPN.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I always wondered about traffic padding and tor. I&#039;m not talking about hiding tor use over a VPN; running a slow download of a large file while browsing tor should at least somewhat protect you from timing correlation attacks and anything similar, even if you are directly connected to tor.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>~o~WaterWalker~o~</strong> on <strong>September 08, 2013, 01:39 am</strong>
+			</dt>
+			<dd class="postbody">
+				so the way you put it, the best cover would be a system is connecting all over the place on the clearnet.. perhaps setting up a game server for whatever old school game still around that allows that and is still popular enough to grab traffic from all over the place<br /><br />which means you have to ditch the main ISPs and get some kind of line that allows you to do what you want.. which probably puts you on the &#039;person of interest&#039; list..&nbsp; damned if you do...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: New research paper: Content and popularity analysis of Tor hidden services</strong><br />
+				Post by: <strong>Jack N Hoff</strong> on <strong>September 08, 2013, 01:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				How would the US government hide their secretive and shady online activities if TOR was gone?
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

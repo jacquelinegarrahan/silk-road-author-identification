@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=210723.0" />
+		<title>Print Page - IPSEC: Firsthand account of NSA sabotage of Internet security standards</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Bazille on September 08, 2013, 11:10 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>IPSEC: Firsthand account of NSA sabotage of Internet security standards</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 08, 2013, 11:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				http://boingboing.net/2013/09/08/firsthand-account-of-nsa-sabot.html<br />http://thread.gmane.org/gmane.technology.liberationtech/1185<br /><br />On the Cryptography mailing list, John Gilmore (co-founder of pioneering ISP The Little Garden and the Electronic Frontier Foundation; early Sun employee; cypherpunk; significant contributor to GNU/Linux and its crypto suite; and all-round Internet superhero) describes his interactions with the NSA and several obvious NSA stooges on the IPSEC standardization working groups at the Internet Engineering Task Force. It&#039;s an anatomy of how the NSA worked to undermine and sabotage important security standards. For example, &quot;NSA employees explicitly lied to standards committees, such as that for cellphone encryption, telling them that if they merely debated an actually-secure protocol, they would be violating the export control laws unless they excluded all foreigners from the room (in an international standards committee!).&quot; <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">&nbsp; &nbsp; * NSA employees participted throughout, and occupied leadership roles in the committee and among the editors of the documents<br /><br />&nbsp; &nbsp; * Every once in a while, someone not an NSA employee, but who had longstanding ties to NSA, would make a suggestion that reduced privacy or security, but which seemed to make sense when viewed by people who didn&#039;t know much about crypto. For example, using the same IV (initialization vector) throughout a session, rather than making a new one for each packet. Or, retaining a way to for this encryption protocol to specify that no encryption is to be applied.<br /><br />&nbsp; &nbsp; * The resulting standard was incredibly complicated -- so complex that every real cryptographer who tried to analyze it threw up their hands and said, &quot;We can&#039;t even begin to evaluate its security unless you simplify it radically&quot;. See for example:<br /><br />&nbsp; &nbsp; https://www.schneier.com/paper-ipsec.html<br /><br />&nbsp; &nbsp; That simplification never happened.<br /><br />&nbsp; &nbsp; The IPSEC standards also mandated support for the &quot;null&quot; encryption option (plaintext hiding in supposedly-encrypted packets), for 56-bit Single DES, and for the use of a 768-bit Diffie-Hellman group, all of which are insecure and each of which renders the protocol subject to downgrade attacks.<br /><br />&nbsp; &nbsp; * The protocol had major deployment problems, largely resulting from changing the maximum segment size that could be passed through an IPSEC tunnel between end-nodes that did not know anything about IPSEC. This made it unusable as a &quot;drop-in&quot; privacy improvement.<br /><br />&nbsp; &nbsp; * Our team (FreeS/WAN) built the Linux implementation of IPSEC, but at least while I was involved in it, the packet processing code never became a default part of the Linux kernel, because of bullheadedness in the maintainer who managed that part of the kernel. Instead he built a half-baked implementation that never worked. I have no idea whether that bullheadedness was natural, or was enhanced or inspired by NSA or its stooges. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: IPSEC: Firsthand account of NSA sabotage of Internet security standards</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 08, 2013, 11:42 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Interesting read. Another nice tidbit:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">To this day, no mobile telephone standards committee has considered<br />or adopted any end-to-end (phone-to-phone) privacy protocols.&nbsp; This is<br />because the big companies involved, huge telcos, are all in bed with<br />NSA to make damn sure that working end-to-end encryption never becomes<br />the default on mobile phones.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: IPSEC: Firsthand account of NSA sabotage of Internet security standards</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 09, 2013, 10:25 am</strong>
+			</dt>
+			<dd class="postbody">
+				Some German hacker built an encrypted ISDN phone in the 90s.<br />Less than a year later he got &quot;suicided&quot;, probably by the same criminal organization which declared global war against internet cryptography.<br /><br />https://en.wikipedia.org/wiki/Tron_%28hacker%29#Cryptophon
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: IPSEC: Firsthand account of NSA sabotage of Internet security standards</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 09, 2013, 07:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Oh yeah, does anyone remember this?<br /><br />http://www.theregister.co.uk/2010/12/15/openbsd_backdoor_claim/<br /><br />I guess that&#039;s more believable now.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: IPSEC: Firsthand account of NSA sabotage of Internet security standards</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 10, 2013, 04:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				anybody remember when a Debian developer accidentally ruined their PRNG and made all SSL certificates generated by Debian totally breakable (and lots of other Debian crypto breakable as well). <br /><br />http://research.swtch.com/openssl<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote"> Last week, Debian announced that in September 2006 they accidentally broke the OpenSSL pseudo-random number generator while trying to silence a Valgrind warning. One effect this had is that the ssh-keygen program installed on recent Debian systems (and Debian-derived systems like Ubuntu) could only generate 32,767 different possible SSH keys of a given type and size, so there are a lot of people walking around with the same keys.<br /><br />Many people have had fingers pointed at them, but it is not really interesting who made the mistake: everyone makes mistakes. What&#039;s interesting is the situation that encouraged making the mistake and that made it possible not to notice it for almost two years.<br /><br />To do that, you have to understand the code involved and the details of the bug; those require understanding a little bit about entropy and random number generators.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />In the security community right now a lot of people thinking this may have been covert operation by the NSA. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: IPSEC: Firsthand account of NSA sabotage of Internet security standards</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>September 10, 2013, 05:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210723.msg1527714#msg1527714">Quote from: kmfkewm on September 10, 2013, 04:27 am</a></div></div><blockquote class="bbc_standard_quote">anybody remember when a Debian developer accidentally ruined their PRNG and made all SSL certificates generated by Debian totally breakable (and lots of other Debian crypto breakable as well). <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Yeah, even assuming it was just stupidity and not malice, the fact that it persisted for so long had to be frightfully encouraging to anyone watching from the sidelines and wanting to water down something Open Source.<br /><br />The OpenBSD thing struck me as bizarre when it happened, but it never resulted in any hard conclusions that I saw, just allegations.&nbsp; &nbsp;Hard to judge, because Theo endears himself to so many.&nbsp; &nbsp;Much of my confidence in OpenBSD comes from the fact that Theo pisses off *so* many people.&nbsp; The fact that we don&#039;t see a root OpenBSD exploit a week is a testament to their small TCB and codebase, because he&#039;s definitely spent the past 10-15 years motivating people to prove him wrong.<br /><br />While backdoors can definitely be inserted in open source projects, they&#039;ve been few and far between.&nbsp; I can only think of a handful off the top of my head in the past 20 years (barring just plain stupid examples of folks hacking source repositories, etc).&nbsp; &nbsp; &nbsp;And I can think of a million examples of ways you&#039;d get owned by not upgrading to the latest version of whatever.&nbsp; &nbsp; <br /><br />Not upgrading vulnerable software because of fears of backdoors in the newest version is almost always the wrong decision.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: IPSEC: Firsthand account of NSA sabotage of Internet security standards</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 10, 2013, 03:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=210723.msg1527778#msg1527778">Quote from: ECC_ROT13 on September 10, 2013, 05:18 am</a></div></div><blockquote class="bbc_standard_quote">The OpenBSD thing struck me as bizarre when it happened, but it never resulted in any hard conclusions that I saw, just allegations.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />My understanding is that a thorough code review of that time period found no malicious code, but the more important point is that three letter agencies have been actively trying to subvert internet encryption for a long time, as far back as 1999. In the OpenBSD case, they wanted to break a VPN that other government agencies were using, I believe.<br /><br />This all started with the fight against Zimmerman and PGP. They lost in the courts, so they turned to technical subversion, and have been trying to do it ever since, although they haven&#039;t always succeeded.<br /><br />Of course, they still use the law when it is handy, such as making people sign 10 year NDAs and using secret courts cover up their illegal activities.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: IPSEC: Firsthand account of NSA sabotage of Internet security standards</strong><br />
+				Post by: <strong>comsec</strong> on <strong>September 11, 2013, 02:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				The OpenBSD thing, was a sabotage of the local CVS they were using to build a custom project for the FBI, which I believe was a VPN box. The feds wanted the ability to spy on their own employees so demanded a backdoor and the guy obliged, but he didn&#039;t get his changes into the main repository. Regardless they did a full Ipsec stack check to make sure and found nothing, but alas with the criminal behavior of the NSA lately anything is possible. <br /><br />Lot&#039;s of talk between non tinfoil hat developers on various IRC/Hacker News/Mailing lists that basically every single open source project is likely using sabotaged compilers with built in doors and trojans.&nbsp; http://www.dwheeler.com/trusting-trust/<br /><br />Deterministic building is now mandatory for the Tor project, I see all the operating systems starting to do this. Compiler jacking is pretty dangerous, you could possible have access to a billion+ machines. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: IPSEC: Firsthand account of NSA sabotage of Internet security standards</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>September 11, 2013, 03:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				The concept of compiler backdoors is obviously a worst case for everyone.&nbsp; No disagreement there.<br /><br />We tend to think of backdoors in code in terms of simple bypasses of checks, or obviously screwing with seed values to PRNGs.&nbsp; &nbsp;The clever way to do it at an NSA level would be with very small changes to multiple interrelated components and libraries that added up to a weakness.&nbsp; &nbsp;Nowhere near a full flaw or vulnerability, but just a weakness that would give them leverage to bring the &quot;nearly-impossible&quot; down to a level like &quot;somewhat-difficult&quot;.&nbsp; &nbsp;Especially if they happen to be very good at whatever specific kind of &quot;somewhat-difficult&quot; task that is.&nbsp; <br /><br />But since we don&#039;t really know exactly what is easy/hard/hardest for NSA, it&#039;s difficult to identify all the ways that code could be changed to give them leverage.&nbsp; That&#039;s specifically why the Snowden disclosures piss them off so much.&nbsp; Sure, the public drama has to suck, but the bigger threat is that all of their adversaries can make inferences just like we&#039;re doing (but augmented with crib sheets of their own intelligence to help out) to identify where NSA/etc may have focused their efforts, and make better guesses as to what is easy/hard/fast/slow for them to accomplish.<br /><br />The good news?&nbsp; &nbsp;Snowden&#039;s disclosures have caused much of the security community to feel like they&#039;ve been complacent and naive.&nbsp; That&#039;s a fantastic motivator to build systems that withstand the sorts of threats that we&#039;re seeing.&nbsp; &nbsp;Less naive reliance on centralized directories and services (i.e. CA&#039;s).&nbsp; Decentralization is really the only defense against NSL&#039;s.&nbsp; &nbsp;<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

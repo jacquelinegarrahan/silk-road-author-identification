@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=142.0" />
+		<title>Print Page - Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: DigitalAlch on June 20, 2011, 06:15 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>DigitalAlch</strong> on <strong>June 20, 2011, 06:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				Scrubbing Meta Data from Images in Ubuntu<br /><br />This is pretty vital.&nbsp; I have notice people are uploading images a lot, both for avatars and in posting items. Something you may not know is that most digital cameras add hidden data called &nbsp;EXIF data, and on top of that most computers add in there own metadata such as IPTC and XMP. This data can reveal alot of data you do not want others to have. As such we should scrub this data before uploading. You should all be accessing this website (and all of the DeepWeb) through a VirtualMachine running Ubuntu (I&#039;ll write a guide on that later). <br /><br />So launch up Ubuntu, go to shell (Applications -&gt; Accessory -&gt; Terminal) and type:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo apt-get install exiv2</code>(Press y then enter when asked)<br />This will install jhead, the program that will accomplish this.&nbsp; Once you have installed it you can either find out more info on it by typing:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">man exiv2</code>or just get down to businesses. To do this we will move to the directory our images are in:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">cd Pictures</code>(this moves to folder called pictures) IF you are wondering what folder are in your current directory you can type <br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">ls</code>Now we can either remove the meta data from all images:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">exiv2 -d a *.jpg</code>Keep in mind if you have any .JPG / .JPEG / .jpeg remember to run for each one. Example:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">jexiv2 -d a *.JPEG</code><br />Peace,<br />DigitalAlch
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>paranoiddude</strong> on <strong>July 10, 2011, 02:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				How do you do this with Windows 7?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Kind Bud</strong> on <strong>July 11, 2011, 01:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				linux <br />exiv2 rm *.* for the entire picture folder<br /><br />windows use<br />jpg scruber<br />http://jpeg-scrubber.com (CAUTION clear web alert)<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>rake</strong> on <strong>July 11, 2011, 01:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg6168#msg6168">Quote from: Kind Bud on July 11, 2011, 01:50 am</a></div></div><blockquote class="bbc_standard_quote">linux <br />exiv2 rm *.* for the entire picture folder<br /><br />windows use<br />jpg scruber<br />http://jpeg-scrubber.com (CAUTION clear web alert)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Nice little program.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>RedRocket</strong> on <strong>July 11, 2011, 10:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				thanks mate,<br /><br />god ive learnt so much in the past few weeks,things i would never have thought of in a million years,in regards to security.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>OneOfMany</strong> on <strong>July 12, 2011, 07:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg5942#msg5942">Quote from: paranoiddude on July 10, 2011, 02:31 am</a></div></div><blockquote class="bbc_standard_quote">How do you do this with Windows 7?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I&#039;m sure any number of exif utilities exist for Windows. It&#039;s just a matter of finding one you like. Alternatively a MacGyver method for any OS is to save it in a format that doesn&#039;t include exif data (BMP or PNG would be good choices), close it, open the new file, and save back to jpeg.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Kind Bud</strong> on <strong>July 21, 2011, 04:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg6597#msg6597">Quote from: OneOfMany on July 12, 2011, 07:23 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg5942#msg5942">Quote from: paranoiddude on July 10, 2011, 02:31 am</a></div></div><blockquote class="bbc_alternate_quote">How do you do this with Windows 7?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I&#039;m sure any number of exif utilities exist for Windows. It&#039;s just a matter of finding one you like. Alternatively a MacGyver method for any OS is to save it in a format that doesn&#039;t include exif data (BMP or PNG would be good choices), close it, open the new file, and save back to jpeg.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg6169#msg6169">Quote from: rake on July 11, 2011, 01:57 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg6168#msg6168">Quote from: Kind Bud on July 11, 2011, 01:50 am</a></div></div><blockquote class="bbc_alternate_quote">windows use<br />jpg scruber<br />http://jpeg-scrubber.com (CAUTION clear web alert)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>CannaGrrl</strong> on <strong>August 12, 2011, 02:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you for this guide! 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>btcfreedom</strong> on <strong>August 24, 2011, 01:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				+1<br /><br />very nice tutorial digi <br /><br />i do almost the exact same thing with my Ubuntu when using it on Tor.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Joy</strong> on <strong>August 24, 2011, 12:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Nice mate &amp; thank u.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>biscuitbase</strong> on <strong>August 26, 2011, 09:55 am</strong>
+			</dt>
+			<dd class="postbody">
+				Great guide, thanks!&nbsp; 8)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>CaptainJohnny</strong> on <strong>August 31, 2011, 06:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Do .png files have such metadata?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>CaptainJohnny</strong> on <strong>August 31, 2011, 06:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg566#msg566">Quote from: DigitalAlch on June 20, 2011, 06:15 am</a></div></div><blockquote class="bbc_standard_quote">You should all be accessing this website (and all of the DeepWeb) through a VirtualMachine running Ubuntu (I&#039;ll write a guide on that later). <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Excellent guide, why not mention this: http://dee.su/liberte
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>-Bish0p-</strong> on <strong>September 01, 2011, 11:04 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Great tut.&nbsp; I was aware of Exif data but was unaware it was so easy to get rid of.<br /><br />Looking forward to your VM tutorial.&nbsp; I currently do not use a VM because I am concerned about how it will affect my machine performance.&nbsp; I suppose it is time to try it out.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>pulpfictionbro</strong> on <strong>September 27, 2011, 01:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				I dunno if this removes all the metadata or not but in Windows 7 you can right click on the image -&gt; Properties -&gt; Details -&gt; Remove properties and information (way at the bottom of the dialog box)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>g4bb3r</strong> on <strong>November 08, 2011, 08:32 am</strong>
+			</dt>
+			<dd class="postbody">
+				Or you can save the image as PNG. PNG doesn&#039;t support any sort of EXIF data.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Dongville</strong> on <strong>November 10, 2011, 08:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg43673#msg43673">Quote from: g4bb3r on November 08, 2011, 08:32 am</a></div></div><blockquote class="bbc_standard_quote">Or you can save the image as PNG. PNG doesn&#039;t support any sort of EXIF data.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Careful with this. PNG does not officially support EXIF data, but the PNG specification absolutely allows metadata to be stored in an image. Whether or not this is common practice, I don&#039;t know, but please be safe.<br /><br />For more information (really nerdy), see the PNG spec at: http://www.w3.org/TR/PNG/ (Warning: clearweb). Relevant section 11.3.4.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>iFry</strong> on <strong>November 11, 2011, 07:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg6168#msg6168">Quote from: Kind Bud on July 11, 2011, 01:50 am</a></div></div><blockquote class="bbc_standard_quote">linux <br />exiv2 rm *.* for the entire picture folder<br /><br />windows use<br />jpg scruber<br />http://jpeg-scrubber.com (CAUTION clear web alert)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thank you so much for the universal scrubber!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>drugfather</strong> on <strong>December 27, 2011, 02:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				I use an image upload site called anony.ws.&nbsp; They scrub all images of exif data after uploaded :)<br /><br />-DF<br />drugfather
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>100% American</strong> on <strong>December 31, 2011, 02:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				wow excellent guide. I am so happy&nbsp; that I read this post. I learned a lot from this guide and I really want to thank the author. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Lights Out</strong> on <strong>January 03, 2012, 01:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks alot digital. Silk Road is lucky to have someone like you here to help all of us nubs! I am already putting this guide to good use. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>twolips</strong> on <strong>January 12, 2012, 02:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				I found a portable application that lets you drag the file to it window and it strips the information.<br /><br />hxxp://www.pendriveapps.com/jpeg-and-png-stripper-remove-metadata/
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>USdirectforyou</strong> on <strong>February 08, 2012, 01:40 am</strong>
+			</dt>
+			<dd class="postbody">
+				does jpeg scrubber erase metadata from a pic?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Angelology</strong> on <strong>February 11, 2012, 04:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				This should help some of the google illiterate members... 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>whatsupbrah</strong> on <strong>February 14, 2012, 06:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Noob question.<br /><br />I downloaded GPGtools for apple. <br /><br />How do I access the clipboard where I can type messages to encrypt?<br /><br />The GPG program only has &quot;New, Import, Export&quot; as options.<br /><br />Thanks.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Shinto</strong> on <strong>February 14, 2012, 10:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Do GIFs have metadata? I knew jpgs did but never even wondered if any other picture file could... duh!<br />Thanks!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Moronontherun</strong> on <strong>March 02, 2012, 10:14 pm</strong>
+			</dt>
+			<dd class="postbody">
+				What does &quot;(CAUTION clear web alert)&quot; mean please? And what is &quot;Ubuntu&quot;? <br /><br />Thanx,<br /><br />Oz<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg6168#msg6168">Quote from: Kind Bud on July 11, 2011, 01:50 am</a></div></div><blockquote class="bbc_standard_quote">linux <br />exiv2 rm *.* for the entire picture folder<br /><br />windows use<br />jpg scruber<br />http://jpeg-scrubber.com (CAUTION clear web alert)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Moronontherun</strong> on <strong>March 02, 2012, 10:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				After about 10 minutes waiting for &#039;http://dee.su/liberte&#039; to load it said, &quot;To use this page you need to enable JavaScript in your web browser&quot; Am I missing something AGAIN or do I enable scripting? I thought that was a no-no.<br /><br />Oz<br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg21772#msg21772">Quote from: CaptainJohnny on August 31, 2011, 06:59 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg566#msg566">Quote from: DigitalAlch on June 20, 2011, 06:15 am</a></div></div><blockquote class="bbc_alternate_quote">You should all be accessing this website (and all of the DeepWeb) through a VirtualMachine running Ubuntu (I&#039;ll write a guide on that later). <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Excellent guide, why not mention this: http://dee.su/liberte<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Moronontherun</strong> on <strong>March 03, 2012, 04:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				For those &#039;other&#039; indigent members; Jpeg Scrubber is NOT free. It doesn&#039;t say that at the download site either. So you don&#039;t waste a bunch of time downloading something you may have thought was &#039;free&#039; - it is not. Thanx for you time - Oz
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>subdude</strong> on <strong>March 05, 2012, 02:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve just had my first interest in posting any picture, here or on SR. <br /><br />I use Android exclusively.&nbsp; This idea of images having revealing info has now become necessary for me. What picture cleaning is there for Android? Is their a site I can or must use? Someone mentioned anony.ws.&nbsp; Any good?<br /><br />Edit:&nbsp; Forums doesn&#039;t allow me to browse my Android. Maybe administration can make forums smart phone friendly? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>radi8power</strong> on <strong>March 06, 2012, 12:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg137677#msg137677">Quote from: subdude on March 05, 2012, 02:06 am</a></div></div><blockquote class="bbc_standard_quote">I&#039;ve just had my first interest in posting any picture, here or on SR. <br /><br />I use Android exclusively.&nbsp; This idea of images having revealing info has now become necessary for me. What picture cleaning is there for Android? Is their a site I can or must use? Someone mentioned anony.ws.&nbsp; Any good?<br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Android is Linux. Just install a terminal emulator from the market.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>alpine</strong> on <strong>March 19, 2012, 09:42 pm</strong>
+			</dt>
+			<dd class="postbody">
+				great good to know if i upload photos
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Mithradates VI</strong> on <strong>March 21, 2012, 05:22 pm</strong>
+			</dt>
+			<dd class="postbody">
+				What I have done in the past is take a screen shot of my picture and then paste the screen shot and re-save it.&nbsp; Now I am wondering if this is good enough, or does Windows put data in files saved in paint?&nbsp; <br /><br />Thx for the guide!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>DrGonzoII</strong> on <strong>March 25, 2012, 09:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for the heads up OP. I believe everything went OK but I think you have a typo in your last code.It says &quot;jexiv2&quot; and I spent a good time looking for a package that didn&#039;t exist before I realized that it was typo. Especially since it makes it look like it is a version of exiv2 for JPEG files, And that was what that last code was pertaining too. <br />I could see that typo giving a lot of ubuntu noobs a headache.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>hhs36</strong> on <strong>March 26, 2012, 03:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				Very nice post. Actually thought it had no sense to remove the EXIF data (like shutter speed, ISO, aperture, etc). But it contains also the camera model used, that may be helpful, if you own this camera and its found in your basement by cops - right?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>hempireling</strong> on <strong>April 15, 2012, 04:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Very helpful topic, thanks :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>hatedpatriot</strong> on <strong>April 29, 2012, 09:16 am</strong>
+			</dt>
+			<dd class="postbody">
+				Not sure if it has been mentioned yet, but jhead is also good and may even come with ubuntu already. If you have it installed you can do a whole directory at a time by going to the directory with the images and doing<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">ls | xargs jhead -purejpeg<br /></code>That&#039;s it, and it&#039;s done. You could even include sub directories by changing the ls command with find<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">find . -type f -iname *.jp*g -exec jhead -purejpg {} \;<br /></code>*Edit* I just ran this command and got an error, the &#039;e&#039; in jpeg was bad. I always do that. That&#039;s why I use jp*g when I&#039;m working with a load of jpgs. Also the -type &#039;file&#039; was wrong, it&#039;s -type f . I didn&#039;t make the same mistake when I just used it, but saw it when I came back here to fix the jp*g shit. Using the -exec flag with find, you can really make some awesome one-liners, and that&#039;s what makes *nix so awesome imo. If I thought there was any interest at all in explaining how that command works I&#039;d share, but I seriously doubt anyone gives a fuck about how some command is read. Sorry for being high and trying to add useful content. I&#039;ll go back to adding nothing of value now, thank you for your time. <br /><br />Either way, this is the easiest way on earth to clean 3000 jpgs of metadata
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Meme</strong> on <strong>May 06, 2012, 09:03 pm</strong>
+			</dt>
+			<dd class="postbody">
+				would be nice if SR would remove exif information automatically!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Chaotika</strong> on <strong>May 11, 2012, 10:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg213320#msg213320">Quote from: hatedpatriot on April 29, 2012, 09:16 am</a></div></div><blockquote class="bbc_standard_quote">Not sure if it has been mentioned yet, but jhead is also good and may even come with ubuntu already. If you have it installed you can do a whole directory at a time by going to the directory with the images and doing<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">ls | xargs jhead -purejpeg<br /></code>That&#039;s it, and it&#039;s done. You could even include sub directories by changing the ls command with find<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">find . -type f -iname *.jp*g -exec jhead -purejpg {} \;<br /></code>*Edit* I just ran this command and got an error, the &#039;e&#039; in jpeg was bad. I always do that. That&#039;s why I use jp*g when I&#039;m working with a load of jpgs. Also the -type &#039;file&#039; was wrong, it&#039;s -type f . I didn&#039;t make the same mistake when I just used it, but saw it when I came back here to fix the jp*g shit. Using the -exec flag with find, you can really make some awesome one-liners, and that&#039;s what makes *nix so awesome imo. If I thought there was any interest at all in explaining how that command works I&#039;d share, but I seriously doubt anyone gives a fuck about how some command is read. Sorry for being high and trying to add useful content. I&#039;ll go back to adding nothing of value now, thank you for your time. <br /><br />Either way, this is the easiest way on earth to clean 3000 jpgs of metadata<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Addendum: jhead is available for OSX users through macports as well. Thank you. :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>hatedpatriot</strong> on <strong>May 12, 2012, 02:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				Just saw that I also put &quot;jpEg&quot; in the -purejpg tag in the first example lol. I have not been able to shake that habit no matter hard I try I still catch myself doing it.<br /><br />That&#039;s good news about jhead being available for mac, because it really is a nice, clean, small solution for washing jpgs and now more people will find and use it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>redalloverthelandguyhere</strong> on <strong>May 16, 2012, 05:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I downloaded a photo of some MDMA pills some vendor had taken. The meta info was all there. It was taken on a Blackberry - my expertise is limited but I am sure some probing would reveal the serial and that is likely linked to the phone account which reveals the person who took the photo! (this is what the cops would think)<br /><br />I guess I ought to warn that vendor.<br /><br />I get rid of meta if by simply displaying my photo then taking a screenshot! That screenshot has meta info but I doubt I can be traced from it as I will do this using virtual box. Not sure if this is 100% proof safe but a screen shot will not carry any of the photo meta info. Maybe the operating system and serial number - the same used by millions!<br /><br />I do not use Linux much but have got to work out my new Linux set up and get my wireless working!!<br /><br />Thanks for this read - always good to see security issues taken seriously.<br /><br />A new generation has been raised to accept technology as second nature. People my age suspect it has good and bad uses. The bad being tracking us all!!<br /><br />So be careful out there!&nbsp; :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>MrVidalia</strong> on <strong>May 25, 2012, 07:25 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg30664#msg30664">Quote from: pulpfictionbro on September 27, 2011, 01:42 am</a></div></div><blockquote class="bbc_standard_quote">I dunno if this removes all the metadata or not but in Windows 7 you can right click on the image -&gt; Properties -&gt; Details -&gt; Remove properties and information (way at the bottom of the dialog box)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />When I do this it clears all the attributes from iPhone photos EXCEPT for the GPS... probably the most important one to clear. So watch out. And honestly if this is the case go on your iPhone and disable location so its not stored to begin with. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>wcdb0</strong> on <strong>June 11, 2012, 03:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you sir!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>DrGonzoII</strong> on <strong>June 11, 2012, 04:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				I don&#039;t mean to hijack this thread or anything...... but if you are reading this thread than you are most likely an ubuntu user and probably a new one at that. So I would like to say that if ANYBODY has any questions about this OS, I would be happy to help you in any way I can and I encourage you to give me a PM.<br /><br />I offer this service freely because I feel that I owe a debt to SR for being such a wonderful community and this is one of the many subjects that I excel in.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Phatohka</strong> on <strong>June 24, 2012, 05:01 am</strong>
+			</dt>
+			<dd class="postbody">
+				Tinfoilhattery follows.<br /><br />Please be aware of camera fingerprinting.<br />It is possible to associate photos with each other through unique noise pattern deviations in CCD sensors.[1]<br /><br />I can&#039;t give reliable advice on how to avoid this but ideally you would never use the same camera for anything that could be connected to your identity. If that&#039;s not practical, at least always make sure to resize the image and maybe add some noise in a photo editing program.<br /><br />It is not known whether LEAs use CCD noise fingerprinting but given that it can be fully automated, it&#039;s not far fetched to assume they do. I&#039;d be damned if there isn&#039;t an NSA server cluster somewhere that archives and analyzes images, particularly from social networks like Facebook. The archives only gain in value as analysis techniques are refined over the years.<br /><br />I would not overestimate this method.<br />Just be careful.<br /><br />==== CLEARNET ====<br />http://cs.iupui.edu/~tuceryan/pdf-repository/Lukas2006.pdf<br />================<br /><br />P.S.: Besides CCD noise ID, which is publicly researched, there is the possibility that digital cameras add unique watermarks to images. That, however, is pure speculation based on the fact that many printer vendors are working with LEAs. Many printers add nearly invisible watermarks to every printed page. This is public information.<br /><br />==== CLEARNET ====<br />https://www.eff.org/issues/printers<br />http://dkn255hz262ypmii.onion/index.php?topic=10719.0 (Your Laser Printer Will Testify Against You)<br />================<br /><br />Bottom line: If you want to be better safe than sorry, use a separate camera.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>BenCousins</strong> on <strong>June 29, 2012, 07:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				what type information can MetaData reveal? ive heard sories of some phones leaving watermarks on pictures of the GPS co-ordinates of the location the picture was taken. not sure if its true
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>jackintherox.</strong> on <strong>July 03, 2012, 05:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg315284#msg315284">Quote from: BenCousins on June 29, 2012, 07:46 am</a></div></div><blockquote class="bbc_standard_quote">what type information can MetaData reveal? ive heard sories of some phones leaving watermarks on pictures of the GPS co-ordinates of the location the picture was taken. not sure if its true<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Go install the exif viewer firefox addon and view the EXIF data on random images on the web. You will be shocked at what is recorded. In terms of GPS, almost every smart phone records the exact time and GPS (if its enabled) location for each picture. If GPS is off, it will even triangulate the position as an estimate. 4chan is an interesting place to EXIF view images LOL. It should be important to note that sites like IMGUR remove all EXIF data when a photo is uploaded.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>16bitgirl</strong> on <strong>July 04, 2012, 06:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It should be noted that PNG files often DO contain metadata. To see this metadata in Ubuntu, install the package pngmeta (&quot;sudo apt-get install pngmeta&quot;, or search for it in a package manager). For example, files saved with GIMP by default have at least:<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Comment: Created with GIMP<br />Modification Time: 01 Jan 1970 00:00:00 +0000</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Albeit with the real time of creation, rather than the UNIX epoch. In GIMP at least, you can switch off the saving of this metadata in the options box that appears when you save a PNG file.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>f1k4sDfsSfkLs987881</strong> on <strong>July 19, 2012, 11:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah this is great.&nbsp; Sure someone has posted on here about this, but what we used to do is literally save a camera file/picture in a non-exif inclusive format like .png and send that or resave as a jpeg or gif afterwards. All exif sheds off. <br /><br />Thanks !!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>mmpr</strong> on <strong>July 26, 2012, 11:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The Ubuntu solution is awesome. If you find yourself not being able to move away from Win7, or use a Mac, ExifTool is a great stripper too:<br /><br />[Warning - clearweb link]<br /><br />www.sno.phy.queensu.ca/~phil/exiftool<br /><br />There&#039;s really no practical metadata it can&#039;t or won&#039;t strip out, and it&#039;s worked on data coming from every model of pro/con/crap -sumer camera I&#039;ve owned as well as pics gathered from the internet. It&#039;s pretty awesome to use in the field, too, as long as you&#039;re not too squeemish about using a command line.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>bonaroo</strong> on <strong>August 05, 2012, 08:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				There is the metadata anonymization toolkit as well. https://mat.boum.org/<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>eJ3k1</strong> on <strong>August 15, 2012, 10:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg566#msg566">Quote from: DigitalAlch on June 20, 2011, 06:15 am</a></div></div><blockquote class="bbc_standard_quote">So launch up Ubuntu, go to shell (Applications -&gt; Accessory -&gt; Terminal) and type:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo apt-get install exiv2</code>(Press y then enter when asked)<br />This will install jhead, the program that will accomplish this.&nbsp; Once you have installed it you can either find out more info on it by typing:<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I don&#039;t know if I misunderstood something, or there is a mistake in the post here.<br /><br />There seem to be two programs, exiv2 and jhead (by the description, it looks like both do the same thing). The command below should install exiv2, not jhead, as stated in the OP.<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo apt-get install exiv2</code><br />Which one should I use?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>August 22, 2012, 05:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg371607#msg371607">Quote from: mmpr on July 26, 2012, 11:51 pm</a></div></div><blockquote class="bbc_standard_quote">The Ubuntu solution is awesome. If you find yourself not being able to move away from Win7, or use a Mac, ExifTool is a great stripper too:<br /><br />[Warning - clearweb link]<br /><br />www.sno.phy.queensu.ca/~phil/exiftool<br /><br />There&#039;s really no practical metadata it can&#039;t or won&#039;t strip out, and it&#039;s worked on data coming from every model of pro/con/crap -sumer camera I&#039;ve owned as well as pics gathered from the internet. It&#039;s pretty awesome to use in the field, too, as long as you&#039;re not too squeemish about using a command line.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Very cool, thankyou!&nbsp; +1<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Phatohka</strong> on <strong>August 22, 2012, 08:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg389428#msg389428">Quote from: bonaroo on August 05, 2012, 08:49 am</a></div></div><blockquote class="bbc_standard_quote">There is the metadata anonymization toolkit as well. https://mat.boum.org/<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Great!<br />I&#039;ve been planning this very same concept a few months ago, <br />unaware that a tool like this already exists. <br />Back then I had to work with Microsoft Office. Microsoft Word saves a TON of hidden meta-data. <br />This is perfect.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>Crooked</strong> on <strong>August 22, 2012, 03:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If i were to do a prnt scrn of an image, would this remove any metadata from the original image file?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>ACutAbove</strong> on <strong>September 04, 2012, 12:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg114309#msg114309">Quote from: whatsupbrah on February 14, 2012, 06:29 pm</a></div></div><blockquote class="bbc_standard_quote">Noob question.<br /><br />I downloaded GPGtools for apple. <br /><br />How do I access the clipboard where I can type messages to encrypt?<br /><br />The GPG program only has &quot;New, Import, Export&quot; as options.<br /><br />Thanks.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br />&nbsp; &nbsp; &nbsp;If you have Leopard 10.5.8 like me all you can do is look at your keys you made, you cant even import a pub key.&nbsp; You must do it through the terminal command line.&nbsp; Took me awhile to learn how to as well.&nbsp; LouisCypher is the SHIT.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>ACutAbove</strong> on <strong>September 04, 2012, 01:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				&nbsp; &nbsp; &nbsp; &nbsp;Still not sure how to scrub pics yet.&nbsp; I have to encrypt, decrypt, and import keys all through line code.&nbsp; I really need to be able to ad pics.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>September 04, 2012, 01:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg447820#msg447820">Quote from: ACutAbove on September 04, 2012, 12:50 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=142.msg114309#msg114309">Quote from: whatsupbrah on February 14, 2012, 06:29 pm</a></div></div><blockquote class="bbc_alternate_quote">Noob question.<br /><br />I downloaded GPGtools for apple. <br /><br />How do I access the clipboard where I can type messages to encrypt?<br /><br />The GPG program only has &quot;New, Import, Export&quot; as options.<br /><br />Thanks.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br />&nbsp; &nbsp; &nbsp;If you have Leopard 10.5.8 like me all you can do is look at your keys you made, you cant even import a pub key.&nbsp; You must do it through the terminal command line.&nbsp; Took me awhile to learn how to as well.&nbsp; LouisCypher is the SHIT.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Cheers.<br /><br />I found an old GUI from the predecessor to GPGTools which will work on Leopard.&nbsp; It doesn&#039;t have the same features as GPGTools on Snow Leopard and above, but it lets you do basic tasks in a simple GUI.&nbsp; It&#039;s called GPGDropThing and I posted about it here:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=35310.0<br /><br />That said, you&#039;ll be better off in the long run by sticking with the command line.<br /><br />I also now have a stickied thread in the Security forum with all my GPG posts listed:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=38861.0<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>September 04, 2012, 02:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				I am using the Imagemagic package to convert then from the camera size 3006x3496 or some size like that and then using jhead to strip them<br />both packages can be found on the standard linux repos.<br /><br />I then wrote a script to handle the conversion.<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">#!/bin/sh<br />for i in `ls *.JPG` <br />do<br />convert $i -resize 800x600 `echo &quot;$i&quot; | cut -d. -f1`-s.jpg<br />done<br />jhead -purejpg *.JPG<br />jhead -purejpg *.jpg<br /></code><br />But if you want it in a GUI you could always do this (KDE Interface)<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">#!/bin/sh<br />#<br />File=`kdialog --getopenfilename ~ &quot;*.jpg||*.JPG&quot;`<br />convert $File -resize 800x600 `echo &quot;$File&quot; | cut -d. -f1`-s.jpg<br />jhead -purejpg `echo &quot;$File&quot; | cut -d. -f1`-s.jpg<br />#<br /></code>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>jackintherox.</strong> on <strong>September 04, 2012, 04:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				Can&#039;t you just upload to, say, imgur and then download it again? Imgur removes all metadata...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>ACutAbove</strong> on <strong>September 04, 2012, 04:01 am</strong>
+			</dt>
+			<dd class="postbody">
+				&nbsp; &nbsp;I mean call me studid but if my file pic name is cutedog how do I swipe this pic?&nbsp; Do I have to rename it? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing MetaData from Images in Ubuntu - Security Lesson - V2.0</strong><br />
+				Post by: <strong>jackintherox.</strong> on <strong>September 04, 2012, 04:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				Rename it? Why? If you want to get rid of the metadata you can use command line programs for linux that have been listed, or any of the other GUI applications that have been mentioned. If that still doesn&#039;t work you can honestly upload to imgur and download it again while on Tor. Photoshop even has an option to save images without any metadata. And as Crooked mentioned, you can even take a screenshot of the image and it will remove the metadata. It is not stored in the image data, it&#039;s just a header on the file so it has nothing to do with the filename.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

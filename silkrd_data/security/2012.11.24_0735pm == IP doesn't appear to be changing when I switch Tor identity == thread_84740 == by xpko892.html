@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=84740.0" />
+		<title>Print Page - IP doesn't appear to be changing when I switch Tor identity</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: xpko892 on November 24, 2012, 07:35 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>IP doesn't appear to be changing when I switch Tor identity</strong><br />
+				Post by: <strong>xpko892</strong> on <strong>November 24, 2012, 07:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m using Linux Liberte and this problem appears on the Epiphany safe browser. When I go to check.torproject.org it displays my IP. When I switch identities and refesh the page, it displays the very same IP adress as before. It usually shows a different one. I&#039;m a complete noob when it comes to computers so I have no idea how to fix this.<br /><br />Should I be worried?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: IP doesn't appear to be changing when I switch Tor identity</strong><br />
+				Post by: <strong>sunny1</strong> on <strong>November 24, 2012, 08:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Let me take a wild guess, your ip is 127.0.0.1 when you are on tor, right? Ask me how i know that?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: IP doesn't appear to be changing when I switch Tor identity</strong><br />
+				Post by: <strong>astor</strong> on <strong>November 24, 2012, 09:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Tor will keep active TCP connections even when you request a new identity. This is useful for example if you&#039;re downloading a large file. You wouldn&#039;t want that connection to die, but you want new connections to come from different IPs. The problem is that you&#039;re refreshing too soon, when the current TCP connection to check.torproject.org is still active. If you open a new tab and go to check.torproject.org it should be different.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: IP doesn't appear to be changing when I switch Tor identity</strong><br />
+				Post by: <strong>techmo</strong> on <strong>November 25, 2012, 01:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				@OP - I noticed this too.<br /><br />Resetting the network device (disable/enable) seems to do the trick if you don&#039;t want to wait like astor suggested.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: IP doesn't appear to be changing when I switch Tor identity</strong><br />
+				Post by: <strong>techmo</strong> on <strong>November 25, 2012, 01:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=84740.msg621825#msg621825">Quote from: sunny1 on November 24, 2012, 08:50 pm</a></div></div><blockquote class="bbc_standard_quote">Let me take a wild guess, your ip is 127.0.0.1 when you are on tor, right? Ask me how i know that?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No.&nbsp; He&#039;s not referring to localhost ip.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

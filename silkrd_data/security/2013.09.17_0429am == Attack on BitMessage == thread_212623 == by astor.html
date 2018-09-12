@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=212623.0" />
+		<title>Print Page - Attack on BitMessage</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: astor on September 17, 2013, 04:29 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Attack on BitMessage</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 17, 2013, 04:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				Looks like this was both a DOS and enumeration attack. We need something better.<br /><br />http://www.reddit.com/r/onions/comments/1mdlre/tormail_is_down_so_now_we_have_this_new_one/cc8g4bx<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Bitmessage relies of Proof Of Work to &quot;control spam&quot;. In order to send a message you need to do computational work. Everyone gets a copy of every message ever sent too, you just can&#039;t read them all.<br /><br />This design decision is objectively horrible. If you have a cluster or even a CUDA Enabled Graphics card, you have more message sending capacity, you can spam and the rest of the network cannot keep up and basically will eventually only be sending your messages. Basically it&#039;s incredibly weak to network wide denial of service. In addition if you have lots of people that need to send messages, i.e. it would attempt to replace email, everyone would have a copy of every encrypted message.<br /><br />Bitmessage simply will never scale and is incredibly weak to DoS.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br />http://secupost.net<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Alright, the messages sent out a few days ago are starting to expire now. It&#039;s time for everyone to learn what the purpose of secupost.net is.<br /><br />As many of you guessed, this is indeed a Bitmessage address to IP address mapper. Yes, the only thing that webserver would send was a 500 message.<br /><br />It did alright too, gathering nearly 500 bitmessage users information after sending 15000 messages. Double what I expected.<br /><br />I&#039;ve included both a log of each address detected and the first thing to hit it including IP, reverse DNS and useragent as well as raw logs for every valid request. If you need to confirm this signature so you can verify messages from me when bitmessage is down, please see the bitmessage general chan for a copy from my bitmessage address.<br /><br />So, future lessons:<br />- - - Yes, all bitmessage addresses are public and can be read from your messages.dat file using a small script.<br />- - - Don&#039;t click links. Even if it looks like a security-related site and uses some technical terms. I am not a nice person, I will publish any information I can gather about you and I don&#039;t care if you get lit on fire by terrorists because of it.<br />- - - Bitmessage does _not_ scale. It took me around 3.5 hours to send ~15k messages but it took the bitmessage network over 18 hours to fully propogate them.<br /><br />Some of you were smart enough to use tor or VPN providers, but many of these are direct home or server IPs. The information below is more than enough for any government to come after you or any script kiddie to DDoS you. Be more careful next time.<br /><br />Some of you tried to use scripts to claim addresses which weren&#039;t yours and skew the data, of course, you didn&#039;t even change your user-agent. <br /><br />Even without accouting for that your attacks were ineffective because the IDs were generated in a non-linear fashion using a cropped HMAC-SHA256. To find your id:<br /><br />def gen_mac(addr):<br />&nbsp;&nbsp;&nbsp;mac = hmac.new(&quot;fuck you&quot;, addr, hashlib.sha256).digest()<br />&nbsp;&nbsp;&nbsp;return unpack(&#039;&gt;I&#039;, mac[0:4])[0]<br /><br />This simple deterministic method means that you would have had to try... (2^32/15000)/2 = 143165 times on average just to get a single collision. Thanks for playing, but no luck this time.<br /><br />This service has been operated completely anonymously thanks to Tor and Bitcoin. I hope you enjoy the result.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Attack on BitMessage</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 17, 2013, 04:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				was destined to not scale from the day it was thought of. There have been years and years of research into making it so PIR scales, everybody gets everything is least scalable possible. BitMessage has problems from the bottom to the top, and some of the problems it used to have were so bad that it obviously wasn&#039;t made by people who have a clue what they are doing. Even now that they don&#039;t encrypt the entire message with RSA they still have tons of traffic analysis issues etc. Pretty much the problem area they are working in has had truck loads of research into it for the past fifty or so years and they obviously didn&#039;t read any of it. I learned the same lesson some years ago, don&#039;t try to invent your own secure communications system if you are not an expert, and you are probably not an expert if you don&#039;t have a Ph.D or at least masters degree in a related science, or if you have not spent 5-8 years researching on your own, while having a solid understanding of advanced math as well. There already are hundreds if not thousands of whitepapers out there from people who are experts on such things, if you want to make a system read their whitepapers and spend your efforts implementing them (which is hard enough in itself) and thinking of ways to make their systems work together (because a complete system for secure anonymous communications is going to involve several different parts, and each part will have its own whitepaper). The less that you need to invent yourself the better.<br /><br />They took Bitcoin and tried to make it a message system, so they didn&#039;t totally reinvent the wheel. But they thought that everybody gets everything was a good idea for messaging systems to maintain anonymity, and theoretically it is, but having that thought without knowing what Private Information Retrieval is will lead to ignoring the fact that there are decades of research into having the same anonymity properties while using orders of magnitude less bandwidth. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Attack on BitMessage</strong><br />
+				Post by: <strong>Rastaman Vibration</strong> on <strong>September 17, 2013, 05:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Everyone gets a copy of every message ever sent<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Bad Idea? You don&#039;t say? &lt;sarcasm&gt;<br /><br />I could have told you that!<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Attack on BitMessage</strong><br />
+				Post by: <strong>comsec</strong> on <strong>September 17, 2013, 05:59 am</strong>
+			</dt>
+			<dd class="postbody">
+				Crypto engineering is incredibly difficult to get right. It typically takes years of testing before you can claim it&#039;s reliable. Read this guy&#039;s blog http://blog.cryptographyengineering.com/ on a regular basis he&#039;s apparently working on a PGP replacement but it&#039;s been 1.5 years in the making and still being tested. Probably won&#039;t see it for another year or so.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Attack on BitMessage</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 17, 2013, 01:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=212623.msg1543786#msg1543786">Quote from: comsec on September 17, 2013, 05:59 am</a></div></div><blockquote class="bbc_standard_quote">Read this guy&#039;s blog http://blog.cryptographyengineering.com/ on a regular basis<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Isn&#039;t that the same guy who was involved in developing Zerocoin?<br /><br />http://blog.cryptographyengineering.com/2013/04/zerocoin-making-bitcoin-anonymous.html<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

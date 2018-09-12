@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=28350.0" />
+		<title>Print Page - OpenPGP Advisory (PGP/GPG/etc. keys)</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: LouisCyphre on June 27, 2012, 05:09 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>OpenPGP Advisory (PGP/GPG/etc. keys)</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>June 27, 2012, 05:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Over the last few days I&#039;ve seen a number of keys posted, both here on the forum and on SR vendor pages, of secret keys instead of public keys.<br /><br />This is very bad.&nbsp; The secret or private key should *never* be posted anywhere.&nbsp; As with the passphrase used to unlock it, it should be guarded and protected.&nbsp; If your secret key is available to anyone and you have set a weak passphrase on it then it is possible for the passphrase to be cracked.&nbsp; At that point you, along with anyone encrypting messages to you, are fucked.<br /><br />So when you are exporting your key, double-check that the key looks like this:<br /><br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: whatever<br />Comment: if you really need one<br /><br />(keyblock)<br /><br />-----END PGP PUBLIC KEY BLOCK-----<br /><br />Make sure that it absolutely does NOT look like this:<br /><br />-----BEGIN PGP PRIVATE KEY BLOCK-----<br />Version: whatever<br />Comment: if you really need one<br /><br />(keyblock)<br /><br />-----END PGP PRIVATE KEY BLOCK-----<br /><br />I realise that the topic can be difficult to get your head around when starting with it, but it really is worth taking a little time out to do so.<br /><br />I also highly recommend reading this if you&#039;re new to OpenPGP, though it was written for PGP (the proprietary/original software):<br /><br />ftp://ftp.pgpi.org/pub/pgp/6.5/docs/english/IntroToCrypto.pdf<br /><br />The PGP International (pgpi.org) site is a relic from the Crypto Wars, when PGP&#039;s source code was printed, flown to Europe, OCR scanned, compiled and released to the rest of the world because of America&#039;s munitions export laws (printed source code was classed as speech and protected by the First Amendment).<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: OpenPGP Advisory (PGP/GPG/etc. keys)</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>June 29, 2012, 06:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28350.msg314270#msg314270">Quote from: Guru on June 28, 2012, 10:06 pm</a></div></div><blockquote class="bbc_standard_quote">I have not only noticed this, but I have also observed the following: <br /><br />* 1024-bit keys - as you may likely be aware 1024-bit keys were deprecated by NIST as of the end of December 2010. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes, I&#039;ve seen that.&nbsp; I was thinking about a separate post to draw attention to it.&nbsp; I have made a 1024-bit key in the past, but it was a *long* time ago (my first key and it didn&#039;t get used much).<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28350.msg314270#msg314270">Quote from: Guru on June 28, 2012, 10:06 pm</a></div></div><blockquote class="bbc_standard_quote">* 1024 bit primary keys with 512-bit encryption sub-keys. 512-bit keys have been cracked by hobbyists; a signing key used to sign software for some models of TI calculators was <br />&nbsp; &nbsp;factored, leading to hobbyists now being able to fool the TPM inside the hardwre, which required binaries to have a valid signature before they were allowed to be loaded/executed. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;ve also seen that and I find it bizarre that people would create them.&nbsp; It wouldn&#039;t take long for one BTC mining rig, repurposed to crack GPG keys to rip through the 512-bit keys.<br /><br />This is one of the reasons that I also wrote this guide (it&#039;s been tweaked a couple of times to make it easier to read):<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=28474.0<br /><br />Strong cryptography is important and not just for SR.&nbsp; I am well and truly in the privacy advocate camp that says *all* email should be encrypted, including jokes to mates.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: OpenPGP Advisory (PGP/GPG/etc. keys)</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>June 29, 2012, 06:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28350.msg315150#msg315150">Quote from: Shannon on June 29, 2012, 06:08 am</a></div></div><blockquote class="bbc_standard_quote">recommended key lengths are in section 7 - http://www.ecrypt.eu.org/documents/D.SPA.17.pdf<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thanks.&nbsp; A web search for &quot;NIST key recommendation&quot; will produce numerous results.&nbsp; Including multiple NIST PDFs and this:<br /><br />http://www.keylength.com/en/4/<br /><br />It includes an easy to read table with the equivalent sizes between bit strength, symmetric (AES), asymmetric (RSA), discrete logarithm, eliptic curve (ECC) and hash types.&nbsp; It also includes how long they should be considered valid for.<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

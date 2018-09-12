@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=153415.0" />
+		<title>Print Page - Sollution to DDoS? Low size captcha. Could it work?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Silk Road discussion => Topic started by: Naloxone on April 30, 2013, 07:00 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>Naloxone</strong> on <strong>April 30, 2013, 07:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hello.<br /><br />I&#039;m sure the computer geniuses behind SR will have thought of this but I&#039;m just wondering why this couldn&#039;t be done? Perhaps it&#039;s all about connections allowed in and out rather than actual data being processed.<br /><br />If it&#039;s about data then surely you could have a 72byte file loaded whenever anyone accesses an SR page:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">one + two<br />&lt;form action=&quot;x.php&quot;&gt;&lt;input type=&quot;textbox&quot; name=&quot;f*(i&quot;&gt;&lt;form&gt;</code><br />Firefox still outputs messy, improper html. People will push enter after they input the answer I&#039;m sure. If unsure maybe you could stretch the extra 10-15 bytes for a submit button.<br /><br />The back end has access to the answer associated with the name and if they submit correctly they&#039;ll get a cookie granting access to the site.<br /><br />Obviously this would be a temporary solution if it worked at all since I&#039;m sure hackers would eventually get through that but a temporary solution would be better than nothing at this point.<br /><br />I also apologize if I&#039;m being ignorant of the hard work going on behind scenes. I have a simple brain and try to come up with simple answers! 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>dc007</strong> on <strong>April 30, 2013, 07:52 am</strong>
+			</dt>
+			<dd class="postbody">
+				That&#039;s not such a simple thing, bro. The SR Web server responds, but the traffic is over the SR Tor connection possibilities.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>Naloxone</strong> on <strong>April 30, 2013, 12:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=153415.msg1067400#msg1067400">Quote from: dc007 on April 30, 2013, 07:52 am</a></div></div><blockquote class="bbc_standard_quote">That&#039;s not such a simple thing, bro. The SR Web server responds, but the traffic is over the SR Tor connection possibilities.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Any chance you could phrase that differently? It doesn&#039;t make sense.<br /><br />I understand that the web server responds anyway but if it&#039;s responding with less data then it&#039;ll be less load on the server even if the DDoS attack keeps coming at the same rate.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>dbelle</strong> on <strong>April 30, 2013, 12:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Have a look at the post below. We think we know what the issue is.<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=153182.0<br /><br />If anyone can think of alternative fixes or preventative measures then please speak up!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>lex</strong> on <strong>April 30, 2013, 01:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=153415.msg1068297#msg1068297">Quote from: Naloxone on April 30, 2013, 12:54 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=153415.msg1067400#msg1067400">Quote from: dc007 on April 30, 2013, 07:52 am</a></div></div><blockquote class="bbc_alternate_quote">That&#039;s not such a simple thing, bro. The SR Web server responds, but the traffic is over the SR Tor connection possibilities.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Any chance you could phrase that differently? It doesn&#039;t make sense.<br /><br />I understand that the web server responds anyway but if it&#039;s responding with less data then it&#039;ll be less load on the server even if the DDoS attack keeps coming at the same rate.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Basically the malicious traffic originates from Tor nodes, it is impossible to distinguish from legitimate traffic - that is a huge problem when mitigating DDoS attacks. Makes it very difficult to isolate an attacker since they can obviously use any available Tor node like you and everyone else reading this text. I don&#039;t think the exact details of this attack are public for obvious reasons, whatever the malicious traffic consists of; the server still has to respond to all of this data being sent to it. Even if the server is only identifying and ignoring the malicious packets, this is evidently enough to completely overwhelm it thus rendering the site unusable. Since this is the hidden web, conventional methods of mitigating DDoS are useless here. Solutions on the surface web are notoriously expensive.<br /><br />And just to clarify, attacks of this nature are not relevant to the efficiency of client side code on SilkRoad nor the size of pages themselves. It could be a blank page of 0 bytes, as long as the server is overwhelmed, it has the efficiency of a fucking paper plate. I hope this cleared it up for you.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>anton</strong> on <strong>April 30, 2013, 01:21 pm</strong>
+			</dt>
+			<dd class="postbody">
+				+k for thinking OP :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>Luvs2Trip</strong> on <strong>April 30, 2013, 01:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I was always under the impressions that there is not much that can be done to stop a DDoS attack. I believe the best solution is more bandwidth (obviously not as easy as it sounds).<br /><br />I believe you can replicate the same IP address across many servers to cause the traffic load to split into many groups that the individual servers can deal with and/or inspect allowing it to sniff out the legitimate traffic. This is not something i know to much about, more rusty memory&#039;s from college. I do remember however that this method is an expensive one as obviously it requires the servers to be spread in different locations but it removes the bottleneck that&#039;s causing the problem.<br /><br />what worries me is that i remember being told this is one of the hardest things to be able to defend against, i hope SR manage to find a solution!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>dc007</strong> on <strong>April 30, 2013, 06:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=153415.msg1068297#msg1068297">Quote from: Naloxone on April 30, 2013, 12:54 pm</a></div></div><blockquote class="bbc_standard_quote">Any chance you could phrase that differently? It doesn&#039;t make sense.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>OK. DDoS traffic exceeds the tor connection bandwidth. That&#039;s the only problem.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>awhiteknight</strong> on <strong>April 30, 2013, 06:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				There are several known types of attack that can be performed against SR and DPR hasn&#039;t said what the problem is, so we can&#039;t know for sure what the hell is going on.<br /><br />He has hinted at this being a transport layer problem, which would suggest that it&#039;s an attack on the Tor hidden service protocol and &quot;fixes&quot; at the HTTP layer and above are completely worthless.<br /><br />What needs to happen is SR publish what the fuck is going on, then the people who have the technical skills can set up their own test Tor network, attack it in the same way and test out some fixes.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>maple</strong> on <strong>April 30, 2013, 08:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=153415.msg1069520#msg1069520">Quote from: awhiteknight on April 30, 2013, 06:50 pm</a></div></div><blockquote class="bbc_standard_quote">What needs to happen is SR publish what the fuck is going on, then the people who have the technical skills can set up their own test Tor network, attack it in the same way and test out some fixes.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I like this idea. There is a HUGE community here anxious to get things going, and I&#039;m sure that we have plenty of technical people that would be more than willing to take part in this. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>Wazup7</strong> on <strong>April 30, 2013, 08:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				^agreed. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>Secret_Squirrel</strong> on <strong>April 30, 2013, 09:21 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I would love to know what is going on too but these forums are public so posting exactly whats going could be like telling your opponent what you plan to do before you do it.&nbsp; <br /><br />DPR just let us know they they are still working, seemed like for 20 hours straight...<br /><br />I hate this too I miss SR but we have the forums to pass our time and speculate!! that&#039;s kind of fun..
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>Naloxone</strong> on <strong>April 30, 2013, 10:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for all the replies to this. It helps me understand it a bit more and make me more worried. I&#039;ll do some more reading around it all since it is an interesting problem. Also around bandwidth since I clearly don&#039;t really know about it even although it should be a simple concept. It&#039;ll keep me occupied while I can&#039;t order anything. On the plus side something arrived for me today. Unfortunately for the vendor he&#039;ll be out of pocket for it until everything is fixed.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Sollution to DDoS? Low size captcha. Could it work?</strong><br />
+				Post by: <strong>Veetano</strong> on <strong>April 30, 2013, 11:14 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Something even more basic that could be done is simply put a click to load button next to the captcha. DDoS&#039;s work by just requesting the page a bunch. The attacker would have to rewrite his program to press the button after loading the page on each of his connections. Would delay him quite a bit I believe. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=174823.0" />
+		<title>Print Page - HELP with gpg4usb PLEASE!!??</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: neo67 on June 20, 2013, 01:13 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>neo67</strong> on <strong>June 20, 2013, 01:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				Whenever i try to click on import keys button on GPG4USB software, the program crashes and i have to shut it down!<br /><br />Any advice as i cant encrypt my address to purchase goods. I have tried to reinstall it but too no use.<br /><br />PLEASE,PLEASE help me someone.<br /><br />Peace.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 20, 2013, 01:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				Is it crashing when you click the import key button, or when you actually try to import the key?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>neo67</strong> on <strong>June 20, 2013, 03:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				I copy a key, then select import key, the select from clipboard, a loading up sign appears then it just crashes, saying &#039;start_windows.exe&#039; has stopped running&#039;. i have tried to uninstalled it and then reinstall it again many of times but with no joy.<br /><br />Have you any ideas astor? Any thoughts are much appreciated.<br /><br />Thank you
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 20, 2013, 03:39 am</strong>
+			</dt>
+			<dd class="postbody">
+				My first thought is that the key is too big to import, or it&#039;s malformed somehow and causing the crash. Would you mind PMing it to me so I can take a look at it?<br /><br />Alternatively, you could try importing without the GUI. Open a command prompt and go to the folder where you extracted GPG4USB. There should be a subfolder called bin. In that subfolder will be a program called gpg.exe.&nbsp; That&#039;s the actual gpg program.<br /><br />Save the key in that folder, in a text file called whatever.asc. Then at the command prompt, while you&#039;re in that folder, type:<br /><br />&nbsp; gpg.exe --import whatever.asc<br /><br />It&#039;ll either import properly or if it fails, it should print an error message.<br /><br />Copy the error message and paste it here.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>neo67</strong> on <strong>June 20, 2013, 03:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				astor your a god-send, thanks for helping me out.<br /><br />I am on to your instructions as i type.<br /><br />Bare with me please.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 20, 2013, 03:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				Have you tried many different keys and it&#039;s happening with all of them, or it just happens with one key?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>neo67</strong> on <strong>June 20, 2013, 03:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				just tried it with a different key and it was the same outcome.....the program crashed.<br /><br />I am getting really worried now as i wont be able to encrypt my address and i will be stuck with privnote! lol which ive heard is unsafe.<br /><br />However, i will follow your instructions for the command prompt <br /><br />Do you still want me to send you the public key?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 20, 2013, 03:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				In case you don&#039;t know how to get the command prompt to that folder, I think in the file manager, when you&#039;re in that folder, you can right click and there should be an option to &quot;open the command prompt here&quot; or something like that. It&#039;s been forever since I&#039;ve seen that though.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 20, 2013, 03:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				Sure, send me one of the keys that made it crash, although if multiple keys are doing it, that&#039;s bad.<br /><br />If you can get them imported without the GUI, that&#039;s a crappy workaround at least. Maybe you will still be able to use them to encrypt your address in the GUI. Otherwise, I don&#039;t know honestly. You&#039;ll have to use a different PGP program.<br /><br />I can look into if other people are experiencing consistent crashes, but I haven&#039;t heard of that before.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 20, 2013, 03:59 am</strong>
+			</dt>
+			<dd class="postbody">
+				Are you on Windows 8 by any chance? That&#039;s the second thought that comes to mind. The browser bundle didn&#039;t work on Win8 when it first came out, so programs built for Win7 are not always compatible with Win8, apparently. Has anyone successful run GPG4USB and imported keys on Win8?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>neo67</strong> on <strong>June 20, 2013, 04:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				yes please astor, i have been looking for a long time to try and find a solution but cant seem to find one.<br /><br />Can you recommend any other PGP programs?, i googled it but there doesn&#039;t seem to be that many of them.<br /><br />Right ive got to go to work now anyways, please post any useful information you can find astor...and i cant thank you enough for trying to help!<br /><br />No i use Windows vista....that maybe the problem hey?<br /><br />Ok bye for now.Will be back on asap.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 20, 2013, 04:09 am</strong>
+			</dt>
+			<dd class="postbody">
+				Ok, it imported just fine for me, so it&#039;s not the key. Try to do it at the command prompt. If that doesn&#039;t work, you&#039;ll have to use something else.<br /><br />Well, even if it imports, you may not be able to encrypt stuff in the GUI.<br /><br />I&#039;ll see what I can dig up on GPG4USB crashes.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 20, 2013, 04:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				Oh yeah, before importing it at the command prompt, you could save the key to a text file and try importing it that way rather than from the clipboard, but I fear this may be problem with the GUI in general.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>neo67</strong> on <strong>June 20, 2013, 07:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for your effort astor, however,since i am rubbish at using command lines i am going to give GPG4WIN another go, some other replies on other threads have given me a few ideas.<br /><br />BIG thanks anyway astor
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HELP with gpg4usb PLEASE!!??</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 20, 2013, 08:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ok, good luck.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

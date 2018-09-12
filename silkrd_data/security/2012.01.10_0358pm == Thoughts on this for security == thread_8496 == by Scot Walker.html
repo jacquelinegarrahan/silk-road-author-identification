@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=8496.0" />
+		<title>Print Page - Thoughts on this for security</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Scot Walker on January 10, 2012, 03:58 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Thoughts on this for security</strong><br />
+				Post by: <strong>Scot Walker</strong> on <strong>January 10, 2012, 03:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So, I&#039;ve been looking into ways to keep me safe when on SR, and in onionland. This is what I have found that looks like it might be good for what I want.<br /><br />http://ryantrotz.com/2011/08/how-to-secure-your-files-using-truecrypt-and-virtualbox/<br /><br /><br />&nbsp;Can anyone tell me if this is going to be a good way to go? Or, can someone suggest a better way? I&#039;m running Windows 7. I&#039;m not all that savvy when it comes to computers, so I probably wouldn&#039;t be able to do something too complicated. I&#039;m thinking about opening a seller account, but want to be sure I&#039;m good and safe before I do.<br /><br />Thanks in advance for any replies!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Thoughts on this for security</strong><br />
+				Post by: <strong>QTC</strong> on <strong>January 10, 2012, 04:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Virtualization alone only marginally protects you unless you do it the right way, since the only layer of isolation it adds is a hypervisor. Not using snapshots opens you up to permanent exploitation rather than only during your session if you do get pwnd. TrueCrypt only protects you against an Evil Maid-style attack. Ubuntu is an insecure operating system IMHO. I recommend using the guide at http://xqz3u5drneuzhaeo.onion/users/secureconfig/tutorial.html but without using polipo. The setup may be difficult but once you get it running, you&#039;ll be OK. :-)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Thoughts on this for security</strong><br />
+				Post by: <strong>TravellingWithoutMoving</strong> on <strong>January 10, 2012, 04:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				- sure, there are people using virtualbox.....not sure which of yours is the win7 -guest or host? ! i don&#039;t use windows but you could still do if you are comfortable with it, for example: <br />http://dkn255hz262ypmii.onion/index.php?topic=7856.0<br /><br />- virtualbox &amp; vmware {vmdk images} : can convert vmdk&#039;s for use in virtualbox, and am sure can actually create a vmdk style guest for use in virtualbox, so you<br />&nbsp; have some options here if its definitely virtualbox you want to use. I installed virtualbox briefly and thought it was actually quite good and only reason for blanking<br />&nbsp; the setup was I had concluded the hardware wasn&#039;t fast enough to run the No of guests i needed.<br /><br />- perhaps virtualbox running under ubuntu? or a ubuntu linux guest?<br /><br />- the security threads are here, where you&#039;ve posted this very thread, can browse thru and see what everyones been saying.<br />&nbsp; http://dkn255hz262ypmii.onion/index.php?board=3.0<br /><br />- other options are vmware / vmware player {no licence req} -there are guests available for you if you wanted a prebuilt system as per thread:<br />&nbsp; http://dkn255hz262ypmii.onion/index.php?topic=5599.0<br /><br />- if you got time you could cast your vote on poll: <br />&nbsp; http://dkn255hz262ypmii.onion/index.php?topic=8298.0<br /><br />- i would recommend Linux but then you are the one who is going to have to build and / or work with, another secure option seems to be openBSD, again these are<br />&nbsp; involved if you&#039;re a windooz man. {linux is far more secure and windows has not been the ideal choice for a secure setup....ease of use yes....}<br /><br />- another solution would be non-virtualisation -a host running on native hardware, and i&#039;m not the right person to be able to recommend win7 for this.<br />&nbsp; again linux / openBSD would be a better solution but would you be able to build &amp; support this..!?<br /><br />most of the threads are really us arguing about the technology, some of the explanations aren&#039;t of much practical use to you...<br /><br />aside from building the virtualbox (if that&#039;s what you have decided....) there are all the gpg / security apps needed, again the security section has loads of info<br />on this -if you are still having issues perhaps you should go for the prebuilt vm image by Security Solutions.<br /><br />ok?!<br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Thoughts on this for security</strong><br />
+				Post by: <strong>Scot Walker</strong> on <strong>January 10, 2012, 04:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks guys! I will check out all the referenced links. I&#039;m not really a windows guy, it&#039;s just all I have ever used. Me and a friend have been talking about going the Linux route on a machine, and learning about it. I&#039;m just not that educated when it comes to computers so I&#039;m not overly comfortable with getting too deep into something without having the knowledge to fix something if I fuck it up. ;) I will definitely do some reading through the security section, starting with the recommended places.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Thoughts on this for security</strong><br />
+				Post by: <strong>Tranzshipper</strong> on <strong>January 11, 2012, 01:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				vmware - done that for years, till learned more, never again, thanks<br />any encryption is as good only as your security policies. my rule number one - no encrypted info on computer hard disks - never!!<br />for transmitting sensitive info, GPG/PGP as good as it always been, especially if you are using command line to create good keys. few indictments published on internet proved they cant brake it.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Thoughts on this for security</strong><br />
+				Post by: <strong>SecuritySolution</strong> on <strong>January 13, 2012, 11:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				-----BEGIN PGP SIGNED MESSAGE-----<br />Hash: SHA1<br /><br />Scott,<br /><br />Please feel free to use our thread as mentioned by Travelling a few posts up as a possible &#039;shopping guide&#039; if you will if you decide to roll your own VM. It&#039;s tools are all free and publicly available the only exception being windows. Several of them are available for linux however with linux truecrypt does not allow whole disk encryption. This being the case you would need to rely on something like LUK&#039;s encryption. While LUK&#039;s is secure by most standards it only allows the use of a single encryption algorithm whereas truecrypt on the windows platform allows the leveraging of three in a cascading fashion increasing the security of your data from forensic recovery significantly.<br /><br /><br />Thanks,<br />SecuritySolution<br /><br />-----BEGIN PGP SIGNATURE-----<br />Version: GnuPG v2.0.17 (MingW32)<br /><br />iQGcBAEBAgAGBQJPEL33AAoJEKhBWjky5wQCyY0L/RqFFDfArW4A4kjyMLTgUp7Q<br />qqUuokFAHlAFYxNmRhIicpIGYUhr6yFKCNvZZBjbA903plTR7uitpQO9amU5um72<br />aaWK4ASf49OpFQfKgNwbGX/AYZrCgevl8LK+Mz2PEzigXYRCfZG2eO6cqcnLGitL<br />F/+fhdUcTY7TIUr63qy+2NSGI+4ufbNiuCQMbOD+Rka8jMBmdQ6/xfTPFdLCelEk<br />Y8+Fr9moYMsOehOnvkor9H5fLc9RqcKbRcbtKek8WD5nSjg+aUzjo5JKx+Rt/X6D<br />WDbCP0hdudSvAd0/sUODu1R/VbMSbNYX2fCVlqwh4SqY3pb44dnhewaUg5pOdIpx<br />t+EQaNi4+rPYtV3p4fiF+/0CgJqT0+rbbyXjuM1AvqBdtG9BLCkr+S7l//8ggvKK<br />4ZAgPVvLMLoZenAXPh+NBsiiGFCVw1o9ZgvcRRVX0rL2LGcpq99FhdLvebCS0ek6<br />iJBHUFx/D+99vgp9z69EWxR4kB7TKLNDA5soIInHuA==<br />=AK5E<br />-----END PGP SIGNATURE-----<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

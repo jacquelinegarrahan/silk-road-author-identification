@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=108810.0" />
+		<title>Print Page - Guide to GPG in the terminal</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: windmillz on January 18, 2013, 11:36 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Guide to GPG in the terminal</strong><br />
+				Post by: <strong>windmillz</strong> on <strong>January 18, 2013, 11:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thought I would create a guide to help people with GPG in the terminal.<br /><br /><br />Step 1: Create a new key-pair<br /><br />$ gpg --gen-key<br /><br />&nbsp; &nbsp; &nbsp; &nbsp;(GnuPG) 1.4.9; Copyright (C) 2008 Free Software Foundation, Inc.<br />&nbsp;&nbsp;&nbsp;This is free software: you are free to change and redistribute it.<br />&nbsp;&nbsp;&nbsp;There is NO WARRANTY, to the extent permitted by law.<br /><br />&nbsp;&nbsp;&nbsp;Please select what kind of key you want:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(1) RSA and RSA (default)<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(2) DSA and Elgamal<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(3) DSA (sign only)<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;(4) RSA (sign only)<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Your selection?<br /><br />&nbsp;&nbsp;&nbsp;DSA keypair will have 1024 bits.<br />&nbsp;&nbsp;&nbsp;ELG-E keys may be between 1024 and 4096 bits long.<br /><br />&nbsp;&nbsp;&nbsp;What keysize do you want? (2048)<br />&nbsp;&nbsp;&nbsp;Requested keysize is 2048 bits<br />&nbsp;&nbsp;&nbsp;Please specify how long the key should be valid.<br />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 = key does not expire<br />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; = key expires in n days<br />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; w = key expires in n weeks<br />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; m = key expires in n months<br />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; y = key expires in n years<br /><br />&nbsp;&nbsp;&nbsp;Key is valid for? (0)<br />&nbsp;&nbsp;&nbsp;Key does not expire at all<br />&nbsp;&nbsp;&nbsp;Is this correct? (y/N) y<br /><br />&nbsp;&nbsp;&nbsp;You need a user ID to identify your key; the software<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;constructs the user ID<br />&nbsp;&nbsp;&nbsp;from the Real Name, Comment and Email Address in this form:<br />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &quot;Heinrich Heine (Der Dichter) &quot;<br /><br />Real name: Alli Fairfield<br />Email address: alli@gmail.com<br />Comment: exkey<br /><br />You selected this USER-ID:<br />&nbsp; &nbsp; &quot;Alli Fairfield (exkey) &quot;<br /><br />Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O<br />&nbsp;&nbsp;&nbsp;You need a Passphrase to protect your secret key.<br /><br />Enter passphrase:<br />Repeat passphrase:<br /><br />We need to generate a lot of random bytes. It is a good idea<br />to perform some other action (type on the keyboard, move the<br />mouse, utilize the disks) during the prime generation; this<br />gives the random number generator a better chance to gain<br />enough entropy.<br /><br />&nbsp;&nbsp;&nbsp;.+++++++++++++++++++++++++.+++++++++++++++++++++++<br />&nbsp;&nbsp;&nbsp;gpg: key 90130E51 marked as ultimately trusted<br />&nbsp;&nbsp;&nbsp;public and secret key created and signed.<br /><br />&nbsp;&nbsp;&nbsp;gpg: checking the trustdb<br />&nbsp;&nbsp;&nbsp;gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model<br />&nbsp;&nbsp;&nbsp;gpg: depth: 0&nbsp; valid:&nbsp; &nbsp;1&nbsp; signed:&nbsp; &nbsp;0&nbsp; trust: 0-, 0q, 0n, 0m, 0f, 1u<br />&nbsp;&nbsp;&nbsp;pub&nbsp; &nbsp;1024D/90130E51 2010-01-02&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;-------(90130E51 is the Public [keyname])<br />&nbsp;&nbsp;&nbsp;Key fingerprint = B8BD 46EF 41E7 44B9 F934&nbsp; 7C47 3215 5713 9013 0E51<br />&nbsp;&nbsp;&nbsp;uid&nbsp; Alli Fairfield (exkey)<br />&nbsp;&nbsp;&nbsp;sub&nbsp; &nbsp;2048g/35C5BCDB 2010-01-02&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;-------(35C5BCDB is the private keyname)<br /><br /><br />Step 2: Export the new public key (to post it on the forums for example)<br />- You can do this by printing it in the terminal, or creating a file with the publickey in it.<br /><br />***To print out key to terminal***<br />$ gpg --armor --export [keyname]&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;------(This will print to terminal where you can copy,paste etc...)<br /><br />***To create a file with key***<br />$ gpg --armor --export [keyname] &gt; filenameuptoyou.asc&nbsp; &nbsp; &lt;-----(will pop up in your home folder, open it with gedit, or whatev&nbsp; <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;you would like to use it with)<br /><br />Step 3: How to Import someones public key&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;------(So you can use their public key to encrypt messages to them)<br />$ gpg -import [file]<br /><br /><br />Step 4: Send a encryped message<br />~Ex. Sally would like to send a encrypted message to Edward. Sally Imports Edwards public key then uses this command to encrypt the file with the message in it.<br /><br />$ gpg --recipient Edward --armor --encrypt [filename]&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;-------(this creates the encrypted message in the same folder as the<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; message, default is probably your home folder if its on your&nbsp; &nbsp; &nbsp; <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Desktop make sure you $ cd Desktop before or else it wont<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; work. &lt;correct me if im worng)<br /><br />Step 5: Decrypt a Message someone sent you <br />$ gpg --decrypt [filename.asc]&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;--------(This will print message details in terminal window)<br /><br />~If you prefer a text file with the decrypted message use:<br />$ gpg --decrypt text.asc &gt; file.txt<br /><br />~Enter passphrase you created for the key-pair of the puclic key used to encrypt the message.<br /><br />Also If you would like to veiw all your key-pairs use:<br />$ gpg --list-keys<br /><br /><br />Hope this well help a bit, If you have any questions feel free to ask! <br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Guide to GPG in the terminal</strong><br />
+				Post by: <strong>Palmergbl</strong> on <strong>March 14, 2013, 06:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				cant help
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

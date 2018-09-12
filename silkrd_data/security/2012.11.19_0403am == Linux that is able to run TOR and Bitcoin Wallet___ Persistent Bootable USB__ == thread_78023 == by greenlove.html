@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=78023.0" />
+		<title>Print Page - Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: greenlove on November 19, 2012, 04:03 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</strong><br />
+				Post by: <strong>greenlove</strong> on <strong>November 19, 2012, 04:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hi,<br /><br />I&#039;ve been trying to get Bitcoin wallet and TOR onto a bootable version of linux for a while now.&nbsp; I have found versions of linux that will run Bitcoin wallet but will not run TOR and visa versa, but I am yet to find one that will run both.<br /><br />Does anyone know a version of Linux that can run Bitcoin wallet and TOR without having to download a bunch of installer packs etc to get it running?<br /><br />Thanks a ton!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</strong><br />
+				Post by: <strong>Leapfrogger</strong> on <strong>November 19, 2012, 04:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				There&#039;s a Linux version of Bitcoin-QTavailable on bitcoin.org. It works on Tails and I&#039;d imagine it would work on pretty much any Linux OS.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</strong><br />
+				Post by: <strong>strangemagic</strong> on <strong>November 19, 2012, 06:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				2.7 GB seems a lot to download over Tor, it would take ages and unnecessarily waste a lot of Tor bandwidth.<br /><br />You could download the blockchain over clearnet and then copy it into your Tails/Liberte/whatever installation, and then set up your anonymous wallet. That way you&#039;d only have to download the latest few blocks over Tor.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</strong><br />
+				Post by: <strong>phubaiblues</strong> on <strong>November 20, 2012, 03:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yep, this was one of the reasons I quit using my own bitcoin wallet, and began trusting cloud spots like instawallet, or, in my case, TradeHill ...and then I&quot;d use either liberte linux if I needed persistence, or Tails if I didn&#039;t ... used SwissDisk for stashing stuff...book luck, interesting problem, if liberte doesn&#039;t work....
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</strong><br />
+				Post by: <strong>Leapfrogger</strong> on <strong>November 21, 2012, 08:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=78023.msg607890#msg607890">Quote from: phubaiblues on November 20, 2012, 03:42 am</a></div></div><blockquote class="bbc_standard_quote">Yep, this was one of the reasons I quit using my own bitcoin wallet, and began trusting cloud spots like instawallet, or, in my case, TradeHill ...and then I&quot;d use either liberte linux if I needed persistence, or Tails if I didn&#039;t ... used SwissDisk for stashing stuff...book luck, interesting problem, if liberte doesn&#039;t work....<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Okay, so I spoke too soon. Bitcoin-QT does NOT work on Tails, as you said. I ran it before I set up persistence and figured I could just import my wallet and the blockchain to /.bitcoin, but /.bitcoin lies outside the &quot;persistent&quot; directory. (This seems like it would be a trivially easy problem to solve by the way, but I couldn&#039;t find any solutions on the forums; somebody named v1adimir wrote a work-around, but it was so amazing that he had to host it offsite and the link is now dead. Not sure I&#039;d trust him anyway.)<br /><br />So Liberte does work if you wanna use your own Bitcoin wallet? With which client?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</strong><br />
+				Post by: <strong>Oompaloompa</strong> on <strong>November 21, 2012, 07:24 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Bitcoin - QT or otherwise - doesn&#039;t run on any Debian systems, of which Tails is one. I looked into it a while ag and there&#039;s nothing which&#039;ll run a bitcoin client on Tails. It should work on other Linux distros - know it works on Ubuntu - but you&#039;ll just need to get that distro into a bootable USB format.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</strong><br />
+				Post by: <strong>astor</strong> on <strong>November 21, 2012, 07:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=78023.msg611686#msg611686">Quote from: Leapfrogger on November 21, 2012, 08:42 am</a></div></div><blockquote class="bbc_standard_quote">I ran it before I set up persistence and figured I could just import my wallet and the blockchain to /.bitcoin, but /.bitcoin lies outside the &quot;persistent&quot; directory. (This seems like it would be a trivially easy problem to solve by the way</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />bitcoin-qt has the -datadir option which lets you specify the location of the data directory. So, start it with<br /><br />bitoin-qt -datadir=/path/to/bitcoinDataDir<br /><br />See if that works.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</strong><br />
+				Post by: <strong>phubaiblues</strong> on <strong>November 22, 2012, 06:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=78023.msg611686#msg611686">Quote from: Leapfrogger on November 21, 2012, 08:42 am</a></div></div><blockquote class="bbc_standard_quote"><br />Okay, so I spoke too soon. Bitcoin-QT does NOT work on Tails, as you said. I ran it before I set up persistence and figured I could just import my wallet and the blockchain to /.bitcoin, but /.bitcoin lies outside the &quot;persistent&quot; directory. (This seems like it would be a trivially easy problem to solve by the way, but I couldn&#039;t find any solutions on the forums; somebody named v1adimir wrote a work-around, but it was so amazing that he had to host it offsite and the link is now dead. Not sure I&#039;d trust him anyway.)<br /><br />So Liberte does work if you wanna use your own Bitcoin wallet? With which client?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No, the persistence was handy, but I had other little hassles with liberte, but only bitcoin wallet I used were the online ones...that&#039;s why I switched to them in the first place, best I can remember, was because I could get the wallet setup on liberte...but I&#039;m totally comfortable with instawallet, so I actually prefer Tails, and just keep stuff in cloud...mostly just bookmarks...boot up Tails, download bookmarks, and I&#039;m in business...handy to have lastpass, or have keepass and dowload a file, which is what I used to do...I also tried and used privatix, as it had some pretty cool stuff on it.&nbsp; But anyway, as far as btc wallet goes, when I quit using windows for this stuff, I pretty much was tired of the wallet too...good luck! :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</strong><br />
+				Post by: <strong>Leapfrogger</strong> on <strong>November 23, 2012, 03:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=78023.msg613064#msg613064">Quote from: astor on November 21, 2012, 07:58 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=78023.msg611686#msg611686">Quote from: Leapfrogger on November 21, 2012, 08:42 am</a></div></div><blockquote class="bbc_alternate_quote">I ran it before I set up persistence and figured I could just import my wallet and the blockchain to /.bitcoin, but /.bitcoin lies outside the &quot;persistent&quot; directory. (This seems like it would be a trivially easy problem to solve by the way</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />bitcoin-qt has the -datadir option which lets you specify the location of the data directory. So, start it with<br /><br />bitoin-qt -datadir=/path/to/bitcoinDataDir<br /><br />See if that works.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hey, thanks! I gave this a shot despite knowing next to nothing about Linux.<br /><br />So whenever I tried anything beginning with bitcoin-qt in the command line, I got an error reading:<br /><br />bash: bitcoin-qt: command not found<br /><br />I figured out that this meant I had to create a path to bitcoin-qt, but I couldn&#039;t figure out how to do that in Tails. So I googled around some more until I discovered the ./ command and ended up using this:<br /><br />./Persistent/bitcoin-qt/bin/32/bitcoin-qt datadir=/home/amensia/Persistent/bitcoin-qt/bin/32/btcdata<br /><br />When I use this command, Bitcoin runs, but I also get an error in the Terminal that says:<br /><br />sendto: Operation not permitted<br /><br />When I run the same command while disconnected from the Internet, I get an error that reads:<br /><br />sendto: Network is unreachable<br /><br />So it runs, but it won&#039;t connect to the network in either case. Encouragingly, a random receiving address is generated, and the /.bitcoin directory is not created under /amnesia- which is what you&#039;d want. It also manages to &quot;remember&quot; the receiving address after being closed and run again from the command line- also good.<br /><br />Less encouragingly, it doesn&#039;t seem to actually be using the directory I specified (home/amensia/Persistent/bitcoin-qt/bin/32/btcdata); nothing ever appears in that directory. In fact, when I change that path to random gibberish, it doesn&#039;t seem to make any difference- the receiving address even remains the same, despite the fact that no wallet.dat file can be found anywhere on the computer. Weird.<br /><br />On the other hand, when I run Bitcoin by simply double-clicking on the icon, everything is as it was before: it generates a new receiving address, creates wallet.dat and other files in the /.bitcoin directory under /amnesia (files that will be wiped out when Tails is shut down), and successfully connects to the network. It run just fine, but it&#039;s all running from memory, so the problem is still that there&#039;s not enough room for the blockchain, whether I download it or swap it in from somewhere else.<br /><br />If you made it this far and have any other suggestions, I&#039;d be happy to try them out. This is kinda fun in a mildly frustrating way. ;)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</strong><br />
+				Post by: <strong>tor12345</strong> on <strong>December 10, 2012, 11:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				I have tails and am thinking about using instawallet. <br /><br />Pretty noob question buy if I did that, how would I backup the links onto another thumb drive? Is the only option to send myself a PGP message via email with the links in it?<br /><br />Thanks.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</strong><br />
+				Post by: <strong>Oompaloompa</strong> on <strong>December 11, 2012, 09:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Create a persistent volume on tails, save your instawallet links to a gedit file, or open office, whatever.<br /><br />Either just use the links from there or transfer from the tails usb to another usb while in tails.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</strong><br />
+				Post by: <strong>Just Chipper</strong> on <strong>December 11, 2012, 10:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You could always setup Whonix. It&#039;s a new 2-VM Tor Distro that allows you to automatically torrify any OS by forcing it through the Whonix Gateway VM. I am running it currently with an electrum wallet on Debian Wheazy. <br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=78023.msg613026#msg613026">Quote from: Oompaloompa on November 21, 2012, 07:24 pm</a></div></div><blockquote class="bbc_standard_quote">Bitcoin - QT or otherwise - doesn&#039;t run on any Debian systems, of which Tails is one. I looked into it a while ag and there&#039;s nothing which&#039;ll run a bitcoin client on Tails. It should work on other Linux distros - know it works on Ubuntu - but you&#039;ll just need to get that distro into a bootable USB format.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Um... Bitcoin-QT literally just unpacks and runs in Debian, don&#039;t know where you heard otherwise. Tails is a specific version of Debian, don&#039;t make broad assumptions based on just one distro. Tails is an amnesic OS (hence project amnesia) that is designed to be read-only with an OPTION for persistence, by default it is not available. Regular Debian distro&#039;s support electrum, armory, Satoshi, multibit, etc for Bitcoin clients. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Linux that is able to run TOR and Bitcoin Wallet??? Persistent Bootable USB??</strong><br />
+				Post by: <strong>tor12345</strong> on <strong>December 11, 2012, 11:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=78023.msg655145#msg655145">Quote from: Oompaloompa on December 11, 2012, 09:51 pm</a></div></div><blockquote class="bbc_standard_quote">Create a persistent volume on tails, save your instawallet links to a gedit file, or open office, whatever.<br /><br />Either just use the links from there or transfer from the tails usb to another usb while in tails.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Fantastic. Thanks.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

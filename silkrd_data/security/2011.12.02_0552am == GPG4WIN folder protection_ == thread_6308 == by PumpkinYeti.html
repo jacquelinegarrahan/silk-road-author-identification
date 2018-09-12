@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=6308.0" />
+		<title>Print Page - GPG4WIN folder protection?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: PumpkinYeti on December 02, 2011, 05:52 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>GPG4WIN folder protection?</strong><br />
+				Post by: <strong>PumpkinYeti</strong> on <strong>December 02, 2011, 05:52 am</strong>
+			</dt>
+			<dd class="postbody">
+				Well I -think- I have GPG figured out for the most part...<br /><br />But now my issue is that when you open GPA, it&#039;s plain as day what my username is on the site (the owned key there with the yellow wrench). I have my OS account name password protected, but I&#039;d like a second line of defense in case I forget to log out. And my OS doesn&#039;t make it easy to add password protection to the folder.<br /><br />What&#039;s the best and/or easiest way to protect that file from being opened by people who I don&#039;t want to open it?<br /><br />I&#039;m thinking either a third party program for simple password protection, but I&#039;m concerned if the file can still be view if someone used a different OS to look at the files on this drive (I&#039;ve heard Windows password protected files can still be seen if booting Linux on it, is that true?)<br /><br />What do you guys do to protect the file from being opened by someone else?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG4WIN folder protection?</strong><br />
+				Post by: <strong>caffeine_me</strong> on <strong>December 02, 2011, 06:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				I would recommend having a GPG stuff in a truecrypt file, with in a hidden truecrypt file.....at a minimum.&nbsp; Better would be to throw that and other incriminating things like tor bundle, bitcoin, keepass all in there and put in on a thumb drive.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG4WIN folder protection?</strong><br />
+				Post by: <strong>TravellingWithoutMoving</strong> on <strong>December 06, 2011, 04:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				[quote}(I&#039;ve heard Windows password protected files can still be seen if booting Linux on it, is that true?) {/quote}<br /><br />if its a ntfs or fat windows drive/partition the yes could be mounted on another linux or windows setup, could view the files but still not be able to view contents if encrypted.<br />-but that doesn&#039;t matter if they can&#039;t crack the encoding (who cares whether the view the machine code like view...}<br /><br />i wouldnt depend on any password nor user/password type strategics built into windows = made by microsoft.<br />its usually a 3rd party encryption of entire drive or pgp for example that would be trustworthy.<br /><br />ultimately move away from windows you have more options available but need to know what you are doing with it.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG4WIN folder protection?</strong><br />
+				Post by: <strong>PumpkinYeti</strong> on <strong>December 07, 2011, 07:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				For those of you still deciding, I took caffeine_me&#039;s advice.<br /><br />I now have&nbsp; a thumbdrive encrypted with TrueCrypt that I keep all the sensitive stuff on. Tor, PGP, Keepass, and other unmentionables.<br /><br />However, I think I&#039;ll remove Keepass OFF of it to keep my TrueCrypt password on it. That way Keepass master password kinda controls EVERYTHING.<br /><br />I think its a good system.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG4WIN folder protection?</strong><br />
+				Post by: <strong>caffeine_me</strong> on <strong>December 08, 2011, 05:40 am</strong>
+			</dt>
+			<dd class="postbody">
+				Not a bad idea of keeping your truecrypt password in keepass, as long as you trust their encryption (Truecyrpt is only as good as your password) and you don&#039;t have your other log ins that directly link you to incriminating websites they can then use to log in to your shit and have all evidence.&nbsp; I just keep my truecrypt password in my head only, and practice it daily&nbsp; ::)&nbsp; And I don&#039;t forget the non-hidden password encase I ever have to use it. :-[
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG4WIN folder protection?</strong><br />
+				Post by: <strong>subtlety</strong> on <strong>December 08, 2011, 06:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				I have a sorta related question that I don&#039;t think deserves it&#039;s own thread.&nbsp; I started using SR and Tor and PGP and all that about a month ago without really understanding alot about it, or whether I would actually be interested in following through with joining the community and become a regular user.&nbsp; Now that I have, I&#039;d really like to move all of this stuff onto a thumb drive.&nbsp; I&#039;ve got TrueCrypt and understand how it works, and the Tor bundle is easy enough, but I&#039;m not sure how to deal with PGP.&nbsp; The install I&#039;m using has my key and all the keys of my vendors that I want to be able to keep, but it&#039;s sitting right here in plain view on my desktop, and with every order and each passing day, I want to remove it more and more.<br /><br />How do I go about importing all of this from my current install to a new one on a thumb drive.&nbsp; Can I install Kleopatra on a thumb drive that doesn&#039;t have an os/isn&#039;t bootable?&nbsp; Basically, I still want to use this computer for all my activity here, but only when I pop in the usb, and then have no traces on my home os when I remove it. I&#039;ll be picking up the thumb drive probably tomorrow, so I&#039;m trying to get a head start.&nbsp; I assume I install everything on the drive and then use truecrypt?&nbsp; &nbsp;<br /><br />If someone could give me a quick rundown on the process I&#039;d really appreciate it.&nbsp; My biggest concern is keeping all my PGP stuff intact, so I don&#039;t have to create new keys and re-import all my vendors.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG4WIN folder protection?</strong><br />
+				Post by: <strong>tommyv</strong> on <strong>December 08, 2011, 01:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;d recommend that you use gpg4usb rather than gpg4win; fits on a thumbdrive/encrypted volume and doesn&#039;t need any kind of installation.<br />I myself had to find an alternative to gpg4win since Kleopatra wouldn&#039;t start at all.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG4WIN folder protection?</strong><br />
+				Post by: <strong>subtlety</strong> on <strong>December 08, 2011, 05:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ok, cool. But can I transfer my keys to gpg4usb from my current install? I suppose I should just try and figure it out when I get the usb, but I&#039;m trying to get an idea if I&#039;ll have to start over with my gpg.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG4WIN folder protection?</strong><br />
+				Post by: <strong>PumpkinYeti</strong> on <strong>December 09, 2011, 01:45 am</strong>
+			</dt>
+			<dd class="postbody">
+				You should be able to just move those items from the desktop to the thumbdrive and use TrueCrypt.<br /><br />FYI, I deleted PGP4Win, then reinstalled it using the thumbdrive as a destination folder. When I opened it, everything was there. Not sure how.<br /><br />In any case you sound like me at the moment, trying to be as careful as possible and create as many hurdles as I can to shore up my defenses. I downloaded File Shredder to totally remove files deleted files on the hard drive, you should look into that if you haven&#039;t. Also installed PeerBlock and Keepass.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG4WIN folder protection?</strong><br />
+				Post by: <strong>CrunchyFrog</strong> on <strong>December 09, 2011, 03:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote from: PumpkinYeti</div></div><blockquote class="bbc_standard_quote">...I deleted PGP4Win, then reinstalled it using the thumbdrive as a destination folder. When I opened it, everything was there. Not sure how....</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>It sounds like you may have moved the application but not its data files.&nbsp; Search your entire system for &quot;pubring.gpg&quot; and/or &quot;secring.gpg&quot; to see if they might still be lurking on your hard drive.&nbsp; (If you&#039;re running W7, they may be in C:\Users\username\AppData\Roaming\gnupg.)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG4WIN folder protection?</strong><br />
+				Post by: <strong>PumpkinYeti</strong> on <strong>December 09, 2011, 03:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=6308.msg59037#msg59037">Quote from: CrunchyFrog on December 09, 2011, 03:26 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote">Quote from: PumpkinYeti</div></div><blockquote class="bbc_alternate_quote">...I deleted PGP4Win, then reinstalled it using the thumbdrive as a destination folder. When I opened it, everything was there. Not sure how....</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>It sounds like you may have moved the application but not its data files.&nbsp; Search your entire system for &quot;pubring.gpg&quot; and/or &quot;secring.gpg&quot; to see if they might still be lurking on your hard drive.&nbsp; (If you&#039;re running W7, they may be in C:\Users\username\AppData\Roaming\gnupg.)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Ugh. You are correct. Both are there. Thanks for pointing that out, I appreciate it. Their uninstall function must suck.<br /><br />What do you recommend now? Delete the folder and reinstall on thumbdrive again if necessary? I&#039;ve only got my key and a single vendor&#039;s so it&#039;s no trouble.<br /><br />Then I&#039;ll want to run File Shredder again... this paranoia thing is time consuming hehehheh I guess I&#039;ll have it all set up pretty well before I get too involved...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG4WIN folder protection?</strong><br />
+				Post by: <strong>CrunchyFrog</strong> on <strong>December 09, 2011, 04:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote from: PumpkinYeti</div></div><blockquote class="bbc_standard_quote">...What do you recommend now? Delete the folder and reinstall on thumbdrive again if necessary?...</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I can tell you what I did to work around this problem on a W7 system.&nbsp; I copied the directory to where I wanted it, securely deleted the original, then used Sysinternals&#039; Junction utility [ technet.microsoft.com/en-us/sysinternals/bb896768 ] to create an NTFS junction point (symbolic link) to the new location.<br /><br />Once you&#039;ve got Junction installed -- it&#039;s a single 147kB executable, no installer -- it&#039;s as easy as typing &quot;junction drive:\oldpath\oldfoldername drive:\newpath\newfoldername&quot; into a command prompt window.&nbsp; The junction point will persist until you remove it, so GPG4win will want the thumbdrive to be present each time you run it.<br /><br />(I wouldn&#039;t be too suprised if there were a command line switch for GPG4win to accomplish the same thing -- maybe someone here can tell us -- but I didn&#039;t feel like looking it up at the time.)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG4WIN folder protection?</strong><br />
+				Post by: <strong>Ineluctable</strong> on <strong>December 09, 2011, 05:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				This is a good tutorial on how to move the data directory:<br /><br />http://superuser.com/questions/246177/how-to-store-kleopatra-pgp-keys-on-usb-drive
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG4WIN folder protection?</strong><br />
+				Post by: <strong>PumpkinYeti</strong> on <strong>December 09, 2011, 05:40 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks fellas, much appreciated!
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

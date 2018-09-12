@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=126499.0" />
+		<title>Print Page - TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: southwestrunner79 on March 01, 2013, 05:48 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>southwestrunner79</strong> on <strong>March 01, 2013, 05:48 am</strong>
+			</dt>
+			<dd class="postbody">
+				cpu in question was fine thru week of 2-18-13 thru 2-25-13.&nbsp; TOR connecting to &quot;Proxy server is refusing connections&quot; thru firefox.&nbsp; so ive got 2 cpu&#039;s at my spot both run TOR to browse, while only one I do my business on.&nbsp; The one im on now is less than reliable and doesnt have the key program installed for PGP so usually only browse.<br /><br />i installed the update 2-26-13 recommended when TOR started up.&nbsp; since then, ive been unable to connect back.&nbsp; ive googled the error msg mostly recommending stuff either over my head or manual settings that did not connecting.<br /><br />under the browser options at the top, TOOLS-winXP(OPTIONS-win7)&gt;options&gt;advanced&gt;connectionsettings...<br /><br />from there ive tried the no proxy settings, auto detect proxy settings, manual proxy settings noting only the 9050 setting.&nbsp; both adjusting in firefox on the clearnet and thru the tor bundle &quot;start tor.exe&quot; to no avail.<br /><br />i dont really understand why it was crusing along for months then bam.&nbsp; update and that one is down.&nbsp; thanks for responses in advance.<br /><br />if a simple solution isnt resolved, i was conidering stripping firefox and the TOR bundle &amp; reload to the problem cpu, assuing thatll fix the issue.&nbsp; eh?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 01, 2013, 05:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				Did you extract the new browser bundle in the same place (over top of) the old one?<br /><br />The Tor Project people said not to do that. You should extract it in a new location.<br /><br />Otherwise, I&#039;m not sure why the browser bundle in its default state wouldn&#039;t work for you.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>southwestrunner79</strong> on <strong>March 01, 2013, 06:01 am</strong>
+			</dt>
+			<dd class="postbody">
+				yes I just clicked overwrite all more less.&nbsp; had done the same every time before, installed back over the old folder for a few months now with no issue.&nbsp; either way,&nbsp; it seems ill try stripping and reinstalling.&nbsp; thanks quick reply!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 01, 2013, 06:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah, the big change in the latest browser bundle was moving from Firefox 10 to 17. You can&#039;t just overwrite the files like usual because of all the changes in Firefox. You have to extract to a new location.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>iheartmolly</strong> on <strong>March 01, 2013, 06:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				I assume you are using windows. You mentioned you don&#039;t have PGP installed. There is a portable usb version available for windows with no installation required, which is what you want. Google gpg4usb<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 01, 2013, 06:12 am</strong>
+			</dt>
+			<dd class="postbody">
+				For the benefit of others, please report back if this solved your problem.<br /><br />Also for the benefit of people reading this, if you start Tor Browser Bundle and check.torproject.org says there&#039;s an update, it&#039;s a good idea to check the official blog:&nbsp; https://blog.torproject.org<br /><br />They always make a blog post for a new update, sometimes with relevant information. In this case, they posted this:<br /><br />https://blog.torproject.org/blog/new-tor-browser-bundles-firefox-1703esr<br /><br />&quot;Very important: if you&#039;ve been using the Tor Browser Bundles with Firefox 10.0.x, you must not attempt to overwrite it with the new bundle. Open these into their own directory and do not copy any profile material from older TBB versions.&quot;<br /><br />That&#039;s where I got this info.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 01, 2013, 08:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				Update: what you are experiencing may be unrelated to what I mentioned earlier. Keep an eye on this bug report:<br /><br />&quot;is this ticket the explanation for all those other TBB users who are reporting &quot;The proxy server is refusing connections&quot; issues too?&quot;<br /><br />https://trac.torproject.org/projects/tor/ticket/8336<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>robotrippin</strong> on <strong>March 01, 2013, 10:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I had issues at first when I tried to overwrite the old files. I cleaned it up and then did it over the right way(fresh install) and then had the proxy issue mentioned. I restarted my system and when I fired up Tor it was ok. Not sure if it was dumb luck or not but it solved the issue. Gonna keep an eye on this just in case it pops up again.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>pspring188</strong> on <strong>March 04, 2013, 06:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				i also had issues with the latest update. i backed up my bookmarks, deleted the entire tor directory, re-extracted tor, and then it worked again. hope this helps someone
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>southwestrunner79</strong> on <strong>March 08, 2013, 08:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				sorry for the slow reply.&nbsp; just getting time to get back around to resolving my issue.<br /><br />THANKS astor for solution.&nbsp; i must have overlooked the warning about overwriting onto the previously loaded folder.&nbsp; i just made another folder within the current to load the new .exe location.<br /><br />hopes this helps any others.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>anonom</strong> on <strong>March 08, 2013, 10:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Even though it is not recommended to overwrite things for TBB, I still have a question:<br /><br />Is it possible to only replace the component that has been updated ? For instance, if&nbsp; the Tor teams says they updated the Tor client, then can I just replace the folder for Tor (not firefox) ? On the other hand, when firefox gets a minor update, is it safe to replace only that ?<br /><br />The above is clearly a bad idea since it&#039;s mixing components with different versions, but it can be such a pain in the ass to updates the whole bundle for some minor (and often not described on the blog) bugs.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>royalblue</strong> on <strong>March 13, 2013, 01:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				I didn&#039;t overwrite an old release but at one point I had this problem too.&nbsp; Apparently, for some reason, TOR changed its port from 9150 back to 9050.&nbsp; I had to edit the .torrc file and manually change it to 9150 again.<br /><br /><br />anonom, updating tor as you suggest is possible.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 13, 2013, 02:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=126499.msg890895#msg890895">Quote from: anonom on March 08, 2013, 10:33 pm</a></div></div><blockquote class="bbc_standard_quote">Even though it is not recommended to overwrite things for TBB, I still have a question:<br /><br />Is it possible to only replace the component that has been updated ? For instance, if&nbsp; the Tor teams says they updated the Tor client, then can I just replace the folder for Tor (not firefox) ? On the other hand, when firefox gets a minor update, is it safe to replace only that ?<br /><br />The above is clearly a bad idea since it&#039;s mixing components with different versions, but it can be such a pain in the ass to updates the whole bundle for some minor (and often not described on the blog) bugs.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />To update the whole bundle all you have to do is extract the zip file in a new place (and usually in the same place). How is that harder than mucking around with individual folders?<br /><br />If you have bookmarks or preferences that you want to keep, <br /><br />1. You should be storing TBB on an encrypted volume<br />2. You shouldn&#039;t be changing the defaults too much because that reduces your anonymity<br />3. There are only a couple files that you need. Go to Data\profile and copy over places.sqlite and prefs.js<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>anonom</strong> on <strong>March 13, 2013, 02:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=126499.msg893010#msg893010">Quote from: astor on March 13, 2013, 02:10 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=126499.msg890895#msg890895">Quote from: anonom on March 08, 2013, 10:33 pm</a></div></div><blockquote class="bbc_alternate_quote">Even though it is not recommended to overwrite things for TBB, I still have a question:<br /><br />Is it possible to only replace the component that has been updated ? For instance, if&nbsp; the Tor teams says they updated the Tor client, then can I just replace the folder for Tor (not firefox) ? On the other hand, when firefox gets a minor update, is it safe to replace only that ?<br /><br />The above is clearly a bad idea since it&#039;s mixing components with different versions, but it can be such a pain in the ass to updates the whole bundle for some minor (and often not described on the blog) bugs.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />To update the whole bundle all you have to do is extract the zip file in a new place (and usually in the same place). How is that harder than mucking around with individual folders?<br /><br />If you have bookmarks or preferences that you want to keep, <br /><br />1. You should be storing TBB on an encrypted volume<br />2. You shouldn&#039;t be changing the defaults too much because that reduces your anonymity<br />3. There are only a couple files that you need. Go to Data\profile and copy over places.sqlite and prefs.js<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Except I added a few addons for safety reasons (I&#039;m aware adding addons may be dangerous...). And I expect it&#039;s not as easy to move addons from one FF to another with different versions.<br /><br />Additionally, it can be VERY long to download and install new extensions over Tor.<br /><br />I stored TBB in a Truecrypt container since day 1 :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR connecting to &quot;Proxy server is refusing connections&quot; after recomended update</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 13, 2013, 03:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yes, that can be dangerous. Not only can add-ons potentially bypass proxy settings (although the TorBrowser is patched to better prevent this), but add-ons that modify web pages can be used to fingerprint you.<br /><br />The Tor people recommend keeping the defaults so we all look the same. You reduce your anonymity set when you start getting creative.<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

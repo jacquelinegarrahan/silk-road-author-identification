@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=56688.0" />
+		<title>Print Page - Liberte browser- won't access https for SR</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Nellion on October 21, 2012, 04:34 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Liberte browser- won't access https for SR</strong><br />
+				Post by: <strong>Nellion</strong> on <strong>October 21, 2012, 04:34 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So yeah, just got my flash drive setup to run Liberte. But, the https address for SR wont work for me, but the http address will. Is this really a concern since I&#039;m using Liberte or should I find a way to fix it. If the latter should be sought, how do I go about fixing it?<br /><br /><br />Also, are there any other fun things to play around with on Liberte? I know about all the stuff in the sub-forum stickie, but are there any other things beyond that?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte browser- won't access https for SR</strong><br />
+				Post by: <strong>CoolGrey</strong> on <strong>October 21, 2012, 06:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If I understood correctly, did you try: https://silkroadvb5piz3r.onin ?<br /><br />In that case, no it won&#039;t work. Because the https wouldn&#039;t do anything.<br /><br />Understand this difference well: <br /><br />When you access a normal website using Tor, the data leaves the Tor network through an exit node. After that, it is no longer encrypted (with regular http), because it is no longer inside the Tor network. That is where the https protocol comes in: it encrypts traffic all the way until the final destination, the target website. So on regular websites, https is necessary if you send sensitive information to that website. <br /><br />However, traffic to a .onion hidden service doesn&#039;t leave the Tor network. Because of that, it is never unencrypted, and therefore, there is no need for the https protocol. No .onion site ever has https (or if you find one that does, it&#039;s completely redundant).<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte browser- won't access https for SR</strong><br />
+				Post by: <strong>Nellion</strong> on <strong>October 22, 2012, 07:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ok, thank you very much for the clarification! :D<br /><br />I am just getting into all this cyber security stuff and still have much more to learn. Eventually I would like to be VERY well accomodated, perhaps even &quot;clandestine expert&quot; level, but obviously have MUCH more to learn. <br /><br /><br />As of now, I have my Liberte flash drive working, but it feels like there&#039;s much more I could be doing, or at least learning if not actually &quot;installing and using programs&quot; to better protect myself. I am just now starting to use GPG and learning to scrub meta tags from photos.<br /><br />But, there are MANY more programs on Liberte that I&#039;ve never heard of and don&#039;t know what they do. Are there any other useful programs on Liberte that would serve me well that I should know about? Or, even any advanced functions of GPG or UBuntu that I should know about.<br /><br />Are there any resources or books that you can recommend?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte browser- won't access https for SR</strong><br />
+				Post by: <strong>CoolGrey</strong> on <strong>October 22, 2012, 08:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Don&#039;t worry about it, all the cyber security stuff is a bit overwhelming at first, it takes a few weeks to get familiar with most things.<br /><br />It&#039;s good that you&#039;ve set up Liberté and it&#039;s good that you&#039;re thinking critically about security, that way you learn stuff. Continue like that and you&#039;ll be a clandestine expert one day ;-)<br /><br />I haven&#039;t tested the latest version of liberté linux, but I have used some of the previous versions of it and it didn&#039;t really allow you to install software on it. I made the switch to linux Ubuntu. It&#039;s one of the most used Linux distributions and has a big group of people working on it, some of them very security minded. <br /><br />If you use Ubuntu, it allows you to download the latest Tor browser bundle, TrueCrypt, software to remove image metadata, etc. Also, security upgrades are sent out almost immediately if a leak is detected. So that&#039;s something you can look into if you&#039;re interested.<br /><br />There isn&#039;t that much written material out there on being clandestine on the web (at least not for people who want to visit SR), but I am working on that. So maybe you&#039;ll see a piece of guide from me in the future :p
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte browser- won't access https for SR</strong><br />
+				Post by: <strong>Nellion</strong> on <strong>October 22, 2012, 09:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So, in fact, there&#039;s not meta data scrubbing software pre-installed onto Liberte? I must have gotten confused somewhere along the way.<br /><br />I&#039;m sure there will be a lot of new information come forth in the coming months as far as security on SR goes. Isn&#039;t it amazing the vast array of people freedom brings together?<br /><br />Scientists, engineers, IT specialists, drug addicts... It&#039;s a beautiful thing! :D<br /><br /><br />Anyhow, I for one, would be greatly appreciative if you took the time to write a guide on security for the forums. Hell, I&#039;m sure if you&#039;re in-depth enough you would have success selling ebooks on SR at a nominal fee. I would be willing to pay a reasonable price for such info. I&#039;m sure many others would be, as well.<br /><br />Even an explanation of the basic functions of things and how they pertain to SR would be a great help! And then as people get more familiar you could incrementally increase the level of the material.<br /><br /><br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

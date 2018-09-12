@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=202510.0" />
+		<title>Print Page - HOWTO: Run a relay and help the Tor network</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: astor on August 16, 2013, 03:34 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 16, 2013, 03:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				Since people expressed interest in running relays, I&#039;ve written a guide that can get you set up. There are many ways to run a relay, so for the sake of simplicity, I will focus on virtual private servers running Ubuntu 12.04. Feedback is definitely welcome.<br /><br />This guide includes instructions for Windows users. I will write Linux instructions in a separate post, and if someone would like to add Mac instructions, I&#039;d greatly appreciate it.<br /><br /><br />===Finding a Hosting Provider===<br /><br />In order to run a relay, you will need a dedicated server or a virtual private server. There are two features you should look for:<br /><br />1. Geographical location<br />2. Bandwidth<br /><br />Other specs like RAM and CPU tend not to matter until the bandwidth gets really high, like on an unmetered server. Most of the time, your bandwidth limits will keep the Tor client well below your RAM and CPU limits.<br /><br />There is no minimum amount that you need to spend on a server. You can lease a VPS for under $10 a month or a dedicated server for hundreds of dollars. I think every little bit helps, especially if the servers are geographically diverse. For this guide, I&#039;m going to assume you don&#039;t want to drop hundreds of dollars on your first server, so we&#039;ll focus on setting up a small to medium sized VPS. The price range I&#039;m thinking is $10 - $50 a month, which should give you 512 MB to 1 GB of RAM and 200 GB to 1 TB of bandwidth.<br /><br />I&#039;m not going to make specific recommendations for hosting providers, for obvious reasons, but most relays are in North America and Europe. It would be nice if we had more relays in South America, Asia and Africa. The infrastructure in Africa is the most underdeveloped, so you may want to focus on finding providers in South America and Asia. They will be more expensive than providers in North America and Europe. If you can&#039;t find providers in your price range, it&#039;s OK to run a relay in North America and Europe. As I said, every little bit helps.<br /><br />Another thing to consider when searching for a VPS is that there are different virtualization technologies. These include OpenVZ, Xen, VMWare, Virtuozzo, and KVM. For this guide, I&#039;m going to recommend running your relay in an OpenVZ container, because it is one of the most popular virtualization technologies, it is generally cheaper than the others for the same specs, your operating system will be installed for you by the hosting provider, and the OpenVZ connection limits aren&#039;t really a problem with low bandwidth relays. If you want your relay to push more than 1 TB of traffic a month, you should switch to something like Xen or KVM, or a dedicated server.<br /><br />It&#039;s a good idea to read reviews of the hosting provider before ordering, but this can be tricky. There are a lot of fake web sites with shill reviews. In general, well-known forums with large communities (like webhostingtalk.com) are a better place to look for reviews than random web sites.<br /><br />When you find a provider that you like, look for their Acceptable Use Policy (AUP), which will sometimes be part of their Terms of Service (TOS). Most hosting providers have links to these documents on their main page. Read through them to find out if they ban proxies. If there is no mention of Tor, &quot;proxies&quot; or &quot;open proxies&quot; almost always include Tor. Some hosting providers specifically ban Tor. Some only ban exit nodes. The latter case is OK, because we will be setting up non-exit relays. You don&#039;t want to waste time setting up a relay that will be shut down a week later because it violates your hosting provider&#039;s AUP.<br /><br /><br /><br />===Ordering a Server===<br /><br />Once you find a hosting provider, you can create an account and order the VPS. I don&#039;t see a problem with leasing a VPS with your real identity. There are 4300 relays at the moment. You will be lost in a big crowd. However, you shouldn&#039;t mention that you set up a relay in this thread or anywhere else on the forum! You shouldn&#039;t use information (like a username) that links you to your Silk Road identity! If you really want anonymity, at the end of this guide there&#039;s a section that offers some suggestions, but keep in mind that takes a lot more work.<br /><br />During the ordering process, you will be asked to choose an operating system. Select Ubuntu Server 12.04, so we can simplify things. Every VPS provider should have an OpenVZ image for that OS. If the VPS has 512 MB of RAM or less, use the 32 bit version. If it has 1 GB or more, use the 64 bit version.<br /><br />A common box that you have to fill out is the &quot;domain name&quot;. You don&#039;t need a domain name to order a VPS. You can fill in anything, like example.org. For the server name, put anything you want, it will become the hostname. If it asks for DNS information, just put ns1 and ns2, it doesn&#039;t matter.<br /><br />Also, lease the VPS on a monthly basis for the first few months, even if there are discounts for longer terms. Your VPS may turn out to have crappy networking or frequent reboots, so you don&#039;t want to pay for a year of hosting and be forced to abandon the VPS after a month.<br /><br />After ordering, you&#039;ll get an email with the IP address and login details of your VPS.<br /><br /><br /><br />===Configuring the Relay===<br /><br />The first thing we need to do is figure out the RelayBandwidthRate based on the monthly bandwidth limit of the VPS. Keep in mind that most hosting providers count both incoming and outgoing bandwidth, so Tor relay traffic gets counted twice. A VPS that pushes 1 TB of traffic from the perspective of the hosting provider, actually pushes 500 GB of traffic from the perspective of the Tor network (it&#039;s the same data, coming and going).<br /><br />Let&#039;s say your VPS is allowed 1 TB of traffic per month. That&#039;s 1,000,000 MB. So the rate (per second) that you would use in your Tor configuration is:<br /><br />1,000,000 / 30 / 24 / 60 / 60 / 2 = 0.192 MB or 192 KB<br /><br />This is a good place to start. In practice, most relays don&#039;t max out their bandwidth. In fact, many relays only use 30-50% of their max bandwidth rate. You can watch the bandwidth of your relay for a few weeks and increase it if you are using much less than your limit. For example, if in the first two weeks it uses 250 GB (and could have used 500 GB, because that&#039;s half of your 1 TB per month), then you can double the RelayBandwidthRate. It can take a few weeks of adjusting to find the right balance.<br /><br />After you get the login information, download PuTTy from the web site:<br /><br />http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe<br /><br />This program lets you connect over a protocol called SSH, or Secure Shell, which creates an encrypted connection to a command prompt on the server. Run PuTTy and fill out the following information:<br /><br />Host name (or IP address): &lt;your VPS IP address&gt;<br />Port: 22<br />Connection type: SSH<br /><br />Before we go any further, click on the words &quot;Default Settings&quot; under &quot;Saved Sessions&quot; and click the Save button to the right of it. That way you don&#039;t have to enter the IP address each time.<br /><br />Then click Open. You&#039;ll see a prompt to accept the server&#039;s host key, click Yes. You only have do this the first time.<br /><br />login as: root<br />password: &lt;what you were given&gt;<br /><br />Note that you can resize the window if it&#039;s too small.<br /><br />The first thing you should do after logging in is change the root password, especially since it was emailed to you in plaintext. Do that with the following command:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">passwd<br /></code><br />And enter the password twice.<br /><br />BTW, for all of these commands, you can copy them from this guide and paste them into PuTTy by right-clicking in the command prompt window.<br /><br />Now type<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">nano /etc/apt/sources.list<br /></code><br />Add this line at the end of the file:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">deb http://deb.torproject.org/torproject.org precise main<br /></code><br />Enter the following sequence to save the file and exit: ctrl+x, y, enter<br /><br />Enter the following lines into the command prompt to install Tor and the relay monitor ARM:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">apt-get update<br />apt-get install deb.torproject.org-keyring<br />apt-get update<br />apt-get install tor tor-arm<br /></code><br />Hit Y[enter] whenever it asks you to confirm an action. The first install command will give you a warning because you haven&#039;t imported the PGP key for that software repository yet, which is what you&#039;re doing with that command.<br /><br />Now we&#039;ll edit the configuration file to turn our Tor client into a relay. First, backup the original configuration file:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">cp /etc/tor/torrc /etc/tor/torrc.backup<br /></code><br />If you screw something up, you can restore Tor to its default state with the following commands:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">cp /etc/tor/torrc.backup /etc/tor/torrc<br />service tor restart<br /></code><br />Let&#039;s edit the configuration file:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">nano /etc/tor/torrc<br /></code><br />Find the following lines and remove the # at the beginning. Anything that follows a # is treated as a comment instead of an instruction to Tor, so we are adding these instructions.<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">ControlPort 9051&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # This is a comment that Tor ignores, but everything before the hash is an instruction that Tor reads<br />CookieAuthentication 1<br /><br />ORPort 9001&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# Change this to ORPort 443&nbsp; !!!!<br /><br />Nickname ididnteditheconfig&nbsp; &nbsp;# Change ididnteditheconfig to whatever nickname you want, no spaces, nothing drug or SR related<br /><br />RelayBandwidthRate 100 KB&nbsp; &nbsp; &nbsp;# Change 100 KB to whatever you calculated for your server earlier<br />RelayBandwidthBurst 200 KB&nbsp; &nbsp; # Make this double the value above. If you server is using too much bandwidth, make this the same as the line above<br /><br />ContactInfo Random Person &lt;nobody AT example dot com&gt;&nbsp; # Create a throwaway email address and put it here<br /><br />ExitPolicy reject *:*&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# This line makes your relay a non-exit<br /></code><br />Then type: ctrl+x, y, enter<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">service tor reload<br /></code><br />Congratulations, you&#039;re running a relay!<br /><br />The RelayBandwidthRate and RelayBandwidthBurst are what you will probably want to adjust after a few weeks of watching your relay&#039;s bandwidth.<br /><br />A note about the contact info. You don&#039;t need to enter a name. Remove the &quot;Random Person&quot; part entirely. However, you should enter a real email address. The purpose of providing an email address is if your relay is misconfigured, the Tor people can contact you and tell you about it. On the other hand, this email address will appear in your relay&#039;s descriptor, which is public, so use an alternate address from any of your main ones.<br /><br />There is a program called ARM (Anonymous Relay Monitor) that lets you monitor your relay. To run it, type:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">arm<br /></code><br />You can click the left and right arrow keys to see the different panels of info. To exit arm, type: q, q<br /><br />Another way to view info about your relay is to search for it on https://atlas.torproject.org<br /><br />Finally, to exit the SSH session, type:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">exit<br /></code><br /><br /><br />===Securing Your Server===<br /><br />The following is not necessary, but it&#039;s an extremely good idea.<br /><br />A better way to log in to your server is to create a regular user account, disable root logins, create an SSH key for your regular user, and disable password logins. That makes it virtually impossible for someone to break into your server (people try to hack into servers through SSH all day long).<br /><br />To create a regular user account, enter this command:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">adduser &lt;username&gt;<br /></code><br />Change &lt;username&gt; to any one-word username you want.<br /><br />Enter the password for that user twice, and make it different from root&#039;s password. Leave the rest of the prompts (like Full Name) blank by hitting enter through them, then hit y at the end.<br /><br />You can test out your new user. Exit the SH session and launch PuTTy again. Now that you have a regular user, you can add it to the PuTTy configuration so you don&#039;t have to type it in every time.<br /><br />In the configuration window that you get when PuTTy launches, go to Connection -&gt; Data<br /><br />Auto-login username: &lt;the regular user you created&gt;<br /><br />Go back to the Session section, highlight &quot;Default Settings&quot;, and click Save again. Connect to your server. You should only have to enter the password this time, and of course it will be your regular user&#039;s password.<br /><br />When you login as the regular user, you can&#039;t do much outside of your home folder. You can&#039;t install or remove software. This is a security feature. You have to become root. In order to do that, type:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">su<br /></code><br />And enter root&#039;s password.<br /><br />To exit being root, type exit, and to completely exit the SSH session, type exit again.<br /><br />Let&#039;s make this even more secure by adding an SSH key.<br /><br />Download this program and run it: <br /><br />http://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe<br /><br />Next to &quot;Generate a public/private key pair&quot;, click Generate. This will take a few minutes. Click around randomly to create entropy and speed it up.<br /><br />When it&#039;s done, it&#039;ll say &quot;Public key for pasting into OpenSSH authorized_keys file&quot;. Copy the entire thing in the box. Log into your server as the regular user and type this:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">mkdir .ssh<br />nano .ssh/authorized_keys<br /></code><br />Paste that public key in (by right-clicking once, as before). Then hit ctrl+x, y, enter.<br /><br />Back in PuTTyGen, enter a key pass phrase and confirm it, then click &quot;Save private key&quot; and save it somewhere on your computer. The pass phrase protects your private key just like with PGP. At this point you can exit out of PuTTyGen.<br /><br />Now launch PuTTy again, and in the configuration window, go to Connection -&gt; SSH -&gt; Auth.<br /><br />Find the field that says Private key file for authentication, click Browse and select your private key.<br /><br />Go back to Session, highlight &quot;Default Settings&quot; and Save.<br /><br />Connect to your server again. This time it will ask you for the pass phrase to your private key, not the password to the regular user.<br /><br />If you login successfully, great! You can disable root and password logins. Type:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">su<br />nano /etc/ssh/sshd_config<br /></code><br />Find these lines:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">PermitRootLogin yes&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;# Change it to no<br /><br />#PasswordAuthentication yes&nbsp; &nbsp; &nbsp;# Remove the # at the beginning and change it to no<br /></code><br />Save and exit with ctrl+x, y, enter.<br /><br />Restart the SSH server:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">service ssh restart<br /></code><br />Exit completely out and log back in as the regular user. You should login just fine. To test your settings, you can change PuTTy to login as root and it should deny you.<br /><br />Now think about what an attacker has to do to get into your server. First he has to guess your regular username. Then he has to steal your private key or brute force one that works with your public key. That&#039;s like having a 2048 bit password! Then he has to guess root&#039;s password. Your server is very secure.<br /><br /><br /><br />===Server Maintenance===<br /><br />You should login in to your server every once in a while and update the software. Login as the regular user, change to root (su), and issue these commands:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">apt-get update<br />apt-get dist-upgrade<br /></code><br /><br /><br />===Purchasing a Server Anonymously===<br /><br />As I said before, I don&#039;t think it&#039;s necessary, but if you want to get a server anonymously, here are some ideas that may or may not work. Suggestions are definitely welcome. :)<br /><br /><br />The first thing you need to realize is that the vast majority of hosting providers use fraud detection services, because hackers and spammers love leasing servers anonymously or with stolen credit cards. You almost certainly can&#039;t sign up with a hosting provider from a Tor exit node. A popular fraud detection sevice called MaxMind claims to block VPNs and open proxies too:<br /><br />https://www.maxmind.com/en/ipauthentication<br /><br />If you really want to be anonymous, I don&#039;t think you should be using a VPN anyway, because you&#039;re trusting their word that they don&#039;t log, or that LE won&#039;t compel them to log in the future. The best way to find a &quot;clean&quot; IP address is to point Tor browser at a web proxy. There are web sites that list thousands of them, but for obvious reasons I won&#039;t list them here. You may have try many web proxies before you find one that isn&#039;t blocked.<br /><br />The other issue is payment method. There are a few dozen hosting providers that accept bitcoins, which you could use by anonymizing them your normal way, but all of the ones that I know about are in North America and Europe, which doesn&#039;t help the diversity of the Tor network. Again, if you really want to be anonymous, that&#039;s fine because a relay in NA or EU is better than no relay.<br /><br />Other than bitcoins, there are a few potentially anonymous payment methods with fiat currency.<br /><br />1. Prepaid debit cards<br />2. e-currency and precious metals exchanges, like Pecunix<br />3. an anonymous PayPal account<br /><br />MaxMind claims to block prepaid debit cards:<br /><br />https://www.maxmind.com/en/ccv_overview<br /><br />So I don&#039;t know if that will work.<br /><br />As far as e-currency exchanges go, Liberty Reserve is gone, so I don&#039;t know what else exists other than Pecunix, but by routing money through several exchanges, you can potentially anonymize it. You&#039;ll have to find a hosting provider that takes these payment methods, or cash out to a different payment method.<br /><br />Also, you might be able to register a PayPal account by pointing Tor Browser at a web proxy, and use fake info that is geographically close to that proxy, then go to Freenode #bitcoin-otc or localbitcoins.com and sell BTC for PayPal credit that gets deposited to your account, then use that to pay for the server.<br /><br />All of these methods involve some work and a high chance of failure, but you&#039;re welcome to try them.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>Dread Pirate Roberts</strong> on <strong>August 16, 2013, 05:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you so much for putting this guide together astor!&nbsp; Many people have felt the urge to contribute in some way lately and I think this is an excellent way to do it.&nbsp; It&#039;s really very easy once you do it and you will also learn a few IT skills along the way as well.&nbsp; If anyone decides to follow this guide, please tell us about your experience and any hangups you might have.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>SuckDick4Weed</strong> on <strong>August 16, 2013, 05:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hi, you say this is a windows guide, but are those not Linux commands?<br />Surely the putty code you wrote works with a Ubuntu server?<br /><br />CHEERS for the relatively concise guide.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 16, 2013, 06:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah, to be more clear: this is for Windows users to access a Linux server.<br /><br />I will add the commands for Linux users to access a Linux server.<br /><br />I&#039;ll need help in writing the commands for OS X users to access a Linux server.<br /><br />You can use a Windows server, but they are more expensive and Tor doesn&#039;t work as well on them. I&#039;ve seen relay operators switch from Windows to Linux server because of problems.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>p3nd8s</strong> on <strong>August 16, 2013, 06:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				I will definitely set one up. Before you lease a server or VPS make sure you read the Acceptable Use Policy so that they don&#039;t cancel the account. <br />Thanks for the post Astor. +1
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>SuckDick4Weed</strong> on <strong>August 16, 2013, 06:22 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202510.msg1456375#msg1456375">Quote from: astor on August 16, 2013, 06:00 am</a></div></div><blockquote class="bbc_standard_quote">Yeah, to be more clear: this is for Windows users to access a Linux server.<br /><br />I will add the commands for Linux users to access a Linux server.<br /><br />I&#039;ll need help in writing the commands for OS X users to access a Linux server.<br /><br />You can use a Windows server, but they are more expensive and Tor doesn&#039;t work as well on them. I&#039;ve seen relay operators switch from Windows to Linux server because of problems.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thanks. Yeah definitely.<br />Can&#039;t help with OSX, I try to avoid using it in any case
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>flwrchlds9</strong> on <strong>August 16, 2013, 08:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				Cheers for make this astor!<br /><br />We might include instructions to make obfs3 relay to help citizens in china and other countries and obfs relay better to conceal traffic.<br /><br />If go through set up, then do all at one time.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>jampants</strong> on <strong>August 16, 2013, 08:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				There is now a relay plugin for FireFox, anyone use it? It seems very simple but I&#039;m not sure if it works. 5000 people have downloaded it so far so there must be some feedback.<br /><br />Surely a FireFox plugin that works is easier than setting up a VPS? For those not PC savy.<br /><br />https://addons.mozilla.org/en-US/firefox/addon/tor-flashproxy-badge/?src=userprofile<br /><br />There is the link.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 16, 2013, 09:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				Flashproxy is a nice idea, but it&#039;s for running a bridge in your browser. The purpose is to help censored people in places like Iran. You won&#039;t push a lot of traffic through your residential connection, and only bridge users will use it in the first place, which is about 5% of Tor users. To add substantial bandwidth to the network, and especially to diversify it, we need to run relays around the world, on continents outside of North America and Europe, and ideally those relays will be pushing more than 100 GB of traffic per month.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 16, 2013, 09:22 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202510.msg1456647#msg1456647">Quote from: flwrchlds9 on August 16, 2013, 08:27 am</a></div></div><blockquote class="bbc_standard_quote">We might include instructions to make obfs3 relay to help citizens in china and other countries and obfs relay better to conceal traffic.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That&#039;s pretty easy. Follow the steps above on setting up a relay.<br /><br />Then install the obfsproxy package:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">apt-get install obfsproxy<br /></code><br />And add these lines to /etc/tor/torrc<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">BridgeRelay 1<br />ServerTransportPlugin obfs2,obfs3 exec /usr/bin/obfsproxy --managed<br /></code>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>August 16, 2013, 09:52 am</strong>
+			</dt>
+			<dd class="postbody">
+				You may want to add Paysafecard to the list of possible anonymous payment options. Not sure if you can buy them anonymously in the USA, but you surely can do it in some EU countries. Many small newspaper kiosks sell them for cash.<br /><br />There should be quite a few providers which offer anonymous hosting when using Paysafecards, e.g. http://www.cinipac.com/ http://www.myhost.to http://mediaon.com (I never used any of them). <br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>inigo</strong> on <strong>August 16, 2013, 10:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				Great post Astor!! +1!<br /><br />Gotta give props where its due and you certainly deserve them for this.&nbsp; ;)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>bluedev1</strong> on <strong>August 16, 2013, 10:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				The Tor Browser Bundle has a &#039;Setup Relaying&#039; option that seems pretty basic and quick to set up, is it not ideal or something?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>flwrchlds9</strong> on <strong>August 16, 2013, 10:48 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202510.msg1456827#msg1456827">Quote from: astor on August 16, 2013, 09:22 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202510.msg1456647#msg1456647">Quote from: flwrchlds9 on August 16, 2013, 08:27 am</a></div></div><blockquote class="bbc_alternate_quote">We might include instructions to make obfs3 relay to help citizens in china and other countries and obfs relay better to conceal traffic.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That&#039;s pretty easy. Follow the steps above on setting up a relay.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes we know, but maybe include in tutorial during normal setup so it always be setup ;)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 16, 2013, 12:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202510.msg1456997#msg1456997">Quote from: bluedev1 on August 16, 2013, 10:31 am</a></div></div><blockquote class="bbc_standard_quote">The Tor Browser Bundle has a &#039;Setup Relaying&#039; option that seems pretty basic and quick to set up, is it not ideal or something?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That is definitely the easiest way to run a relay. Here are some reasons it&#039;s not a good idea, though. It puts your IP address on a list of public relays. That&#039;s something you probably want to avoid, just as I suggest using an alternate email address in the contact info. Most residential internet connections are pretty slow, especially the upload speeds. There are people who run relays from home, but most of them seem to be on Verizon FiOS connections (150 mbit). You&#039;ll have to keep the browser bundle running all the time. A relay with frequent downtimes is discouraged, because Tor clients downloads the list of relays at different times. Many will try to connect to your relay while it is down, so that adds to the inefficiency in the network. Lastly, if you aren&#039;t in South America or Asia, it doesn&#039;t add to the diversity of the network. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>goldenone</strong> on <strong>August 16, 2013, 03:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Excellent guide, &quot;our&quot; world would be a much better place with thousands of additional relays over the world.<br />+1
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 16, 2013, 04:42 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202510.msg1457021#msg1457021">Quote from: flwrchlds9 on August 16, 2013, 10:48 am</a></div></div><blockquote class="bbc_standard_quote">Yes we know, but maybe include in tutorial during normal setup so it always be setup ;)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m really hoping there are more public relays. :)<br /><br />Bridges are used by a small number of Tor users (30,000 out of 500,000 daily users, so about 6%). They don&#039;t carry any other traffic for the network. They help the diversity of entry points for that small percentage of users, but the network could use diversity at all positions (entry, middle, exit) and for all users.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>SealTeam6</strong> on <strong>August 16, 2013, 04:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				+1
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>cirrus</strong> on <strong>August 17, 2013, 01:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				This amazing tutorial has been added to our wiki page!&nbsp; :D Thanks Astor!! :D <br /><br />http://dkn255hz262ypmii.onion/wiki/index.php?title=Running_a_TOR_relay
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 17, 2013, 05:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				Nice! Hopefully we can get lots of new relays on the network. :)<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>whowhatwhere</strong> on <strong>August 17, 2013, 05:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				Subscribing.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>AussieMitch</strong> on <strong>August 17, 2013, 03:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you for this guide, I feel good that my idea of contributing has been popular with other people as well.<br /><br />I am going to do my bit for the community and set up a relay :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>August 17, 2013, 05:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The amount of additional relays getting installed daily has significantly risen since the Snowden leaks btw. Looks like we get 700 new relays thanks to him, and thanks to the Freedom Hosting bust publicity.<br />Since early 2011 the amount of relays has doubled.<br /><br />https://metrics.torproject.org/network.html
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>rockwaterwind</strong> on <strong>August 17, 2013, 10:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Subbed.<br /><br />I&#039;m adding this to my list of projects to do over the next period of time.<br /><br />Astor. Hero.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>Tomaso</strong> on <strong>August 18, 2013, 11:42 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Great guide.<br /><br />For a Mac, the only difference is that instead of using Putty, you can use the built-in Terminal application.<br /><br />So, hit the CMD and then SPACEBAR and that will load the search window. From there you can type TERMINAL and it will be the first option. Alternatively, look under your Applications folder for the program Terminal.<br /><br />Once the Terminal window opens, type &#039;SSH root@(VPS IP address)&#039;.&nbsp; So, if the VPS IP address you were given is 12.34.56.78 then you would type:<br />SSH root@12.34.56.78<br /><br />From there, it should prompt you for your VPS password. Type the password you were given when you ordered/set up your VPS space and from there everything else is the same (download tor, set it up, per Astor&#039;s instructions).<br /><br />I went through the process and it worked. I did have some minor problems when editing the torrc file, but it didn&#039;t take long to get the hang of it.<br /><br />I suggest everyone spend $10 (or however much you choose) and rent some server space for the Tor project.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>flwrchlds9</strong> on <strong>August 19, 2013, 09:12 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202510.msg1458274#msg1458274">Quote from: astor on August 16, 2013, 04:42 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202510.msg1457021#msg1457021">Quote from: flwrchlds9 on August 16, 2013, 10:48 am</a></div></div><blockquote class="bbc_alternate_quote">Yes we know, but maybe include in tutorial during normal setup so it always be setup ;)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m really hoping there are more public relays. :)<br /><br />Bridges are used by a small number of Tor users (30,000 out of 500,000 daily users, so about 6%). They don&#039;t carry any other traffic for the network. They help the diversity of entry points for that small percentage of users, but the network could use diversity at all positions (entry, middle, exit) and for all users.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Bridges and Relays can be run on same host. Maybe this not best for country that block relays, but bridge have many more use. Think have more bridge and relay cannot hurt.<br /><br />Also possible to order another IP and bind, but we kno this not in manner of simple guide as post.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>4903kmn1d</strong> on <strong>August 27, 2013, 03:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				thnx for the cool guide astor.. +1<br /><br />for anyone wondering about the default exit policy, as stated on the tor website it allows everything except smtp, so if you are ok with everything else going through then just comment out the ExitPolicy reject* lines as per astor&#039;s instructions<br /><br />on my machine I had to change my ServerTransportPlugin line as below, no dashes before managed.<br />ServerTransportPlugin obfs2,obfs3 exec /usr/bin/obfsproxy managed <br /><br />If your tor relay is running correctly, you should see a log message like this:<br />[notice] Self-testing indicates your ORPort is reachable from the outside. Excellent. Publishing server descriptor.<br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>livestr0ng</strong> on <strong>September 08, 2013, 11:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Can this be done on TAILS?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 08, 2013, 11:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202510.msg1524968#msg1524968">Quote from: livestr0ng on September 08, 2013, 11:39 pm</a></div></div><blockquote class="bbc_standard_quote">Can this be done on TAILS?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You can probably run a relay on Tails by modifying the torrc the same way as in the guide. However, if you boot and shut down your Tails often, you shouldn&#039;t run a relay on it. Tor relays should be stable, with many days of uptime. It&#039;s bad for the Tor network when relays go offline a lot, because it takes time to update the directory and get all clients to know about the currently running relays. The network would become more inefficient if clients were trying to connect to a lot of relays that are offline.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 08, 2013, 11:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202510.msg1524968#msg1524968">Quote from: livestr0ng on September 08, 2013, 11:39 pm</a></div></div><blockquote class="bbc_standard_quote">Can this be done on TAILS?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You can probably run a relay on Tails by modifying the torrc the same way as in the guide. However, if you boot and shut down your Tails often, you shouldn&#039;t run a relay on it. Tor relays should be stable, with many days of uptime. It&#039;s bad for the Tor network when relays go offline a lot, because it takes time to update the directory and get all clients to know about the currently running relays. The network would become more inefficient if clients were trying to connect to a lot of relays that are offline.<br /><br />Tails is a non-persistent mobile operating system. Relays should be run on stable setups.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>livestr0ng</strong> on <strong>September 09, 2013, 12:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202510.msg1524981#msg1524981">Quote from: astor on September 08, 2013, 11:48 pm</a></div></div><blockquote class="bbc_standard_quote"><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202510.msg1524968#msg1524968">Quote from: livestr0ng on September 08, 2013, 11:39 pm</a></div></div><blockquote class="bbc_alternate_quote">Can this be done on TAILS?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You can probably run a relay on Tails by modifying the torrc the same way as in the guide. However, if you boot and shut down your Tails often, you shouldn&#039;t run a relay on it. Tor relays should be stable, with many days of uptime. It&#039;s bad for the Tor network when relays go offline a lot, because it takes time to update the directory and get all clients to know about the currently running relays. The network would become more inefficient if clients were trying to connect to a lot of relays that are offline.<br /><br />Tails is a non-persistent mobile operating system. Relays should be run on stable setups.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I have the TBB on my desktop. I shut that down daily because I basically have to. Would it also be bad to try running a relay on that? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 09, 2013, 01:25 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=202510.msg1524999#msg1524999">Quote from: livestr0ng on September 09, 2013, 12:02 am</a></div></div><blockquote class="bbc_standard_quote">I have the TBB on my desktop. I shut that down daily because I basically have to. Would it also be bad to try running a relay on that?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes, it would be bad. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>SuckDick4Weed</strong> on <strong>September 09, 2013, 10:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				This should be sticky
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>September 09, 2013, 10:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				If you want to run a relay at home you could buy a Raspberry PI. It only uses little amounts of power, so you can run it 24/7 without costing much.<br />You can buy a Onion PI for 90$<br /><br />https://www.adafruit.com/products/1410<br />http://learn.adafruit.com/onion-pi/overview
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HOWTO: Run a relay and help the Tor network</strong><br />
+				Post by: <strong>flwrchlds9</strong> on <strong>September 09, 2013, 11:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				helpful to make note of CPU/RAM/BW limits for person interest in run big capacity relay.<br /><br />numbers for how much cpu used and maybe limits of certain cpu type. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

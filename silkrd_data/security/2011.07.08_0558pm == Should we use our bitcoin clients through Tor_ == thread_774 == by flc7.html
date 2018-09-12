@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=774.0" />
+		<title>Print Page - Should we use our bitcoin clients through Tor?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: flc7 on July 08, 2011, 05:58 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Should we use our bitcoin clients through Tor?</strong><br />
+				Post by: <strong>flc7</strong> on <strong>July 08, 2011, 05:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				When making a payment into / out of SR, should we keep our bitcoin clients connected through Tor? Or is anonymity a natural part of a BTC transaction?<br /><br />Given that the communication undertaken by the BTC client is peer-to-peer, it is not connecting directly to the SR server or indeed the machine on which SR&#039;s BTC wallet is held - therefore hiding your IP through Tor won&#039;t be of any benefit?<br /><br />Along the same line - should we be using a BTC laundering service when paying in?<br /><br />Thanks in advance.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Should we use our bitcoin clients through Tor?</strong><br />
+				Post by: <strong>fattylover</strong> on <strong>July 12, 2011, 07:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m no expert but I think not running it through tor your ip is revealed to others running a bitcoin client, hackers could target this ip to find a wallet.dat so I run my own client through tor for that reason.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Should we use our bitcoin clients through Tor?</strong><br />
+				Post by: <strong>chronicpain</strong> on <strong>July 12, 2011, 08:34 pm</strong>
+			</dt>
+			<dd class="postbody">
+				how can i make sure that mybitcoin wallet is going thru tor. I downloaded it while i was on a tor site. but want to make sure that its going thru tor..
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Should we use our bitcoin clients through Tor?</strong><br />
+				Post by: <strong>envious</strong> on <strong>July 12, 2011, 08:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yes use it through tor. You can check by checking your tor connections for connections on port 8333. Also check your bitcoin options to make sure its running through the local proxy.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Should we use our bitcoin clients through Tor?</strong><br />
+				Post by: <strong>Rinaldo</strong> on <strong>July 13, 2011, 04:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				good thread...just so I am clear... in myBitcoin wallet options I have the box checked that says Connect through Socks4 proxy... The Proxy IP is my local 127.x.x.x and the Port is 9050.... which matches the IP and port settings in my Tor Firefox bundle options for Socks5...<br /><br />Does this confirm that my bitcoin wallet is now running via Tor?&nbsp; If this is incorrect, can someone please let me know exactly how I can configure and confirm that myBitcoin is running through TOR<br /><br />Thanks for the help!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Should we use our bitcoin clients through Tor?</strong><br />
+				Post by: <strong>CrunchyFrog</strong> on <strong>July 16, 2011, 05:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				It sounds like you&#039;re configured as needed.&nbsp; If you&#039;re running a Tor package that includes Vidalia, check that the number of connections in the netwok map to port 8333 (e.g., 123.4.55.67:8333) match the number of connections that Bitcoin is reporting.&nbsp; There&#039;ll be one additional connection to an IRC server on port 6667, too.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Should we use our bitcoin clients through Tor?</strong><br />
+				Post by: <strong>midas</strong> on <strong>February 18, 2012, 04:12 am</strong>
+			</dt>
+			<dd class="postbody">
+				I configured Bitcoin app to use TOR but the port changes each time I restart TOR BUNDLE. Let&#039;s say it is port 63456. Go to Bitcoin app and change the port in settings. Now let&#039;s say you close both Bitcoin and TOR. Start TOR BUNDLE and when you open Bitcoin app, it will not connect since the port is wrong. You have to open Firefox, look for the port being used and configure Bitcoin settings.<br /><br />Is there any IP leakage using this method? The IP is only transmitted during a transfer (receiving or sending BTC)?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Should we use our bitcoin clients through Tor?</strong><br />
+				Post by: <strong>wxevkexi</strong> on <strong>February 18, 2012, 04:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=774.msg6765#msg6765">Quote from: chronicpain on July 12, 2011, 08:34 pm</a></div></div><blockquote class="bbc_standard_quote">how can i make sure that mybitcoin wallet is going thru tor. I downloaded it while i was on a tor site. but want to make sure that its going thru tor..<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Options -&gt; Main -&gt; Check &quot;Connect through SOCKS4 proxy: 127.0.0.1 9050&quot;<br /><br />You will need to bring TOR up for the client to work.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Should we use our bitcoin clients through Tor?</strong><br />
+				Post by: <strong>envious</strong> on <strong>February 18, 2012, 05:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=774.msg117004#msg117004">Quote from: midas on February 18, 2012, 04:12 am</a></div></div><blockquote class="bbc_standard_quote">I configured Bitcoin app to use TOR but the port changes each time I restart TOR BUNDLE. Let&#039;s say it is port 63456. Go to Bitcoin app and change the port in settings. Now let&#039;s say you close both Bitcoin and TOR. Start TOR BUNDLE and when you open Bitcoin app, it will not connect since the port is wrong. You have to open Firefox, look for the port being used and configure Bitcoin settings.<br /><br />Is there any IP leakage using this method? The IP is only transmitted during a transfer (receiving or sending BTC)?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thats the vidalia control port, not the proxy port.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Should we use our bitcoin clients through Tor?</strong><br />
+				Post by: <strong>midas</strong> on <strong>February 18, 2012, 01:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I understand Vidalia changes the port during each restart. My concern is if Bitcoin application &quot;leaks&quot; my IP before I change the port.<br /><br />ie. Tor and Bitcoin are both working at port 55555. Shutdown my computer. Turn it on and start Tor. Port now is 66666. When I open Bitcoin application, it will be configured to use port 55555 before I can change it to 66666. Will it &quot;leak&quot; my IP?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Should we use our bitcoin clients through Tor?</strong><br />
+				Post by: <strong>rocketdog</strong> on <strong>February 18, 2012, 02:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Options -&gt; Main -&gt; Check &quot;Connect through SOCKS4 proxy: 127.0.0.1 9050&quot;<br /><br />You will need to bring TOR up for the client to work.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Click the little onion icon (shortcut to Tor Browser.exe) and off I go. This has worked for me ever since I discovered SR five months ago.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Should we use our bitcoin clients through Tor?</strong><br />
+				Post by: <strong>ThisOneGuy</strong> on <strong>February 18, 2012, 02:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The only time that the bitcoin client broadcasts your ip is when you send a payment.&nbsp; They can always tell that you have a bitcoin client running on your ip, but you can&#039;t really be tied to a specific address until you send coins.&nbsp; People can see what IP broadcast the transaction, but it doesn&#039;t 100% mean that it was the person who sent the coins.&nbsp; But in reality it does show who sent the coins.&nbsp; <br /><br />I also don&#039;t know about all this port shit you guys are talking about.&nbsp; When you run tor it sets up a port automatically on 9050 that bitcoin runs through as soon as you check the box.<br /><br />There is no reason not to torify your bitcoin client, except maybe if you are first downloading the blockchain and want it to go faster.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Should we use our bitcoin clients through Tor?</strong><br />
+				Post by: <strong>midas</strong> on <strong>February 19, 2012, 12:03 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=774.msg117378#msg117378">Quote from: ThisOneGuy on February 18, 2012, 02:59 pm</a></div></div><blockquote class="bbc_standard_quote">I also don&#039;t know about all this port shit you guys are talking about.&nbsp; When you run tor it sets up a port automatically on 9050 that bitcoin runs through as soon as you check the box.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />My Tor port changes every restart. That&#039;s why I wasn&#039;t sure if Bitcoin app could leak my ip before I set the new correct port. I guess it doesn&#039;t because it shows an X mark (no connection). I have to open firefox, check which port Vidalia is using at the moment and change it on Bitcoin app to connect. No problems.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

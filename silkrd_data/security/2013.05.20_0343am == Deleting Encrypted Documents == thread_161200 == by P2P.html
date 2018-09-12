@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=161200.0" />
+		<title>Print Page - Deleting Encrypted Documents</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: P2P on May 20, 2013, 03:43 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Deleting Encrypted Documents</strong><br />
+				Post by: <strong>P2P</strong> on <strong>May 20, 2013, 03:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				I am wondering how I can delete documents that are within an encrypted partition (truecrypt). I&#039;ve been putting this off but after recently updating Tor I&#039;m realizing eventually I&#039;m going to need to figure something out (each update being ~30mb a piece, and my partition is not too big). I was thinking of maybe having a separate encrypted partition that could be a sort of &quot;trash can&quot; for the encrypted partition I use. No sensitive documents would be placed in the trash partition, and once it was used up I would destroy it. Now this is just my own personal idea, but I&#039;m sure there must be a better way. If anyone can enlighten me on this, please do, because I know a lot of users on here use an encrypted USB, so I&#039;m sure some of you have gone through and figured out what I am trying to figure out right now.<br /><br />Sincerely,<br />P2P
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 20, 2013, 04:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				Are you worried that when you &quot;delete&quot; the files with your file manager, they will be moved to the trash, where they won&#039;t be encrypted?<br /><br />In Windows XP you can right click on the Trash can and choose to delete immediately, so I&#039;m sure you can do it on other versions of Windows.<br /><br />Then delete the files and turn the Trash feature back on if you want.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>quixotist</strong> on <strong>May 20, 2013, 05:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				If you&#039;re using Linux and a non-journaling filesystem (ext2) on a disk without wear-leveling (a standard hard drive with spinning disk platters), which is what you should be using if you require secure delete, you can use the &quot;shred&quot; command from the command line. Type shred, drop your file into the console and press return, your file will be overwritten with random noise a bunch of times and you can then rename it then delete it. Good luck recovering that!<br /><br />If not then you need to delete the file then fill up the disk with junk, ensuring the data has been overwritten. If you&#039;re on a USB flash disk or SSD drive and the disk fails or a sector goes bad while this is happening, there&#039;s a chance that a part of your file will be left there forever and can be recovered in a forensics lab. The only way to securely delete the file in this case is to destroy the media, but if you&#039;re not James Bond or a terrorist your attackers most likely can&#039;t afford a proper forensics lab.<br /><br />If you&#039;re using Linux then I recommend BleachBit to fill the disk with junk, not sure what Windows users use, but the same concept applies: delete file, empty trash, overwrite &quot;empty&quot; space on disk with junk data.<br /><br />Finally, if you encrypted this file on a per-file basis with a long enough password, you could just forget the password!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>Baraka</strong> on <strong>May 20, 2013, 08:45 am</strong>
+			</dt>
+			<dd class="postbody">
+				Simply hold down the Shift key when deleting a file. After you press the Yes button to confirm the deletion, you can release Shift. That&#039;s it. Instant delete, which bypasses the Recycle Bin.<br /><br />You&#039;re welcome.&nbsp; ;)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>quixotist</strong> on <strong>May 20, 2013, 09:32 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=161200.msg1146699#msg1146699">Quote from: Baraka on May 20, 2013, 08:45 am</a></div></div><blockquote class="bbc_standard_quote">Simply hold down the Shift key when deleting a file. After you press the Yes button to confirm the deletion, you can release Shift. That&#039;s it. Instant delete, which bypasses the Recycle Bin.<br /><br />You&#039;re welcome.&nbsp; ;)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />For the record this removes the file from all directories and marks the space it occupies as ready to be recycled, it doesn&#039;t overwrite the file data itself. The file data can easily be recovered if you have an undelete program and the password to the encrypted disk.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>Baraka</strong> on <strong>May 20, 2013, 11:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				Who cares? It&#039;s encrypted. TrueCrypt uses only the best algorithms, with AES-256 as standard. If the passphrase is long enough, then a usable recovery by LE or anyone else is impossible after deletion. They&#039;ll just end up with scrambled garbage.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>Jack N Hoff</strong> on <strong>May 20, 2013, 01:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Use a file wiper.&nbsp; Bruce Shneier scheme is plenty.&nbsp; Use Gutmann if you&#039;re paranoid.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>P2P</strong> on <strong>May 21, 2013, 05:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=161200.msg1146959#msg1146959">Quote from: Baraka on May 20, 2013, 11:17 am</a></div></div><blockquote class="bbc_standard_quote">Who cares? It&#039;s encrypted. TrueCrypt uses only the best algorithms, with AES-256 as standard. If the passphrase is long enough, then a usable recovery by LE or anyone else is impossible after deletion. They&#039;ll just end up with scrambled garbage.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I was wondering why everyone was suggesting to simply delete it, thinking I didn&#039;t make myself 100% clear, until I saw this. So even if you delete a file in an encrypted partition as you would a normal file (making sure to bypass the trash can), it is still encrypted? I was always taught if you delete something on a comp you may as well have had it on your desktop to begin with, since it can always be recovered unless it&#039;s fully overwritten. <br /><br />Is the idea here that if I place a file in an encrypted partition, it is itself encrypted, and therefore, when it is deleted, remains encrypted even when recovered by forensics? I&#039;m no comp guru, but I thought the idea was that the PARTITION was encrypted, not necessarily the files themselves (otherwise you&#039;d have a password to open each file, no?). Am I missing something? Is it that when you delete a file on a partition, bypassing the comp&#039;s trash can, it does not make an impression on the comp&#039;s harddrive, but rather an impression (ones and zeros, protons and electrons, whatever it may be) remains on the encrypted partition, not the computer (assuming the trash can is bypassed)? <br /><br />This just doesn&#039;t seem to hold water when I think about the fact that I&#039;m USING THE OS of my comp to delete this file. I keep feeling the OS must, when it is given the command to delete something, even if the trash can is bypassed, leave some sort of impression of the file on the hard drive. Please, if anyone can explain this to me; I need to know, 100%, that simply deleting a file on an encrypted partition (not encrypted files, as far as I know), will only leave an impression on the encrypted partition (which is encrypted, so no big deal), and NOT the hard drive. This is extremely important, so if you could cite references for any claims, please do not hesitate.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>Baraka</strong> on <strong>May 21, 2013, 06:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Is the idea here that if I place a file in an encrypted partition, it is itself encrypted, and therefore, when it is deleted, remains encrypted even when recovered by forensics?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes. That&#039;s exactly right... but you have to be aware that unencrypted versions of those same files may be elsewhere on your system, such as in your RAM or in your virtual memory (swap file). That&#039;s why whole disk encryption is highly recommended if you want to be safe. See the clearnet links here:<br /><br />http://security.stackexchange.com/questions/32453/single-file-encryption-in-a-windows-environment/32461#32461<br />http://www.truecrypt.org/docs/?s=security-model
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>Baraka</strong> on <strong>May 21, 2013, 07:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				More from the TrueCrypt FAQ:<br /><br />http://www.truecrypt.org/faq<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Do I have to &quot;wipe&quot; free space and/or files on a TrueCrypt volume?<br /><br />Remark: to &quot;wipe&quot; = to securely erase; to overwrite sensitive data in order to render them unrecoverable.<br /><br />If you believe that an adversary will be able to decrypt the volume (for example that he will make you reveal the password), then the answer is yes. Otherwise, it is not necessary, because the volume is entirely encrypted.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Also see this hacker&#039;s perspective:<br /><br />http://www.rationallyparanoid.com/articles/truecrypt-sleuth.pdf<br /><br />And this thread:<br /><br />http://superuser.com/questions/15048/does-using-truecrypt-makes-file-shredding-tools-obsolete<br /><br />*Clearnet warning for all the links in this post
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 21, 2013, 03:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If an adversary can decrypt your encrypted volume, then you&#039;re already screwed, and if you&#039;re operating under the assumption that your encrypted volume can/will be decrypted, it&#039;s pointless to use an encrypted volume. Then you&#039;re no better off than people who try to shred individual files.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>quixotist</strong> on <strong>May 21, 2013, 09:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=161200.msg1150885#msg1150885">Quote from: astor on May 21, 2013, 03:13 pm</a></div></div><blockquote class="bbc_standard_quote">If an adversary can decrypt your encrypted volume, then you&#039;re already screwed, and if you&#039;re operating under the assumption that your encrypted volume can/will be decrypted, it&#039;s pointless to use an encrypted volume. Then you&#039;re no better off than people who try to shred individual files.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Maybe, but it depends on what you&#039;re hiding and who you&#039;re protecting yourself from. In the USA you&#039;re okay to refuse to hand over the encryption keys and drugs are a huge deal, a felony makes you an outcast etc. Here in the UK nobody gives a fuck about drugs but you can get 2 years for not handing over your password when asked, plus background checks for jobs are interested in crimes of dishonesty.<br /><br />So as a Briton if you keep all your drugs stuff on an encrypted drive but at some point there was also some evidence that you did some white collar crime like fraud, then jail for not giving up your password is more important than a police caution for receiving drugs in the post, but neither are as important as getting time for fraud and/or becoming unemployable. So in that case you&#039;d want to shred files relating to crimes of dishonesty just in case your disk was seized as part of a police investigation.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 21, 2013, 10:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Then what I would do is create a new encrypted volume, copy the files you want to keep into it, and destroy the first encrypted volume by writing over the first few megabytes, destroying the decryption key. And from now on, use separate encrypted volumes for different things.<br /><br />That&#039;s not a perfect solution, because the hard drive may have been defragmented, leaving other copies of the encrypted file in other locations, but I doubt LE is going to forensically analyze the free space of a small time drug user/dealer. That takes a lot of time and costs money. Bradley Manning, yes. A low level drug buyer, no.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>Baraka</strong> on <strong>May 21, 2013, 10:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Things have been going to hell in America since the 90&#039;s, but the UK has got that beat by at least a decade.<br /><br />The Police and Criminal Evidence Act of 1984 demonized the Right to Silence. Even in the US- even in cases of TERRORISM (!!!)- the accused has the right to remain silent and that right may never be used against them. It&#039;s been completely the opposite in the UK for nearly 30 years now.<br /><br />It gets worse. The Criminal Justice Act of 1987 granted the Serious Fraud Office powers to completely deny a person their Right to Silence. This applies to money laundering, tax evasion/avoidance/fraud, terrorism and really whatever the government decides to label as &quot;fraud&quot; or &quot;terrorism&quot;.<br /><br />The real fucking cherry on top of all this came in 2000 when the Regulation of Investigatory Powers Act criminalized the failure to disclose passphrases to encrypted data. Instant 2 year prison term if you don&#039;t get down on your knees and comply.<br /><br />As bad as things have gotten over here, I sure am glad I don&#039;t live in the UK. No guns, no right to remain silent, and tens of thousands of cameras watching your every move. I definitely feel sorry for Britons. Still, I have the feeling that the cameras will make their way over here&nbsp; &gt;:(<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=161200.msg1151786#msg1151786">Quote from: quixotist on May 21, 2013, 09:38 pm</a></div></div><blockquote class="bbc_standard_quote">Maybe, but it depends on what you&#039;re hiding and who you&#039;re protecting yourself from. In the USA you&#039;re okay to refuse to hand over the encryption keys and drugs are a huge deal, a felony makes you an outcast etc. Here in the UK nobody gives a fuck about drugs but you can get 2 years for not handing over your password when asked, plus background checks for jobs are interested in crimes of dishonesty.<br /><br />So as a Briton if you keep all your drugs stuff on an encrypted drive but at some point there was also some evidence that you did some white collar crime like fraud, then jail for not giving up your password is more important than a police caution for receiving drugs in the post, but neither are as important as getting time for fraud and/or becoming unemployable. So in that case you&#039;d want to shred files relating to crimes of dishonesty just in case your disk was seized as part of a police investigation.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>P2P</strong> on <strong>May 24, 2013, 11:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Baraka - Is file shredding needed, then? According to that thread you posted, it is. But I don&#039;t know if there is any difference between that and simply deleting an encrypted file. Please enlighten me if you would.<br /><br />As far as encrypting the system partition I agree, and it&#039;s actually something I&#039;ve been meaning to get around to. However, I just tried it on truecrypt and I got an error message saying that encrypting the system is not recommended, and I should just encrypt the OS instead. I literally had no idea what it was saying as far as its rationale for this decision, but I will post up the error message shortly (I can&#039;t be running truecrypt to create a new volume, i.e. I can&#039;t be on tor). I believe it had to do with recovery files or something of that nature. I had no idea what it was saying - this is not my area of expertise (very unfortunately). <br /><br /><br />Also, I was wondering if encrypting the system partition really does encrypt the RAM as well? Or is it just the hard drive? I definitely need RAM encryption for sure. And another question regarding RAM - once the computer is shut off, is that the equivalent of deleting the encrypted files stored in the comp&#039;&#039;s RAM?<br /><br />Thanks for all your help thus far.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>May 25, 2013, 02:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				You should definitely shred files you are no longer using, even if they are encrypted. If you use an encrypted volume, the non-shredded files can still be recovered even after they are deleted, if the volume is mounted when you are attacked. Shredding files removes them entirely, and they can no longer be recovered even if the attacker gets you with the encrypted volume mounted. In the case of singly encrypted files, shredding them removes your ability to decrypt them if you are court ordered to do so, whereas if they are not shredded you could face being held in contempt of court for not decrypting them. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Deleting Encrypted Documents</strong><br />
+				Post by: <strong>P2P</strong> on <strong>May 26, 2013, 05:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				I just tried to encrypt my whole disk with truecrypt and was given the following error message:<br /><br />Your system drive contains a non-standard partition<br /><br />If you are using a notebook, your system drive probably contains a special<br />recovery partition. After the whole system drive is encrypted (including any<br />recovery partition), your system might become unbootable if your computer is<br />using an inappropriately designed BIOS. It would also be impossible to use any<br />recovery partition until the system drive is decrypted. Therefore, we<br />recommend that you encrypt only the system partition.<br /><br />Do you want to encrypt the system partition instead of the entire drive?<br /><br />Note that you can create partition-hosted TrueCrypt volumes within any<br />non-system partitions on the drive (in addition to encrypting the system<br />partition). <br /><br />---------------------------------------------------------------------------------------------------<br /><br />Can anyone explain what this means? Should I still go ahead and encrypt? It does give me the option to do so. But a very important part of this is to encrypt the RAM, and I don&#039;t think just encrypting the OS would also encrypt the RAM (as far as I know). Any guidance on this would be appreciated.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

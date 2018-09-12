@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=72574.0" />
+		<title>Print Page - Advice for DPR/whoever manages network for SR</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Silk Road discussion => Topic started by: bincofone on November 15, 2012, 10:55 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>bincofone</strong> on <strong>November 15, 2012, 10:55 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hi,<br /><br />In case Silk Road appears to be receiving a DOS attack (which it probably is) I have a very good idea of how they are doing it and can propose a solution. Information on the attack and how it can be prevented can be provided. All apache versions are vulnerable, and traditional network security equipment like IPSs are useless against the attack. But there are software solutions to the problem.<br /><br />Someone who is at least mod PM me if you&#039;re interested in the information. I don&#039;t want to disclose the information publicly here because it will give people ideas, although I&#039;m sure some others in the more computer security conscious crowd here may be aware of it. This exploit is publicly available, but rarely used. The exploit is low bandwidth and works perfectly through Tor (so you can use it to anonymously take down clearnet sites too).
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>canardwc</strong> on <strong>November 15, 2012, 11:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				They use apache 2.2.22 and apache 2.4.3 has been Released
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>bincofone</strong> on <strong>November 15, 2012, 11:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				The solution isn&#039;t upgrading apache, it&#039;s putting something in between apache and the rest of the world.<br /><br />2.2.22 is the nearly the most up to date of the 2.2.x branch (2.2.23 is latest). It will likely be more stable (and likely have less vulnerabilities) than 2.4.x branch which is less mature and introduces less mature features.<br /><br />Higher version numbers are not always better in the world of running production servers!<br /><br />2.2.23 does contain 2 security fixes (albeit for obscure situations) so they should get on to that
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>Spunkaroo</strong> on <strong>November 15, 2012, 11:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593274#msg593274">Quote from: bincofone on November 15, 2012, 11:28 am</a></div></div><blockquote class="bbc_standard_quote">Higher version numbers are not always better in the world of running production servers!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Sage advice my friend. Anyone remember Windows Vista/ME/&lt;INSERT SHITTY FAILED PRODUCT HERE&gt;?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>canardwc</strong> on <strong>November 15, 2012, 11:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				The best is to put all in static file (cache system, update when new activity) <br /><br />Use nginx and not apache<br /><br />And all will be good, they can handle a big ddos with nginx if more than 70% of the site is on static file.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>bincofone</strong> on <strong>November 15, 2012, 12:05 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Sound like a massive headache of a solution to me. There are too many dynamic components to the website to do it effectively, you need a static copy generated for every user on every account action, every product update for EVERY user and every config of domestic only/sort by X/Y/Z etc...<br /><br />You could remove some of these features to make it possible, but PHP dynamic site is so much less dev time and much less strenuous in terms of total CPU/memory/disk, just not query latency.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>stateless</strong> on <strong>November 15, 2012, 12:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				How to give karma to other users anyway?&nbsp; BTW-&nbsp; Bravo on this thread!&nbsp; &nbsp;<br /><br />Like I was saying in a different thread.&nbsp; Just think how many highly paid black-ops hackers from the military that the gubberment is using right now to exploit and/or fuck with SR right now.<br /><br />The US gubberment has a bunch of those fuckers on this I&#039;ll guarantee!&nbsp; <br /><br />We need to out think the military intelligent folks if we are going to survive this people.&nbsp; &nbsp;<br /><br />That&#039;s why I keep recommending that all of the community get behind an opensource project that will be able to help DPR learn from other coders.<br />You know, even though it is a parallel project, DPR doesn&#039;t need to reveal anything of his to the community unless he wants to.&nbsp; But we can contribute our knowledge on a parallel project and DPR&#039;s team can steal from the opensource project. <br /><br />I think DPR ought to donate 1000 BTC for a bounty on this actually.&nbsp; It would do nothing but benefit him and protect his investment.&nbsp; (and maybe create a little healthy competition. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>virtuoustrades</strong> on <strong>November 15, 2012, 12:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				+1 Keep this up so DPR or other mods see it! Good to get some help from the community in solving whatever this problem is. Just a hiccup guys, this is by no means the end of SR! :) Just be patient and you will see.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>koptevo</strong> on <strong>November 15, 2012, 01:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				you cant ddos on tor. it doesnt transport udp
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>canardwc</strong> on <strong>November 15, 2012, 01:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593507#msg593507">Quote from: koptevo on November 15, 2012, 01:13 pm</a></div></div><blockquote class="bbc_standard_quote">you cant ddos on tor. it doesnt transport udp<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>You can ddos by syn, tcp, ping ....<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>müslix</strong> on <strong>November 15, 2012, 01:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I think the best solution is to finally get a competent admin, no offense to whoever manages SR and the forum, but you suck at this. <br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593341#msg593341">Quote from: bincofone on November 15, 2012, 12:05 pm</a></div></div><blockquote class="bbc_standard_quote">Sound like a massive headache of a solution to me.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div> <br />yaeh, but also a solution that has been dealt with successfully at a million companies before. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>thebakertrio</strong> on <strong>November 15, 2012, 01:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				ion cannon that hoe! soulja bot tell em! ( :o)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>bincofone</strong> on <strong>November 15, 2012, 01:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593513#msg593513">Quote from: müslix on November 15, 2012, 01:16 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593341#msg593341">Quote from: bincofone on November 15, 2012, 12:05 pm</a></div></div><blockquote class="bbc_alternate_quote">Sound like a massive headache of a solution to me.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div> <br />yaeh, but also a solution that has been dealt with successfully at a million companies before. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Companies that have huge teams of software developers and that don&#039;t have to keep their activities entirely anonymous.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593516#msg593516">Quote from: thebakertrio on November 15, 2012, 01:17 pm</a></div></div><blockquote class="bbc_standard_quote">ion cannon that hoe! soulja bot tell em! ( :o)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Ion Cannon is for tryhards on /b/ thinking they&#039;re uber hackers. About as effective as mashing the F5 key in your browser, and a pretty good way to leave a shit ton of evidence linking your computer to the attack. Not even some basic IP spoofing...<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593507#msg593507">Quote from: koptevo on November 15, 2012, 01:13 pm</a></div></div><blockquote class="bbc_standard_quote">you cant ddos on tor. it doesnt transport udp<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m talking about a DOS attack, not necessarily a distributed DOS. There is no need for this attack to be done from multiple clients, and it&#039;s done over TCP using legit TCP (no malformed frames) communications. Tor provides no protection (nor should it, it&#039;s not what it&#039;s designed for).
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>stateless</strong> on <strong>November 15, 2012, 01:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You have to understand the position that DPR is presently in.&nbsp; He is some guy probably middle aged, who got in to coding and wrapped up a pretty righteous setup.&nbsp; He&#039;s probably a biker/geek and he is probably not doing all levels of current coding standards.&nbsp; He probably pieced SR together and BTW did a fucking amazing job.&nbsp; But most companies that deal with shit like this have a whole fucking team of experts working on it.&nbsp; <br /><br />DPR while he is probably a likable guy, probably worries about people rating him out if he trusts them.&nbsp; You never know how money or the threat of losing ones freedom will change someone from friend to foe.&nbsp; &nbsp;So he probably relies on a VERY VERY small team.&nbsp; Most of which are working with him remotely.&nbsp; &nbsp;DPR is probably implementing the code changes by himself on a test server.&nbsp; While the main production server is presently overloaded with a DDOS attack or something of that sort.<br /><br />He is currently backed into a corner.&nbsp; There is something important he is lacking, like the change to the web server software perhaps, and if we just keep these threads going with obvious suggestions.&nbsp; &nbsp;And trust me, if we know how to do one thing or another, the gubberment probably already knows as well.&nbsp; So I think it&#039;s safe to share most things in public as far as suggestions for DPR.<br />As long as we give him quality advice, and he can test it in a test environment with some stress testing in a LAN. <br />Then apply the same fixes to the production server once he has perfected them.&nbsp; I think our generic advise could really help him.<br /><br /><br />The best and pretty much only advice I&#039;ve saw so far is;&nbsp; &quot;Use nginx and not apache&quot;<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>thebakertrio</strong> on <strong>November 15, 2012, 01:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593528#msg593528">Quote from: bincofone on November 15, 2012, 01:25 pm</a></div></div><blockquote class="bbc_standard_quote"><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593516#msg593516">Quote from: thebakertrio on November 15, 2012, 01:17 pm</a></div></div><blockquote class="bbc_alternate_quote">ion cannon that hoe! soulja bot tell em! ( :o)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Ion Cannon is for tryhards on /b/ thinking they&#039;re uber hackers. About as effective as mashing the F5 key in your browser, and a pretty good way to leave a shit ton of evidence linking your computer to the attack. Not even some basic IP spoofing...<br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thats where the soulja boy tell em bots come in!!! I was joking at the principle&nbsp; ;). The question is how many users are just sitting and F5ing? the site went down in the first place due to excess use so im wondering if DPR predicted the right amount of users who would come on at once. He could have under estimated and for all we know the server went down once more. <br /><br />unless we know the exact config and set up of the SR network then its no good to say &quot;hey DDOS&quot; or &quot;Hey LE&quot;..ect. Its all speculation and nothing more. It creates more worry and even the forum is messing up, too many people! did we not forget about TOR? unless you have your own bridge then your sharing a connection with everyone (in one sense or the other). How many jumps do you make with TOR? <br /><br />Sit back, use common sense and at worst your understanding of social engineering to read between the lines.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>müslix</strong> on <strong>November 15, 2012, 01:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593528#msg593528">Quote from: bincofone on November 15, 2012, 01:25 pm</a></div></div><blockquote class="bbc_standard_quote">Companies that have huge teams of software developers and that don&#039;t have to keep their activities entirely anonymous.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />But you don&#039;t need all of them to reinvent the wheel. What you do need is a network pro, who knows this shit inside out, not a webdevloper. Again, no offense to that profession, probably loads of fun. <br /><br />It&#039;s not the first time that I and apparently many others get the feeling the problem is a bit out of their league. The lack of care that is put in the forum speaks for itself. It was all predictable and there is tons of ways to get help. I don&#039;t accept the &quot;it&#039;s just DPR one man show&quot; apology, he&#039;s paid for this pretty well. Could easily hire some help.<br /><br />I&#039;ll stop as it&#039;s pointless, keep giving (good) advice that will get ignored again folks ...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>müslix</strong> on <strong>November 15, 2012, 01:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593551#msg593551">Quote from: thebakertrio on November 15, 2012, 01:37 pm</a></div></div><blockquote class="bbc_standard_quote">He could have under estimated and for all we know the server went down once more. <br />[...]<br />It creates more worry and even the forum is messing up, too many people!</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Agreed.<br /><br />The forum, even this shitty one, seems to handle &quot;too many people&quot; pretty well though. <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>stateless</strong> on <strong>November 15, 2012, 01:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				That&#039;s why I recommend DPR and or other benefactors of SilkRoad investing money into fueling an open source project.&nbsp; Have a few developers step up.&nbsp; Help the project out.&nbsp; Collect donations, and divide the donations equally.&nbsp; <br /><br />For the security of the data of the users of this site, and for the security of the this market continuing on passed our involvement during our short life spans.<br /><br />BIT WASP is a good nominee for a start of this endeavor.&nbsp; <br />https://github.com/Bit-Wasp<br /><br />Getting a team of developers interested in this is my next goal.&nbsp; I imagine some people already are working on this project behind the scenes.&nbsp; &nbsp;But they are not likely to release the source code.&nbsp; Rather it&#039;s too tempting for many developers to just corner the market a little with their new inventions. (totally understandable).<br /><br />But this is very important.&nbsp; If we have a parallel project going that imitates silkroad, it could inspire and directly help the future development of SR.&nbsp; &nbsp;<br /><br />Blah. Who knows.&nbsp; But Im game with helping start a tip jar for the developers.&nbsp; Im willing to toss 50 BTC at it over 2 months time.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>bincofone</strong> on <strong>November 15, 2012, 01:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The Tor network is pretty bandwidth crippled as is, DOS from too many legit requests is unlikely. I&#039;ve been raping the shit out of these forums bandwidth wise way more than I ever would SR, and it&#039;s fine.<br /><br />Nginx might well be susceptible to the same attack, in fact I think it is (might download and test to confirm). The problem isn&#039;t apache being too bloated or anything, it&#039;s server connections being tied up in a very clever way. You can DOS some proxy server software in a similar way too.<br /><br />The only web server I know that is immune to this particular attack is IIS 6 and up. But who the fuck would trust a site like this on Microsoft based infrastructure?<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Could easily hire some help.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The risks in that are pretty huge. I&#039;m sure he wants as few people to know sensitive information about the site as possible, his freedom depends on it, and that&#039;s likely far more important to him than any extra business he can do on SR with reduced downtime.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>TheMonk</strong> on <strong>November 15, 2012, 01:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hi,<br /><br />Yes you can&#039;t use a classical DDOS on Tor due to the TCP characteristics but there are other tools you can use to DOS a server.<br /><br />Slowloris is one of the example that is not a TCP DOS, so compatible with the Tor Network, and there are others possibilities also...<br /><br />http://ha.ckers.org/slowloris/<br /><br />So yes you can technically perform a DOS on Tor.<br /><br />I don&#039;t mean that this is what is currently happening to SR, like many others i don&#039;t know, I just wanted to make the point that it is possible...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>bincofone</strong> on <strong>November 15, 2012, 02:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Nginx is vulnerable to this attack too, but less so than Apache, especially at default config settings. Needs a higher request rate, but there&#039;s nothing stopping you from running 500 Tor clients on a decent PC with a decent internet connection. How susceptible each particular server is depends on configuration values of the server.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>bincofone</strong> on <strong>November 15, 2012, 02:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hmm just realised another attack vector could be requesting the generation of a fuck load of CAPTCHAs - image processing is very expensive compared to anything else the site is doing, especially when you&#039;re doing it through PHP, this might explain why the CAPTCHA is down to 3 numbers now (to lighten the load), but I still suspect network troubles over CPU exhaustion.<br /><br />The server is at least up still, just access is very intermittent. I think the web server (at least software, maybe the whole server) has been reset regularly while SR was still up, I kept getting logged out (session invalidated) whereas back a couple of weeks ago I could stay logged into SR on a session for weeks (a silly thing to do I know, but at least it was possible and the account wasn&#039;t used for any purchasing/incriminating).<br /><br />Debugging an anonymous server over Tor is hard lol
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>NotMe123</strong> on <strong>November 15, 2012, 02:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				i don&#039;t want to start any rumors as they have started already but on the forum home page go to the &quot;update&quot; link in pink created when the site first went down&nbsp; and read page 91 or so onwards,<br />apparently some guy hacked SR and is blackmailing DPR
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>bincofone</strong> on <strong>November 15, 2012, 02:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The guy posted messages supposedly from DPR with invalid signatures. Somebody&#039;s having a good troll.<br /><br />Even if the guy had a valid password hash, it may very well be for his own password, in which case guessing the hash isn&#039;t too hard! That&#039;s assuming passwords aren&#039;t salted here.<br /><br />Don&#039;t get why people value password salting and even hashing so much - if you compromise the server you can just log the plain text coming into the server, no need to crack hashes! I use randomly gen passwords for everything for this reason.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>alberthofmann</strong> on <strong>November 15, 2012, 03:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You should give it a try with Whonix (old name was TorBox) and a good firewall like IPcop.<br />All other things are just huge crap in my opinion. <br />If you hire a coder I bet he will hide some backdoors..... trust no one .... .
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>TheMonk</strong> on <strong>November 15, 2012, 03:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hi,<br /><br />First you have no clue of what is happening if you are not among the admins, so DOS or hacking is a possibility but nothing is confirmed.<br /><br />Yes it is the usual hacking business to blackmail companies or admins of servers while you DOS their server but the hackers way is often more &quot;low profile&quot; so the post in the forums is kind of strange and could come for anyone even not related to an attack...<br /><br />@bicofone : you are right with the Captcha possibility but I don&#039;t think it could so completely overload the whole SR login page as the captcha is loaded as an image and does not imply so much resources.<br /><br />The whole thing definitely looks like a DOS attack of slowloris &quot;type&quot;, the DOS of a server could easily lead to some unexpected things like a mess with Captcha, and the tendency to limit the resources on the server lately is a benediction in this case.<br /><br />This is only an hypothesis but it fits very well in the situation...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>stateless</strong> on <strong>November 15, 2012, 03:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">&#039;You should give it a try with Whonix (old name was TorBox) and a good firewall like IPcop.<br />All other things are just huge crap in my opinion.<br />If you hire a coder I bet he will hide some backdoors..... trust no one .... .&quot;<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well said, bravo!<br /><br />We should start a knowledge base for DPR to follow.&nbsp; This thread would work as good as any.&nbsp; Send a link to DRP if you have better access than I do.&nbsp; Let him know we have something cooking on the message board that may help him solve this problem quicker.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>bincofone</strong> on <strong>November 15, 2012, 03:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				We are very much on a similar wavelength TheMonk. <br /><br />alberthofmann, is IPcop any good at layer 7 (app layer) defense? Most firewalls do sweet fuck all at preventing them, usual defense is shitty signature based IPSs but these only stop the script kiddies. I believe this downtime is due to a layer 7 attack going on what little information I know about the operation of SR servers and the fair bit I know about Tor and DOS attacks in general.<br /><br />There are ways to defend against these attacks, and they just involve filtering the traffic before it reaches the web server.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>hootersmcboob</strong> on <strong>November 15, 2012, 03:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Microsoft TMG is a firewall, reverse proxy, and router that as never been broken. Yes, It&#039;s end of life, but UAG is still alive, and based on TMG.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593206#msg593206">Quote from: bincofone on November 15, 2012, 10:55 am</a></div></div><blockquote class="bbc_standard_quote">Hi,<br /><br />In case Silk Road appears to be receiving a DOS attack (which it probably is) I have a very good idea of how they are doing it and can propose a solution. Information on the attack and how it can be prevented can be provided. All apache versions are vulnerable, and traditional network security equipment like IPSs are useless against the attack. But there are software solutions to the problem.<br /><br />Someone who is at least mod PM me if you&#039;re interested in the information. I don&#039;t want to disclose the information publicly here because it will give people ideas, although I&#039;m sure some others in the more computer security conscious crowd here may be aware of it. This exploit is publicly available, but rarely used. The exploit is low bandwidth and works perfectly through Tor (so you can use it to anonymously take down clearnet sites too).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>berndi</strong> on <strong>November 15, 2012, 03:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				for i in $attackingIPs<br />do<br />iptables -a INPUT -s $i -j DROP<br />done<br />/thread
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>no0name</strong> on <strong>November 15, 2012, 03:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I think we won&#039;t bring solution ourself, I don&#039;t feel my knowledge is sufficient enough to give some advice, but if this is indeed some kind of DoS atacks, the first way would be to search some academic papers on matter, simple googling[basic, not in google schoolar] show something like this:<br />CLEARNET:<br />https://lists.torproject.org/pipermail/tor-talk/2008-November/015695.html<br />http://fc09.ifca.ai/papers/43_Detecting_dos_in_tor.pdf
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>bincofone</strong> on <strong>November 15, 2012, 04:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593858#msg593858">Quote from: hootersmcboob on November 15, 2012, 03:47 pm</a></div></div><blockquote class="bbc_standard_quote">Microsoft TMG is a firewall, reverse proxy, and router that as never been broken. Yes, It&#039;s end of life, but UAG is still alive, and based on TMG.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593206#msg593206">Quote from: bincofone on November 15, 2012, 10:55 am</a></div></div><blockquote class="bbc_alternate_quote">Hi,<br /><br />In case Silk Road appears to be receiving a DOS attack (which it probably is) I have a very good idea of how they are doing it and can propose a solution. Information on the attack and how it can be prevented can be provided. All apache versions are vulnerable, and traditional network security equipment like IPSs are useless against the attack. But there are software solutions to the problem.<br /><br />Someone who is at least mod PM me if you&#039;re interested in the information. I don&#039;t want to disclose the information publicly here because it will give people ideas, although I&#039;m sure some others in the more computer security conscious crowd here may be aware of it. This exploit is publicly available, but rarely used. The exploit is low bandwidth and works perfectly through Tor (so you can use it to anonymously take down clearnet sites too).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />For a company that makes pretty crap software security-wise they do make some of the most solid networking equipment around. These do not give you immunity to layer 7 attacks however (applications can always have any new bug introduced).<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593866#msg593866">Quote from: berndi on November 15, 2012, 03:49 pm</a></div></div><blockquote class="bbc_standard_quote">for i in $attackingIPs<br />do<br />iptables -a INPUT -s $i -j DROP<br />done<br />/thread<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />We are all on Tor, we all share the same pool of IPs...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>TheMonk</strong> on <strong>November 15, 2012, 04:26 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hi<br /><br />I completely agree with bincofone, forget about simple Ip filtering and the Microsoft TMG, Ip filtering is not possible on Tor like on normal networks, and for these kind of attacks on Tor a Microsoft Firewall won&#039;t be a real help.<br /><br />IF, it is still IF, it is a DOS of slowloris type there are not much a lot of solutions but complexify the login with a second layer and add a verification of the fact that HTTP requests are full and reject the incomplete requests that are the base of this type of DOS.<br /><br />Again we are just &quot;talking&quot; about this possibility, nobody here can be sure of anything except the technical Team and DPR.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>pPharm</strong> on <strong>November 15, 2012, 04:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593866#msg593866">Quote from: berndi on November 15, 2012, 03:49 pm</a></div></div><blockquote class="bbc_standard_quote">for i in $attackingIPs<br />do<br />iptables -a INPUT -s $i -j DROP<br />done<br />/thread<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />$attackingIPs would be 127.0.0.1 just like every user appears to be with a tor connection?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>alberthofmann</strong> on <strong>November 15, 2012, 04:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg593819#msg593819">Quote from: bincofone on November 15, 2012, 03:28 pm</a></div></div><blockquote class="bbc_standard_quote">We are very much on a similar wavelength TheMonk. <br /><br />alberthofmann, is IPcop any good at layer 7 (app layer) defense? Most firewalls do sweet fuck all at preventing them, usual defense is shitty signature based IPSs but these only stop the script kiddies. I believe this downtime is due to a layer 7 attack going on what little information I know about the operation of SR servers and the fair bit I know about Tor and DOS attacks in general.<br /><br />There are ways to defend against these attacks, and they just involve filtering the traffic before it reaches the web server.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />sorry I dont know layer7. I made with IPcop the best experience and please dont think that IPcop can just block IPs. I would prefer creating and using a network isolated environment with Whonix and IPcop under Virtualbox or VMware so no one can attack this isolated network. Its the best choice that would be worked fine. I learned this from people which build company and school networks just without the Whonix. The Whonix Gateway got a software firewall on top and with the Whonix Workstation it is the non plus ultra, because you are like a ghost on the internet. If anyone got a better and more secure choice write it down here please. hopefully DPR will read this Topic and think about it. I think if I send him PM he would read this next week, because of the many spam from the kiddz... @DPR please let the SilkRoad never die and I pray for you not to get busted!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>bincofone</strong> on <strong>November 15, 2012, 05:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m pretty sure Whonix and IPcop won&#039;t protect you from application vulnerabilities like SQL injections. SQL injections of course being a lot worse than a DOS vulnerability, but you get the picture.<br /><br />There are reverse HTTP proxies you can use out to sort out these problems by rejecting the exploit requests outright (if indeed that is there attack vector, which I highly suspect it is from all the evidence - and it&#039;s what I&#039;d use if I was doing it). As to the exact crafting of the exploit, I can&#039;t be sure, whatever it is it&#039;s good enough to get past whatever network defense SR has. Could be a script kiddie or a talented hacker.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>alberthofmann</strong> on <strong>November 15, 2012, 08:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=72574.msg594071#msg594071">Quote from: bincofone on November 15, 2012, 05:11 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;m pretty sure Whonix and IPcop won&#039;t protect you from application vulnerabilities like SQL injections. SQL injections of course being a lot worse than a DOS vulnerability, but you get the picture.<br /><br />There are reverse HTTP proxies you can use out to sort out these problems by rejecting the exploit requests outright (if indeed that is there attack vector, which I highly suspect it is from all the evidence - and it&#039;s what I&#039;d use if I was doing it). As to the exact crafting of the exploit, I can&#039;t be sure, whatever it is it&#039;s good enough to get past whatever network defense SR has. Could be a script kiddie or a talented hacker.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />whatever it is just the most secure hosting option I known. I think everyone would be know that just connection with TOR through Whonix is not secure and anonymously. It is written by the welcome message from the gateway.<br /><br />HTTP? are you serious? ...<br />What is not ok with IPcop? it is possible to build OpenVPN connections and another virtual IPCOP or physical IPCOP&nbsp; at the end of the chain. <br />with a few whonix workstations build OpenSSH Tunnel. <br /><br />A useful trick is &quot;ssh -tt&quot; which forces tty allocation, so instead of the above you can do the following, connecting to server2 via firewall as the jump host:<br /><br />ssh -tt firewall.example.com ssh -tt server2.example.org<br /><br />This opens an ssh terminal to the remote machine. You can also pass commands. For example, to reattach to a remote screen session using screen you can do the following:<br /><br />ssh -tt firewall.example.com ssh -tt server2.example.org screen -x<br /><br />The chain can be arbitrarily long and is not limited to just two hosts.<br />Hope this could be helpful for the pirates.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Advice for DPR/whoever manages network for SR</strong><br />
+				Post by: <strong>bincofone</strong> on <strong>November 16, 2012, 03:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				The problem is likely HTTP requests that are mal-formed. This is why you use a HTTP reverse proxy, as we are talking a site running on port 80 we all access using web browsers. IPCop will likely have no idea blocking certain HTTP requests is necessary (unless you can add bad packet signatures (which can be bypassed) or something similar to it).
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

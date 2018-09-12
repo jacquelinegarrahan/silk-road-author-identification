@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=20187.0" />
+		<title>Print Page - A super simple introduction to GPG</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: 681227 on April 23, 2012, 07:32 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>A super simple introduction to GPG</strong><br />
+				Post by: <strong>681227</strong> on <strong>April 23, 2012, 07:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve seen a lot of people who are completely baffled about GPG encryption, so I thought I&#039;d take a shot at helping them with this tutorial.<br /><br />GPG is a very powerful tool for secure communication. It&#039;s based on asymmetric encryption, which means that every person using it has a private and a public key. (Yes, this means you too). Using these keys, you&#039;ll encrypt and decrypt messages.<br /><br />So what&#039;s the difference between these keys? Well,<br /><br />The *public key* is completely public. Share it to people who you want to communicate with: they&#039;ll encrypt any messages to you with your public key.<br /><br />The *private key* is your own secret key. Don&#039;t share it with anyone. You&#039;ll decrypt any messages sent to you with it.<br /><br />So for example:<br /><br />Person A sends person B a message. Person A needs person B&#039;s public key. (Public keys are often found in people&#039;s profiles). They encrypt their message using B&#039;s public key.<br /><br />B receives this message. It looks like a bunch of gibberish, but no worries: they just paste it into a GPG tool and after entering their private key&#039;s password, it (hopefully) turns into readable English!<br /><br />So in summary: give people your public key. This way they can send you encrypted messages. Your private key is used to decrypt messages sent to your public key. When you want to send messages to others, the same thing applies: you need their public key. <br /><br />--<br /><br />So how does GPG work in practice? Well, install GnuPG and open up GPA (GNU Privacy Assistant). This tool does it all for you: it lets you generate a key for yourself and encrypt/decrypt messages.<br /><br />## Creating a key ##<br /><br />1. Go to Keys -&gt; New key<br />2. Set the Algorithm to RSA and the key size to the biggest option available<br />3. Set the name to your username (normally you would use your real name, but needless to say you&#039;re going to want to more privacy here)<br />4. Set the email to something fake, for example your username at your username dot your username<br />5. Press OK: GPA will ask you for a passphrase for the key. Use a strong password: for example, a long sentence with numbers and special symbols in it. DON&#039;T FORGET IT, or you will not be able to decrypt any messages sent to that key.<br /><br />## Sharing your key ##<br /><br />1. Your key will now show up in the GPA list. Right click and click &quot;Copy&quot;.<br />2. The public key is now in your clipboard. it&#039;s wrapped by a &quot;-----BEGIN PGP PUBLIC KEY BLOCK-----&quot; piece of text. For example, here&#039;s mine:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG v2.0.17 (MingW32)<br /><br />mQINBE+UJj0BEAC793PdPq1bKUwCSLxcLhqCp8MVnaJphsEI0DycergmBxaZEW8X<br />v7EpPV2v13Q55ZqgwOqDv5DAX3w3zjihU+M++DcfLJ8eSaQBAoA5Uj6yp31LnPVQ<br />6HIWIo8HMgAQQzyCF0DAmxAktR7tky1Oxg9qZH2q0SO3szyTa//YISVqN0C83tJn<br />u5mHCNxiqTz1p3uyRWqj30vCaGr6rx+rMmbmLs4agJA+5lYOZDks10FyvoCNqDE6<br />F3Cq1OgP8AV24vYqi5Ohewbzq4AIOLCOBAExB4gjAmBWa1GfWF9t6xAHX+fyXya+<br />Vnq3TfZRAB5KszDm5zEgOH0mOCvKX3CiZPNj2U6wMMhjFGxAGwoqWqrktJSMcZMj<br />F8TSALl63vRN3kTlQRxwuNWgjHSg2m8G92A+7VMkqrKzUc6nKV3566GbSOEOO2B7<br />slabB32u2Zi0hAoJfAHc5Drx7dBJyD7wGxFcD913ZSAE55G9VnqkMuSW/pTG70nd<br />nfn9gWKwTVS6XqIwy9XB5gdG1ZjP43kph3A1SoU0BX3Nd9SYgu5WJPwZcfqA128I<br />YUW1S9N/yjGk/zals1x5gz2VvLE+MvB/DagPOWKHSQF2I/vcp5/tz/y/TbeT55/n<br />7DlxtOp19JQ27WPAkDJSiVYhO4k3kLo+OREMLVX7pxYI8rX17A51yi2AtwARAQAB<br />tDJTaXggRWlnaHQgT25lIFR3byBUd28gU2V2ZW4gPDY4MTIyN0A2ODEyMjcuNjgx<br />MjI3PokCOAQTAQIAIgUCT5QmPQIbAwYLCQgHAwIGFQgCCQoLBBYCAwECHgECF4AA<br />CgkQUInALLWiWwvRjg//ZdLEjwa1rzdWS6XisEtdVG2NWMWMFdenYVwCw/CzERB2<br />Cwco6DhDjNSVFEov9vBbhO8BSb1sXrZ7Xpuh8VecRRh1r2Kppg6xc1ZLK8ImA+b8<br />crQQPaezlZ8Kcd28Hn/dsqnAqZF4gotTlsVz4HX7dfka8V9zBQ2hhDZJozxRCXMI<br />vs/KYuXXYqcuQbOBLSk2P336GHpzphLq8EfObF2WIg+19hogq9qcfIOUVFwF0iBA<br />ixAZIPgRxG0mFZA9J/HEyrPdfm+WutIURKonEWhL/NxeSHSsKXsAQZWIkD8Lnuoz<br />TiZogpmzclyBgWtnntLTsYgh4fg6yJgpdgw9qFkD8FE7WPirF6h+p5M1AXmKF4Ki<br />RhwHHpJt0CGMZ1wjJk1tweIVdJ+CYBkJE3sUMcZlEBIan7t6arQiD7ZQK5TfpSQ6<br />Dqn3TyyttXzJMGo9rNSPhDouMZ0gBD41IDSct9i2SWnqkXlx20d3UHeD5i3a8SXZ<br />W1ZXxXa86P+SRFDMw6EG0aPB69e6ufGiegq6VWNmTzK5hPb+fWdpd2WINfxPN+QN<br />1IwS8dqpvNhimF/3qPu0KNZIwLA+RZXNKiM0HSjHsP+QxtfsQwwwQ6ZjA4Aqj5ap<br />EeVyjWL0vSeCo+U2Et2jYpREleIQLOhRtY02ij0SyRTgy1IOorw8wCVUvg0nfCG5<br />Ag0ET5QmPQEQANWFt6VnrLJHRu8me427auvOs2Bg1HHWLR9tfP5qwo9yLYpye+ke<br />oKSF3M9FkX/05jMCE+PhiCPHjiEFNWq9WfzmW2208P4c4TbEOdKKsKWhNZ0l3u0V<br />lFN5cUBTer+gqPro/NETftwVq1OK1OATAQxk3wtBQZS2r4PXkP1qo9x8SGrc5L/A<br />t0dYl52vzBaftVvO65jSj36MlL9AnZOmQcGeUIGBqZcA6pVmP58VLEWnHuH9A7MA<br />FKetBPRYcmWZVq11hCY9OI0LFqLFV6BErFp1ksIPI9T9rFYogmFDx3/BuheOK/Xl<br />5hFVMAEaLVaHr9a816uYrFVOboUBDg+68ht7TxaRmt+0sEHroDb9ZL97xcZI75JB<br />ZUpw9bVb2oOx89Og3S7gfASLiKb5uvdTQZahpw5WM4uUcmb/UQo//m8HN335E5el<br />O+6USasziakMZAB6SIfRyOZKC4864xgg+jVMjX/5Qh7VqF8/bMd+MjxprY6Wrdvx<br />uv5d80Lfs4k8r5vifdpejcNYFED8joe3alqoBPsHCxoU2904GhX2KwArSYmFzMuE<br />fkuCvjwLYjULVnufWRAdaD+EVdzW8bZFCiXDZDEGAirzF8RMs2KtaLmRYoF6xoss<br />4SZMVYcM+6snbeoeI/t3q5IhNclczHKaFFta5LcVJicmhDY7lSGaW7J7ABEBAAGJ<br />Ah8EGAECAAkFAk+UJj0CGwwACgkQUInALLWiWwuy1A/9E81G+sBnX2WvhmHb7sa5<br />CnZrCbWJ+7tiejPkoONP/sxdv7/yRNPSYQgAbb3Vbi6mDhYIU3k/yA0c1bvm2jO+<br />ETCOv/tmOZTaXepKeYePAHDdXa0d/VXMFOkdFp658KsjrqeZ8lWaK7dwMgawKpZK<br />xN+FyVUaslMyXYK0e5mvjMw9unTuyB349z3Q5XR6Y36I+Mr4l7uEQ5MD9O4zqC7G<br />5d+Pu1QTrreXzpR4OHPH+GMBDKYhZ4aNduXJqXQ50VYPMHlnd+J42IJqFqCV3Js6<br />5pE/T7M+7n1K9jThzD29mqPWkykxPOkYnSbq9FY8U/VoyP83JCZCcCeyTwvi9dRD<br />DIG01wlk/9wQqW+rvjLTsLV2fcsjWgfoVk9oOpvyFIkNs/9bTyZnCCuOwRTrPgod<br />12IZJw8KVeqwZLFm4D98gcbS9SQFvsS42yBzayM86kObCe3BJglNVH3ZqNi8jOuA<br />aTa+PmqxbtlvjYauRfrquBYrgCedq8ADvgAAlUMd80SaKXumoKT0yGbJLhmOGhkS<br />aL8BsVAAupbyDgtqKRDQiJPYwj2oMekaPC+8hH38q+5GAAZIZZmyb/mELFKQ9YxE<br />UivKfybuWQE9Nog/7bpR9lQ5U2Lg6aQIY6QjtAfSEo9SPRvleBYHH/FWrq4MQyZf<br />BXFzCsOZoWEBB/TPbUn502Q=<br />=kubw<br />-----END PGP PUBLIC KEY BLOCK-----</code><br />(that&#039;s a long fucker!)<br /><br />3. Put it on your profile and post it to the forums (http://dkn255hz262ypmii.onion/index.php?topic=174.0). Make sure to not to mess with the formatting or characters.<br /><br />Now anyone who wishes to correspond with you securely can take that key and encrypt messages to you with it.<br /><br />## Decrypting messages ##<br /><br />Someone sends you a message - and it&#039;s just a bunch of strange characters and other nonsense!<br /><br />An example of a GPG message:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">-----BEGIN PGP MESSAGE-----<br />Version: GnuPG v2.0.17 (MingW32)<br /><br />hQGMA/gcc9JG/83sAQv/dhvIGS7W/zclXrEJ7yeg0mentZSjax4h0a9Y/6semsZ2<br />E/XSTihbq1AolkVuSKuWO8IxZXvVHyOof57upxhAzD5uyyQf8xsB5qKC0fl73hzJ<br />l/mUG/OgfeuaJTGdRd5STtrNc71jbowYqwPZDUpFIEk3FYqEzllilBsuOg+DwOaM<br />SpEneY+rSnVGalYqN/F/A+OOHDgAdoYUw6eEhhailVYjSL1GCljCrbV+auZ7n1r9<br />AqMbxNr003HObBTWtEuCQNZBQhmNFWTGMpZmRtPDxq/QrhFpbg/9/i6sVfTg5p4Y<br />4bN296awKY32BIPsfJZq4lr0/U7fWNUNueuvTtGoGjZlVWWmKp904TiYtnLQo6Ib<br />SYwvucPYGWZLML40Kwd24QYCsNXYJICkpxGXDS24jQaNIS03Gf3ABDnBZiFR0+26<br />7tVas31GtzSiCkKhKvQs9uSUimIIxGXriAUMCtMv7c4JTfUOKIIf9cBZ+gXyCe8D<br />0VOOLbkkwVMQl4xh/HS30jwBNW8Kb9sZ6XNmeE1TiWzfhB+o0SUwh/akNY89Q0TR<br />3Jt8KB2jN7rLB4oEr285+90mlQZvve3aU2VuRok=<br />=RG5S<br />-----END PGP MESSAGE-----</code><br />Decrypting this message in GPA is simple. Click the &quot;Clipboard&quot; option in the top bar of GPA and a new window will pop up.<br /><br />1. Copy that whole message and paste it to this window<br />2. Click &quot;Decrypt&quot;. GPA will ask you for your key password.<br />3. The real message will appear!<br /><br />Insanely simple.<br /><br />## Encrypting messages ##<br /><br />So you want to write a reply. You should encrypt it using the sender&#039;s public key.<br /><br />Where can we find their key? Well, maybe they attached it to their message: look for one of those &quot;---- BEGIN PGP PUBLIC KEY BLOCK ----&quot; things. If it&#039;s not in the message, check their profile. If it&#039;s not there, tell them about this tutorial.<br /><br />So you&#039;ve found the key. Copy it (completely!) and open the GPA application. In the keys view (where you can see your own key), just press CTRL + V and it will automatically import their key. You should now see it in the list along with your key.<br /><br />Writing a message to them is now simple (and you don&#039;t need to repeat the above step since you already have their key saved):<br /><br />1. Open the Clipboard page again<br />2. Type your message<br />3. Press &quot;Encrypt&quot;<br />4. Choose the recipient&#039;s key from the popup list (make sure to pick the right one!)<br />5. The text you typed will turn into a bunch of gibberish. Copy and paste this to your message.<br />6. Send!<br /><br />The recipient can now follow the steps above to read the message. That&#039;s how simple it is!<br /><br />## Trying this all out ##<br /><br />You can try out GPG with an online bot located here (http://p3lr4cdm3pv4plyj.onion/test.php). Read the steps above for help: that page contains the public key of the bot. Use it to write an encrypted message to it and it&#039;ll tell you its contents.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: A super simple introduction to GPG</strong><br />
+				Post by: <strong>FenderGuitarMan</strong> on <strong>June 10, 2012, 10:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thank You For This! This is a lot simpler than most of the other threads about using GPG. I should have realized that using GPG didn&#039;t require a mail plug in. You can just cut and paste to encrypt/decrypt. DUH. This will make my life 100 time easier. Thanks.<br /><br />p.s. if I knew how to give Karma I&#039;d throw you some good karma. I&#039;m still learning the ropes around here.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: A super simple introduction to GPG</strong><br />
+				Post by: <strong>BigScrote</strong> on <strong>June 10, 2012, 12:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Decrypting this message in GPA is simple. Click the &quot;Clipboard&quot; option in the top bar of GPA and a new window will pop up.<br /><br />1. Copy that whole message and paste it to this window<br />2. Click &quot;Decrypt&quot;. GPA will ask you for your key password.<br />3. The real message will appear!</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This is the part I&#039;m stuck on. When I hit &quot;decrypt&quot; I get a message saying &quot;Clipboard contained no OpenPGP data&quot;. I&#039;m not sure how I find/use the seller&#039;s key? When I try to copy that big message, and control-v into the key manager, it tells me &quot;No keys were found&quot;<br /><br />Damn I&#039;m confused!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: A super simple introduction to GPG</strong><br />
+				Post by: <strong>BigScrote</strong> on <strong>June 10, 2012, 05:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you Guru! <br /><br />I think I got it. I copied your PGP key (I wasn&#039;t including the dashes and &#039;BEGIN&#039; message) and pasted into GNU and it came up. <br /><br />So, let&#039;s say I wanted to send you an encrypted message on SR. Would I then put a message on my clipboard using your key, such as this?<br /><br />-----BEGIN PGP MESSAGE-----<br />Version: GnuPG v2.0.17 (MingW32)<br /><br />hQEMA1tw1XB0vD7JAQf+LakHkmWEpNzDTXgVfMTtRV2Pk1ET6/SFoIjRLysjmpXF<br />WMtLivn6LOwELGK6aJyzjCaC4CPDoTN4EYKxeLAzdlVHiWlyJ/RuV4cemt5iwZqf<br />SfGLLyE/r/xCwwosQ6cAVgIjRcWMppVO8+ngngh9vpGxjp/AWFwKS+kG8kSQW9rb<br />qAtFwaEImQsMsAYCnLGqckIZbmclkGR34F1zt05LpaExhPF1JdAe+m/euzld8Peg<br />fhCTvnx2GRR0lLeRAnWoPG7z3Kj03fCYfmsoUvVjjDYdOd86GeU1sUdo1ChkNOfq<br />JPZCwYZhjFRVJJ/2ULD/EPZBRBJM+MK/pO6qm0sIbNJIAeapTF66xGsQqw0YZSte<br />noVLIhFbHak6fkVKV9IOKk94Csb+/BIVEyZ1Rh5yVUIqjBGST5BgoMLdl0v2KlzT<br />v5rhvTu+DruB<br />=L2ut<br />-----END PGP MESSAGE-----<br /><br />Do I include my PGP key in there as well? Thanks so much. I know I seem like an idiot, but want to make sure I&#039;m doing this all right.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

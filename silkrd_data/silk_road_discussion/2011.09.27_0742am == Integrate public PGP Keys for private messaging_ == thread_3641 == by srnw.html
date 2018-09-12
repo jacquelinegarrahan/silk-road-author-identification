@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=3641.0" />
+		<title>Print Page - Integrate public PGP Keys for private messaging?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Silk Road discussion => Topic started by: srnw on September 27, 2011, 07:42 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Integrate public PGP Keys for private messaging?</strong><br />
+				Post by: <strong>srnw</strong> on <strong>September 27, 2011, 07:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				Why not have the option to have SR store your public key and then all messages that are sent to you are automatically encrypted with it?&nbsp; Or better yet, just messages that aren&#039;t encrypted get encrypted?&nbsp; Or even still, have the browser encrypt with javascript?&nbsp; Or maybe a browser plugin?&nbsp; This would make things much more convenient than having to copy/paste for every key import and message you want to send and force privacy.&nbsp; You would only have to copy/paste in order to decrypt.&nbsp; I&#039;m a software engineer so know this should be feasible, but my familiarity with encryption/TOR is limited so I&#039;d like to hear any input from anyone more versed on the topic on any potential security risks related with these options:<br /><br />1) Have SR store your public key and encrypt all messages.&nbsp; I realize in this case that the messages you send to SR would be sent in clear text to the server(obviously not clear text during transmission as the TCP stream is encrypted during transport by TOR, right?) where they would be encrypted, the clear text discarded, and then the encrypted message relayed to the recipient.&nbsp; I realize that trusting SR to do this is not ideal, especially with the recent security holes that have been discussed but would enforce privacy and keep buyers from revealing anything about the sellers during messages.&nbsp; But even then, an attacker would have to alter the site&#039;s code and would only have access to message sent after the attack/modification to the code.&nbsp; Something that should be easily detected.&nbsp; But that possible security hole brings me to number 2...<br /><br />2) Have SR store your public key and encrypt any messages sent to you that have not already been encrypted.&nbsp; This way, you can obviously still encrypt the way we&#039;re doing things now, but adds another level of security/privacy.&nbsp; These unencrypted messages right now are just plain text and stored on the server, for who knows how long(has this been discussed? how long before things are discarded?&nbsp; messages shouldn&#039;t be stored that long).&nbsp; I don&#039;t really see a downside to this as it just adds more security to messages that would not otherwise be encrypted.&nbsp; However, it still relies on SR to do the encryption and requires SR having the plain text message even if it is going to be immediately discarded, meaning people could get complacent and just use the built in encryption rather than their own, which brings me to number 3...<br /><br />3) Have SR store your public key, or maybe store your public key in a cookie?&nbsp; Anyways, just somewhere that it&#039;s retrievable via javascript.&nbsp; Then javascript code could encrypt the message before it&#039;s ever sent to the SR servers.&nbsp; The only possible downside I see to this is trusting SR&#039;s javascript.&nbsp; I know that through certain javascript techniques it&#039;s possible to reveal the IP address of the client, so assuming SR&#039;s security is breached someone could alter the script.&nbsp; Also, I know most people, including myself have javascript turned off when using TOR.&nbsp; But still, encrypting things client side seems to be the way to go.&nbsp; Which brings me to number 4...<br /><br />4)&nbsp; Create a browser plugin that will do this for you?&nbsp; It seems it should be totally possible to write a browser extension to automatically encrypt all outgoing messages.&nbsp; Something to detect who you&#039;re sending to, that will then, in the background, visit that person&#039;s profile page and grab their key, and then use it to encrypt the message you&#039;re sending.&nbsp; This could also be made to decrypt messages as well.&nbsp; Would save quite a bit of time imo.<br /><br />So, in conclusion, I think the best way to go about things is probably a combination of number 2 and number 4.&nbsp; I think the SR site should have the ability to store everyone&#039;s public key in a place that&#039;s easily accessible, something similar to the current seller profile page, for both sellers AND BUYERS.&nbsp; Then, once you have your public key stored, there should be an option to have all unencrypted messages that are sent to you encrypted.&nbsp; Maybe even with an autoreply to the sender that their message was automatically encrypted and that in the future they should encrypt it themselves.&nbsp; The receiver should also be notified that it was automatically encrypted.&nbsp; Lastly, once everyone&#039;s public keys are available, someone(I&#039;ll look into doing it myself if there&#039;s enough interest) could write a browser extension to automatically encrypt all outgoing messages before they are sent to the SR servers.&nbsp; I did a brief search for something like this but couldn&#039;t find anything, but that doesn&#039;t mean it&#039;s not out there.&nbsp; The extension could even made to be generic, with rules about which pages have forms that messages are to be encrypted for, and how to retrieve the public keys and such.&nbsp; Anyways, I hope this is helpful and sparks some discussion.&nbsp; It may just be overkill for something that&#039;s already working, but I thought I&#039;d give my two cents on increasing the level of privacy given the recent security holes that were found.&nbsp; Thanks for reading.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Integrate public PGP Keys for private messaging?</strong><br />
+				Post by: <strong>hearing</strong> on <strong>September 27, 2011, 08:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				Anything where the encryption is done server-side or with JS is a bad idea. Other than that, your conclusion is sound. In short:<br />1. &quot;the SR site should have the ability to store everyone&#039;s public key in a place that&#039;s easily accessible&quot;<br />2. &quot;a browser extension to automatically encrypt all outgoing messages before they are sent to the SR servers&quot;<br /><br />This brings up another issue, which is that the public keys could be changed by a compromised server. Keys on TSR are never signed.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Integrate public PGP Keys for private messaging?</strong><br />
+				Post by: <strong>srnw</strong> on <strong>September 28, 2011, 04:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				Well I guess the wall of text in my original post probably scared people away.&nbsp; I had just received a package and was excited about the idea.&nbsp; Anyways, doesn&#039;t look like there&#039;s much interest, although I think enforcing the encryption would be a good move.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Integrate public PGP Keys for private messaging?</strong><br />
+				Post by: <strong>srnw</strong> on <strong>September 28, 2011, 04:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				Just thought of something in regards to you&#039;re good point about keys being replaced.&nbsp; The browser extension/plugin could store/cache the keys and notify the user if the key has changed.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

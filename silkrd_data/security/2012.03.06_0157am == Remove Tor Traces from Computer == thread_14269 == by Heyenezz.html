@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=14269.0" />
+		<title>Print Page - Remove Tor Traces from Computer</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Heyenezz on March 06, 2012, 01:57 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Remove Tor Traces from Computer</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 06, 2012, 01:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				How do I remove ALL traces of Tor, Vidalia, bitcoin, and PGP from my computer? How do Iverify that such info has been removed?<br /><br />I want to move that info to a secure VM on an encrypted USB drive. My hard drive&#039;s encrypted but I&#039;d like more layers of plausible deniability.<br /><br />Thanks for any help.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Remove Tor Traces from Computer</strong><br />
+				Post by: <strong>QTC</strong> on <strong>March 06, 2012, 02:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				run the ata &quot;secure erase&quot; command on your hard drive.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Remove Tor Traces from Computer</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 06, 2012, 02:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14269.msg139116#msg139116">Quote from: QTC on March 06, 2012, 02:04 am</a></div></div><blockquote class="bbc_standard_quote">run the ata &quot;secure erase&quot; command on your hard drive.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />What does this mean?<br /><br />Is there a way to remove such data without removing all the other data?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Remove Tor Traces from Computer</strong><br />
+				Post by: <strong>zomgwtfbbq</strong> on <strong>March 06, 2012, 02:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				If you&#039;re using Linux/Mac/BSD, there is the &quot;srm&quot; utility.&nbsp; By default, it overwrites the file 34 times before deleting, but it also has options for DoD and DoE compliant erasing.&nbsp; It is SLOW.&nbsp; There&#039;s also the &quot;shred&quot; utility that is part of one of the GNU toolsets that is (typically) installed as a part of a basic Linux install, but the man page specifically states that the effectiveness of &quot;shred&quot; is lessened by the use of a journaling file system such as ext3, ext4, or xfs.&nbsp; I don&#039;t know if that same limitation applies to &quot;srm&quot; although in thinking about it, it seems like it would, but it&#039;s better than nothing.<br /><br />If you&#039;re using Windows, I don&#039;t know.&nbsp; I&#039;m sure there has to be some kind of equivalent freeware available.<br /><br />The thing is, though, if you want absolute verification that all traces of something are gone, then you have to know everywhere that any trace of it might be.&nbsp; If you don&#039;t know these things and can&#039;t be 100% certain that you&#039;ve deleted every file and folder, QTC&#039;s suggestion, or something like it, is the only way to go.&nbsp; If you&#039;ve nuked the entire drive in a secure manner, only then you can be 100% certain that everything is really gone.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Remove Tor Traces from Computer</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 06, 2012, 03:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14269.msg139189#msg139189">Quote from: zomgwtfbbq on March 06, 2012, 02:54 am</a></div></div><blockquote class="bbc_standard_quote">If you&#039;re using Linux/Mac/BSD, there is the &quot;srm&quot; utility.&nbsp; By default, it overwrites the file 34 times before deleting, but it also has options for DoD and DoE compliant erasing.&nbsp; It is SLOW.&nbsp; There&#039;s also the &quot;shred&quot; utility that is part of one of the GNU toolsets that is (typically) installed as a part of a basic Linux install, but the man page specifically states that the effectiveness of &quot;shred&quot; is lessened by the use of a journaling file system such as ext3, ext4, or xfs.&nbsp; I don&#039;t know if that same limitation applies to &quot;srm&quot; although in thinking about it, it seems like it would, but it&#039;s better than nothing.<br /><br />If you&#039;re using Windows, I don&#039;t know.&nbsp; I&#039;m sure there has to be some kind of equivalent freeware available.<br /><br />The thing is, though, if you want absolute verification that all traces of something are gone, then you have to know everywhere that any trace of it might be.&nbsp; If you don&#039;t know these things and can&#039;t be 100% certain that you&#039;ve deleted every file and folder, QTC&#039;s suggestion, or something like it, is the only way to go.&nbsp; If you&#039;ve nuked the entire drive in a secure manner, only then you can be 100% certain that everything is really gone.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thanks guys. That&#039;s a bitch though, but the security seems worth it. I&#039;ll reinstall Windows after backing up vital data.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Remove Tor Traces from Computer</strong><br />
+				Post by: <strong>QTC</strong> on <strong>March 06, 2012, 03:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=14269.msg139189#msg139189">Quote from: zomgwtfbbq on March 06, 2012, 02:54 am</a></div></div><blockquote class="bbc_standard_quote">If you&#039;re using Linux/Mac/BSD, there is the &quot;srm&quot; utility.&nbsp; By default, it overwrites the file 34 times before deleting, but it also has options for DoD and DoE compliant erasing.&nbsp; It is SLOW.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I&#039;ve been told by somebody that generally knows what the fuck they&#039;re talking about that this will leave you vulnerable to spin stack microscopy analysis of your hard drive. (You have to ask though whether they&#039;ll break out that equipment for a buyer, the only time I&#039;ve heard of it being used was to pwn a carder.) I&#039;ve also been told by somebody who does data recovery work for police departments that one overwrite pass is enough. Secure erase is very fast though, is better than a one pass wipe, and wipes track edges so I don&#039;t really see any reason not to use it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Remove Tor Traces from Computer</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 06, 2012, 11:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				I used to have references to forensic papers claiming one pass is enough and forensic papers claiming one pass is not enough. Today it seems that pretty much everyone agrees that one pass is enough, and there have been forensic papers that demonstrate this to be true. So I am inclined to agree that one pass is enough. The issue with not using ATA secure erase is that even with 35 passes, there could be &#039;magnetic residue&#039; on the edge of tracks. Normal wipe programs bring the drive head down the track down the center and don&#039;t overwrite data on the edge of the track consistently. ATA secure erase puts the head off track by a few degrees during the second pass so it erases this data. It is technically one pass in both cases though, just the second pass is done with the head at a different position. There is a forensic paper showing that data can be pulled off a drive with multiple pass overwrites that don&#039;t use ATA secure erase, but the issue isn&#039;t due to a single pass not being enough.<br /><br />csrc.nist.gov/publications/nistpubs/800-88/NISTSP800-88_rev1.pdfcsrc.nist.gov/publications/nistpubs/800-88/NISTSP800-88_rev1.pdf
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Remove Tor Traces from Computer</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 06, 2012, 09:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So, can I just reinstall Windows without installing additional software?
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

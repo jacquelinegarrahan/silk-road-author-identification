@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=194541.0" />
+		<title>Print Page - Can You Encrypt the Tor End Node?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: TMan99 on August 01, 2013, 07:12 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Can You Encrypt the Tor End Node?</strong><br />
+				Post by: <strong>TMan99</strong> on <strong>August 01, 2013, 07:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It seems as if everything on tor is encrypted except the end node can see what you are doing?<br /><br />Is there a way that you can encrypt the end node so if that person is spying on you they won&#039;t be able to see what you are doing?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can You Encrypt the Tor End Node?</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 01, 2013, 07:24 pm</strong>
+			</dt>
+			<dd class="postbody">
+				With SSL to the destination site you can have an end-to-end encrypted connection, but the destination site has to support SSL. In an age when you can get free SSL certifcates a la https://startssl.com and a few others, there&#039;s not much excuse though.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can You Encrypt the Tor End Node?</strong><br />
+				Post by: <strong>Amadeus</strong> on <strong>August 01, 2013, 08:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If the site supports HTTPS or some secure protocol like SSL, then the exit node cannot see what you are sending.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can You Encrypt the Tor End Node?</strong><br />
+				Post by: <strong>chluke</strong> on <strong>August 02, 2013, 04:48 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m new here, and am certainly not a computer and network geek, so this might be a stupid question, but why isn&#039;t SR a https site?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can You Encrypt the Tor End Node?</strong><br />
+				Post by: <strong>crazycracker</strong> on <strong>August 02, 2013, 08:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=194541.msg1403674#msg1403674">Quote from: chluke on August 02, 2013, 04:48 am</a></div></div><blockquote class="bbc_standard_quote">I&#039;m new here, and am certainly not a computer and network geek, so this might be a stupid question, but why isn&#039;t SR a https site?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It&#039;s not stupid, your right to question if your unsure about the security. When you connect to TOR hidden services the connection never leaves the TOR network and stays encrypted from your computer to the hidden service by TOR so you don&#039;t need to use https because the connection is already secure.<br /><br />Unless the server running the tor hidden service didn&#039;t have a secure connection to the actual web server but you don&#039;t really need to worry about that because most likely if someone knows how to set this stuff up they know that. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can You Encrypt the Tor End Node?</strong><br />
+				Post by: <strong>chluke</strong> on <strong>August 02, 2013, 05:14 pm</strong>
+			</dt>
+			<dd class="postbody">
+				But isn&#039;t the connection from the exit node to SR unencrypted?<br />I assume that is why it is a good idea to use PGP when sending any sensitive info to SR.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can You Encrypt the Tor End Node?</strong><br />
+				Post by: <strong>Candy</strong> on <strong>August 02, 2013, 06:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=194541.msg1405245#msg1405245">Quote from: chluke on August 02, 2013, 05:14 pm</a></div></div><blockquote class="bbc_standard_quote">But isn&#039;t the connection from the exit node to SR unencrypted?<br />I assume that is why it is a good idea to use PGP when sending any sensitive info to SR.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />When you are searching the darkweb (.onion sites) you are not using end nodes. End nodes are only used, when you are using Tor to enter clearweb (The ordinary internet).<br /><br />Or at least that&#039;s how I understand it, but if I am mistaken, I&#039;m sure someone wiser will correct me soon&nbsp; ::)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can You Encrypt the Tor End Node?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>August 02, 2013, 10:04 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=194541.msg1405380#msg1405380">Quote from: Candy on August 02, 2013, 06:10 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=194541.msg1405245#msg1405245">Quote from: chluke on August 02, 2013, 05:14 pm</a></div></div><blockquote class="bbc_alternate_quote">But isn&#039;t the connection from the exit node to SR unencrypted?<br />I assume that is why it is a good idea to use PGP when sending any sensitive info to SR.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />When you are searching the darkweb (.onion sites) you are not using end nodes. End nodes are only used, when you are using Tor to enter clearweb (The ordinary internet).<br /><br />Or at least that&#039;s how I understand it, but if I am mistaken, I&#039;m sure someone wiser will correct me soon&nbsp; ::)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You can still use exit nodes when connecting to a hidden service, but they are not used in an exit node capacity. Hidden service connections are end to end encrypted. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

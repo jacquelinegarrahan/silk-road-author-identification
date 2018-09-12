@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=161391.0" />
+		<title>Print Page - Trawling, Mapping, and Attacking Tor Hidden Services</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: astor on May 21, 2013, 01:38 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 21, 2013, 01:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				This person positioned himself as one of Silk Road&#039;s HSDirs. The highlights of his research:<br /><br />1. SR gets 60,000 descriptor requests per day, which might be equivalent to &quot;visits&quot; per day<br />2. There are at least 40,000 onion domains on the network<br />3. It is surprisingly easy to DOS a hidden service by positioning yourself as all 6 of its HSDirs<br /><br />http://donncha.is/2013/05/trawling-tor-hidden-services/<br /><br />================<br /><br /><br />Tor hidden services have got more media attention lately as a result of some notorious sites like the Silk Road marketplace, an online black market. On a basic level, Tor hidden services allow you to make TCP services available while keeping your server’s physical location hidden via the Tor anonymity network.<br /><br />TL;DR<br /><br />* Tor hidden service directories (HSDir’s) receive a subset of hidden service look-ups from users, allowing them to map relative popularity/usage of hidden service.<br />* An adversary with minimal resources can carry out complete DoS attacks of Tor hidden services by running malicious Tor hidden service directories and positioning them in a particular part of the router list.<br />* Many look-ups for Tor hidden services go to the incorrect hidden service directories which negatively affects the initial time to access the site.<br />* Hidden services such as are popular, sites such as the Silk Road marketplace receive more than 60,000 unique user sessions a day.<br /><br />Introduction<br /><br />For users to access a hidden service they must first retrieve a hidden service descriptor. This is a short signed message created by the hidden service approximately every hour contain a list of introduction nodes and some other identifying data such as the descriptor id (desc id). The desc ID is based on a hash of some hidden service information and it changes every 24 hours. This calculation is outlined later in the post. The hidden service then publishes its updated descriptor to a set of 6 responsible hidden service directories (HSDir’s) every hour. These responsible HSDir’s are regular node on the Tor network which have up-time longer than 24 hours and which have received the HSDir flag from the directory authorities. The set of responsible HSDir’s is based on their position of the current descriptor id in a list of all current HSDir’s ordered by their node fingerprint. This is an implementation of a simple DHT (Distributed Hash Table).<br /><br />A client who would like to retrieve the full HS descriptor will calculate the time based descriptor id and will request it from the responsible HSDir’s directly.<br /><br />Once the client has a copy of the hidden service descriptor they can attempt to connect to one the introduction point and create a complete 7 hop circuit to the hidden service.<br /><br />This is a very brief explanation which the Tor Project has outlined much more clearly on their hidden service protocol page but it should provide enough information to understand the following information.<br /><br />The Problems<br /><br />* Any one can set up a Tor node (HSDir) and begin logging all hidden service descriptors published to their node. They will also receive all client requests allowing them to observe the number of look-ups for particular hidden services.<br />* The list of responsible HSDir’s for a hidden service is based on the calculated descriptor ID and an ordered list of HSDir fingerprints. As the descriptor ID’s are predictable, and the node fingerprint is controlled by an adversary. The can position themselves to be the responsible directories for a targeted hidden service and subsequently perform a DoS attack by not returning the hidden service descriptor to clients. There is nothing the hidden service can do about this attack. They must rely on the Tor Project authority directories to remove the malicious HSDir’s from the consensus.<br /><br />Information Gathering from the DHT<br /><br />Hidden services must publish their descriptors to allow clients to reach them. These descriptor id’s are deterministic but over time any HSDir should have an equal chance of receiving the descriptor for any particular hidden service as part of the DHT. As the descriptor is replicated across 6 HSDir’s, any single responsible HSDir should receive up to 1/6 of all client look-ups for that hidden service providing a good means of estimating hidden service popularity.<br /><br />This data can be made more accurate by running more Tor HSDir’s which have identity digest‘s in the responsible range, to the point where all the responsible HSDir’s are controlled by the observer.<br /><br />There are currently about 1400 nodes with the ‘HSDir’ flag running. For the past 2 months I have run 4 Tor nodes and logged all hidden service requests that they have received. Each hidden service publishes to 6 HSDir’s every day, and will publish to 360 or approximately 25% of HSDir’s in a 2 month period. As I am running 4 nodes I statistically should have received a copy of every hidden service that was online for those 60 days. While the distribution will not be perfect, my data should contain a representative set of hidden service activity. Here are some stats from those 4 nodes:<br /><br />* Received 1.3 million requests for 3815 unique hidden services my nodes were responsible for.<br />* Got 16.03 million requests for descriptors my nodes were not currently responsible for.<br />* Received published descriptors for 40,500 unique hidden services<br />* Received requests from clients for 25,600 unique descriptor id’s.<br /><br />Even these basic stats point out a number of issues with the way hidden services currently function. 16.03 million or 92.5% of all descriptor requests my nodes received were for hidden services I did not currently have descriptors for. This could be a result of the clients having an out-of-date network consensus and not choosing the correct HSDir’s as responsible. It could also be a result of an out of sync time which causes the clients to look for the wrong/old descriptor id’s. Either way, a significant amount of time is being wasted on descriptor look-up which slows down the time when first accessing a hidden service.<br />Some More Stats..<br /><br />The following table contains data on requests my nodes received for some well known Tor based marketplaces. There are also requests for related phishing sites. I have confirmed that some users were directed to these phishing pages from links on the “The Hidden Wiki” (.onion). The number of requests is what my nodes observed. Descriptor look-ups from clients will be divided at random between the 6 responsible HSDir’s and clients will keep trying the remaining HSDir’s until the descriptor is found or all HSDir’s have been checked. As a result the total number of requests received by the following sites per day may be up to 6 times more than the figures below, but these still offer a relative guide to popularity.<br />&nbsp;&nbsp;&nbsp;<br /><br />Onion Address Descriptor ID Requests<br />----------------------------------------------------------------<br />silkroadvb5piz3r cjzls3i2mbj4hjnquqmuvznihues4xh4 16387<br />silkroadvb5piz3r m6yz6gqrmu35twduuiixzr2mqtxdo3er 10891<br />5onwnspjvuk7cwvk 6t44eim223ypmb2ueokcsfco5vzvryfm 1413<br />silkroadvb5piz3r hadco5o7rmh2vcamg7mdzqklprqffyyh 558<br />silkroadxmx45vk4 6tyqo2bf7xclfbmrtrxwm7mgb3z4s5ui 197<br />atlantisrky4es5q hdj7wkuaigt7iicqf77gyzbo7zyvq7wf 165<br />atlantisrky4es5q m6y4s2utv4kxgdczv7t3gbmoloezblzf 161<br />atlantisrky4es5q 6r3z4tlr2vvl5z34v5lcuaqckgjvtr7s 129<br />silkroadxmx45vk4 m6eczdbpjse3jdfw54cv4nxcc6s34eku 107<br />sheep5u64fi457aw ci7dpz6emlh2pxpshovnxjbyjqnp3luo 59<br />silkrovafuce2ur2 6r6w7ncln5mo4hdwq6yh7f2hf3hlag2u 14<br />sheep5u64fi457aw rzq5pd4ehayz4yker7dhmvpubm4we7om 9<br />silkroadopn752dl cja5ppzzmkrzvr2pgp2c2z6mtuc7m7yk 4<br />silkroadr5cd6wbz m4n2afulpiln4n42l7wlg36wy6okkqrh 3<br />silkroadfqmteec4 cjcyh7mm6lzzuqka3vlq67upyt5zwd7b 2<br /><br /><br />It seems a lot of people, especially scammer’s running phishing sites on Tor hidden services don’t know a lot about web security which leads to sites like this.<br /><br />Please users, if you enter your credentials on a phishing page, and it doesn’t log you into the site. Don’t try again!<br /><br />I also observed a large number of requests to the command and control servers of the “Skynet” Tor based botnet which got attention after an AMA with the botnet owner on Reddit. Contact him @skynetbnet on Twitter for more info.<br /><br /><br />Onion Address Descriptor ID Requests<br />----------------------------------------------------------------<br />gpt2u5hhaqvmnwhr m5t2jamzi4fht3hicqadzd3rkl57lyjj 9792<br />x3wyzqg6cfbqrwht m5doen5pidde5wshaormqh6l2c4bljd5 7162<br />gpt2u5hhaqvmnwhr hdjeqyqaq344rbb6vxndliobueh3v2u5 6641<br />4bx2tfgsctov65ch 6twxygfbtb2haivmixjqx5ag35dg72tk 6485<br />owbm3sjqdnndmydf hd2j5xswo5ddvxpa2rahkg24vwhqo77y 6471<br />niazgxzlrbpevgvq m63z25bfydkc6nfko4b4kz44u3jsh67k 6334<br />6ceyqong6nxy7hwp m6czfa7ra6qvrfvbmg6zlsimi4braizy 2691<br />6tkpktox73usm5vq 6ruzifokbb6ez2qbnion7deylz4jjmq3 1827<br />uzvyltfdj37rhqfy 6tvqgoeu4piyu3x6dsyerhhhnko6iumy 1735<br />6m7m4bsdbzsflego m5zclz4icakymh2d6fbdkpq2t3n7efql 1681<br />6ceyqong6nxy7hwp hds46ckhghbg5gvfwnsgwvhvdildn2e5 1605<br />jr6t4gi4k2vpry5c m5zfpvht47zgiujyjkf5en2vu6g7ndzm 1579<br />xvauhzlpkirnzghg 6ugswkgt5pdmhlyzjgj5bhtnclophhwa 1556<br />jr6t4gi4k2vpry5c m5576obc535dffll4qwq6xh37u4dz7y2 1422<br />ceif2rmdoput3wjh 6s544wf5d6kuyhtiqq7wo37oisi6n5ce 1397<br />f2ylgv2jochpzm4c cjore7wxv2x46qrlcvmiyctm4szckpo3 1380<br />uy5t7cus7dptkchs 6ttlcxahq4obesp5gze4rkjjinivgoyl 1370<br />7wuwk3aybq5z73m7 6urq4w6to5fmjf3hyqitzlcscxszzbrd 1199<br />742yhnr32ntzhx3f t5z3anxrp3e5w5z2s5kqfftuxlw4v6ng 1178<br />7wuwk3aybq5z73m7 m4ejch7su2xm6zrzu5gn3cgrjsg43f6y 235<br />6m7m4bsdbzsflego 7lsph6grzr76j27fx4r7ir3ipbexidkt 134<br />6tkpktox73usm5vq hday5dik3mzlwkpvemrorfmirfdnepnp 102<br />6ceyqong6nxy7hwp lzgpbrgh6ims4fgru6ojdsea7hbruh6s 25<br />x3wyzqg6cfbqrwht ciq4shgjmutzgmz2t346rvkwtzuobfqe 24<br />owbm3sjqdnndmydf ciebkgj3gbl4egtwqvwssc6kvtt4x6t5 15<br />4bx2tfgsctov65ch 6rnq6z57hvjrf4a5yktfd7qavuvlvqjb 6<br /><br /><br />Many of the “Skynet” onion addresses above and other popular addresses are running Bitcoin mining proxies. They generally responded with a basic authentication request for “bitcoin-mining-proxy”. The other services may be Tor based bitcoin mining pools or part of Skynet and/or other botnets. It should be straight forward to find these sites by scanning the service id’s from the raw data on Github.<br />DoS Attacks on Tor Hidden Services<br /><br />Tor hidden service desc_id‘s are calculated deterministically and if there is no ‘descriptor cookie’ set in the hidden service Tor config anyone can determine the desc id‘s for any hidden service at any point in time.This is a requirement for the current hidden service protocol as clients must calculate the current descriptor id to request hidden service descriptors from the HSDir’s. The descriptor ID’s are calculated as follows:<br /><br />descriptor-id = H(permanent-id | H(time-period | descriptor-cookie | replica))<br /><br />The replica is an integer, currently either 0 or 1 which will generate two separate descriptor ID’s, distributing the descriptor to two sets of 3 consecutive nodes in the DHT. The permanent-id is derived from the service public key. The hash function is SHA1.<br /><br />time-period = (current-time + permanent-id-byte * 86400 / 256) / 86400<br /><br />The time-period changes every 24 hours. The first byte of the permanent_id is added to make sure the hidden services do not all try to update their descriptors at the same time.<br /><br />identity-digest = H(server-identity-key)<br /><br />The identity-digest is the SHA1 hash of the public key generated from the secret_id_key file in Tor’s keys directory. Normally it should never change for a node as it is used for to determine the router’s long-term fingerprint, but the key is completely user controlled.<br /><br />A HSDir is responsible if it is one of the three HSDir’s after the calculated desc id in a descending lists of all nodes in the Tor consensus with the HSDir flag, sorted by their identity digest.&nbsp; The HS descriptor is published to two replica‘s (two set’s of 3 HSDir’s at different points of the router list) based on the two descriptor id’s generated as a result of the ’0′ or ’1′ replica value in the descriptor id hash calculation.<br /><br />I have implemented a script calculating the descriptor ID’s for a particular hidden service at an arbitrary time and it is available on my Github account. I have also created a modified version of ‘Shallot‘ which can be used to generate keys with an identity key in a specified range. The is more usage information on its Github page.<br /><br />The Attack<br /><br />The code listed above could be used to generate identity keys and identity digests for an adversary’s HSDir nodes so that they’ll be selected as 6 of the HSDir’s for a targeted hidden service. These adversary controlled hidden service directories could simple return no data (404 Response) to a client requesting the targeted hidden service’s descriptor and in turn prevent them from finding introduction nodes. As there are no other sources for this hidden service descriptor it would be impossible for a user to set up a circuit a complete circuit to the hidden service and there would be a complete denial of service until the descriptor id changes.<br /><br />For an adversary to continue this attack over a longer time-frame, they would need to set up their nodes for the upcoming desc id’s of the targeted hidden service more than 24 hours in advance to make sure they will have received the HSDir flag.<br /><br />An adversary would need to run 12-18 nodes to keep up a complete, persistent DoS on the targeted hidden service. Six nodes would be the “responsible HSDir’s” and the other nodes would be running with identity digests in the range of the upcoming desc id’s, to gain the HSDir flags after 24 hours of up-time. An adversary can cut the resources needed by running two Tor instances/nodes per IPv4 IP or by running the Tor nodes on compromised servers on high, unprivileged ports.<br /><br />These attacks a quite a real, practical threat against the availability of Tor hidden services. For whatever reason (extortion, censorship etc.) adversary can perform complete DoS attacks with minimal resources and there are no actions hidden service owner can do to mitigate, besides switching to descriptor cookie based authentication or multiple private address. The Tor project can try deal with these attacks by removing known malicious HSDir’s from the network consensus but I don’t see a straight forward way to identify these malicious nodes.<br /><br />Unfortunately there are no easy solutions to this problem at the moment. I can foresee adversaries employing these attacks in the wild against popular hidden services.<br /><br />Conclusions<br /><br />Tor hidden services were originally implemented as some a simple feature on top of the Tor network and unfortunately they haven’t received the attention and love the deserve for such a popular feature. There are discussions under way to re-implement hidden services to alllow them to scale more efficiently. There are also people looking at reducing the ability of HSDir’s to sit and gather data on onion address and look-ups like I have done, by implementing a PIR protocol. A good summary of work that needs to be done is available in a blog post on the Tor Project’s website. I’d urge any developers with an interest to join the tor-dev mailing list and see if there is something&nbsp; you can contribute! A lot of work is needed.<br /><br />Anyone interested in learning more about the issues with the current Tor hidden service implementation please check out the presentation “Trawling for Tor Hidden Services: Detection, Measurement, Deanonymization” at the IEEE S&amp;P conference this Monday by Alex Biryukov, Ivan Pustogarov and RalfPhilipp Weinmann will probably provide a much more in-depth, formal investigation and I too look forward to reading it. We have been researching similar areas so I’m very interested in their approach and results.<br /><br />All raw data and my modified Tor clients are available from my Github repo. This also contains scripts for calculating hidden service descriptors and generating OR private keys with fingerprints in a particular range. This data includes all descriptor requests and hidden service ID’s my nodes observed. Please check it out if you are interested in analyzing a random subset of services on the Tor network.<br /><br />I’d like to thank @mikesligo for having a heated debate in the pub with me about hidden services and getting me interested in how they work. I’d also like to thank @CiaranmaK for reading a draft of this post and pointing out some corrections.<br /><br />Thank you for reading my first blog post. I’ll have to work on presenting things better as the information in this post is a bit all over the place. Please let me know if you have any questions or feedback in the comments below.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>quixotist</strong> on <strong>May 21, 2013, 10:34 pm</strong>
+			</dt>
+			<dd class="postbody">
+				A really interesting article, thanks for posting. <br /><br />I&#039;d love to see a list / league table of .onion websites based on his modified Tor node code, I suspect many would be child porn but I bet there&#039;s also some cool sites that are neither password protected nor public knowledge. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 22, 2013, 02:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The 40,000 figure was surprising. I doubt the vast majority of them are web sites. They may be addresses used to access bots running over Tor.<br /><br />The attack on HSDirs is concerning. It seems easier to pull off than an attack on intro points. You don&#039;t need to brute force a fingerprint that exactly matches the descriptor ID. You only need to brute a fingerprint that is closer than other relays. Apparently you can do that within a day or two, so someone running 12-18 servers, as the author points out, can reliably position himself as all 6 HSDirs, returning 404 for the descriptor and DOSing the hidden service.<br /><br />You can&#039;t solve this problem by increasing the number of HSDirs that your hidden service publishes its descriptor to, since users&#039; clients will ignore the others, nor by running multiple instances of Tor, since they will all publish to the same HSDirs. This is the bottleneck where client and service meet.<br /><br />The only defenses that I can think of off the top of my head are to distribute a custom TBB to SR users that queries up to N HSDirs, where N can be as high as 100 if needed to mitigate an attack, or to run your own relays which obtain the HSDir flag and brute force their fingerprints closer to the descriptor ID than the attacker manages to do.<br /><br />Both defenses have complications, though.<br /><br />Hopefully there are more innovative defenses.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>s1llyn355</strong> on <strong>May 22, 2013, 09:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				really interesting...&nbsp; <br /><br />thanks for spending the time putting that together.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 24, 2013, 06:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				A new paper came out with a similar but more thorough analysis. They claim to be able to identify hidden service entry guards in under 2 hours. They also propose counter-measures, which of course include layered entry guards. Here are the relevant parts.<br /><br />Trawling for Tor Hidden Services: Detection, Measurement, Deanonymization<br /><br />http://www.ieee-security.org/TC/SP2013/papers/4977a080.pdf<br /><br />Abstract - Tor is the most popular volunteer-based anonymity network consisting of over 3000 volunteer-operated relays. Apart from making connections to servers hard to trace to their origin it can also provide receiver privacy for Internet services through a feature called &quot;hidden services&quot;.&nbsp; In this paper we expose flaws both in the design and implementation of Tor&#039;s hidden services that allow an attacker to measure the popularity of arbitrary hidden services, take down hidden services and deanonymize hidden services. We give a practical evaluation of our techniques by studying: (1) a recent case of a botnet using Tor hidden services for command and control channels; (2) Silk Road, a hidden service used to sell drugs and other contraband; (3) the hidden service of the DuckDuckGo search engine.<br /><br /><br /><br /><br />VII. REVEALING GUARD NODES OF HIDDEN SERVICES<br /><br />In this section we present an attack to reveal the guard nodes of a hidden service when the list of the introduction points in the HS descriptor is not encrypted (for the case when the list of introduction points in encrypted see Appendix B).<br /><br />To do this, we use a technique similar to that presented in section VI; control over at least two Tor non-Exit relays is needed to carry it out. In the attack, the hidden service is forced to establishes many rendezvous connections to the rendezvous point (RP) controlled by the attacker in hope that some circuits pass through the second node (the middle node) controlled by the attacker. The RP generates traffic with a special signature which can be identified by the<br />attacker&#039;s middle node. The steps of the attack are the same as in section VI.<br /><br />Asymptotically, the probability that the attacker&#039;s middle node is chosen for the rendezvous circuit, approaches 1. Whenever the rendezvous point receives a RELAY_COMMAND_RENDEZVOUS1 with the same cookie as the attacker sent in the RELAY_COMMAND_INTRODUCTION1 cell it logs the reception and the IP address of the immediate transmitter of the cell. At the same time, the attacker&#039;s middle node monitors the circuits passing through it. Whenever it receives a DESTROY cell over a circuit it checks:<br /><br />1) whether the cell was received just after the rendezvous point received the RELAY_COMMAND_RENDEZVOUS1 cell;<br /><br />2) if the next node of the circuit at the middle node coincides with the previous node of the circuit at the rendezvous point;<br /><br />3) whether the number of forwarded cells is exactly 2 cells up the circuit and 52 cells down the circuit.<br /><br />If all the conditions are satisfied, the attacker decides that her middle node was chosen for the hidden service&#039;s rendezvous circuit and marks the previous node in the circuit as a potential guard node of the hidden service.<br /><br />We implemented the attack and ran it against two hidden services operated by us. In both cases the guard nodes were identified correctly, without any false positives. In the first case, the rendezvous point received around 36 000 RELAY_COMMAND_RENDEZVOUS1 cells in 1 hour 20 minutes and the correct guard nodes were identified 8, 6, and 5 times correspondingly. In the seconds case, the rendezvous point received 16 000 RELAY_COMMAND_RENDEZVOUS1 cells in 40 minutes and the correct guard nodes were identified 5, 2, and 1 times respectively.<br /><br />We also used this approach to identify the guard nodes of the botnet hidden service. Note that in the attack described in this section an attacker can use just one middle node and send the traffic signature as a client. However it requires building rendezvous circuits which makes the attack longer.&nbsp; The same applies to the attack presented in section VI.<br /><br /><br />VIII. DISCUSSION AND POTENTIAL COUNTERMEASURES<br /><br />We propose two countermeasures to make distributed storage of the hidden service descriptors more robust. The first of these prevents the directory authorities from learning the contents of hidden services descriptors they are serving.&nbsp; This prevents hidden services from harvesting descriptors to learn more onion addresses. Our second proposed change makes the position of the responsible hidden service directories in the directory fingerprint ring unpredictable for any hidden service. This removes the opportunity of targeting hidden service directories. Henceforth attackers can no longer precompute identity keys to target hidden services for popularity measurements and to deny service to them by selectively running relays with those keys.<br /><br />Harvesting can be easily prevented by making the descriptor-cookie authentication [15] mandatory for all hidden services and base32 encoding the value as part of the URL together with the permanent-id. The downside of this change is a significantly reduced usability: instead of 16 character onion addresses the user now has to deal with onion-addresses that are 42 characters long.<br /><br />In order to prevent adversaries from efficiently targeting hidden service directories we propose the following changes:<br /><br />For each hour, an unpredictable value is derived by the directory authorities from a shared secret. Three of these values are included in the consensus - one for each of the hours the consensus is valid.<br /><br />The unpredictable value valid for the hour of the request is then included in the calculation of the descriptor ID and henceforth determines the place on the ring where the descriptor is stored. This makes it impossible for an attacker to precompute identity keys for time periods further ahead than 3 hours in the future.&nbsp; <br /><br />Additionally, directory authorities base the decision on whether a relay is assigned an HSDir flag on the number of past consecutive consensus documents the relay has been listed in and not on the uptime of the relay. This prevents the shadowing attack we have described.<br /><br />To prevent the guard nodes being revealed, one can use an additional layer of guard nodes - guard middle nodes.&nbsp; This countermeasure has already been proposed in [19] but is not implemented in Tor. Note that this measure will not protect against an attacker exploiting degree anomalies of the guard nodes as described in Section B.&nbsp; <br /><br />Unfortunately, we do not see how the risk of guard nodes being able to deanonymize a hidden service having chosen them can be eliminated completely. Recent work by Tariq et al. [9] suggests that the guards compromise rate can be decreased by (1) making the guard rotation interval longer and (2) by taking into account how long nodes have been part of the network when assigning Guard flags to them.&nbsp; Note that this approach if not carefully implemented has a number of downsides like reduced end-user quality of experience and malicious nodes accumulating Tor users.<br /><br />In regard to revealing the introduction circuits, if the attacker will not be able to collect the full list of hidden service descriptors, she will not be able to distinguish between introduction circuit of hidden services with encrypted introduction points and non-encrypted.<br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>Mr. Fluffles Schrodinger</strong> on <strong>May 26, 2013, 03:16 am</strong>
+			</dt>
+			<dd class="postbody">
+				Subbing. Great information. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 26, 2013, 08:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Created 3 months ago:&nbsp; https://trac.torproject.org/projects/tor/ticket/8244<br /><br />The &quot;rpw&quot; that is CC&#039;ed on that bug report is one of the authors of the paper above, so the Tor devs have privately known about this issue for three months prior to the publication of this research. The milestone is Tor 0.2.5. Version 0.2.4 should be moving to stable/final within the next few weeks, since there are only 8 tickets to resolve: https://trac.torproject.org/projects/tor/milestone/Tor%3A%200.2.4.x-final<br /><br />When that happens, 0.2.5 will be available in the experimental repo. That doesn&#039;t mean it will have this feature immediately, but hopefully within a few months.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>RS7FI8ZRkm</strong> on <strong>May 26, 2013, 09:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				thanks for investigating an sharing this astor. pretty interesting read also :). 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 26, 2013, 09:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah, using a random string to generate the descriptor ID should solve the issue of an attacker positioning himself as HSDirs. The random string is effectively a salt. Instead of:<br /><br />descriptor-id = H(permanent-id | H(time-period | replica))<br /><br />They would do:<br /><br />descriptor-id = H(permanent-id | H(time-period | replica) | random string)<br /><br />If the directory authorities generate the consensus random string an hour before the new GMT date, attackers won&#039;t have enough time to brute force a relay fingerprint close to the descriptor ID.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>motek</strong> on <strong>May 29, 2013, 01:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				great thread,&nbsp; astor,&nbsp; a little over my head at times but very/ interesting and informative none the less<br /><br /><br />thanks for taking the time to share this with us<br /><br /><br />cheers m m m motek x
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>May 29, 2013, 02:21 am</strong>
+			</dt>
+			<dd class="postbody">
+				wow this totally applies to us thanks for taking our time
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>sharonneedles</strong> on <strong>June 12, 2013, 08:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				So has the latest TOR update been released to solve these discrepancies and potential threats?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>OzFreelancer</strong> on <strong>June 12, 2013, 08:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				This is some really interesting stuff. It&#039;s always fascinating to see the academic work going into hidden services
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 12, 2013, 09:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=161391.msg1226349#msg1226349">Quote from: sharonneedles on June 12, 2013, 08:08 am</a></div></div><blockquote class="bbc_standard_quote">So has the latest TOR update been released to solve these discrepancies and potential threats?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No. 0.2.4 still has 8 tickets: https://trac.torproject.org/projects/tor/milestone/Tor%3A%200.2.4.x-final<br /><br />It was supposed to be released in March, so it&#039;s months behind schedule now. The major fix for this attack, a random salt for the descriptor ID, is scheduled for 0.2.5, which will probably come out a year from now.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>HeatFireFlame</strong> on <strong>June 12, 2013, 08:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Wow astor some really useful information. +1.<br />I wish i could understand it all properly however i do get the jist of it all and it is very fascinating. thanks for posting it though im sure this knowledge needs to be widely recognized by a lot of people. <br /><br />I wonder how many top grade computer experts and hackers knew about this and were taking advantage of it before it was widely published. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>June 13, 2013, 12:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=161391.msg1229027#msg1229027">Quote from: HeatFireFlame on June 12, 2013, 08:39 pm</a></div></div><blockquote class="bbc_standard_quote">Wow astor some really useful information. +1.<br />I wish i could understand it all properly however i do get the jist of it all and it is very fascinating. thanks for posting it though im sure this knowledge needs to be widely recognized by a lot of people. <br /><br />I wonder how many top grade computer experts and hackers knew about this and were taking advantage of it before it was widely published.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Probably a lot of them. The Tor developers certainly knew about it a long time ago. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>June 13, 2013, 12:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				(sub-sub)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>Tessellated</strong> on <strong>June 13, 2013, 12:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				I am really glad to see someone doing some new research on hidden services. They certainly need plenty of scrutiny.<br /><br />I am glad the attack you describe does not scale well if you want to block many different hidden service uris, the backup addresses that SR published should make it very hard to block all of them.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 13, 2013, 01:25 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yep, the longterm solution is to make descriptor IDs unpredictable by having the directory authorities publish a consensus random string an hour or two before each GMT date. The short term solution would be to run dozens of onion addresses.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Trawling, Mapping, and Attacking Tor Hidden Services</strong><br />
+				Post by: <strong>abitpeckish</strong> on <strong>June 13, 2013, 02:05 pm</strong>
+			</dt>
+			<dd class="postbody">
+				subbing. The better parts of this community continue to amaze me. Thanks, all.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

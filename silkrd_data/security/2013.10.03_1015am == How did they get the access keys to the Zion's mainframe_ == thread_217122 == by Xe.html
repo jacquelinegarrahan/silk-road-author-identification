@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=217122.0" />
+		<title>Print Page - How did they get the access keys to the Zion's mainframe?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Xe on October 03, 2013, 10:15 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>Xe</strong> on <strong>October 03, 2013, 10:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hasn&#039;t strong full disk crypto been used at all?<br />Not mentioning plausible deniability, vms and such.<br />All these security layers which are supposed to protect us.<br /><br />It seems the tor netw itself hasn&#039;t been compromised..<br /><br />At the same time i do not consider mass media<br />as a reliable source of information. That criminal state<br />won&#039;t reveal any meaningful details to the pub<br />during the investigation anyway, ever..<br /><br />This is still quite a mess beyond comprehension..
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>This_is_not_SOCA</strong> on <strong>October 03, 2013, 10:32 am</strong>
+			</dt>
+			<dd class="postbody">
+				Supposedly by imaging the SR server disk. It does raise some issues though:<br /><br />1) We assume the disk was encrypted which would suggest that the image was taken off the unencrypted disk (easy enough if it was a VPS,&nbsp; more complicated if it was a physical server - it would require extracting the disk crypto key from memory) OR there was no disk encryption (or the disk key was stored in plain text in the boot partition) which would be border-line madness.<br />2) There ARE multiple SR servers, my assumption was that no one server held all of the information and at the very least the database was separated from the web server front end. Either each SR server has all components installed (the HS key, the web server, SR app and the database) or they have compromised multiple servers.<br /><br />As other have pointed out, hidden service server location can be identified through traffic correlation - especially a site as busy as SR and indeed this forum . <br /><br />A physical server with an out of band dedicated network KVM (for entering the disk crypto password at boot time) and good physical protection such as chassis intrusion would be the bare minimum for such a gig although bypassing those controls is certainly within the reach of a half competent attacker.<br /><br />I would expect that it is difficult to hide the HS entry points for long but it would be possible to keep them moving around and keep them logically separate from the SR application and database.<br /><br />Lessons for the future.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>Xe</strong> on <strong>October 03, 2013, 11:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=217122.msg1585926#msg1585926">Quote from: This_is_not_SOCA on October 03, 2013, 10:32 am</a></div></div><blockquote class="bbc_standard_quote">Supposedly by imaging the SR server disk. </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>By imaging the storages? Certainly that&#039;s not impossible<br />but still very hard to believe. How can we be sure of that?<br />Are there any case studies for the possible attack vector?<br /><br />Does this imply the tor has been compromised in the first place?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>This_is_not_SOCA</strong> on <strong>October 03, 2013, 11:22 am</strong>
+			</dt>
+			<dd class="postbody">
+				If it was a VPS then it is easy to dump memory (to get the disk keys) and then take a copy of the encrypted disk which can be unencrypted offline using the captured keys from memory. VMWare, ESX, HyperV, Citrix XEN - all make this relatively straightforwards. Such is the downside of a VPS.<br /><br />If it was a physical box then potentially a DMA attack (perhaps firewire although I&#039;d expect that a server would not have a firewire port and if it did I would expect it to be disabled) or maybe something more extreme and much more complex like cold boot RAM acquisition as mentioned recently on this forum by kmf - basically freezing the RAM modules so they retain memory after power down for a short period. That is not trivial though - you&#039;ve really got to want it and it will result in the server going offline for a while - a red flag or it should be anyway.<br /><br />i don&#039;t see that TOR comes into it too much except for the known ability for an adversary to use traffic analysis to track down the location of a hidden server. I don&#039;t see that this means TOR is any more broken (or not ) than it was 3 months ago.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>oldcactushand</strong> on <strong>October 03, 2013, 11:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				Much of this security stuff goes way over my head, but the fact they got an image of the server... Is this a serious concern for, say, other black markets on TOR? Or, is it a result of security fuckups akin to the type detailed in the criminal complaint?<br /><br />Everyone seems to be suggesting that if DPR had been smart (e.g. not posting his personal email address while trying to hire SR staff) this could never have happened, but if they can get the server then isn&#039;t that a huge concern all of its own, even if he had not done such stupid things?<br /><br />Apologies for my ignorance, and I don&#039;t need a detailed reply, I&#039;d just like to hear what someone who understands this shit has to say. A lot of people are spewing a bunch of crap because they either haven&#039;t read the criminal complaint or haven&#039;t read it properly, and it&#039;s hard to know what the case is without security knowledge.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>October 03, 2013, 11:52 am</strong>
+			</dt>
+			<dd class="postbody">
+				The criminal indictment says they obtained an image of the SR server.&nbsp; I don&#039;t recall the date off the top of my head, but I believe it was in July, which would be around the time of the FH bust.&nbsp; For all I know, maybe one of SR&#039;s servers was at Freedom Hosting, or that seizure was somehow related.<br /><br />If they obtained a full image of the server:<br />1. It was very likely on a Xen/KVM/OpenVZ server and they dumped a copy when it was live.<br />2. Or, if it was on a physical server, it wasn&#039;t using disk encryption,<br />3. Or, it was using disk encryption, and they somehow captured the keys to unlock it.<br />4. Or, it was using amazing disk encryption that they obtained the keys from memory while it was running or shortly after bringing it down.<br /><br />Encrypting storage on remote servers is nearly impossible to do well.&nbsp; This is something everybody needs to remember.&nbsp; It&#039;s easy on a local machine, because you have a keyboard, but how do you securely type the passphrase in a remote server?&nbsp; You don&#039;t.&nbsp; You can kludge together some SSH method where you bootstrap the box then unlock the volumes, but if somebody trojans the SSH daemon or environment you SSH to to unlock them, they get the passphrase.<br /><br />I&#039;d bet strongly it was on a KVM/Xen-based host, and they took and image while it was running.&nbsp; &nbsp;I also find the timing of the imaging of the server in light of the FH arrests interesting.&nbsp; Maybe just a coincidence.. but they&#039;ve had the SR image since almost exactly the same time.<br /><br />The indictment mentions this forum, and even quotes from some of DPR&#039;s posts here.<br /><br />If some amazing Tor vulnerability is to blame, it&#039;s to blame for them finding the SR server and FH back in July.. not now.&nbsp; &nbsp;They have months of SR private messages (I don&#039;t remember the number but it&#039;s in the millions).&nbsp; &nbsp;That should keep them busy for a long, long time.<br /><br />Plus, if they have the SR wallets, and have all the code that was used to mix the bitcoins, if they&#039;re smart, they&#039;ll be focused on trying to reverse the money back in/out of SR as well.&nbsp; I don&#039;t use bitcoin, so I really don&#039;t have any feel for how easy/hard that would be.<br /><br />These forums are still up because either they&#039;re letting them stay up to watch, or because they&#039;re on servers that were somehow unrelated to everything else in the SR bust (and remember, they identified a number of other Internet servers holding SR bitcoin wallets) that they didn&#039;t find.&nbsp; &nbsp;So either this forum will come down when the FBI shuts it down, or when the bill for wherever it&#039;s hosted comes due and nobody pays it.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>Xe</strong> on <strong>October 03, 2013, 12:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Having a remote hosting for such server is unimaginable to me.<br />Still the major question is how did they get&nbsp; the ip address?<br />The tor isn&#039;t secure anymore or was it social engineering?<br />edit: yeah the fh downfall could be related, who knows.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>October 03, 2013, 01:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So one attack vector against encrypted servers is to read the encryption keys from memory.<br /><br />TRESOR&nbsp; (Linux kernel patch Made in Germany) could be a solution. It stores the encryption keys in CPU registers, which are probably a lot harder to read out physically.<br /><br />https://en.wikipedia.org/wiki/TRESOR<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>October 03, 2013, 01:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=217122.msg1586270#msg1586270">Quote from: Xe on October 03, 2013, 12:43 pm</a></div></div><blockquote class="bbc_standard_quote">Still the major question is how did they get&nbsp; the ip address?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hidden services are not as secure as Tor users. That&nbsp; may change in the future, but for now one should assume that the server IP can be found sooner or later, and have a backup plan. Silk Road had a backup plan, but that could only be executed if they didn&#039;t find Dread Pirate Roberts...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>Xe</strong> on <strong>October 03, 2013, 01:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=217122.msg1586310#msg1586310">Quote from: Bazille on October 03, 2013, 01:02 pm</a></div></div><blockquote class="bbc_standard_quote">TRESOR&nbsp; (Linux kernel patch Made in Germany) could be a solution. </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>A cold boot attack essentially. Thanx for the link, interesting..<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=217122.msg1586323#msg1586323">Quote from: Bazille on October 03, 2013, 01:07 pm</a></div></div><blockquote class="bbc_standard_quote">Hidden services are not as secure as Tor users. That&nbsp; may change in the future,<br />but for now one should assume that the server IP can be found sooner or later </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I&#039;d like to hear what folks from the tor dev would have to say about that.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>October 04, 2013, 01:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				TRESOR is a nifty way to defeat cold boot attacks, but it doesn&#039;t really address the problem with encrypting remote servers.<br /><br />Any anonymous website that doesn&#039;t have the administrator *physically standing* in front of the physical server simply *cannot* do full disk encryption properly.&nbsp; End of story.&nbsp; &nbsp;And a thousand years from now, that will still be true.&nbsp; &nbsp;<br /><br />When the box goes down (for a reboot, etc) it can&#039;t come back up without the keys being entered.&nbsp; And if they&#039;re not physically entered to the server via a keyboard, they have to come over the network.&nbsp; <br /><br />About ten or fifteen years ago, a Microsoft white paper of all things had the clever line, &quot;If you don&#039;t have physical control over your computer, it&#039;s not your computer anymore.&quot;<br /><br />That&#039;s probably a good lesson for everybody to take away.&nbsp; Whenever you see a site bragging about how they encrypt everything so you don&#039;t have to worry about it, they&#039;re full of shit.&nbsp; 100% of the time.&nbsp; <br /><br />That&#039;s why PGP and OTR actually work.&nbsp; Because *you&#039;re* doing the encryption and not having to trust anyone else except whoever you&#039;re talking to.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>This_is_not_SOCA</strong> on <strong>October 04, 2013, 02:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=217122.msg1588134#msg1588134">Quote from: ECC_ROT13 on October 04, 2013, 01:17 am</a></div></div><blockquote class="bbc_standard_quote">Any anonymous website that doesn&#039;t have the administrator *physically standing* in front of the physical server simply *cannot* do full disk encryption properly.&nbsp; End of story.&nbsp; &nbsp;And a thousand years from now, that will still be true.&nbsp; &nbsp;<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That is absolutely spot on - it is a fact of life rather than a problem to be solved.<br /><br />Of course though there are things we can do to help.<br /><br />I was thinking of a 4U armoured rack case with two independent servers inside (i.e. two motherboards with their own CPUs, RAM, storage and IO.) <br /><br />One server is FreeBSD or something, minimized and hardened - read only file system is mandatory. it has a simple remit; power up establish TOR network connection and sit their offering SSH over a hidden service or similar. It will basically act as a KVM to the second server. <br /><br />The second server is also hardened BSD and does not expose any external ports other than power and ethernet. Disk storage would be full disk crypto SSD (hardware) which would require a password to be typed in at power up. On top of that we would have LUKS or whatever for software disk encryption (because samsung and intel etc backdoor their SSD crypto) - that requires a password at boot time too. So basically it won&#039;t do shit until somebody has typed in two passwords at which point it will boot up, establish its own tor connection and advertise a hidden service - it may or may not host the content too - it may just redirect to another server.<br /><br />If the case is secured as best as possible with good chassis intrusion detection, no entry points, liberally doused internally with epoxy as much as possible whilst not compromising heat dissipation then getting to the motherboard and in particlar the memory would be difficult. Intrusion detection would immediately power down the second server. If you so much a farted in the datacentre it would cause the second server to power down (vibration sensors... :) Utilizing some of the same security controls you would see in a highgrade hardware crypto unit. Maybe even a wee bit of thermite packed around the second server inside the case to ensure destruction of memory chips and possibly the SSD - just don&#039;t tell the hosting company...<br /><br />You would have to connect over tor to the 1st server, authenticate and then you would be able to power up the second server and enter the two separate passwords required for it to boot. <br /><br />Obviously it&#039;s not a silver bullet but could be pretty damn resilient as a hardware platform and really makes a local attacker work very hard. If it could be powered down then it could be subverted with a couple of hours of work but - good opsec would dictate that if the machine went down for more than a few minutes unexpectedly you burn it - possibly literally.<br /><br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>Juno</strong> on <strong>October 04, 2013, 02:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				One of the better articles i&#039;ve seen...<br /><br />clearnet link:<br /><br />http://arstechnica.com/tech-policy/2013/10/how-the-feds-took-down-the-dread-pirate-roberts/<br /><br />Somehow in july they found out where the main server was...in some foreign country, and got them to image the server for them.&nbsp; &nbsp;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>October 04, 2013, 03:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				Great link, Juno.&nbsp; Particularly the part about him booting his laptop, unlocking his full disk encryption (I&#039;m guessing), then getting TACKLED BY THE FBI.&nbsp; &nbsp; Everybody falls in love with mathematics, but you should never underestimate the power of a half dozen angry motherfuckers within ten feet of you.<br /><br />As to physically hardening servers, sure, it&#039;s doable.&nbsp; &nbsp;But you gonna mail that bad boy to Armpitistan or wherever you&#039;re &quot;anonymously&quot; hosting it?&nbsp; Or take it there yourself? Oh, look! Another trail to the server owner.. how&#039;d that server get here? <br /><br />Hosting hidden services that first-world governments hate is dangerous as fuck. I personally can&#039;t imagine that anybody that does it actually understands all the exposure they really have from a technical perspective.&nbsp; &nbsp;I can see why people stick them on VPS boxes in faraway places.&nbsp; Easier to tell yourself that its safer because it&#039;s across the world, and out of the reach.<br /><br />SR apparently had servers they found in Iceland, Romania, Iceland, Latvia, and New York, based on the IPs in the indictments.&nbsp; Guessing NY was where the wallets were, but who knows?&nbsp; Or cares, honestly.<br /><br />And remember, before everybody spends years dissecting indictments to figure out what &quot;they can do&quot; and what &quot;they can&#039;t do&quot;, an indictment is just a listing of a sufficient number of facts to make the case that a crime has been committed.&nbsp; &nbsp;It&#039;s not a timeline, it&#039;s not the narrative of how the case unfolded, and it&#039;s being written specifically to leave out any key facts that may tip off other parties.&nbsp; &nbsp;They could have used help from the NSA, the ghost of Kermit Roosevelt, thrown darts at a map, or physically inspected every single server on Earth using UFO&#039;s from Roswell.&nbsp; And they could still explain exactly as they did in the indictments.&nbsp; They&#039;re just putting enough facts on the table to allege a crime has been committed.<br /><br />I personally don&#039;t believe it&#039;s a coincidence that the end of July was a bad week for hidden services that piss the US Government off (FH CP, Tormail, SR).&nbsp; Either somebody found a way to deanonymize the top offenders and threw those real IP&#039;s to the FBI, or they found one of them, and the trail led to the others.&nbsp; <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>Juno</strong> on <strong>October 04, 2013, 03:25 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve also heard rumor that somewhere along with the tormail fiasco, they were able to turn a high level employee for SR...then get access to the servers.&nbsp; &nbsp;makes sense.&nbsp; &nbsp;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>October 04, 2013, 04:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				Oh, and not to state the blindingly obvious or anything, here&#039;s a fun challenge:<br /><br />When the FBI seized his unlocked, running, open laptop *two days ago*, somebody make me up a story where they don&#039;t end up with the SSH keys and IPs used to remotely administer SRF and anything else they missed. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>bitfool</strong> on <strong>October 04, 2013, 05:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">I personally don&#039;t believe it&#039;s a coincidence that the end of July was a bad week for hidden services that piss the US Government off (FH CP, Tormail, SR).&nbsp; Either somebody found a way to deanonymize the top offenders and threw those real IP&#039;s to the FBI, or they found one of them, and the trail led to the others.&nbsp; </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><br />Even the tor programmers who are just a bunch of bureaucrats working for the US government admitted that their system is pretty crappy against anyone who &quot;can observe traffic going into Tor and out of it&quot;.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>October 04, 2013, 10:16 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=217122.msg1588134#msg1588134">Quote from: ECC_ROT13 on October 04, 2013, 01:17 am</a></div></div><blockquote class="bbc_standard_quote">When the box goes down (for a reboot, etc) it can&#039;t come back up without the keys being entered.&nbsp; And if they&#039;re not physically entered to the server via a keyboard, they have to come over the network.&nbsp; <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Right. I didn&#039;t think about that. What if the site gets switched to another server once the server went down for a reboot? Assuming there is a frequent incremental backup on another server.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>Xe</strong> on <strong>October 04, 2013, 11:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				Of course the hardware must be psychically present.<br />It&#039;s insane to have such database some place else.<br /><br />blog.torproject.org/blog/tor-and-silk-road-takedown<br /><br />Basically they do not confirm any network vulnerability..
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>ECC_ROT13</strong> on <strong>October 04, 2013, 11:48 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=217122.msg1589051#msg1589051">Quote from: Bazille on October 04, 2013, 10:16 am</a></div></div><blockquote class="bbc_standard_quote">Right. I didn&#039;t think about that. What if the site gets switched to another server once the server went down for a reboot? Assuming there is a frequent incremental backup on another server.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Doesn&#039;t matter from an encryption perspective.&nbsp; &nbsp;If you&#039;re using FDE, you have to encrypt it with keys.&nbsp; &nbsp;Most likely stored on the boot volume, and protected by a passphrase.&nbsp; And you have to enter the passphrase to unlock the volume.<br /><br />That&#039;s the underside of any server-side encryption, and it&#039;s as true at Dropbox or Amazon as it is at a hidden service.&nbsp; You can encrypt all kinds of shit on the server side, but if the application (the HTTP server and associated PHP/Perl/Python/whatever code) is going to see the data as non-encrypted, it has to be able to decrypt the data itself.&nbsp; Otherwise, it would just be seeing encrypted gibberish.&nbsp; Which means the application has to have access to the keys or the decrypted data.&nbsp; &nbsp;If you compromise the server, you compromise the keys to decrypt the data.&nbsp; Since the app can see the unencrypted data, so can the attacker.&nbsp; <br /><br />You can build all sorts of elaborate mechanisms to *obscure* that key management, but the keys to unlock encrypted data have to be available to the processes that are using that data.&nbsp; There&#039;s no way around that.&nbsp; &nbsp;Things like smartcards (OpenPGP cards, for instance) can make it harder for the attacker to recover the keys, but they have to be accessible to the server at some level.<br /><br />That&#039;s why the only data you can trust on any server is data that *you* have encrypted.&nbsp; Then the server is blind to that data, because it&#039;s just raw data from its perspective.&nbsp; Of course, at that point, the server really can&#039;t do a damned thing with it except either give the encrypted data back to you, or to someone else.&nbsp; A great example is a PGP encrypted email.&nbsp; The server can&#039;t see the PGP-encrypted payload, so all it can do is deliver the payload while blind to its contents.&nbsp; It can obviously see who to deliver it to (from/to/subject/etc) and metadata about it, but not the content itself.&nbsp; So you can&#039;t have GMail-style indexed mail searches on a mail server that&#039;s full of PGP messages, because the server can&#039;t see the message bodies.&nbsp; It just sees headers and gibberish.<br /><br />Here&#039;s a rule of thumb:&nbsp; If an server is *doing* something with your data, at a data-level (searching through it, or otherwise performing an operation on the data itself), it can&#039;t be encrypting that data effectively.&nbsp; You can safely use remote servers for storage/transfer of data that you&#039;re encrypting on the client side, but that&#039;s it.&nbsp; And you always have to keep an eye on the metadata that surrounds your encrypted payload.&nbsp; <br /><br />The only technologies that isn&#039;t true with are homomorphic encryption and PIR and the like (which is why kmf was so interested in them).&nbsp; I don&#039;t believe there is a single usable implementation of either anywhere in the world that I&#039;ve ever seen.&nbsp; So those are theoretical exceptions at this point.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>kittenfluff</strong> on <strong>October 04, 2013, 12:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=217122.msg1586150#msg1586150">Quote from: ECC_ROT13 on October 03, 2013, 11:52 am</a></div></div><blockquote class="bbc_standard_quote">The criminal indictment says they obtained an image of the SR server.&nbsp; I don&#039;t recall the date off the top of my head, but I believe it was in July, which would be around the time of the FH bust.&nbsp; For all I know, maybe one of SR&#039;s servers was at Freedom Hosting, or that seizure was somehow related.<br /><br />....<br /><br />If some amazing Tor vulnerability is to blame, it&#039;s to blame for them finding the SR server and FH back in July.. not now.&nbsp; &nbsp;They have months of SR private messages (I don&#039;t remember the number but it&#039;s in the millions).&nbsp; &nbsp;That should keep them busy for a long, long time.<br /><br />Plus, if they have the SR wallets, and have all the code that was used to mix the bitcoins, if they&#039;re smart, they&#039;ll be focused on trying to reverse the money back in/out of SR as well.&nbsp; I don&#039;t use bitcoin, so I really don&#039;t have any feel for how easy/hard that would be.<br /><br />These forums are still up because either they&#039;re letting them stay up to watch, or because they&#039;re on servers that were somehow unrelated to everything else in the SR bust (and remember, they identified a number of other Internet servers holding SR bitcoin wallets) that they didn&#039;t find.&nbsp; &nbsp;So either this forum will come down when the FBI shuts it down, or when the bill for wherever it&#039;s hosted comes due and nobody pays it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />+1, the FH bust link had crossed my mind too. Seems too much of a coincidence that the largest darkweb server gets busted, tormail spreads a hack inserted by the FBI deanonymizing tor users, and the SR server is imaged, all around the same time. We know two were linked, I think it at least plausible that the third is too. My only issue with this? Why didn&#039;t SR go dead with the rest of FH and tormail? My only thoughts are either a) FH and SR were physically local to each other, but remained separate servers so that SR could be left running in the absence of hard evidence (at the time) it was involved in anything illegal b) it was the same server but they deliberately left SR running to not scare DPR while they analyzed the data or c) the SR server at FH was only one of several mirrors or some such, they don&#039;t have all of them, and right now they still don&#039;t and all they&#039;ve done is to subvert anyone who tried to browse to the SR URL to their takedown notice.<br /><br />Dunno about the bitcoin, but I suspect the forums are hosted on a different server. Plus, I dunno if they&#039;d really have water-tight authority to shut them down (even if they wanted to) since nothing illegal actually happens there. I mean, forums like the shroomery or DMTnexus or Erowid are left alone...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How did they get the access keys to the Zion's mainframe?</strong><br />
+				Post by: <strong>Xe</strong> on <strong>October 04, 2013, 12:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=217122.msg1589269#msg1589269">Quote from: StExo on October 04, 2013, 12:18 pm</a></div></div><blockquote class="bbc_standard_quote">they requested the foreign country to find the IP address and pretty much just do a memory dump which means they will then capture the encryption keys used on the disk and therefore make the entire server encryption useless. </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>As if running such project doesn&#039;t imply having a friendly hosting provider at the very least.<br />Or doing system administration itself locally without any third parties involved. What the hell..<br /><br />Thanks for a piece of information.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

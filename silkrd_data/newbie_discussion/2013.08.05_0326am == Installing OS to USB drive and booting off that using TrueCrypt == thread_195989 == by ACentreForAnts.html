@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=195989.0" />
+		<title>Print Page - Installing OS to USB drive and booting off that using TrueCrypt</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: ACentreForAnts on August 05, 2013, 03:26 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Installing OS to USB drive and booting off that using TrueCrypt</strong><br />
+				Post by: <strong>ACentreForAnts</strong> on <strong>August 05, 2013, 03:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hello, I&#039;m trying to create a secure OS that I can use, whether it be via USB (Tails, Liberte Linux, etc.) or a new partition on my hard disk. Trouble is I know fuck all about what I&#039;m doing.<br /><br />I want it to be a hidden TrueCrypt volume. My computer is a Mac so I&#039;d presumably be using Bootcamp? The thing is, I know from messing around with TrueCypt in the past that hidden volumes look dodgy—let&#039;s say your hidden volume is 5 GB, but your shell is only 1 GB. Well, anybody with basic maths skills is going to see that 6 GB of space is missing from your hard disk/USB, and if you&#039;re forced to give the password to the shell, they&#039;ll see that 5 GB is still unaccounted for. How do I create a hidden TrueCrypt volume that doesn&#039;t conspicuously take away from available space?<br /><br />Then there&#039;s the question of installing and booting off a USB—I&#039;ve restarted whilst holding down the option key and the Tails iso doesn&#039;t show up as a bootable volume. I can&#039;t even get OpenBSD to download (I&#039;ve tried many mirrors) so I&#039;ve given up on that. I&#039;ve considered other versions of Linux but I lack even a rudimentary understanding of this.<br /><br />Help that I can understand, please? I still don&#039;t understand how PGP keys work... at all... so as much as I hate to say it, you&#039;ll have to dumb it down a bit. Sorry, and thank you.<br /><br />PS On a separate note, I&#039;ve been told that my Mac has been keeping track of everything I do, and that anybody who seizes the hard disk could hack into it and see the trail of my activity (including visits to TOR pages and such). How do I sanitise this and stop it from happening in the future?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Installing OS to USB drive and booting off that using TrueCrypt</strong><br />
+				Post by: <strong>ACentreForAnts</strong> on <strong>August 05, 2013, 07:21 am</strong>
+			</dt>
+			<dd class="postbody">
+				Bump? (It was buried on the 3rd page and I figured nobody would see it ever again.)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Installing OS to USB drive and booting off that using TrueCrypt</strong><br />
+				Post by: <strong>ACentreForAnts</strong> on <strong>August 06, 2013, 07:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Seriously, this is bullshit. Do you guys get off on the idea of people ending up in prison or what? I can&#039;t fucking handle any of this.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Installing OS to USB drive and booting off that using TrueCrypt</strong><br />
+				Post by: <strong>ACentreForAnts</strong> on <strong>August 06, 2013, 09:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Installing OS to USB drive and booting off that using TrueCrypt</strong><br />
+				Post by: <strong>RunningRiot</strong> on <strong>August 06, 2013, 10:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You should be able to use TrueCrypt to make a second hidden volume inside the hidden volume. So, you make a dummy partition with something legal that you&#039;d have reason to hide, maybe porn or something, and then have a separate one for anything related to here. Then, if you happen to get caught and are forced to reveal your password by court order, you can simply give the password to the dummy partition and they&#039;ll assume the embarrassing porn or whatever was the reason you had a truecrypt drive in the first place. There should be detailed guides on how you can set this up.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Installing OS to USB drive and booting off that using TrueCrypt</strong><br />
+				Post by: <strong>tanamon</strong> on <strong>August 06, 2013, 11:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You don&#039;t need a Truecrypt volume if you use Tails and enable the persistent volume. That will be your encrypted volume.<br /><br />An encrypted volume or file can leak data onto the rest of the hard drive, so it isn&#039;t safe anyway. You should either use full disk encryption, or the persistent volume in Tails, where there is no unencrypted media to leak info onto.<br /><br />As for getting Tails to boot on a Mac, I have heard that&#039;s a pain. Read through the Tails thread that&#039;s linked on the main site. Lots of people have discussed that problem in the thread.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

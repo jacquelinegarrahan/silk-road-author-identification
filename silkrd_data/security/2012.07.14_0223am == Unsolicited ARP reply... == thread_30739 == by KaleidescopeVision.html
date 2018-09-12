@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=30739.0" />
+		<title>Print Page - &quot;Unsolicited ARP reply...&quot; </title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: KaleidescopeVision on July 14, 2012, 02:23 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>&quot;Unsolicited ARP reply...&quot; </strong><br />
+				Post by: <strong>KaleidescopeVision</strong> on <strong>July 14, 2012, 02:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				If someone has a message that says &quot;Unsolicited ARP reply detected... This may be a threat to your computer&quot; from an antivirus periodically what does this mean?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: &quot;Unsolicited ARP reply...&quot; </strong><br />
+				Post by: <strong>xobil3</strong> on <strong>July 14, 2012, 04:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				ARP stands for Address Relay Protocol. It associates your IP address to your mac address. Also associates MAC and IP addresses of any hosts on the network. <br /><br />It basically is an internet protocol that lets computers associate IP address with MAC adresses in order to communicate with eachother over a LAN. Common man-in-the-middle(MITM) attacks exploit this protocol. The attacker may send spoofed ARP packets to your computer to trick it into believing that the attackers computer is the router(or gateway). This results in all your traffic being directed towards the attacker who then re-routes it to the router. The end product is the attacker being able to steal passwords, etc. <br /><br />It&#039;s been a while since I&#039;ve done anything MITM related, so alot of my points are probably slightly off. Plus I&#039;m quite drunk right now. But in my opinion I would just make sure there are no unwanted guests on your network that could be trying to spoof your router. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: &quot;Unsolicited ARP reply...&quot; </strong><br />
+				Post by: <strong>KaleidescopeVision</strong> on <strong>July 14, 2012, 04:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you drunk knight! I am so glad my passwords are to accounts that are so freaking useless. Anyways, I am sure you had better things to worry about than my net security, so I really appreciate it. 8)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: &quot;Unsolicited ARP reply...&quot; </strong><br />
+				Post by: <strong>BitShuffle</strong> on <strong>July 14, 2012, 05:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=30739.msg344348#msg344348">Quote from: xobil3 on July 14, 2012, 04:31 am</a></div></div><blockquote class="bbc_standard_quote">ARP stands for Address Relay Protocol. It associates your IP address to your mac address. Also associates MAC and IP addresses of any hosts on the network. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Actually, ARP stands for Address Resolution Protocol.<br /><br />But you are correct, ARP is used to map an IP address to a MAC address on a LAN, and it can be spoofed to do a MITM attack. However, to do so, the attacker must have a node on your LAN (which can include a WiFi access point). An ARP packet never crosses a router, so this sort of attack cannot be performed from the Internet cloud to your local network.<br /><br />- Bit<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

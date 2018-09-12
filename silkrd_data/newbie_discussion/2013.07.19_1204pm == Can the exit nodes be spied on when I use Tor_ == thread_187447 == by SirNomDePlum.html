@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=187447.0" />
+		<title>Print Page - Can the exit nodes be spied on when I use Tor?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: SirNomDePlum on July 19, 2013, 12:04 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Can the exit nodes be spied on when I use Tor?</strong><br />
+				Post by: <strong>SirNomDePlum</strong> on <strong>July 19, 2013, 12:04 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Questions:<br /><br />Can the exit nodes be spied on when I use Tor? Specifically, can my plain text passwords be figured out if someone is spying on the exit node I am going through? If not, what do I have to be worried about?<br /><br />From https://trac.torproject.org/projects/tor/wiki/doc/TorFAQ#head-75d5f6d474527a80fc370d208252b4dfd2ea2efd&nbsp; *Clearnet link*<br /><br />From the site:<br /><br />Anonymity and Security<br /><br />What protections does Tor provide?<br /><br />Internet communication is based on a store-and-forward model that can be understood in analogy to postal mail: Data is transmitted in blocks called IP datagrams or packets. Every packet includes a source IP address (of the sender) and a destination IP address (of the receiver), just as ordinary letters contain postal addresses of sender and receiver. The way from sender to receiver involves multiple hops of routers, where each router inspects the destination IP address and forwards the packet closer to its destination. Thus, every router between sender and receiver learns that the sender is communicating with the receiver. In particular, your local ISP is in the position to build a complete profile of your Internet usage. In addition, every server in the Internet that can see any of the packets can profile your behaviour.<br /><br />The aim of Tor is to improve your privacy by sending your traffic through a series of proxies. Your communication is encrypted in multiple layers and routed via multiple hops through the Tor network to the final receiver. More details on this process can be found in the&nbsp; Tor overview. Note that all your local ISP can observe now is that you are communicating with Tor nodes. Similarly, servers in the Internet just see that they are being contacted by Tor nodes.<br /><br />Generally speaking, Tor aims to solve three privacy problems:<br /><br />First, Tor prevents websites and other services from learning your location, which they can use to build databases about your habits and interests. With Tor, your Internet connections don&#039;t give you away by default -- now you can have the ability to choose, for each connection, how much information to reveal.<br /><br />Second, Tor prevents people watching your traffic locally (such as your ISP) from learning what information you&#039;re fetching and where you&#039;re fetching it from. It also stops them from deciding what you&#039;re allowed to learn and publish -- if you can get to any part of the Tor network, you can reach any site on the Internet.<br /><br />Third, Tor routes your connection through more than one Tor relay so no single relay can learn what you&#039;re up to. Because these relays are run by different individuals or organizations, distributing trust provides more security than the old one hop proxy approach.<br /><br />Note, however, that there are situations where Tor fails to solve these privacy problems entirely: see the entry below on remaining attacks).<br />Can exit nodes eavesdrop on communications? Isn&#039;t that bad?<br /><br />Yes, the guy running the exit node can read the bytes that come in and out there. Tor anonymizes the origin of your traffic, and it makes sure to encrypt everything inside the Tor network, but it does not magically encrypt all traffic throughout the Internet.<br /><br />This is why you should always use end-to-end encryption such as SSL for sensitive Internet connections. (The corollary to this answer is that if you are worried about somebody intercepting your traffic and you&#039;re *not* using end-to-end encryption at the application layer, then something has already gone wrong and you shouldn&#039;t be thinking that Tor is the problem.)<br /><br />Tor does provide a partial solution in a very specific situation, though. When you make a connection to a destination that also runs a Tor relay, Tor will automatically extend your circuit so you exit from that circuit. So for example if Indymedia ran a Tor relay on the same IP address as their website, people using Tor to get to the Indymedia website would automatically exit from their Tor relay, thus getting *better* encryption and authentication properties than just browsing there the normal way.<br /><br />We&#039;d like to make it still work even if the service is nearby the Tor relay but not on the same IP address. But there are a variety of technical problems we need to overcome first (the main one being &quot;how does the Tor client learn which relays are associated with which websites in a decentralized yet non-gamable way?&quot;).<br /><br />What is Exit Enclaving?<br /><br />When a machine that runs a Tor relay also runs a public service, such as a webserver, you can configure Tor to offer Exit Enclaving to that service. Running an Exit Enclave for all of your services you wish to be accessible via Tor provides your users the assurance that they will exit through your server, rather than exiting from a randomly selected exit node that could be watched. Normally, a tor circuit would end at an exit node and then that node would make a connection to your service. Anyone watching that exit node could see the connection to your service, and be able to snoop on the contents if it were an unencrypted connection. If you run an Exit Enclave for your service, then the exit from the Tor network happens on the machine that runs your service, rather than on an untrusted random node. This works when Tor clients wishing to connect to this public service extend their their circuit to exit from the Tor relay running on that same host. For example, if the server at 1.2.3.4 runs a web server on port 80 and also acts as a Tor relay configured for Exit Enclaving, then Tor clients wishing to connect to the webserver will extend their circuit a fourth hop to exit to port 80 on the Tor relay running on 1.2.3.4.<br /><br />Exit Enclaving is disabled by default to prevent attackers from exploiting trust relationships with locally bound services. For example, often 127.0.0.1 will run services that are not designed to be shared with the entire world. Sometimes these services will also be bound to the public IP address, but will only allow connections if the source address is something trusted, such as 127.0.0.1.<br /><br />As a result of possible trust issues, relay operators must configure their exit policy to allow connections to themselves, but they should do so only when they are certain that this is a feature that they would like. Once certain, turning off the ExitPolicyRejectPrivate option will enable Exit Enclaving. An example configuration would be as follows:<br /><br />ExitPolicy accept 1.2.3.4:80<br />ExitPolicy reject 127.0.0.1/8<br />ExitPolicyRejectPrivate 0<br /><br />This option should be used with care as it may expose internal network blocks that are not meant to be accessible from the outside world or the Tor network. Please tailor your ExitPolicy to reflect all netblocks that you want to prohibit access.<br /><br />Although Exit Enclaving provides benefits, there is a situation where it could allow a rogue exit node to control where a client may exit. To protect against this, your services should provide proper SSL authentication to the clients, and then things will work as expected. How this works is that a Tor client picks an arbitrary circuit to resolve hosts (e.g. example.com). A rogue exit node could spoof DNS responses for example.com to be the IP address of the rogue node, rather than the correct node where the service actually runs. The Tor client would then attempt to use that rogue node as an Exit Enclave. This is only possible for the first access attempt for example.com; after the first attempt a circuit is established with the Exit Enclave IP address directly.<br /><br />While useful, this behavior may go away in the future because it is imperfect. A great idea but not such a great implementation.<br /><br />So I&#039;m totally anonymous if I use Tor?<br /><br />No.<br /><br />First, Tor protects the network communications. It separates where you are from where you are going on the Internet. What content and data you transmit over Tor is controlled by you. If you login to Google or Facebook via Tor, the local ISP or network provider doesn&#039;t know you are visiting Google or Facebook. Google and Facebook don&#039;t know where you are in the world. However, since you have logged into their sites, they know who you are. If you don&#039;t want to share information, you are in control.<br /><br />Second, active content, such as Java, Javascript, Adobe Flash, Adobe Shockwave, QuickTime, RealAudio, ActiveX controls, and VBScript, are binary applications. These binary applications run as your user account with your permissions in your operating system. This means these applications can access anything that your user account can access. Some of these technologies, such as Java and Adobe Flash for instance, run in what is known as a virtual machine. This virtual machine may have the ability to ignore your configured proxy settings, and therefore bypass Tor and share information directly to other sites on the Internet. The virtual machine may be able to store data, such as cookies, completely separate form your browser or operating system data stores. Therefore, we recommend&nbsp; disabling these technologies in your browser to improve the situation.<br /><br />We produce two pieces of software to help you control the risks to your privacy and anonymity while using the Internet:<br /><br />&nbsp; &nbsp; &nbsp;Torbutton attempts to mitigate many of the anonymity risks when browsing the Internet via Tor.<br />&nbsp; &nbsp; &nbsp;The Tor Browser Bundle is a pre-configured set of applications to allow you to anonymously browse the Internet. <br /><br />Alternatively, you may find a Live CD or USB operating system more to your liking. Now you have an entire bootable operating system configured for anonymity and privacy on the Internet.<br /><br />Tor is a work in progress. There is still plenty of work left to do for a strong, secure, and complete solution. <br /><br />Where can I learn more about anonymity?<br /><br />Read these papers - http://freehaven.net/anonbib/topic.html#Anonymous_20communication&nbsp; *Clearnet link*<br />(especially the ones in boxes) to get up to speed on anonymous communication systems. <br /><br />What attacks remain against onion routing?<br /><br />As mentioned above, it is possible for an observer who can view both you and either the destination website or your Tor exit node to correlate timings of your traffic as it enters the Tor network and also as it exits. Tor does not defend against such a threat model.<br /><br />In a more limited sense, note that if a censor or law enforcement agency has the ability to obtain specific observation of parts of the network, it is possible for them to verify a suspicion that you talk regularly to your friend by observing traffic at both ends and correlating the timing of only that traffic. Again, this is only useful to verify that parties already suspected of communicating with one another are doing so. In most countries, the suspicion required to obtain a warrant already carries more weight than timing correlation would provide.<br /><br />Furthermore, since Tor reuses circuits for multiple TCP connections, it is possible to&nbsp; associate non anonymous and anonymous traffic (http://archives.seul.org/or/talk/Dec-2004/msg00086.html)&nbsp; *Clearnet link*<br />at a given exit node, so be careful about what applications you run concurrently over Tor. Perhaps even run separate Tor clients for these applications. <br /><br />Questions:<br /><br />Can the exit nodes be spied on when I use Tor? Specifically, can my plain text passwords be figured out if someone is spying on the exit node I am going through? If not, what do I have to be worried about?<br /><br />Thanks.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can the exit nodes be spied on when I use Tor?</strong><br />
+				Post by: <strong>greencrack</strong> on <strong>July 19, 2013, 12:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yes.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can the exit nodes be spied on when I use Tor?</strong><br />
+				Post by: <strong>Juggernog</strong> on <strong>July 19, 2013, 01:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=187447.msg1356735#msg1356735">Quote from: greencrack on July 19, 2013, 12:55 pm</a></div></div><blockquote class="bbc_standard_quote">Yes.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />lol well put.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can the exit nodes be spied on when I use Tor?</strong><br />
+				Post by: <strong>agenorexchange</strong> on <strong>July 21, 2013, 07:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				yes but too difficult to execute in practise, this is strictly a theory.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can the exit nodes be spied on when I use Tor?</strong><br />
+				Post by: <strong>abdomen</strong> on <strong>July 21, 2013, 07:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				&quot;Just a theory&quot;? That&#039;s a lot of faith to be putting in some random exit node operator not to turn around and fuck you in the ass. Use PGP for everything. Don&#039;t trust shit. Even on these forums, post under the assumption that everyone besides you is a police officer waiting for you to slip up and say something that pins you down to a physical location.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can the exit nodes be spied on when I use Tor?</strong><br />
+				Post by: <strong>Porn Star</strong> on <strong>July 21, 2013, 07:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				Fuck that&#039;s a long read! I&#039;ve been very interested about this though. Think I might have to muscle through it tomorrow. I had imagined that one could rent a VPS from a bulletproof hosting provider in China for instance, then communicate via an encrypted connection and enter tor from there. Unfortunately, I&#039;m better at growing pot than I am at figuring this stuff out. <br /><br />I think that you might need to be more concerned with what your isp can see as they are the ones closest to your machine and where (as I understand it) the tor secrecy is thinnest.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Can the exit nodes be spied on when I use Tor?</strong><br />
+				Post by: <strong>SirNomDePlum</strong> on <strong>July 22, 2013, 09:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				bump
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

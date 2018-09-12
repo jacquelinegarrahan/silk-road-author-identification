@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=130521.0" />
+		<title>Print Page - any way to tell if your invloved in a MIM attack?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: springseed23 on March 09, 2013, 02:52 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>springseed23</strong> on <strong>March 09, 2013, 02:52 am</strong>
+			</dt>
+			<dd class="postbody">
+				Any techies know enough about MIM attack to share some light?&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>piratesofpenzance</strong> on <strong>March 09, 2013, 03:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				Well thats the point of a MIM isn&#039;t it? The whole point is that they emulate what you think you should be seeing so look for any sort of visual clues that something doesn&#039;t look right or normal with the site.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>CrazyBart</strong> on <strong>March 09, 2013, 06:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				What kind of MiM attack are you curious about(website,LAN network, arp spoofing ?etc)? might need some more information to help out.<br /><br />In any case i imagine that it would be very hard to detect. For secure websites (https) i suppose you would need to constantly double check certificates making sure everything matches.<br /><br />I really am not very tech savvy and look forward to an answer as well<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>anonom</strong> on <strong>March 12, 2013, 06:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Since the &quot;Man in the middle&quot; usually analyse/modify traffic before letting it go to its destination, in some case I think it&#039;s possible to detect it.<br /><br />If you can monitor the timing for each &quot;hop&quot; to your destination, someone modifying data &quot;on the fly&quot; will most likely delay the packet hence reveal himself.<br /><br />My point is that some MITM attacks should be detectable if you can do something similar to a &quot;traceroute&quot; and establish the &quot;legitimate/usual&quot; timing for your communication. In some case, some illegal ARP may be a clue that a MITM is happening (something like ARP-Poisoning attacks).<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 12, 2013, 07:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg891443#msg891443">Quote from: CrazyBart on March 09, 2013, 06:38 am</a></div></div><blockquote class="bbc_standard_quote">In any case i imagine that it would be very hard to detect. For secure websites (https) i suppose you would need to constantly double check certificates making sure everything matches.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Chrome does certificate pinning for some web sites, and Firefox has add-ons like Certificate Patrol and Convergence to help with that. I don&#039;t know how well they would work in TBB.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>Yoda</strong> on <strong>March 13, 2013, 06:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				Some info about it here:<br /><br />https://tails.boum.org/doc/about/warning/index.en.html#index3h1
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>springseed23</strong> on <strong>March 25, 2013, 04:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hmm-----<br /><br />I guess when I talk about a MIM attach, I mean in TOR.&nbsp; &nbsp; I have noticed some odd things to my browser and some connections at some hotspots I frequent.&nbsp; Have not frequent them anymore, but I swear, every time i went to those locations, I noticed subtle differences in some things.&nbsp; <br /><br />Here are some follow up questions.&nbsp; <br /><br />1.&nbsp; &nbsp;Can a MIM attach happen anywhere, or does LE have to prepare from a single network----oh yea, all these questions are for TOR---not clearnet.&nbsp; I can care less if LE is watching porn with me:}&nbsp; hahah<br /><br />2.&nbsp; How much resource would LE have to use to actually use to do a constant MIM attach through out different networks?<br /><br />Wish I knew more about this stuff to be more detailed in my questions.&nbsp; But a big thanks to everyone who answered!!&nbsp; 1+ for you all!!!&nbsp; Thanks<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 25, 2013, 05:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg937210#msg937210">Quote from: springseed23 on March 25, 2013, 04:08 pm</a></div></div><blockquote class="bbc_standard_quote">1.&nbsp; &nbsp;Can a MIM attach happen anywhere, or does LE have to prepare from a single network----oh yea, all these questions are for TOR---not clearnet.&nbsp; I can care less if LE is watching porn with me:}&nbsp; hahah<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />They have to be on the wire between you and the destination server, like at your ISP, a router upstream of the server you are connecting to, a gateway between two autonomous zones, an internet exchange point, etc. The packets have to physically pass through an internet host that the adversary controls. The Chinese government can&#039;t MITM a connection between NYC and Boston, unless the routing is really fucked (or they hacked a server in between).<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg937210#msg937210">Quote from: springseed23 on March 25, 2013, 04:08 pm</a></div></div><blockquote class="bbc_standard_quote">2.&nbsp; How much resource would LE have to use to actually use to do a constant MIM attach through out different networks?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Targeting a specific person or host is probably easy, as long as they are in a jurisdiction that LE controls. They could get a warrant, or ask your ISP nicely, and in some cases the ISP will cooperate without legal pressure. Targeting someone outside of LE&#039;s jurisdiction is harder.<br /><br />That being said, decrypting a Tor circuit is considerably harder than an HTTPS connection. HTTPS relies on certificate authorities, which can be compelled to sign certificates for governments or LE to use in MITM attacks (some CAs have even been hacked, allowing the Iranian government to MITM its people, for example).<br /><br />Tor&#039;s SSL uses private keys stored on the relays. You download the public keys in the relay descriptors from the directory authorities. Descriptors are signed by the directory authorities. The directory authority keys are hardcoded into the Tor client. That means, as long as you have an uncompromised Tor client (check the signature when you download it!), nobody can serve you fake descriptors, with fake relay keys, and thus establish fake connections with your Tor client.<br /><br /><br />BTW, what kind of &quot;odd&quot; things did you notice?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>springseed23</strong> on <strong>March 26, 2013, 01:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg937356#msg937356">Quote from: astor on March 25, 2013, 05:36 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg937210#msg937210">Quote from: springseed23 on March 25, 2013, 04:08 pm</a></div></div><blockquote class="bbc_alternate_quote">1.&nbsp; &nbsp;Can a MIM attach happen anywhere, or does LE have to prepare from a single network----oh yea, all these questions are for TOR---not clearnet.&nbsp; I can care less if LE is watching porn with me:}&nbsp; hahah<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />They have to be on the wire between you and the destination server, like at your ISP, a router upstream of the server you are connecting to, a gateway between two autonomous zones, an internet exchange point, etc. The packets have to physically pass through an internet host that the adversary controls. The Chinese government can&#039;t MITM a connection between NYC and Boston, unless the routing is really fucked (or they hacked a server in between).<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg937210#msg937210">Quote from: springseed23 on March 25, 2013, 04:08 pm</a></div></div><blockquote class="bbc_alternate_quote">2.&nbsp; How much resource would LE have to use to actually use to do a constant MIM attach through out different networks?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Targeting a specific person or host is probably easy, as long as they are in a jurisdiction that LE controls. They could get a warrant, or ask your ISP nicely, and in some cases the ISP will cooperate without legal pressure. Targeting someone outside of LE&#039;s jurisdiction is harder.<br /><br />That being said, decrypting a Tor circuit is considerably harder than an HTTPS connection. HTTPS relies on certificate authorities, which can be compelled to sign certificates for governments or LE to use in MITM attacks (some CAs have even been hacked, allowing the Iranian government to MITM its people, for example).<br /><br />Tor&#039;s SSL uses private keys stored on the relays. You download the public keys in the relay descriptors from the directory authorities. Descriptors are signed by the directory authorities. The directory authority keys are hardcoded into the Tor client. That means, as long as you have an uncompromised Tor client (check the signature when you download it!), nobody can serve you fake descriptors, with fake relay keys, and thus establish fake connections with your Tor client.<br /><br /><br />BTW, what kind of &quot;odd&quot; things did you notice?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Quick run down.&nbsp; &nbsp;Erased my computer.&nbsp; Went to a public wifi.&nbsp; &nbsp;Went to Tor down load page, and it came up as TOR being a dangerous site!!&nbsp; &nbsp;I got to a download page, I forget now, but then downloaded TOR.&nbsp; &nbsp;The connection took super long, and from what I remember, as it has been several weeks-month, but the tor button was flashing.&nbsp; &nbsp; I could not get into certain pages that I know would not be down.&nbsp; &nbsp;I got onto silkroad home page, but got a little freaked.&nbsp; &nbsp;Something else was amiss----something with the scripts.&nbsp; &nbsp;I just remember getting spooked.&nbsp; Taking of tor again, and then going to another spot, and downloaded.&nbsp; It worked good that time!!<br /><br />Oh yea....I got several messages while at that hotspot about TOR being oudated.&nbsp; So I downloaded TOR twice more, and it was still outdated.&nbsp; &nbsp;<br /><br />Sorry not much more info, but the experience just seemed odd.&nbsp; <br /><br />But thanks a bunch for the info.&nbsp; Some of it over my head, but I understand it for the most part!!&nbsp; <br /><br />1+
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 26, 2013, 01:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg938903#msg938903">Quote from: springseed23 on March 26, 2013, 01:37 am</a></div></div><blockquote class="bbc_standard_quote">Quick run down.&nbsp; &nbsp;Erased my computer.&nbsp; Went to a public wifi.&nbsp; &nbsp;Went to Tor down load page, and it came up as TOR being a dangerous site!!&nbsp; &nbsp;I got to a download page, I forget now, but then downloaded TOR.&nbsp; &nbsp;The connection took super long, and from what I remember, as it has been several weeks-month, but the tor button was flashing.&nbsp; &nbsp; I could not get into certain pages that I know would not be down.&nbsp; &nbsp;I got onto silkroad home page, but got a little freaked.&nbsp; &nbsp;Something else was amiss----something with the scripts.&nbsp; &nbsp;I just remember getting spooked.&nbsp; Taking of tor again, and then going to another spot, and downloaded.&nbsp; It worked good that time!!<br /><br />Oh yea....I got several messages while at that hotspot about TOR being oudated.&nbsp; So I downloaded TOR twice more, and it was still outdated.&nbsp; &nbsp;<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That could be bad.<br /><br />It sounds like a firewall was blocking your access to torproject.org. That is common because Tor is considered proxy bypass software.<br /><br />You downloaded the browser bundle from somewhere, but you can&#039;t remember where. Most likely it was not from torproject.org. It could have been an old package archived on another site, which is why you kept getting those messages about it being outdated, or it could have been a compromised TBB.<br /><br />You really need to be more careful. You should only download TBB from torproject.org. You should check the signature, which is under the orange download button, at the link titled &quot;sig&quot;.<br /><br />Whenever you download a new bundle, you should have a PGP program with you, with Erinn Clark&#039;s key in your key chain, so you can verify the signature. Instructions on doing that are here: https://www.torproject.org/docs/verifying-signatures.html.en<br /><br />Those instructions can always be found in the &quot;what is this&quot; link next to the &quot;sig&quot; link.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg938903#msg938903">Quote from: springseed23 on March 26, 2013, 01:37 am</a></div></div><blockquote class="bbc_standard_quote">But thanks a bunch for the info.&nbsp; Some of it over my head, but I understand it for the most part!!&nbsp; <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />tl;dr A verified signature on your browser bundle signficantly reduces your chances of getting MITM&#039;ed, although the same low probability threat of connecting to malicious relays still applies.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>anonom</strong> on <strong>March 27, 2013, 12:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Can we agree that with a legitimate version of the TBB, even with a MITM, it&#039;s very hard to know the exit node of your Tor circuit ?<br /><br />I wonder how strong is the encryption used in Tor. Would it really hold long supercomputers ?<br /><br />Oh and finally, can someone confirm that when you connect to a .onion website, the full path to server is encrypted ? As far as I know, when you connect to a clearnet site, the last hop after the exit node is of course not encrypted. But for a .onion sites, both side are running tor dedicated software and the encryption is full from host to server.<br /><br />Concerning clearnet sites through Tor: Why is there so much warnings about accessing clearnets sites over Tor ? Is the end server of a clearnet website able to know your own IP address ? Or it&#039;s just because of the flash/scripts and other stuff that can give this information to the end server.<br /><br />In other words: Would a perfectly configured/UpToDate TBB leave any compromising information on a clearnet site ?<br /><br />Thanks ! And sorry for hijacking a bit the topic, but since we speak of Tor security...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>Green Camel</strong> on <strong>March 27, 2013, 10:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Offtopic maybe but some Tor exit nodes do MITM. I do quite a lot of browsing through Tor, and I&#039;ve received invalid SSL certs a couple of times for sites which don&#039;t use self-signed certs.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 28, 2013, 03:45 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg945322#msg945322">Quote from: anonom on March 27, 2013, 12:46 pm</a></div></div><blockquote class="bbc_standard_quote">Can we agree that with a legitimate version of the TBB, even with a MITM, it&#039;s very hard to know the exit node of your Tor circuit ?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If an attacker can decrypt your connection, he can read the data. He doesn&#039;t need to know your exit node. That is much harder to do with a Tor circuit than with an HTTPS connection. Like the poster above said, HTTPS connections can be intercepted at the exit nodes with widely available programs like sslstrip. However, this interception is noticeable if you are paying attention, because you lose the lock icon. This is why mixed content is bad, it gets us used to losing the lock icon.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg945322#msg945322">Quote from: anonom on March 27, 2013, 12:46 pm</a></div></div><blockquote class="bbc_standard_quote">I wonder how strong is the encryption used in Tor. Would it really hold long supercomputers ?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Tor uses the TLS protocol with a 128 bit AES stream cipher and 1024 bit RSA keys for authentication. If you want the nitty gritty details, you can read the protocol spec:<br /><br />https://gitweb.torproject.org/torspec.git?a=blob_plain;hb=HEAD;f=tor-spec.txt<br /><br />In terms of encrypting the stream, Tor circuits are basically the same as HTTPS connections (they could be made stronger with AES-256 encryption, but AES-128 would take longer than your lifetime to decrypt with today&#039;s technology). The important difference between Tor circuits and HTTPS connections, as I said in a previous post, is that it&#039;s much harder to break Tor&#039;s authentication mechanism.<br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg945322#msg945322">Quote from: anonom on March 27, 2013, 12:46 pm</a></div></div><blockquote class="bbc_standard_quote">Oh and finally, can someone confirm that when you connect to a .onion website, the full path to server is encrypted ?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Since you&#039;re connecting Tor client to Tor client, yes, the entire path is encrypted.<br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg945322#msg945322">Quote from: anonom on March 27, 2013, 12:46 pm</a></div></div><blockquote class="bbc_standard_quote">Concerning clearnet sites through Tor: Why is there so much warnings about accessing clearnets sites over Tor ? Is the end server of a clearnet website able to know your own IP address ? Or it&#039;s just because of the flash/scripts and other stuff that can give this information to the end server.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yeah, it&#039;s mostly the dangers of Flash and Java. I think the dangers of JavaScript are exaggerated. Yes, JavaScript can be dangerous too, but it&#039;s much better sandboxed inside the browser. Flash and Java are run by plugins that are separate processes and can more easily bypass the browser&#039;s proxy settings. That&#039;s why NoScript was added to the browser bundle. It blocks Flash and Java even when it is disabled.<br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg945322#msg945322">Quote from: anonom on March 27, 2013, 12:46 pm</a></div></div><blockquote class="bbc_standard_quote">In other words: Would a perfectly configured/UpToDate TBB leave any compromising information on a clearnet site ?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well, if you post your name on the site, there&#039;s nothing Tor can do to save you.<br /><br />But I get what you&#039;re saying, and the answer is that the browser bundle is specially configured to greatly reduce data leaks and fingerprinting attacks that could be used to identify you. Nothing is perfect of course, but browsing clearnet with TBB in its default configuration is considered safe enough by the Tor developers that they distribute it that way.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>astor</strong> on <strong>March 28, 2013, 05:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				I should add that there&#039;s a trade off between security and convenience. Tech savvy Tor users have asked for JavaScript to be disabled by default, but that would break 80% of clearnet sites. The unsavvy users would think that TorBrowser doesn&#039;t work and abandon it. The Tor devs believe that using Tor with JavaScript is better than not using Tor at all, so they distribute it with JavaScript enabled.<br /><br />It is safer to disable JavaScript, but I personally don&#039;t consider it a threat when doing a Google search or browsing Wikipedia, for example. I&#039;d be more worried about obscure web sites.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>Obnubilate</strong> on <strong>March 28, 2013, 06:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				If you are part of a proper MiTM attack, then no, you won&#039;t be able to tell.<br />Sorry.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>kingghb</strong> on <strong>March 29, 2013, 05:45 am</strong>
+			</dt>
+			<dd class="postbody">
+				If you are using Windows/Linux download XArp. It will detect suspicous ARP activity and notify you when something happens such as router MAC changing. It works really well at least in my experience.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>kingghb</strong> on <strong>March 29, 2013, 05:59 am</strong>
+			</dt>
+			<dd class="postbody">
+				I didn&#039;t read the entire thread when I read this. But this utility works for detecting arp poisoning attacks
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>pine</strong> on <strong>March 29, 2013, 07:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				Always check the PGP signature or hash of any security related software you download, especially anything from the Tor Project website or GPG software. Sadly these procedures are less straight forward than they ought to be, but you should still do them every time.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>Green Camel</strong> on <strong>March 30, 2013, 05:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Tip: if you have a blockchain.info wallet, always start the URL with https://. blockchain.info doesn&#039;t redirect you from http:// to https://, thereby exposing you to MITM attacks from Tor exit nodes.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>springseed23</strong> on <strong>April 03, 2013, 01:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=130521.msg953277#msg953277">Quote from: pine on March 29, 2013, 07:05 am</a></div></div><blockquote class="bbc_standard_quote">Always check the PGP signature or hash of any security related software you download, especially anything from the Tor Project website or GPG software. Sadly these procedures are less straight forward than they ought to be, but you should still do them every time.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I admit, I am lazy sometimes, and a big thanks to your contribution to SR Pine.&nbsp; Have read many of your post over the past year, and am safer for it----- Thanks for all who have chimed in!!<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>springseed23</strong> on <strong>April 05, 2013, 03:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Keeping this thread alive.&nbsp; &nbsp;I am back at the hotspot location, and I remember exactly the deal now.<br /><br />Please read, and give your thoughts!!!!<br /><br />I have a updated Tor bundle.&nbsp; &nbsp;I logged into Tor at this hotspot.&nbsp; The first log in, Tor would not move past accessing network.&nbsp; So I stopped TOR, and reloaded.&nbsp; TOR page came up great, green letters.&nbsp; &nbsp;However, my TOR button is now flashing with a yellow ! mark.&nbsp; It says I need to update my TOR button!<br /><br />This happend to me last time, so I did it, and then got all the crazy shit that led me to opening this thread up in the first place.<br /><br />Does anyone else get ! flashes on their onion icon in Auroa when your TOR needs updating, or does your TOR page tell you.<br /><br />WTF-------Hots spots more danger than my house:{
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>astor</strong> on <strong>April 06, 2013, 01:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yes, that means you need to update your browser bundle.<br /><br />They recently switched from Firefox 10 to Firefox 17. Because there are so many differences, you can&#039;t extract the browser bundle over top of the old one. You have to extract it into a new folder. That may be why&nbsp; you can&#039;t connect.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: any way to tell if your invloved in a MIM attack?</strong><br />
+				Post by: <strong>springseed23</strong> on <strong>April 09, 2013, 05:22 am</strong>
+			</dt>
+			<dd class="postbody">
+				I do not use firefox, I use aroura.<br /><br />And oh----did not know you cant overwrite TOR downloads.&nbsp; &nbsp;<br /><br />Thanks for the input 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=32314.0" />
+		<title>Print Page - Tumbling (SR) and Mixing (BitcoinFog) are not the same thing!</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: elevatormusic on July 24, 2012, 10:27 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Tumbling (SR) and Mixing (BitcoinFog) are not the same thing!</strong><br />
+				Post by: <strong>elevatormusic</strong> on <strong>July 24, 2012, 10:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The terms tumbling and mixing seem to be used interchangeably around here a lot.&nbsp; However, there is an important difference between the two.&nbsp; SR *Tumbles* BTC, which provides good protection.&nbsp; However, SR does NOT *Mix* BTC.&nbsp; Mixing BTC provides much greater protection.&nbsp; Tumbling is probably adequate for most users.&nbsp; However, we need to be at least aware of the inherent difference.<br /><br />Tumbling is sending bitcoins through a series of wallets in random amounts to obscure the trail. If I want to send 10 BTC from Wallet A to Wallet B, tumbling inserts a series of &quot;dummy&quot; transactions in the process.&nbsp; This obscures the trail, but it is still possible to “trace” the 10 BTC from Wallet B to Wallet A (and vice versa) via the block chain.&nbsp; It&#039;s difficult, but possible.&nbsp; SR is a Tumbler.&nbsp; Every time you do a transaction on SR, SR automatically breaks the amount up into smaller transactions and sends them separately.&nbsp; This is a great service, and probably provides adequate protection for most users, especially if they move their BTC through a couple of SR accounts either after purchasing BTC or before cashing out.<br /><br />Mixing actually completely breaks the trail.&nbsp; The mixer receives 10 BTC from Wallet A and adds them to his BTC stash.&nbsp; The mixer then puts 10BTC that *never saw wallet A* into Wallet B .&nbsp; Unless the Mixer is compromised, there is no way to establish a link between Wallet A &amp; B.&nbsp; SR is NOT a mixer.&nbsp; Bitcoinfog is a mixer.<br /><br />Tumbling provides good protection and is probably adequate for most casual users of SR.&nbsp; It takes a lot of resources to crack, so it&#039;s good protection against being linked to questionable transactions and it provides strong deniability even if a link is established.<br /><br />Mixing provides much greater protection, since it eliminates the potential for linking BTC to a specific activity, and offers even stronger deniability.<br /><br />Please do NOT call SR a mixer.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tumbling (SR) and Mixing (BitcoinFog) are not the same thing!</strong><br />
+				Post by: <strong>elevatormusic</strong> on <strong>July 25, 2012, 01:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				If that is the case, it&#039;s good news.&nbsp; The SR About page and Wiki talk specifically about tumbling, but say nothing about mixing.&nbsp; I would love some verification from SR, or a moderator, or others.<br /><br />About SR:&nbsp; http://silkroadvb5piz3r.onion/silkroad/about<br />SR Wiki:&nbsp; http://dkn255hz262ypmii.onion/wiki/index.php/Bitcoin
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tumbling (SR) and Mixing (BitcoinFog) are not the same thing!</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>July 25, 2012, 01:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;d like to know too. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tumbling (SR) and Mixing (BitcoinFog) are not the same thing!</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>July 25, 2012, 03:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				I think there is no such thing as a tumbler, the first I heard of it was the mixing service called Bitcoin Tumbler, prior to that everyone called it a mix. <br /><br />There are two types of financial mix. The first type works like this:<br /><br />A bunch of people send coins to the mix, each of the users from one of their accounts. Then the mix sends bitcoins out to a different account. I would call this a traditional mix I suppose. The mix operator themselves can link accounts.<br /><br />Blind mixes work in essentially the same way, a bunch of people send coins to the mix, each of the users from one of their accounts. The difference is that they get a blind signature signed certificate saying they are owed one bitcoin for every bitcoin they put in (if the mix operator is generous and does not tax them). Now they can either cash the blind certificates out to separate bitcoin accounts, or they can use them as a new form of currency with the vendors they work with. This type of mix is unlinkable by anyone.<br /><br />Both are still weak to amount in : amount out correlation attacks, if proper care is not taken. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tumbling (SR) and Mixing (BitcoinFog) are not the same thing!</strong><br />
+				Post by: <strong>masterblaster</strong> on <strong>July 25, 2012, 05:32 am</strong>
+			</dt>
+			<dd class="postbody">
+				So we&#039;re all relying on a crappy one paragraph explanation of a poorly defined process to protect us from a longterm jail sentence? Thats nice. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tumbling (SR) and Mixing (BitcoinFog) are not the same thing!</strong><br />
+				Post by: <strong>cartographer</strong> on <strong>July 25, 2012, 09:55 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=32314.msg367806#msg367806">Quote from: masterblaster on July 25, 2012, 05:32 am</a></div></div><blockquote class="bbc_standard_quote">So we&#039;re all relying on a crappy one paragraph explanation of a poorly defined process to protect us from a longterm jail sentence? Thats nice.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>That&#039;s assuming all of &quot;us&quot; know nothing about the way Bitcoins work.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tumbling (SR) and Mixing (BitcoinFog) are not the same thing!</strong><br />
+				Post by: <strong>wanna-be</strong> on <strong>July 26, 2012, 06:21 am</strong>
+			</dt>
+			<dd class="postbody">
+				How would one see the difference between the two mixes on the blackchain?&nbsp; How do you know it works?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tumbling (SR) and Mixing (BitcoinFog) are not the same thing!</strong><br />
+				Post by: <strong>ManaFromHeaven</strong> on <strong>July 26, 2012, 12:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				blockchain.info/taint/XXXXXXXXXXX...<br /><br />Where XXXXXXXXXXX... is your btc adress.<br /><br />Great little tool.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

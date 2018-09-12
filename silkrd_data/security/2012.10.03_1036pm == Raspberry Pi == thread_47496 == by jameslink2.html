@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=47496.0" />
+		<title>Print Page - Raspberry Pi</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: jameslink2 on October 03, 2012, 10:36 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Raspberry Pi</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>October 03, 2012, 10:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I have a raspberry pi I am working with, Doing some tor and bitcoin work on it.<br /><br />So far I have it up on the network, I have Tor, Bitcoind, JSON-PHP, apache, and gpg2 installed. Tor is configured and working with a hidden service pointing to apache. I can call up the webpage and am starting to work on a php web interface to the new bitcoin functions.<br /><br />Is anyone interested in me going into detail as to the setup, configuration, and workings?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi</strong><br />
+				Post by: <strong>qudoze</strong> on <strong>October 04, 2012, 12:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				I am!<br />I was just wondering about how could I have an other puter to utilise an airgap, I didn&#039;t know that Pi is capable to run those things.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi</strong><br />
+				Post by: <strong>ianfleming</strong> on <strong>October 04, 2012, 12:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				You should configure and sell these.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>October 04, 2012, 12:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				I went through the various distros of Linux for it tell I found one that worked for what I was wanting to do. This one is ArchLinux<br /><br />I added webmin to the unit to give me a management interface via the web. Then configured apache with php for use as a hidden service via tor. Right now it prompts for a login and when you log in it displays your user name.<br /><br />http://xfq5l5p4g3eyrct7.onion/view.php?image=068b957dbe4c13e46a72703fa120945f.jpg<br /><br />Webmin Interface<br /><br />http://xfq5l5p4g3eyrct7.onion/view.php?image=d3b8131dd5685cc3a18970e48a6591a5.jpg<br /><br />I still have to configure the bitcoin client to work with tor and develop a wallet interface via the json rpc calls between php and the bitcoin daemon. I have a lot of that done from earlier tinkering so it should go fast as I can reuse a lot of the code.<br /><br />The end goal for this one is to create a small bitcoin wallet system that is web interfaced via tor. Something you could hook up and use out of the box or plug in at grandma&#039;s house attached to her internet then access via the onion address from anywhere. This is more of a private tor wallet than something you would share with others.<br /><br />As to selling them, Not sure that anyone would buy them due to the trust of putting your money on something you got from someone on SR. However I may toss the image up for others to play with once I have it set up.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi</strong><br />
+				Post by: <strong>Bungee54</strong> on <strong>October 04, 2012, 02:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				very cool ! You got a fan here!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi</strong><br />
+				Post by: <strong>Just Chipper</strong> on <strong>October 04, 2012, 04:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=47496.msg500943#msg500943">Quote from: jameslink2 on October 03, 2012, 10:36 pm</a></div></div><blockquote class="bbc_standard_quote">Is anyone interested in me going into detail as to the setup, configuration, and workings?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes, very much so. I was just thinking of something like this after watching the TORwallet situation. I would love to see the image once you&#039;ve completed it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi</strong><br />
+				Post by: <strong>AdmiralSpanky</strong> on <strong>October 04, 2012, 06:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I would also like to see this, and thank you for sharing!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>October 04, 2012, 10:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Well, I have the basic interface put together. It lets you control multiple accounts on the bitcoin daemon, send and receive coins, change the address, backup the wallet as well as several other functions.<br /><br />However I ran into a major problem that I may not be able to get around.<br /><br />Seems the bitcoind daemon is overloading the system and causing the daemon to crash. This is because the blockchain is over 2g in size and the thing is trying to download the whole chain. This is a major issue as the clients that do not download the whole chain also do not accept JSON RPC calls so I can not interface them to the web interface.<br /><br />I am not back to checking into the scalability issues and seeing if there is a way around it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Raspberry Pi</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>October 05, 2012, 12:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Well, it looks like there is no solution that would allow me to build the webpage on it beyond starting a bitcoind daemon on a system some where and allowing rpc calls to it.<br /><br />I am back to checking OS&#039;s in an attempt to move on to another project. As of right now, the state of linux distributions for the Raspberry Pi is VERY Alpha.<br /><br />Arch linux has issues with updating, something to do with needing a new version of glibc and /lib having files not owned by the package manager. I could go into a lot of detail on this and exactly what the issue is but I am not sure it is needed here.<br /><br />Raspbian (debian Wheezy) needs to be updated to do much of anything from the repos and doing so breaks it, so it no longer boots.<br /><br />Fedora Core has the stuff in repo but there are lots of missing dependencies and I found it almost impossible to install anything from the repos.<br /><br />Most of the distributions do not have a sufficient apps repo to provide the applications I am looking for.<br /><br />At the moment I am testing pwnpi which is a debian Squeeze distro, I am hoping to have better luck.<br /><br />I hate to say it but I may have to build a custom image from scratch.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

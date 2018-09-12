@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=57601.0" />
+		<title>Print Page - Uncertain about Tor encryption: is data that's *only* within the network secure?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: SelfSovereignty on October 23, 2012, 12:41 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Uncertain about Tor encryption: is data that's *only* within the network secure?</strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>October 23, 2012, 12:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So everything I read basically says that all data *within* the Tor network is encrypted.&nbsp; Since SR is a hidden server within the Tor network, I really don&#039;t understand why the use of public key encryption is so universal?&nbsp; Is it simply to hide one&#039;s address from the Silk Road maintainers/admins/what-have-you, or what?&nbsp; For completeness, I do realize that once data hits an exit node, everything from there forward is completely unencrypted (assuming it wasn&#039;t encrypted by something other than Tor, naturally).&nbsp; But I just don&#039;t see why everyone seems to think anybody who perks up an ear is going to intercept the address you send a vendor when making an order?<br /><br />I&#039;m not sure how people would be safe from oppressive governments if something like this is going on: does each pair of machines along the way to the ultimate destination encrypt the data, but then decrypt &amp; discard any security up to that point, and only encrypt between the most recent machine &amp; the next successive node -- which would allow a man in the middle attack by people running relay nodes to see an address going through...?<br /><br />Anybody give me some details to help me understand exactly what&#039;s going on under the hood and why PGP is considered a necessity?&nbsp; I can&#039;t seem to find a satisfactory answer anywhere online.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Uncertain about Tor encryption: is data that's *only* within the network secure?</strong><br />
+				Post by: <strong>CoolGrey</strong> on <strong>October 23, 2012, 05:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yes, you&#039;ve got most of it right.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=57601.msg540008#msg540008">Quote from: SelfSovereignty on October 23, 2012, 12:41 pm</a></div></div><blockquote class="bbc_standard_quote">Is it simply to hide one&#039;s address from the Silk Road maintainers/admins/what-have-you, or what?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Yes. Or in case the Silk Road server gets hacked or confiscated by Law Enforcement. Then all addresses are still encrypted using PGP.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=57601.msg540008#msg540008">Quote from: SelfSovereignty on October 23, 2012, 12:41 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;m not sure how people would be safe from oppressive governments if something like this is going on: does each pair of machines along the way to the ultimate destination encrypt the data, but then decrypt &amp; discard any security up to that point, and only encrypt between the most recent machine &amp; the next successive node -- which would allow a man in the middle attack by people running relay nodes to see an address going through...?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>No. Before data is sent into the Tor network, it is encrypted various times (like the layers of an onion, hence the name The Onion Router.) Then it&#039;s sent to the first node, where the outer layer is decrypted. Inside, the relay finds more encrypted data, and instructions on where to send it. Then it gets sent to the next node, where the process is repeated. The relays only see encrypted data. The data is fully decrypted only at the exit node. Or if it&#039;s a hidden service, then only that server sees the unencrypted data.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Uncertain about Tor encryption: is data that's *only* within the network secure?</strong><br />
+				Post by: <strong>wackmanblu</strong> on <strong>October 23, 2012, 06:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Well, I&#039;ll take a stab at it:<br /><br />The Tor network is encrypted so relay nodes in the middle can&#039;t listen in on what traffic is being sent through, only the server to where the URL resolves, and you, can &#039;understand&#039; each other.<br /><br />The purpose of using PGP encryption is so that when you send your mailing address to a vendor, only he/she can decrypt it with their own password. If they get busted in the meantime and LE is sitting at their computer terminal watching orders come in, they won&#039;t be able to decipher from who or where the order should be shipped.<br />It&#039;s for your own protection and I suppose there is a certain amount of trust that the vendor won&#039;t write down and keep your address. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Uncertain about Tor encryption: is data that's *only* within the network secure?</strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>October 24, 2012, 04:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				I appreciate the replies: those are actually two situations I hadn&#039;t really considered (vendor account being compromised and the forensics boys possibly finding a way to dig up addresses even though they&#039;re &quot;discarded&quot;).<br /><br />Makes perfect sense now; why risk it if you don&#039;t have to.&nbsp; Guess I agree that it&#039;s more or less necessary as well; thanks guys.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

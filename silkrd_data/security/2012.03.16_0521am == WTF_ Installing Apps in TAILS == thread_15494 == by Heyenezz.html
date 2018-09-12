@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=15494.0" />
+		<title>Print Page - WTF? Installing Apps in TAILS</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Heyenezz on March 16, 2012, 05:21 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>WTF? Installing Apps in TAILS</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 16, 2012, 05:21 am</strong>
+			</dt>
+			<dd class="postbody">
+				How the fuckity fucking fuck do I run apps in TAILS that I&#039;ve downloaded?<br /><br />My only reason to use Linux is to have the plausible deniability that TAILS would provide. <br /><br />I want to save programs into an encrypted container and upload it to Tormail as an e-mail attachment.<br /><br />I want to do the same with some other programs because TAILS seriously sucks at functionality. <br /><br />One of these programs would be a browser containing bookmarks.<br /><br />Why the fuck can&#039;t Linux be comprehensible like Windows? When I run programs in Windows, I just need to click several buttons. When I decompress the installation file for Dillo, found at http://www.dillo.org/download.html, a small browser, I just see a bunch of files with no extensions. There&#039;s nothing I obviously click on to just install the program. <br /><br />Linux sucks ass. No one will even tell me how to create an encrypted container inside TAILS. I asked someone how on this forum and he just told me to use a PGP-frontend. PGP doesn&#039;t even create containers, it only encrypts text! <br /><br />When I ask people such questions they either don&#039;t respond or respond with a non-answer, like telling me to use a website instead of a program, when I ask specifically for a program that generates random passwords. <br /><br />Much thanks to anyone who actually addresses a concern. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: WTF? Installing Apps in TAILS</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 16, 2012, 05:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				If you use Linux for long enough you will question why you ever used Windows in the first place. But the transition period is hard, and ime it takes about a year or two of regular use before linux starts to be substantially less of a headache. (although linux distros are getting far more user friendly, so this period is probably a bit less now). Especially going from a fully featured OS like Windows to a live CD security oriented distro like Tails. Many people go back and forth between Windows and Linux before they feel comfortable enough to abandon Windows entirely. It is also a good idea to start with a nice user friendly Linux distro like Mint or Ubuntu, not stripped down security hardened live CD Debian, which you seem to expect to be a fully featured distro.<br /><br />Linux really gives the user a lot more fine grained control over their machine. And it encourages learning about computer science in general. It is also perfect for running servers, desktop is kind of a secondary market for it (hell, if even, its on a ton of devices that are not typically seen as computers even though they are). Windows creates a rigidness that is just not there nearly as much with Linux. Rigidness can be good though, it means less chance to make mistakes and a more &#039;stream lined&#039; and &#039;polished&#039; feeling to the over all exerpience. But once you start learning how to use those fine grained controls and really taking advantage of Linux, you may very well find that Windows isn&#039;t comprehensible, it is simple and it encourages simplicity and not knowing about or being able to influence what goes on at a lower level. Plus Windows has trained your brain into being dependent on it, I find that you really need to approach Linux with a different mindset (an eagerness to learn and increase your skills, rather than to be entertained or get instant gratification) to get the most out of it. Approaching it expecting it to be Windows is going to lead you to being frustrated, it is you who need to change to get the most out of Linux not Linux that needs to change :P. <br /><br />You are making things overly complicated though. Go to bookmarks -&gt; show all bookmarks and use the import and back up functionality. Encrypt the back up and then when you want to load it decrypt it and import it. You don&#039;t need to bother installing anything, and installing things from a running instance of TAILS in kind of a pain in the ass.<br /><br />I find that the easiest way to install things with linux is often from source code, although tracking down dependencies can be a pain in the ass. Normally you just will download and decompress the source code, then <br /><br />cd /path/to/folder<br />./configure <br />make<br />make install <br /><br />potentially giving ./configure some instructions if you need anything special done<br /><br />if it needs some dependency that you don&#039;t have, you will get an error from ./configure letting you know and then you track what you need down, download it<br /><br />cd /path/to/folder<br />./configure <br />make<br />make install <br /><br />etc, until no dependencies are unmet and the original thing you wanted to install finishes make install with no errors. I think with tails you will first need to sudo apt-get update and sudo apt-get install make . <br /><br />There are some exceptions when it comes to the steps involved, but in general that is the framework. <br /><br />It will probably be easier for you to use something like apt-get though, you can sudo apt-get install program <br />and if it is in the repositories the installation and dependencies will be automatically taken care of. <br /><br />You can also install from a distro specific package like .deb for debian based distros, but one has to be made already. <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: WTF? Installing Apps in TAILS</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 16, 2012, 05:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				if you want a program that generates random passwords you will be glad to know that there is one built right into tails called md5sum ;)<br /><br />use this command:<br /><br />echo &quot;ewiftireutufeyhteru7htreiuhtwemuhftslkdfnmkslgftmdjkltfngkjbdskfhjvngmxngmjfldrfskjndj&quot; | md5sum<br /><br />and it will print out a more condensed visually appealing string that has the entropy of your input string contained within it (up to 128 bits) and evenly distributed through out it. The more randomly you pound on the keyboard, the more random the resulting password will be. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: WTF? Installing Apps in TAILS</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 16, 2012, 05:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				As far as encrypted containers go, just download and install Truecrypt standard 32bit x86 is what you want for tails. Then to launch it just type truecrypt in a terminal and hit enter. Then you can use the nice GUI which I imagine you will be able to figure out yourself how to create containers with :).&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: WTF? Installing Apps in TAILS</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 16, 2012, 09:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks so much! <br /><br />I&#039;ve finally now using TAILS to post here, access documents, and use bookmarks.<br /><br />I created an encrypted volume via Truecrypt containing private data, then uploaded it to Tormail. <br /><br />It turns out that I must press &quot;tab,&quot; &quot;space,&quot;&nbsp; type &quot;truecrypt,&quot; then press &quot;enter&quot; for Truecrypt to be available under &quot;accessories.&quot;<br /><br />I didn&#039;t have to install anything.<br /><br />I now plan to wipe my HDD using HDD Erase, then verify that wiped files are irrecoverable.<br /><br />Thanks again!&nbsp; ;D
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=195971.0" />
+		<title>Print Page - Just realized torbrowser doesn't enable noscript globally by default</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: dotgoat on August 05, 2013, 12:56 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Just realized torbrowser doesn't enable noscript globally by default</strong><br />
+				Post by: <strong>dotgoat</strong> on <strong>August 05, 2013, 12:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				So with the reason news about freedomhosting getting taken down (still not clear to me the extent of this) I just played it safe and reextracted the torbrowser bundles I got off eff and I was going to install noscript.&nbsp; Turns out it&#039;s been there all along BUT it didn&#039;t have scripts globally disabled.&nbsp; So anyone using torbrowser may want to do that since at least at one point there was a js exploit on tormail designed for firefox 17 which is what torbrowser is.<br /><br />Enabling scripts globally is simple enough by clicking on the &quot;S&quot; next to url and saying disable globally.&nbsp; It&#039;s now going to probably complain a lot depending on what sites you go to. It&#039;s best to just disable those notifications by going to options &gt; notifications &gt; uncheck show message about blocked scripts.<br /><br />The problem is typically you could allow javascript on sites you trust... Well if you trusted tormail and enabled javascript you may have gotten some extra javascript.&nbsp; May just be better to go to about:config, search for javascript.enabled and double click it so it&#039;s false so it&#039;s disabled globally (there&#039;s a system preference too but they plan to remove that option in an up and coming release.<br /><br />Hope this is of use to people.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Just realized torbrowser doesn't enable noscript globally by default</strong><br />
+				Post by: <strong>la9rch7xvp</strong> on <strong>August 05, 2013, 01:32 am</strong>
+			</dt>
+			<dd class="postbody">
+				Good point. They will change this soon. Big mistake.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Just realized torbrowser doesn't enable noscript globally by default</strong><br />
+				Post by: <strong>Psyche</strong> on <strong>August 05, 2013, 01:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				It isn&#039;t enabled by default because it distiguishes you from other TOR users and diasables functionality of legitimate websites.<br /><br />If you need to be completely anonymous TURN IT ON.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Just realized torbrowser doesn't enable noscript globally by default</strong><br />
+				Post by: <strong>cypherpunk</strong> on <strong>August 05, 2013, 01:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				The only reason it distinguishes you at all is because it&#039;s not enabled by default.&nbsp; If everyone had it enabled it would be those with it disabled that stood out.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Just realized torbrowser doesn't enable noscript globally by default</strong><br />
+				Post by: <strong>DaveDoe</strong> on <strong>August 05, 2013, 02:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				NoScript being enabled by default isn&#039;t going to happen any time soon.<br /><div class="quoteheader"><div class="topslice_quote">Quote from: Tor FAQ</div></div><blockquote class="bbc_standard_quote">Why is NoScript configured to allow JavaScript by default in the Tor Browser Bundle? Isn&#039;t that unsafe?<br /><br />We configure NoScript to allow JavaScript by default in the Tor Browser Bundle because many websites will not work with JavaScript disabled. Most users would give up on Tor entirely if a website they want to use requires JavaScript, because they would not know how to allow a website to use JavaScript (or that enabling JavaScript might make a website work). </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />*****CLEARNET WARNING*****<br /><br />https://www.torproject.org/docs/faq.html.en#TBBJavaScriptEnabled
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

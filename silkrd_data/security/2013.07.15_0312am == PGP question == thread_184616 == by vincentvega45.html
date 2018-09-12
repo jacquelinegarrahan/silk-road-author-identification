@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=184616.0" />
+		<title>Print Page - PGP question</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: vincentvega45 on July 15, 2013, 03:12 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>PGP question</strong><br />
+				Post by: <strong>vincentvega45</strong> on <strong>July 15, 2013, 03:12 am</strong>
+			</dt>
+			<dd class="postbody">
+				So I have a public key and some one send me a pgp message how can I import that to open it? <br />Thanks
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question</strong><br />
+				Post by: <strong>vincentvega45</strong> on <strong>July 15, 2013, 03:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				anyone ?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question</strong><br />
+				Post by: <strong>tbart</strong> on <strong>July 15, 2013, 03:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				assuming you&#039;re working with gpg4usb encryption software - if not, here&#039;s the link http://gpg4usb.cpunk.de/download.html<br /><br />below is the msg another member (rustykoin) gave me that really turned the lights on - one part i&#039;ll explain in advance that seems to put it all in perspective. When you give your public key out, it has a corresponding private key in your copy of gpg4usb, and only in your copy, as your copy generated it randomly. The sender used it to encrypt a msg, that when you&#039;ve used your private key to decrypt it, you&#039;ll respond to him using his public key, as his public key has it&#039;s own corresponding private key in his copy of gpg4usb<br /><br />i don&#039;t know who&#039;s public key you have, i&#039;m assuming you have your own, if not, you&#039;re not going to decrypt that msg<br /><br />anyway, here be rustykoin&#039;s &quot;paint by the numbers&quot; instructions on encrypting and exchanging comm - his instructions start out telling me how to encrypt a msg to him (using his public key)<br /><br />open your gpg4usb and just paste my (rustykoin&#039;s) whole public key in there, like I said in the window that looks like a text editor. Even where it says BEGIN PGP PUBLIC and down to where it says END PGP PUBLIC, the whole thing. Now if you look at the menu bar at the top where it says Keys, click that and go to Import Keys and finally click Clipboard. If you&#039;ve done it right then it should pop up with my name and even my tormail address and then add it to your chain. <br /><br />Okay, so now&nbsp; that you&#039;ve got that done what you want to do it clear all that crap out of the Clipboard and type a short message, could be anything. After you&#039;re done with your message make sure to click the check box next to my name (on the right side key chain list) and finally click the Encrypt button. This produces a mass of gibberish that I can only decode with my private key. <br /><br />Okay, now what you want to do is copy that gibberish and send it to me in the next message you send me. I&#039;ll let you know if you&#039;ve done it right. Meanwhile, send me your public key and I will send you an encrypted message that you can decrypt. <br /><br />If you&#039;re unsure on how to create keys, I&#039;ll break it down quickly. As soon as you open the program a wizard should pop up instructing you to create a key pair, if it does not then click on the Help menu button and select Open Wizard. Click the first next to keep everything in English and then select Create New Key Pair, the first option in blue. Click on the Create New Key button and it will pop up with a variety of info to fill out. <br /><br />I suggest you use a tormail.org email account for your keys to keep them further secure. Also make sure to create a strong password as you will be prompted each time you try to Decrypt a message someone sends you, and this adds an extra layer of security. Finally make sure to click the Never Expires check box next to the date. <br /><br />As soon as you fill out your info and password the program will create your public and private keys, this will only take a second. In order to preview your public key after it&#039;s created click on Manage Keys and select the check box next to your newly created key, then choose Export to File. Name it anything you want, but my suggestion is tbart Public.txt or something, but as long as it is a text file. Now you can go find your file, open it up and there is your public key which you can give to people in order to send you messages. Never give out your private key to anyone, it is only for you. <br /><br />The way PGP works is that your public key encrypts messages that only your private key can decrypt. That is why it is so secure, because even if the message was intercepted then no one would be able to crack it because they don&#039;t have your private key.<br /><br />Anyway bro, I hope this helps. Again, feel free to send me an encrypted message using my public key. Also send me your public key so I can send you a message as well. It&#039;s intimidating at first, and a lot of information to absorb at once. But trust me, give it a few good trys and you&#039;ll be a professional in no time.&nbsp; <br /><br />This will help make more sense – when I msg someone I will need their public key to encrypt the msg, as they have the private key to decrypt. When they msg me they will need my public key to encrypt what they’re sending me, as I have the private key to decrypt<br /><br />______________________________________________________________<br /><br />if you want to practice with a msg, here&#039;s my public key<br /><br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG v1.4.12 (MingW32)<br /><br />mQINBFHdcEkBEAC0TPvR0KM3GiYI30Sn8AMKMaNIn3sciGnNGw1kvLxAo0Y3nr89<br />A70fR+uBOgdvzmAVcCeFs7lOH2+iQ+JB1nTpUox0jVnG3ajLcVjiNTrCYnYHp6p2<br />/838xt5MiWCm791pHIOvcZPs0KZ3gU8wky4YYuXAu9vNUuZ/yFAzl9A9+S1ANdzp<br />e9RaBkwbe9Qeo59kB1xCzqlBCdGcsRdZVE5ZWRRdf8IIRlE50eVWiWiokTT0U0bN<br />Wp0NI8HyX2b9tqEzuXUHrhgxrg6iZGBSg38Iag/HNcpTsEDqzXqNeAg5ASCG5skb<br />7b0gJZNCS2nj8gmbEvGb8Nkw6EjE48qSGRFtQYZgSM5aIlaEieQEnbp2Zp+1U4hH<br />DI4Rp6H3uZXDMjJlliK5k10rTmrmFVcP3jrcLYFGFnCnRY/xsHI6CZf4vRMYwCyg<br />ZpEbUvqyG/XAGd+LPpfZXAqzEVczgQj3m44viqMOC6dsqia5H1CvFefnUFUlm5PR<br />Ubs1+YTvbGepvz4VTiTixwcQanhhdawuvrULUr8alf/GVEQ/DBRti1uDWUPQtmq9<br />SUuCjVlRubsOdSAyUo5bjKZESbK1J91v8KuqxpzE1y1RE9W3Rj2RtWynn7/CVNDW<br />e4b2cXG/ZHB0ZWmf/e75TImkKGl+yg8I3fHUg7zV0ilmDx9zFdkgp/0VxQARAQAB<br />tDBUQkFSVDIgKDQwOTYgYml0IGVuY3J5cHRpb24pIDx0YmFydEB0b3JtYWlsLm9y<br />Zz6JAj4EEwECACgFAlHdcEkCGwMFCQlmvvcGCwkIBwMCBhUIAgkKCwQWAgMBAh4B<br />AheAAAoJEKROmMy3X6vGtz8P/3H9B5wh0LDVmwXidhCPpgvW+DNhXK7nZPZBqZ5Q<br />lLjblFAWFtUg1V0hC1Ey6LneTxPV010hJBJDH9sAru5BkqxrAuSmBqhWSWlqRpS4<br />cmNIgCNG70njRYQZxLi7vwzLuAlPXS6fheH/IHljpJCR5K3tEOuR4JRT8LQ2PSsC<br />3Bdf/jNnc6MDHOK6hT7nXoWZCSoHhtgeKPGEsisM1MIQ1ZWdBS8g++Vg0DJiSfKx<br />+mGwTxYf6U2tCfC58Y3w0X0rC/O9cMXuEI3kN44yz04/WJ73kFQnw1sZXjeTErYD<br />7XvIhzmR/T4UhmMGHv/Hw5aAAfty8YafxwCfwY4ng7GhzMJXIMUhwSDB+PQQUlHT<br />E6hCMr4wxnH7G4A9APa8tKodjowH4xtFSAmnjBLH7RN7+Pw7W7OOZ9WOMu+gMYVu<br />Y8xL0f9G6TBDTfzl6lFab3UhC95kJpt8tH8KdgUjQdSRWykmgvW1OSBChkoxJu3V<br />xz8BywmqDeI7ztpXtZmwnzimh41x2WgwPN8i6/CNjtBWNy5joCNiklPilWKZkYHt<br />a3kBo5dY1VVMevHdp2hIgS7D/7iMgC8djTC1xBg0z0xH869qpv2F94qwD2w6O22J<br />IQ27TovmZXxGaR6GQ+SoeM3AubrdLyev9ZWzwdrWea5TDqEJcE2uK0Nf48eEfxWD<br />xYOAuQINBFHdcEkBEAC8luM3XgmzdEikjRKAjdBPaN9eUwdjy6hcMTwwuiQ3pu5U<br />xdO2tvR/wCKi2gamY2IUJFGGJHT2vo+XFiF9urEECD5vk37Yw4wYMMJ0dXwQBFdG<br />v8qoxUFdK0qCGAsy4sZWjPiDYoV+dVKoN0EPurXT8eeGshtToCaIoKUSbDBdE45z<br />JVkEJNF3JLVMpQlxc4oJNNFkp4SXT7QEDHQa/p/7LtdxkpNQ4DcdMxbsS4OH1WlZ<br />0hbwc8i+TcmIjFCsdPOrDNnB+tp6glMkGhJMLFn84wrHCC2zyTddmToDAT0M+R/6<br />6Y0kUS1KvcwODWuYKdJ7ERfiXV0E7Sgf6Sr8t9OItrvy2MtVNSVjb7X+ZAW4D7Av<br />wllqLBfaYyG5kPRo8lvIHBTMa71mML2/Ptx7bwJJ5fuOYBWvbIlK20bqPrQa85na<br />C6WdEO9rqoCsF0Bn3gn1zMD/OwmETo1et4+9DzYaM6QiicL4hvq5ZSpsGdpjJTq3<br />27gayk85YJRIy44E5fwX9h3yhCzQu9Uq08kwnMMp7JZJ56zHu2Qsu1+ASt0DOoeQ<br />1paDZH4YjV7ksW2fwHQnzYJ9MMf117OcMObfM5oBm8kX4SKWWFxXE+kpuEAaJbVI<br />gLW9/I8ZghVl4zexMIKcvwsKM2tsZQKyzAjcus1BWDfUHz3ajSMAiaAgTc4SwQAR<br />AQABiQIlBBgBAgAPBQJR3XBJAhsMBQkJZr73AAoJEKROmMy3X6vG4xUP/iFFsp8g<br />RmGEarqlAKGqI8uk4Q7rCd2uFVFXNJGH3Lo5r0+Kt9Dfb/aXoab1Nnikyi3yYTUn<br />A1IIEDlWWr4WELpELDFSCs94rrMDKZROYr122bntsgpZhBGKmNeOqFmLLP5jWzgR<br />AYkkdGoWa/dBIlMehLTTVwVStrRCPoDWb6cOTzN/tJP0Wk5S2mMHZI+F2HDU9rc2<br />gMUXILQ2WNxku8bNlFvbID4eBolB+ckstSOrH1LcnfTb/a7Q5elpX0z5CH7PY/fZ<br />tYFPjokHW6wh4+psog3dj/5CUjU33jCmvlsHIHMGHC6VkiJzmAt2nWAqwhumkfyS<br />TotjdGIreQHeOIyhedb8m+tS7XjiYr6Xyz3Jm8kK7jDek+WVuZx8OSWt6h/TKDTl<br />phPbo3zJJjeGvF8U/SMDZlHah5zkTT4QZlFnISickil2C/YPN3GkArruCGlkqv2u<br />ug2n2LQQdUboEX4spYMJuCgClqpuliYWPLTMixaT5xwpGSnuvNlo1YNQnjY4fnku<br />iZd0svIRqRlP9Ej7WaTf0PCx8uXs92BOTiQzRZkdhR5Nx4NTPs108u+F8FPLVsOk<br />0tzA7uPg0IgpiJtxzf6a9AAlbwXeYm28u7ie8UcLBGm6dFfoLs7XXlhuOXM/PTZd<br />OunqIrkOcIjQ23mlekX4flZZiZfoOBRCvuIH<br />=v1cR<br />-----END PGP PUBLIC KEY BLOCK-----<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question</strong><br />
+				Post by: <strong>vincentvega45</strong> on <strong>July 15, 2013, 03:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				Still not sure how to use this. but here is my public key<br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG v2.0.20 (MingW32)<br /><br />mQENBFHgkYMBCADgjXMjFav5fQ3yu0CBRAPf1HTcLu2Fjbu5WNtLEhxKBeCoPB+O<br />koxg3iJyIv6YdqJEho1WzXjDYQxIx//wtqQDhxc9FkhJkvTY7ghLJlHYqZf7gYU8<br />YeLUKEJSsCsS8DCJ1VIUnQfeqbZZcXG+9bVKzX0e9BVDH53KgxJuaY7N1XSN6an/<br />po1AEJ1SrbbdJ7rmnGEvn7ZUdQ1sL4mjQ1He+K8ekk948KU8L6GFtdcpca/I16Lk<br />z19u5QKQrmGTD+99BC1rAYsP/pG95wUrPImuCtYJFhbEMD7bmpWpmMV/obQRXTfQ<br />+6jz3yyrXdlPtURdFTI/4KE4S+76FwRNwB81ABEBAAG0KXZpbmNlbnR2ZWdhNDUg<br />PHZpbmNlbnR2ZWdhNDVAdG9ybWFpbC5vcmc+iQE5BBMBAgAjBQJR4JGDAhsPBwsJ<br />CAcDAgEGFQgCCQoLBBYCAwECHgECF4AACgkQNOlwV+rg7BKquwf/RTAmnqA0JQTR<br />zyIEvVzd9/fOHrx+S2zkHxb6n27yHsfSvPv8GPiioMm3kyi9SdbDRGBaRpMchdXm<br />PTJz2iYJpLaA66vvPT8Qov7V83TR5vL/4e9MXmlExZtyG8HGZaUzBCXKI0AZQ8Ll<br />NhKRo3QtbUeRE1feqSsGeIPMazoStaZzvqqMcIYVMaWF6IdROTk/cyJ5i0yCL8Y/<br />YpQVa36Ym5jZn1vHxVZSuI2C0zoTj2L2D7Nd3jtwmRyVBGxVcB+uU2IMsdUZW0HU<br />BwXEqQgT5oiyN80C28Za4uHXePqd/ZBZn7jxC/xl8MpWHOje1EyUJ9guykfK+Sbf<br />GXvDvCsGWg==<br />=UiO7<br />-----END PGP PUBLIC KEY BLOCK-----<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question</strong><br />
+				Post by: <strong>vincentvega45</strong> on <strong>July 15, 2013, 03:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				ok sent a couple to you. So do I have to get the person that sent a PGP MESSAGE to put my public code on there key manager before I can read there message?<br />Thanks 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question</strong><br />
+				Post by: <strong>vincentvega45</strong> on <strong>July 15, 2013, 03:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				or do I need his public code?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question</strong><br />
+				Post by: <strong>tbart</strong> on <strong>July 15, 2013, 04:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=184616.msg1340425#msg1340425">Quote from: vincentvega45 on July 15, 2013, 03:46 am</a></div></div><blockquote class="bbc_standard_quote">ok sent a couple to you. So do I have to get the person that sent a PGP MESSAGE to put my public code on there key manager before I can read there message?<br />Thanks<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />don&#039;t know where you sent them, there&#039;s nothing in my PM box<br />2nd - it looks like you&#039;re using something other than gpg4usb<br />mine is &quot;Version: GnuPG v1.4.12 (MingW32)&quot;, so suspect you&#039;re using gpg4win, which i don&#039;t have<br /><br />download gpg4usb, install it and go back and read the &quot;paint by the numbers&quot; i posted above slowly and encrypt a msg using my public key<br /><br />gpg4usb is much more &quot;user friendly&quot; and intuitive than gpg4win<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question</strong><br />
+				Post by: <strong>vincentvega45</strong> on <strong>July 15, 2013, 04:21 am</strong>
+			</dt>
+			<dd class="postbody">
+				ok I am starting all over again.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question</strong><br />
+				Post by: <strong>vincentvega45</strong> on <strong>July 15, 2013, 04:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				ok new key<br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG v1.4.12 (MingW32)<br /><br />mQENBFHjeMQBCACybq3ZhE3NxqzaDQiqImqkQCQSqmE8d74js6MtyhBT9ktlG27g<br />onB79IZVzwCP7YAPHkUp+SDVF3JP/JZrMqIjCKKgHs+uJAqQMI6ORU1X0/TnqCrS<br />z/NBEoKXcXl75aS654Q1jQpHL8sDGgvaekXB5NSCTB9aXELRY3BV1DCGgOfDzx+4<br />OXykcj6y0ht7hOKYhwwCAhUvPP6Z6MwVNlAyPr5QPsvDp5jA1lnaTtg6n39QDVds<br />BmNqBrQg7AVdiVvDz8ssBUGBGWUCNc4WtZchXOD40sLfUoJCPFXb4t1rrpfF/c9e<br />luZ2iciXNQeNGlntKTxXk1Suo0x0Y9vvYI9dABEBAAG0HXZpbmNlbnR2ZWdhNDUg<br />PHZpbmNlbnR2ZWdhNDU+iQE+BBMBAgAoBQJR43jEAhsDBQkJZ038BgsJCAcDAgYV<br />CAIJCgsEFgIDAQIeAQIXgAAKCRCrNm0QXjXp2/UaB/4nkLtCM47iKeDMHAq2lu0T<br />wMYTCEdJghI7Al+p5R/DmMpf9MZeJS5XvKldTGo2yfF69PZu6RMXKT7O/3Usl0M1<br />pfoKxfHOZ+IYNXVikBdKy7413BmtwXKyiREGCXb08uPnJAyO6ol1oIGKnKA7Ngq+<br />XVr1O+q6LHfP/XxGDzNpEKHxTnDCCLXaDEreqQjxBBRAEOReRz6pSHa6VIBUlwXl<br />4hM2sC1fQtJsnTq+TBLIqp3zz/VrKFEyVjt7mBCDr1wp+OB7i3AA56QLscLKemmm<br />0BXVs1LgfVaVITE0zpffH5Jccgr3brjXjRA1R8wnFAIY8SP6nYtMs6MvE/4pGoTP<br />uQENBFHjeMQBCAC7PnEhf7awo4ye5akZ7yC2m8jEPf3bluVvgsJgspN41YmJsM1j<br />4z/0NpYlcSkw1Y2OeMB7KkOgkmyKkmBr/S26QQucIZf8Rc+Od/ADA1CfNR2NPCOD<br />FExXlpzHJhh+bkHK+y1oCKA2glN03OR4rhMgfpdSOT44xb4byWvuj3QM7ahwf4Ml<br />9LfCh0JzwKGha8qU4kye6ORxirzJqRu6GKBQ1f5ox2IIciOdG2kGaW5U/r7v5CLS<br />lII5rW6qDBpvsEdGo4w8AzQ9GlkN6pM2R+twNXPzPG+X4jd8O2mMqukxxsCxnkGD<br />DLmBFKAmSFYBtOn0GDZ23h5ZBC43o1Gg1tFXABEBAAGJASUEGAECAA8FAlHjeMQC<br />GwwFCQlnTfwACgkQqzZtEF416duOZgf9EwoKahDG/E25SuFBeuz5eg3wuPbzybgy<br />57+XAQLIciWwH8QUCcofwg+Pdme4beKXsDbpRe6XKGcyrBLirGkM/ZxqJiwYO/5F<br />kqIl+cD2xXtIf4PBA6L9lPxRRUEff/+ASh3UhNgXGKWA2bpD2eskn6HUpjgCiXZA<br />5VaXJ4lzcA6IF6ihc3+WJbLJVgkORYq57MsV0C93PsQekv+h0hxSUGHDwNWDv83e<br />SMcmk71w4paCoDz6bqaadWWWPPq//f0CK/ltTjFWHo+nhzScEq3l6FC9bkYEZNYg<br />XjC5AJAdktX2FD73rqgmgsGozPyUlNMko+nbh2FAP8YahPfiFW7+Hw==<br />=7n8g<br />-----END PGP PUBLIC KEY BLOCK---
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question</strong><br />
+				Post by: <strong>tbart</strong> on <strong>July 15, 2013, 05:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				below is a msg i encrypted using your public key - <br /><br />if you decrypt it sucessfuly, encrypt a test msg to me using my public key that i posted above<br /><br />btw, i&#039;ll be offline for the next 12 hours or so<br /><br />-----BEGIN PGP MESSAGE-----<br />Version: GnuPG v1.4.12 (MingW32)<br /><br />hQEMA1/qAxHnlmuyAQf/XsqNXvMJhJY9OHHJLvR3PlJVuKrhYVg5HWb/wV5sEH8X<br />1qA/J+x3nqpb0G31ScwLDP7m7WatNOnrRGNxE5QsI8RNJOxypIrus+DXIxlYhMT9<br />lOyoFv1D2WWLQ7hVzX5Wc4t/HgYTpIOMIZCAkf4iSi/3gTMw8RxZlVHhRau3FIWO<br />2d4zioTtOgHsvEkAOxrLJcnO/IKqAvZD2TI6bbFaJrFgqQmebnelCf/dzDTdZ/wi<br />XBbr3+7mkqQ890aGWgPT/UnTup6gdJwETpIqihuj1uH/4FKEn7QwHB0EcQSl13Fi<br />t5/M1kXclstpe6C1AXz+vp60bltmPDqZ05/IvhbYtdKWAcZLAj7pm0mTAP5RJ/il<br />z0cCj+5IgLc+oLoEMEAk+uJ5CTf5QahS5G0ZzUkwn5vnqjtnT6Phv2qJge6hLcDL<br />Kf7z1wLOgalcFCbH0Xz3mDKm/71+wHbKq3NiND4FI539UeCylxOXnljPBcfJLGUs<br />RNh+K6EFKXOug4B4+1ucJVZy4ejpiOXhfhTtMBF/T4BXJjMsjVVb<br />=ChwE<br />-----END PGP MESSAGE-----<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

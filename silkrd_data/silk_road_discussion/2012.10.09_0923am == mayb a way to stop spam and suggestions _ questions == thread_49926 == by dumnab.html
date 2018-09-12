@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=49926.0" />
+		<title>Print Page - mayb a way to stop spam &amp; suggestions / questions</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Silk Road discussion => Topic started by: dumnab on October 09, 2012, 09:23 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>mayb a way to stop spam &amp; suggestions / questions</strong><br />
+				Post by: <strong>dumnab</strong> on <strong>October 09, 2012, 09:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				hi!<br />maybe some pretty easy ways to stop spam that can improve security other places aswell<br /><br />example, this forum login, (unless changed recently).. when you try login, the forum script will POST&nbsp; something like this (cant remember exact-):&nbsp; &nbsp;<br />login.php?user=someUser&amp;pass=somePass&amp;hash=&lt;hash&gt;<br /><br />and that hash, I could not figure it out..unknown salt. I googled a few custom encryptions for SMF, standard ones and tried a few combinations myself, but it did not match, so I assumed this was a custom encryption made by SR staff with some hidden salt.<br />And this seems pretty foolproof, as it seems you need to POST that hash matching the user &amp; pass to be able to login.<br />But this is not the case.. as it is now, this hash seems useless? You can just POST the string like ?user=&lt;user&gt;&amp;pass=&lt;pass&gt;&amp;hash=&nbsp; and leave hash blank, and it still works. <br />So if this is indeed a custom encryption thing to improve security... it doesnt work<br /><br />For same reason its very easy to attack forum user accounts.. add to that the full public list (forum memberlist) where you can auto-extract all valuable usernames, just a lil script to automate logins with a decent wordlist.. and all accounts without complex passes should only take some time getting into.<br />I noticed you removed the login throttle earlier (? guess someone was hammering the login--) by doing that you effectively removed the crackers limits, and their scripts can now run at full speed 24/7 without delay<br /><br />So I suggest you just complete this hash security thing (?or whatever it is) for the login, having the browser/server do some hidden/secret calculation to generate the hash and require that to match user/pass and be sent along with username/password when logging in. This way it should not be possible to automate logins, posts etc. with very simple scripts.<br />gimme 5 min and Ill make a script that auto-registers accounts and spams every forum sections with thousands++++ posts to make a hell for mods to clean up without automated tools..stuff like that-&nbsp; too easy, and for sure its just a matter of time before shit like that happens too. <br /><br />May be many things can be fixed if you just fix that login hash feature? Sry if its fixed past weeks tho (but doubt), havent checked recently, or i misunderstood something.<br />It seems to already be in place, just not functioning..&nbsp; its very easy to hammer forum logins, automating everything and all... very easy to fix.&nbsp; &nbsp;Just the spam, just ask for a captcha or something more complicated should fix it too?<br />BTW., maybe add another thing in addition to captcha on SR site? login hammering there too is very possible.. theres loads of OCR software to automate solving captchas. The hardest ones (like Google&#039;s captcha), theres even websites where you can pay like $1 per 1000 captchas solved, and implement a feature in the cracker-script that auto-sends unsolved captchas to real people to solve! Captcha is never safe, so logins on SR is surely at risc too, for those who really wanna put effort in cracking it. More security there too would sound nice! even tho ppl are expected to have good passes already!<br /><br />when you watch the data the browser sends to the forum when logging in, it does seem a bit weird with that unknown sha1 hash... and that it seems to be completely useless, no point its there?<br />and why have memberlists with usernames, admin accounts ppl never see otherwise, full list of vendors on forum etc., lots of unneeded features and graphics. hide it all, just incase; no use for users only, for ppl to exploit it<br />or?<br /><br /><br />Also, as this forum is visible thru Google... why not take the full step and make SR main market searchengine friendly?&nbsp; make it visible and accessible thru clearweb search thru relays like tor2web etc, so the market can be accessible without TOR, an easy entry for first-time-users that could get them interested to look deeper, for ppl that otherwise wouldnt bother/know how to use TOR etc.&nbsp; Like PGP- available and reccomended.. but not required, taking this risc is up to the user. <br />Make the attractive menu on the frontpage without registration required, loginpage more friendly.. SEO optimize etc?&nbsp; why not!=)<br /><br /><br />dam this spam is annoying, should be many easy ways to fix!? Im sure many here will help if they can
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: mayb a way to stop spam &amp; suggestions / questions</strong><br />
+				Post by: <strong>microRNA</strong> on <strong>October 09, 2012, 09:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				please if any one knows any way to automatically prevent the spam i would really appreciate you suggesting it<br /><br />i deleted 200 threads earlier today, then am gone for thirty minutes and come back to another 180. i go through one by one and delete them<br /><br />does anyone know of a better way?
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

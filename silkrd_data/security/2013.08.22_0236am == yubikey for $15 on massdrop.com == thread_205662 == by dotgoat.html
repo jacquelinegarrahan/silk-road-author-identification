@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=205662.0" />
+		<title>Print Page - yubikey for $15 on massdrop.com</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: dotgoat on August 22, 2013, 02:36 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>yubikey for $15 on massdrop.com</strong><br />
+				Post by: <strong>dotgoat</strong> on <strong>August 22, 2013, 02:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				Not affiliated with them in any way but this may be of interest to people here.<br /><br />(clearnet) https://www.massdrop.com/buy/yubikey-standard/?mode=guest_open<br /><br />I got one a couple days ago to try out and then figured others may find it useful.&nbsp; If I understand this right you plug this into a usb slot, touch the button and it sends a random string that&#039;s a OTP the yubikey people can verify.&nbsp; Looks like you can also set it up in a second spot by I guess holding the button down longer.&nbsp; And one or both of those spots can instead of a changing OTP have a static password.<br /><br />(clearnet again) http://www.yubico.com/products/services-software/personalization-tools/static-password/<br /><br />I could see that plus the auto generate new code to be useful for something like tails.&nbsp; The login could be, using their example, &quot;Sunny33&quot; + whatever the yubikey gives.&nbsp; Then if you want to make it impossible to login (assuming you don&#039;t write down that static password somewhere) hold down the button for 10 seconds and you now have no way of logging in no matter how you&#039;re compelled to.<br /><br />I see mention of yubikey at mt. gox although I just use the google authenticator OTP thing.&nbsp; Maybe someone else with more experience with it can elaborate but for $15 I&#039;ll try it.<br /><br />FWIW that massdrop.com site may be useful to people here as they seem to have a lot of vapes and other &quot;aromatherapy&quot; and &quot;tobacco products&quot;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: yubikey for $15 on massdrop.com</strong><br />
+				Post by: <strong>dotgoat</strong> on <strong>August 22, 2013, 03:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				So looking at the technical info on this<br /><br />(the clearnets, you are has warning) http://www.yubico.com/products/yubikey-hardware/yubikey/technical-description/<br /><br />And that all makes sense.&nbsp; I&#039;m no crypto expert but I understand what and why they&#039;re doing what they&#039;re doing.<br /><br />My synopsis of it (hmm doesn&#039;t seem like bulleted lists work, at least [*] does nothing):<br /><br />Yubico (the people that make Yubikeys) store a private key in the yubikey in a way that can&#039;t be retrieved and also keeps a record of the key and the &quot;yubikey id&quot;.&nbsp; When you press the button it sends the key id and then an encrypted secret that contains &quot;random data from multiple sources&quot; and a counter.&nbsp; The server, having the same private key, decrypts that and makes sure it looks all right (I guess it can be validated somehow). It then checks the counter value and only accepts it if the counter on the yubikey is newer than what the server has.&nbsp; In that way old codes can&#039;t be reused.&nbsp; so if someone had a keylogger (assuming this would show up as keyboard presses) they would see a username and then some long string of characters.&nbsp; If they immediately try using that string of characters (assuming they&#039;re not man in the middle and instead just trying to replay it) they wouldn&#039;t be able to.<br /><br />I&#039;m kinda excited for this now and it&#039;s not just because I&#039;m not particularly sober at the moment ;)<br />&nbsp;<br />(edit) sorry for multiple posts like this, could have added it to initial one. I&#039;m used to the need to inflate my post count over in noob land :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: yubikey for $15 on massdrop.com</strong><br />
+				Post by: <strong>Shaggy Shaman</strong> on <strong>August 22, 2013, 10:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Nice FYI dotgoat! I&#039;ve been wanting to get one of these...<br /><br />SS
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

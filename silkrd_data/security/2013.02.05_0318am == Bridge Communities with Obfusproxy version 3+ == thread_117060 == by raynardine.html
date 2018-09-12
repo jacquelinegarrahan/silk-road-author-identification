@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=117060.0" />
+		<title>Print Page - Bridge Communities with Obfusproxy version 3+</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: raynardine on February 05, 2013, 03:18 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>raynardine</strong> on <strong>February 05, 2013, 03:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				Some features that are being considered among Tor developers are greatly expanding the concept of bridges, which are used to hide the fact that you are using tor to hostile networks you may be forced to use (for lack of better options).<br /><br />Currently, bridge relays do not do much. Bridges are still published to a centralized &quot;Bridge Authority&quot; controlled by the core developers, who are known to fraternize with various national governments, especially the USA, and are semi-cautiously published with a captcha used to make it slightly more difficult to innumerate all of the bridge relays.<br /><br />In response to overwhelming criticism over the centralized nature and vulnerability of the bridge authority server and possible (read: pretty much 100% certain) exploitation by national governments, especially the USA, of this centralized infrastructure.<br /><br />The new concept of a Bridge Community changes all of that.<br /><br />You run your own bridge authority, and possibly a pool of bridge relays, then publish the IP:port pairs to that bridge authority. Your community members can then use a few IP:port pairs you give them directly to connect to the bridge community. These bridges then relay all traffic for that community into the wider public relay pool.<br /><br />This is a lot more stealthy than the current system, and a lot harder to block or even detect, with things like protocol obfuscation.<br /><br />This is a steganographic technique which embeds tor protocol within a cover protocol, which is designed to look normal and routine.<br /><br />This is used with bridge relays which have the feature enabled.<br /><br />To keep up with the inevitable arms race that will ensue when obfusproxy becomes more common among normal tor users, obfusproxy version 3 uses &quot;pluggable transports&quot; where you can easily design a new module for exploiting unintended features in underlying cover protocols.<br /><br />So, as a tor bridge community administrator, you can give your users a couple of IP:port addresses and a few very recent pluggable transport modules in order to hide the fact that they are even using tor in the first place, much less allowing adversaries to observe your traffic and discern whom is communicating with whom.<br /><br />This is the future of tor, if the core tor developers have any brains.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>astor</strong> on <strong>February 05, 2013, 03:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117060.msg793077#msg793077">Quote from: raynardine on February 05, 2013, 03:18 am</a></div></div><blockquote class="bbc_standard_quote">In response to overwhelming criticism over the centralized nature and vulnerability of the bridge authority server and possible (read: pretty much 100% certain) exploitation by national governments, especially the USA, of this centralized infrastructure.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The USA doesn&#039;t block bridges, so how are they exploiting it? If you want to thwart traffic analysis by your government, use bridges/relays outside of your country to maximize jurisdictional barriers. Actually, the probability of all 3 of the relays in a circuit residing inside your jurisdiction is very small already. Tor relays are spread across 75 countries, so there&#039;s little the US or Chinese governments can do to correlate traffic, unless they get really lucky (yes, there are some sophisticated fingerprinting attacks but none have been discovered in the wild).<br /><br />Bridge enumeration is mainly a problem in China and other places that actively block connections to the Tor network.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117060.msg793077#msg793077">Quote from: raynardine on February 05, 2013, 03:18 am</a></div></div><blockquote class="bbc_standard_quote">The new concept of a Bridge Community changes all of that.<br /><br />You run your own bridge authority, and possibly a pool of bridge relays, then publish the IP:port pairs to that bridge authority. Your community members can then use a few IP:port pairs you give them directly to connect to the bridge community. These bridges then relay all traffic for that community into the wider public relay pool.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The is an interesting idea, and I&#039;d like to see how it works in practice.<br /><br />However, it seems to introduce a new problem: the bridge authority operator is linked to the users. I mean, how do they find out about the bridge authority besides some kind of prior knowledge of the operator? On the other hand, if anyone can find out about a bridge pool, what is to stop censorship regimes from finding out about it?<br /><br />It&#039;s similar to the problem that plagues exit guards, which haven&#039;t been implemented.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117060.msg793077#msg793077">Quote from: raynardine on February 05, 2013, 03:18 am</a></div></div><blockquote class="bbc_standard_quote">To keep up with the inevitable arms race that will ensue when obfusproxy becomes more common among normal tor users, obfusproxy version 3 uses &quot;pluggable transports&quot; where you can easily design a new module for exploiting unintended features in underlying cover protocols.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yeah, I can&#039;t wait for this to be standard.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>Bungee54</strong> on <strong>February 07, 2013, 10:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				sub
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>February 08, 2013, 02:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">The USA doesn&#039;t block bridges, so how are they exploiting it? If you want to thwart traffic analysis by your government, use bridges/relays outside of your country to maximize jurisdictional barriers. Actually, the probability of all 3 of the relays in a circuit residing inside your jurisdiction is very small already. Tor relays are spread across 75 countries, so there&#039;s little the US or Chinese governments can do to correlate traffic, unless they get really lucky (yes, there are some sophisticated fingerprinting attacks but none have been discovered in the wild).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I agree that the US is not much interested in bridges. Also although Tor project developers very frequently meet up with law enforcement and such, they are to the best of my ability to tell not in cooperation with law enforcement at all. Mostly they just tell them the basics of how Tor works, shit that all of us already know. Also Tor project very frequently gives the same information to a wide range of people, if I recall correctly they helped Wikileaks with their hidden service configuration as well. So they are pretty impartial about who they will talk about Tor with, but they are quite dedicated to Tor itself and keeping it as anonymous as they can for all who use it, and I do not think for one second that they will compromise Tor for anyone unless they are absolutely forced to (and even still there isn&#039;t much they can do , although they could be forced to give up bridge IP addresses perhaps. EFF lawyers back them up for free, so they have access to a pretty powerful group of lawyers to help defend them from legal attacks). <br /><br />I would also like to point out that although from an active internal perspective, the distribution of Tor nodes makes it unlikely for such an attacker to correlate traffic, but from a passive external point of view it is quite likely that the US government can correlate large amounts of Tor traffic. NSA has access to multiple Narus Insight super computers with direct access to major IX&#039;s in the USA, so it is very likely that they can externally monitor a lot of Tor traffic passing through nodes they don&#039;t own. Thankfully NSA is prohibited by law from using this intelligence against Americans who are not in contact with terrorist or foreign intelligence agencies, and I think they are actually restricted to only targeting terrorists and foreign intelligence agencies in the first place. Of course they do whatever the fuck they want, but they don&#039;t want to fuck with us.<br /><br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Bridge enumeration is mainly a problem in China and other places that actively block connections to the Tor network.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Mostly, although it can also be a problem for people trying to find bridge users to do other attacks, particularly known rough geolocation + Tor client enumeration &amp; geolocation to narrow in on shippers. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">However, it seems to introduce a new problem: the bridge authority operator is linked to the users. I mean, how do they find out about the bridge authority besides some kind of prior knowledge of the operator? On the other hand, if anyone can find out about a bridge pool, what is to stop censorship regimes from finding out about it?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Even more concerning is who runs these bridge pools? What stops an attacker from purporting to run such a pool, but only providing compromised nodes that they control? At least when we use the official Tor bridge pools, we know that anyone is free to publish a legitimate bridge, and that there is a chance we will get their legitimate bridge when we request bridge addresses. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">It&#039;s similar to the problem that plagues exit guards, which haven&#039;t been implemented.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The biggest problem with exit guards is that they do massive damage to Tor&#039;s ability to prevent traffic linkability. The Tor devs will never implement exit guards, historically preventing exit traffic linkability has been their primary focus. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>astor</strong> on <strong>February 08, 2013, 03:26 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117060.msg805813#msg805813">Quote from: kmfkewm on February 08, 2013, 02:19 pm</a></div></div><blockquote class="bbc_standard_quote">Also although Tor project developers very frequently meet up with law enforcement and such, they are to the best of my ability to tell not in cooperation with law enforcement at all. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Honestly, I think they do that to keep Tor technology from getting banned. :)<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117060.msg805813#msg805813">Quote from: kmfkewm on February 08, 2013, 02:19 pm</a></div></div><blockquote class="bbc_standard_quote">Even more concerning is who runs these bridge pools? What stops an attacker from purporting to run such a pool, but only providing compromised nodes that they control? At least when we use the official Tor bridge pools, we know that anyone is free to publish a legitimate bridge, and that there is a chance we will get their legitimate bridge when we request bridge addresses. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Very good point.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>astor</strong> on <strong>February 08, 2013, 03:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117060.msg806012#msg806012">Quote from: astor on February 08, 2013, 03:26 pm</a></div></div><blockquote class="bbc_standard_quote">Honestly, I think they do that to keep Tor technology from getting banned. :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It also helps relay operators when LE knows what Tor is and doesn&#039;t go on useless raids.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>summer</strong> on <strong>February 08, 2013, 07:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				My problem with bridges is that it&#039;s still possible to prove that I was connected to the Tor network at a given time, even if I used bridges, because my ISP has the list of IPs I was connected to, and LEA can check the IP&#039;s by trying to use them as a bridge in Tor.<br /><br />So if LEA knows that someone was blogging some shit&nbsp; through Tor, and somehow they find me, then they check the the IP addresses I was connected to when those blog posts were made. Then they try to use those IPs as a bridge in Tor, if it works then they know I was using Tor at every single time when those posts were made, this is more than enough to put me in jail here where I live.<br /><br />Maybe if the bridge IPs would be distributed along with a password, and without the password the bridge would not reveal itself as a bridge would solve this problem.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>astor</strong> on <strong>February 08, 2013, 07:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				ISPs don&#039;t generally log the sites you visit unless LE specifically requests it. If LE is watching your internet connection, you&#039;re probably&nbsp; fucked anyway. The purpose of Tor is to prevent them from identifying you. <br /><br />You&#039;re thinking about this from your perspective, &quot;I&#039;m using Tor and somebody can see that.&quot; You have to think about it from their perspective, &quot;Somebody is blogging, where the fuck are they?&quot; If you use Tor correctly and don&#039;t reveal info about yourself, they will never be in a position to watch your internet connection, because they won&#039;t know where to look.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>midas</strong> on <strong>February 08, 2013, 09:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117060.msg806614#msg806614">Quote from: astor on February 08, 2013, 07:55 pm</a></div></div><blockquote class="bbc_standard_quote">ISPs don&#039;t generally log the sites you visit unless LE specifically requests it. If LE is watching your internet connection, you&#039;re probably&nbsp; fucked anyway. The purpose of Tor is to prevent them from identifying you. <br /><br />You&#039;re thinking about this from your perspective, &quot;I&#039;m using Tor and somebody can see that.&quot; You have to think about it from their perspective, &quot;Somebody is blogging, where the fuck are they?&quot; If you use Tor correctly and don&#039;t reveal info about yourself, they will never be in a position to watch your internet connection, because they won&#039;t know where to look.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />But what about shippers? LEA could correlate some shipments and search people using TOR in some specific area, maybe a small town. Can you protect yourself by using bridges, so LEA can&#039;t contact ISPs and ask them for users using TOR? If so, how? I can&#039;t find easy-to-follow info on TOR website.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>astor</strong> on <strong>February 08, 2013, 09:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				That&#039;s true, it&#039;s different for shippers. They should be taking added security measures. It is easy to get a list of the public relays, and there are only about 800 entry guards, so LE could contact the main ISPs of that city and ask for all users who connect to those IP addresses. The density of Tor users is fairly low, so it would be a short list. Getting all the bridges is a lot harder, but not impossible. Bridges could still be useful by making LE&#039;s job harder. A VPN also might help in that situation, but you would want to get one outside of your country.<br /><br />A private, unpublished bridge with obfuscation would be the safest. Rent some VPSes in Iceland or Malaysia and set up bridges, LE won&#039;t know to look at those. I mean, connections to those IPs will be lost in the tens of thousands of other IP addresses that users in that city connect to on a daily basis.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>midas</strong> on <strong>February 08, 2013, 10:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				For clearnet I use a quite good VPN service. It&#039;s located in countries that respect privacy, freedom and don&#039;t keep logs and it&#039;s an IP shared with thousand of clients. Can I use it as a bridge for TOR?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>astor</strong> on <strong>February 09, 2013, 12:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				No, but you could use it to connect to a bridge.<br /><br />I don&#039;t see the point of that, though. If you are confident that your VPN doesn&#039;t keep logs, you might as well connect to public relays through it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>summer</strong> on <strong>February 09, 2013, 02:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Here where I live ISP logs the visited websites IP address.<br />But I just realized how stupid was the idea to ask for a password, because LEA can still try to use the IP as a bridge, and say : hey it&#039;s asking for a password so it must be a bridge.<br />But there must be a solution for this.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>February 09, 2013, 05:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117060.msg806614#msg806614">Quote from: astor on February 08, 2013, 07:55 pm</a></div></div><blockquote class="bbc_standard_quote">ISPs don&#039;t generally log the sites you visit unless LE specifically requests it. If LE is watching your internet connection, you&#039;re probably&nbsp; fucked anyway. The purpose of Tor is to prevent them from identifying you. <br /><br />You&#039;re thinking about this from your perspective, &quot;I&#039;m using Tor and somebody can see that.&quot; You have to think about it from their perspective, &quot;Somebody is blogging, where the fuck are they?&quot; If you use Tor correctly and don&#039;t reveal info about yourself, they will never be in a position to watch your internet connection, because they won&#039;t know where to look.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Quite a few countries log all visited websites for months to years.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Here where I live ISP logs the visited websites IP address.<br />But I just realized how stupid was the idea to ask for a password, because LEA can still try to use the IP as a bridge, and say : hey it&#039;s asking for a password so it must be a bridge.<br />But there must be a solution for this.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Tor devs have been aware of the problem you brought up for quite a while, and have proposed implementing authentication systems to protect from this. No idea the status of this though. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Bridge Communities with Obfusproxy version 3+</strong><br />
+				Post by: <strong>Stray Cat</strong> on <strong>February 10, 2013, 02:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117060.msg806859#msg806859">Quote from: midas on February 08, 2013, 09:41 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117060.msg806614#msg806614">Quote from: astor on February 08, 2013, 07:55 pm</a></div></div><blockquote class="bbc_alternate_quote">ISPs don&#039;t generally log the sites you visit unless LE specifically requests it. If LE is watching your internet connection, you&#039;re probably&nbsp; fucked anyway. The purpose of Tor is to prevent them from identifying you. <br /><br />You&#039;re thinking about this from your perspective, &quot;I&#039;m using Tor and somebody can see that.&quot; You have to think about it from their perspective, &quot;Somebody is blogging, where the fuck are they?&quot; If you use Tor correctly and don&#039;t reveal info about yourself, they will never be in a position to watch your internet connection, because they won&#039;t know where to look.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />But what about shippers? LEA could correlate some shipments and search people using TOR in some specific area, maybe a small town. Can you protect yourself by using bridges, so LEA can&#039;t contact ISPs and ask them for users using TOR? If so, how? I can&#039;t find easy-to-follow info on TOR website.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=117060.msg806887#msg806887">Quote from: astor on February 08, 2013, 09:54 pm</a></div></div><blockquote class="bbc_standard_quote">That&#039;s true, it&#039;s different for shippers. They should be taking added security measures. It is easy to get a list of the public relays, and there are only about 800 entry guards, so LE could contact the main ISPs of that city and ask for all users who connect to those IP addresses. The density of Tor users is fairly low, so it would be a short list. Getting all the bridges is a lot harder, but not impossible. Bridges could still be useful by making LE&#039;s job harder. A VPN also might help in that situation, but you would want to get one outside of your country.<br /><br />A private, unpublished bridge with obfuscation would be the safest. Rent some VPSes in Iceland or Malaysia and set up bridges, LE won&#039;t know to look at those. I mean, connections to those IPs will be lost in the tens of thousands of other IP addresses that users in that city connect to on a daily basis.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thank you midas and thank you astor.&nbsp; I have been needing this information for some time but unable to phrase the question so, very many thanks!
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=95996.0" />
+		<title>Print Page - Issue with PGP</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: laks on December 26, 2012, 01:18 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Issue with PGP</strong><br />
+				Post by: <strong>laks</strong> on <strong>December 26, 2012, 01:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				SO I thought I figured out PGP.. but a vendor told me it wasn&#039;t working. When I try and decrypt a message myself, it tells me &quot;clipboard contained no valid encrypted data&quot; except the stupid fucking program just encrypted it seconds before. I&#039;ve been at this for over an hour and making this thread was my last resort. Sorry if this doesn&#039;t make sense, I still have a lot to learn.<br /><br />Thank you for any help anybody can provide.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Issue with PGP</strong><br />
+				Post by: <strong>astor</strong> on <strong>December 26, 2012, 01:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				The #1 reason why this happens is because a valid PGP block must have five dashes before and after the text on the BEGIN and END lines, and missing a single dash will cause it to be unrecognized by the PGP program. You may have missed the first or last dash when copying, or the vendor may have missed the first or last dash when pasting the message. This happened to someone the other day. They were copying all the text, but the vendor had only posted 4 dashes before the text on the BEGIN line. You need to count the dashes and manually add them if there are fewer than five on each side. It should look like this<br /><br />-----BEGIN PGP MESSAGE-----<br /><br />&lt;encrypted message&gt;<br /><br />-----END PGP MESSAGE-----<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Issue with PGP</strong><br />
+				Post by: <strong>Wadozo</strong> on <strong>December 26, 2012, 01:40 am</strong>
+			</dt>
+			<dd class="postbody">
+				laks, Here is a basic, simple guide I wrote, which should help you out if your using a Windows system (Gpg4win)<br />You could also use gpg4usb. It has a simple interface and is easier to use for beginners.<br /><br />1. Copy the Public Key of the person you want to send a message to.<br />2. Open a text editor, such as Notepad, and paste the Public Key. Name the file and save it to your desired location on your PC.<br />3. Open GPA (Gpg4win), click IMPORT, locate the file you just saved with the Public Key in it, and double click it. It will then show up in KEY MANAGER where it is stored for future use along with any other Public Keys you wish to keep.<br />4. Then click on CLIPBOARD, the 2nd icon in from the right at the top of the page. Type the message you wish to send to the recipient and then click ENCRYPT. Click on the Public Key of the person your sending the message to (should now be highlighted), then click OK at the bottom.<br />5. Then copy the encrypted message and paste it in a PM to the recipient and send it,<br />6. REMEMBER - Include your Own Public Key in this message if you wish to receive an encrypted response from the recipient. You can find this by RIGHT-CLICKING your key in KEY MANAGER, then copy/pasting it. :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Issue with PGP</strong><br />
+				Post by: <strong>astor</strong> on <strong>December 26, 2012, 01:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				Also, are you using GPG4Win? The general consensus here is there it sucks.<br /><br />Use GPG4USB instead: http://32yehzkk7jflf6r2.onion/gpg4usb/
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Issue with PGP</strong><br />
+				Post by: <strong>laks</strong> on <strong>December 26, 2012, 02:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for your help guys, hopefully it works. If anyone cares to let me test, message me your public key and I&#039;ll see if it works.<br /><br />Yeah astor I use GPG4Win. I&#039;ll give GPG4USB a try. Thanks a ton!<br /><br />Thanks again.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Issue with PGP</strong><br />
+				Post by: <strong>Wadozo</strong> on <strong>December 26, 2012, 02:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG v2.0.17 (MingW32)<br /><br />mQENBFBcJAsBCADLOqbDaFmbfetkVE1jJp99cqCEsi8jh3IiEq1gk5AtEJdq97W7<br />D6gfXRLpsdNOgrDEh1c0jPU2BYsN2Z6CH4hQZzgVVDwefc1Wxi0kQmFYdEFjG5xa<br />0xj8ZJwe1+YI4h0QZ5a4tTQ9ky0Mz0grKkXVDLmbMrQG/9F+6TGTeDmEPp5Nx/WP<br />CsjxtckkS3siJfzPTpSrSRSXVZP07zhAfArXPhkSQl6s8AKV/20XaKpJbIK5b2El<br />j8kLUD9BD5AtakK2+UxxxW/imh6TfXKILm4v9MvDTBWyTC7s49ZDxPRJB76UuaCZ<br />x9gXNffUEn72L53C8N9XnI6+EC0l1EgfzjNFABEBAAG0G3dhZG96byA8d2Fkb3pv<br />QHRvcm1haWwub3JnPokBOAQTAQIAIgUCUFwkCwIbAwYLCQgHAwIGFQgCCQoLBBYC<br />AwECHgECF4AACgkQ/77zq11zEqFvDggAiGswmDXEzbWjC2X2VIeaHmvAr1PN3Pxj<br />AgIPnYRaXjLe95QS7d09VtWyyYIX4Al6aUHRFUFlXV7HmnZcnUXhG0+Ch9Joxhci<br />7xnekm8mdGRdr4n0+LGWUxBOvLAzYyF3Nyu9m9yJ7T+gffuS/+YlHowPsDeIbD80<br />RgLcEXIlaj8EfQzAc2o8utpa6g80FnIuhMQ7M/2IlGzGrsYoZ4u3AA1n9ZqP7EbB<br />DTyg4y7BVrw9USF2W1FU7myYDj/BeIbozjAsmCPH2MLazk7aRwdDckNAmz66kJNw<br />l47SvyTRBB9W+D68QDDsHOeHA99Ux0F63HD/9TPgSGoPirhhwIDlcLkBDQRQXCQL<br />AQgA8WkHIG2+YR1ic3M0ZAOu2tZyr6XVUjdjfv+dpzvowMRD3vCH5N0Gu3vv5eZs<br />DhRQp4aDnqigLxPpFNQt0vEhwBYcIttVAyn24JtrEY4BJve7iTZ6AJAN5D7xywrP<br />gPIER3+bW7UdbC5YaX1HbMJrnhUzJhvp2iQCGjqco64e7C8CqcbZp1jKJhRGWgxw<br />q6akXSNO+AGcWUS5OIl8A/F1Pjy+xTmnhDY7Ye8sQS5ujpYqcvutguMkEY4FALvt<br />WWORXu9nJpK0621Bn2QWWTspd5g4AFd7Xmm1Rg1BQXVt2mMbbgXT1xZECReoWuIX<br />h7rPpUyv9DqZejy/IiU/pS0yAwARAQABiQEfBBgBAgAJBQJQXCQLAhsMAAoJEP++<br />86tdcxKhv9wH/0wE0p/ReeF6fMAMreLd7qTfu7TC6h0MAtx/pCpI4j2JRD/3JSA7<br />NuotNAcgqhuaJFF/JCNvCoyuy50d+HgMYg2RapWG9l8bDHHvV7oO+AEjid2L5gO7<br />KX+USBWnqRdTNz1+s67xTOZZyFWC5yCrL0XNnmZKy2FNYeOMOIgmKGyjwDpuIE+R<br />rC8i5ya2ATCO6Nv7jCdFr0m6VWEmYWMQb2oslH859ZhnWolu1qE5j9IMAZr+mNcd<br />ECX0jYt7bYfvVTvGwrP4HHGCbap4mDOKd8LAsHQmVhpmdKtTUsR1LHQLNPekn/3M<br />vtXu9OB5ILgZJx+yYgJY2gzNybeWQr7SFN0=<br />=jiq+<br />-----END PGP PUBLIC KEY BLOCK-----<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Issue with PGP</strong><br />
+				Post by: <strong>laks</strong> on <strong>December 26, 2012, 03:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				-----BEGIN PGP MESSAGE-----<br />Version: GnuPG v1.4.12 (MingW32)<br /><br />hQEMA8/6czc2evmNAQgAgzeJJ0Z7C5kqW1CZ+WbusNC+0tbIdAfMFLzNponf5JMA<br />rXhote8Qc8wxgyl8UyhUAqW+wyNy0xV8U1a61gUdvCZPFBXS9HQ4EBywIhXZ+gnq<br />XOK5178tChoq1v4wsu8wQQSmkiLMr8J8BE7Uv0ckyKXuGM0jabNrU6ZBDApKPNbf<br />goBV/HdMV4Q4PzlgNt2tlteOot7axmhWi7An7Iq9qnNhNuVWDRJ4mKjVIfdlsU0O<br />ymj0c4TNFpsEWEeW5x2W+a7iLFdHxTufEgI245Egr6klGVKDkqLB33MEK8/+PSUb<br />NnPnlFSaTV9lVwcF/dzo+lfxs2PeOtoHYw6wdz0sndLqAR9NBWEinmyB8b5t3CJb<br />ZW7an62LwHpgz1s4sitbtggBGXSz9KdbDfQXuLMAkgmCc7MMb3ijmoemZ/MzZuGg<br />HAgo6zoGru1hJmsoasz2wp+IcfkgtopNERYto6l5Bg0bZreNI+8Pcaz1J6gA85VO<br />Wy4jNGMXH8mkBtm3i9tQ5IdV5jBi+LU0NtYGKkKohDALcHm7sMuEYlJAE5NLbqmu<br />K+Lj4JGRaToEJXT1fA3Q424FToruWeFiZV74IDl2TNsNJWYJziibdMDFlJujNDYB<br />wMKlqWjfWXU2TT7feEpfhX4gk6xodazJfcNYmCsC36v1U8mF222Q/xpmHd1rkodq<br />H8JavvR9V8DseQAQ3Z7kk65RCAkyovgkUqwGj5VhSVGWt1bYDbYSo3sF9RbUAU4z<br />tpNpRoIa5r8bOe6wSvQV/7uDuVXBPBElHtLNxfEn5EJT/25n6IYHQ9gQhBVcwyLT<br />nwHvk35j0KJrWNkgbMquvlQhuxK8T3x6xRZcpyQf9oBXyMMFfyw+r8u805ZFOux3<br />zYa+q2fdzmTNKIei4TyVk5/UQB+yW46spgu2bnbFkmLDhkaJWHp/SAqkQLkQr3Lc<br />RLPpkzXtPTL9uqsBHYGwnYMHasqo/qUhYgY7i4LSjZW44dPJMDTsqWFxHfUxCM9b<br />I1DCWAlTbLLEzIF61MdehCqsE60m4p2xVKDelU7OTma65n7gm467+iursC2ioGUs<br />updvR3xiEiWzzsqE6N0UL/IdtJsaXQytXexPl3Sc+NGiDfmeAeALsMUnOLM/z+v5<br />4Kg+gew5/h0Bh7D0DypG+KW2V7W5kkdG+J8MUui2beZw7XmGpCQSr6FALKMxyALz<br />4V/6LZqD3yoq8U9trR/DFKc15XM/xRBXf96B+W8yPlNzcdMgRMmzzsB1Sa3HCSNz<br />jKUnZdS5eELEWo7Qwfh2p2GqyWVBueL4vQKWkXzW876nP5twFlnvRdPbUVErVUTx<br />eS8dzt/j0ZBUKMjW/VUPyeumDRRtucv7D6ZnnUCDFOsQv8Tbkmdboq4LQNRv3MZR<br />iFZePZOwDmifGEVxhYqNIVAGDqtLEXcDzXUM8HM737LYUZQcVoSVG2yAPyFkSRtv<br />5M3QLNseTQuPV0KZT4DUaGewj3QLuhjWpPCqKEZeRyo2CujWibUUTcEfmB+vwUJc<br />SRFlvfqQMXOo/ukSzJygNvCMmHFkc5JvCaDdXxEFekIkDivt8hwMD+R5R6I0p9Un<br />W91vvKStEvxKsptqWFv/D1ZVxiJ5joXgyi86NPS7+Y3vUCDnVAdiSfOebamrkLCX<br />PY2LWFChVdnksifoKPJc5d4kyAt8RzSbDkP+hL6XBA+T+yGSZb7RZRaeK/kYDxpN<br />GMC9EgSODWJVxHlEZ9wLh0A1f9bi4zpZvC2FB3DJgWl/lmEnuCElOQRdNELyYAGE<br />vOrafOgine6kC/qDM1XX1r+QPMozzwca+RtAdt0/D920l9dv8XiRVkBL79nOtmE8<br />Wp+Vpdp9JaMzR7KGCZBwaZb+XZPGsRoIiY4LDmJx+5g9gsxHgNZLQ9l0u7H+ocsF<br />4BRsxZzWDfoT6G9g8QOeXFe5O+RpckLh3kD1GLl25WDWi3Xb0GbCp50wAPUm1PQC<br />SBKuotGimW0ReBiapM5ANzaBb4AG3E9xeSID7YqdLiMMK7fK85Nk8AR2MCieOKCH<br />POoWhizS1xZce0MRczGVzcS8b4FGZ3wzndU1+Uwv0hMO7fbFDANEGRYa5XGrt/Kh<br />lncgrxJE6R+C5eN4OkI0F7SS7yISVcgfTUYKDZpAYTSMZCy7FHfrc6IFhhb2zQx9<br />G7p6gIg05HFGA3ivAWpXf8UnSHXqMT8YRIsGnyznwL+Yg9CIeg9J73AMvoWGiGTC<br />=CdHc<br />-----END PGP MESSAGE-----<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Issue with PGP</strong><br />
+				Post by: <strong>Wadozo</strong> on <strong>December 26, 2012, 04:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				Sorry laks, I&#039;ve given you my old Public key by mistake. This is my new Public key below.<br /><br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG v1.4.12 (MingW32)<br /><br />mQINBFDaedIBEACo1hmYbrR9IjDuFBVVT9KUVCYIRatjJ9BVE/EXmeSob/czo4E9<br />eTTC7kS5KwEwzNKtu4HxqMX21gnaKP0dC1opo3PVQtkQ10FJZuw6JRCSm3AnoUyZ<br />QJHT0kGiDRdqz9HGuNiHBY3LiHZvXWT0Jxnu5XZvKHY41HMcYnqlqvrP4imG7QGr<br />zd9ThNVfyRCzBxW+zrG6KxVchCxltPKPx7zwMyXKYIN8tM5NvL3z063+JXdF631S<br />m75cOz+KTa80ua5YwcbCRiR+7SwPLT/FRiS+1hBlStRIpQkxoYinqBoGuY02FVQC<br />mR1AMFgvtjvhPWhOjfEHLkyjRdrFWkHxPMfaqFB4BtKMs8KS8XwISNTaVzZCMSLv<br />FaoGURHBTeXFhg2hmZxCD0AyCArLAflU2rt/xRv/ATlBiIP0DaB/I+RByMVbgKCX<br />IMlalNZAwUZrt+VGGQAEsw/5YaJ5rBqB5bEed7zTTSYdDkCWq1VpdLkvVf6XguDr<br />wk/ZpmFGPnhM2p5U7L1P/ut1rU+mjlqVcs0wJ7vgt9SOMeDyiA9f1gzTouGw8NmW<br />7mDG1Ws6a5hbPXY5fI/8XV3Aet/CWfcf8ZOql0xeGD/VdZzpjj1Boe6O+rqvFWZQ<br />N7WGYqxhvJU5GodwtDaxZ7+B6pAR9cXZPolAwOAE0iJJhpSWB3+14FkuVwARAQAB<br />tBtXYWRvem8gPHdhZG96b0B0b3JtYWlsLm9yZz6JAjgEEwECACIFAlDaedICGwMG<br />CwkIBwMCBhUIAgkKCwQWAgMBAh4BAheAAAoJEEFS6td50+qXs74P/j2fhCmvJhTi<br />iBfAZoG1lhtoLDVgVMPEwwaTVg2MMwuDaawNu3Xrb6buzBISemX1Y2HE666rfqVy<br />JF08dZ95JCspC6vANsMC66z+PcxL6X4LH58UjS/3FrbGXE1WOQi4/eB9jTvC0vwX<br />fTSmJrsdVjxsQFPy5Zeu4vuOlzL7KliUzG5BaFsoc1yoJ25JU9k3oplh49pVLdSn<br />jswSby0m7wYv1jVJfkr0SYXqUrEEUBlMsC0IugPs6TenUDodUTbXCnE2Qa5lIf1s<br />kLaa0MMrEBpNG7bqiN+1c0HvJkOdE52A7PgPypBP7aDW0J1sQxSYBPpMhMtLBDy1<br />3fKRUTI6RHBkA4cUfZOPaSwTieRMJkQ+BtjrJZ7RIVXxruhLNiyuQgPrZJcIgJzD<br />w9nB7/ycI/w0jxElHwdldiqS2lnOAixDAT+kddZJnlDwn9ZbU9VXTJ/HcPNuL6H9<br />0Q5QPwHaBPlJJXi1g/jCfYS+Dik0a8QHXqxVHRazH0GAzRLa12W1Oue8RatD86lX<br />BpXAJ3R0WVAxvxN0Ex25+ohjwXKqKIuaj+LlL/OqcbbKQJUcLLebypWnUuYJFUeX<br />fcICpYd9VLxJEE2g+ATUNaCE9+HgynCbYseby76cAICNT8Z9fjvsqfZl6H9XJPz9<br />c0Zd/ZrBiQv3TeTevpAatUHI+rP6DtHOuQINBFDaedIBEADn3xbEOK6AAwhddFs7<br />SLMbgRI6imX2OPUcT+J+xvGlTPjPtL/3a+JibJtsq4ie8GglHxHalgA978uNSs8x<br />xiF8w5OWOjAMp74YAMgF9nuE8q4k07jQbSg5Z8JUwkMlyf91gADbMigXnEoqNgwk<br />fnZWOGC5d41MrReFNT+RzdGF/LSsl76cNI+Rv4A+b5g5Nb+/h7zqVjMvB22dAlZI<br />2cal7J9eVksFg6SBMsH0s/jYdf6Vyy48b+C/MAPHeYy78Qd105tqHr4ooL0GduAH<br />dVms8hZnIvZFRjiAOKVH6W/cQnLuUPxLn5TDVO6KjaU0+yY6kvrJtlzUcdbRVlxp<br />T9lIt1iBcIg3aUZKWjGXZKE9neGjvT5+qDCelsixS46AKZ8zbjD+pJIdrh2IbMZf<br />tPFRDZAPVQ2ZqzP6ni9IfTK8q3C7GfbmPnoMuYn7f5IPSabzEBNQ3AzyQwD09veu<br />34Rh6SersHidmdKH4DUY6i9nHSPduaz1Zsv/OJt6ERR1KzX5SAVLyGVolMUOjFse<br />Vr1Kuw+coGocKeZ+Ik2Y4Ip1ouL3WOkrYRLR2J7dLel9zHKdMkVD+K/aR/JAtHXu<br />GMShG5un5DbV87O3UUy83NLJjd5hEXa3UoQt4aHw+5e/9w3+c721NKQN5goYy1St<br />b0ggGJdwmvDxi8GOjJRkjcZdowARAQABiQIfBBgBAgAJBQJQ2nnSAhsMAAoJEEFS<br />6td50+qXRJ4P/11T/icXdJc9GOklOPhkK5dLfXm92q14qMVbbNUy122QXd8+o1FN<br />ASa8SRrrk28PxHkN536pifytJI8G+BQMo5jZJHr5PJ2ht4VjbO8uNfebqIxNHDFo<br />wsdN+44KLOMxdZKc1LvQapoNA2G4p04q0cUA+vizeVJhc2LaS9skv+aqNCHVTZ11<br />TWEZGPw54OVU1R02GMGWR8xhZ8TU749iR41F3IylTmMvdZMOQdiL6MF15KgLk3re<br />cb043+GALYX4IQqZPBj0f+zkcGIK+DGOCz700pbpaB/YdBGW1gEtmLw5zbymYc9K<br />RpcmfcIo+ww+AktLJHqS2Ns6c9LZUk0VK0/Ik4+MM/M7kZtPsBtkaUZ3CwvOjFXi<br />K1IeW9R3lMcnwZ0qhKxFdpvKMZ2oPI2BjFibdeHI2NrWKWqlE3GlyOLbOpf+jfKS<br />GNnWya5WHDZb0kLX1Us22qQY6guBBqN4ToAcmDJ3SBltWmtmhSMgVtoZOF2GerTT<br />lkdSTpMwGXBYvyQsyRp4l86eWia0MH77dEqotzM9mZZCIEZmL/rSj3QY4jTQO2IE<br />gCVNKuPp4TSbGF63wBOvoAQqYrraHjks6BohOLWidxbCZeuhZuMeZ4O4E23iij2p<br />ffalSoPwCKYkzluWxD4+wPfCjOzhil7oNs8by/czDBaSyS+YwAUbpsfd<br />=WvRQ<br />-----END PGP PUBLIC KEY BLOCK-----<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Issue with PGP</strong><br />
+				Post by: <strong>laks</strong> on <strong>December 26, 2012, 06:21 am</strong>
+			</dt>
+			<dd class="postbody">
+				Not a problem:<br /><br />-----BEGIN PGP MESSAGE-----<br />Version: GnuPG v1.4.12 (MingW32)<br /><br />hQIMA5gnIW1kKA2DAQ/+L2+b4qe+LnwWWZ93dMppDfYV9yO5M2UHB8DlF291kd1a<br />mCQYk6LDJitbQV1otnmMKZrVp4vgohnO84ZGMpAkICdWG0Pgp3TER0dSuiTrpudI<br />A58Qqy9m0C0Xmr7wJdBlxxJLMvqXMGt0C251++wznG9kLW+J97W83bCFZu73oMJX<br />LvQv3vLs4mk7KPZ+059QdWKg5oE1/ovJmV2Y7JKOXREMbbAQ6caWuXSZX6zKOki2<br />R3GhOTdB2fdbgCaUKU38wP0kDPOgQq/g0UPoK95O0Nu9qXddiGVCHWSu+Xw0798H<br />WjFcEoeDpkDJ9sBIf7nyC9/qfNlXmZ8j/s+U7cGoTTS3cKUztH2JW4uGK2Kv7Z1c<br />iInRlhlGBlHQYb0ZN8TJPkgEIOSkxQEqhoVCPMtE6vJjIKu5bJ6868Qql/gmq87Q<br />//prTyCww6lUQ25jowmUBQun9KcHQltceZlY45souLINLrUE3g1NHXu75EIwDVVd<br />YO5XdJSiE7KAjRloy6StRiNRc0ih7/c132K2QNu8B9fYoMpmHnHefC+lknKFnYjv<br />ns5ajMWnJXK0jHkwOHypNuRzPnxOkPqSp/1YwpHhsoJGgOD6nDRG4fEHLkjieOFQ<br />OhaRY1pzqitA42Uu92cllxpnl0G6sLKyNiRc11yz9jygYvCVeSAhj6dtSuT57QTS<br />6gF5U7NhOlrL9xXxqKMnjTFqAX4B25fnQH4t8qfKwsiyqGGi1OqmUwEwUjRnU0vM<br />sdN8mSchmuWQrbe3MD/u+rTtQEqcFOsYHDWcvfjv8PDR2y16NK4y7b4zSQ1z1oFG<br />dSx7a94JAKWqb3P6g2ectxWQ61/Iie8EQwDLhMKRWgRFYzjyKCdbEMdbd0Awfiz3<br />r/Xhv4fFEr8Zy+nV6kGROLXx8d0XmaH/qPfSdHlWuTSwSU+sXJp0RTuCwVPuYntp<br />MM958wFJCZm/FApWDatjWVJ2VV82eHQrTcjkCnXZ5cID+uHUgLLFIUO/7E7dMMME<br />c8tZ9aAGE1PLDS7NsWndSLhW9rNd7iXQEhPazJn2segr/0MwIUK2C8Roryp9m9Gf<br />Ua1IohS9SI05wfVCGXil7iY0+ERTHdo84JfNYELNu/6zaCVWIi6Vxug2tpUQ5t3R<br />aD5IZ1lo5it3KQKyMfDTgmOdWw+C9sE3kjx9EntgLdiSxQTJX1hzoyondBDSxhtn<br />3auqIPAXsW316oA6/SkQaczvT2XjfcskU8BkcqUmsyexj0Ax7vDjQGHCTnTKmrU3<br />b96bwjRfth1sk0zAfA65X1TJ9TMVNTiaCKyUmeBOZFsgU9aNQbu7WAMEvqgLFerO<br />/QLvYrcRWc7MRoPHxfmRjjZZ1cUQ/gHrdTt1Yzt8xhJfesMW08ghfSaw9LW/o3Dg<br />W4SrNkZ0imLMbTcLrmZMN4Xwrh+rvaEJ5abfIj6qr1bCX/X5oeuOWdY365aiUYhM<br />8tkJzezC3IBe/xnsxdpAcRuRZCaNf2t5js7Kadm5riErIFGKzj3rVEK16vQqUlee<br />4vyn6UMho/DxS4BpIzEsmd3KOTxwfWL0I8wb8G/Wf0FhcOH17Ut23v5cNwv1C8UU<br />bEZFuvUb+jebFr0YyNL2fIqwpz+sVSMwt8H1wqVYtyV9D8uShoNEXuAj5/iqlULY<br />Zxf0riDvDKYoelM9lQiJUUy7mNriU/fWEoBw8ehsYRXktokMp1BcHkez+ZSaX900<br />fytMUHOEubuoDDIE/XBdrJrVrW6j2ddoWA6wzUtv7if7uxwxKPN9m+1Yz/bOP1JO<br />SAe523GXNF/59wEIc6Jue5Q7kXio6vdPO5oU65U6GB0Zb7LlS5RrgTirQxlZNb9r<br />5rufzSlmiwrYTjPN62NLQT+eAF9hLKT+dBsai5T3gu0g7kgieRxXiyduA4J74yjV<br />8sfgcCc+tayX/uCTpfugljUcbfmaxR/6S3eg4a93yFMPlT4Nh5EMPYRZfLhzhaT1<br />cVlXTmBuRk9mQI+MKAB/ukxnMRDb0JdzxN+wOb3BuoHFS7pdHkNCqGphz02TjBku<br />tS9K1KqKtNkDonjkIb/a6/3Azze7y2949cwZnRLq5A0wbzKZtBceh5Sv/lr+1yXy<br />HMr0ePya+i0EtAsSULo7sKLo+dxlAlEk9y6r1KmkENBjUhtYwC0J7sNq+cPk/eVR<br />FO3RZagmFxIsQPa31KUsbEU/2e3+dnFAQuJRyx3DwOWkIQ4yYyRtQW93sUzaIVUo<br />It7s0tJcRUn9XYFlu7S5nOBDQ6USMjGZLH8T2DqJkQCP1QUqKw12K6ieTKLrRchl<br />M2lFHS2Ycy0VHnO5DpMTc+2nlw/pMcD96QRk1K/5ns5amrEjpoSeEnvMjavEYf7t<br />nFusXL1uiurqx6Qw6LuId+2ZZSoi5tnMV9Af2Nf6icxW67u/8EH+NC02RsBLHIHd<br />Ygy4sGp1k/AIWm3ndBzDpTeCANdGB214emIEwdGELNWI2JChHi/xEopoCb2Zq3M6<br />nJyAEfCT7vg6Zkn3VTKNQUVqibzqjXiZfoYkpaG1osJBv98Z0emiVRNwWKEx8YZo<br />dzO0PLMS/eF1MDTjBJyKa/93gNDBr4fJ0YW07oRzXZW1ew==<br />=L8eJ<br />-----END PGP MESSAGE-----
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Issue with PGP</strong><br />
+				Post by: <strong>Wadozo</strong> on <strong>December 26, 2012, 06:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				-----BEGIN PGP MESSAGE-----<br />Version: GnuPG v1.4.12 (MingW32)<br /><br />hQEMA/ognRCNzkc1AQf+JAXWWEFvHuIoDfDOMemZcNWN4/2Rn5QEKtZVsqYtats2<br />86q5n1ZymqsHqZQlkMnwX6spBS4CBAs6gFQ6AdjH4lUO6Mqdk3elsmCK7qT1otT7<br />n9gNt9mOgHlEmnHbx4tPZRB5xFWeH9zlwXRp1FSVN2a1QSCcfmAlLN4Q1Ht2O+E+<br />S7zY1aDd5c+sk44LJ70e2tpJ+N2XCgPueJtpFS5Pi969DdCYM8FCFncHjjL/FYeI<br />TSblDS4vqaYQ/bJ7jpdt6sLCglMQQvrVNjnQEk9CArz+AI5kVsz8mnclHtJrVXxt<br />XiaRgiLoSlEceN0OxYSYUjUo2gl8c9GZunZZMZOraNJjAa5FYp8Ix1q6IwNUUSny<br />xQ1Z/E0NDQdy0orhrTKxsvA7OSRO4x6uHbe8mFUcbR7+MbkhtK0zrfDF9LMjF0NX<br />ZDmh7MucFf1VH2YjVh9bQf5GrFnetB/wURVZOqaaPKrVpHoh<br />=VTWc<br />-----END PGP MESSAGE-----<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

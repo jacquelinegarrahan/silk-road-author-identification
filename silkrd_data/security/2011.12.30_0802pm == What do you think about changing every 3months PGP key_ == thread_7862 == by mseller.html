@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=7862.0" />
+		<title>Print Page - What do you think about changing every 3months PGP key?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: mseller on December 30, 2011, 08:02 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>What do you think about changing every 3months PGP key?</strong><br />
+				Post by: <strong>mseller</strong> on <strong>December 30, 2011, 08:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I know that this may carry complications but hear me out.<br />In the event where seller is compromised all encrypted/signed messages can be strong prove against an seller. Even old message are deleted who know where copy can be found.<br />And its pretty simple to sign with old pgp key clear text where is new pgp key. It is not so hard but def better protection.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: What do you think about changing every 3months PGP key?</strong><br />
+				Post by: <strong>SierraRS</strong> on <strong>December 30, 2011, 10:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If seller is compromised, this will not help at all. The encrypted messages are only on Silk Road messaging system. If using WinPT, the received message can be copied to clipboard, decrypted and pasted into new notepad window and read. No need to save it, so there is no saved unencrypted messages floating around. And You must use full disc encryption with Truecrypt anyway, this is the best way to stop anyone taking a look into your computer and mind.<br /><br />If key is compromised it is compromised instantly. The expiry date on GPG keys are for a situation when you have lost your private key and have no revocation certificate, the key eventually will expire.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: What do you think about changing every 3months PGP key?</strong><br />
+				Post by: <strong>mseller</strong> on <strong>December 30, 2011, 11:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for your answer. But many of sellers use and other route of communication (email, privacybox etc) and not only SR messaging system.<br />Its maybe difficult to explain for me but signing cleartext can be incrimanating and use as prove of authorship.<br />I have a pgp key what expire, if I change that fingerprint would also be changed?<br />Anyhow, would anybody change pgp or not its solely up to them. I prefer not to risk it no matter if that need to change pgp keys. I use Bestcrypt as a mandatory tool for safety.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: What do you think about changing every 3months PGP key?</strong><br />
+				Post by: <strong>SierraRS</strong> on <strong>December 30, 2011, 11:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Well, when communicating with buyers you must use only SR messaging system. Even when encrypted by PGP, the e-mail will show who is communicating with you and so on. If buyer asks for other means of communication, best avoid them.<br /><br />The signed and encrypted cleartext are proof of authorship in cryptographic terms. In legal terms, even unsigned plaintext is proof. This might depend from jurisdiction to jurisdiction. Expired keys still are valid for decryption and verification of authorship, they only cannot be used for making new encrypted items.<br /><br />Bestcrypt is closed source, so there is no proof that backdoor does not exist. And even if there is no intentional backdoor, who knows what shortcuts the developers have taken that unintentionally compromise it&#039;s security or stability? I remember using Bestcrypt on external drives on corporate environment, but long time ago it all was replaced by Truecrypt or russian built alternative called Diskcryptor.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: What do you think about changing every 3months PGP key?</strong><br />
+				Post by: <strong>mseller</strong> on <strong>December 30, 2011, 11:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				When saying emails I meant for hushmail and other where no headers exist. I use external privacybox what is automaticly encrypted with my PGP and can be sent to email (encrypted without heathers from privacymail) ssl email or tormail.<br /><br />Bestcrypt has ability to import cyphers (has a forum where people code it and provide source) and it served me very well. Is there backdoor or not I really dont know ( I doubt it as it contradict use of security of software and they have publish source of encryption and hash modules) - it cost money but that does not mean that anything suspicious reside in the software.<br />edit<br />I have checked and Jetico(bestcrypt) offer source code of encryption and hashing module. With hdd encryption with 12 ciphers software has feature like USDoD 7 pass wipe utility, wipe and encrypt windows swap temp files (those hidden files what windows always write on disk and serve as virtual memory, schedule of wipe selected files, docs,history temp.cookie etc etc. Arhives whit 12 ciphers, PGP decryption with Key Manager and many other features.<br />Look at www.jetico.com<br /><br />Receiving mail - its beyond my control who and what somebody send me. Same thing with encrypted message as I can not control as recipient.<br />Signing cleartext - prove of authorship if key compromised. That is what I think, even slim chances and many things what I can not think of, factor x, whatever, changing pgp can be good.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: What do you think about changing every 3months PGP key?</strong><br />
+				Post by: <strong>TravellingWithoutMoving</strong> on <strong>January 07, 2012, 03:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=7862.msg71130#msg71130">Quote from: mseller on December 30, 2011, 08:02 pm</a></div></div><blockquote class="bbc_standard_quote">I know that this may carry complications but hear me out.<br />In the event where seller is compromised all encrypted/signed messages can be strong prove against an seller. Even old message are deleted who know where copy can be found.<br />And its pretty simple to sign with old pgp key clear text where is new pgp key. It is not so hard but def better protection.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />- it could help by being evasive -changing your &quot;id&quot; , although if they could prove the message came from you / your account evidence might still count against you.<br />&nbsp; {i&#039;m no lawyer..}<br />- you would have to keep posting your updated key somewhere and / or updating clients ...or not...<br />- may look suspicious from a buyer perspective -ie may notice you have changed your key 3x times already.<br />- how do you maintain a good seller / seller relationship if they send you messages only to realise there are key issues..<br />- have to come up with some sort of explanation for above 2 posts.<br /><br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

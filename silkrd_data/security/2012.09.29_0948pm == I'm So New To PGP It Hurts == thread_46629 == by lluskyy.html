@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=46629.0" />
+		<title>Print Page - I'm So New To PGP It Hurts</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: lluskyy on September 29, 2012, 09:48 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>I'm So New To PGP It Hurts</strong><br />
+				Post by: <strong>lluskyy</strong> on <strong>September 29, 2012, 09:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Okay I know there&#039;s a bagillion threads about PGP, but I&#039;m hungover and I really want to learn this right now as I&#039;ve been procrastinating for too long.<br /><br />I downloaded some GPG and I put in my name email address yada yada yada. Now, how do I figure out what my public key is? I&#039;ve seen that huge block of text and it is definitely overwhelming&nbsp; :o :o :o
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: I'm So New To PGP It Hurts</strong><br />
+				Post by: <strong>Shambles</strong> on <strong>September 29, 2012, 09:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The PGP Club is probably the best for this post mate, when you&#039;ve created a *Public* PGP Key (The big block of text), then post it and I&#039;ll try and send a message to you
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: I'm So New To PGP It Hurts</strong><br />
+				Post by: <strong>painbow</strong> on <strong>September 29, 2012, 09:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Youtube PGP tutorials.&nbsp; Really easy and helpful.<br /><br />How did you make your past orders without PGP?!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: I'm So New To PGP It Hurts</strong><br />
+				Post by: <strong>CoolGrey</strong> on <strong>September 29, 2012, 10:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				First of all, you didn&#039;t use your real name and regular email address, right? I assume you didn&#039;t but to be sure: use your Silk Road username and Tormail address.<br /><br />To get your public key, you need to export it to a text file. <br /><br />If you are using gpg4win on WINDOWS: There should be some kind of button that says: &quot;export&quot;. Be sure you check the box that says: &quot;Armor&quot; to get it in text format (that&#039;s called ASCII).<br /><br />If you are using the LINUX command line: run the command: <br />$ gpg -a --export &quot;your keyname&quot; &gt; mypublickey.txt<br />and it will create a text file with your public key in your current working directory.<br /><br /><br />Either way, your public key should start with:<br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: I'm So New To PGP It Hurts</strong><br />
+				Post by: <strong>lluskyy</strong> on <strong>September 29, 2012, 11:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46629.msg493842#msg493842">Quote from: CoolGrey on September 29, 2012, 10:12 pm</a></div></div><blockquote class="bbc_standard_quote">First of all, you didn&#039;t use your real name and regular email address, right? I assume you didn&#039;t but to be sure: use your Silk Road username and Tormail address.<br /><br />To get your public key, you need to export it to a text file. <br /><br />If you are using gpg4win on WINDOWS: There should be some kind of button that says: &quot;export&quot;. Be sure you check the box that says: &quot;Armor&quot; to get it in text format (that&#039;s called ASCII).<br /><br />If you are using the LINUX command line: run the command: <br />$ gpg -a --export &quot;your keyname&quot; &gt; mypublickey.txt<br />and it will create a text file with your public key in your current working directory.<br /><br /><br />Either way, your public key should start with:<br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br /><br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I used my SR name and email. I&#039;m using GPG keychain access? After having exported my key to the desktop several times, it just brings it back to keychain access instead of a text editor. What am I doing wrong? Also I&#039;m using a mac if that anything to do with it.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46629.msg493814#msg493814">Quote from: painbow on September 29, 2012, 09:54 pm</a></div></div><blockquote class="bbc_standard_quote">Youtube PGP tutorials.&nbsp; Really easy and helpful.<br /><br />How did you make your past orders without PGP?!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I did it unencrypted... Stupid I know! Which is why I&#039;m wanting to learn it now.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: I'm So New To PGP It Hurts</strong><br />
+				Post by: <strong>quietguy</strong> on <strong>September 29, 2012, 11:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Here you go.&nbsp; :D<br /><br />[clearnet] http://lmgtfy.com/?q=pgp+tutorial
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: I'm So New To PGP It Hurts</strong><br />
+				Post by: <strong>CoolGrey</strong> on <strong>September 29, 2012, 11:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Mac is not my cup of coca but I&#039;m sure there&#039;s a lot of material on it out there.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: I'm So New To PGP It Hurts</strong><br />
+				Post by: <strong>jerrystillalive</strong> on <strong>September 30, 2012, 05:55 am</strong>
+			</dt>
+			<dd class="postbody">
+				How do i get a tormail address?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: I'm So New To PGP It Hurts</strong><br />
+				Post by: <strong>CoolGrey</strong> on <strong>September 30, 2012, 10:40 am</strong>
+			</dt>
+			<dd class="postbody">
+				at: jhiwjjlqpyawmpjx.onion<br /><br />Their clearnet web address: www.tormail.org
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: I'm So New To PGP It Hurts</strong><br />
+				Post by: <strong>OuterLimits</strong> on <strong>September 30, 2012, 10:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				Here is the step-by-step Windows GPG guide I created that is very detailed and covers the installation of GPG4Win Lite, creating private keys, importing public keys, encrypting sensitive information, and exporting public keys.<br /><br />http://x35jfacrznhhtrfr.onion/tutorials/pgp/windows/
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

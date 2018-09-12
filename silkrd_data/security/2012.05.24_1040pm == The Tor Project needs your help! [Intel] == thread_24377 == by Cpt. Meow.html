@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=24377.0" />
+		<title>Print Page - The Tor Project needs your help! [Intel]</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Cpt. Meow on May 24, 2012, 10:40 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>The Tor Project needs your help! [Intel]</strong><br />
+				Post by: <strong>Cpt. Meow</strong> on <strong>May 24, 2012, 10:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Found on Cryptome, May, 17th 2012 http://cryptome.org/2012/05/tor-volunteer-qa.htm <br /><br />Date: Thu, 17 May 2012 11:52:36 -0700<br />From: Mike Perry &lt;mikeperry[at]torproject.org&gt;<br />To: tor-talk[at]lists.torproject.org<br />Subject: [tor-talk] Volunteer QA: The Price of Freedom is Eternal Vigilance<br /><br />We have a dream. We believe it is possible to produce free, secure privacy software that is regularly used by many millions of ordinary people all over the world. They will use it to inform themselves, explore new and controversial ideas, communicate with one another, and safely share things about their lives. They will do so with confidence that so long as the software rests upon a secure foundation, it will not betray them; in fact it *cannot* betray them, by design.<br /><br />Tor Browser Bundle can be that software. Sadly, we know that it is not yet that software. We&#039;re aware that many aspects of the Bundle are either imperfect, incomplete, or absent entirely. We intend to work as hard as we can to improve this situation.<br /><br />However, we also know that even the keystone of true security is not yet properly in place. We know that we must properly deploy this keystone, or we risk the collapse of everything we have built so far.<br /><br />That keystone is the community that reviews our designs. It is the community that audits our source code. It is the community that tests the binaries produced from that source code. It is the community that will verify that the binaries that we distribute are produced from that source code and nothing else.<br /><br />It is time to organize our community into place to serve as that keystone. We cannot have true security without it.<br /><br />Our plan is to start small, with manual testing and manual analysis of each build. We will use that to incrementally work towards full automation available to be run on any of the arbitrary platform configurations available to the community. Runa Sandvik will begin coordinating these releases.<br /><br />We expect the process to be bumpy at first. To start, Runa will simply give interested people a url to a release candidate with a grab bag of urls[1] along with some basic tests to perform within some time limit before the build is to be released. These urls will initially come from arbitrary pages around the web, but hopefully we&#039;ll eventually distill them into our own collection of minimal test cases[2] for which testing is fully automated. Until that point, test pages will need to come with a description of expected behavior and results. We&#039;re hoping that the community will also seek out new and useful test urls and write up result descriptions for them.<br /><br />We will soon be switching to the 10.x-ESR Firefox branch for our stable TBBs, while concurrently maintaining an alpha series based on Rapid Release. To minimize the incidence of surprise issues in the stable TBB when ESR undergoes major upgrades, we will need people devoted to testing both branches on multiple platforms. We will also need people running auditing systems that verify the TBB they test is well behaved[3].<br /><br />To participate, please inform Runa via email (runa[at]torproject.org) which TBB branch or branches you intend to test on which platform (Operating System and CPU). Bonus points if you have a unique configuration such as AntiVirus software, and/or are able to analyze TBB in an auditing sandbox framework such as Seatbelt, AppArmor, SELinux, a firewall that will log proxy bypass attempts, or simply with Wireshark or any other network analyzer. Extra bonus points if you document your setup for others to use[4].<br /><br />Independent from the group Runa will coordinate, we also need people analyzing our builds[5], to ensure against tampering at the build machines themselves. We need to use the differences uncovered by this analysis to work towards the ability to produce the same binary on multiple, clean instances of build platforms which can be brought up from scratch anywhere around the world[6].<br /><br />To help us get started, we will also need people who simply create independent builds for others to compare against our official builds. I suspect that many reversers and hobbyists interested in learning reversing may find devoting the system resources and time to build their own TBB binaries a prohibitive barrier.<br /><br />Basically, everyone should try to help eliminate the need for duplicate work done by others at each step of both the QA and build inspection processes. Similarly, we should be constantly looking to refine our testing and analysis processes to eliminate manual labor.<br /><br />Thank you all for you willingness to help. Let&#039;s work together to build the world we want to live in.<br /><br />1. https://trac.torproject.org/projects/tor/ticket/5292<br /><br />2. https://trac.torproject.org/projects/tor/ticket/5750<br /><br />3. https://trac.torproject.org/projects/tor/ticket/5791<br /><br />4. https://trac.torproject.org/projects/tor/ticket/5767<br /><br />5. https://trac.torproject.org/projects/tor/ticket/5837<br /><br />6. https://trac.torproject.org/projects/tor/ticket/3688<br /><br />-- <br /><br />Mike Perry<br /><br />_____________________________________<br /><br />tor-talk mailing list<br />tor-talk[at]lists.torproject.org<br />https://lists.torproject.org/cgi-bin/mailman/listinfo/tor-talk 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

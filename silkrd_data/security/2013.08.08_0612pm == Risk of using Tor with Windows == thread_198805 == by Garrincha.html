@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=198805.0" />
+		<title>Print Page - Risk of using Tor with Windows</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Garrincha on August 08, 2013, 06:12 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Risk of using Tor with Windows</strong><br />
+				Post by: <strong>Garrincha</strong> on <strong>August 08, 2013, 06:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hey there, read a disturbing piece of news yesterday, saying that the operators of Tor are recommending that it should not be used in conjunction with Windows. I&#039;m not technologically minded, so I don&#039;t know the first thing about why this is the case and whether I should consider installing a whole new operating system. Anyone else hear this alarming news?&nbsp; :(
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Risk of using Tor with Windows</strong><br />
+				Post by: <strong>frank-butcher24</strong> on <strong>August 08, 2013, 06:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Pretty much anyone who knows anything about these things says don&#039;t use Windows.<br /><br />The particular attack we had recently only targeted Windows users. It doesn&#039;t follow that just changing your OS alone will protect you from the next attack, but it wouldn&#039;t hurt for you to try Tails.<br /><br />Do people still use Liberte? Liberte used to be talked about a lot on here as a good alternative, though it looks like a new release hasn&#039;t come out since 2012.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Risk of using Tor with Windows</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 08, 2013, 07:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				They recommended not using Windows because it&#039;s the least secure operating system and the biggest target of malware and other attacks. The FH exploit targeted Windows. By simply switching to another operating system, you decrease your attack attack surface by an order of magnitude. If you need to use Windows and can&#039;t install another operating system like Linux, even in a separate partition for dual-booting, you should run Linux in a virtual machine and conduct your sensitive activities entirely in that virtual machine. You can even get full disk encryption by encrypting the virtual hard disk, which is usually a ~10 GB file on your hard drive. An even safer set up is to use 2 virtual machines and run Tor in one while conducting your sensitive activities, like web browsing over Tor, in the other VM. Basically, all network connections from one VM are run through the other which has Tor. That would make it incredibly difficult to run an exploit against you to obtain your real IP address.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Risk of using Tor with Windows</strong><br />
+				Post by: <strong>Garrincha</strong> on <strong>August 08, 2013, 07:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				What is Tails exactly? And can I use it without ditching Windows altogether?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Risk of using Tor with Windows</strong><br />
+				Post by: <strong>frank-butcher24</strong> on <strong>August 08, 2013, 07:56 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=198805.msg1428050#msg1428050">Quote from: Garrincha on August 08, 2013, 07:38 pm</a></div></div><blockquote class="bbc_standard_quote">What is Tails exactly? And can I use it without ditching Windows altogether?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes you can. Tails is an operating system on a USB stick.<br /><br />Put the stick into your machine and switch it on. It will boot into Tails, which has a Torified browser, PGP etc. Use it to do your SR work, then shut down.<br /><br />Pull the stick out, and switch your PC on again to boot into Windows. No trace is left on your PC that you ever used Tails.<br /><br />Getting Tails is easy. You need (1) a USB stick, and (2) the Tails .ISO from https://tails.boum.org/, (3) the Universal USB Installer from http://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/<br /><br />Full info is available at tails.boum.org<br /><br />Liberte Linux is another one I used for a long time before switching to Tails. I actually preferred it to Tails. It was easier to install too - just copy files onto the stick and run a file (if memory serves me correctly).<br /><br />Basically the point is you keep your Windows PC nice and clean, and do all your dodgy stuff using the same computer, but on an operating system which sits on a USB stick.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Risk of using Tor with Windows</strong><br />
+				Post by: <strong>i push the kush</strong> on <strong>August 09, 2013, 01:32 am</strong>
+			</dt>
+			<dd class="postbody">
+				I use windows 7, but my HDD is encrypted with Truecrypt, and I PGP everything. I am not too worried about anything, I guess I could get a new HDD, and just get tails then there should be no trace of TOR on my computer, right?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Risk of using Tor with Windows</strong><br />
+				Post by: <strong>Garrincha</strong> on <strong>August 17, 2013, 03:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks to you all for your advice ( even if I didn&#039;t understand some of it, due to a lack of knowledge when it comes to cutting-edge technology ). BTW, what is meant by a &quot;virtual machine&quot;, and how do you create one?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Risk of using Tor with Windows</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>August 17, 2013, 04:56 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=198805.msg1461146#msg1461146">Quote from: Garrincha on August 17, 2013, 03:15 pm</a></div></div><blockquote class="bbc_standard_quote">Thanks to you all for your advice ( even if I didn&#039;t understand some of it, due to a lack of knowledge when it comes to cutting-edge technology ). BTW, what is meant by a &quot;virtual machine&quot;, and how do you create one?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Whonix is using virtual machines which you can start from your Windows desktop:<br />(clearnet) https://whonix.org<br />or http://zo7fksnun4b4v4jv.onion/wiki/Main_Page<br /><br />See the step-by-step tutorial in my signature if you have problems installing it. Tails is easier to use however.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

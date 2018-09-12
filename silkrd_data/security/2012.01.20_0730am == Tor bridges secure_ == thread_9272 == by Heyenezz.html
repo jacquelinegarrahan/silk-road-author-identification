@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=9272.0" />
+		<title>Print Page - Tor bridges secure?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Heyenezz on January 20, 2012, 07:30 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Tor bridges secure?</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>January 20, 2012, 07:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				If someone were to use a Tor bridge, would the person operating the bridge be able to view your Tor traffic or know what sites you were visiting or what you were doing?<br /><br />I might need to use Tor bridges when going back to college.<br /><br />Thanks for any help!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor bridges secure?</strong><br />
+				Post by: <strong>CrunchyFrog</strong> on <strong>January 20, 2012, 08:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote from: Heyenezz</div></div><blockquote class="bbc_standard_quote">If someone were to use a Tor bridge, would the person operating the bridge be able to view your Tor traffic or know what sites you were visiting or what you were doing?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>No more so than when using normal Tor relays, which is to say extremely unlikely.&nbsp; Tor bridges function the same as any other Tor relay save for the fact that their IP address isn&#039;t as public.&nbsp; You might consider changing your bridge(s) often to help defend from longer-term profiling (correlation) attacks, however.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor bridges secure?</strong><br />
+				Post by: <strong>CaptainSensible</strong> on <strong>January 21, 2012, 12:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=9272.msg84998#msg84998">Quote from: Heyenezz on January 20, 2012, 07:30 am</a></div></div><blockquote class="bbc_standard_quote">If someone were to use a Tor bridge, would the person operating the bridge be able to view your Tor traffic or know what sites you were visiting or what you were doing?<br /><br />I might need to use Tor bridges when going back to college.<br /><br />Thanks for any help!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />As I understand it, an attacker operating a Tor relay (and this includes bridges) can use sophisticated monitoring techniques to see what sites you&#039;re visiting, but they can&#039;t decipher the content of your communication.&nbsp; So an attacker monitoring your web traffic could see, for example, that you went to www.safe-mail.com, but couldn&#039;t see what you&#039;re doing there.&nbsp; That could change because people are always trying new hacks that might allow them to monitor Tor traffic. <br /><br />But here&#039;s a strategy to use if you want to be sure the bridge you&#039;re connecting to is safe:&nbsp; run your own bridge.&nbsp; On another computer on a different network (say a friend&#039;s PC or a PC at work or school), set up the Tor software to function as a bridge.&nbsp; Then copy the bridge IP address and port used to connect, which will be entered in the Settings -&gt; Network tab of Vidalia on the PC you use to connect to the Tor network. The bridge is your first hop connection to Tor, and if you are the one controlling that first hop you can feel a little safer using Tor.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor bridges secure?</strong><br />
+				Post by: <strong>QTC</strong> on <strong>January 21, 2012, 12:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=9272.msg84998#msg84998">Quote from: Heyenezz on January 20, 2012, 07:30 am</a></div></div><blockquote class="bbc_standard_quote">If someone were to use a Tor bridge, would the person operating the bridge be able to view your Tor traffic or know what sites you were visiting or what you were doing?<br /><br />I might need to use Tor bridges when going back to college.<br /><br />Thanks for any help!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I would not rely on anything anyone on this forum says about TOR (this includes myself too ofc). I suggest you find some papers written on bridges, especially ones written by Roger Dingledine, the lead developer of TOR. Although it doesn&#039;t apply to your specific question, this paper is a good starting point: http://www-users.cs.umn.edu/~hopper/surf_and_serve.pdf
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor bridges secure?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>January 21, 2012, 07:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				QTC allow me to point out that the network is actually named Tor and that it is no longer an acronym for the onion router. Tor is actually not technically an onion router either, although it is very frequently called one. These points are mostly unimportant trivia.<br /><br />Bridges are imo very important for vendors to be using. When you load Tor your client directly bootstraps at one of about eight directory authority servers. These servers are run by people that the Tor devs trust (and they need to trust them because if four of them are pwnt by the same attacker at any given time, and the attacker also has access to a (fairly) large amount of bandwidth, they can deanonymize large percentages of the Tor network as well as intercept large percentages of exit traffic. It is worth noting that they could not do this without being detected in a fairly short period of time). It is probably not that hard for an attacker to monitor some of the directory authority servers, the federal police of a country can almost certainly monitor all connections to and from any directory authority server in their country. I think several are in USA and Germany. Monitoring connections to and from directory authority servers allows an attacker to enumerate Tor client IP addresses, an attacker who can Monitor all directory authority servers can enumerate the IP address of every single non-bridged Tor client. <br /><br />When you use bridges they act as directory guards as well as entry guards. Unlike Tor directory authority nodes and normal entry guards, there is not an easily available list of all bridge node IP addresses (although some of the Tor devs have access to this information, as well as hackers who can pwn bridge distribution servers or mechanisms) and most attackers can only enumerate some percentage of bridge nodes (I think China blocked something like 85% of them last time I checked). Also, there are several hundred bridge nodes (maybe even over a thousand now) so it is much harder to monitor all of them than 8 directory authority servers, even if you could enumerate all of their IP addresses. <br /><br />Why do you not want your IP address to be identified as connecting to the Tor network? This is mainly a problem for vendors and for those who use fake ID boxes to maintain anonymity. There are really not that many Tor users in the grand scheme of things, versus the total world population. Also Tor users are fairly widely dispersed through out the world. In any given fifty mile radius there are not likely to be many Tor users. Since vendors must leak rough geolocation intelligence when they ship, an attacker who can place an order from a vendor (and make a one hundred mile radius around where it was shipped from) and can also enumerate Tor client IP addresses, can then intersect these two datasets together to narrow in on &#039;people who are likely the vendor&#039;. The two datasets are A. Lives within a one hundred mile radius of where the package was shipped from and B. Is a user of the Tor network. The resulting crowd from this attack is not likely to be substantially large, particularly in more rural areas with less population density. It may even be the dreaded crowd size of one. <br /><br />This sort of attack is generally called an observability or membership revealment attack (as it relates to enumerating Tor client IP addresses). The other part is called an intersection attack (taking two or more datasets and removing items that do not appear in both to make a third dataset, as a technique for narrowing in on a target that is associated with a few data points of a known or estimated uniqueness).<br /><br />Bridges also increase security from a number of other attacks. They also reduce anonymity from a number of other attacks. One thing to worry about is an attacker who can identify bridged connections. If you use bridges in a country that doesn&#039;t restrict access to the Tor network, particularly from a residential location, the chances of you trying to protect from the previously mentioned sort of attack are high. In this case using a bridge would be worse than not using a bridge, since in addition to being identified as a Tor user you are identified as a Tor user who is worried about this sort of attack. Anyway, if you are worried about the very serious attack I mentioned I suggest that you use bridges. Also, bridge use probably slightly reduces your protection from a few sorts of attack, however it also increases protection from a few sorts of attack, and it also adds *any protection at all* against numerous other attacks. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor bridges secure?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>January 21, 2012, 08:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">As I understand it, an attacker operating a Tor relay (and this includes bridges) can use sophisticated monitoring techniques to see what sites you&#039;re visiting, but they can&#039;t decipher the content of your communication.&nbsp; So an attacker monitoring your web traffic could see, for example, that you went to www.safe-mail.com, but couldn&#039;t see what you&#039;re doing there.&nbsp; That could change because people are always trying new hacks that might allow them to monitor Tor traffic. </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Very true, nice to see someone who knows a bit about Tor. Website fingerprinting attacks analyze patterns in encrypted traffic, looking for preidentified fingerprints associated with certain websites. This sort of attack may be used to identify encrypted Tor traffic with 60% accuracy. This doesn&#039;t mean the attacker can tell the difference between your upload of the word dog and the other posters upload of the word cat to some forum, it just means that they can with about 60% accuracy determine that you sent something to that forum. Of course this assumes they are only doing website fingerprinting attack and are monitoring traffic at your entry guard / infrastructure, if they do other things they can of course learn other things. Also I don&#039;t think the traffic classifier that CCC used against Tor (getting the 60% accuracy results) used hidden markov modeling (which takes into account not only the fingerprint of a single page, but the multiple possible fingerprints created by browsing through networks of interlinked pages), if it did the accuracy would probably be substantially higher. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">But here&#039;s a strategy to use if you want to be sure the bridge you&#039;re connecting to is safe:&nbsp; run your own bridge.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Using a private (or public via the bridge distribution mechanisms) bridge node that you run yourself is a great way to majorly increase the anonymity offered by the Tor network. For one, you will never be traced by an active attack unless whoever your attacker is takes control of your bridge node somehow (and knows how to target it in the first place). <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">On another computer on a different network (say a friend&#039;s PC or a PC at work or school), set up the Tor software to function as a bridge.&nbsp; Then copy the bridge IP address and port used to connect, which will be entered in the Settings -&gt; Network tab of Vidalia on the PC you use to connect to the Tor network. The bridge is your first hop connection to Tor, and if you are the one controlling that first hop you can feel a little safer using Tor. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If you control the first hop you can feel a hell of a lot safer about using Tor. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor bridges secure?</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>January 23, 2012, 09:32 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=9272.msg86010#msg86010">Quote from: kmfkewm on January 21, 2012, 07:35 am</a></div></div><blockquote class="bbc_standard_quote">QTC allow me to point out that the network is actually named Tor and that it is no longer an acronym for the onion router. Tor is actually not technically an onion router either, although it is very frequently called one. These points are mostly unimportant trivia.<br /><br />Bridges are imo very important for vendors to be using. When you load Tor your client directly bootstraps at one of about eight directory authority servers. These servers are run by people that the Tor devs trust (and they need to trust them because if four of them are pwnt by the same attacker at any given time, and the attacker also has access to a (fairly) large amount of bandwidth, they can deanonymize large percentages of the Tor network as well as intercept large percentages of exit traffic. It is worth noting that they could not do this without being detected in a fairly short period of time). It is probably not that hard for an attacker to monitor some of the directory authority servers, the federal police of a country can almost certainly monitor all connections to and from any directory authority server in their country. I think several are in USA and Germany. Monitoring connections to and from directory authority servers allows an attacker to enumerate Tor client IP addresses, an attacker who can Monitor all directory authority servers can enumerate the IP address of every single non-bridged Tor client. <br /><br />When you use bridges they act as directory guards as well as entry guards. Unlike Tor directory authority nodes and normal entry guards, there is not an easily available list of all bridge node IP addresses (although some of the Tor devs have access to this information, as well as hackers who can pwn bridge distribution servers or mechanisms) and most attackers can only enumerate some percentage of bridge nodes (I think China blocked something like 85% of them last time I checked). Also, there are several hundred bridge nodes (maybe even over a thousand now) so it is much harder to monitor all of them than 8 directory authority servers, even if you could enumerate all of their IP addresses. <br /><br />Why do you not want your IP address to be identified as connecting to the Tor network? This is mainly a problem for vendors and for those who use fake ID boxes to maintain anonymity. There are really not that many Tor users in the grand scheme of things, versus the total world population. Also Tor users are fairly widely dispersed through out the world. In any given fifty mile radius there are not likely to be many Tor users. Since vendors must leak rough geolocation intelligence when they ship, an attacker who can place an order from a vendor (and make a one hundred mile radius around where it was shipped from) and can also enumerate Tor client IP addresses, can then intersect these two datasets together to narrow in on &#039;people who are likely the vendor&#039;. The two datasets are A. Lives within a one hundred mile radius of where the package was shipped from and B. Is a user of the Tor network. The resulting crowd from this attack is not likely to be substantially large, particularly in more rural areas with less population density. It may even be the dreaded crowd size of one. <br /><br />This sort of attack is generally called an observability or membership revealment attack (as it relates to enumerating Tor client IP addresses). The other part is called an intersection attack (taking two or more datasets and removing items that do not appear in both to make a third dataset, as a technique for narrowing in on a target that is associated with a few data points of a known or estimated uniqueness).<br /><br />Bridges also increase security from a number of other attacks. They also reduce anonymity from a number of other attacks. One thing to worry about is an attacker who can identify bridged connections. If you use bridges in a country that doesn&#039;t restrict access to the Tor network, particularly from a residential location, the chances of you trying to protect from the previously mentioned sort of attack are high. In this case using a bridge would be worse than not using a bridge, since in addition to being identified as a Tor user you are identified as a Tor user who is worried about this sort of attack. Anyway, if you are worried about the very serious attack I mentioned I suggest that you use bridges. Also, bridge use probably slightly reduces your protection from a few sorts of attack, however it also increases protection from a few sorts of attack, and it also adds *any protection at all* against numerous other attacks.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I understand it&#039;s complicated, but let&#039;s say you were only concerned with reducing your overall probability of your identity being uncovered. <br /><br />**All else being equal**, would you use bridges or wouldn&#039;t you?<br /><br />Thanks for any help.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor bridges secure?</strong><br />
+				Post by: <strong>supersecretsquirrel</strong> on <strong>January 23, 2012, 10:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=9272.msg85683#msg85683">Quote from: CaptainSensible on January 21, 2012, 12:13 am</a></div></div><blockquote class="bbc_standard_quote">As I understand it, an attacker operating a Tor relay (and this includes bridges) can use sophisticated monitoring techniques to see what sites you&#039;re visiting, but they can&#039;t decipher the content of your communication.&nbsp; So an attacker monitoring your web traffic could see, for example, that you went to www.safe-mail.com, but couldn&#039;t see what you&#039;re doing there.&nbsp; That could change because people are always trying new hacks that might allow them to monitor Tor traffic. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That is only the case for exit relays, not any of the other hops in the circuit, and only valid for normal websites (i.e. not hidden services).
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor bridges secure?</strong><br />
+				Post by: <strong>QTC</strong> on <strong>January 23, 2012, 04:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=9272.msg87735#msg87735">Quote from: Heyenezz on January 23, 2012, 09:32 am</a></div></div><blockquote class="bbc_standard_quote">I understand it&#039;s complicated, but let&#039;s say you were only concerned with reducing your overall probability of your identity being uncovered. <br /><br />**All else being equal**, would you use bridges or wouldn&#039;t you?<br /><br />Thanks for any help.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I think this is something that reasonable people can disagree upon (unlike for example the use of pke which if anybody tells you you should forgo you can write them off as a fucking idiot). If you are a vendor, I would definitely use bridges, and try to set up a bridge on another network that you have a computer on and use that bridge on your main box. For buyers, you may be vulnerable to the membership revealement attack kmfkewm described in their last paragraph but ultimately I believe that it&#039;s a stretch to think gleaning that sort of info could lead anywhere useful (you could be a drug vendor, cp trader, or simply paranoid, that information is pretty useless on its own). The bottom line is that imho you should use bridges and try to set up a bridge of your own for your use.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor bridges secure?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>January 24, 2012, 01:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=9272.msg87921#msg87921">Quote from: QTC on January 23, 2012, 04:11 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=9272.msg87735#msg87735">Quote from: Heyenezz on January 23, 2012, 09:32 am</a></div></div><blockquote class="bbc_alternate_quote">I understand it&#039;s complicated, but let&#039;s say you were only concerned with reducing your overall probability of your identity being uncovered. <br /><br />**All else being equal**, would you use bridges or wouldn&#039;t you?<br /><br />Thanks for any help.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I think this is something that reasonable people can disagree upon (unlike for example the use of pke which if anybody tells you you should forgo you can write them off as a fucking idiot). If you are a vendor, I would definitely use bridges, and try to set up a bridge on another network that you have a computer on and use that bridge on your main box. For buyers, you may be vulnerable to the membership revealement attack kmfkewm described in their last paragraph but ultimately I believe that it&#039;s a stretch to think gleaning that sort of info could lead anywhere useful (you could be a drug vendor, cp trader, or simply paranoid, that information is pretty useless on its own). The bottom line is that imho you should use bridges and try to set up a bridge of your own for your use.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The attack doesn&#039;t really work on customers unless they are using fake ID boxes I guess. Because the vendor already knows exactly where they are shipping the product to. If you get product shipped to a box and use interception detection technology, it might be better for you to use bridges. After all if there is only one Tor user in your area and it is you, they can probably put two and two together.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=196473.0" />
+		<title>Print Page - Tails PGP messages coming out bad -- anyone else?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: ThisUsernameIsTaken on August 05, 2013, 01:25 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Tails PGP messages coming out bad -- anyone else?</strong><br />
+				Post by: <strong>ThisUsernameIsTaken</strong> on <strong>August 05, 2013, 01:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I tried to place two orders this weekend, and both times they were canceled because the PGP message was not readable. This was a bit confusing, as I&#039;ve had no problems at least a dozen times in the past. <br /><br />I don&#039;t use persistent drive option, but the routine has always been for me : <br /><br />* Go to vendor page and copy their PGP key. <br />* In tails, highlight the clipboard, and click &quot;MANAGE KEYS&quot;, click edit and PASTE (imports the PGP key)<br />* Open the application for Openoffice writer, type my information, select all, and COPY. <br />* Back over to the clipboard icon,&nbsp; and click Sign/Encrypt Cipboard with Public Keys. Select the imported name, then paste that into the appropriate box in the order process. <br /><br />The part that bugs me most is I&#039;ve had no problem in the newbie PGP thread before, and have placed orders no problem before this. Now that I think about it, I just updated Tails recently, but the verification said everything was OK. Next time I hit up the coffee shop, I plan to redownload Tails and do another install, but in the meantime I was curious if anyone else had this issue. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails PGP messages coming out bad -- anyone else?</strong><br />
+				Post by: <strong>abby</strong> on <strong>August 05, 2013, 01:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It could be something as simple as the paste put linebreaks in your message.&nbsp; I&#039;ve had that happen a few times to me.&nbsp; My way around it is to unwrap the message body (ie remove all formatting) and then paste.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails PGP messages coming out bad -- anyone else?</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>August 05, 2013, 02:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196473.msg1414369#msg1414369">Quote from: ThisUsernameIsTaken on August 05, 2013, 01:25 pm</a></div></div><blockquote class="bbc_standard_quote">I tried to place two orders this weekend, and both times they were canceled because the PGP message was not readable. This was a bit confusing, as I&#039;ve had no problems at least a dozen times in the past. <br /><br />I don&#039;t use persistent drive option, but the routine has always been for me : <br /><br />* Go to vendor page and copy their PGP key. <br />* In tails, highlight the clipboard, and click &quot;MANAGE KEYS&quot;, click edit and PASTE (imports the PGP key)<br />* Open the application for Openoffice writer, type my information, select all, and COPY. <br />* Back over to the clipboard icon,&nbsp; and click Sign/Encrypt Cipboard with Public Keys. Select the imported name, then paste that into the appropriate box in the order process. <br /><br />The part that bugs me most is I&#039;ve had no problem in the newbie PGP thread before, and have placed orders no problem before this. Now that I think about it, I just updated Tails recently, but the verification said everything was OK. Next time I hit up the coffee shop, I plan to redownload Tails and do another install, but in the meantime I was curious if anyone else had this issue.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />DO NOT USE OpenOffice Writer as a text editor! <br /><br />OpenOffice is wonderful as a word processor, but it puts all kinds of HTML-like crap (font/formatting codes, etc.) in any text file you create.&nbsp; This is enough to cause the average PGP/GPG user to have issues decrypting the files. Use gedit instead -- you&#039;ll have a LOT less issues, plus with gedit you can encypt/decrypt from right within the editor. <br /><br />Nightcrawler<br />4096R/BBF7433B 2012-09-22 Nightcrawler &lt;Nightcrawler@SR&gt;<br />PGP Key: http://pgp.mit.edu:11371/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B&nbsp; &nbsp; &nbsp; (MIT clearnet keyserver)<br />PGP Key: https://keys.indymedia.org/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B&nbsp; &nbsp; (IndyMedia https: clearnet keyserver)<br />PGP Key: http://qtt2yl5jocgrk7nu.onion/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B (IndyMedia .onion keyserver)<br />PGP Key: http://dkn255hz262ypmii.onion/index.php?topic=174.msg633090#msg633090&nbsp; &nbsp; &nbsp;(Silk Road Forums PGP Key Link)<br />PGP Key Fingerprint = 83F8 CAF8 7B73 C3C7 8D07&nbsp; B66B AFC8 CE71 D9AF D2F0<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails PGP messages coming out bad -- anyone else?</strong><br />
+				Post by: <strong>ThisUsernameIsTaken</strong> on <strong>August 05, 2013, 03:42 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Son of a bitch, I never once thought about the font being copied and pasted over. <br /><br />I&#039;ll be doing a few test runs before trying to annoy that vendor again, thank you. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

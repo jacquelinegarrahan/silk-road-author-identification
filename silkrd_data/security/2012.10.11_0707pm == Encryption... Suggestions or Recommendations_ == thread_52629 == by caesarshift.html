@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=52629.0" />
+		<title>Print Page - Encryption... Suggestions or Recommendations?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: caesarshift on October 11, 2012, 07:07 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Encryption... Suggestions or Recommendations?</strong><br />
+				Post by: <strong>caesarshift</strong> on <strong>October 11, 2012, 07:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I know very little about electronic cryptography and online security... I understand the responsibility a free-thinking person has today to protect their identity and preserve anonymity online.&nbsp; I have been diligently reading posts in the security subsection, but I haven&#039;t seemed to find a solid footing or foundation that I can use to begin studying and gain some concrete understanding on the subject. <br /><br />Basically I would like to understand electronic communications encryption, and hard-drive encryption better, but I don&#039;t know how to speak in the technical tongue of the programmer tribe.&nbsp; I would appreciate if someone might point me in the right direction and recommend some reading material or tutorials, not so much on umbrella subjects that require a wide range of understanding in different fields, but start me from the ground up so I can learn things that I can actually remember and utilize later.&nbsp; <br /><br />I have read a bit about cryptography in general and I know how to create some ciphers, but the moment you take cryptography and put it in terms of a computer&#039;s methodology, I am in the dark.&nbsp; What learning suggestions can you provide me with, so hopefully in time, I might see the light?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encryption... Suggestions or Recommendations?</strong><br />
+				Post by: <strong>farmer1</strong> on <strong>October 11, 2012, 07:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ask more specific questions (but search for the answers first!). Your question is too broad to answer without writing a novel.<br /><br />To use the SR safely you should understand how TOR works, and how PGP works. Keep reading.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encryption... Suggestions or Recommendations?</strong><br />
+				Post by: <strong>CoolGrey</strong> on <strong>October 11, 2012, 07:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Definitely. Here&#039;s a very quick and dirty introduction. <br /><br />There are basically two types of encryption.<br /><br />There is &#039;regular&#039; symmetric encryption. You use this to encrypt a piece of data with a secret password. To get the data back, you have to use that password again.<br /><br />A nice program to (symmetrically) encrypt files is TrueCrypt. You can download it for free from the truecrypt foundation website. There are a few good youtube tutorials out there on how to use it.<br /><br />Then there also is asymmetric encryption. This is also called: public key cryptography. Asymmetric encryption is used in PGP to encrypt email. The sender encrypts a piece of text with the recipients public key, and then sends it to him. Then the recipient can decrypt the encrypted text with his private key. <br />This one might be a bit more complicated, but nothing overly complicated. There is good material out there.<br /><br />So those will be your research assignments for today: TrueCrypt and PGP (Also called GPG). Learn to use those two pieces of software and you&#039;ll have a good start.<br /><br />Good luck and if you have questions, do not hesitate to ask them.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encryption... Suggestions or Recommendations?</strong><br />
+				Post by: <strong>Leapfrogger</strong> on <strong>October 12, 2012, 12:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				caesarshift, I think I have exactly what you&#039;re looking for: Bruce Schneier&#039;s Applied Cryptography. Schneier is the cryptographer who designed Blowfish, which was one of five finalists in the AES competition (that is to say, his algorithm had a decent shot at becoming what we now call AES; Rijndael won instead). Blowfish is also one of three algorithms supported by the current version of Truecrypt. In the past decade or so, Schneier has focused on writing about security for a broader audience. He is one of the most vocal critics of the TSA and coined the wonderful term &quot;security theater.&quot;<br /><br />Applied Cryptography was written in 1996, but the concepts of course remain the same. It can be found here in neatly formatted HTML:<br /><br />***CLEARNET***: Table of Contents: http://een.iust.ac.ir/profs/Falahati/Cryptography/CrytoBooks/B_Schneier%20-%20Applied%20Cryptography/ewtoc.html<br /><br />One of the sexiest passages is found in Chapter 7 (&quot;Key Length&quot;) in the section &quot;Thermodynamic Limitations.&quot; Here are the last couple of paragraphs:<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">&quot;[...] A typical supernova releases something like 1051 ergs. (About a hundred times as much energy would be released in the form of neutrinos, but let them go for now.) If all of this energy could be channeled into a single orgy of computation, a 219-bit counter could be cycled through all of its states.<br /><br />These numbers have nothing to do with the technology of the devices; they are the maximums that thermodynamics will allow. And they strongly imply that brute-force attacks against 256-bit keys will be infeasible until computers are built from something other than matter and occupy something other than space.&quot;</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>***CLEARNET*** http://een.iust.ac.ir/profs/Falahati/Cryptography/CrytoBooks/B_Schneier%20-%20Applied%20Cryptography/ch07/07-04.html<br /><br />Pretty reassuring, though as we all know, 256-bit keys won&#039;t keep you from forgetting to unmount your Truecrypt container. ;)<br /><br />Another article that I consider essential reading is entitled &quot;Can Intelligence Agencies Read Overwritten Data? A response to Gutmann.&quot; It&#039;s short, just check it out:<br />***CLEARNET*** http://www.nber.org/sys-admin/overwritten-data-gutmann.html<br /><br />Hope this helps!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encryption... Suggestions or Recommendations?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>October 12, 2012, 08:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=52629.msg517289#msg517289">Quote from: CoolGrey on October 11, 2012, 07:37 pm</a></div></div><blockquote class="bbc_standard_quote">Definitely. Here&#039;s a very quick and dirty introduction. <br /><br />There are basically two types of encryption.<br /><br />There is &#039;regular&#039; symmetric encryption. You use this to encrypt a piece of data with a secret password. To get the data back, you have to use that password again.<br /><br />A nice program to (symmetrically) encrypt files is TrueCrypt. You can download it for free from the truecrypt foundation website. There are a few good youtube tutorials out there on how to use it.<br /><br />Then there also is asymmetric encryption. This is also called: public key cryptography. Asymmetric encryption is used in PGP to encrypt email. The sender encrypts a piece of text with the recipients public key, and then sends it to him. Then the recipient can decrypt the encrypted text with his private key. <br />This one might be a bit more complicated, but nothing overly complicated. There is good material out there.<br /><br />So those will be your research assignments for today: TrueCrypt and PGP (Also called GPG). Learn to use those two pieces of software and you&#039;ll have a good start.<br /><br />Good luck and if you have questions, do not hesitate to ask them.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You don&#039;t actually encrypt or decrypt emails with asymmetric cryptography. You encrypt and decrypt session keys with asymmetric cryptography. The session keys are used to symmetrically decrypt the communication payload. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Encryption... Suggestions or Recommendations?</strong><br />
+				Post by: <strong>CoolGrey</strong> on <strong>October 12, 2012, 11:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=52629.msg518591#msg518591">Quote from: kmfkewm on October 12, 2012, 08:58 am</a></div></div><blockquote class="bbc_standard_quote">You don&#039;t actually encrypt or decrypt emails with asymmetric cryptography. You encrypt and decrypt session keys with asymmetric cryptography. The session keys are used to symmetrically decrypt the communication payload.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>This is very true. When you send a message encrypted with GPG, it isn&#039;t actually encrypted with asymmetric encryption. It is symmetrically encrypted (default algorithm: AES) and the password is asymmetrically encrypted with the recipients public key.<br /><br />The reason for this is that with RSA (the asymmetric algorithm), the ciphertext has a fixed length. I believe the ciphertext cannot be longer than the key length. So with a 2048bit key, your maximum message length is also 2048bit, which is roughly 250 characters.<br /><br />If you&#039;d only use that, GPG would be like twitter. That&#039;s why the message is symmetrically encrypted, and the password (session key) is encrypted with RSA. That is also the reason why no two GPG messages are ever the same, even if the content is identical; the session key is always different.<br /><br />Also when you sign a message, not the text itself, but rather the messages cryptographic hash (default SHA-1) is encrypted with the signer&#039;s private key.<br /><br />So again, yes you are completely right. But I didn&#039;t want to get too technical, because I wasn&#039;t sure how much background the OP had.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

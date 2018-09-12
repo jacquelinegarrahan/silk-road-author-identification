@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=15725.0" />
+		<title>Print Page - TAILS Security Q's</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Heyenezz on March 16, 2012, 09:10 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>TAILS Security Q's</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 16, 2012, 09:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m now using Tails to post here and now keep my private info inside an encrypted container as a Tormail attachment. <br /><br />1. My clock is off by several hours. How concerned if, at all, should I be?<br /><br />2. Can incriminating data be recovered from a USB containing Tails?<br /><br />3. Tails lacks &quot;persistent entry guards,&quot; whatever those are. Why should I care and what can I do about that to be more secure while using Tails?<br /><br />4. Will HDD erase render incriminating data on my HDD irrecoverable? <br /><br />Thanks for any assistance!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TAILS Security Q's</strong><br />
+				Post by: <strong>indignado</strong> on <strong>March 17, 2012, 10:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m not a tech expert myself, far from it, but I&#039;ve been using TAILS for a fair while and can answer a couple of your questions (although you should probably get a second opinion just to be safe)...<br /><br />1. A message comes up when the OS boots telling you that Tor requires a synchronised clock to work properly. I&#039;m not sure of the implications of that, though.<br /><br />2. No idea, I&#039;d very much like an answer to this question as well! Does it write to any storage media attached to the computer, anything at all?<br /><br />3. No idea.<br /><br />4. Yes. You can download a boot disk called Darik&#039;s Boot and Nuke (DBAN), which will repeatedly overwrite all sectors on your hard drive, making all data on it completely unrecoverable by any means (unless, of course, the CIA, MI6, Mossad etc have some way of doing it, but that info wouldn&#039;t get into the public domain, and I doubt they&#039;re concerned with Silk Road). Once you&#039;ve got all the data you want to keep and put it somewhere safe like a DVD or flash drive, boot up the computer from the DBAN boot disk, and wipe the hard disk using the 3-pass option (one would probably be enough, but always best to be safe, less chance of an error leaving data remnance). There&#039;s always the 35-pass Gutmann method if you&#039;re ultra-paranoid or have a really old HDD (in general, HDDs built after 2001 are generally safe) but be prepared for a very, very long wait if you choose this option. Don&#039;t use ANY other method or software, AFAIK none of them are confirmed to be 100% safe. Plenty more info about this on the internet if you want to learn more.<br /><br />Hope this helps :)<br /><br />P.S. Although you may have an encrypted volume, if the volume was unencrypted at any point then it will leave unencrypted data on your HDD. It has to be encrypted from the start. It&#039;s safe to unencrypt it using a Live USB system like TAILS, though. If you had it unencrypted on your HDD at any point, I suggest you wipe it using the above method.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TAILS Security Q's</strong><br />
+				Post by: <strong>Oldtoker</strong> on <strong>March 17, 2012, 06:14 pm</strong>
+			</dt>
+			<dd class="postbody">
+				1)&nbsp; I&#039;m not sure why they give the warning on the setting of the time.&nbsp; I&#039;m not sure why that is required.<br /><br />2)&nbsp; Supposedly not.&nbsp; It does not even save bookmarks unless you specifically made changes to it.&nbsp; The only way it saves data is if you set up a persistent directory using an encrypted container.&nbsp; It even wipes the ram memory when shutting down.<br /><br />3)&nbsp; Not sure exactly what they mean by persistent entry guards but, Tails works as if it is a new installation each and every time it boots up. <br /><br />4)&nbsp; Try this.&nbsp; It&#039;s free and DOD approved.&nbsp; http://pcwin.com/downloads/Dod-Disk-Eraser.htm
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TAILS Security Q's</strong><br />
+				Post by: <strong>QTC</strong> on <strong>March 17, 2012, 06:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15725.msg153913#msg153913">Quote from: Heyenezz on March 16, 2012, 09:10 pm</a></div></div><blockquote class="bbc_standard_quote">1. My clock is off by several hours. How concerned if, at all, should I be?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Tor will not work unless your clock is correct.<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">2. Can incriminating data be recovered from a USB containing Tails?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>you will need to tell us more about your setup<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">3. Tails lacks &quot;persistent entry guards,&quot; whatever those are. Why should I care and what can I do about that to be more secure while using Tails?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Entry guards make it so if an attacker is trying to locate you they can only get as far as the entry guards you&#039;re using (unless they also control the entry guard). If you&#039;re not using persistent entry guard nodes then you may randomly select one that&#039;s controlled by the feds and has a pen register or trap and trace in effect on it. I have been told by someone that you can make amnesia use persistent entry guards if you commit your guard nodes&#039; IP addresses to memory but that is a huge pain in the ass. I suppose the next best thing to do is use random public wifi hotspots in addition to Tor.<br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15725.msg154802#msg154802">Quote from: Oldtoker on March 17, 2012, 06:14 pm</a></div></div><blockquote class="bbc_standard_quote">4)&nbsp; Try this.&nbsp; It&#039;s free and DOD approved.&nbsp; http://pcwin.com/downloads/Dod-Disk-Eraser.htm<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>not sure where you got that from but DoD recommends degaussing and incineration: http://www.oregon.gov/DAS/OP/docs/policy/state/107-009-005_Exhibit_B.pdf
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TAILS Security Q's</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>March 19, 2012, 04:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15725.msg154827#msg154827">Quote from: QTC on March 17, 2012, 06:47 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15725.msg153913#msg153913">Quote from: Heyenezz on March 16, 2012, 09:10 pm</a></div></div><blockquote class="bbc_alternate_quote">1. My clock is off by several hours. How concerned if, at all, should I be?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Tor will not work unless your clock is correct.<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">2. Can incriminating data be recovered from a USB containing Tails?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>you will need to tell us more about your setup<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">3. Tails lacks &quot;persistent entry guards,&quot; whatever those are. Why should I care and what can I do about that to be more secure while using Tails?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Entry guards make it so if an attacker is trying to locate you they can only get as far as the entry guards you&#039;re using (unless they also control the entry guard). If you&#039;re not using persistent entry guard nodes then you may randomly select one that&#039;s controlled by the feds and has a pen register or trap and trace in effect on it. I have been told by someone that you can make amnesia use persistent entry guards if you commit your guard nodes&#039; IP addresses to memory but that is a huge pain in the ass. I suppose the next best thing to do is use random public wifi hotspots in addition to Tor.<br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=15725.msg154802#msg154802">Quote from: Oldtoker on March 17, 2012, 06:14 pm</a></div></div><blockquote class="bbc_alternate_quote">4)&nbsp; Try this.&nbsp; It&#039;s free and DOD approved.&nbsp; http://pcwin.com/downloads/Dod-Disk-Eraser.htm<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>not sure where you got that from but DoD recommends degaussing and incineration: http://www.oregon.gov/DAS/OP/docs/policy/state/107-009-005_Exhibit_B.pdf<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />1. K, thanks<br /><br />2. Tails is the only thing on my USB. My C drive&#039;s encrypted with Truecrypt. In the bios page, USB is set to boot before the HDD.<br /><br />3.&nbsp; Sounds complicated. Doesn&#039;t sound like a huge security risk though I&#039;d like to avoid it. Has anyone been traced using persistent entry guards?<br /><br />4. I&#039;m specifically referring to the programm HDDerase. More info is here: https://en.wikipedia.org/wiki/HDDerase<br /><br />I&#039;m in no position to physically destroy my HDD. I just want to know if it renders all erased data irrecoverable. DBAN wouldn&#039;t do because it won&#039;t erase data that can&#039;t be accessed using block writes.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TAILS Security Q's</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 19, 2012, 05:16 am</strong>
+			</dt>
+			<dd class="postbody">
+				Clock needs to be set correctly so authority consensus can be validated 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=219406.0" />
+		<title>Print Page - Big shit security fail BMR and SHEEP</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Silk Road discussion => Topic started by: imyourepusher on October 08, 2013, 07:05 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Big shit security fail BMR and SHEEP</strong><br />
+				Post by: <strong>imyourepusher</strong> on <strong>October 08, 2013, 07:05 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Just wanted to share this quote from imakechili<br /><br />Hey guys,<br /><br />Just spend about 10 mins poking around BMR and Sheep to see what I could find.<br /><br />Both of them leak info through their headers and HTML source. Sheep is running on Apache 2.2.22, using Ubuntu (see the headers on any page, the gallery forums and website are running off the same server and based on the sessid are part of the same application), with an X-Powered-By value of &quot;Nette Framework&quot;, an open source PHP framework. Also they&#039;re setting a server side session ID (y no encrypted client side?!?!) for this framework. Unfortunately the framework seems to be resilient to the basic skiddie traditional attacks that I tried, but if I were a fed seriously looking for a vulnerability I know where I&#039;d start. (cough Nette Framework Github).<br /><br />BMR leaks less, but you can tell both the site and forums are running PHP. I&#039;m not sure if it&#039;s the same server, but the timestamps are synchronized to within .5 seconds if it&#039;s not, which is possible but hints at them being on the same or a similarly configured box. You can also tell that at the very least the forums are running off PHP package 5.3.10-1ubuntu3.8 (attack vector!) and the forums are using the PunBB software (attack vector!).<br /><br />Something to ponder when sending in your bitcoins, eh?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Big shit security fail BMR and SHEEP</strong><br />
+				Post by: <strong>USASupply</strong> on <strong>October 08, 2013, 07:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				They use server side sessions for many reasons, client side sessions are pretty insecure (session hijacking for example). I have been developing web applications professionally for 15+ years and as a hobby even longer. I am very good with security, i have gone through BMR and have found nothing. Sheep has some CSRF vulnerabilities but those are not detrimental. BMR has no vulnerabilities i can see. showing the web server type is not a vuln by any means. BMR is being upgraded, tehy were under the radar and are fixing a ton of things. BMR is the main place to go. Deepbay is even worse, i checked them out and holy SHIT they are loaded with possible vulnerabilities. As i said possible just based on their setup. Understand that most people have learned not to store large amounts of BTC on their market wallets, i know i will be moving out all coins released from escrow ASAP and buyers should only put in what they need to make a purchase. Why are all you people spreading lies about BMR, its a great place and has been around forever, not as flashy as sheep but it is 100% solid. You are right that sheep is insecure, but BMR has nothing, it uses no open source documents, yes it uses PHP but is most likely MYSQLI databases, unlink SR which from my understanding was mysql only. BMR seems to be far more secure then SR. And i am sure wallets are encrypted and backed up so a hack would do nothing, especially if the server is in a VM unless the attacker gains remote access.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Big shit security fail BMR and SHEEP</strong><br />
+				Post by: <strong>imyourepusher</strong> on <strong>October 08, 2013, 07:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If you know so many, can you tel me whats going on at the log in page of bmr now?? ???
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Big shit security fail BMR and SHEEP</strong><br />
+				Post by: <strong>londonlondon</strong> on <strong>October 08, 2013, 07:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				great posts<br />good to have you guys on our team :)<br />keep up the good work :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Big shit security fail BMR and SHEEP</strong><br />
+				Post by: <strong>dipset</strong> on <strong>October 08, 2013, 09:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you for that... Neither of these technical flaws will negate the human aspect of the operators of these sites feeling the heat after the Silk Road&#039;s downfall, and maybe running of with everything if they think the hunt is one for them. I know the potential commission to be made is enormous, especially if TOR and other security aspects are worked out in spite of the NSA and the United States of Fascism. When the U.S. Federal gov&#039;t is after you, they will not stop until they get their man. Once you&#039;re under their crosshairs they will never leave you be. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Big shit security fail BMR and SHEEP</strong><br />
+				Post by: <strong>USASupply</strong> on <strong>October 08, 2013, 09:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yes i can, the updates are still in progess, if you are not familiar with how server updates work then during an upgrade things are usually run under a new v host or a new VM. if it is a new VM only 10% or so of CPU/memory usage is usually dedicated to that VM. Backopy is getting things ready to handle 50% of silk roads traffic. Server is overloaded still. It will be back to normal within 24 hours im sure. Everything works fine for most vendors over there and everything seems to be in place. The server is just overloaded like what happened for the first YEAR of SR. Its better to do this now then when it is too late and everything bottlenecks. It will be ok, patience is key. would you guys rather have everything fixed now? or fixed once it crashes when 100s of orders are in escrow with even more coins in your account?
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

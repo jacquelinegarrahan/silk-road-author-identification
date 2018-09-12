@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=1382.0" />
+		<title>Print Page - Tails LiveUSB plus Encrypted storage on the same USB Key.</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: loginathome on July 29, 2011, 06:42 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Tails LiveUSB plus Encrypted storage on the same USB Key.</strong><br />
+				Post by: <strong>loginathome</strong> on <strong>July 29, 2011, 06:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				These instructions assume that you are using Linux to write the files.&nbsp; If you aren&#039;t, you should be.<br />This will show you how to create a flash drive with tails, custom apps, and Encrypted Storage on the same key.<br />If you are Using Tails Live USB, these instructions will greatly simplify things. <br /><br />You&#039;ll need a USB Key (USB Flash drive...) that is greater than 2GB<br /><br />This is pretty skimp on the details, so just ask and I&#039;ll go into further detail if anyone needs help.<br /><br />1)&nbsp; &nbsp; Download unetbootin.&nbsp; <br /><br />2)&nbsp; &nbsp; Use this to write the tails CD image to the flash drive.<br />&nbsp; &nbsp; &nbsp; &nbsp;Boot the flash drive to make sure it works.&nbsp; <br /><br />3)&nbsp; &nbsp;now, using gparted or other partition manager, shrink the partition as far as you can.<br />&nbsp; &nbsp; &nbsp; Nothing is ever saved there, so you can shrink it all the way.<br /><br />4)&nbsp; Create another partition of 512MB or something.&nbsp; I used 512, its a good number, can&#039;t image why you&#039;d need more.<br /><br />5)&nbsp; Search the internet for portable linux apps.&nbsp; I don&#039;t remember where they are, but I trust your google fu.<br />&nbsp; &nbsp; &nbsp; find truecrypt and put it on the second partition.&nbsp; Also put whatever else you want.<br /><br />6)&nbsp; Format the third partition to be whatever you want, you are going to encrypt it with truecrypt.&nbsp; It really doesn&#039;t matter, as truecrypt is going to format it later.<br /><br />Now you can boot tails, which will never save anything within the OS.<br />You have an unencrypted place to store stupid stuff that doesn&#039;t need to be encrypted.&nbsp; Such as any apps you want as well as your wireless keys and what not.<br />and an encrypted place place to store everything that is sensitive.&nbsp; Like your PGP keys and the address of Silk road.<br /><br />Easy.&nbsp; (although you kinda have to know how)<br />I used an 8GB microcd card, and it works perfectly.&nbsp; <br />(Also it can be swallowed if necessary....)<br /><br />I (re)wrote this cause I see so many people complaining about the lack of storage in Tails, even though it is (to me) a relatively simple thing to make work.<br />I hope that this helps someone out until Tails includes storage options.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails LiveUSB plus Encrypted storage on the same USB Key.</strong><br />
+				Post by: <strong>RedRocket</strong> on <strong>July 29, 2011, 06:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				thanks for that mate,didnt fancy swallowing 2 cards...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails LiveUSB plus Encrypted storage on the same USB Key.</strong><br />
+				Post by: <strong>biscuitbase</strong> on <strong>August 22, 2011, 11:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m going to have a go at doing this. Do you have a USB adapter for your microsd or do you have a card reader on your pc?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails LiveUSB plus Encrypted storage on the same USB Key.</strong><br />
+				Post by: <strong>ach2</strong> on <strong>August 22, 2011, 11:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve been trying very hard to get this bootable on my macbook, but have had no success at all. I tried installing refit to no avail. I also read that unetbootin works well, but can&#039;t make usb drives bootable on mac. This is driving me insane. Anyone have any insights they&#039;d care to share? Thanks.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails LiveUSB plus Encrypted storage on the same USB Key.</strong><br />
+				Post by: <strong>biscuitbase</strong> on <strong>August 22, 2011, 11:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Have you had success booting it from another PC (non mac) ?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails LiveUSB plus Encrypted storage on the same USB Key.</strong><br />
+				Post by: <strong>ach2</strong> on <strong>August 23, 2011, 12:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				I don&#039;t have another PC but I couldn&#039;t get it to boot in parallels, if that means anything. I followed these directions but couldn&#039;t get it to work:<br /><br />http://renevanbelzen.wordpress.com/2009/10/14/creating-a-bootable-usb-stick-with-mac-os-x-in-10-easy-steps/
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails LiveUSB plus Encrypted storage on the same USB Key.</strong><br />
+				Post by: <strong>awesome1126</strong> on <strong>August 24, 2011, 12:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				Try booting tails using virtualbox on your mac, I use it all the time and it works great.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails LiveUSB plus Encrypted storage on the same USB Key.</strong><br />
+				Post by: <strong>btcfreedom</strong> on <strong>August 24, 2011, 01:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=1382.msg18817#msg18817">Quote from: ach2 on August 22, 2011, 11:38 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;ve been trying very hard to get this bootable on my macbook, but have had no success at all. I tried installing refit to no avail. I also read that unetbootin works well, but can&#039;t make usb drives bootable on mac. This is driving me insane. Anyone have any insights they&#039;d care to share? Thanks.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />for my mac peeps - there are loads of other booters around there, chameleon being one.<br /><br />personally i have a custom made boot-rom included mac OS X bootable key with encrypted storage, encryption on-the-fly, and <br /><br />passphrase upon mount. i&#039;ve utilized disk utility and selective filevault instances for this build. cloning a slim OS build can be tricky...<br /><br />carbon copy cloner when you&#039;ve finalized your build to a backup stick and lock that shit away.<br /><br />check your torrent sources for pre-made USB OSX bootables. those builds work pretty well.<br /><br />mine took a day to make ;) after pulling out all my hair. it&#039;s 10.7 and not 10.6 like most of the builds out there, and it has full GPG with all <br /><br />my keys and every tool necessary for live operation.<br /><br />Virtual box is NOT the same as it shares your NIC card via NAT and is still attached to your host OS and it&#039;s logging.<br /><br />VMWare if you&#039;re going to do it, and use Ubuntu. Also change your network settings to get a hard IP instead of <br /><br />sharing your Mac&#039;s IP.<br /><br />be safe.<br /><br />~btcf~
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails LiveUSB plus Encrypted storage on the same USB Key.</strong><br />
+				Post by: <strong>biscuitbase</strong> on <strong>August 25, 2011, 04:22 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I now have Tails setup on my 4gb usb flash, the partitions are as follows:<br />700miB for the live image, (i shrunk it down after using unetbootin as recommended)<br />50miB ext2 for Trucrypt portable<br />3GiB for my encrypted partition. Here i store keepassx, pass database, pgp keys, etc<br /><br />The only issue I&#039;ve had is that trucrypt has to be run as root to work properly.<br />I do a sudo nautilus, browse to the directory and run it. That way there are no issues mounting the encrypted partition.<br /><br />Thanks loginathome!! Great idea!&nbsp; 8)<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails LiveUSB plus Encrypted storage on the same USB Key.</strong><br />
+				Post by: <strong>lucymucy</strong> on <strong>August 25, 2011, 05:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=1382.msg19209#msg19209">Quote from: btcfreedom on August 24, 2011, 01:47 am</a></div></div><blockquote class="bbc_standard_quote">Virtual box is NOT the same as it shares your NIC card via NAT and is still attached to your host OS and it&#039;s logging.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I don&#039;t know what the issue with sharing your NIC card via NAT as all traffic in Tor is encrypted.<br />You think Linux as host OS logging something ?<br /><br />Basically, I have the opposite case, I have Windows XP Gamers edition (159 Mb iso) installed under VirtualBox, and I have <br />TrueCrypt file container which contains this installed Windows and inside this guest OS I have Tor, PGP and other stuff.<br /><br />But may be I will try your way, except storage of PGP keys and passphrases, which will be on another microSD, that can be easily hidden away.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails LiveUSB plus Encrypted storage on the same USB Key.</strong><br />
+				Post by: <strong>btcfreedom</strong> on <strong>August 25, 2011, 05:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=1382.msg19837#msg19837">Quote from: lucymucy on August 25, 2011, 05:35 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=1382.msg19209#msg19209">Quote from: btcfreedom on August 24, 2011, 01:47 am</a></div></div><blockquote class="bbc_alternate_quote">Virtual box is NOT the same as it shares your NIC card via NAT and is still attached to your host OS and it&#039;s logging.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I don&#039;t know what the issue with sharing your NIC card via NAT as all traffic in Tor is encrypted.<br />You think Linux as host OS logging something ?<br /><br />Basically, I have the opposite case, I have Windows XP Gamers edition (159 Mb iso) installed under VirtualBox, and I have <br />TrueCrypt file container which contains this installed Windows and inside this guest OS I have Tor, PGP and other stuff.<br /><br />But may be I will try your way, except storage of PGP keys and passphrases, which will be on another microSD, that can be easily hidden away.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It&#039;s a good point regarding Tor. You&#039;re right, all traffic is encrypted. However if you make a new virtual NIC, instead of NAT&#039;ing, you have that extra layer of a manipulated interface. You can make two NIC&#039;s and bond them :D<br />Proxy them out twice, BNC them somewhere...make it HARD for LE. ;)<br /><br />My thoughts are similar for Ubuntu, which I run with VMWare from time to time. I used to use it primarily for what I have my live USB key for now. OS logging as we know cannot be shut off entirely, but having it all to yourself - including control over the network interface - is a nice feeling.<br /><br />~btcf~
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tails LiveUSB plus Encrypted storage on the same USB Key.</strong><br />
+				Post by: <strong>biscuitbase</strong> on <strong>August 26, 2011, 12:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				@ lucymucy<br />I started off with a similar thing. I had a truecrypt file container with portable virtual box inside. I ran a VM from there (xubuntu).<br />Having experienced both:<br />Tails live is much quicker, (running a Vm is always a little sluggush I find) and it has system wide proxy so everything goes through Tor.<br />Give it a try!&nbsp; ;D
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

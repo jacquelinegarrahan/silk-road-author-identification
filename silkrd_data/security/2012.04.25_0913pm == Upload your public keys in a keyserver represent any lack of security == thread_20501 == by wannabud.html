@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=20501.0" />
+		<title>Print Page - Upload your public keys in a keyserver represent any lack of security</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: wannabud on April 25, 2012, 09:13 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Upload your public keys in a keyserver represent any lack of security</strong><br />
+				Post by: <strong>wannabud</strong> on <strong>April 25, 2012, 09:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I read in some thread here you should send your public keys only encrypted. Really don&#039;t understand why, if it is public keys.<br /><br />And what about upload them in a keyserver? They can track it back to you? Even if you are using liberte or tails?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Upload your public keys in a keyserver represent any lack of security</strong><br />
+				Post by: <strong>pine</strong> on <strong>April 26, 2012, 05:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				Well, at least Alice or Bob has to send their public key unencrypted.<br /><br />Best thing -&gt;<br /><br />Person A sends public key with plaintext.<br />Person B encrypts their public key with Person A&#039;s public key and sends that to Person A.<br />Person A decrypts Person B&#039;s message to find Person B&#039;s public key. Person A makes a new public key and encrypts that with Person B&#039;s public key.<br />Person B decrypts and obtains Person A&#039;s new public key<br /><br />Now you are twice as secure as before. The outer &#039;shell&#039; of encryption must be broken before getting access to the inner shell of encryption. A bit mind boggling though.<br /><br />Notice how one could potentially exchange dozens of &#039;nested&#039; public keys to enhance PGP to any level of security you wanted. That, I reckon, is the seed of ideas like the Tor onion routing network.<br /><br />Doing too much of this is kinda pointless for the majority of messages sent. Much like using weak passwords on sites like the NY Times or WSJ, since it&#039;s not exactly pivotal if an attacker gains access, you ought to use different levels of cryptography for different purposes.<br /><br />Obviously if you need stronger encryption that what PGP can offer, then your main attack vector is far more likely to be a keylogger to obtain your passphrase or LE malware to get a copy of your private key.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Upload your public keys in a keyserver represent any lack of security</strong><br />
+				Post by: <strong>wannabud</strong> on <strong>May 01, 2012, 05:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Didn&#039;t get where is the lack of security.<br /><br />In this case, every seller here would be vulnerable?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Upload your public keys in a keyserver represent any lack of security</strong><br />
+				Post by: <strong>someone703</strong> on <strong>May 01, 2012, 08:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=20501.msg207726#msg207726">Quote from: wannabud on April 25, 2012, 09:13 pm</a></div></div><blockquote class="bbc_standard_quote">I read in some thread here you should send your public keys only encrypted. Really don&#039;t understand why, if it is public keys.<br /><br />And what about upload them in a keyserver? They can track it back to you? Even if you are using liberte or tails?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Mind linking to that thread?<br /><br />The whole point of the public key is that it&#039;s public...&nbsp; Anything encrypted with it can only be un-encrypted using the matching private key that only the person who owns the public key should have access to - thus providing confidentiality.<br /><br />Unless there&#039;s some sort of backdoor method allowing a person to generate the private key by using the public key there&#039;s no problem with having your public key floating out there for others to use.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

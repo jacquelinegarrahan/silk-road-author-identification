@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=196589.0" />
+		<title>Print Page - Security Measures to take on ToR - How not to be ass-fucked by FBI</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: psychomanbr on August 05, 2013, 08:54 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>psychomanbr</strong> on <strong>August 05, 2013, 08:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hi folks!<br /><br />In light of the recent (and most unfortunate event) of Freedom Hosting getting busted by the feds, I&#039;m reading a shitload of posts here and in some other forums about people soiling themselves out of fear of NSA, FBI and other types of law enforcement assholes worldwide.<br /><br />So here are a few things I&#039;d like to share about what types of security measures I take to make it if not impossible, extremely harder for police dudes to find my ass:<br /><br />1 - Use Tails OS or Linux to browse ToR: Linux is waaaaaay more secure than Windows for that type of thing, as well as its exploit vectors are smaller, so in case of a breach, damage can be more perceivable and less destructive.<br /><br />2- Always use a primary proxy or vpn service PRIOR to your connection to ToR: I&#039;m using privatvpn.se, but there are many others around that can tunnel your connection even before establishing a ToR circuit. By using a primary vpn tunnel, my connection goes from my PC to the vpn tunnel (that&#039;s one external IP), then through some ToR nodes (second external and possibly traceable IP) and only then, after the ToR tunnel, it reaches the desired website and returns me with the webpage I&#039;m trying to see. If our friend Marques used this method, even with FBI exploiting his browser to display his external IP, all they would get is the external IP of the VPN provider. Since that vpn provider doesn&#039;t store logs or connection data, and the external IP is shared between hundreds of nodes, he would still be at the comfort of his home (or bunker, whatever) and my freaking e-mail at tormail would be working right now &gt;:(<br /><br />3- DO NOT USER TOR BROWSER BUNDLE: Surprised? Don&#039;t be. The browser bundle was made for folks that do not know their way around the networking behind ToR, AND its standard for everyone that uses it, meaning that if you find one flaw in it, everyone using it can consider themselves fucked the same wat the first dude was. I&#039;m using the standard Iceweasel install in Debian and I have disabled everything, JavaScript, Java, Flash, Moonlight, and etc. I only turn on javascript if I know the website to be reliable, and even so with extreme care on what I&#039;m clicking. By making yourself different from others you also won&#039;t fall in the same traps. It can make you stand out a little bit more for the servers eyes, but still, a little tweaking to your user agent makes you invisible again.<br /><br />4- GOD FREAKING DAMMIT, USE GPG FOR EVERYTHING!!!!: Yes, you&#039;ve heard it right. Use GPG for ALL of your emails/communications under ToR. Except for this forum for instance, given that you&#039;re using all of the previous methods for safety. If you&#039;re paranoid like me, you can get hackingdefined&#039;s 16384 bit GPG build here: http://hackingdefined.org/?p=284 &lt;&lt;&lt; CLEARNET LINK! BE CAREFUL! &gt;&gt;&gt;<br /><br />5- Never open downloaded files or clearnet links while using ToR: Needless to say exploit vectors within files are huge. Open whatever you&#039;ve downloaded from ToR only after a massive scan at virustotal {dot} org, followed by a scan from your antivirus, and open the file after you&#039;re FULLY DISCONNECTED from the internet. And I mean FULLY. Not on ToR, not on your regular Internet, not even in your local LAN. Shutdown your wifi card or unplug your network cable before opening the file. What they can&#039;t see they can&#039;t hurt.<br /><br />6- If in doubt, examine the webpage source code: You can hide a shitload of stuff on hidden iframes under webpages. If in doubt, view the webpage source code in your browser and search for the word &quot;iframe&quot; with broad word matching. If there&#039;s something in there about &quot;iframes&quot; or the word &quot;hidden&quot; next to it, GTFO!<br /><br />7- If possible, do not use your home connection when browsing ToR: You&#039;ve got that right. Use a neighbours wi-fi (given he&#039;s not a computer freak like me or you&#039;ll get busted and they would steal your freaking bitcoins :D). If you&#039;re using the VPN+ToR method, you can even use a unsuspecting public-wifi. Just keep an eye for others, what they&#039;re doing and etc. Best thing is to have a quick IP scan on the network you&#039;re in to see who&#039;s active. If you have a coffee shop nearby and there&#039;s just you and on other IP browsing stuff at 3AM on a Monday, GTFO!<br /><br />EDIT: A little something i&#039;ve forgot:<br />8- Encrypt your hard-drive: At least the partition of the OS you&#039;re using to access ToR from. You can find very good tutorials online using TrueCrypt (the best one ever), Google it :)<br /><br /><br />Hope this helps some of you not to be scared the shit out of this freedom hosting incident. Remember, fear is the biggest weapon they&#039;ll have.<br />Feel free to ask me whatever you want about this, please do it so in here (admins, can I?) cause my beloved tormail is now confiscated :)<br /><br />Be safe! Cheers!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>ethnophile</strong> on <strong>August 05, 2013, 09:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				rathergood
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>omegaflarex</strong> on <strong>August 05, 2013, 09:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				In response to this thread and other thread:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=196587.15<br /><br />- use cryptoheaven.com - an ISP email provider which is located in Canada - it&#039;s outside of US jurisdiction. This email use AES256 bit encryption, this transmission cannot be intercepted and decrypted. It would take NSA 10,000 years to decrypt it regardless, much longer for all LE agencies. Use it:<br /><br />http://www.cryptoheaven.com/<br /><br />There, problem solved. LE is a bunch of noobs - TRY HARDER!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>TeegDougland</strong> on <strong>August 05, 2013, 09:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				nahh I&#039;ll just get arrested instead. too much work.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>omegaflarex</strong> on <strong>August 05, 2013, 09:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I am using truecrypt - 10-20 randomly generated password. It took me a while to memorized it but it was WORTH IT! :D. Now my SSD is heavily encrypted with AES256 ;). There&#039;s a flaw in SSD design for encryption but LE won&#039;t be able to crack it, maybe NSA can but I highly likely doubt it because gyroscope cannot be done on SSD, only mechanical HDDs.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>TeegDougland</strong> on <strong>August 05, 2013, 10:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				and as a quick aside, CH being outside US agencies&#039; jurisdiction doesn&#039;t really mean shit when you look at the general callousness about surveillance if it&#039;s foreign. Americans only tend to give a shit if one of us is being surveilled illegally.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>Intrepid21</strong> on <strong>August 05, 2013, 10:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Been lazy but moving to TailsOS tonight. Thanks for the info<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>belva</strong> on <strong>August 05, 2013, 10:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I am not computer &quot;literate&quot; so to speak.&nbsp; I do not have tormail, I have tor browser only.&nbsp; Am I safe? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>heavysky</strong> on <strong>August 05, 2013, 10:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you, sir for your quite thorough and enlightening post.<br /><br />I&#039;d like to probe further on item 7 -- <br /><br />1 what are the particular risks of using your home network - if you use an obsfproxy bridge - doesnt that address the main concern?<br />2 assuming i continue to use home network - how should I set up the DNS and MAC settings for max security - I already use encryption and don&#039;t broadcast my ssid<br /><br />thanks for your wisdom and time
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>toke 100</strong> on <strong>August 05, 2013, 10:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1416059#msg1416059">Quote from: belva on August 05, 2013, 10:11 pm</a></div></div><blockquote class="bbc_standard_quote">I am not computer &quot;literate&quot; so to speak.&nbsp; I do not have tormail, I have tor browser only.&nbsp; Am I safe?<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote"><br /><br />im in the same boat as belva are we safe ? i done a complete clean on computer a few days back and reloaded tor browser&nbsp; am i safe&nbsp; :o&nbsp; &nbsp;fuck me i only want the odd bag of weed :&#039;( lol</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>PathSeeker</strong> on <strong>August 05, 2013, 10:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for the info.&nbsp; I&#039;m a total noob using a USB-installed Tails.<br />Item#2:<br />Does this mean that I should somehow be using a proxy prior to my tor connection.&nbsp; Is there any guide on how to do that?&nbsp; I&#039;ve learned so much from these forums ab pgp/TOR ect...&nbsp; Can&#039;t be too hard to figure out can it?&nbsp; Also wouldn&#039;t using VPN prior to TOR leave your data vulnerable on the way to the vpn server or whatever prior to becoming torified?<br />#7:<br />Can you explain the last sentence?<br /><br />Omega:<br />I have a tough time believing that Stephen Harper (Canada&#039;s doucheass fuckwad of a Prime Minister) wouldn&#039;t jump at the chance to polish some good ol American LE knob.&nbsp; He gives not a single fuck about any Canadian that is not among the 1%.&nbsp; Of course, you are talking about encrypted data so my point is moot, but I feel it worth mentioning that at higher levels, Canada is one of the most corrupt countries in the world (an ex CRA (our IRS) official stated that &quot;Canada is the most corrupt&quot; country he has ever worked in).<br />I just think people need to be really careful about their ideas of what Canada is and where her priorities lie.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>MrBlack999</strong> on <strong>August 06, 2013, 01:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				VPN....the end <br />ahaha but in all seriousness.....Great read especially for the newbie ToR users! Read carefully and understand everything so that you may safely use ToR. Sending messages through GPG should be a mandatory necessity for all communication between everyone especially the n00bs...tread lightly and keep your ear to the ground my friends....<br /><br /><br />Mr.Black
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>psychomanbr</strong> on <strong>August 06, 2013, 04:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				OK, let me try to answer everyone so far in a single post.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1416059#msg1416059">Quote from: belva on August 05, 2013, 10:11 pm</a></div></div><blockquote class="bbc_standard_quote">I am not computer &quot;literate&quot; so to speak.&nbsp; I do not have tormail, I have tor browser only.&nbsp; Am I safe?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Unfortunately you&#039;re not. Marques was using the ToR browser bundle. The flaw isn&#039;t in ToR so to speak, but in the firefox version that the browser bundle uses. The same flaw that got him busted can get you also.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1416093#msg1416093">Quote from: heavysky on August 05, 2013, 10:20 pm</a></div></div><blockquote class="bbc_standard_quote">Thank you, sir for your quite thorough and enlightening post.<br /><br />I&#039;d like to probe further on item 7 -- <br /><br />1 what are the particular risks of using your home network - if you use an obsfproxy bridge - doesnt that address the main concern?<br />2 assuming i continue to use home network - how should I set up the DNS and MAC settings for max security - I already use encryption and don&#039;t broadcast my ssid<br /><br />thanks for your wisdom and time<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The risks of using your home network are that if somehow the WAN IP you&#039;re using gets unmasked, federal agencies can trackback to your provider and that will lead to your exact location. If you&#039;re using someone else connection, it will pinpoint their home location. Sooner or later they&#039;ll confiscate every computer in the neighborhood to track you, that only saves you a few hours maybe so you can smash your encrypted HD to oblivion.<br />Assuming you&#039;re using your own network, what I do (when the neighbours change their passwords or go from an easy WEP key to WPA2 or such, or their ISP is down and you have to crack some other access point), DNS and MAC won&#039;t make a hell of a difference cause either way when your computer gets connected your router already knows your new MAC, spoofed or not. If it was any different you wouldn&#039;t get connectivity cause your router wouldn&#039;t know where to send the packets. Configuring your router with WPA2-TKIP+AES (given you&#039;ve got a strong password, more than 16 chars I would say) only protects you from immediate connections to your local LAN, but for the Internet you&#039;re exposed the same way you would if you have no password at all in it. Remember that your browser is the last mile between you and everything else when on the Internet. <br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1416168#msg1416168">Quote from: PathSeeker on August 05, 2013, 10:46 pm</a></div></div><blockquote class="bbc_standard_quote">Thanks for the info.&nbsp; I&#039;m a total noob using a USB-installed Tails.<br />Item#2:<br />Does this mean that I should somehow be using a proxy prior to my tor connection.&nbsp; Is there any guide on how to do that?&nbsp; I&#039;ve learned so much from these forums ab pgp/TOR ect...&nbsp; Can&#039;t be too hard to figure out can it?&nbsp; Also wouldn&#039;t using VPN prior to TOR leave your data vulnerable on the way to the vpn server or whatever prior to becoming torified?<br />#7:<br />Can you explain the last sentence?<br /><br />Omega:<br />I have a tough time believing that Stephen Harper (Canada&#039;s doucheass fuckwad of a Prime Minister) wouldn&#039;t jump at the chance to polish some good ol American LE knob.&nbsp; He gives not a single fuck about any Canadian that is not among the 1%.&nbsp; Of course, you are talking about encrypted data so my point is moot, but I feel it worth mentioning that at higher levels, Canada is one of the most corrupt countries in the world (an ex CRA (our IRS) official stated that &quot;Canada is the most corrupt&quot; country he has ever worked in).<br />I just think people need to be really careful about their ideas of what Canada is and where her priorities lie.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />As for item 2, if you&#039;re on Linux you can install the VPN provider package, but if available, ALWAYS go for the OpenVPN method. You can install a package called &quot;network-manager-openvpn&quot; and then setup your VPN connection as you normally would when setting up your Wi-Fi, no secrets to that.<br />Towards using a VPN prior to ToR&#039;ying your connection, no it won&#039;t be vulnerable given that VPN&#039;s are encrypted, usually with Blowfish or AES encryption. When connectiong to ToR later on, you&#039;d only be adding a second encryption channel to the one that the VPN offers. Since we&#039;re talking TCP most of the time here, you get a tunnel within a tunnel before going out to any given website. Adding a primary VPN before ToR helps mostly on tricking your ISP that you&#039;re not on ToR at all. There&#039;s an analysis method called &quot;Stateful Packet Inspection&quot; that works togheter with the more famous one &quot;Traffic Shaping&quot;. This is when your ISP is ACTIVELY looking for specific traffic either to block it or to monitor it (and they can reduce bandwidth or deny it completely for certain types of protocols/networks in the process). Guess I don&#039;t have to explain what can happen when your ISP knows what you&#039;re doing...<br />As for item 7 last sentence, if and every time your connecting to a router that is not your own router, its always wise to see who else is there sharing your connection. You can do it manually by pinging every IP address on the subnet, or doing a SYN scan or UDP scan with NMap or other similar tool. If you&#039;re alone, chances are that the router owner is asleep or not using the connection at that time, and you don&#039;t have to worry about someone noticing their traffic getting cramped up without any reasonable explanation (that would be you using his AP). I have at least 3 wi-fi routers passwords from my neighbours, and I&#039;ve investigated what they do for a living, discovering that none of them has any IT knowledge that would pose a menace to what I&#039;m doing through their connection. Even if they do, it&#039;s all encrypted because of the first pas (VPN), so they won&#039;t be able to mess around with my packets :)<br />Some agencies, like FBI, NSA and such have the skills and hardware power to monitor an entire city if they want to, and we don&#039;t want to make their jobs any easier.<br /><br /><br />And finally, even when using all of those security measures together, there&#039;s still a way of them getting me. No system can be considered secure, that&#039;s rule #1 of information security. What we can do is make the most of what we have to give them a hardest time as possible. What we have is actually a level of uncertainty towards security, and the lower it gets, the better for us and the harder for them. I can have all of that running in my computer and they could overtake a package repo somewhere which would have me to get an spoofed notepad that tracks my every move, and I&#039;d be fucked either way (and don&#039;t think I was the first to have that idea...). Remember, the first line of defense is your BRAIN. If everything else fails believe me, don&#039;t be afraid to (even encrypted), get THOR&#039;s hammer and beat the fuck out of your hard drives. There, no proof at all, Viking way :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>truestorytrust</strong> on <strong>August 06, 2013, 04:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				Not a computer expert by any means so some of the stuff your saying don&#039;t understand.&nbsp; So with that said how so we get to SR if we don&#039;t use the tor package bundle is there something else to download to get to it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>xxdionysusxx</strong> on <strong>August 06, 2013, 09:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1416059#msg1416059">Quote from: belva on August 05, 2013, 10:11 pm</a></div></div><blockquote class="bbc_standard_quote">I am not computer &quot;literate&quot; so to speak.&nbsp; I do not have tormail, I have tor browser only.&nbsp; Am I safe?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;m fairly sure you are.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>PathSeeker</strong> on <strong>August 06, 2013, 10:03 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for the info.&nbsp; +1
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>tg00</strong> on <strong>August 06, 2013, 10:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Nothing wrong with using the Browser Bundle, You just need to disable java script and forbid all plugins flash java etc..<br /><br />You are better off using the browser bundle than your personal web browser, Never use a personal web browser with tor, Have 2 different browsers, 1 for tor and 1 for personal shit.<br /><br />The browser and executable so it&#039;s much easier to update it.<br /><br />The browser bundle is perfectly safe as long as you configure it properly.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>Highalyzer</strong> on <strong>August 06, 2013, 11:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for the info, Psychomanbr. Informative post. But there&#039;s something I&#039;d like to ask, since it&#039;s apparent you&#039;re much more knowledgeable on the subject than I am: I&#039;ve heard a lot about Tails lately, but I&#039;ve been running Liberté (as was recommended on another part of this forum) from a USB, since it&#039;s a very lightweight OS and can run from the 1GB flash drive I happened to have lying around. Do you happen to know anything about this OS, and how it compares to Tails in terms of security? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>JohnTheBaptist</strong> on <strong>August 06, 2013, 11:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1416000#msg1416000">Quote from: TeegDougland on August 05, 2013, 09:52 pm</a></div></div><blockquote class="bbc_standard_quote">nahh I&#039;ll just get arrested instead. too much work.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Me too, where&#039;s the cuffs
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>Psyche</strong> on <strong>August 06, 2013, 11:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You do realize that the way the exploit worked would completely bypass your VPN idea, it actually utilizes WiFi in order to send code to your router to grab the GPS location and other data. If you had WiFi off the exploit would not work on you but who the fuck doesn&#039;t use WiFi?<br /><br />I use TOR obfs3 bridges for the sake of using TOR putting you on a list of people who use tor. I&#039;m not that concerned with my ISP knowing that i&#039;m using tor but better safe than sorry. Also using a VPN before you use tor would mean that they are simply taking the role of your ISP in the sense that they know you are using tor and can see the entry nodes you are using, if you trust your VPN provider the same amount or more than your ISP this is an option but personally I believe that obfs3 bridge relays accomplish your goals better(by making your traffic look like skype video calls, unrelated data, ect to your ISP). Hell even if you were taking a trip to china you could still use tor.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>tanamon</strong> on <strong>August 06, 2013, 11:18 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1415765#msg1415765">Quote from: psychomanbr on August 05, 2013, 08:54 pm</a></div></div><blockquote class="bbc_standard_quote">3- DO NOT USER TOR BROWSER BUNDLE: Surprised? Don&#039;t be. The browser bundle was made for folks that do not know their way around the networking behind ToR, AND its standard for everyone that uses it, meaning that if you find one flaw in it, everyone using it can consider themselves fucked the same wat the first dude was. I&#039;m using the standard Iceweasel install in Debian and I have disabled everything, JavaScript, Java, Flash, Moonlight, and etc. I only turn on javascript if I know the website to be reliable, and even so with extreme care on what I&#039;m clicking. By making yourself different from others you also won&#039;t fall in the same traps. It can make you stand out a little bit more for the servers eyes, but still, a little tweaking to your user agent makes you invisible again.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Most of your tips are good, but this is a terrible recommendation. Tor Browser is a version of Firefox that is specifically patched to protect your anonymity. Regular browsers like Firefox/Iceweasel leak all kinds of uniquely identifying info that Tor Browser doesn&#039;t.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>tanamon</strong> on <strong>August 06, 2013, 11:24 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1417197#msg1417197">Quote from: psychomanbr on August 06, 2013, 04:05 am</a></div></div><blockquote class="bbc_standard_quote">Unfortunately you&#039;re not. Marques was using the ToR browser bundle. The flaw isn&#039;t in ToR so to speak, but in the firefox version that the browser bundle uses. The same flaw that got him busted can get you also.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Do you have a citation for this claim? I have heard nothing about how Marques was identified except that the FBI investigated him for over a year.<br /><br />LE targeted the Tor Browser in this one case, but users who updated like they were supposed to were safe. There are a many ways of fingerprinting users of regular browsers that Tor Browser protects against. The Tor Project recommends their Tor Browser as the only way to surf the web over Tor.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>Psyche</strong> on <strong>August 06, 2013, 11:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1420427#msg1420427">Quote from: tanamon on August 06, 2013, 11:24 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1417197#msg1417197">Quote from: psychomanbr on August 06, 2013, 04:05 am</a></div></div><blockquote class="bbc_alternate_quote">Unfortunately you&#039;re not. Marques was using the ToR browser bundle. The flaw isn&#039;t in ToR so to speak, but in the firefox version that the browser bundle uses. The same flaw that got him busted can get you also.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Do you have a citation for this claim? I have heard nothing about how Marques was identified except that the FBI investigated him for over a year.<br /><br />LE targeted the Tor Browser in this one case, but users who updated like they were supposed to were safe. There are a many ways of fingerprinting users of regular browsers that Tor Browser protects against. The Tor Project recommends their Tor Browser as the only way to surf the web over Tor.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />He&#039;s talking out of his shitter the FBI isn&#039;t give us a fucking manifesto of how the caught him.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>tanamon</strong> on <strong>August 06, 2013, 11:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1420456#msg1420456">Quote from: Lefisca on August 06, 2013, 11:34 pm</a></div></div><blockquote class="bbc_standard_quote">That being said, I have seen a lot about how people with the latest version of Tor Browser, 17.0.7, were safe because it had the security update that was needed to stay unaffected by this breech.&nbsp; I am just confused because although I had this updated version, my settings said that my Javascript was NOT disabled.&nbsp; Am I still safe?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That&#039;s right, anyone running the latest version of the browser bundle was safe, and it was released on June 26. If you didn&#039;t update to the latest version after a month, you were seriously lacking in your security practices to begin with. How do people miss the giant flashing icon in the toolbar, which activates whenever there&#039;s an update?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>Mr Candy</strong> on <strong>August 06, 2013, 11:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for the info, I will definitely be taking some of these measures, although as I&#039;m not located in the US, I assume that I&#039;m far less at risk by these revelations?&nbsp; Also, I read somewhere, that if you used the most update version of TBB, the exploit that the FBI used had been fixed in these versions?&nbsp; The only version of TBB I&#039;ve used is the most recent version.&nbsp; Also I find it bizarre that TBB allows scripts by default and enabled Java when these are the biggest breaches to anonymity.&nbsp; I had no idea about this until these things came to light.&nbsp; Fortunately, SR is the only website I&#039;ve used, although I tried to use tormail on several occasions and it didn&#039;t load, but that was before all this.&nbsp; I assume that exploitation was only while the website was actually down and that message came up that it was down for maintenance?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>tanamon</strong> on <strong>August 06, 2013, 11:56 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1420488#msg1420488">Quote from: Mr Candy on August 06, 2013, 11:46 pm</a></div></div><blockquote class="bbc_standard_quote">Thanks for the info, I will definitely be taking some of these measures, although as I&#039;m not located in the US, I assume that I&#039;m far less at risk by these revelations?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The FBI may pass along non-US IP addresses to the local LE and they can decide what to do with that info.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Also, I read somewhere, that if you used the most update version of TBB, the exploit that the FBI used had been fixed in these versions?&nbsp; The only version of TBB I&#039;ve used is the most recent version.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Did you not read the post right above yours?<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Also I find it bizarre that TBB allows scripts by default and enabled Java when these are the biggest breaches to anonymity. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Java is different from JavaScript. Java was blocked by NoScript, JavaScript was not. The main argument by the Tor Project for allowing JavaScript is that a lot of sites would have disabled functionality, which would drive away users. The more people that use Tor, the more anonymous you are, so they want to maximize users. In light of this major security breach, that may not have been the best security choice.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>Mr Candy</strong> on <strong>August 07, 2013, 12:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1420519#msg1420519">Quote from: tanamon on August 06, 2013, 11:56 pm</a></div></div><blockquote class="bbc_standard_quote">Did you not read the post right above yours?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No.&nbsp; But phew I am safe then, only had this version. I&#039;d just read someone else&#039;s response to this query in another thread saying in specifically targeted FF17.&nbsp; Thanks for clearing that up for me.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>psychomanbr</strong> on <strong>August 07, 2013, 03:45 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hi All<br /><br />Some things I&#039;ve got WRONG, sorry about that: ToR browser bundle is safe if you&#039;re using the latest version. And its easier than configuring the shitload of things I am<br /><br />There was something tough, Psyche commented that the attack they&#039;ve used on Marques was something that went through his Wi-Fi? So they&#039;ve exploited his browser using man-in-the-middle or something instead of some file or link for instance?<br /><br />Sorry for the wrong bits in the post, thank you all for making the corrections!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>tanamon</strong> on <strong>August 07, 2013, 04:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1421206#msg1421206">Quote from: psychomanbr on August 07, 2013, 03:45 am</a></div></div><blockquote class="bbc_standard_quote">There was something tough, Psyche commented that the attack they&#039;ve used on Marques was something that went through his Wi-Fi? So they&#039;ve exploited his browser using man-in-the-middle or something instead of some file or link for instance?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Nobody knows how they nabbed Marques, and if they claim they do, I&#039;d like them to post a link to an authoritative source, like a newspaper article or court documents. The only info we have on the guy is one article in an Irish newspaper, and the only thing it says is that the FBI investigated him for a year. It doesn&#039;t mention how they identified him.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>tg00</strong> on <strong>August 07, 2013, 04:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1423201#msg1423201">Quote from: Lefisca on August 07, 2013, 04:01 pm</a></div></div><blockquote class="bbc_standard_quote">I also knew NOTHING about Java and Java Script before this attack, so I didn&#039;t know to disable them.&nbsp; But thank God I noticed the flashing exclamation point on the little onion icon!!&nbsp; It made me nervous at first, being a noob, because I thought it meant my computer was being watched or something silly, especially when it said I needed to update.&nbsp; But I did it, and when the news of the attack hit, I clicked on &quot;about Tor Browser&quot; and saw I was running version 17.0.7.&nbsp; Yay me!&nbsp; That does not, however, negate the fact that they have three emails in my new Tor Mail account:&nbsp; One with my new Block Chain account info, which I will never be using again.&nbsp; One from Twitter welcoming me, and one to a SR vendor with no incriminating info, EXCEPT I mention my SR screen name.&nbsp; Do I need to scrap this account and start a new one?&nbsp; I will DEFINITELY be learning PGP.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If you are not already i recommend you use Linux, You could use TAILS or install a distro like Linux Mint, Windows is really to insecure to trust anymore.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>Itakethem2study</strong> on <strong>August 07, 2013, 05:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				@psychomanbr Thank you for this information.. it&#039;s extremely valuable to people who are just learning the ins and outs of security.<br /><br />I hope all newbies study up - practice &amp; implement.. <br />we should all be a little bit more careful - it&#039;s easy to be sloppy.<br /><br />&nbsp;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>BongoMagnifico</strong> on <strong>August 07, 2013, 06:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				My current situation and concerns:<br /><br />I installed TBB a few days ago on Windows and have made a few accounts, browsed around a bit and read a lot of this forum. I navigated to the tormail page early on and noticed it was down. Then started reading about the situation there. I feel a bit more comfort knowing that I&#039;ve got 17.0.7, which is supposedly patched (and thanks for that info), but I had javascript enabled until now. I&#039;m hoping that hasn&#039;t compromised anything.<br /><br />My real question is this: Given the activity I&#039;ve been conducting on my home internet connection, is it reasonable to assume that my home address has been flagged? Is using tor in itself attracting much attention?<br /><br />I have not ordered anything, but I&#039;m considering it. Would it be a bad idea to get a shipment to my home address based on my activity thus far? (I know, there is some discussion about this topic too, and perhaps this is the wrong thread to ask). If I do place any orders, I&#039;ll be running tails from usb and connecting from a public wifi spot, possibly through vpn.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>Itakethem2study</strong> on <strong>August 07, 2013, 06:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Setting up tails and operating from a public wifi spot is a good idea if available. <br />I have to believe that some people here live in actual rural areas where public wifi is not as available.<br /><br />Yes those places do exist.&nbsp; In that case one may want to use a linux program like backtrack to borrow someone&#039;s wifi occasionally..<br /><br />Just a thought.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>phantomoto</strong> on <strong>August 07, 2013, 07:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks foe the Info!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>apple man</strong> on <strong>August 07, 2013, 07:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				admin look into this: http://silkroadvb5piz3r.onion/silkroad/user/32842c5427<br /><br />on his homepage it says:<br /><br />&quot;Some orders that were marked as dispatched will be cancelled&quot; and then &quot;NB: Cancelling those sucked. So sorry, both to my repeat and new clients. &quot;<br /><br />we are all told vendors delete our information, how that possible when you marked the goods in transit. I am scared as fuck as i got kids and a wife staying with me.&nbsp; someone please help me to stop worrying and tell me i am wrong.&nbsp; his feedback is also looking fake as fuck as i am still waiting for my btc/item but no response.<br /><br />on the seller guide on wiki it says:<br /><br />&quot;You and you alone will have your client&#039;s shipping address. This information must be destroyed as soon as it is used to label their package. When you click &quot;confirm shipment,&quot; the address will be deleted forever and irretrievable. &quot;<br />&nbsp;<br />and then<br /><br />&quot;-Under no circumstance should you save a copy of your client&#039;s address.&quot;<br /><br /><br />Admin save us please, someone get back to me.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>BongoMagnifico</strong> on <strong>August 07, 2013, 08:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Perhaps my paranoia is excessive at this point. I&#039;ll try to trust that 17.0.7 has kept me relatively save so far.<br /><br />I&#039;ve heard that an ISP can see when a person is using tor. Perhaps nothing of the activity, but just that it&#039;s in use. Is that true?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>Green-Android</strong> on <strong>August 07, 2013, 08:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for the heads-up, only using usb-stick that are encrypted with TrueCrypt.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>tg00</strong> on <strong>August 07, 2013, 10:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=196589.msg1424041#msg1424041">Quote from: BongoMagnifico on August 07, 2013, 08:35 pm</a></div></div><blockquote class="bbc_standard_quote">Perhaps my paranoia is excessive at this point. I&#039;ll try to trust that 17.0.7 has kept me relatively save so far.<br /><br />I&#039;ve heard that an ISP can see when a person is using tor. Perhaps nothing of the activity, but just that it&#039;s in use. Is that true?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Your ISP can see you are using Tor but they cannot see what you are doing inside the Tor network.<br /><br />You should disable java script,java,silver light, and flash applets as well, If you do all that and use Linux and the browser bundle you are pretty secure.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Security Measures to take on ToR - How not to be ass-fucked by FBI</strong><br />
+				Post by: <strong>VinnieJones</strong> on <strong>August 08, 2013, 06:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				stay away from kiddie porn and the FBI won&#039;t come barreling through your door, or accidentally pick you up and drop you on your balls several dozen times.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

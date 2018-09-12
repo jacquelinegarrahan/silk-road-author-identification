@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=177934.0" />
+		<title>Print Page - Error While Installing Tail 0.18 ***Help Please***</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: enlightener on June 27, 2013, 11:54 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Error While Installing Tail 0.18 ***Help Please***</strong><br />
+				Post by: <strong>enlightener</strong> on <strong>June 27, 2013, 11:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				Ok,this is what I have done so far<br /><br />1.Downloaded tails 0.18 iso image using torrent<br />2. Burnt the Iso file to DVD<br />3.Booted from DVD<br />4.Then selected tails and hit Enter<br />5.An error is thrown :&quot; Kernel Panic not syncing:.......kill init!&quot; <br /><br />Can anybody please tell me how I should proceed..hit a brick wall I feel and I so badly wanted to get it up and running&nbsp; :(<br /><br />l<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Error While Installing Tail 0.18 ***Help Please***</strong><br />
+				Post by: <strong>Sittort</strong> on <strong>June 27, 2013, 03:10 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It is possible a part of your hardware just isn&#039;t compatible with Linux, try it on another machine if possible.<br />Also possible the disc didn&#039;t burn properly or there is a scratch on it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Error While Installing Tail 0.18 ***Help Please***</strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>June 27, 2013, 03:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Wow.&nbsp; That&#039;s pretty impressive... it&#039;s awfully hard to get a kernel panic these days.&nbsp; Basically that means the kernel -- which is what talks to the hardware and stuff -- ran into a situation it not only can&#039;t handle, but can&#039;t even continue functioning properly because of.&nbsp; Hence &quot;panic.&quot;&nbsp; It just dies right there.<br /><br />Sittort&#039;s probably right.&nbsp; It sounds to me like the kernel Tails is using doesn&#039;t include one of the drivers necessary for your machine, or it does include an obscure driver that&#039;s so buggy it&#039;s fucking up the entire kernel.&nbsp; It&#039;s really hard to say any more without seeing the messages leading up to the panic.<br /><br />I don&#039;t know how to get a boot prompt with Tails... normally at the GRUB or LILO boot menu I believe you hit &quot;tab&quot; and it lets you explicitly specify the boot line to use.&nbsp; You can google it and try making the line this to see if it works, or just one of them if both don&#039;t work:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">boot &lt;something&gt; acpi=off pnpbios=off<br /></code><br />(the &lt;something&gt; should be filled in automatically when you get to the boot prompt... hopefully anyway, it&#039;s been awhile since I did this, ahem)<br />That&#039;s not really ideal, but hopefully it&#039;ll let you boot.&nbsp; Basically the problem is that the kernel doesn&#039;t know how to deal with your hardware, and that&#039;s not going to change anytime soon, so... you may want to try an older version of Tails or email the maintainer about it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Error While Installing Tail 0.18 ***Help Please***</strong><br />
+				Post by: <strong>nosponser</strong> on <strong>June 27, 2013, 03:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Tails 19 came out a day or so ago you may want to try :<br />https://tails.boum.org/news/
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Error While Installing Tail 0.18 ***Help Please***</strong><br />
+				Post by: <strong>enlightener</strong> on <strong>June 27, 2013, 05:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				thanks for the advice Sittort and SelfSovereignty<br /><br />I dont think it could be a faulty dvd as I made three copies and the same error was thrown each time<br /><br />I will try booting from another machine to check if I am having hardware issues with the burner<br /><br />@SelfSovereignty, I did type the code you suggested during the boot process but had no luck,thanks for the suggestion<br /><br />will report back on how things turn out, could be useful to someone else too if I do succeed&nbsp; :)<br /><br />love n light
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Error While Installing Tail 0.18 ***Help Please***</strong><br />
+				Post by: <strong>enlightener</strong> on <strong>July 09, 2013, 12:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				wanted to bump this thread if any new users faced similar problems<br /><br />yes the error was due the fact that my firmware had not been updated and apparently there are not going to be any,therefore DVD-USB is not a feasible option<br /><br />However USB-USB installation worked perfect without any flaws<br /><br />heres the tutorial link: http://dkn255hz262ypmii.onion/index.php?topic=114141.0<br /><br />love n light
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Error While Installing Tail 0.18 ***Help Please***</strong><br />
+				Post by: <strong>Nakorx</strong> on <strong>July 09, 2013, 01:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I, too, have bumped into this thread and shall watch carefully but it may be worthwhile.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=140293.0" />
+		<title>Print Page - do not open clearnet links outside of Tor</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: kmfkewm on March 30, 2013, 11:49 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>do not open clearnet links outside of Tor</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 30, 2013, 11:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				I see one poster&nbsp; (ato72543) in particular keeps posting clearnet links and suggesting that people do not open them with Tor. This is Bad Advice. In one case he had a somewhat plausible explanation, in that he linked to a flash video tutorial on using GPG, and flash CAN circumvent Tor. This fails to address the point that NOT USING TOR CIRCUMVENTS TOR IN ALL CASES. Better advice would be &quot;don&#039;t look at flash videos people here post, period&quot;. In other cases he is giving links to .html sites and suggesting that people open them outside of Tor. In this case, there is no plausible explanation for why this would even potentially be considered good advice, and it is pretty obvious that he is confused about how Tor works if he thinks it is not meant for accessing the clearnet with it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: do not open clearnet links outside of Tor</strong><br />
+				Post by: <strong>Green Camel</strong> on <strong>March 30, 2013, 01:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I don&#039;t understand the point of clearnet warnings. Tor Browser is primarily intended for browsing clearnet.<br /><br />If you&#039;ve enabled Flash or Java, it&#039;s your own fault, and in this case it doesn&#039;t make any difference at all if you visit a .onion site or a clearnet site. A Java applet on a .onion site can easily connect you to a clearnet server to find your IP.<br /><br />I&#039;ve never heard of Flash being able to circumvent Tor. Can you please elaborate? It can be used to fingerprint you but that&#039;s about it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: do not open clearnet links outside of Tor</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 30, 2013, 02:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Flash plugins don&#039;t necessarily respect the browsers proxy settings. https://www.torproject.org/docs/faq.html.en#TBBFlash
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: do not open clearnet links outside of Tor</strong><br />
+				Post by: <strong>Green Camel</strong> on <strong>March 30, 2013, 03:26 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">When the Flash plugin is installed, it allows direct TCP connections back to the originating host. These connections may bypass the proxy server, leaking the real external address of the user&#039;s workstation.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The rest applies only to Java.<br /><br />I think the problem is actually that Adobe Flash Player is not open source. Perhaps Gnash would be a safer option? https://en.wikipedia.org/wiki/Gnash<br /><br />On Linux, you can set up user-specific rules in iptables to route all traffic through Tor, and run Firefox from the command line like this, completely avoiding the issue above:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo -u &lt;username&gt; ./start-tor-browser</code>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: do not open clearnet links outside of Tor</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 30, 2013, 04:21 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=140293.msg957417#msg957417">Quote from: Green Camel on March 30, 2013, 03:26 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">When the Flash plugin is installed, it allows direct TCP connections back to the originating host. These connections may bypass the proxy server, leaking the real external address of the user&#039;s workstation.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The rest applies only to Java.<br /><br />I think the problem is actually that Adobe Flash Player is not open source. Perhaps Gnash would be a safer option? https://en.wikipedia.org/wiki/Gnash<br /><br />On Linux, you can set up user-specific rules in iptables to route all traffic through Tor, and run Firefox from the command line like this, completely avoiding the issue above:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo -u &lt;username&gt; ./start-tor-browser</code></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The problem is exactly what you quoted, not that the plugin is not open source. Flash can be used for proxy by pass attacks. Using firewall rules and other techniques can make flash safer to use with Tor (and java as well), but with a vanilla configuration of Tor it is dangerous and can easily lead to deanonymization. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: do not open clearnet links outside of Tor</strong><br />
+				Post by: <strong>pine</strong> on <strong>March 30, 2013, 04:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=140293.msg957203#msg957203">Quote from: Green Camel on March 30, 2013, 01:23 pm</a></div></div><blockquote class="bbc_standard_quote">I don&#039;t understand the point of clearnet warnings. Tor Browser is primarily intended for browsing clearnet.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />LOL. You mean the ones people post sometimes? Yeah. I was late to realize they were doing so because they didn&#039;t know what they were talking about. <br /><br />--<br /><br />In any case kmfkewm is 100% correct. I would add:<br /><br />1. Don&#039;t google Silk Road or anything Silk Road related on a clearnet browser (your regular chrome or internet exploder or firefox etc).<br />2. Don&#039;t search for anything on a clearnet browser that is also what you&#039;re posting on here.<br /><br />That might sound over the top. But it is easy to detect a Google request that came out of a Tor exit node, and since this is one of the largest hidden service forums you should be wary. Who knows what relationship LE really has with the search engines. LEO break the law all the time and call it &quot;intelligence gathering&quot; or &quot;confidential informant&quot; which it produces results.<br /><br />You are being watched. Constantly. Both software agents trawling posts and real LE agents. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: do not open clearnet links outside of Tor</strong><br />
+				Post by: <strong>Green Camel</strong> on <strong>March 30, 2013, 04:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=140293.msg957509#msg957509">Quote from: kmfkewm on March 30, 2013, 04:21 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=140293.msg957417#msg957417">Quote from: Green Camel on March 30, 2013, 03:26 pm</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">When the Flash plugin is installed, it allows direct TCP connections back to the originating host. These connections may bypass the proxy server, leaking the real external address of the user&#039;s workstation.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The rest applies only to Java.<br /><br />I think the problem is actually that Adobe Flash Player is not open source. Perhaps Gnash would be a safer option? https://en.wikipedia.org/wiki/Gnash<br /><br />On Linux, you can set up user-specific rules in iptables to route all traffic through Tor, and run Firefox from the command line like this, completely avoiding the issue above:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">sudo -u &lt;username&gt; ./start-tor-browser</code></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The problem is exactly what you quoted, not that the plugin is not open source. Flash can be used for proxy by pass attacks. Using firewall rules and other techniques can make flash safer to use with Tor (and java as well), but with a vanilla configuration of Tor it is dangerous and can easily lead to deanonymization.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>As I understand it, it&#039;s not a feature but a bug (am I wrong here?). Since Gnash is open source, you can either file a bug report and wait for it to be fixed or start a fork. Of course, first you&#039;d have to test if Gnash actually has this issue.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: do not open clearnet links outside of Tor</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 30, 2013, 05:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It isn&#039;t a feature or a bug, it is a design choice that overlooks anonymity. So I suppose it is the lack of a feature, but not a bug.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: do not open clearnet links outside of Tor</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 30, 2013, 05:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Also I suppose it is possible that Gnash or some other flash plugin has the feature of using the proxy settings of the browser, I am not sure which if any do. I just know that flash not respecting browser proxy settings was such a widespread problem at one point that Tor Project officially said that it is not secure to use Flash plugins with browsers configured to use Tor, unless transparent proxying or similar techniques are used to ensure it doesn&#039;t by pass Tor. I have also heard them say that even with such configurations, it is best practice to avoid using flash plugins anyway, as they are likely to be insecure in other ways as well. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: do not open clearnet links outside of Tor</strong><br />
+				Post by: <strong>Green Camel</strong> on <strong>March 30, 2013, 05:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Actually, the solution is pretty simple. Tor devs should pack Gnash (by forking it if necessary) as part of Tor Browser Bundle.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

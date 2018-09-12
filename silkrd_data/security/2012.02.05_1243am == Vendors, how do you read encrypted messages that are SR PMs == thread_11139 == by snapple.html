@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=11139.0" />
+		<title>Print Page - Vendors, how do you read encrypted messages that are SR PMs</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: snapple on February 05, 2012, 12:43 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>snapple</strong> on <strong>February 05, 2012, 12:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				So far I&#039;ve just been pasting the PGP message into enigmail and emailing it to myself to open it up. <br /><br />But with multiple VMs running, and email in a different VM, cutting and pasting isn&#039;t possible, so how do most vendors here decrypt their orders that are written in PGP?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>jayesh</strong> on <strong>February 05, 2012, 02:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Good question.&nbsp; The solution I settled on is firegpg with firefox 3.&nbsp; Chrome has a plugin, but I couldn&#039;t get it to work.<br />You can set firefox 3 up with vidalia and the tor button, so you load your order page from SR, then you have to save it as an html file, then you load the html file, and click each PGP message for instant decryption.&nbsp; Please re[ply when someone find a more eloquent solution.&nbsp; Like a front end that decrypted the oredr page, and exported into a access database, for the label printing.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>snapple</strong> on <strong>February 05, 2012, 05:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It sounds like you&#039;ve got an equally cumbersome work-around.<br /><br />I&#039;ve finally got Liberte Linux running in perfect isolation, only to find out I can&#039;t cut and paste encrypted PMs and move them to where Thunderbird lives : (
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>Roxxo</strong> on <strong>February 05, 2012, 06:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve always just used Cryptophane&#039;s message feature to do it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>snapple</strong> on <strong>February 05, 2012, 06:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I looked into cryptophane, but that&#039;s a windows-based program and it looks like the last update was back in 2009. Is there a similar program for linux?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>ThisOneGuy</strong> on <strong>February 05, 2012, 07:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				command line<br /><br />gpg --decrypt<br />(paste)<br />ctrl d<br />message comes out<br /><br />pretty easy.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>Derpasaurus</strong> on <strong>February 05, 2012, 07:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				FireGPG is not safe nobody uses it anymore.<br />Command line cut+paste works fine, or make a file, call it msg.asc and paste it full of encrypted info. use gpg to decrypt<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>oso</strong> on <strong>February 05, 2012, 08:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				How about just copy+paste to GPG&#039;s clipboard and then click decrypt?<br /><br />So I just have my browser open and GPG - GNU Privacy Assistant
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>sunsetlimited</strong> on <strong>February 05, 2012, 10:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Not a vendor so possibly off-topic but I kinda like http://ppgp.sf.net/.<br />Runs on Win and Linux (Java app), is self contained so you can run it from an encrypted thumb drive, vm, ...<br />A little rudimentary maybe but it gets the job done.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>jayesh</strong> on <strong>February 06, 2012, 01:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I agree Firegpg is probably not safe if you are using firefox 3.01 to browse behind tor.&nbsp; And I see no problem just using it to load my orders from a html&nbsp; file.&nbsp; When you have 20 orders, it sure is nice to just see 20 addresses.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>Angelology</strong> on <strong>February 06, 2012, 10:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You decrypt them with your password? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>Kobo</strong> on <strong>February 07, 2012, 12:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yes :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>snapple</strong> on <strong>February 07, 2012, 02:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=11139.msg105101#msg105101">Quote from: jayesh on February 06, 2012, 01:43 pm</a></div></div><blockquote class="bbc_standard_quote">When you have 20 orders, it sure is nice to just see 20 addresses.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Ahh yes, a vendors wet dream. I&#039;d drink Dread Pirate Scotts bathwater for an upgrade that allowed PGP decryption within the SR system. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>SuperDimitri</strong> on <strong>February 07, 2012, 03:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				Is it different for vendors? I just copy &amp; paste into the clipboard, click decrypt, enter a password, and voila. I suck with computers, and it takes about 4 seconds to click all that :) I get encrypted messages in SR PM from my vendors...that&#039;s why I ask...is it different for vendors?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>snapple</strong> on <strong>February 07, 2012, 03:48 am</strong>
+			</dt>
+			<dd class="postbody">
+				This clipboard you speak of, can it run on liberte or should i go back to tails for it? what&#039;s it called btw?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>Looker</strong> on <strong>February 07, 2012, 04:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				snapple there is a clipboard feature SuperDimitri is referring to with GPA, it may run on liberte but you will need to find and rpm or otherwise suitable package to install it with. I believe liberte is built based on debian so you may be able to find a debian package that will install on it.<br /><br />Thanks,<br />Looker
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>SuperDimitri</strong> on <strong>February 07, 2012, 07:56 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=11139.msg105973#msg105973">Quote from: Looker on February 07, 2012, 04:06 am</a></div></div><blockquote class="bbc_standard_quote">snapple there is a clipboard feature SuperDimitri is referring to with GPA, it may run on liberte but you will need to find and rpm or otherwise suitable package to install it with. I believe liberte is built based on debian so you may be able to find a debian package that will install on it.<br /><br />Thanks,<br />Looker<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I thought Liberte came with a pgp pre-installed? http://dee.su/liberte
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>Looker</strong> on <strong>February 08, 2012, 03:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				SuperDimitri<br /><br />I was thinking it had gpg but not gpa but in a default config your right it should be under the system tools menu.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>snapple</strong> on <strong>February 09, 2012, 02:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				That was it: in Liberte Linux it&#039;s gpa under system tools. <br /><br />Just imported by keys and it works like a charm. You guys are awesome!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors, how do you read encrypted messages that are SR PMs</strong><br />
+				Post by: <strong>jackthetripper</strong> on <strong>February 09, 2012, 02:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				Well I would copy the text and paste into MS Word, then save as an .asc file (had to dl a patch from the net to do this), then open Kleopatra and click decrypt-&gt;whatever the file is.&nbsp; I like the Gnu4Win that has the Kleopatra interface, not sure if they all do.&nbsp; Actually the hardest part was figuring out how to save the encrypted message as an .asc file, I&#039;m not sure I could do it again even.&nbsp; Had to move it into a certain folder and play with it a while. :P
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=14099.0" />
+		<title>Print Page - A few questions about tails</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: hereweare on March 04, 2012, 06:36 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>A few questions about tails</strong><br />
+				Post by: <strong>hereweare</strong> on <strong>March 04, 2012, 06:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So I&#039;m looking at beefing up my security a bit and thinking about using a tails live CD instead of the truecrypted browser bundle I&#039;ve been using. I&#039;ve read that tails doesn&#039;t leave any traces f whatever you do on your computer, but does it allow you to store data in the live cd or something? Specifically I want to know if I can keep pgp keys on tails. I also like to keep txt documents in my truecrypt file with useful info like links and passwords and stuff. Can I store this kind of data inside of tails and be confident that I won&#039;t lose it or make it available outside of tails? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: A few questions about tails</strong><br />
+				Post by: <strong>alpine</strong> on <strong>March 04, 2012, 07:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				yes you can definitely store data on tail. i would also recommend creating a hidden volume and decoy volume to store your sensitive data. basically the hidden volume is just a encrypted place to store thing and if for ever reason you are forced to give up your password you can give the decoy password and you will give up no sensitive data. this might be over kill for you but you can never be to secure i guess. by the way you can get more info on how to do this on true crypts website, youtube, here, google, its everywhere.&nbsp; stay safe&nbsp; :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: A few questions about tails</strong><br />
+				Post by: <strong>hereweare</strong> on <strong>March 04, 2012, 10:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yea I already use a hidden volume. I guess I really just don&#039;t understand how a live CD can save data without it being accessible anywhere on the hard drive. Also would there be any performance differences between a tails live CD and a truecrypted hidden volume with the browser bundle? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: A few questions about tails</strong><br />
+				Post by: <strong>CaptainSensible</strong> on <strong>March 05, 2012, 12:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				You can&#039;t store any data on a live CD. Perhaps you&#039;re thinking of a USB drive with Tails installed.&nbsp; Either way, you can store your data such as PGP keys, passwords, and text files in either a Truecrypt volume or an encrypted partition on a USB drive.&nbsp; Either of these are able to read/write data.&nbsp; <br /><br />You could burn a CD of Tails and also install a USB drive for storage of data, but to simplify things you may as well just have a USB drive with one bootable partition for Tails and another partition to store data that will change from time to time.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: A few questions about tails</strong><br />
+				Post by: <strong>inscape</strong> on <strong>March 05, 2012, 05:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				i&#039;ve been thinking the same thing, but i was leaning more towards, perhaps more for for vendors, larger customers, or anyone with potentially sensitive information worthy of extra protection. tinkin perhaps alwayz using both a live cd and a flash drive? if you wanted to provide super paranoid security, perhaps burning your email client, tor, browser, gpg, ect onto your &quot;read-only&quot; livecd, assuring your sensitive info, contact info, apps, ect could not be altered without your knowledge. then maybe use your usb drive for anything &quot;active&quot;, read-write, like prefs, files, GPGkeys, ect. and perhaps seperate all essential system flies between both mediums? then adjust any relative filepaths leading to them in your apps?<br /><br />it would kinda be like needing two keys, with separate codes, to naunch a nuke. one would be essentially useless with out the other. like making one contain all your contacts&#039; email addresses, while the other contains the associated GPG keys for those same contacts. yet when combined, still never leave traces on any potential host computer!<br /><br />and perhaps, if ya wanna be extra sneaky, you &quot;could&quot; encrypt and hide what would otherwise be on your flash drive, your &quot;read-write&quot; files, on an ipod? or iphone? and perhaps hide your livecd in with your expansive CD collection? you&#039;d hafta be pretty important for them to search thru every one of your CD&#039;s for a hidden TC volume.<br /><br />even more convincing if you took the time to make the cd actually look, as convincingly as possible, like an orginal cd? in an original case? with the complete ability to play all referenced audio files of course from the outer volume? if necessary one can easily reduce file sizes slightly by digitally altering audio quality. if need be... <br /><br />just some thoughtz.. ;)<br /><br />peace
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: A few questions about tails</strong><br />
+				Post by: <strong>zifnab</strong> on <strong>March 05, 2012, 06:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				^ Seems solid. Add another layer of protection by using keyfiles with your USB so it only decrypts if the live CD is present. <br /><br />0.02 BTC
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

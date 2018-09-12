@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=25372.0" />
+		<title>Print Page - Yubikey what is it? And why should I get or buy it?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Whothefuckisthis on June 03, 2012, 08:17 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Yubikey what is it? And why should I get or buy it?</strong><br />
+				Post by: <strong>Whothefuckisthis</strong> on <strong>June 03, 2012, 08:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				Wasn&#039;t sure if I post this here or rumor mill. But since it&#039;s about security I&#039;ll give it a shot. <br />What is a yubikey (aside from being a USB )? What is it used for? And do I need one?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Yubikey what is it? And why should I get or buy it?</strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>June 03, 2012, 08:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25372.msg271020#msg271020">Quote from: Whothefuckisthis on June 03, 2012, 08:17 am</a></div></div><blockquote class="bbc_standard_quote">Wasn&#039;t sure if I post this here or rumor mill. But since it&#039;s about security I&#039;ll give it a shot. <br />What is a yubikey (aside from being a USB )? What is it used for? And do I need one?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hi buddy, welcome to SR!<br /><br />I was chatting a few weeks ago with some more experienced users about the Yubikey. In theory a Yubikey is a USB key which contains a special private key which generates one time passwords. In plain English this means that theoretically you can log into websites like MtGox more securely as the key has you use an on screen keyboard to protect against key logging programs and generates complex passwords as and when they&#039;re needed.<br /><br />Take a look at https://www.yubico.com/personal-use to see other uses for the Yubikey.<br /><br />While on the face of it, it sounds very impressive it is in fact a bit of a liability for people like us. The simple reason is that having your private key stored on a device means it can be compromised and of course if you use it to protect your password manager program, compromising the one password would entail revealing the whole list!<br /><br />In addition if you were to use a Yubikey to encrypt your machine with Truecrypt through creating a static password (https://www.yubico.com/static-password), if the boys in blue ever raided your home they could use the key to decrypt your machine too.<br /><br />I think a Yubikey might be useful as a decoy if you were using plausible denial encryption i.e you used the Yubikey to protect the harmless data on your machine and surrendered it to the authorities if your home was raided and they threaten you with legal action to hand over your password. <br /><br />When all is said and done however if anyone else but you were to get their hands on your Yubikey this would seriously threaten your security so if you do get one I&#039;d only use it to protect non essential info.<br /><br />V.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Yubikey what is it? And why should I get or buy it?</strong><br />
+				Post by: <strong>MrVidalia</strong> on <strong>June 03, 2012, 10:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				Really only experiance I have with yubikey is the &quot;challenge-response&quot; for software licensing but they do have other modes: I have seen it used in website as authentication key but the ONLY protection this offer you is against breachs of your password like you input password to fake banking site then the hacker could not log on to real bank site because no authentication key.&nbsp; A code is mathematically created and the breach of a one use code they can not generate another valid one without yubikey.&nbsp; So example you have online banking. But still anyone can ask the bank what is your account balance and transactions, only protects you from the hacker log on.<br /><br />I just read the use note on the truecrypt with yubikey&nbsp; and this seems VERY much insecure. The password is stored, when the button is pushed it emulate a keyboard typing in the password. So e.g. now someone see your yubikey plug it to a usb keyboard log and they have your password in 1 second. There are NO verification so the encryption does not determine if the yubikey was installed or the password typed inthe keyboard. Compare to java smartcard in theory 2 way secure.... but then whom ever have the card can decrypt. Instead of this method, pick a strong password and write it only in your mind!<br /><br />So it might be more secure to have a multi-factor authentication for your encryption. E.g. enforced in the BIOS/TPM require your TPM password to initialize, your smart card, fingerprint and STRONG password only written in your mind... then everyone will wonder what secrets you have.&nbsp; Sometimes things hide best in plain site, encrypted of course like multiple hidden truecrypt volume on plain disks.&nbsp; Then remember not only do you have the files created, there is all small traces, browser history, cookie so much small stuff: solve it with fixed medium like live dvd (best for privacy because no rewrite) or write protect flash (secure in theory.)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Yubikey what is it? And why should I get or buy it?</strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>June 03, 2012, 11:39 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=25372.msg271113#msg271113">Quote from: MrVidalia on June 03, 2012, 10:33 am</a></div></div><blockquote class="bbc_standard_quote">Really only experiance I have with yubikey is the &quot;challenge-response&quot; for software licensing but they do have other modes: I have seen it used in website as authentication key but the ONLY protection this offer you is against breachs of your password like you input password to fake banking site then the hacker could not log on to real bank site because no authentication key.&nbsp; A code is mathematically created and the breach of a one use code they can not generate another valid one without yubikey.&nbsp; So example you have online banking. But still anyone can ask the bank what is your account balance and transactions, only protects you from the hacker log on.<br /><br />I just read the use note on the truecrypt with yubikey&nbsp; and this seems VERY much insecure. The password is stored, when the button is pushed it emulate a keyboard typing in the password. So e.g. now someone see your yubikey plug it to a usb keyboard log and they have your password in 1 second. There are NO verification so the encryption does not determine if the yubikey was installed or the password typed inthe keyboard. Compare to java smartcard in theory 2 way secure.... but then whom ever have the card can decrypt. Instead of this method, pick a strong password and write it only in your mind!<br /><br />So it might be more secure to have a multi-factor authentication for your encryption. E.g. enforced in the BIOS/TPM require your TPM password to initialize, your smart card, fingerprint and STRONG password only written in your mind... then everyone will wonder what secrets you have.&nbsp; Sometimes things hide best in plain site, encrypted of course like multiple hidden truecrypt volume on plain disks.&nbsp; Then remember not only do you have the files created, there is all small traces, browser history, cookie so much small stuff: solve it with fixed medium like live dvd (best for privacy because no rewrite) or write protect flash (secure in theory.)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />+1 to Mr Vidalia for an excellent post.<br /><br />It&#039;s certainly true to say that you want to have multi-factor authentication for your encryption i.e something you have and something you know. Truecrypt already supports this procedure through use of keyfiles in combination with a password and if you need help setting this up please do say so - however the Yubikey site itself says that if the key is lost along with the encrypted machine then the data will be compromised - so much for multi factor security!<br /><br />There are separate schools of thought on whether a live DVD or USB is more secure than an encrypted Operating System. Both methods are vulnerable to what is known as a &quot;cold boot attack&quot; where data can be harvested from RAM for a short time after a machine is powered down.<br /><br />The other concern for me about using a live DVD would be where to keep information such as my GPG private key or Bitcoin wallet software. Of course you can encrypt a USB drive with Truecrypt and keep such programs on there, which you could load with a &quot;Live&quot; operating system. <br /><br />V.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Yubikey what is it? And why should I get or buy it?</strong><br />
+				Post by: <strong>Whothefuckisthis</strong> on <strong>June 03, 2012, 08:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Well thank you both very much. At first I wasn&#039;t really sure what they did and I almost thought it was kinda like the USB I purchased. But now I know I really don&#039;t think I need one. Especially if it compromises your passwords and only useful for non important data.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

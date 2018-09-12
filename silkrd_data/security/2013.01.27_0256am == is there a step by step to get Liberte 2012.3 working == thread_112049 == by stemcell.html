@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=112049.0" />
+		<title>Print Page - is there a step by step to get Liberte 2012.3 working</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: stemcell on January 27, 2013, 02:56 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>is there a step by step to get Liberte 2012.3 working</strong><br />
+				Post by: <strong>stemcell</strong> on <strong>January 27, 2013, 02:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				I searched all over and cant find a walk through guide...hopefully from start to finsih. Anyone created one or can point me in a direction?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: is there a step by step to get Liberte 2012.3 working</strong><br />
+				Post by: <strong>sirius</strong> on <strong>January 27, 2013, 03:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				What are you trying to build it on?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: is there a step by step to get Liberte 2012.3 working</strong><br />
+				Post by: <strong>stemcell</strong> on <strong>January 27, 2013, 04:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				meaning what prorgram for example like windows seven or what exactly? Sorry im not to tech savy but trying to learn.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: is there a step by step to get Liberte 2012.3 working</strong><br />
+				Post by: <strong>sirius</strong> on <strong>January 27, 2013, 10:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Alrighty, well I don&#039;t believe that there is a real step by step guide, so I&#039;ll just start with some intro advice. <br />Liberte&#039; linux is it&#039;s own OS.. so you can&#039;t just run it with windows or what have you like you would with say the tor browser bundle, or itunes. Rather, you have to give it it&#039;s own environment so that it can install and run itself as a entirely new &quot;computer&quot; hosting on your hardware. There are a few ways to do this, most notably with either a Live usb (usb that is a bootable device) or a virtual machine.. I reccommend the virtual machine as it is easy to stumble through putting together.. however the usb install can plug into any machine and boot up, which can be cool.<br /><br />Firstly let&#039;s explain virtualization.. go and download/install a program called virtualbox. this program once installed will allow you to build virtual machines.... or computers within computers :o&nbsp; &nbsp;A virtualization program essentially divides up your computers hardware to allow for multiple operating systems to run in their own sand-boxed environment side by side.. <br /><br />Go to Liberte&#039; linux homepage and you will see a few download options, choose the &quot;open virtualization format&quot; or otherwise known as the ova format. Allow it to download from sourceforge.<br /><br />Open virtualbox and go to &quot;file&quot; then &quot;import appliance&quot;.. this will open an import wizard.<br /><br />Select &quot;choose&quot; and find the liberte ova file you just downloaded.. once you&#039;ve done this just hit next.<br /><br />A list of details and config settings will open, just go ahead and leave all of the defaults for now.. next button<br /><br />With any luck it will now assemble your new machine and show it in virtualbox&nbsp; 8) <br /><br />Awesome, select your new machine and hit &quot;start&quot;. you should see a window open and beautiful text start filling up your screen as the first time boot gets underway.. After a moment the text will ask you to enter a password.. this password is what encrypts the persistence and allows you to login so make sure this is one of those &quot;important&quot; passwords that you won&#039;t forget.<br /><br />Aaaand there you should be! <br /><br />If you have any more questions let me know.. maybe later I&#039;ll write up a Live usb guide <br /><br /><br /><br /><br /><br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: is there a step by step to get Liberte 2012.3 working</strong><br />
+				Post by: <strong>stemcell</strong> on <strong>January 29, 2013, 03:09 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks sirius, in your opinion whats better and easier to use. Kelpoatra, Liberty, and or ....shit im drawing a blank lemme look it up and get back
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: is there a step by step to get Liberte 2012.3 working</strong><br />
+				Post by: <strong>stemcell</strong> on <strong>January 29, 2013, 03:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				kleopatra, liberty or tails?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: is there a step by step to get Liberte 2012.3 working</strong><br />
+				Post by: <strong>sirius</strong> on <strong>January 29, 2013, 03:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				I personally have used both tails and liberte&#039; quite a bit, and I would have to give the reccommendation to liberte&#039;.. To the best of my knowledge kleopatra is nothing more than a cert. manager for running gpg in windows.. which is cool, but it&#039;s not a standalone secure OS like tails or liberte&#039;.. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: is there a step by step to get Liberte 2012.3 working</strong><br />
+				Post by: <strong>stemcell</strong> on <strong>January 29, 2013, 03:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				ok so I dont even need kleopatra. deleting now. The more i read the more confused /i get. im just going to stick with learning liberty and not look at anything else. It just throws me throgh loops and makes me second guess myself. thanks alot for your input.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: is there a step by step to get Liberte 2012.3 working</strong><br />
+				Post by: <strong>sirius</strong> on <strong>January 29, 2013, 03:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				No problem man, yeah there is definitely a world full of information to learn.. so just stay methodical and don&#039;t get all fragmented and stressed out.. if you have any problems feel free to message me as I log in most days. I know my shit pretty well and am glad to help those in need of assitance. first things first get liberte running.. then worry about everything else
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

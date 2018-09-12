@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=19768.0" />
+		<title>Print Page - Is it really safe to sell on Silkroad only using Tor?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Decoy on April 20, 2012, 09:26 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>Decoy</strong> on <strong>April 20, 2012, 09:26 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hey guys,<br /><br />I just started to sell over here and i never though in my mind that i would sell that much, it kind of took over my everyday job ! I want to keep selling but at the same time im worried about if i can get caught by ip or any other way. Do any of you guys have any tips so i know how to keep my ass safe?&nbsp; Please let me know thanks<br /><br /><br />Respect to all our buyers !
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>0x00</strong> on <strong>April 20, 2012, 10:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				TOR is generally safe, they won&#039;t locate you by the IP-address. Higher chance of doing that by the potential fingerprints you might leave with handling the financial side of the venture (exchanges, constant $ flow of unusual origin into your own bank account, etc) or the physical shipment part. I checked out your profile on SR and I can see that you are assumably using PGP - which is good, I would enforce that as a rule if someone wants to contact you (definitely for shipping addresses). I would also, probably, purchase a VPS or even a dedicated server from some reputable company (i.e. LeaseWeb or OVH) and store all of my &#039;SR activity&#039;-related stuff over there, on an encrypted partition (which would be even more win if you had an AES-NI capable CPU, that would prevent cold-boot attacks on RAM with TRESOR compared to regular dm-crypt/LUKS encryption, that is if all things come to worst and they attempt such an extreme operation as extracting your encryption key [very unlikely, but might occur in the lowest percentage of cases, if you really pissed them off, but usually a lot more relevant to cyber crimes, instead]). Of course, accessing it with either SSH or SFTP. Basically, I would store jack shit on my own HDD. I would probably even buy an SSD, something like 60G, that is if I wanted to temporarily download/upload something from my local storage to the rented server - because then you could use, i.e., &quot;sdelete&quot;, that would zap the unallocated space much, much more quickly (after file deletion) than on the HDD: forensics wouldn&#039;t be able to do much with such drive, if all unused sectors have been overwritten with zeroes. Um, in the most bizarre cases your ISP might be doing DPI (deep packet inspection) on your end, meaning, they will be able to tell you&#039;re constantly using TOR (even though they wouldn&#039;t be able to sniff the traffic, because it&#039;s encrypted) - but yeah, that could raise some eyebrows in the long run, but really, I can&#039;t see this happening UNLESS you are already a suspect and the LE is working to gather as much evidence as possible (just another minor confirmation of justifying a potential house raid). Even though if you just used SSH for the remote server and TOR over there - that could minimize the effects of such suspicion.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>Regicide</strong> on <strong>April 20, 2012, 10:54 pm</strong>
+			</dt>
+			<dd class="postbody">
+				As I&#039;m only a buyer atm I only use Tor myself, and I&#039;m otherwise not too worried.<br /><br />I can suggest a few things I would make certain to do if I started to sell on the road:<br /><br />1. Tails: This is an operating system that can be booted on a usb drive or a CD. Tails doesn&#039;t use your HDD to store any memory, but rather your RAM to store everything. Because of this, when you shut down your computer, all the activity that you did while using Tails is permanently destroyed and impossible tor recover. I wouldn&#039;t sell without this!<br /><br />2. Financial Security: Be careful when converting large amounts of money from bitcoin to cash. If you are receiving lots of income to any traceable account that is under your name, this is a red flag for LE and financial institutions that illegal income is being attained. Make sure you read up on any information you can about withddrawing your cash, because this is one of the most important considerations for your security.<br /><br />3. There is a shitload more things to consider, but these are what I find to be the 2 most important things aside from proper packing/shipping techniques.<br /><br />Welcome to the Road!&nbsp; :D
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>Decoy</strong> on <strong>April 21, 2012, 03:32 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks you very much guys for the help. Vlad would consider using escrow if we do an exchange for cash in mail once i receive i release funds?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>jase00</strong> on <strong>April 21, 2012, 06:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				Think my friend was telling me once something about using 3G USB dongles.... perhaps not registered to said friend............................. =)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>synths</strong> on <strong>April 21, 2012, 08:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				If you are a vendor I would expect that you would be using a VPN service that doesn&#039;t keep any logs. VPN&#039;s are cheap, even for a triple encrypted connection.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>mdmamail</strong> on <strong>April 21, 2012, 08:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				Don&#039;t use VPNs, use JonDonym instead over wifi or something.<br />SSD&#039;s are notorious for not encrypting properly. You have to first encrypt everything, then add your secret files. If you don&#039;t, everything can be accessed that was on that SSD 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>jochem</strong> on <strong>April 21, 2012, 08:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg199806#msg199806">Quote from: 0x00 on April 20, 2012, 10:40 pm</a></div></div><blockquote class="bbc_standard_quote">TOR is generally safe, they won&#039;t locate you by the IP-address. Higher chance of doing that by the potential fingerprints you might leave with handling the financial side of the venture (exchanges, constant $ flow of unusual origin into your own bank account, etc) or the physical shipment part. I checked out your profile on SR and I can see that you are assumably using PGP - which is good, I would enforce that as a rule if someone wants to contact you (definitely for shipping addresses). I would also, probably, purchase a VPS or even a dedicated server from some reputable company (i.e. LeaseWeb or OVH) and store all of my &#039;SR activity&#039;-related stuff over there, on an encrypted partition (which would be even more win if you had an AES-NI capable CPU, that would prevent cold-boot attacks on RAM with TRESOR compared to regular dm-crypt/LUKS encryption, that is if all things come to worst and they attempt such an extreme operation as extracting your encryption key [very unlikely, but might occur in the lowest percentage of cases, if you really pissed them off, but usually a lot more relevant to cyber crimes, instead]). Of course, accessing it with either SSH or SFTP. Basically, I would store jack shit on my own HDD. I would probably even buy an SSD, something like 60G, that is if I wanted to temporarily download/upload something from my local storage to the rented server - because then you could use, i.e., &quot;sdelete&quot;, that would zap the unallocated space much, much more quickly (after file deletion) than on the HDD: forensics wouldn&#039;t be able to do much with such drive, if all unused sectors have been overwritten with zeroes. Um, in the most bizarre cases your ISP might be doing DPI (deep packet inspection) on your end, meaning, they will be able to tell you&#039;re constantly using TOR (even though they wouldn&#039;t be able to sniff the traffic, because it&#039;s encrypted) - but yeah, that could raise some eyebrows in the long run, but really, I can&#039;t see this happening UNLESS you are already a suspect and the LE is working to gather as much evidence as possible (just another minor confirmation of justifying a potential house raid). Even though if you just used SSH for the remote server and TOR over there - that could minimize the effects of such suspicion.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I wouldn&#039;t trust a VPS provider for the world with my data. I&#039;d rather use a VM running of an encrypted hidden True Crypt partition. I would however use an anonymously bought VPS to conceal my traffic. I&#039;d set up an SSH-tunnel to the VPS and use Tor through that tunnel, so only the VPS is showing Tor traffic (your connection would show a lot of SSH traffic, but that won&#039;t be a big give away as a lot of Tor traffic).<br /><br />Overall you can hide much of the technical stuff. The fact that everything is running through Tor already helps a lot in keeping you safe. I&#039;d be more worried about leaving a paper trail on the financial side of business. Cashing out through your bank account (exchange -&gt; bank account) would be fine for small amounts, but at some point you&#039;ll have to cash out another way. There are these anonymous IBAN-bank cards (offered on SR, but you can get them cheaper in other places), which you can use to cash out up to €2500 (or $3000, I believe). Make sure you don&#039;t use them too close to your home and wear a motorbike helmet while using the ATM, this will greatly reduce the chances of you being caught.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>0x00</strong> on <strong>April 21, 2012, 10:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg200582#msg200582">Quote from: jochem on April 21, 2012, 08:56 am</a></div></div><blockquote class="bbc_standard_quote">I wouldn&#039;t trust a VPS provider for the world with my data. I&#039;d rather use a VM running of an encrypted hidden True Crypt partition. I would however use an anonymously bought VPS to conceal my traffic. I&#039;d set up an SSH-tunnel to the VPS and use Tor through that tunnel, so only the VPS is showing Tor traffic (your connection would show a lot of SSH traffic, but that won&#039;t be a big give away as a lot of Tor traffic).<br /><br />Overall you can hide much of the technical stuff. The fact that everything is running through Tor already helps a lot in keeping you safe. I&#039;d be more worried about leaving a paper trail on the financial side of business. Cashing out through your bank account (exchange -&gt; bank account) would be fine for small amounts, but at some point you&#039;ll have to cash out another way. There are these anonymous IBAN-bank cards (offered on SR, but you can get them cheaper in other places), which you can use to cash out up to €2500 (or $3000, I believe). Make sure you don&#039;t use them too close to your home and wear a motorbike helmet while using the ATM, this will greatly reduce the chances of you being caught.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I wouldn&#039;t trust a &quot;an encrypted hidden TrueCrypt partition&quot; for the world with my data. As I have already pointed out in my post - TRESOR is the way to go, not TrueCrypt. TrueCrypt is an inferior way of encrypting partitions/volumes, as it&#039;s subject to cold-boot attacks on RAM: that&#039;s where it stores the encryption key for mounted partitions - otherwise, it wouldn&#039;t be able to decrypt and supply the contents of that storage on-the-fly. The authorities are now using small SSD-USB/ATA controllers, that are able to boot on the target PC and dump the encryption key out of RAM in seconds, which will almost always yield positive results (due to the way that DRAM contents degrade gradually when not refreshed, not instantly and it&#039;s also possible to freeze the modules in order to achieve a higher retention time - this technique is now widespread for particular US LE).<br /><br />Refer to this research: https://citp.princeton.edu/research/memory/<br />And this: http://en.wikipedia.org/wiki/Cold_boot_attack<br /><br />The solution is to keep the encryption key inside the CPU registers: http://en.wikipedia.org/wiki/TRESOR<br />If you do not have AES-NI support - even an SSE2 enabled CPU will be sufficient, although with some percentage of performance penalty.<br /><br />Yes, I know that you&#039;ve said a &quot;hidden&quot; partition - however, once the relevant encryption key is obtained for the according partition, then proper forensics will have no problem identifying the masqueraded storage in question. Using a VM adds nothing more to the equation, unless you are using VM encryption as well, like VMware encryption i.e. - also crackable. Although setting up a VM might be more comforting, because you&#039;d have more options for multiple network configurations (virtual adapters, etc). But nothing that you can&#039;t do on a remote dedicated server.<br /><br />Acquiring an anonymously bought VPS/dedicated is also not that hard, because one can use a prepaid card (http://www.plati.ru/asp/list_pin.asp?id_f=11354).<br /><br />&quot;I&#039;d set up an SSH-tunnel to the VPS and use Tor through that tunnel, so only the VPS is showing Tor traffic (your connection would show a lot of SSH traffic, but that won&#039;t be a big give away as a lot of Tor traffic).&quot; - isn&#039;t that exactly what I said, though? Except that I didn&#039;t explicitly mention tunneling the traffic, but that was implied: tunneling the port through something like &#039;Tunnelier&#039; or port-forwarding in Putty and solely usinig the preconfigured portable version of FireFox supplied with the TOR bundle (not running TOR on your machine, but just the FF instance). <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>Bridgehead</strong> on <strong>April 21, 2012, 01:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				0x00,<br /><br />AWESOME information, thanks a lot for sharing.<br /><br />cheers,<br /><br />Bridge
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>April 21, 2012, 04:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg200193#msg200193">Quote from: Decoy on April 21, 2012, 03:32 am</a></div></div><blockquote class="bbc_standard_quote">Thanks you very much guys for the help. Vlad would consider using escrow if we do an exchange for cash in mail once i receive i release funds?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hi decoy. For small amounts I am more than happy to accept Escrow for GBP provided the buyer covers the fees, please send me a message and we&#039;ll work out the details.<br /><br />V.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>jochem</strong> on <strong>April 21, 2012, 06:04 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg200682#msg200682">Quote from: 0x00 on April 21, 2012, 10:50 am</a></div></div><blockquote class="bbc_standard_quote">I wouldn&#039;t trust a &quot;an encrypted hidden TrueCrypt partition&quot; for the world with my data. As I have already pointed out in my post - TRESOR is the way to go, not TrueCrypt. TrueCrypt is an inferior way of encrypting partitions/volumes, as it&#039;s subject to cold-boot attacks on RAM: that&#039;s where it stores the encryption key for mounted partitions - otherwise, it wouldn&#039;t be able to decrypt and supply the contents of that storage on-the-fly. The authorities are now using small SSD-USB/ATA controllers, that are able to boot on the target PC and dump the encryption key out of RAM in seconds, which will almost always yield positive results (due to the way that DRAM contents degrade gradually when not refreshed, not instantly and it&#039;s also possible to freeze the modules in order to achieve a higher retention time - this technique is now widespread for particular US LE).<br /><br />Refer to this research: https://citp.princeton.edu/research/memory/<br />And this: http://en.wikipedia.org/wiki/Cold_boot_attack<br /><br />The solution is to keep the encryption key inside the CPU registers: http://en.wikipedia.org/wiki/TRESOR<br />If you do not have AES-NI support - even an SSE2 enabled CPU will be sufficient, although with some percentage of performance penalty.<br /><br />Yes, I know that you&#039;ve said a &quot;hidden&quot; partition - however, once the relevant encryption key is obtained for the according partition, then proper forensics will have no problem identifying the masqueraded storage in question.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Cool information, I wasn&#039;t aware of the specifics. The reason I mostly suggested to run stuff at home is because you wouldn&#039;t want to store your data off site. Imo you have far more control over your own environment as opposed to a VPS somewhere in a datacenter.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg200682#msg200682">Quote from: 0x00 on April 21, 2012, 10:50 am</a></div></div><blockquote class="bbc_standard_quote">Using a VM adds nothing more to the equation, unless you are using VM encryption as well, like VMware encryption i.e. - also crackable. Although setting up a VM might be more comforting, because you&#039;d have more options for multiple network configurations (virtual adapters, etc). But nothing that you can&#039;t do on a remote dedicated server.<br /><br />Acquiring an anonymously bought VPS/dedicated is also not that hard, because one can use a prepaid card (http://www.plati.ru/asp/list_pin.asp?id_f=11354).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Although you can achieve a safe system without using a VM, you have to be extremely careful about leaking information (as you&#039;ll be running your regular clearnet stuff as well). Using a VM, you can mitigate any fuck ups by routing all traffic through Tor (which sucks if you do it for your whole computer). In that sense a VM does add extra security (just another layer that has to be broken).<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg200682#msg200682">Quote from: 0x00 on April 21, 2012, 10:50 am</a></div></div><blockquote class="bbc_standard_quote">&quot;I&#039;d set up an SSH-tunnel to the VPS and use Tor through that tunnel, so only the VPS is showing Tor traffic (your connection would show a lot of SSH traffic, but that won&#039;t be a big give away as a lot of Tor traffic).&quot; - isn&#039;t that exactly what I said, though? Except that I didn&#039;t explicitly mention tunneling the traffic, but that was implied: tunneling the port through something like &#039;Tunnelier&#039; or port-forwarding in Putty and solely usinig the preconfigured portable version of FireFox supplied with the TOR bundle (not running TOR on your machine, but just the FF instance).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I thought you were talking about actually storing data in the VPS, not just tunneling your traffic through it. In most cases I&#039;m against storing information off site (in the case of illegal stuff).
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>pine</strong> on <strong>April 21, 2012, 10:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg200582#msg200582">Quote from: jochem on April 21, 2012, 08:56 am</a></div></div><blockquote class="bbc_standard_quote">Make sure you don&#039;t use them too close to your home and wear a motorbike helmet while using the ATM, this will greatly reduce the chances of you being caught.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I think enough people aren&#039;t aware of this.<br /><br />There is a CCTV in the back of the majority of ATM machines. I suggest wearing a larger than normal pair of dark sunglasses, a hat/cap and long sleeves. I don&#039;t like hoodies, but they work too. Also, you never wear this stuff normally obviously. Halloween is a nice time of year for extracting a lot of moolah I think you&#039;ll find.<br /><br />Also; do your transactions at say 23:50, and then you&#039;ll be able to use up two day&#039;s allowance of withdrawals within a few minutes, which is always a nice thing.<br /><br />However having said that, you must always be thinking about the ATM&#039;s software searching for suspect activity. For God&#039;s sake don&#039;t just get a pile of cards and use them at the same ATM everytime! Ideally obtain a rental with cash and drive to the next city and motor about from random ATM to random ATM if you&#039;ve a lot of cards. Different amounts each time too. And by random, I mean random. As in you pick up the geographical locations of several dozen ATMs and then use an online random generator to regurgitate them back at you in a random order. If you&#039;re really paranoid, or have a hell of a lot of moolah to extract, think about obtaining a number plate to swop out.<br /><br />But ultimately, this method is only good for trivial amounts of capital. After this it gets tricky!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>April 22, 2012, 06:05 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg201361#msg201361">Quote from: pine on April 21, 2012, 10:28 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg200582#msg200582">Quote from: jochem on April 21, 2012, 08:56 am</a></div></div><blockquote class="bbc_alternate_quote">Make sure you don&#039;t use them too close to your home and wear a motorbike helmet while using the ATM, this will greatly reduce the chances of you being caught.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I think enough people aren&#039;t aware of this.<br /><br />There is a CCTV in the back of the majority of ATM machines. I suggest wearing a larger than normal pair of dark sunglasses, a hat/cap and long sleeves. I don&#039;t like hoodies, but they work too. Also, you never wear this stuff normally obviously. Halloween is a nice time of year for extracting a lot of moolah I think you&#039;ll find.<br /><br />Also; do your transactions at say 23:50, and then you&#039;ll be able to use up two day&#039;s allowance of withdrawals within a few minutes, which is always a nice thing.<br /><br />However having said that, you must always be thinking about the ATM&#039;s software searching for suspect activity. For God&#039;s sake don&#039;t just get a pile of cards and use them at the same ATM everytime! Ideally obtain a rental with cash and drive to the next city and motor about from random ATM to random ATM if you&#039;ve a lot of cards. Different amounts each time too. And by random, I mean random. As in you pick up the geographical locations of several dozen ATMs and then use an online random generator to regurgitate them back at you in a random order. If you&#039;re really paranoid, or have a hell of a lot of moolah to extract, think about obtaining a number plate to swop out.<br /><br />But ultimately, this method is only good for trivial amounts of capital. After this it gets tricky!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thanks Pine, useful info. <br /><br />V.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>April 22, 2012, 06:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				For extra anonymity, I would be happy to offer 3G dongles for sale on my SR page which could be used with prepay sims bought for cash to access the net. If there is any interest for this but they would have to be shipped from Europe.<br /><br />V.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>jochem</strong> on <strong>April 22, 2012, 08:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg202635#msg202635">Quote from: vlad1m1r on April 22, 2012, 06:19 pm</a></div></div><blockquote class="bbc_standard_quote">For extra anonymity, I would be happy to offer 3G dongles for sale on my SR page which could be used with prepay sims bought for cash to access the net. If there is any interest for this but they would have to be shipped from Europe.<br /><br />V.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Guess it depends on your price. I suppose you can get these anywhere with cash fairly easy (in the Netherlands you can buy them in every phone-shop with cash), so that will probably defeat the purpose of buying through SR.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>April 22, 2012, 08:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg202828#msg202828">Quote from: jochem on April 22, 2012, 08:46 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg202635#msg202635">Quote from: vlad1m1r on April 22, 2012, 06:19 pm</a></div></div><blockquote class="bbc_alternate_quote">For extra anonymity, I would be happy to offer 3G dongles for sale on my SR page which could be used with prepay sims bought for cash to access the net. If there is any interest for this but they would have to be shipped from Europe.<br /><br />V.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Guess it depends on your price. I suppose you can get these anywhere with cash fairly easy (in the Netherlands you can buy them in every phone-shop with cash), so that will probably defeat the purpose of buying through SR.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Indeed, the same is true in the UK. I suppose it depends if the shop in question uses CCTV - it&#039;s not so much the dongle itself that&#039;s an issue as obtaining SIM chips with enough credit for data in an anonymous fashion so I may offer these instead.<br /><br />V.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>1c3</strong> on <strong>June 20, 2012, 11:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hmm, Is it definitely safe to use TOR on one of these? I am not a techie unfortunately, but couldnt LE could possibly locate which cell you are on fairly quickly, then triangulate your position the same way that google maps on the iphone does it (location services)?&nbsp; Actually, the more I think about it, who the fuck would even use it over a mobile connection? Stick out like tits on a bull i expect. How do you know what technology they are using in those 3g towers? I expect every criminal out there has at one time come up with the idea of using payg anonymous phones, and we all know how phones can track your movement very effectivly from cell to cell. Ok its late and my paranoid brain is working overtime but I suspect that LE would have an ace up its sleeve here, could be a trap.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>June 21, 2012, 01:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg201361#msg201361">Quote from: pine on April 21, 2012, 10:28 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg200582#msg200582">Quote from: jochem on April 21, 2012, 08:56 am</a></div></div><blockquote class="bbc_alternate_quote">Make sure you don&#039;t use them too close to your home and wear a motorbike helmet while using the ATM, this will greatly reduce the chances of you being caught.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I think enough people aren&#039;t aware of this.<br /><br />There is a CCTV in the back of the majority of ATM machines. I suggest wearing a larger than normal pair of dark sunglasses, a hat/cap and long sleeves. I don&#039;t like hoodies, but they work too. Also, you never wear this stuff normally obviously. Halloween is a nice time of year for extracting a lot of moolah I think you&#039;ll find.<br /><br />Also; do your transactions at say 23:50, and then you&#039;ll be able to use up two day&#039;s allowance of withdrawals within a few minutes, which is always a nice thing.<br /><br />However having said that, you must always be thinking about the ATM&#039;s software searching for suspect activity. For God&#039;s sake don&#039;t just get a pile of cards and use them at the same ATM everytime! Ideally obtain a rental with cash and drive to the next city and motor about from random ATM to random ATM if you&#039;ve a lot of cards. Different amounts each time too. And by random, I mean random. As in you pick up the geographical locations of several dozen ATMs and then use an online random generator to regurgitate them back at you in a random order. If you&#039;re really paranoid, or have a hell of a lot of moolah to extract, think about obtaining a number plate to swop out.<br /><br />But ultimately, this method is only good for trivial amounts of capital. After this it gets tricky!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Sorry, but I had to laugh at this one. No offense but if you are going to go to that much trouble to use an ATM, you mite as well use the default password to access the admin section and redefine the slot with $20 bills as a $5 slot and disable all other bill slots. Then withdraw $75. The machine spits out 15x $20 bills and you have gotten your money plus.<br /><br />There are easier ways to get bit coins out to USD. Hell, start a website offering Web development/consulting services at $125 an hour.(The going rate where I am) Pay your bitcoin into your website from different wallets. Do invoices for each payment and maintain accounting, Sell your bitcoin on an exchange and deposit it into your account. Remember to claim it on your taxes as well as all your business expenses. It is not out of the ordinary for Web development/Consulting services to bring in 150k a year. Heck I know of a few that are making 1.5m a year with 3 employees. You can push a lot through that simple setup and as long as you pay the IRS there cut, all is golden.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>sourman</strong> on <strong>June 21, 2012, 03:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg200682#msg200682">Quote from: 0x00 on April 21, 2012, 10:50 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg200582#msg200582">Quote from: jochem on April 21, 2012, 08:56 am</a></div></div><blockquote class="bbc_alternate_quote">I wouldn&#039;t trust a VPS provider for the world with my data. I&#039;d rather use a VM running of an encrypted hidden True Crypt partition. I would however use an anonymously bought VPS to conceal my traffic. I&#039;d set up an SSH-tunnel to the VPS and use Tor through that tunnel, so only the VPS is showing Tor traffic (your connection would show a lot of SSH traffic, but that won&#039;t be a big give away as a lot of Tor traffic).<br /><br />Overall you can hide much of the technical stuff. The fact that everything is running through Tor already helps a lot in keeping you safe. I&#039;d be more worried about leaving a paper trail on the financial side of business. Cashing out through your bank account (exchange -&gt; bank account) would be fine for small amounts, but at some point you&#039;ll have to cash out another way. There are these anonymous IBAN-bank cards (offered on SR, but you can get them cheaper in other places), which you can use to cash out up to €2500 (or $3000, I believe). Make sure you don&#039;t use them too close to your home and wear a motorbike helmet while using the ATM, this will greatly reduce the chances of you being caught.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I wouldn&#039;t trust a &quot;an encrypted hidden TrueCrypt partition&quot; for the world with my data. As I have already pointed out in my post - TRESOR is the way to go, not TrueCrypt. TrueCrypt is an inferior way of encrypting partitions/volumes, as it&#039;s subject to cold-boot attacks on RAM: that&#039;s where it stores the encryption key for mounted partitions - otherwise, it wouldn&#039;t be able to decrypt and supply the contents of that storage on-the-fly. The authorities are now using small SSD-USB/ATA controllers, that are able to boot on the target PC and dump the encryption key out of RAM in seconds, which will almost always yield positive results (due to the way that DRAM contents degrade gradually when not refreshed, not instantly and it&#039;s also possible to freeze the modules in order to achieve a higher retention time - this technique is now widespread for particular US LE).<br /><br />Refer to this research: https://citp.princeton.edu/research/memory/<br />And this: http://en.wikipedia.org/wiki/Cold_boot_attack<br /><br />The solution is to keep the encryption key inside the CPU registers: http://en.wikipedia.org/wiki/TRESOR<br />If you do not have AES-NI support - even an SSE2 enabled CPU will be sufficient, although with some percentage of performance penalty.<br /><br />Yes, I know that you&#039;ve said a &quot;hidden&quot; partition - however, once the relevant encryption key is obtained for the according partition, then proper forensics will have no problem identifying the masqueraded storage in question. Using a VM adds nothing more to the equation, unless you are using VM encryption as well, like VMware encryption i.e. - also crackable. Although setting up a VM might be more comforting, because you&#039;d have more options for multiple network configurations (virtual adapters, etc). But nothing that you can&#039;t do on a remote dedicated server.<br /><br />Acquiring an anonymously bought VPS/dedicated is also not that hard, because one can use a prepaid card (http://www.plati.ru/asp/list_pin.asp?id_f=11354).<br /><br />&quot;I&#039;d set up an SSH-tunnel to the VPS and use Tor through that tunnel, so only the VPS is showing Tor traffic (your connection would show a lot of SSH traffic, but that won&#039;t be a big give away as a lot of Tor traffic).&quot; - isn&#039;t that exactly what I said, though? Except that I didn&#039;t explicitly mention tunneling the traffic, but that was implied: tunneling the port through something like &#039;Tunnelier&#039; or port-forwarding in Putty and solely usinig the preconfigured portable version of FireFox supplied with the TOR bundle (not running TOR on your machine, but just the FF instance).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Excellent advice 0x00!!! Thanks for echoing the points about using a VPS/SSH tunnel to mask tor traffic, and good info all around regarding truecrypt, particularly hidden OSs. Depending on where you live, they can just look at file access dates and various OS log entries and basically &quot;prove&quot; that the outer OS is likely a decoy for a hidden system partition. <br /><br />The &quot;RAM free&quot; encryption solutions are obviously the way to go as far as mass storage is concerned. About how difficult is to purchase and implement TRESOR-capable CPUs today? I haven&#039;t look into those in a little while.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>jochem</strong> on <strong>June 21, 2012, 06:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg300637#msg300637">Quote from: 1c3 on June 20, 2012, 11:43 pm</a></div></div><blockquote class="bbc_standard_quote">Hmm, Is it definitely safe to use TOR on one of these? I am not a techie unfortunately, but couldnt LE could possibly locate which cell you are on fairly quickly, then triangulate your position the same way that google maps on the iphone does it (location services)?&nbsp; Actually, the more I think about it, who the fuck would even use it over a mobile connection? Stick out like tits on a bull i expect. How do you know what technology they are using in those 3g towers? I expect every criminal out there has at one time come up with the idea of using payg anonymous phones, and we all know how phones can track your movement very effectivly from cell to cell. Ok its late and my paranoid brain is working overtime but I suspect that LE would have an ace up its sleeve here, could be a trap.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>If only VPN traffic goes through it, people won&#039;t suspect a thing. And if you&#039;re using it in a crowded place you&#039;d be able to see police coming from miles. Just make sure that people can&#039;t look at your screen ;). However, in such a place you can probably use an open wifi as well... much cheaper.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg300854#msg300854">Quote from: jameslink2 on June 21, 2012, 01:57 am</a></div></div><blockquote class="bbc_standard_quote">Sorry, but I had to laugh at this one. No offense but if you are going to go to that much trouble to use an ATM, you mite as well use the default password to access the admin section and redefine the slot with $20 bills as a $5 slot and disable all other bill slots. Then withdraw $75. The machine spits out 15x $20 bills and you have gotten your money plus.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I had to laugh at this one... Although I&#039;ve heard these rumours, I can assure you that this is impossible on most ATMs. Otherwise all ATMs would be spitting out high amounts... it&#039;s not as if you&#039;d be able to keep such a thing a secret on the Internet and prevent banks from finding out.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg300854#msg300854">Quote from: jameslink2 on June 21, 2012, 01:57 am</a></div></div><blockquote class="bbc_standard_quote">There are easier ways to get bit coins out to USD. Hell, start a website offering Web development/consulting services at $125 an hour.(The going rate where I am) Pay your bitcoin into your website from different wallets. Do invoices for each payment and maintain accounting, Sell your bitcoin on an exchange and deposit it into your account. Remember to claim it on your taxes as well as all your business expenses. It is not out of the ordinary for Web development/Consulting services to bring in 150k a year. Heck I know of a few that are making 1.5m a year with 3 employees. You can push a lot through that simple setup and as long as you pay the IRS there cut, all is golden.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Although this is indeed a good way of laundering your money, you&#039;d be stupid to do this with small amounts. Paying taxes over your little illegal shop doesn&#039;t sound smart, if you can withdraw the money without paying taxes. Btw, raking in 150k a year in BTC? Yeah right... not going to happen. And if you pay yourself using exchanges you&#039;re going to be fucked if the IRS (or whatever country you&#039;re in) smells something fishy and checks your bank statements. Only payments coming from bitcoin exchanges will probably be further investigated...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>wanna-be</strong> on <strong>June 21, 2012, 08:59 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg200555#msg200555">Quote from: mdmamail on April 21, 2012, 08:26 am</a></div></div><blockquote class="bbc_standard_quote">Don&#039;t use VPNs, use JonDonym instead over wifi or something.<br />SSD&#039;s are notorious for not encrypting properly. You have to first encrypt everything, then add your secret files. If you don&#039;t, everything can be accessed that was on that SSD<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />JonDonym website:<br /><br />Surveillance reports<br /><br />Each year, we will publish a short report of all surveillance actions that were taken and have been reported to us by the operators.<br /><br />&nbsp; &nbsp; In 2011, no new surveillance court order was given to any operator. The surveillance court order from 2010 (published last year) was going on over turn of the year into 2011.<br />&nbsp; &nbsp; In 2010 there has only been one surveillance court order to single mix operators that was put into effect during 6 months. It concerned a handful JonDonym account numbers.<br />&nbsp; &nbsp; In 2009, there has been a surveillance court order to single Mix operators. A total of two web sites or e-mail providers, respectively, where affected. The observation has been stopped after the court order, which was renewed once, expired (after four months altogether) and affected two free mix cascades.<br />&nbsp; &nbsp; In 2008, no surveillance court order was given to any operator.<br />&nbsp; &nbsp; In 2007, no surveillance court order was given to any operator.<br />&nbsp; &nbsp; In 2006, there has been one surveillance court order to single Mix operators. A few exactly specified web addresses were affected. The observation has been stopped after the court order expired (one month) and affected two free mix cascades.<br /><br />If single mix operators inform JonDos GmbH about a surveillance court order then that does not mean JonDonym as a whole has been under surveillance or JonDos GmbH was involved. Rather, single operators had to comply with these orders.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>wanna-be</strong> on <strong>June 22, 2012, 05:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				Fucking cops.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>wanna-be</strong> on <strong>June 23, 2012, 07:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg202635#msg202635">Quote from: vlad1m1r on April 22, 2012, 06:19 pm</a></div></div><blockquote class="bbc_standard_quote">For extra anonymity, I would be happy to offer 3G dongles for sale on my SR page which could be used with prepay sims bought for cash to access the net. If there is any interest for this but they would have to be shipped from Europe.<br /><br />V.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />How do these dongles help with anonmyity, exactly?&nbsp; Are these the same thing as &quot;air cards?&quot;
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>June 23, 2012, 07:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg304494#msg304494">Quote from: wanna-be on June 23, 2012, 07:10 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg202635#msg202635">Quote from: vlad1m1r on April 22, 2012, 06:19 pm</a></div></div><blockquote class="bbc_alternate_quote">For extra anonymity, I would be happy to offer 3G dongles for sale on my SR page which could be used with prepay sims bought for cash to access the net. If there is any interest for this but they would have to be shipped from Europe.<br /><br />V.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />How do these dongles help with anonmyity, exactly?&nbsp; Are these the same thing as &quot;air cards?&quot;<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />They help anonymity about as much as using someone elses WiFi, which means not very much at all unless you only use them from random locations for short amounts of time. And much like bridges, you shouldn&#039;t use 3G dongles from vendors on SR. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>June 23, 2012, 08:09 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg304537#msg304537">Quote from: kmfkewm on June 23, 2012, 07:58 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg304494#msg304494">Quote from: wanna-be on June 23, 2012, 07:10 am</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg202635#msg202635">Quote from: vlad1m1r on April 22, 2012, 06:19 pm</a></div></div><blockquote class="bbc_standard_quote">For extra anonymity, I would be happy to offer 3G dongles for sale on my SR page which could be used with prepay sims bought for cash to access the net. If there is any interest for this but they would have to be shipped from Europe.<br /><br />V.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />How do these dongles help with anonmyity, exactly?&nbsp; Are these the same thing as &quot;air cards?&quot;<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />They help anonymity about as much as using someone elses WiFi, which means not very much at all unless you only use them from random locations for short amounts of time. And much like bridges, you shouldn&#039;t use 3G dongles from vendors on SR.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Surely though if the SIM was obtained anonymously using cash and replaced regularly the best LEO could hope for is a rough idea as to the nearest mobile phone antenna? Would this really be less secure than using your home connection where it would be obvious to any fool with access to your ISP&#039;s records that you&#039;re using Tor?<br /><br />V.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>June 23, 2012, 10:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg304551#msg304551">Quote from: vlad1m1r on June 23, 2012, 08:09 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg304537#msg304537">Quote from: kmfkewm on June 23, 2012, 07:58 am</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg304494#msg304494">Quote from: wanna-be on June 23, 2012, 07:10 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg202635#msg202635">Quote from: vlad1m1r on April 22, 2012, 06:19 pm</a></div></div><blockquote class="bbc_alternate_quote">For extra anonymity, I would be happy to offer 3G dongles for sale on my SR page which could be used with prepay sims bought for cash to access the net. If there is any interest for this but they would have to be shipped from Europe.<br /><br />V.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />How do these dongles help with anonmyity, exactly?&nbsp; Are these the same thing as &quot;air cards?&quot;<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />They help anonymity about as much as using someone elses WiFi, which means not very much at all unless you only use them from random locations for short amounts of time. And much like bridges, you shouldn&#039;t use 3G dongles from vendors on SR.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Surely though if the SIM was obtained anonymously using cash and replaced regularly the best LEO could hope for is a rough idea as to the nearest mobile phone antenna? Would this really be less secure than using your home connection where it would be obvious to any fool with access to your ISP&#039;s records that you&#039;re using Tor?<br /><br />V.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Of course it is better to use a 3G dongle than to use your own home connection, but they can be positioned pretty accurately and then traced. I would compare them to &quot;portable someone elses WiFi&quot;, beneficial sure but if you use it from the same location or in locations that fall into a pattern it isn&#039;t going to do much for you. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>BenCousins</strong> on <strong>June 23, 2012, 06:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				how about if you use a prepaid wireless USB for net connection (purchased and topped up with cash) on a laptop brought with cash that is only used for SR and used from within a large apartment block?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>wanna-be</strong> on <strong>June 26, 2012, 01:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg304913#msg304913">Quote from: BenCousins on June 23, 2012, 06:13 pm</a></div></div><blockquote class="bbc_standard_quote">how about if you use a prepaid wireless USB for net connection (purchased and topped up with cash) on a laptop brought with cash that is only used for SR and used from within a large apartment block?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I think V is talking about just that when he mentions 3g dongles.&nbsp; But I could be wrong.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>BenCousins</strong> on <strong>June 26, 2012, 03:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				kmfkewm could you please elaborate? what would your suggestion be for a more anonymous connection?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>bbuyer76</strong> on <strong>June 27, 2012, 01:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg199806#msg199806">Quote from: 0x00 on April 20, 2012, 10:40 pm</a></div></div><blockquote class="bbc_standard_quote">TOR is generally safe, they won&#039;t locate you by the IP-address. Higher chance of doing that by the potential fingerprints you might leave with handling the financial side of the venture (exchanges, constant $ flow of unusual origin into your own bank account, etc) or the physical shipment part. I checked out your profile on SR and I can see that you are assumably using PGP - which is good, I would enforce that as a rule if someone wants to contact you (definitely for shipping addresses). I would also, probably, purchase a VPS or even a dedicated server from some reputable company (i.e. LeaseWeb or OVH) and store all of my &#039;SR activity&#039;-related stuff over there, on an encrypted partition (which would be even more win if you had an AES-NI capable CPU, that would prevent cold-boot attacks on RAM with TRESOR compared to regular dm-crypt/LUKS encryption, that is if all things come to worst and they attempt such an extreme operation as extracting your encryption key [very unlikely, but might occur in the lowest percentage of cases, if you really pissed them off, but usually a lot more relevant to cyber crimes, instead]). Of course, accessing it with either SSH or SFTP. Basically, I would store jack shit on my own HDD. I would probably even buy an SSD, something like 60G, that is if I wanted to temporarily download/upload something from my local storage to the rented server - because then you could use, i.e., &quot;sdelete&quot;, that would zap the unallocated space much, much more quickly (after file deletion) than on the HDD: forensics wouldn&#039;t be able to do much with such drive, if all unused sectors have been overwritten with zeroes. Um, in the most bizarre cases your ISP might be doing DPI (deep packet inspection) on your end, meaning, they will be able to tell you&#039;re constantly using TOR (even though they wouldn&#039;t be able to sniff the traffic, because it&#039;s encrypted) - but yeah, that could raise some eyebrows in the long run, but really, I can&#039;t see this happening UNLESS you are already a suspect and the LE is working to gather as much evidence as possible (just another minor confirmation of justifying a potential house raid). Even though if you just used SSH for the remote server and TOR over there - that could minimize the effects of such suspicion.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />+1<br /><br />very accurate and good anti detection advice!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>pine</strong> on <strong>July 13, 2012, 11:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg304551#msg304551">Quote from: vlad1m1r on June 23, 2012, 08:09 am</a></div></div><blockquote class="bbc_standard_quote">Surely though if the SIM was obtained anonymously using cash and replaced regularly the best LEO could hope for is a rough idea as to the nearest mobile phone antenna? Would this really be less secure than using your home connection where it would be obvious to any fool with access to your ISP&#039;s records that you&#039;re using Tor?<br /><br />V.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hi V,<br /><br />Thing is, is that it is not a rough idea, it&#039;s possible to geolocate a wifi device within 3 meters, and that experiment was done in 2005 so I assume all LE city based divisions have the correct technology in 2012. See Sam Bartels&#039;s whitepaper on &quot;WIFI Location System Investigation&quot;.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>International</strong> on <strong>July 14, 2012, 01:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg199706#msg199706">Quote from: Decoy on April 20, 2012, 09:26 pm</a></div></div><blockquote class="bbc_standard_quote">Hey guys,<br /><br />I just started to sell over here and i never though in my mind that i would sell that much, it kind of took over my everyday job ! I want to keep selling but at the same time im worried about if i can get caught by ip or any other way. Do any of you guys have any tips so i know how to keep my ass safe?&nbsp; Please let me know thanks<br /><br /><br />Respect to all our buyers !<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The real question that you need to ask yourself is: Do I know enough about Silk Road to sell safely?<br /><br />Clearly you already started taking risks, without knowing what those risks actually are. This is a recipe for failure. The penalties for selling drugs are extremely harsh even when compared with violent crimes and even sex crimes. Your more likely to get a harsh sentence for trafficking cocaine for the first time then rape, its fucked up but the entire justice system is fucked up. Honestly, I strongly suggest that you sit down, think about what your doing, then think about the consequences. Its absolutely essential to think about and even plan for the worst case scenario before it happens when conducting illegal business. In fact the only way to operate smartly is to constantly think about what could happen if you fuck up and always work hard so that you dont fuck up. The worst thing you can do is start selling drugs or doing other illegal shit in the hopes of just wingin it with no real plans or an intelligent course of action.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>DomesticShrooms</strong> on <strong>July 14, 2012, 02:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				Prepaid cdma wireless dongle with 1 month serivice is 70.00, then 30.00 monthly. liberty=priceless
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>jameslink2</strong> on <strong>July 14, 2012, 02:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg344155#msg344155">Quote from: DomesticShrooms on July 14, 2012, 02:19 am</a></div></div><blockquote class="bbc_standard_quote">Prepaid cdma wireless dongle with 1 month serivice is 70.00, then 30.00 monthly. liberty=priceless<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I have seen you post this a few times, Are you aware that the cdma wireless dongles have a built in GPS? They can find it as long as it is powered up/plugged into a usb port.<br /><br />They are only anonymous in the sense that they do not have a name on the account, They can still track your location.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>DomesticShrooms</strong> on <strong>July 14, 2012, 06:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				As long as your smart about it, it is as good as or better than someone elses wifi
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>DomesticShrooms</strong> on <strong>July 14, 2012, 06:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				If your worried about gps, just buy a android with cash, turn off its e911 features/gps, and tether that bitch.&nbsp; <br /><br />This seems somewhat harder to locate than using a yagi or neighbors connection
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>DwarfSeeker</strong> on <strong>July 14, 2012, 07:57 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg344513#msg344513">Quote from: DomesticShrooms on July 14, 2012, 06:30 am</a></div></div><blockquote class="bbc_standard_quote">If your worried about gps, just buy a android with cash, turn off its e911 features/gps, and tether that bitch.&nbsp; <br /><br />This seems somewhat harder to locate than using a yagi or neighbors connection<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />uhm, if you are connected to the network on your cell they would know where you are within 50m tops, its called triangulation. it&#039;s a property of the fact that radio waves take time to travel, and that more then one tower can see you.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>pine</strong> on <strong>July 15, 2012, 07:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg344057#msg344057">Quote from: International on July 14, 2012, 01:27 am</a></div></div><blockquote class="bbc_standard_quote">The real question that you need to ask yourself is: Do I know enough about Silk Road to sell safely?<br /><br />Clearly you already started taking risks, without knowing what those risks actually are. This is a recipe for failure. <br /><br />...<br /><br />It&#039;s absolutely essential to think about and even plan for the worst case scenario before it happens when conducting illegal business. In fact the only way to operate smartly is to constantly think about what could happen if you fuck up and always work hard so that you dont fuck up. The worst thing you can do is start selling drugs or doing other illegal shit in the hopes of just wingin it with no real plans or an intelligent course of action.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Agree completely. Have a plan. Have many back-up plans! As many as a squirrel which hoards nuts, Plan B, C etc. e.g. having multiple hidden caches of cash in different currencies, having a good criminal defense lawyer on retainer, having a hollow shoe which contains a mini-mobile device programmed with the right numbers &amp; lots of credit.<br /><br />There is another side to this though, one must also be wary of &#039;paralysis by analysis&#039;. Sometimes we can overplan things to the extent that we lose any drive or motivation to accomplish them.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is it really safe to sell on Silkroad only using Tor?</strong><br />
+				Post by: <strong>International</strong> on <strong>July 15, 2012, 07:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg347393#msg347393">Quote from: pine on July 15, 2012, 07:40 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=19768.msg344057#msg344057">Quote from: International on July 14, 2012, 01:27 am</a></div></div><blockquote class="bbc_alternate_quote">The real question that you need to ask yourself is: Do I know enough about Silk Road to sell safely?<br /><br />Clearly you already started taking risks, without knowing what those risks actually are. This is a recipe for failure. <br /><br />...<br /><br />It&#039;s absolutely essential to think about and even plan for the worst case scenario before it happens when conducting illegal business. In fact the only way to operate smartly is to constantly think about what could happen if you fuck up and always work hard so that you dont fuck up. The worst thing you can do is start selling drugs or doing other illegal shit in the hopes of just wingin it with no real plans or an intelligent course of action.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Agree completely. Have a plan. Have many back-up plans! As many as a squirrel which hoards nuts, Plan B, C etc. e.g. having multiple hidden caches of cash in different currencies, having a good criminal defense lawyer on retainer, having a hollow shoe which contains a mini-mobile device programmed with the right numbers &amp; lots of credit.<br /><br />There is another side to this though, one must also be wary of &#039;paralysis by analysis&#039;. Sometimes we can overplan things to the extent that we lose any drive or motivation to accomplish them.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I would also recommend reading through some of pines post. I dont even know this guy but alot of great information and sound advice can be gained by just reading his posts. I bet pine has a few smart people asking him questions :)
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

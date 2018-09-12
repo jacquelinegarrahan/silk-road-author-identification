@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=218322.0" />
+		<title>Print Page - How to resist the NSA/GCHQ bullshit revealed today</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: comsec on October 05, 2013, 04:17 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>How to resist the NSA/GCHQ bullshit revealed today</strong><br />
+				Post by: <strong>comsec</strong> on <strong>October 05, 2013, 04:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				Summary: They can&#039;t &#039;break tor&#039;, but what they can do is sabotage it by re-routing your traffic to their own private Tor relay network where they can analyze everything you do. They can also stain traffic. They can break into browsers silently, and especially target the Tor Browser Bundle and TorButton on Firefox/Tails browsers. Follow at least 2 of the below suggestions and you will avoid the easy dragnet. Note the part about ditching X/Windows all together. If you need something setup I can probably help canadasec@yandex.com if this site goes down. I won&#039;t be using that email much longer to avoid the now totalitarian police state. Send me your pub PGP key and I&#039;ll reply. <br /><br />THIS ISN&#039;T ABOUT US IN OUR LITTLE CORNER TRADING DRUGS ANYMORE. THIS IS ABOUT DEMOCRACY DISAPPEARING IN ALL OUR COUNTRIES. THE INGREDIENTS FOR TOTALITARIANISM ARE ALL THERE. THEY ARE NOT TARGETING JUST TERRIBLISTZ AND DPR. THEY ARE TARGETING EVERYBODY ESPECIALLY ANY POLITICIAN TRYING TO DISMANTLE THIS ORWELLIAN NIGHTMARE. THE TIME IS CURRENTLY 5 MINUTES TO &quot;HAPPENING&quot; ON THE RON PAUL DOOMSDAY CLOCK. <br /><br />1) Make your own relays to avoid the GCHQ farm of relays.<br /><br />In the slides, they talked about not wanting to exploit relays, so make your own! Rent a VPS with bitcoins in a country with no MLAT (Mutual Legal Assistance Treaty) such as Russia, and make your own Tor bridges/relays, and edit Torrc to use them. http://www.torservers.net/wiki/setup/server except don&#039;t make it an exit relay if using a VPS, you won&#039;t have enough memory to handle connections. You want to make internal relays or bridge nodes.<br /><br />You do this by loading up Tails DVD and ssh through Tor into the server and set it up exactly as they have above (except, don&#039;t make it an exit relay unless you have a dedicated server). You can read on the torproject.org homepage how to edit/configure Torrc file for a bridge, how to choose what fingerprints of trusted non-NSA relays you wish to use, ect. Personally I would my build my own bridge, and force Torrc to use a Torservers.net official exit relay. http://www.torservers.net/exits.html then I would tunnel Tor traffic through some kind of VPN exiting Iceland, Russia, Brazil or Europe which would then connect to my bridge node. Don&#039;t use China, they censor and track Tor traffic. (See Jondonym below)<br /><br />2) Disable IPv6 to prevent easy staining attacks.<br /><br />Google how to do this for your operating system. It prevents easy staining attacks. GCHQ are injecting a stain into the Destination Option header of Ipv6 packets where there is ample space for them to use. If you aren&#039;t using Ipv6, they re-direct your traffic to what&#039;s called a &quot;Packet Management Device&quot; where it tunnels your Ipv4 traffic inside Ipv6 and clamps on the stain to follow you around. See next section on live operating systems because if they can stain your traffic by exploiting your system and staining the source, it won&#039;t last past next reboot with a live O/S. Also, read this: https://tools.ietf.org/html/rfc3514<br /><br />3) Use a live operating system like Tails, or something similar.<br /><br />Either load this from DVD or a virtual machine .iso set to &quot;live DVD&quot;&nbsp; so nothing can be permanently altered. A USB install can be altered. <br /><br />For bonus points, buy a hardware (TRNG) random number generator or entropy key, such as the one the New York Times is using on a USB stick for use with their DeadDrop http://deaddrop.github.io&nbsp; Buy it from Europe, not the US, UK, AUS, NZ or Canada. Tails can be configured to use it instead of /dev/random which may not be handing out random numbers inside a VM, especially if using Intel because the VM defaults to using their proprietary and blackbox TRNG which is widely suspected of being diddled with by spy agencies. If the head maintainer of /dev/urandom for the Linux Kernel and Bruce Schneier are warning people about Intel TRNG you should probably listen. Here&#039;s one, but it&#039;s out of the UK and you have no idea if GCHQ hasn&#039;t diddled with the output, thought it&#039;s big enough to verify with manual tests unlike Intel TRNG which is microscopic http://www.entropykey.co.uk/<br /><br />4) Use a second encrypted tunnel to avoid timing analysis of Tor connections.<br /><br />Tunnel Tor traffic through Jondo mixes. It&#039;s a pay service, but cheap and accepts bitcoins. It&#039;s basically an anonymizing &#039;VPN&#039; that encrypts your traffic through 3 different mixes to obfuscate it&#039;s origin. Law Enforcement needs to subpoena multiple countries and they alert whenever they receive a tracking request. It&#039;s a German service https://anonymous-proxy-servers.net/en/operators.html<br /><br />You would want to start this, test to make sure your IP is a Jondo exit IP then tunnel Tor through it. One way to do this would be on a host debian system, start Jondo. Now load up Tails in a virtual machine (don&#039;t forget your USB TRNG :P&nbsp; ) from snapshot or .ISO directly and all traffic will automatically be tunneled through it. Test using the Tails unsafe browser. <br /><br />Your traffic will go (encrypted) You-&gt;Mix1-&gt;Mix2-&gt;Mix3-&gt;Tor bridge or regular entry node-&gt;Tor Relay-&gt;Tor Relay-Tor Relay-&gt;your chosen destination.<br /><br />This will completely eliminate any chances of them using timing attacks to watch you start/stopping Tor or logging off from IRC or Jabber. If DPR used Jondo, they would&#039;ve never found him. (Also, if he did a million other things actually). Jondo is fast! You won&#039;t notice much of a difference. <br /><br />5) Consider buying a hardware firewall or making one with an old computer and 2 Ethernet cards. <br /><br />http://www.pfsense.org/index.php@option=com_content&amp;task=view&amp;id=44&amp;Itemid=50.html and http://m0n0.ch/wall/hardware.php is selling little self contained devices running pfsense (or m0n0wall), which is a pf firewall used by OpenBSD and FreeBSD. With it you can inspect all your outgoing traffic looking for stains and cleaning them, and lock everything down so only Tor traffic escapes. These devices also have Snort, so you can run a small IDS (Intrusion Detection System). They also give you NAT, so a local IP and if your system is compromised, it won&#039;t matter all the attackers will get is an internal IP, and no way to break out of your network to dial home since you&#039;ve forced all traffic through Tor (or JondoNym).<br /><br />6) Consider not using a graphical browser at all<br /><br />Theo De Raadt, when interviewed a few years ago was asked about the security and priv drop they included into OpenBSD for Xorg otherwise known as &quot;X-Windows&quot;. He basically said it&#039;s as good as it gets because ever single implementation of Xorg is fatally flawed and told readers to look into the work of Loic Deflot, a french security researcher who has consistently found exploitable holes in X no matter what precautions are taken. It&#039;s a gigantic attack surface waiting to be exploited. Graphical browsers are the same thing. The best browser you can use, is Chromium which is the open source base that Google Chrome funds and uses. It&#039;s developed by some of the world&#039;s best cryptographers who designed the TLS stack. IT STILL IS PWNED ALL THE FUCKING TIME in competitions, and shady vuln brokers like VUPEN have exploits galore for it. Even running it in a SELinux sandbox, and with Grsec patches is pointless because there&#039;s just too many ways to break in. <br /><br />Consider using Lynx, a text based browser that&#039;s been around forever and doesn&#039;t have any of these problems. No X, no java VM, no javascript, no images, and you can reject/accept whatever cookies you want. You can run it from linux or unix shell in a very secure environment, and have your hardware firewall enforce all traffic through Tor and your operating system iptables or pf firewall. I believe Tails has this installed, open a user (not root) console and type &#039;lynx&#039; it should load up. You can easily fake your header to match the regular TBB user agent headers with lynx, in fact you can do anything with it including routing traffic to Emacs to sift through it like Richard Stallman does. You won&#039;t have to use a text browser all the time, just when you log into illegal online virtual cartels to do illegal shit like mailing boxes of cocaine. TL;DR THEY ARE SPECIFICALLY TARGETING THE TBB AND TAILS DEFAULT BROWSERS AND &quot;TOR BUTTON&quot;. FUCK IT, DON&#039;T USE IT. <br /><br />7) No cross contamination of business + private life<br /><br />Don&#039;t ever use the Tor browser (wait.. you&#039;re still using it??) to do ANYTHING personal, like logging into Facebook or anything else that can identify you. NSA/GCHQ is creating special cookies that can&#039;t be deleted and give away your movements to other sites like social media so they can identify you. What a surprise, the FBI did the exact same thing when they hacked Freedom Hosting. It&#039;s now totally clear that the NSA was involved in that. Those slides detailed exactly what happened: temporary cookies placed in TBB to track users. That bust, was never about child porn or drugs/hitmen. It was about Edward Snowden, because they thought he was using Tormail.org or was communicating with somebody using it otherwise they would&#039;ve never revealed their capabilities like that and risked alerting all Tor users to their strategies and methods. <br /><br />Finally, for fuck&#039;s sake, go on youtube right now and watch &quot;OPSEC for hackers: Because Jail is for wuftpd&quot;. DPR literally violated every single thing TheGrugq tells you not to do like talking too much (Hey guys, check out these Libertarian books), using social media, not encrypting internal communications... and keep your phone away from your computer. This is all pointless if they can remotely activate the camera and watch you typing in passwords. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How to resist the NSA/GCHQ bullshit revealed today</strong><br />
+				Post by: <strong>comsec</strong> on <strong>October 05, 2013, 08:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				Perhaps it&#039;s only 3 minutes until HAPPENING<br /><br />Canada:<br />http://thetyee.ca/Blogs/TheHook/Federal-Politics/2012/08/09/Axing-CSIS-Inspector-a-Loss/ <br />http://www.huffingtonpost.ca/2013/09/11/csec-nsa-encryption_n_3907748.html<br /><br />Australia:<br />http://www.abc.net.au/news/2013-04-04/civil-liberties-groups-upset-by-asis-request-for-more-powers/4609968<br />http://www.news.com.au/technology/spy-agency-asio-wants-powers-to-hack-into-personal-computers/story-e6frfro0-1226552661701<br /><br />New Zealand:<br />http://beforeitsnews.com/spies-and-intelligence/2013/07/nzsis-has-special-protocol-for-spying-on-journalists-2445094.html<br />http://arstechnica.com/tech-policy/2013/08/new-zealand-appears-to-have-used-nsa-spy-network-to-target-kim-dotcom/<br />http://rt.com/news/new-zealand-pass-spy-law-777/ <br />http://tvnz.co.nz/national-news/new-zealand-part-nsa-surveillance-report-5524544<br /><br />Uk:<br />http://www.independent.co.uk/news/uk/home-news/gchq-spying-programme-spy-watchdog-is-understaffed-and-totally-ineffective-8708231.html<br /><br /><br />Best quote, from a 30+yr veteran of the NSA who quit after 9/11 because of the domestic spying:<br />http://www.theglobeandmail.com/technology/beware-of-data-spying-former-nsa-official-warns-canadians/article14430225/<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">“Unless democracies wake up and start saying ‘We don’t want our government to hold this data,’ then they have a really good chance of losing their democracy.”</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How to resist the NSA/GCHQ bullshit revealed today</strong><br />
+				Post by: <strong>This_is_not_SOCA</strong> on <strong>October 05, 2013, 08:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				As with all of the revelations to date, the technical capabilities are as i would expect them to be - no surprises at all, what has surprised me though is the sheer scale of things. When I saw the scale of the passive taps in place I did think at the time, well if you have gone to that much trouble to install taps, it is reasonable to assume that those taps also allow redirection and injection and this appears to be precisely the case - the danger of this infrastructure is immense I fear. <br /><br />I don&#039;t blame those who build and operate these things because they simply don&#039;t know any better and probably believe what they are doing is necessary and perhaps even beneficial - such is the nature of indoctrination. Forgive them for they know not what they do.<br /><br />Anyway, there are some good countermeasures detailed above in comsecs post so follow them where you can.<br /><br />As a rule of thumb, looking at your setup with the following two points in mind will help:<br /><br />1) Layer your security controls and do not rely on the layer above or the layer below to protect you (Defense in Depth)<br />2) Assume every layer is compromised - what will happen - does the whole house of cards collapse? If so you need to rethink your setup.<br /><br />When I read those two points they make sense to me but I realize that most people reading them will not be able to really act on them&nbsp; without some assistance. Perhaps those of us who can need to provide the necessary tools and knowledge in a digestible, easy to use way so that others can use to meet those two design considerations. The TOR project went a long way by producing TBB - when I was first pushing people on to TOR a number of years ago it was much more complicated and required manual configuration start to finish. The TOR project stepped up and made it easy, flat-pack, plug in and go. That has disadvantages but in general brought more benefit than harm. <br /><br />A couple of things which come to mind are:<br /><br />1) A wrapper for GPG that makes it easier to use for information hosted on web-sites - perhaps not a browser plugin as too complex but something that makes it easier for users of sites such as SR to encrypt and decrypt - manage keys etc.<br /><br />2)&nbsp; Re-instating something like Privoxy possibly to sit between the network and the browser - not sure how privoxy development has been over recent years but it could be used to:<br />&nbsp;a) restrict bad shit going into the browser - stripping external links, external images, script tags etc. Whitelist style rather than blacklist.<br />&nbsp;b) protect users from themselves by only allowing them to visit &#039;trusted&#039; sites and preventing them from logging into their fb or google acounts etc.<br /><br />3) A true isolated browser platform operated in a non-persistent environment. The browser would literally sit on a dedicated machine (physical or virtual) and the user would remotely connect to it using VNC or RDP or whatever. Copy paste allowed between the browser environment and the users actual desktop environment but thats it. This architecture is common in classified networks that need Internet access so they tell me.<br /><br />Our adversaries are not rocket scientists, they do not know magic, they are simply using off the shelf exploitation techniques and they can be heavily impeded by our deployment of layered security controls.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How to resist the NSA/GCHQ bullshit revealed today</strong><br />
+				Post by: <strong>isallmememe</strong> on <strong>October 05, 2013, 10:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				hell i&#039;m thermiting my computer right now. fuck it :(
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How to resist the NSA/GCHQ bullshit revealed today</strong><br />
+				Post by: <strong>railroadbill</strong> on <strong>October 05, 2013, 01:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				why am i still using TBB? cause internnet explorer threw up on my lap. whats the point of this post, nothing here is even remotely feasible for most people to implement.&nbsp; making your own relay doesnt protect you against their entry node attack unless you have your own bridge, but then its pretty damn easy to figure out its you when you are the only one connecting to it. Hardware rng? Sounds plausible but NSA aint gonna reveal that secret to bust some drug dealer. All hardware firewalls have been compromised by law, except for maybe DDWRT ones. What the hell is a non-graphical browser? Do a shower or 1&#039;s and 0&#039;s flow down my 5 parallel screens in green and black with it? <br /><br />Special cookies that cant be eaten, they must be willy fucking wonka. Anything can be deleted unless you are suggested their cookies have root. Heres a tip for securing yourself: stop being a pussy. If u dont want them to pwn your computer then use tails and dont open up any sensitive files during a clearnet browsing session. end of story.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How to resist the NSA/GCHQ bullshit revealed today</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>October 05, 2013, 03:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=218322.msg1591555#msg1591555">Quote from: railroadbill on October 05, 2013, 01:48 pm</a></div></div><blockquote class="bbc_standard_quote">why am i still using TBB? cause internnet explorer threw up on my lap. whats the point of this post, nothing here is even remotely feasible for most people to implement.&nbsp; making your own relay doesnt protect you against their entry node attack unless you have your own bridge, but then its pretty damn easy to figure out its you when you are the only one connecting to it. Hardware rng? Sounds plausible but NSA aint gonna reveal that secret to bust some drug dealer. All hardware firewalls have been compromised by law, except for maybe DDWRT ones. What the hell is a non-graphical browser? Do a shower or 1&#039;s and 0&#039;s flow down my 5 parallel screens in green and black with it? <br /><br />Special cookies that cant be eaten, they must be willy fucking wonka. Anything can be deleted unless you are suggested their cookies have root. Heres a tip for securing yourself: stop being a pussy. If u dont want them to pwn your computer then use tails and dont open up any sensitive files during a clearnet browsing session. end of story.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Non-graphical browsers are ones like Lynx, which is text-only. No graphics, no java, no other stuff like that. Lynx was in common use more than 20 years ago, before the rise of GUI interfaces, like Netscape Navigator. <br /><br />Nightcrawler<br />4096R/BBF7433B 2012-09-22 Nightcrawler &lt;Nightcrawler@SR&gt;<br />PGP Key: http://dkn255hz262ypmii.onion/index.php?topic=174.msg633090#msg633090<br />PGP Key Fingerprint = 83F8 CAF8 7B73 C3C7 8D07&nbsp; B66B AFC8 CE71 D9AF D2F0<br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How to resist the NSA/GCHQ bullshit revealed today</strong><br />
+				Post by: <strong>flwrchlds9</strong> on <strong>October 05, 2013, 06:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				#5 there really important. <br /><br />Ideally, there should be a piece of hardware running trusted software physically between your computer and the Internet that<br /><br />-blocks all incoming connections that are not established or related<br />-blocks ALL OUTGOING connections<br />-specifically ALLOWS by IP:port each entry node<br /><br />this single precaution will basically make one immune to any js exploit ever created. If you use a live-cd linux based OS, if get attacked by js exploit success and exploit tries to connect to external IP to de-anonymize you it will be BLOCKED by the firewall. Only tor traffic will be allowed.<br /><br />The idea is make your terminal ONLY allowed to make tor connections by using an EXTERNAL peice of hardware not rely on software on the terminal.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: How to resist the NSA/GCHQ bullshit revealed today</strong><br />
+				Post by: <strong>comsec</strong> on <strong>October 05, 2013, 09:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I forgot to add changing your wifi mac address and disabling it completely upon boot if you&#039;re not using it. A security researcher set up a honeypot server, and exploited the browsers of APT1 (Advanced Persistent Threat 1) which is a Chinese state &#039;cyberwar&#039; outfit then located them by turning on their wifi, which bypassed all the firewalls they had http://www.technologyreview.com/news/517786/chinese-hacking-team-caught-taking-over-decoy-water-plant/<br /><br />You can do this by inserting macchanger into init scripts, or just disabling wifi completely upon startup before it has a chance to broadcast your MAC to every surrounding network. FBI has used wifi location numerous times to locate people, like Lulzsec suspects, also they once convinced a telecom to OTA update a 3G internet stick to broadcast the location of a suspect https://www.schneier.com/blog/archives/2013/04/fbi_and_cell_ph.html<br /><br />APT1 was also busted when they discovered their facebook and other social media cookies lying around once they broke into their desktop and looked at the cache of other browsers they had on the same system. Again, important not to cross contaminate systems and use tails for business, reboot and use your personal comp for personal shit. Don&#039;t log into private social media, banks or anything else using tails or on a computer that shares TBB if you&#039;re in the business of selling gigantic amounts of illegal drugs mail order. <br /><br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=55245.0" />
+		<title>Print Page - Newbie need help understanding PGP</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: HoneyBooBoo on October 18, 2012, 05:31 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Newbie need help understanding PGP</strong><br />
+				Post by: <strong>HoneyBooBoo</strong> on <strong>October 18, 2012, 05:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hello all,<br /><br />I am trying to wrap my head around this whole PGP thing and I apologize if this is a dumb question but can someone fill me in on the basics of getting started with PGP on a mac OSX?&nbsp; I&#039;ve been trying to gather the information from multiple sources and I just can&#039;t seem to put it all together. I obviously want to stay as safe as possible when communicating with others on silk road, and from what I understand encrypting (especially sensitive information like names and addresses between buyers and sellers) is really the only way to go as far as minimizing risks is concerned.&nbsp; Any and all help would be greatly appreciated.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Newbie need help understanding PGP</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>October 18, 2012, 06:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=55245.msg530502#msg530502">Quote from: HoneyBooBoo on October 18, 2012, 05:31 am</a></div></div><blockquote class="bbc_standard_quote">Hello all,<br /><br />I am trying to wrap my head around this whole PGP thing and I apologize if this is a dumb question but can someone fill me in on the basics of getting started with PGP on a mac OSX?&nbsp; I&#039;ve been trying to gather the information from multiple sources and I just can&#039;t seem to put it all together. I obviously want to stay as safe as possible when communicating with others on silk road, and from what I understand encrypting (especially sensitive information like names and addresses between buyers and sellers) is really the only way to go as far as minimizing risks is concerned.&nbsp; Any and all help would be greatly appreciated.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Here is Guru&#039;s tutorial: <br /><br />GPGTools is highly version dependent -- depending on which version of OS X you have, it may or may not work as expected.&nbsp; If you have Leopard (10.5) then you&#039;re pretty much out of luck. Your only option then will be using the command-line. <br /><br />If you have Snow Leopard (10.6), Lion (10.7) or Mountain Lion (10.8), the following instructions should be sufficient to allow you to get up and running. <br /><br />Download and install GPGTools: http://nightly.gpgtools.org/GPGTools_Installer-trunk.dmg<br /><br />Once you have installed GPGTools,&nbsp; what you want to do is to go into System Preferences --&gt; Keyboard --&gt; Services.<br /><br />Scroll down until you find the following entries. Be sure to put a check mark in the boxes to activate each keyboard shortcut. <br /><br />Keyboard shortcuts: <br /><br />OpenPGP: Decrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-D<br /><br />OpenPGP: Encrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-E<br /><br />OpenPGP: Import Key from Selection:&nbsp; &nbsp; &nbsp;Shift-Command-I<br /><br />OpenPGP: Insert My Fingerprint:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-F<br /><br />OpenPGP: Insert My Key:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-K<br /><br />OpenPGP: Sign Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Shift-Command-R<br /><br />OpenPGP: Verify Signature of Selection: Shift-Control-V<br /><br />Remember, these shortcuts only operate on highlighted or selected text. <br /><br />To select text within TextEdit, use Command-A to highlight the entire document, or use your mouse to selection the section that you want to verify/sign/encrypt/decrypt. It is highly recommended that you use only plain-text, as opposed to Rich Text (.rtf) format. Use Command-, to bring up Preferences and ensure that the plain text radio button is checked. <br /><br />Also ensure that the following are UNCHECKED in TextEdit preferences: smart quotes, smart dashes, smart links. <br /><br />Once your text is highlighted in TextEdit, (by pressing Comand-A) you then encrypt using Shift-Command-E. You will then be presented with a list of keys to encrypt to, that you hve added to your PGP kryring<br /><br /><br />Other Commands You May Need:<br /><br />OpenPGP: Decrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-D<br /><br />OpenPGP: Encrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-E<br /><br />OpenPGP: Sign File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Control-Command-S<br /><br />OpenPGP: Verify Signature of File:&nbsp; &nbsp; &nbsp; &nbsp;Control-Command-V<br /><br />Naturally, you can change any of these shortcuts to ones of your own choosing, if you wish. <br /><br /><br />Once you have setup these shortcuts, you can begin using GPG. <br /><br />To encrypt a message to someone using GPG, you first need a copy of the recipient&#039;s PGP public key. Many people put a reference to where their PGP public key may be located in their .sig, for example: <br /><br />Guru &lt;Guru@SR&gt;<br />PGP Key: http://dkn255hz262ypmii.onion/index.php?topic=174.msg234832#msg234832<br />PGP Key: http://qtt2yl5jocgrk7nu.onion/pks/lookup?op=get&amp;search=0x523FCBEE886855CA<br />PGP Key Fingerprint: ADBE 8D80 5F5C 9CBA 9BDB 0F05 523F CBEE 8868 55CA<br /><br />Once you have located someone&#039;s PGP public key, you should copy and paste it into TextEdit. Save the file to a file; you can file the file, import.asc, for example. This saved file will usually be found in the Documents folder. <br /><br />Launch GPG Keychain Access from the Applications folder. click on the Import icon in the upper left hand corner. GPG Keychain Access will then prompt you for the name of the file which contains the key to import. It will usually show you a list of files in the Documents folder. Click on the file named import.asc, and click ok. The PGP public key will then be imported into your PGP keyring. <br /><br />To encrypt a message to a person, the message must be contained in a TextEdit document. Use Command-A to hightlight the entire document. Then use Shift-Command-E to encrypt. GPG will pop-up a list of public keys in your PGP keyring. Each key will have a little checkbox beside it which you can check, to select that particular key. If you were encrypting a message to me, you would put a check in the box beside my PGP key (Guru@SR). When you click on OK, the plaintext (unencrypted) message in TextEdit will be replaced with the encrypted message. You can then copy and paste the encrypted message to enter it into a form on Silk Road, or anywhere else that it needs to go. <br /><br />To decrypt a message sent to you by other people, you need to copy that message to the clipboard, and paste it into a TextEdit document. Again use Command-A to highlight all the encrypted message. Then use Shift-Command-D to decrypt the message. If the message is encrypted to your PGP public key, you will be prompted to enter your passphrase. Once the correct passphrase has been entered, and you click OK, then the message will be decrypted, and the decrypted text will be placed in the TextEdit document, replacing the encrypted message that was there previously. <br /><br />Guru<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Newbie need help understanding PGP</strong><br />
+				Post by: <strong>kswag</strong> on <strong>October 18, 2012, 07:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				It says I do not have permission to go to site.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Newbie need help understanding PGP</strong><br />
+				Post by: <strong>HoneyBooBoo</strong> on <strong>October 18, 2012, 05:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Unfortunately I am running off the ancient Leopard.&nbsp; Any work around or am I going to have to upgrade?&nbsp; How can I utilize the command-line to accomplish this? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Newbie need help understanding PGP</strong><br />
+				Post by: <strong>HoneyBooBoo</strong> on <strong>October 18, 2012, 06:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I think I may have figured out a work around myself actually&nbsp; :o&nbsp; &nbsp;I&#039;m gonna post my public key here, and then going to follow that with an encrypted message.&nbsp; Let me know if it works please:<br /><br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG/MacGPG2 v2.0.18 (Darwin)<br />Comment: GPGTools - http://gpgtools.org<br /><br />mQENBFB/j1wBCACy+IA4FyC9BBgGxx2D+Oma6AsVpbMhv+388RXbAVct9QGUxoon<br />6fG/iiKh034Cj+h/JM9j55aDqHlZgBptjQsRotMYxVyD5U9779/hvnVC8zuLjPvA<br />uL1Y7UyGgz8/mGe6zKo1xhX0WnALpFISSBXDAP8jiEpaBeoupo1d2z2pYzZ6xFXz<br />cbDfbstqyXKd+iCM17hrsMjnxEouUaUsCsMisT7CmMKz0eiXfy1SW4UVu6G2pdot<br />+NBtxS0deulh5zuuWJxmAKPT2CqkLsHsBWA8auy/HVbEUCe7TFrq5AQAkDLsXKJ+<br />0uxUrCGXHt3kcPWFfhbuPlGA+QvbLJ2mZDbzABEBAAG0JUpvaG4gRG9lIDxIb25l<br />eUJvb0JvbzEyM0B0b3JtYWlsLm9yZz6JATkEEwECACMFAlB/j1wCGy8HCwkIBwMC<br />AQYVCAIJCgsEFgIDAQIeAQIXgAAKCRBJanSKdSn50xNUB/9L0p6sqCOcN2LaNLD8<br />DH/sezloZ4nb9oXv2um0x0i4pZ5Gv2NNJ1FjvFVI5eCiFyWEOz6YxwjjkO2nv9pG<br />U3qBS+P80D/Mgcd+luG6cT3D8sPGwHtwjiP7lqsnuKtTN8ctflkO6yakYzGkGWX9<br />WsCSi6eXbX2+SFCyN9Pvg+opeQNKuTtv1abNOMcGlrOQMt4eOfwEzOvSsAQJuIaC<br />Ws6GKSSDjv2FCWrli0zsAqsuGArNCuXdpj35NTgA5U5HQyBEQEzfo1UpIX1zHScb<br />XeMuB0LKWXI1tzndvg4EGHHVqa2UG7/nApYZ5J5K/xZ7J6mIusfLHGFsi4YM2O2X<br />qYJnuQENBFB/j1wBCADffDQEBnMNzGrhYq7z0trWaGr7/RcM+43rEYRDq2+6Ebnc<br />3BWeWsdm19GB9iMyCauUhPM5ZdOSxOATgo31tkasS5nZS6OSgNasj2rsrhpNhyi/<br />tGJUA/DnIlpnbzDRYPSHb4jm3gl3tzldt2GY3NexeRV+85R3agEZgafdIf530WxK<br />uHTo89S8Q+pwgV2UxZspLsJHlZToU9bgt/NzLk/SqLLqPrEJbR2RoPtCGXt62oEJ<br />6/UfJx89IHaDvcVntZcn/j/gfpniZfvdLKji1wPi9dcYbDDjkUhfNL9vnyUr3bQp<br />a1KUSifKDm6raxr89nN4roPTlSN7Xt9CsCtRfz3hABEBAAGJAj4EGAECAAkFAlB/<br />j1wCGy4BKQkQSWp0inUp+dPAXSAEGQECAAYFAlB/j1wACgkQDvz7pNgil8WhRAf/<br />ceWWkwWLFl3x60wWcAuZCjshuBaw1wJFVWqd6dIip0PxmAiIivWG/k4JlCEHsScn<br />eO5H5aWzgPU/ITNEt8MiwIbtTaix4AYUuP0g7yP7Y3OJcIpoPlvCeO8FTTd0KKIm<br />S64BNa89g5QAB0QLoHJ30SyfS7RZm4WTihi3MM14UKI//vu+1xER578F9/T1Nko6<br />kf945o2OHyYONmL3pOT3Fg+OU/enHw3PPIyG1ValJn+9LsWBcr+ovW/cZCbHQCiK<br />ZHSxDnpEJhQPdxaWRSCmK0vBPFlpir4c1XKTgn63qM2qsKZPsq4qy5/nAFJbWQFM<br />apIQ+nNeC1N1Aq6bJnhQ62+gB/0S3zMPurbwwlvBidZIHRDcoSUvY+W7/O1J/2Tp<br />2gc3PEkov8Y4ZeZH9PRcRYjvcN8uKqIc4Db5MPZnA4rjVFwLRZreU11VjLuwrddh<br />BrXdPuuYdhcIzAW6HkL9qaroSwP1NXzNTsh/fO4/PCA1PTeJRVfk5cC851CvXBuK<br />LplNdWvojTcSJIFYeMqnV/biefLbg6dbSJ/F+KFIbRQPgs9gBSRR9PhcgsVRqdZY<br />k1L8NGAQr3JoB5sxhXGOXw+HytO92Xn34e28HrvK+FjgPSLPFxsqDWpsz6m396Yi<br />h8dJzNwCst7JzwxLZU/Iw64H/AuLK0638JBK4swI1ZkUW/CO<br />=M+VD<br />-----END PGP PUBLIC KEY BLOCK-----
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Newbie need help understanding PGP</strong><br />
+				Post by: <strong>HoneyBooBoo</strong> on <strong>October 18, 2012, 06:21 pm</strong>
+			</dt>
+			<dd class="postbody">
+				-----BEGIN PGP MESSAGE-----<br />Version: GnuPG/MacGPG2 v2.0.18 (Darwin)<br />Comment: GPGTools - http://gpgtools.org<br /><br />hQEMAw78+6TYIpfFAQgAoSWe7/4QsCeC32rpj1AmAzzk98CyDUi3r7EiY6lCk6+P<br />C5Lem3vQfHGva1fb+YhxqSvb/qrwTUSx7WJD13Gctc7ErtiLoZa7714iaJk6gkCN<br />ryIpXdsobs15WvZhUYiDsQkA3AfDl3OhFa0zWxpMwEuA3tfkiACGcIyee4SSSppg<br />+5kqbeb6u0UqXkXAq2sjBfIEiJ4HwNsbSJ9VGSYdqIezE7DAxV88cQ/DzR3bjNHW<br />KJ3yM2+B0hbBU0pqzcae87MBLLb5utx4BpNkBn+mZxuK58f7RnUpYNS0kS8CV63O<br />e4zuWVTLxNLuP2ekdKUrHtGX8uIAylgFJKo/e4YNkdLpAaSKLpZWWrE+sEGQcJFu<br />Gpw9PoD4rAW3AMdpqd/3M1fv2lFqOxUcVG3TZt2IlGy+VcoYKRPPLkEmud2asOB2<br />6q5rXhQlb+z+HFRSlKi8hOzfj5BnUCrbHdS0ALSzDdWsHSVWw0GMuqm9+Z0ZKmbi<br />sv/S8Hr+p6T1zfXBXvqggnpklZY522w5g7ZVUMHIsfIekUmLZncG+sL2D9Ojdv9y<br />JU/G7kMrIqWkqG+rirtgM4zYHtpEiikL6GpLb9oAW7LufjgXCcaGJeM1L4kAhVdX<br />PwJ3tLputA/ExDlJ1roWeLGFNnK2sK0ozY0YT52talLvavaFAYwb1H9z3cfoYobL<br />Uxhzkv8spGpnpajnlpS3F/d4/2xw6bg6jy+Xor/NDJJR2nKUgQHtdEkQZur7GtRo<br />FXh5FLPf8cCUc9nL6fqLkSSgG8SAobvshsct+uURKgzsQV77PjI6e1eQD+JZILjc<br />P2RzCPDoRSnwDMZgpt9vJX6YfG67LXFmDBWKxI8RN1ofw6SP5Jz+XQFOKPulsaW3<br />QHMfJUrQpkzllWa2Yvh5g4PZNkaxjnJSBlinogjydoxV6hDHZaz2sgFsiHtvpv9Y<br />V96+aCn1Q0D6jwuxvHr17ZQ+6TvhqWpr4yNl1ZDnJljfUq57sgWjsHIqSdweENfq<br />OKJyXu4KwuiaRnKUz9Zdf94pXbRmogkv3UeETdGYjOClot1P9rH3kIE0ZtF+91Sx<br />D4eP5c7X5nA882k=<br />=CMnf<br />-----END PGP MESSAGE-----
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Newbie need help understanding PGP</strong><br />
+				Post by: <strong>wicked420</strong> on <strong>October 18, 2012, 06:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You can always follow the guides here: http://p3lr4cdm3pv4plyj.onion/&nbsp; , and you can test your encryption here: http://p3lr4cdm3pv4plyj.onion/test.php<br /><br />Good Luck!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Newbie need help understanding PGP</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>October 18, 2012, 06:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=55245.msg531493#msg531493">Quote from: HoneyBooBoo on October 18, 2012, 06:21 pm</a></div></div><blockquote class="bbc_standard_quote">-----BEGIN PGP MESSAGE-----<br />Version: GnuPG/MacGPG2 v2.0.18 (Darwin)<br />Comment: GPGTools - http://gpgtools.org<br /><br />hQEMAw78+6TYIpfFAQgAoSWe7/4QsCeC32rpj1AmAzzk98CyDUi3r7EiY6lCk6+P<br />C5Lem3vQfHGva1fb+YhxqSvb/qrwTUSx7WJD13Gctc7ErtiLoZa7714iaJk6gkCN<br />ryIpXdsobs15WvZhUYiDsQkA3AfDl3OhFa0zWxpMwEuA3tfkiACGcIyee4SSSppg<br />+5kqbeb6u0UqXkXAq2sjBfIEiJ4HwNsbSJ9VGSYdqIezE7DAxV88cQ/DzR3bjNHW<br />KJ3yM2+B0hbBU0pqzcae87MBLLb5utx4BpNkBn+mZxuK58f7RnUpYNS0kS8CV63O<br />e4zuWVTLxNLuP2ekdKUrHtGX8uIAylgFJKo/e4YNkdLpAaSKLpZWWrE+sEGQcJFu<br />Gpw9PoD4rAW3AMdpqd/3M1fv2lFqOxUcVG3TZt2IlGy+VcoYKRPPLkEmud2asOB2<br />6q5rXhQlb+z+HFRSlKi8hOzfj5BnUCrbHdS0ALSzDdWsHSVWw0GMuqm9+Z0ZKmbi<br />sv/S8Hr+p6T1zfXBXvqggnpklZY522w5g7ZVUMHIsfIekUmLZncG+sL2D9Ojdv9y<br />JU/G7kMrIqWkqG+rirtgM4zYHtpEiikL6GpLb9oAW7LufjgXCcaGJeM1L4kAhVdX<br />PwJ3tLputA/ExDlJ1roWeLGFNnK2sK0ozY0YT52talLvavaFAYwb1H9z3cfoYobL<br />Uxhzkv8spGpnpajnlpS3F/d4/2xw6bg6jy+Xor/NDJJR2nKUgQHtdEkQZur7GtRo<br />FXh5FLPf8cCUc9nL6fqLkSSgG8SAobvshsct+uURKgzsQV77PjI6e1eQD+JZILjc<br />P2RzCPDoRSnwDMZgpt9vJX6YfG67LXFmDBWKxI8RN1ofw6SP5Jz+XQFOKPulsaW3<br />QHMfJUrQpkzllWa2Yvh5g4PZNkaxjnJSBlinogjydoxV6hDHZaz2sgFsiHtvpv9Y<br />V96+aCn1Q0D6jwuxvHr17ZQ+6TvhqWpr4yNl1ZDnJljfUq57sgWjsHIqSdweENfq<br />OKJyXu4KwuiaRnKUz9Zdf94pXbRmogkv3UeETdGYjOClot1P9rH3kIE0ZtF+91Sx<br />D4eP5c7X5nA882k=<br />=CMnf<br />-----END PGP MESSAGE-----<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This message is encrypted to your own key. Here&#039;s mine...<br /><br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br /><br />mQINBFBeQbYBEADR1cK5x4joqLAG3hpL3ALCvqsY5lfi8jCrmNbN31t/nk4pOeOr<br />oOsT1ekJgGAAt++drUP2HbGHU0UyU2amjfBFW3XsUw0fSwkp2RKWEhZK44EHyeUC<br />0vWm5LxH0Tl6zuVb6HubctC7q2Pr2dqf6nlO1ryYxoQamQYR03OkQv8G3aKr6Nql<br />XwjHxpz5XpqqUT6JX9y9Iwe/Xk8sKBPuJcw9vbJOxSHnaKgd696f5inrHBjpl2qv<br />KVPgfhbWWxmE4ULXqu0yJSl1PtdtWwwUhYLE05WBVHQVJig+eInQlx1WDSix1nG3<br />MzfvTRILvJHq+vkBhCezEske6aK6INXJIvjpM0abVWi53Y7R1s/23DxT1suH2vb9<br />zVLgB2Xu7Udzbe0kRXhyqvXnI61vGCwe5+ack6uoJ+2JP3qXA5D3sdjfmI1TVtp4<br />LtNHM+3JqGYS8gGq/OouAhzWte47ElCYRQyFDqvHYF51KDbKr8kMVKRnkx7uf7yb<br />R36/FKNvZhnBJ8zgoRE/W5NEwzWD/SwD+cXxZIklRLXGy3HG+ncsQVSGsQ4ffEhH<br />MUFO+CJGlHTwvcApglHISlK5noM85/0rHp43Pz/wMZENyQkxWvuls3SLK8a8PiIL<br />O/vu5wtgiYNU3ovQV0czwLPMJIfVvnrKp/fp2pzgpBn5Izo5z7zpR63nuwARAQAB<br />tB5OaWdodGNyYXdsZXIgPE5pZ2h0Y3Jhd2xlckBTUj6JAjgEEwECACIFAlBeQbYC<br />GwMHCwkIBwMCAQYVCAIJCgsDFgIBAh4BAheAAAoJELjx2I6790M7cw4QAIv2++yc<br />1c0npDN30PjvLA9RMACpJGDuzAPVWZa/dBC4r8NX4kcr9IVcJrTWog9Jfl/Dgp0f<br />XJynoMbhQt+1/VeAY85YBQGfol0pIMnro6GwetAwn6LiMnz7xPRcvk5UaDOVL96s<br />zz6vtPKpgvgTOwV3FdW0ki74o/E8uzyFZ0Hn2I9Z3CrKUTHXkOQ2M+pOEGltsKt8<br />t9HxUcNrtgJu/P6wxld+q+4KMuQuiAaSNzUJyEUUVVUzkOmlS+iDgHgHlYUiD08Y<br />FNw32xDdpLNearjK+jKz/BWVfMROJdydfIQre0mTHwJTurFJMuxNuY/g9wRegrs9<br />c3AXBlM/kbwL9BffEUgdzz0lKBRVgyfwgvl5ugWHdeuC+882v888l6ViLe8Rnk1p<br />eAhPqMm2QBSv6zvm6NjiV4dacnHziCfNJa7Dh3xLHYCwgvI1n1WUrTg4vgoEDNRA<br />rOo7tD6cs5yAoY9e+npRaXAGT7qduERTritD+FuX3LKuHkZJDoGytzMBHTUT2kwc<br />P1QVadcg8WM/mRiUe0x1YzojnCIbAy+JaQfyRKzZsNA5+kMSRvH8WyD9452iJdh8<br />Ip0XUkU+CYDSMAVlFo/f6yKFpTFK+qNI0MK6sJTAOcl007n52S3zZyUNuGp1qf0W<br />1R8Yelxz4s13GZIVyL9jiXdoPSycPhk5pH+4uQINBFBeQbYBEADJ5l0Eu8A6IeP7<br />oeCPbg/ODpUKt26nKc2mYmGF/aWr+KRah4LzLuivViIyZEhSR9EnBHjyRni7nzTB<br />BfNxWNRv1UHUbejjT+qXlQjhH1i1aG3idFYv31mAkKZGDV3NcwOh3A8tSAAsMuoh<br />pdU9bycNrM/w0+gdRBagQW8PvpTlGZ6BnLNorX82Y7LGRGjbd+axhF/tAlg9Hb7t<br />Sy+6+S6AcnKuKS4HO1nHpL6MJJ0l+oB7aclQZqa8nDCP2I3stUlCn82pSTw/DFJL<br />Ln8GkNxZd9b+SWP+4GkcqZZA/NaEtShH7SgIN4b1UoAgbdhbcglyB0FYIK7xDTeB<br />HjwRYTCb4XxbN3PiH8Sw1pTNPSx8AB0SnIgjPdGA5pJeC3bDuE1MNUEeu0gqFLeG<br />eX+yyXXk6ru8bbMs/1G76H11+z0lr5IOykz/NVN95Ly+UaIvDLRAHAYWGZ2eEVjj<br />lm5jfNBD4Sj2yqtjBsb60gOmWaAO5zr5XxWqmn+JdhDvgAZ1gWoB8Zxz7g1rmDMP<br />seU6irD2cMqxJdH9J+ttN2+2pkIYGcnhUalVtwhE1EJv4GPIfoRlKXsXWjeBnNcH<br />ZjpmcMDgztOVjc4h92jU6WhKt4h4vaGOmSV1F5j1m0Ie9UkHLeFXDThYMAauRkPQ<br />/KJbOEG82BaVRTe7kR5pActbU9/8/QARAQABiQIfBBgBAgAJBQJQXkG2AhsMAAoJ<br />ELjx2I6790M7/J4P/RhIz3qHZqfvrTvX3Jm8N/ZXkWLanqDQAlatuhEElg2KUtST<br />IhhUKz+Mx+0Kh0USDBZ5uLgME7Ye5dt74/67912No/GO07do6O9LEFf83BlvT/xR<br />SnG8GrZupJWcB4vtwVfoBA72osWixrjc2tZIgRlnA7qBiWTjOIDqCnf1Pwn9VnyS<br />jkdoqPO2FVbs1Ipcdxm85RAdUzZnnBDlro+OVDgjYVhYqh4tPZZcv5kTgOZYYRI4<br />day2MkfOAFHR19VMh30jki6FBargMDvGQJWWdiU0bLCNCzHmIM+nPNXZlykUtu9U<br />iPHVgeWPnqOveDqpVrAd6qzR5PANssLGs6ZE0QdA4HaiWlA7S7t6tL8mcjiuisVJ<br />jCsZGsW1sAkRvQ+14fXvOE5gbOKhJbX69T7ebBwUrBagN01aPwTp+6nlpyLzZ73O<br />6iGZfB5QR0RmlOEhz0ZB4m210UzVBixW0wn7zDk1MMef5x/Bzr4sKADZEdHIILlT<br />UuyILsyWrWRM9qQYoC3tlUgx1/UaiDCbpGO486CKqjQH9URq4s57eYzgpc+Ctv0c<br />JO83icJ5HEY5kyyk5TWRFCopNppykvuQIOOlozCM4VYhzFaixeg+UanpdCV1eQv9<br />akIDAVmfX2LYZY0ckJrzTn5n2zZNr1oigzhRCfJeZAqH+DFTgNd+KGzIDnzz<br />=mFwp<br />-----END PGP PUBLIC KEY BLOCK-----<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Newbie need help understanding PGP</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>October 18, 2012, 06:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				@HoneyBooBoo<br /><br />-----BEGIN PGP MESSAGE-----<br /><br />hQIMA/yjfDj/mMPqAQ/8CFCGqD9Ts7tnpkvpU1vy+zVc5Otr+SCSQzkndvWNqfNJ<br />o9ci7+mTLR7/CQ2Ovd8BN5zR8aH3mK8POlfve527xf3F3ieVwsgGRK2Qs8pj4yHz<br />WetbwmvxK3/2jUXW0LaBNsA9tShdMPx9RJp8nKOWD9tZ1Yco8ymUITaiiKzcokel<br />3S60mlecgaoJoirmFQ1tAbvthN6EtPjcMowe9WfPxXrL48eRdLU/HwSNe0D9rylf<br />Xmf83YeA9tT3y3RJFMhLuqsEVj/E8FupKlUNfKTjOKtPE3TcHxOi6zYl+1jgeCHu<br />QwzfOJCfq26k/RxlDfOx8TMsgCUltGbAW0m+orMJyt95ZyFYVozA4JLEQpuIPQBj<br />y+eqi7NHT3CXvmhksSQ2DXW3owsBAyo9j2UJwANmy2rwFkQR/Qc1wZyuC/2y9wUu<br />yshCJnryaFP4Q7vCVIOQ0DfNS2WCLuoKCDYE4Wx7p3BTR3VSCtFAp4DpbMt8uHmK<br />dbInL7nHMh+HUStxC72LOUvnZ26l3MUqBpx6JucfuVjEvBJXYHFhrmpAeSXFXJPc<br />QlujECrk1FsIwemR+EFaU/u/SidMxxYl9u4pxKRP+85QMzXsEEgMJo/Vjcs+07Bg<br />YCPllln0oWCAU+nHr3usApTuaqEpsIor/5++r9t5M4+aCWh+EGZtHVZojvVEnk6F<br />AQwDDvz7pNgil8UBB/4qLtpEJZL6c26j8cjhIGurNbWR4UNDO7DeTJZjsty8d2E+<br />WkDjG21XYdu824fTVzRXLa4A/OcYZ06ocZvAiXLzbn4LQgtY0HmD+leI8/oc/7NI<br />XQof+WUSDSutDhuF/ASNRHwhz5u+yGZU191sPM2o/Als2v2rkB9mUdcjxyz+y+l+<br />KL+Tq5iDQDv5rrGPd9WKnyVe6+m7vo7vyU4K6FF3vIkBHPvA3z+97wAPUI0F04cE<br />QNB7yhz/+O7zEqlIv9u0b8m/h62ndpkRbvI1mR+CcQI9LsUZdhv7BrQECM4YnuOD<br />nHBs74r0anltNJRWUrZSOlyFGhOvzZpZjmJ7ptQr0oQBkCoetdqcX6rZS56PsHMV<br />aXY4TJXW1/Wj/6W0+gHfr8s2r31nF546Kv9o41hzinIW4Iik9dghFr78qqew747L<br />eNl/tuBAAmWWZXcz5YFdP+egoCATwiIbpoVowc6+L+vQPGe0sXItZ4CJ0RmF4Yrl<br />OlyCdwTY1Cs97jB30CrJ7i27dnQ=<br />=PNdD<br />-----END PGP MESSAGE-----<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Newbie need help understanding PGP</strong><br />
+				Post by: <strong>HoneyBooBoo</strong> on <strong>October 18, 2012, 06:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Here Nightcrawler:<br /><br />-----BEGIN PGP MESSAGE-----<br />Version: GnuPG/MacGPG2 v2.0.18 (Darwin)<br />Comment: GPGTools - http://gpgtools.org<br /><br />hQIMA/yjfDj/mMPqAQ/+N4ukidFdSkSERWX4fLktdV4QPSSHhUDJRCsQtmTLsA8x<br />wQWImzPsG+npfTsNQSt+xWu6pL158SsiTWSu4CtX/0TumBbU95+fNJ1trZ58Nv2+<br />HAqx6311ThcOL1bNtqFbR9bhoR9/XMWq4S6i6MJBVtlB1NcMG0eS55R9Q1Rl3BCi<br />5+vhTiW+20O+1ndKdvtbLqDuc4tBRSP2qEFOh3OEj7WkUXuhy+KHK/kLevTp5ogG<br />njIB3RRv7UgCnY6kikN7khQINVYgmmFXPbiWh/YHG7eqUbkxV4Avu30d7jw1GQln<br />swcQmOClv8ufu05dt3CRMNk1CEtBTsj5DkwyV05SqYyh5EGjysauiPZEI+QC0+MF<br />OCP5TxvU5+vGFhNdOaJmIh6n7BiUT9ALVrn+wxhvij2GNetBpmTjKZ982xyyyVyI<br />AmzsCJyC/+V4yyKZHTmEFULcjV9OKhtBk0Z9MIc1vOOhWoBNThfDVfDsTuz2+/Vw<br />MJtQzif3XzqyUJaOLUQpnrL+Sa4sp/yjFO7h9stx6fee0i7mA6J4MLGTw5FCjRM+<br />uTMg6V6y+nvYEfvG1WLVkbS8WH1M7VFRhczCrLxaf6UACBNKZf9EU4WAR+uR1g9j<br />GtDi9716CZCpcZqgMPJfsi45z63wYXhiG7HHCW85S1Af70cKo2hk/S0AcqqijnbS<br />6QEjMmgfThdFn1M75YJa/F2y9ufYBx8NXz8YGlzTF1FIrKRJZ3fcyK6FvyXz78Mz<br />6ArjHwoQlWIN2AwXAEy9WhPp2pgftFpqicnkqE8XOt4BQ5KwDsvKswOcwaMeIZq2<br />pPgJcuruV0c2zHQ1B67Z1hczhZYY+9fgy+qN3ofIzSj0kUXAu0zdXhpqXyLxzC+Q<br />03wVt4zbblDsaIGSSuxD7CQ74/7pAHGCl2+2mvDdAIi1uY/11FDdo+cW10rI7ZLS<br />QM5JhIHXtgxPkBkdraO7MNoymiupu0E+JClwMTR9fnSDmfbvvg3r8hoC4W9VEMpU<br />HlvDGqfejiz3jUdXAp3bia+L5ZJBakh43O1p8mLrg7R7omXZPDI2hzmC2z2viPdF<br />SGb+9WqEPbt6BeNceLLjhAKFT7XdESb6ZHWqo6xZ0PBaFZ17CrK5tjOhEIMwCncH<br />RGIzSySyrcbtySKD1y4ntA5IEiCh3MzH7erQYYhywppwmfwzPkvjNILECbsRvztn<br />C7DUj32EH7O053j0kfOCI9I3/VB09XRP0cLtmtlqCqHB5YxdvlNQ7X7qdhyBUgdi<br />lLWzQ5L46hBkR0Rw+SjEhaxpgd2SQ0gbod6GUQ5J3+nFvusHX6MN5a60p8E+TJ8P<br />XtrTCPsop9chMOFVlXK21G7QRJSeB66ihRmhl93lBbx5Rh1KFNvz5z2og+Fw45WD<br />fgJ5l4F4ujt4l4UDrx6/7P//BGoQSmUYYl+98wWzLaxzkhEWiNw0Y0m53pJOzoc+<br />U43CoqSHQWM=<br />=IaP1<br />-----END PGP MESSAGE-----
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Newbie need help understanding PGP</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>October 18, 2012, 06:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				-----BEGIN PGP MESSAGE-----<br /><br />hQIMA/yjfDj/mMPqAQ//T+UcIOIGN//l97aNJKTLbGk2AhkoJwo7oFV9pC2iXwml<br />QXcYC01A0/GPTlhE24BwnHJ5a0z2FexuT5fDJY+UxgNT40yZfd9Dt8EGDi8CevA1<br />X8QPXFu3Mc6Xs1JW6Es4iDZ0Z+niScPo3KUYmHWB5rmRye+Lu3WDNkk2x8dwV2wQ<br />JkDYyLAdQVsq0Y5EvLjIAyChOnL55UWDLoFWRXoG6IjFarpWNARinHonx7X6E5Vm<br />c1Q7sqt3w+G8gXqBwBJbAGeg/J3Tv3+dLIN3kz/E8DGnxaa12uuU1zIknd51XK1G<br />tuy6RPGA/qM3ym9ie2CS4q0SVFZP44xK9GYlY+LNSdfkhXBcoYS4FGHj0mqvELYR<br />4XbZXey0yBq11EKVLS2HOIcUew9hb6qFHmkBmvKBw6mHhQiQuRo7/Mz+mHhWVodn<br />V+khV44TPtBcRSK86wd0GIKYXrgLoJ7pFVtM9414R6UoiI/ydkTdbGxY7WqUjMk9<br />AvE9u9I8CA2/Jg8k66M6uK/351b5vWWWeJvHpSNKNqXIjSSt7ojOdh0Bx4UtpxOS<br />B4uKV9KB4ZqR/uOw5vMajFJb/PXplU4F9SaRBq1sRcBqGwBmO/S60SDyJvNE3HqH<br />LgfFiA9sL/NTNDDA6Y9g9UVLXDyp+xpFbkZdO1GRFwGvCbPYJyi8+uW6bYqS5oOF<br />AQwDDvz7pNgil8UBB/9IU8sr8RkfxEKZL+A5c7SC+HZQt8/GjODG32WnSlNgdW94<br />5SuEZ+vbejmfLrHl44b9PqXDRPXvXIbZXG9PoLe8LJzayWSLs8GbRrGl0s1xJad7<br />B8FANknqZ6CJqxXq6qa1DXru8+KqkOBz8Sv7attSEPMbD+tUy0N+yeR6iZPs1Euo<br />DtmUhLqEgx9nsqbxQwCSB8E4+Cm2cRkzgDMsPgIltNZghrxHGYXhU4plljQBfi71<br />5hS6YeUGxDc5SaaiqFQRMxe1IE75JISMeJgW/pB+o6Otu50ecsBTU5soRRkMZskM<br />/WzlqvtFoTvobhV5XKB6Gv2isYsYWzzxxWiUkUUq0sBZAfO7LautI38YHVRQhI7z<br />bQMwEFUstJH1HjLZ7vGZ8DYbQy/5JOZEwI/ALDnwiAa4hHwgB/lFAJhP9+e0b4yJ<br />EpWgv8xUR9tJ0xkyPiXkNypcxuK6/QMz6FuncC+OqaJqRyZLx/0WJw0wtyuVS7gA<br />PtphcWrU3LZYFG+sNFg++bLyu9wXaTlSD3cfNuee6zyMB812T6R1PlaFaZXlysNV<br />tZ9AHpvjacCMCy6hE9s0h14Dg+ev1lxe/dVZTaxgPvqVu0AfZ7tRm36WcblVUB6C<br />LBoVmvV1d2R5cnJtvIANs4vjgkuHTrUoqdDFRjMeCaeokrtcj0Fgi1OdCua37yrR<br />TJrIei1ocMuULhIShkUZIU08pVG59N1Vu7w=<br />=NLGV<br />-----END PGP MESSAGE-----<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Newbie need help understanding PGP</strong><br />
+				Post by: <strong>HoneyBooBoo</strong> on <strong>October 18, 2012, 06:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Phew....well it looks like i got it working properly.&nbsp; My workaround is far from pretty on this ancient operating system but at least it works, thank you for all the help nightcrawler.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=211150.0" />
+		<title>Print Page - i2p as a backup for recent TOR slowdown</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Northwest Nuggets on September 11, 2013, 03:46 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>i2p as a backup for recent TOR slowdown</strong><br />
+				Post by: <strong>Northwest Nuggets</strong> on <strong>September 11, 2013, 03:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				Could i2p work as an alternative to TOR until they figure out how to tackle the botnet?&nbsp; Is it too complicated for the average SR user?&nbsp; Would it fix the problems we are all having accessing the main site?&nbsp; Is it as safe as TOR?&nbsp; <br /><br />www.i2p2.de
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: i2p as a backup for recent TOR slowdown</strong><br />
+				Post by: <strong>astor</strong> on <strong>September 11, 2013, 04:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=211150.msg1529388#msg1529388">Quote from: Northwest Nuggets on September 11, 2013, 03:46 am</a></div></div><blockquote class="bbc_standard_quote">Could i2p work as an alternative to TOR until they figure out how to tackle the botnet?&nbsp; Is it too complicated for the average SR user?&nbsp; Would it fix the problems we are all having accessing the main site?&nbsp; Is it as safe as TOR?&nbsp; <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I2P has the potential to offer better anonymity than Tor, but at its current size, it is not as safe as Tor. The one thing it currently offers that Tor doesn&#039;t is plausible deniability. Since every node relays traffic, it&#039;s difficult for a connected peer to determine whether traffic is originating from you or being relayed by you. However, overall I2P presents more problems for SR users:<br /><br />1. The network has 10K - 20K concurrent nodes. Each node learns about ~200 other nodes and relays traffic for about a dozen. That means 200 other nodes will know your IP address. An adversary could spin up a few hundred nodes, and even with a lot of overlap, they could enumerate the IP addresses of most users.<br /><br />2. That in itself is not so bad, because of plausible deniability, but it is extremely bad for vendors, who can be reduced to a very small geographical area. Given the size of the network, there won&#039;t be more than a handful of I2P users in any city. If LE can determine which city or geographical area a vendor lives in (trivial), it would not be hard to investigate a handful of users to identify the vendor (starting with a list obtained from the attack above).<br /><br />3. A paper was recently published which demonstrates several &quot;practical&quot; attacks on the I2P network, including one that links users (source IP addresses) to the sites they are visiting: http://wwwcip.informatik.uni-erlangen.de/~spjsschl/i2p.pdf<br /><br />4. Identifying eepsites (the equivalent of hidden services) is not as well researched and probably easier than identifying hidden services.<br /><br /><br />Problems 1 and 2 can be countered several ways. A VPN can protect against fishing expeditions on vendors; I2P has a &quot;hidden mode&quot; that reduces your exposure to other nodes; and presumably if we all migrated to I2P, the network would gain at least 50K users. There are still problems with these solutions.<br /><br />Most SR users don&#039;t use anonymity networks the way you are supposed to use I2P. On I2P, everyone is a relay, so you are supposed to keep your client running all the time. Most SR users want to hide the fact that that they use Tor. They use leave-no-trace-behind operating systems and get on the network only when they need to. So if the average SR user gets on Tor for half an hour a day to check the status of an order, then at most we would be adding 50,000 / 48 = 1040 concurrent users at any one time, not enough to make I2P safe to use. Of course, that&#039;s an average and there are noticeable swells in activity at certain times of day, where there may be 5K - 10K SR users on Tor, who would be on I2P, but I don&#039;t think that&#039;s enough to make the network safe.<br /><br />Making the network safe would require SR users to change their behavior -- AND a few hundred thousand more users. :)<br /><br />Furthermore, nodes in hidden mode don&#039;t relay traffic, so if thousands of SR users joined I2P in hidden mode, they would probably DOS the network with their traffic like the botnet is doing to Tor.<br /><br />There are probably other problems I haven&#039;t considered, but these alone should be sufficient to convince SR and our community not to move to I2P.<br /><br /><br />What does I2P need before it&#039;s a good alternative for SR? 500K users. A million users. Something in that range. That would probably mitigate the problems I listed above.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

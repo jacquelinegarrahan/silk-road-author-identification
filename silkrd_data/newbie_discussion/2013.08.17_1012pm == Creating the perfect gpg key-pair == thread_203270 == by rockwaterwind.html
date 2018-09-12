@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=203270.0" />
+		<title>Print Page - Creating the perfect gpg key-pair</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: rockwaterwind on August 17, 2013, 10:12 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Creating the perfect gpg key-pair</strong><br />
+				Post by: <strong>rockwaterwind</strong> on <strong>August 17, 2013, 10:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				This seems like a pretty useful approach for both vendors and users to ensure you keep your master private gpg key safe and out of failures way, whilst still allowing ease-of-use.<br /><br />CLEARNET WARNING<br /><br />https://alexcabal.com/creating-the-perfect-gpg-keypair/<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Creating the perfect gpg key-pair</strong><br />
+				Post by: <strong>dotgoat</strong> on <strong>August 18, 2013, 07:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve been meaning to setup something like this for my main key but for the key I use on this identity I don&#039;t bother.&nbsp; It&#039;s a lot more expendable.&nbsp; Generally I just need to encrypt my address to a seller and so the seller can communicate back encrypted as well.&nbsp; For example I plan on dropping the current key soon (the email is still set to tormail, which I never even used).<br /><br />What I have done and is useful came from one of the many posts pine has done on the subject: http://dkn255hz262ypmii.onion/index.php?topic=137510.0&nbsp; my gpg.conf has the following lines added:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">armor<br />trust-model always<br />no-greeting<br />no-emit-version<br />no-comments<br />no-mdc-warning<br />hidden-encrypt-to AABBCCDD<br /></code><br />Look up what all those commands mean but it hides a lot of stuff that may reveal more information than necessary.&nbsp; Only one I don&#039;t have in there is utf8-strings as it doesn&#039;t really apply to me.&nbsp; The hidden-encrypt-to I verified myself that while external inspection only shows it&#039;s encrypted for who would be assumed the recipient, my key is blanked out.&nbsp; BUT if I sign the message like I do the receiver, once decrypting it, can verify that it came from me.&nbsp; What this does is if the receiver&#039;s account becomes compromised there would be no way to see who the sender of the message was (aside from just seeing who it&#039;s from, of course)<br /><br />Another option mentioned that I didn&#039;t do is throw-keyids.&nbsp; That masks both the sender and recipient.&nbsp; Which means if the seller has multiple private keys it will just try each one which could be annoying.<br /><br />Also if you do put your public key on the keyservers.&nbsp; First off I&#039;d export your key from gpg and then go to (clearnet warning)pgp.mit.edu and paste your public key in.&nbsp; Likewise go to the website through tor to search for a key if you need to.&nbsp; Using the key servers from gpg itself can be problematic since it can be difficult to ensure it goes through tor, thus the keyserver would have your real ip and know that your getting &quot;some_sr_vendor@somewhere.com&quot;s key.&nbsp; Doing it all through the web site (assuming this is through a properly secured tor browser) would hide your real ip.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Creating the perfect gpg key-pair</strong><br />
+				Post by: <strong>rockwaterwind</strong> on <strong>August 18, 2013, 08:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				All very good points.<br /><br />I guess as buyers we do not need consistency of &#039;proof we are the same person&#039; as much as vendors need - so this might be something more useful for them.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Also if you do put your public key on the keyservers.&nbsp; First off I&#039;d export your key from gpg and then go to (clearnet warning)pgp.mit.edu and paste your public key in.&nbsp; Likewise go to the website through tor to search for a key if you need to.&nbsp; Using the key servers from gpg itself can be problematic since it can be difficult to ensure it goes through tor, thus the keyserver would have your real ip and know that your getting &quot;some_sr_vendor@somewhere.com&quot;s key.&nbsp; Doing it all through the web site (assuming this is through a properly secured tor browser) would hide your real ip.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I can&#039;t think of a good reason why we denizens of the darknet would require our keys up on the keyservers? Can you think of any?<br /><br />And thanks for the reminder of pine&#039;s post! Another useful platypus.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

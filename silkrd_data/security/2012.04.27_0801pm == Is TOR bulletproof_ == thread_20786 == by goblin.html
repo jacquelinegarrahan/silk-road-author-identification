@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=20786.0" />
+		<title>Print Page - Is TOR bulletproof?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: goblin on April 27, 2012, 08:01 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Is TOR bulletproof?</strong><br />
+				Post by: <strong>goblin</strong> on <strong>April 27, 2012, 08:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I want to address the issue that is foremost in the debates about security and privacy and anonymity. Just how secure is tor ***really***? I mean, mathematically I can surmise that it is the best we&#039;ve got, but is it enough? With all these monster computers and algorhythms and spying machinery that the fucking government is ammasing against us, do we really stand a chance?<br /><br />I don&#039;t want to sound like a wet blanket, but are our private days numbered?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is TOR bulletproof?</strong><br />
+				Post by: <strong>supersecretsquirrel</strong> on <strong>April 27, 2012, 10:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				There are easier and cheaper ways to achieve your goal than to attempt to break Tor.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is TOR bulletproof?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>April 27, 2012, 11:21 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=20786.msg210973#msg210973">Quote from: goblin on April 27, 2012, 08:01 pm</a></div></div><blockquote class="bbc_standard_quote">I want to address the issue that is foremost in the debates about security and privacy and anonymity. Just how secure is tor ***really***? I mean, mathematically I can surmise that it is the best we&#039;ve got, but is it enough? With all these monster computers and algorhythms and spying machinery that the fucking government is ammasing against us, do we really stand a chance?<br /><br />I don&#039;t want to sound like a wet blanket, but are our private days numbered?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The primary attack to worry about with Tor is end point timing correlation. Regardless of the number of middle nodes, if the attacker can watch traffic enter the network and arrive at its destination, they can link the traffic, meaning they can determine that the IP they saw sending traffic sent it to the location they saw traffic arrive. Pretty much the only way around this is to add enough artificial delay to traffic at each hop, that a large amount of peoples traffic can be gathered at the hop and reordered prior to being sent out. This is called mixing, but it generally requires too much time delay to get a substantial enough crowd, and isn&#039;t adequate for surfing the internet in a real time manner, it is mostly used for E-mails on networks like mixmaster and mixminion. <br /><br />The first step of being able to watch both ends of traffic is to determine the target servers IP address (ie: the server you want to know who is visiting). If it is on the clearnet this is trivial, and you can monitor for connections to this server from your exit node. Clients create circuits that use a different exit node usually once every ten minutes. This is not as trivial to do against hidden services, although if you own a hidden services entry node you can trivially determine this fact and its IP address by doing a timing correlation attack, hidden services select entry guards. Entry guards consist of three relays selected from the pool of relays with the guard flag, that all traffic enters the network through. Guard nodes change every thirty or sixty days, and a hidden service uses the same guards for every client connecting to it. A hidden services natural &#039;exposure&#039; to &#039;exit&#039; (really entry) points is thus much less than a website on the clearnet. If the attacker can not monitor traffic arriving to the hidden service, they can not do an end to end timing correlation attack (although this does ignore website fingerprinting attacks). <br /><br />Unfortunately, it is not that hard to trace a hidden service to its entry guards. Hidden services create a new circuit for every rendezvous node a client requests it to connect to, and malicious clients can request hidden services to connect to thousands of different rendezvous points simultaneously. Although the hidden service always enters through its entry guards, its middle and &quot;exit&quot; node (really not an exit, but last node from the hidden service) are selected from the total pool of Tor nodes, and are newly selected for each circuit. A malicious client doing this can also operate as a relay itself, and the hidden service is likely to select it as a relay for some of its circuits. The malicious client/relay can then do timing attack and statistical analysis to trace the hidden service up to its entry guards. This attack can be carried out with a single node and traces to entry guards in a matter of minutes. <br /><br />At this point the attacker has two options. It is worth pointing out that there are two types of attacker, active and passive. Active attackers attack the network by adding nodes to it, passive attackers attack the network by monitoring the connections between nodes. For an active attacker to trace a hidden service, they need to own one of its entry guards. After they identify the hidden services entry guards, they will want to DOS them, forcing the hidden service to either go down (if strict entry guards are set in torrc, they are not by default), or select new entry guards (default behavior). One way to do this is by flooding entry guards with fake create cells, which cost very little processing power to construct but a significant amount to process. This allows the attacker to exhaust the processing power of the entry guards, effectively DOSing them. If they can continue to do this to all selected entry guards simultaneously, eventually one of the newly selected entry guards will belong to the attacker and thus they can deanonymize the hidden service. This is the best currently known active attack for tracing hidden services, and it isn&#039;t that expensive.<br /><br />A passive attacker who traces to the entry guards can order the ISP of the entry guard, or other infrastructure (IX, AS) to put a trap and trace on the entry guard, this will allow them to deanonymize the hidden service without owning the entry guard, just being able to see all connections to and from it.<br /><br />Once the hidden service is located, the attacker will monitor connections to and from it, this will give them one half of an end point timing correlation attack. Now your anonymity depends on the attacker not owning one of your entry guards, or being able to passively monitor you. Thankfully, it is significantly harder to speed up a clients entry guard rotation, so it will likely turn into a waiting game at this point, every 1-2 months you will select new entry guards and depending on how many entry guards the attacker owns there is a certain probability chance of them owning one of yours and being able to determine that you communicate with the hidden service they have traced. They will likely be able to deanonymize a small portion of the users every month to two month period, but Tor does a good job of preventing them from deanonymizing 100% of the users, at least unless they wait for quite a while, probably at least a year unless they have a large % of the total entry guards. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is TOR bulletproof?</strong><br />
+				Post by: <strong>Mecajesus</strong> on <strong>April 27, 2012, 11:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ditto^
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is TOR bulletproof?</strong><br />
+				Post by: <strong>philter3</strong> on <strong>April 27, 2012, 11:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				kmfkewm many many thanks for that info. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is TOR bulletproof?</strong><br />
+				Post by: <strong>goblin</strong> on <strong>April 28, 2012, 12:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				kmfkewm, I&#039;m sure you know what you&#039;re talking about, but for the life of me, I sure don&#039;t!<br /><br />Th-th, Th-th, Th-th, -that&#039;s all, folks!<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is TOR bulletproof?</strong><br />
+				Post by: <strong>dolphinspeak</strong> on <strong>April 28, 2012, 02:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				Excellent post, kmfkewm. Answered a lot of the questions I have about timing attacks. Thank you.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is TOR bulletproof?</strong><br />
+				Post by: <strong>dudeguy551</strong> on <strong>April 28, 2012, 02:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				If CISPA passes the senate, and the president approves it into law then TOR will become obsolete.<br /><br />The government will have access to any data that any corporation has, without a search warrant, for any purpose and can use it to accomplish any means. As well as corporations can record and save ANY data they desire. <br /><br />If CISPA passes I highly recommend that people cease using TOR conventionally. I haven&#039;t finished reading the CISPA legislature but it is the patriot act on crack.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is TOR bulletproof?</strong><br />
+				Post by: <strong>Delta11</strong> on <strong>April 28, 2012, 03:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=20786.msg211428#msg211428">Quote from: dudeguy551 on April 28, 2012, 02:36 am</a></div></div><blockquote class="bbc_standard_quote">If CISPA passes the senate, and the president approves it into law then TOR will become obsolete.<br /><br />The government will have access to any data that any corporation has, without a search warrant, for any purpose and can use it to accomplish any means. As well as corporations can record and save ANY data they desire. <br /><br />If CISPA passes I highly recommend that people cease using TOR conventionally. I haven&#039;t finished reading the CISPA legislature but it is the patriot act on crack.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>There are still several ways to stay safe though, you can always use a vpn paired up with tor on a virtual machine. Always making sure you keep everything on an encrypted external drive and hiding it, only bringing it out when needed. It would cost LE a good amount of time and resources to crack all of this security and you always have to ask yourself, would it even be worth it? If all buyers, small and big, had a security setup like this it would just slow down or even deter LE from going out and attacking SR users. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is TOR bulletproof?</strong><br />
+				Post by: <strong>77Tjm</strong> on <strong>April 28, 2012, 03:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks, kmfkewm; that makes a lot more sense than anything else I&#039;ve read on the subject. If that wasn&#039;t copied and pasted out of wikipedia, it should be copied and pasted in. :) 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is TOR bulletproof?</strong><br />
+				Post by: <strong>cacoethes</strong> on <strong>April 28, 2012, 04:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=20786.msg211428#msg211428">Quote from: dudeguy551 on April 28, 2012, 02:36 am</a></div></div><blockquote class="bbc_standard_quote">If CISPA passes the senate, and the president approves it into law then TOR will become obsolete.<br /><br />The government will have access to any data that any corporation has, without a search warrant, for any purpose and can use it to accomplish any means. As well as corporations can record and save ANY data they desire. <br /><br />If CISPA passes I highly recommend that people cease using TOR conventionally. I haven&#039;t finished reading the CISPA legislature but it is the patriot act on crack.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The way I understand it is that corporations are not required to share information with the government- only that they are allowed to.&nbsp; But of course, corporations would be granted full immunity from prosecution for invasion of privacy in return for this cooperation.<br /><br />Oh, and what&#039;s this?&nbsp; The bill allows corporations to share information not only with government, but with other corporations (marketing partners) too.&nbsp; How very telling.&nbsp; No surprise that corporations depending on advertising revenue are in vociferous support of the bill.&nbsp; After all, it was custom written to prop up the very business models that have made so many corporations impossibly successful.<br /><br />CISPA, in a nutshell, grants corporations the authority to do what the government itself cannot do without pesky little obstacles like probable cause, due process, and having to obtain a warrant (even retroactively):&nbsp; to spy, unfettered by any restriction, on absolutely everything we do, as long as there is threat of a &quot;cybercrime&quot;.<br /><br />Threats, real or imagined, are shared with the federal government.&nbsp; The rest of the information is channeled to wherever it will generate the most profit.&nbsp; What a win-win situation for everyone except we the people!&nbsp; Corporate personhood takes on a whole new dimension.<br /><br />It&#039;s a corporation&#039;s world, baby.&nbsp; We just live in it.<br /><br />I&#039;m fucking depressed now.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

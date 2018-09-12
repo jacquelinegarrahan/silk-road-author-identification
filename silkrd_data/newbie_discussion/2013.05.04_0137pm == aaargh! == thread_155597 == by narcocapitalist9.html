@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=155597.0" />
+		<title>Print Page - aaargh!</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: narcocapitalist9 on May 04, 2013, 01:37 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>aaargh!</strong><br />
+				Post by: <strong>narcocapitalist9</strong> on <strong>May 04, 2013, 01:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				My first post here... I actually have another account but I lost the password to it, which is very unfortunate because it is the same as my vendor name. Same, but without the 9 at the end. I asked about having it sorted out via message on SR but nothing came of that.<br /><br />I am watching the new posts and the most recent one has me very concerned. The list of alternate onion addresses, I have tried about 15 of them, none of them work. I used to read and post on the tor mailing list many years ago, and I distinctly remember a thread where me and several others were telling the devs that the network would never grow properly while there is no incentive to run nodes. Back then I was more concerned about exit nodes than non-exit nodes, because I wanted to use tor to not have my IP logged by websites I have no reason to trust. <br /><br />So, being that I now have more interest in hidden services, I am once again revisiting the subject of the inherent vulnerabilities in the tor network design. One thing that can help SR is if more people run non-exit relays. There is no need to run an exit relay if your intention is to help add to the network&#039;s capacity for accessing hidden services... Besides that, the bulk of traffic on tor is idiotic. Downloading multi-gigabyte movie files and DDoS attackers. Exit nodes help these idiots. Unfortunately simply expanding the amount of bandwidth available within tor does not entirely help, when it comes to hidden services. It does increase the number of potential rendezvous nodes, however. <br /><br />Something that might be an option is to distribute a piece of software that operates as a socks4a proxy or a web browser extension that maintains an updated database of alternate addresses, from a simple web service located on any of these given addresses. It only needs to grab one feed at any given time to update, and this would allow the website&#039;s tor gateway to have new hidden service addresses routinely added and old ones commented back out, on some kind of random basis. Once a 6 hop rendezvous circuit is opened, for a while at least a person will be able to use the site. <br /><br />It might help to add a background process to it that routinely updates the alternate address list as well as checking the connectivity of the nodes in the list and mark them as good or not, so when the connection times out, it switches to one it has determined is working, and so on. I don&#039;t know if there is any factor in connection keep-alive involved in this as well, as to helping connections stay up longer before the circuits are cycled. Web browsers are stateless connections using cookies to maintain sessions, and increasingly the consensus amongst server developers and operators is that short keep alive timeouts are better. I have been tinkering with both directions on keep-alive but I can&#039;t figure out what is the best because of the amount of time it takes to get a response out of SR lately. I am going to see what happens if I make my keep-alive timeout very long, like 5-10 minutes or even half an hour.<br /><br />Overall, I think the simplest software based solution is the constantly rotating alternate address thing done with a browser extension. One could strengthen this by requiring authentication to get the list, which would also help towards identifying the hacker and locking out their account. Then they would be slowed down and have to register again. Other options that I have thought of don&#039;t really pan out in a short timespan, such as a special fork of tor that has no exit function and a self-regulating bandwidth capacity system that ensures that nodes in this network reciprocate. I have even thought of a means to create an inter-node relay accounting system that uses signed unique voucher codes that you send with packets you want relayed, that your relay must accept and provide reciprocal relaying to other nodes. <br /><br />But these solutions are involved and would take 3-6 months to implement to a level of stability required. A script to add new onion addresses regularly and disable old ones, that requires a user login to access on the server side, and on the client side a browser extension that intercepts special addresses (eg, silkroad) and maintains an up to date list of these addresses. If you restricted the amount of addresses given out to any given users, you could use correlation to figure out which user accounts are responsible for the abuse also, narrowing down the number of users that can possibly know about any given new onion address. It would introduce some extra delay at times but would make SR a shifting target that is harder to pin down. As soon as a given onion address becomes an attack vector entry point, the administrators then flag it and it&#039;s deleted. A timing correlation between addresses given out and the closing of an address may also help narrow down the attacker&#039;s account name as well. Once the account is locked, the attacker has to make a new account, delaying them 5-15 minutes before they can resume their attack.<br /><br />anyway, first post in here. I hope some solution is sorted out soon because I am running out of money and I don&#039;t currently have a backup though I will be working on them once this idiotic period of endless public holidays where i live is over and I have some chance of rustling up some kind of business or a proper job. I am losing sales quite badly, and I am currently in partnership with a dropshipper who I am giving all of the sales proceeds to as I am trying to get to the 30 transaction count so I can get my 38 bitcoin security deposit back. I have been begging DPR to release it for me, because I basically have no other resources to invest in stock so I am stuck in a negative feedback loop with my expenses and bills racking up and no capital available for investment. but to no avail. even though I am now at 26 orders finalised and 3 more in escrow, possibly some of them would be finalised if the buyers were able to access the site. I had to cancel an order also, because of the combination of delays and some fumbling by my drop shipper led to a failure to deliver to this customer. I resisted cancelling the order because it was number 30, but I could not in good conscience and treating others the way I would like to be treated not refund the order. My rent goes into arrears in 5 weeks time, and I only have currently enough money to feed myself for another couple of weeks. <br /><br />Until SR finally defeats this attacker, my situation is only going to get worse. Fortunately I think I should be able to get my backup plan happening fairly quickly, I have got certain skills which are in fairly high demand (english language) so I should be ok, but it&#039;s really put a puncture in my tyres, this DDoS nonsense.<br /><br />Anyway, that&#039;s my 2 millibitcoins on the various subjects and my own story.<br /><br />oh, just a little note, it seems possibly that keep-alive may help. i have raised mine to 3600 seconds (1 hour) on both privoxy and in the about:config in firefox. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: aaargh!</strong><br />
+				Post by: <strong>NiyNay</strong> on <strong>May 04, 2013, 01:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				This is the most constructive criticism I&#039;ve read regarding this Dos fiasco....<br />I hope your post gets noticed in newbie jail.... 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: aaargh!</strong><br />
+				Post by: <strong>narcocapitalist9</strong> on <strong>May 04, 2013, 02:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Having no work to do as a vendor I&#039;ve got even more time on my hands than usual... Plus I have a lot of interest in cryptography and network security, as I said, I used to participate in the discussions on the tor mailing list. It would be like all my christmases and birthdays coming at once if the site were to be available again and I got another sale and I could get my bond deposit back finally. Cos not only would I have money to pay my rent, I could finally get to the next inventory item I was planning, some very high quality super pure DMT made from MHRB. I made an order for some a while back but the delivery was never dispatched or something and the vendor cancelled the order. In a way it&#039;s lucky because without that refund I would be completely penniless now, and having a kilo of MHRB and nowhere to sell the DMT, and nothing to eat, and no way to post it out due to no money, would be quite ironic. Gotta stay on the upside of things, I&#039;m not gonna let myself fall back into depression, something that I finally beat in 2004 thanks to something I figured out while on psilocybin.<br /><br />Oh, incidentally, I believe that part of the recent drop in bitcoin prices has been through reduced demand for coins for buyers intending to buy at silk road. no silk road, no point in buying the coins, you see what I mean? I don&#039;t know how many bitcoins a week go through SR but I imagine it&#039;s somewhere between 1000 and 10,000. Even 1000 bitcoins is a fairly big dent in the bitcoin price with the size of the market.<br /><br />Something else, related to tor, I have been digging around the torproject website, and found stats on numbers of nodes. It&#039;s rather disappointing to see that the numbers have only grown maybe by 50% since 6 years ago. This bears out my prediction that tor would not grow very fast. I think that SR vendors and some of the users, mainly people who read and post here, could maybe all pool resources together by everyone running a non-exit relay instead of just running a client, if they can. I am not absolutely certain of the numbers of non-exit relays but I think it&#039;s something like 3000, another 500 might actually help silk road function better. I have 15mbit of bandwidth that I can contribute (symmetric, my download is 3x that), which would carry a nontrivial fraction of SR traffic all by itself, and certainly would be a wide space to fill for a would-be DDoS attacker. It would be cool if there was some way that I could prefer traffic to hidden services but that&#039;s something that&#039;s intentionally not possible in the current design of tor.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: aaargh!</strong><br />
+				Post by: <strong>narcocapitalist9</strong> on <strong>May 04, 2013, 03:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				i see what you meant about getting lost in the spam. so much people just trying to get out of the newbie jail. oh well. i&#039;ve been a vendor for 3 months, i&#039;ll mostly post actually meaningful and hopefully interesting and insightful stuff here.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: aaargh!</strong><br />
+				Post by: <strong>narcocapitalist9</strong> on <strong>May 04, 2013, 03:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Pretty funny actually. I finally have a proper excuse to blather on endlessly, as is my wont. I am going to start to promote the idea of people who use SR setting up non-exit Tor relays to increase network capacity sharply and limit the attacker&#039;s ability to stop SR from being able to be accessed.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

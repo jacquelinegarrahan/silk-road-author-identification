@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=9254.0" />
+		<title>Print Page - Is Privnote secure?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Scot Walker on January 20, 2012, 02:53 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Is Privnote secure?</strong><br />
+				Post by: <strong>Scot Walker</strong> on <strong>January 20, 2012, 02:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				There&#039;s a seller that I want to buy from, but he only uses Privnote, no PGP. Is it safe to send an address using it?<br /><br />Thanks!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>AmberDing</strong> on <strong>January 20, 2012, 03:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				I had the same thought as you when first asked to use Privnote, so did some research. In brief my conclusion was that either the site is totally compromised and run by some federal organisation, or its pretty safe, depends whether I have my paranoia mode on full.<br /><br />The technology it uses is a reasonably secure concept - the url that is generated is in two parts, one is the actual address of the note, and the other is an encryption key. They say they dont store the urls themselves, so their servers only contain encrypted data with no keys to decode it.<br /><br />They also say that they dont record any IP addresses, so your notes should not be traceable back to you, which also means they shouldnt be able to prove that it was actually you who sent your address to some SR vendor rather than your malicious stalker looking to incriminate you.<br /><br />There is https://certified.privnote.com/ which is the &quot;Europrise&quot; certified version of Privnote, means it has the European Privacy Seal issued by an EU organisation. Again this won&#039;t reassure you if you have max paranoia since then you have to assume the feds have control of everything.<br /><br />Personally, I wouldnt use it for high risk/value business (if I did any) but I have used it for small SR purchases. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>doublemint</strong> on <strong>January 20, 2012, 03:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah, for what you&#039;re trying to do. I&#039;m sure if you put some top secret classified info there it could be found out. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>TravellingWithoutMoving</strong> on <strong>January 21, 2012, 01:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				&nbsp;Privnote.com is currently hosted at Rackspace Hosting.<br />&nbsp;The IP 174.143.172.154 links to a server in San Antonio, United States.<br />&nbsp;The company behind this all is Slicehost<br /><br />&nbsp;The privnote.com server is powered by Apache/2.2.14 (Ubuntu) webserver software<br />&nbsp;The developers of Privnote have built the app by using Django and Python<br /><br />- perhaps stick with gpg / pgp as already suggested.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>hows does privnote work?!</strong><br />
+				Post by: <strong>TravellingWithoutMoving</strong> on <strong>January 21, 2012, 02:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				So here&#039;s what happens when you create a note in Privnote:<br /><br />&nbsp; &nbsp; You write the note and click the POST button<br />&nbsp; &nbsp; The server generates a random note id, let&#039;s call it the NoteID. This is the 16 chars ID you see in the note link<br />&nbsp; &nbsp; The server hashes the note ID and gets a HashedNoteID = Hash(NoteID). We&#039;re currently using SHA-1 as the hashing algorithm, but the particular algorithm is not very important here<br />&nbsp; &nbsp; The server encrypts the note contents (and also the email and reference, if there is any) using the NoteID, and stores the encrypted version in the database using the HashedNoteID as the database primary key<br /><br />If someone with access to the database would like to read the note she would be unable because she doesn&#039;t have the key to decrypt it (NoteID), only the database primary key (HashedNoteID). The HashedNoteID cannot be used to &quot;go back&quot; to the NoteID because hashes are &quot;one-way&quot;. So the only person who can actually decrypt (and thus see) the note is the one who has the original NoteID or, in other words, the one who has the link to the note.<br /><br />For completeness, this is what happens when you view a note in Privnote:<br /><br />&nbsp; &nbsp; The server extracts the NoteID from the URL<br />&nbsp; &nbsp; The server hashes the NoteID and gets the HashedNoteID. This is the same HashedNoteID used when generating the note, since the NoteID used to make the hash is the same in both cases<br />&nbsp; &nbsp; The server retrieves the note from the database using HashedNoteID as the database primary key and decrypts its contents using NoteID as the encryption key<br />&nbsp; &nbsp; The server shows the page with the decrypted note<br />&nbsp; &nbsp; The server permanently deletes the note from the database, keeping only a record of the HashedNoteID, the time when it was read, and the IP address where it was read from, to show it when someone tries to see the note again<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>January 21, 2012, 10:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=9254.msg86055#msg86055">Quote from: funway on January 21, 2012, 09:43 am</a></div></div><blockquote class="bbc_standard_quote">Actually we don&#039;t know how privnote works, only how they claim that it works. It might just store everything unencrypted, or it might store the encryption keys for employees and law enforcement to use.<br /><br />We do know how PGP works. You can download the source code, inspect it, compile it, and even compare the compiled binaries to the ones that are being distributed to see if they differ.<br /><br />Privnote should be considered insecure for 2 reasons. The first, we can&#039;t prove that it is secure, so it is safer to assume that it is insecure. The second, it is insecure. I explained why in my last post. If you send a privnote link over the SR messaging system, SR can read the contents. So why not send the message over SR unencrypted in the first place?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This man knows what he is talking about (on this particular issue anyway...not sure about others)<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Can anyone explain to me what the purpose of sending someone a privnote link over SR messaging is supposed to accomplish security wise? How is it more secure than a normal unencrypted SR message?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It is not more secure, and is less secure<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Before someone says that the message can only be read once, proving that SR read it before the intended recipient, stop and think about it for a minute. SR could just read the message, create a new privnote with the same data, and then pass that along. The entire thing could be scripted. SR messaging sees a privnote link, reads the data, creates a new privnote, modifies the message and then sends it to the user it was intended for.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Classical man in the middle attack. To be fair SR could do the same thing during GPG key exchange and this is why measures against this must be taken. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">On the subject of PGP through SR, there is still the flaw that buyers get the PGP keys for sellers through SR. The best thing that could be done here is for SR to provide a daily or weekly archive of all of the seller PGP keys so that people could easily compare to see that they all have the same archive, and sellers could make sure that their actual key is the one in the archive.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yup yup 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>TrustusJones</strong> on <strong>February 26, 2012, 08:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I had a new buyer send me their privnote link as a way for me to get their address and I refused to accept it... am I being paranoid?<br /><br />Something that forces me to connect to an external URL so that I can obtain an address seems like a great way for L.E. to identify sellers...&nbsp; again am I being paranoid?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>jochem</strong> on <strong>February 26, 2012, 09:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				funway got it right. Great post!<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=9254.msg86076#msg86076">Quote from: kmfkewm on January 21, 2012, 10:34 am</a></div></div><blockquote class="bbc_standard_quote">Classical man in the middle attack. To be fair SR could do the same thing during GPG key exchange and this is why measures against this must be taken. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Imo not entirely true, since SR doesn&#039;t have the sellers private key. Although could decrypt the message and re-encrypt it with the actual public key... Hmmm. Anyhow, I&#039;ve never felt really comfortable about the way of exchanging keys (especially when a seller decides to change it somewhere along the way), what would be a good way to improve this?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>TheNewDude</strong> on <strong>February 26, 2012, 09:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				There&#039;s no reason to choose privnote over GPG.<br /><br />GPG is easy enough for young children to use. I don&#039;t understand the issues people have with it.&nbsp; :-\<br /><br />I would be a little nervous about dealing with a seller or buyer that didn&#039;t want to use gpg.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>Blaatz0r</strong> on <strong>February 26, 2012, 09:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				if opened over tor they will only see your useless tor ip. But i think its used by le for sellers who open up the link by accident in a other browser not using tor. (exposing your ip directly)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>February 26, 2012, 10:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=9254.msg127478#msg127478">Quote from: TheNewDude on February 26, 2012, 09:12 pm</a></div></div><blockquote class="bbc_standard_quote">There&#039;s no reason to choose privnote over GPG.<br /><br />GPG is easy enough for young children to use. I don&#039;t understand the issues people have with it.&nbsp; :-\<br /><br />I would be a little nervous about dealing with a seller or buyer that didn&#039;t want to use gpg.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Most people are idiots. Not because they are stupid per-se but rather because they automatically assume they are stupid so they don&#039;t even try. Also a lot of people are just stupid. Also a lot of people are lazy as hell. And also most people don&#039;t really care about security at all because they think they will never possibly be targeted because there is a bigger fish out there so who cares about lil ol them. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>radium1911</strong> on <strong>March 01, 2012, 05:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				A privnote can only be read once. If someone&#039;s note has already been read when the intended recipient opens it, they know that something&#039;s off.<br /><br />Other than that, don&#039;t assume privnote is secure. PGP is best.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 01, 2012, 06:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				privnote url can be mitmed and you will never realize that it was read <br /><br />gpg public key can also be mitmed though which is why it isn&#039;t a bad idea to send it through multiple channels or through a channel where the sender can verify it anonymously 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>radium1911</strong> on <strong>March 02, 2012, 08:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				yes - privnote can be mitmed. but pgp can&#039;t. if someone &quot;mitms&quot; your pgp public key, who cares? that&#039;s why it&#039;s public!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 02, 2012, 08:22 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=9254.msg134102#msg134102">Quote from: radium1911 on March 02, 2012, 08:15 am</a></div></div><blockquote class="bbc_standard_quote">yes - privnote can be mitmed. but pgp can&#039;t. if someone &quot;mitms&quot; your pgp public key, who cares? that&#039;s why it&#039;s public!<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />you should learn how a &quot;mitm&quot; (man in the middle) attack works before you make definitive claims about it<br /><br />let&#039;s say Alice and Bob communicate over safe-mail with GPG<br /><br />Alice sends Bob her public key. Safe-mail intercepts the e-mail and replace Alices public key with their own then send it on to Bob. Bob sends Alice his public key and safe-mail does the same thing. Now when Bob encrypts to Alice he is really encrypting to safe-mail, who then can decrypt the message and re-encrypt it (or a modified version of it) with Alices real public key before sending it to Alice. <br /><br />I really worry the most about instant messages and OTR. I think it would be very trivial for any of the instant message servers we use (or SILC server etc) to MITM OTR keys, and so few people use any authentication / verification methods that it would not likely be noticed. <br /><br />I have thought of putting out a few exit nodes that SSL strip connections to popular instant message servers and MITM OTR key transfers, just for shits and giggles. I bet I would be able to intercept a lot of communications that people thought were secure. But I am not an asshole so I wont :). 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>radium1911</strong> on <strong>March 02, 2012, 08:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yes, for quick communications involving newly generated keys, mitm is a significant threat.<br /><br />But in terms of SR, where vendors post their public key and keep them forever, mitm is pretty useless.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Is Privnote secure?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>March 02, 2012, 08:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				true which is why I said<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">gpg public key can also be mitmed though which is why it isn&#039;t a bad idea to send it through multiple channels or through a channel where the sender can verify it anonymously</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />if SR required you to login to see threads, it would be much more risky. Since you can anonymously verify your posted GPG key, it makes it much harder to MITM without being detected. If vendors and customers only transfer public keys via the PM system and not publicly posting them in a thread or profile, it would also be much more vulnerable to MITM attacks.<br /><br />&nbsp;It&#039;s also a good idea to verify fingerprint of OTR keys over multiple channels (different exit nodes, different servers) for the same reason....but hardly anyone does this. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

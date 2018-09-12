@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=160755.0" />
+		<title>Print Page - Crypto migration plan for hidden services</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: astor on May 17, 2013, 01:44 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 17, 2013, 01:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hidden services currently use 1024 bit RSA private keys for authentication. (An onion address is the base 32 encoded first 80 bits of the SHA1 hash of the public key that corresponds to the hidden service&#039;s 1024 bit RSA private key.) 768 bit keys can already be cracked by computer clusters in about 100 days, which is considered reasonable effort for some targets -- which probably includes SR. 1024 bit keys will be cracked in the next 5 years. So, the Tor Project needs to update the crypto mechanism to support larger identity keys (this will affect relays as well as hidden services, but it&#039;s more important for the latter).<br /><br />If the hidden service private key is updated, the onion address will change. This is an issue in our community with so many phishing sites and the general paranoia (mostly justified) about accessing the correct site. So you all should be aware that Silk Road&#039;s private key will have to be updated at some point, and the onion address will change. They&#039;re starting a discussion about this issue on the tor-dev mailing list. Here&#039;s the first email:<br /><br /><br />https://lists.torproject.org/pipermail/tor-dev/2013-May/004848.html<br /><br /><br />Greetings,<br /><br />I&#039;m supposed to write a Tor proposal for the migration of the<br />long-term identity keys of Hidden Services. When I began writing the<br />proposal, I realized that some of my choices might not be appreciated by<br />Hidden Service operators, and that starting a discussion thread might be a<br />good idea before writing the proposal.<br /><br />The problem with the current long-term HS identity keys is that they<br />are RSA-1024 keys which are considered weak, and they need to be<br />upgraded to a cryptosystem with higher security properties.<br /><br />One of the main issues with this operation, is whether Hidden Services<br />will be accessible using their *old* identity keys even after the<br />migration.<br /><br />That is, when we change the identity keys of a Hidden Service, its<br />onion also changes (since the onion is the truncated hash of its<br />public key). This will be quite problematic for Hidden Services that<br />have a well-established onion address.<br /><br />There are basically two ways to do this:<br /><br />a) After the transition, Hidden Services can be visited _only_ on<br />&nbsp; &nbsp;their _new_ onion addresses.<br /><br />&nbsp; &nbsp;This is quite brutal, but it&#039;s the most secure and unambiguous<br />&nbsp; &nbsp;option (might also be easier to implement and deploy).<br /><br />&nbsp; &nbsp;This change can be enforced both on the client-side, by rejecting<br />&nbsp; &nbsp;any old RSA-1024 HS keys, and on the server-side, by only<br />&nbsp; &nbsp;publishing the new keys in HS descriptors.<br /><br />&nbsp; &nbsp;To make the transition easier, we could prepare a tool that<br />&nbsp; &nbsp;generates a new identity keypair before the flag day, so that<br />&nbsp; &nbsp;Hidden Service operators can learn their future onion address<br />&nbsp; &nbsp;beforehand and announce it to their users.<br /><br />b) After the transition, Hidden Services can use both old and new<br />&nbsp; &nbsp;onion addresses.<br /><br />&nbsp; &nbsp;This might result in a more harmonious transition, where Hidden<br />&nbsp; &nbsp;Services advertise their new onion address to users that visit<br />&nbsp; &nbsp;them in their old address.<br /><br />&nbsp; &nbsp;.oO(It would also be interesting to do a redirection on the Tor<br />&nbsp; &nbsp;protocol layer (&quot;I got this descriptor by querying for the old<br />&nbsp; &nbsp;onion address, but it also contains a new onion address. I should<br />&nbsp; &nbsp;probably use the new one.&quot;), but I don&#039;t think it&#039;s possible to<br />&nbsp; &nbsp;redirect the user without knowledge of the application-layer<br />&nbsp; &nbsp;protocol (e.g. 302 for HTTP). Still, a Tor log message might be<br />&nbsp; &nbsp;helpful.)<br /><br />&nbsp; &nbsp;The cons of this approach is that supporting both addresses might<br />&nbsp; &nbsp;make the HS protocol more complicated and painful to implement, and<br />&nbsp; &nbsp;it might also result in some Hidden Services never moving to the<br />&nbsp; &nbsp;new onion addresses since clients can still visit them using the<br />&nbsp; &nbsp;old insecure ones.<br /><br />&nbsp; &nbsp;This approach has a stricter variant, where the old addresses can<br />&nbsp; &nbsp;only be used during a transitionary period (a few months?). After<br />&nbsp; &nbsp;that, clients _have_ to use the new addresses. Of course, this<br />&nbsp; &nbsp;means that we will have to do two flag days, coordinate Tor<br />&nbsp; &nbsp;releases, and other no fun stuff.<br /><br />I&#039;m probably moving towards the latter option because the former will<br />make many people unhappy.<br /><br />Thoughts?<br /><br />(This is not a thread to select the cryptosystem we are going to<br />use. It will derail the discussion, and we might also need to select a<br />specific type of cryptosystem in the end (e.g. a discrete-log-based<br />system) so that schemes like<br />https://trac.torproject.org/projects/tor/ticket/8106<br />can be possible.).<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 17, 2013, 03:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=160755.msg1137720#msg1137720">Quote from: StExo on May 17, 2013, 03:03 pm</a></div></div><blockquote class="bbc_standard_quote">Great info Astor, but as I&#039;m not a technical person in this side of technology (I know only what I need to really with a bit around the sides), doubling the key strength to 2048 wouldn&#039;t give double the time it can be used would it as technological capability grows at an exponentially faster rate?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You&#039;re not doubling the key space. You&#039;re increasing it by 2^1024. A 1025 bit key is twice as big as a 1024 bit key.&nbsp; <br /><br />For symmetric encryption, it would increase the time that it takes to brute the key by a factor of 2^1024, or around 10^308, not accounting for Moore&#039;s Law. We had a discussion about key strengths a few months ago, and what I learned is that asymmetric encryption, which includes RSA and other schemes used by public key crypto protocols (including PGP), differs in that the key space is the number of primes within some range of numbers, which of course is much smaller than the total range of numbers. That&#039;s why 128 bit AES symmetric keys are stronger than 1024 bit RSA asymmetric keys, and won&#039;t be cracked until long after 1024 bit RSA keys are cracked.<br /><br />So for Tor&#039;s public key authentication mechanism, it won&#039;t increase the brute forcing time by 10^308, but it will future proof the keys for many decades.<br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=160755.msg1137720#msg1137720">Quote from: StExo on May 17, 2013, 03:03 pm</a></div></div><blockquote class="bbc_standard_quote">So what would a drastic step&nbsp; in key strength mean for the Tor network? Would it increase loads, slow things down etc? Just want to get some clear answers on this if anyone can help :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It will increase CPU usage on the relays, and that seems to be the bottleneck on the network right now (not bandwidth). I&#039;m not sure if that increase will result in a noticeable slow down of the network.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>modziw</strong> on <strong>May 17, 2013, 05:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				No question about it. This is like Microsoft trying to make everything backward compatible -- you end up with bloatware.<br /><br />Look at the number of users, there are VERY few on the darkweb. We can migrate. <br /><br />Make it robust, secure, fast and safe. Eeryone will migrate to the newer, better darkweb. Death to 1o24, ong live NSA resistant distributed darkweb. <br /><br />I hereby pronounce and proclaim the new WWW as DDD Distributed Deep Darkweb!<br /><br />MAKE IT SO.<br /><br />Modzi
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 17, 2013, 09:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				They should have made the system support a range of key sizes to begin with. At least they are going to do that now, so you will be able to use keys up to 4096 bits, I believe.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>PerPETualMOtion</strong> on <strong>May 17, 2013, 11:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The onion is blooming.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 18, 2013, 12:12 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=160755.msg1138884#msg1138884">Quote from: StExo on May 17, 2013, 10:36 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;m not even sure what such a low key strength would be used to begin with. My PGP key strength is 4096 bits and I use it because I know it is much more future-proof. Why settle for something less secure?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />1024 bits was pretty strong 10 years ago when they wrote the initial code. :)<br /><br />Since then they&#039;ve been delaying the inevitable because 1024 bits was &quot;good enough&quot; and existing hidden services would be screwed. Now it&#039;s getting dangerously close to not being good enough anymore.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=160755.msg1137828#msg1137828">Quote from: StExo on May 17, 2013, 03:44 pm</a></div></div><blockquote class="bbc_standard_quote">For future-proofing SilkRoad into the decades, we must also consider the threat of Quantum computing. Has any proper analysis been done to what kind of threat this could pose, I guess not only to SilkRoad but many other internet protocols? <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Sure, it&#039;s well known that RSA is weak to quantum computing. <br /><br />The good news is that people are already working on algorithms that are resistant to it:<br /><br />https://en.wikipedia.org/wiki/Post-quantum_cryptography<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 19, 2013, 12:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				Found some great info on the difference between RSA and AES, straight from RSA Laboratories.<br /><br />https://www.rsa.com/rsalabs/node.asp?id=2004<br /><br />It&#039;s a long article and well worth a read. Here&#039;s a table of how RSA keys compare to symmetric keys like AES, and the approximate year when they are expected to become unsafe:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">1024 RSA&nbsp; &nbsp; 80 sym&nbsp; &nbsp; &nbsp; by 2010<br />2048 RSA&nbsp; &nbsp; 112 sym&nbsp; &nbsp; &nbsp;by 2030<br />3072 RSA&nbsp; &nbsp; 128 sym&nbsp; &nbsp; &nbsp;beyond 2030<br /></code><br />So in 2003, when the article was written, they thought 1024 bit RSA keys would have been cracked by now. Apparently, computational power hasn&#039;t increased as much as they expected, but it&#039;s about time to upgrade Tor&#039;s crypto now. 2048 bit keys will be safe for another 20 years, and if you use a 4096 bit PGP key like me, you should be good for the rest of your life.<br /><br />Along with the private key size increase, onion domains may become longer. This is pretty much inevitable to prevent brute forcing. For example, taking the first 120 bits of the SHA1 hash and base32 encoding that, you&#039;d get a 24 character onion address instead of the current 16 characters.<br /><br />So if Silk Road updates to the new system, their address would look more like:&nbsp; silkroadvb5piz3rugc6xecq.onion&nbsp; :)<br /><br />Phishing sites are going to have a field day.<br /><br /><br />Also, someone on the mailing list offered petnames as a third option in the migration plan:<br /><br />============<br /><br />I think you were heading in the right direction with the petname idea.<br />What if we deployed a potentially shitty naming layer that &quot;probably&quot;<br />won&#039;t break within the next 6-12 months, but *might* last quite a bit<br />longer than that, for backward compatibility purposes.<br /><br />This naming layer could allow interested parties to sign registration<br />statements using their current onion key with an expiration time,<br />satisfying our deprecation desires for the 80 bit name. If the naming<br />layer actually survives without visible compromise until that point, we<br />could allow it to store signed statements about translations between the<br />new keys and their desired name (first-come, first-serve; names are<br />reserved for N months until resigned).<br /><br />A more specific version of this question is: How readily could we hack<br />Namecoin or some other similar consensus-based naming system[1] into<br />Tor?<br /><br />Such a mechanism would obviously provide enumeratability for hidden<br />services that chose to use it, but hopefully it would be optional: you<br />can still use IP addresses in browsers, after all.<br /><br /><br />In terms of verification, it would be trivial to alter the browser UI to<br />display the actual key behind the hidden service (ie: through a control<br />port lookup command and some kind of URL icon that varied depending on<br />consensus naming status).<br /><br />We could also provide a hacked version of CertPatrol that monitors the<br />underlying public keys for you, and it would also be relatively easy to<br />add a &quot;second-look&quot; authentication layer through the HTTPS-Everywhere<br />SSL Observatory, similar to what exists now for SSL public keys.<br /><br />In fact, if we can agree on a solid consensus-based naming scheme as a<br />valid transition step, I think it is worth my time to let the rest of<br />the browser burn while I implement some kind of backup authentication +<br />UI for this. After all, memorable hidden service naming would be a<br />usability improvement.<br /><br /><br />Should we try it? <br /><br />The major downside I am seeing is PR fallout from the hidden services<br />that chose to use it.. They might be a unrepresentative subset of what<br />actually people need hidden services for. I think the real win for<br />hidden services is that we can turn them into arbitrary private<br />communication endpoints, to allow people to communicate in ways that do<br />not reveal their message contents *or* their social network. There<br />probably are other uses whose promise would be lost in the noise<br />generated from this scheme as well...<br /><br /><br /><br />1. https://en.wikipedia.org/wiki/Namecoin.<br /><br />We don&#039;t have to choose Namecoin, though. Another alternative is for the<br />dirauths to add a URI for an &quot;official&quot; naming directory file as a<br />parameter in the consensus consensus, and also provide its SHA256/SHA-3.<br />A flatfile might be less efficient than Namecoin in terms of storage and<br />bandwidth requirements, though. It&#039;s probably also easier to censor<br />(unless it is something like a magnet link).<br /><br />For all you Zooko&#039;s Triangle[2] fans: The Namecoin mechanism attempts to<br />&quot;square&quot; the triangle with a first-come first-serve distributed<br />consensus on the pet names document, but still fall back to<br />&quot;Secure+Global&quot; at the expense of &quot;Memorable&quot;. The interesting bit is<br />that in this case, the browser UI can help you on the &quot;Memorable&quot; end,<br />should the consensus mechanism fail behind your back.<br /><br />2. https://en.wikipedia.org/wiki/Zooko%27s_triangle<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>May 19, 2013, 08:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">You&#039;re not doubling the key space. You&#039;re increasing it by 2^1024. A 1025 bit key is twice as big as a 1024 bit key.&nbsp; <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That is true for symmetric encryption, but not for asymmetric encryption. If I recall correctly, for RSA based asymmetric encryption you are increasing the key space from the number of 1,023 bit prime numbers to the number of 1,024 bit prime numbers. For symmetric encryption you increase the key space from the number of 1,024 bit numbers to the number of 1,025 bit numbers.<br /><br />What they should really do is switch to ECC. Much faster than RSA, much smaller keys, superior properties over all. RSA is kind of outdated these days. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>PerPETualMOtion</strong> on <strong>May 20, 2013, 05:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Everyone here is learning the patience required for security: hours/wk reading times, TOR, encryption, etc.<br /><br />I would be happy to let my computer to go through encryption protocols to ensure 3000+ bit encryption. On a non-quantum PC, a quantum patience is mandatory.<br /><br />If the U.S. government is truly storing all communications, then we should invest in a 30 year encryption plan--where we estimate the encryption needs on its current rate of development and commit to intensive cryptographic techniques...<br /><br />Stay Ahead of the Curve
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>loniax</strong> on <strong>May 20, 2013, 09:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				What slow ass loading compared to security
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>SelfSovereignty</strong> on <strong>May 20, 2013, 10:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=160755.msg1137801#msg1137801">Quote from: astor on May 17, 2013, 03:30 pm</a></div></div><blockquote class="bbc_standard_quote">It will increase CPU usage on the relays, and that seems to be the bottleneck on the network right now (not bandwidth). I&#039;m not sure if that increase will result in a noticeable slow down of the network.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I imagine it will.<br /><br />P.S. - subbing :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>whorledpeas</strong> on <strong>May 21, 2013, 08:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				sorry- just want to be able to find this later
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>quixotist</strong> on <strong>May 21, 2013, 10:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=160755.msg1137801#msg1137801">Quote from: astor on May 17, 2013, 03:30 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=160755.msg1137720#msg1137720">Quote from: StExo on May 17, 2013, 03:03 pm</a></div></div><blockquote class="bbc_alternate_quote">So what would a drastic step&nbsp; in key strength mean for the Tor network? Would it increase loads, slow things down etc? Just want to get some clear answers on this if anyone can help :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It will increase CPU usage on the relays, and that seems to be the bottleneck on the network right now (not bandwidth). I&#039;m not sure if that increase will result in a noticeable slow down of the network.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Really? Has anyone tried offloading this work to GPU using Cuda or similar? That would be quite an interesting project.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>astor</strong> on <strong>May 21, 2013, 10:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Some relays are already using AES-NI, which should be even more efficient, since it&#039;s specifically designed for crypto operations. Crypto still seems to be the bottle neck.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Crypto migration plan for hidden services</strong><br />
+				Post by: <strong>PerPETualMOtion</strong> on <strong>June 09, 2013, 01:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				From time to time, I use AES to encrypt my communications. It is a four step process, where I use 3 public keys provided by the recipient.<br /><br />1. Encrypt message with public key #1.<br />2. Encrypt encrypted message with public key #2.<br />3. Encrypt doubly encrypted message with public key #3.<br />4. Send.<br /><br />If the recipient has pissed me off, then I will not use the encryption in that order: 1-3-2 or 3-2-1 or something.<br /><br />Furthermore, it is also wise for millionaire BTC holders to invest in hardware that utilizes encryption independent of the computer in order to eliminate software insecurities, such as OS or firewall SNAFUs.<br /><br />Privacy is NEVER A WOFTAM.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

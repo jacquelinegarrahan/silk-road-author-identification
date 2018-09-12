@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=163575.0" />
+		<title>Print Page - Questions for knowledgeable PGP users</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: lsdizzle on May 24, 2013, 08:02 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Questions for knowledgeable PGP users</strong><br />
+				Post by: <strong>lsdizzle</strong> on <strong>May 24, 2013, 08:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If the way SR and TOR is set up allows people to intercept the messages without being able to discover the origin or destination, then PGP is only useful for encrypting messages whose contents are intelligible on their own. Wouldn&#039;t splitting a message into three parts have much the same effect?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Questions for knowledgeable PGP users</strong><br />
+				Post by: <strong>saintgabriels</strong> on <strong>May 24, 2013, 08:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m not quite sure what you mean...<br />PGP is used so that when you encrypt a message with another person&#039;s public key, they are the only ones who can decrypt it-they use their private key to do so.<br />So I&#039;m not exactly sure what you mean by &quot;Wouldn&#039;t splitting a message into three parts have much the same effect?&quot; I assume if you encrypted a message, then took that message and sent it in 3 different parts, the recipient would have to compile each part into one in order to decrypt the message which just seems like a ridiculous process....<br />Is that what you&#039;re asking?<br />I apologize, I&#039;m a bit confused.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Questions for knowledgeable PGP users</strong><br />
+				Post by: <strong>lsdizzle</strong> on <strong>May 24, 2013, 09:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I may have phrased it confusingly. What I meant was that the point of encrypting messages is so that whomever may be able to intercept them will not be able to decipher them without knowing the public key of the sender. Since intercepting messages on SR would leave the interceptor unaware of the sender&#039;s identity as well as the receiver&#039;s identity, if the message (like an address) were to be split up over 3 messages instead of being sent as one, then that would make the message indecipherable, as they couldn&#039;t connect the consecutive messages with each other. The obvious exception being self-contained ideas being contained in each message. But only writing partial sentences before starting a new message in the same chain could be its own form of encryption because it would be quite difficult to parse them back together. And if used in conjunction with PGP, by sending it in three parts, that would be even better.<br /><br />After all, if LE had access to your account, for example, under some RIPA bullshit, they&#039;d probably already know your public key, because you have to share it with other people for it to have a purpose. So obviously, PGP is aimed at external security threats.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Questions for knowledgeable PGP users</strong><br />
+				Post by: <strong>tree</strong> on <strong>May 24, 2013, 09:26 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I think you don&#039;t exactly understand the mechanism behind PGP.. If you needed the public key to decrypt a PGP encrypted message it wouldn&#039;t be secure at all! PGP works by encrypting your message with the public key, and decrypting it with a private key, both keys being completely different. <br />Also, you can know the origin of the messages, key IDs are usually in the messages unless you write &quot;throw-heyids&quot; in gpg.conf (open it with notepad). Check Pine&#039;s thread on how to use PGP anonymously for more accurate info!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Questions for knowledgeable PGP users</strong><br />
+				Post by: <strong>DoctorFate</strong> on <strong>May 24, 2013, 09:26 pm</strong>
+			</dt>
+			<dd class="postbody">
+				very confusing op and response...are you trying to suggest a better method than pgp or what?<br /><br />I thought PGP was so your not sending your address around in plain text, I am new and the first to say I may be wrong but I always imagined 2 scenarios where pgp would be crucial.&nbsp; <br /><br />You place and order, encrypt your address and send it to the vendor.&nbsp; <br /><br />Scenario 1, if by chance someone can intercept the order you place, like if you or the vendor were using an onion.to address (not suppose too) then someone may be able to intercept what you send.&nbsp; So if you&#039;ve encrypted your address then its safe.<br /><br />Scenario 2, If someone gets access to the vendors account (LE, phishing, rogue SR admin?) before the order is placed in transit, then they can see your order and your address so if its encrypted then your is address safe.<br /><br />Now if key loggers are involved or your computer is compromised in way that lets the attacker see everything, record everything then I imagine even with pgp or not, everyone is screwed.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

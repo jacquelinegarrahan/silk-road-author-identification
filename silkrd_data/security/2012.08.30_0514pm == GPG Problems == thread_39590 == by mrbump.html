@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=39590.0" />
+		<title>Print Page - GPG Problems</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: mrbump on August 30, 2012, 05:14 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>GPG Problems</strong><br />
+				Post by: <strong>mrbump</strong> on <strong>August 30, 2012, 05:14 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hi<br /><br />&#039;m hoping someone can help with some problems I&#039;m having sending a GPG message to another SR user. I have tried encrypting my message with 2 different versions of GPG but the recipient can&#039;t derypt it.<br /><br />The recipient is using Version: GnuPG/MacGPG2 v2.0.19 (Darwin)<br /><br />I normally use tails linux and have tried twice encrypting and sending a message using Version: GnuPG v1.4.10 (GNU/Linux). I encrypt to my own public key and the recipients public key. The recipient gets an error stating &quot;no public key when decrypting&quot;. I never sent the recipient MY public key as I don&#039;t think they need it to decrypt messages that have been encrypted using their public key - am I right?<br /><br />As I had trouble with the above I also tried encrypting the same message to both public keys using Version: GnuPG v2.0.17 (MingW32). The recipient still cannot decrypt but gets a different error message stating &quot;no secret key&quot;. This time I did send my public key and it was successfully imported. <br /><br />I&#039;m completely confused as people don&#039;t normally have trouble decrypting messages from me and the recipient doesn&#039;t normally have problems either. Has anyone got any idea what&#039;s going wrong and how we can fix it? <br /><br />I&#039;d be very grateful for any input.<br /><br />Cheers<br />mrbump
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG Problems</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>August 30, 2012, 07:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=39590.msg440669#msg440669">Quote from: mrbump on August 30, 2012, 05:14 pm</a></div></div><blockquote class="bbc_standard_quote">Hi<br /><br />&#039;m hoping someone can help with some problems I&#039;m having sending a GPG message to another SR user. I have tried encrypting my message with 2 different versions of GPG but the recipient can&#039;t derypt it.<br /><br />The recipient is using Version: GnuPG/MacGPG2 v2.0.19 (Darwin)<br /><br />I normally use tails linux and have tried twice encrypting and sending a message using Version: GnuPG v1.4.10 (GNU/Linux). I encrypt to my own public key and the recipients public key. The recipient gets an error stating &quot;no public key when decrypting&quot;. I never sent the recipient MY public key as I don&#039;t think they need it to decrypt messages that have been encrypted using their public key - am I right?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes, as long as the message is encrypted to their key they should be able to decrypt it.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=39590.msg440669#msg440669">Quote from: mrbump on August 30, 2012, 05:14 pm</a></div></div><blockquote class="bbc_standard_quote">As I had trouble with the above I also tried encrypting the same message to both public keys using Version: GnuPG v2.0.17 (MingW32). The recipient still cannot decrypt but gets a different error message stating &quot;no secret key&quot;. This time I did send my public key and it was successfully imported. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The &quot;no secret key&quot; error means it was not encrypted to their public key.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=39590.msg440669#msg440669">Quote from: mrbump on August 30, 2012, 05:14 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;m completely confused as people don&#039;t normally have trouble decrypting messages from me and the recipient doesn&#039;t normally have problems either. Has anyone got any idea what&#039;s going wrong and how we can fix it? <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Grab my key from one of the links in my sig and encrypt a message to me in the same way as you did for them and I&#039;ll have a look.&nbsp; Either PM it to me or post it here, it doesn&#039;t really matter which.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG Problems</strong><br />
+				Post by: <strong>mrbump</strong> on <strong>September 01, 2012, 11:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for your advice Louis. The recipient managed to sort it and can now decrypt my messages.<br /><br />Cheers
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG Problems</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>September 01, 2012, 11:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=39590.msg443855#msg443855">Quote from: mrbump on September 01, 2012, 11:28 am</a></div></div><blockquote class="bbc_standard_quote">Thanks for your advice Louis. The recipient managed to sort it and can now decrypt my messages.<br /><br />Cheers<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Cool.<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

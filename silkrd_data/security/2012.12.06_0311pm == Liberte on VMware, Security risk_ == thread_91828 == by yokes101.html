@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=91828.0" />
+		<title>Print Page - Liberte on VMware, Security risk?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: yokes101 on December 06, 2012, 03:11 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Liberte on VMware, Security risk?</strong><br />
+				Post by: <strong>yokes101</strong> on <strong>December 06, 2012, 03:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				For while now I have been logging on to the road with very poor security.<br />So I decided to to do some thing about that. I zero-filled my hard drive and did a full disk encryption.<br /><br />Then I installed VMware to run Liberte (as I find running it on a USB very inconvenient) but now i&#039;m getting a warning when I boot Liberte.<br />It&#039;s some thing like &quot;warning non-native environment&quot;. Can anyone tell me what that means?<br />Is it a big deal or what?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte on VMware, Security risk?</strong><br />
+				Post by: <strong>Just Chipper</strong> on <strong>December 06, 2012, 07:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It&#039;s simply stating that this OS was never tested in a virtual environment. AKA use at your own risk. I noticed that I receive more timeouts and network hiccups when running liberte or tails as VM vs CD or USB. Other than that everything works fine IME. Also I would highly reccomend NOT using persistence if you&#039;re using a VM as your data will be viewable from the host OS. Also not sure if you&#039;re aware but you can boot your VM FROM usb within the host OS, rather than using an OVA or ISO file to boot from. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte on VMware, Security risk?</strong><br />
+				Post by: <strong>yokes101</strong> on <strong>December 06, 2012, 08:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=91828.msg646499#msg646499">Quote from: Just Chipper on December 06, 2012, 07:31 pm</a></div></div><blockquote class="bbc_standard_quote">It&#039;s simply stating that this OS was never tested in a virtual environment. AKA use at your own risk. I noticed that I receive more timeouts and network hiccups when running liberte or tails as VM vs CD or USB. Other than that everything works fine IME. Also I would highly reccomend NOT using persistence if you&#039;re using a VM as your data will be viewable from the host OS. Also not sure if you&#039;re aware but you can boot your VM FROM usb within the host OS, rather than using an OVA or ISO file to boot from.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />God the last thing I want is more timeouts and network errors!<br /><br />Surely it&#039;s ok if the VM data is viewable from the host OS if the host OS is on an encrypted disk?<br />I will look into booting VM from usb within the host OS, That sounds like the best option to me.<br /><br />Thanks for the info.&nbsp; :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte on VMware, Security risk?</strong><br />
+				Post by: <strong>Just Chipper</strong> on <strong>December 07, 2012, 03:11 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=91828.msg646536#msg646536">Quote from: yokes101 on December 06, 2012, 08:06 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=91828.msg646499#msg646499">Quote from: Just Chipper on December 06, 2012, 07:31 pm</a></div></div><blockquote class="bbc_alternate_quote">It&#039;s simply stating that this OS was never tested in a virtual environment. AKA use at your own risk. I noticed that I receive more timeouts and network hiccups when running liberte or tails as VM vs CD or USB. Other than that everything works fine IME. Also I would highly reccomend NOT using persistence if you&#039;re using a VM as your data will be viewable from the host OS. Also not sure if you&#039;re aware but you can boot your VM FROM usb within the host OS, rather than using an OVA or ISO file to boot from.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />God the last thing I want is more timeouts and network errors!<br /><br />Surely it&#039;s ok if the VM data is viewable from the host OS if the host OS is on an encrypted disk?<br />I will look into booting VM from usb within the host OS, That sounds like the best option to me.<br /><br />Thanks for the info.&nbsp; :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well if it&#039;s turned off it is. My concern is my host OS being compromised and snooping my guest OS traffic while online. For this reason I run all network apps from host OS through sandbox. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte on VMware, Security risk?</strong><br />
+				Post by: <strong>yokes101</strong> on <strong>December 07, 2012, 07:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=91828.msg648170#msg648170">Quote from: Just Chipper on December 07, 2012, 03:11 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=91828.msg646536#msg646536">Quote from: yokes101 on December 06, 2012, 08:06 pm</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=91828.msg646499#msg646499">Quote from: Just Chipper on December 06, 2012, 07:31 pm</a></div></div><blockquote class="bbc_standard_quote">It&#039;s simply stating that this OS was never tested in a virtual environment. AKA use at your own risk. I noticed that I receive more timeouts and network hiccups when running liberte or tails as VM vs CD or USB. Other than that everything works fine IME. Also I would highly reccomend NOT using persistence if you&#039;re using a VM as your data will be viewable from the host OS. Also not sure if you&#039;re aware but you can boot your VM FROM usb within the host OS, rather than using an OVA or ISO file to boot from.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />God the last thing I want is more timeouts and network errors!<br /><br />Surely it&#039;s ok if the VM data is viewable from the host OS if the host OS is on an encrypted disk?<br />I will look into booting VM from usb within the host OS, That sounds like the best option to me.<br /><br />Thanks for the info.&nbsp; :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well if it&#039;s turned off it is. My concern is my host OS being compromised and snooping my guest OS traffic while online. For this reason I run all network apps from host OS through sandbox.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Sandbox? Sorry im new to this your going to have to bear with me.<br /><br />I looked into booting an OS from USB into a VM, All I could find was a program called &quot;Plop Boot&quot; and im still trying to get it working.<br />If you have any more info on the that topic I would appreciate it.&nbsp; :)<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte on VMware, Security risk?</strong><br />
+				Post by: <strong>Just Chipper</strong> on <strong>December 07, 2012, 07:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=91828.msg648504#msg648504">Quote from: yokes101 on December 07, 2012, 07:17 pm</a></div></div><blockquote class="bbc_standard_quote">Sandbox? Sorry im new to this your going to have to bear with me.<br /><br />I looked into booting an OS from USB into a VM, All I could find was a program called &quot;Plop Boot&quot; and im still trying to get it working.<br />If you have any more info on the that topic I would appreciate it.&nbsp; :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />A Sandbox is a space on your harddrive that you write to instead of the OS. Therefore if the app in the sandbox gets infected, you simply format the sandbox. I personally use sandboxie on my host. But it&#039;s a windows only application. There are plenty for Mac and Linux though if you search around. Also on the USB plop does work, but is a huge pain in the ass as it only uses usb1.0(slow) instead of 2.0. Lookup pendrivelinux, they have a walkthrough on how to boot from USB. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte on VMware, Security risk?</strong><br />
+				Post by: <strong>SRtester</strong> on <strong>December 08, 2012, 12:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				I boot a persistent Liberte USB stick on Windows OS in VMware player using the &quot;Plop&quot; bootloader as mentioned above. Yes it states &quot;Warning: non-native environment (vmware)&quot;. I&#039;ve never thought of this as a security risk, in fact booting from USB into a VM is inherently more secure than say, the Tor browser bundle. The USB stick is encrypted too, of course.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte on VMware, Security risk?</strong><br />
+				Post by: <strong>jonnyboy91</strong> on <strong>June 13, 2013, 12:09 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hey everyone quick question from this. I&#039;m running vmware in win7 and have my liberte linux installed and setup on a usb. i&#039;ve been booting from usb fine and then using ethernet connection because my wireless adapter won&#039;t work. But now running vmware and plop bootloader ive loaded up my liberte from usb using vmware fine and am bridging the connection from the host using the wireless adapter and then it shows up as wired connection inside liberte. Is there any settings i need to check or uncheck in vmware or my computer to be secure?<br /><br />thanks
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte on VMware, Security risk?</strong><br />
+				Post by: <strong>abitpeckish</strong> on <strong>June 13, 2013, 02:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Running things on a hypervisor is fine, so long as you trust the hypervisor and its administrator(s). 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte on VMware, Security risk?</strong><br />
+				Post by: <strong>Just Chipper</strong> on <strong>June 13, 2013, 03:56 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=91828.msg1229861#msg1229861">Quote from: jonnyboy91 on June 13, 2013, 12:09 am</a></div></div><blockquote class="bbc_standard_quote">Hey everyone quick question from this. I&#039;m running vmware in win7 and have my liberte linux installed and setup on a usb. i&#039;ve been booting from usb fine and then using ethernet connection because my wireless adapter won&#039;t work. But now running vmware and plop bootloader ive loaded up my liberte from usb using vmware fine and am bridging the connection from the host using the wireless adapter and then it shows up as wired connection inside liberte. Is there any settings i need to check or uncheck in vmware or my computer to be secure?<br /><br />thanks<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Please do not bridge the connection as this is inherently less secure. This gives Liberte an IP on your LAN rather than using the one your host has. I would recommend NATing Liberte and using the wireless on the host if this is your preference. <br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=91828.msg1232622#msg1232622">Quote from: abitpeckish on June 13, 2013, 02:23 pm</a></div></div><blockquote class="bbc_standard_quote">Running things on a hypervisor is fine, so long as you trust the hypervisor and its administrator(s). <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The hypervisor isn&#039;t the issue. The host OS being compromised is. If you use a GUI on the host (as I assume most do) then an attacker can view every app accessing the GUI as there is no GUI level isolation. This means if you are using Firefox on the host and someone compromises it, they can view all your apps running in the GUI including your VM. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=191928.0" />
+		<title>Print Page - how safe is it to upload a public key to the GnuPG key server?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: abby on July 27, 2013, 11:17 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>how safe is it to upload a public key to the GnuPG key server?</strong><br />
+				Post by: <strong>abby</strong> on <strong>July 27, 2013, 11:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				I was having a closer look at gpg4win the other day and started looking at the key server.&nbsp; It appears that only the public key part is loaded and can be retrieved and retrieval is beautifully quick and easy compared to creating a text file and loading it.<br /><br />Which got me thinking about its use for vendors here.&nbsp; If vendors loaded their key and gave their key ID on their vendor page, it might make people use encryption more because it is so easy to get the key.&nbsp; <br /><br />but what are the risks to loading it? I can&#039;t find anything on what data the server stores so I don&#039;t know if doing it would expose anything.&nbsp; I would assume that they don&#039;t store anything more than the key details because of the known users (dissidents etc) but I just don&#039;t know.<br /><br />Also, I keep finding conflicting information about the individual key servers that are around.&nbsp; I read that they share their keys, so it doesn&#039;t matter which pgp vendor is used, anyone can access it but then I also read that they stay on the individual vendors server..&nbsp; Does anyone know which is right?&nbsp; If they are shared then it doesn&#039;t matter what flavour of pgp you use as you should be able to access the key.<br /><br />If there is no risk and keys are shared it may be another way to encourage people to use encryption.&nbsp; I know I&#039;d certainly look more favourably on a new-to-me vendor who had a key ID rather than having to jig around with the text file.<br /><br />So, does anyone know the answer to my questions?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: how safe is it to upload a public key to the GnuPG key server?</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 27, 2013, 01:24 pm</strong>
+			</dt>
+			<dd class="postbody">
+				The risk is that key servers log IP addresses, like 99.9% servers on the inernet. So if you are a vendor and you upload your key over clearnet and tell everyone to get your key from that key server, then LE can go to the server operators and ask which IP that specific request came from. Even if the vendor used a proxy, LE could enumerate some of his buyers by looking at which IPs have been retrieving the key.<br /><br />You can configure some PGP clients to use proxies. In fact, you can configure them to connect over Tor if you use an HTTP proxy to forward to Tor&#039;s SOCKS port, but there&#039;s way too much risk of fucking up for the average person to do that.<br /><br />You should do not use key servers for any SR related activity. Vendors should never use key servers, and therefore buyers have no reason to use them, as they shouldn&#039;t.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: how safe is it to upload a public key to the GnuPG key server?</strong><br />
+				Post by: <strong>mcguire39</strong> on <strong>July 27, 2013, 01:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It does seem risky. I can&#039;t see it making it easier really, because you&#039;d have to copy and paste the keyid anyway, so why not just copy the vendor&#039;s key and &#039;import from clipboard&#039; in GPG4USB?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: how safe is it to upload a public key to the GnuPG key server?</strong><br />
+				Post by: <strong>abby</strong> on <strong>July 27, 2013, 01:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=191928.msg1383411#msg1383411">Quote from: astor on July 27, 2013, 01:24 pm</a></div></div><blockquote class="bbc_standard_quote">The risk is that key servers log IP addresses, like 99.9% servers on the inernet. So if you are a vendor and you upload your key over clearnet and tell everyone to get your key from that key server, then LE can go to the server operators and ask which IP that specific request came from. Even if the vendor used a proxy, LE could enumerate some of his buyers by looking at which IPs have been retrieving the key.<br /><br />You can configure some PGP clients to use proxies. In fact, you can configure them to connect over Tor if you use an HTTP proxy to forward to Tor&#039;s SOCKS port, but there&#039;s way too much risk of fucking up for the average person to do that.<br /><br />You should do not use key servers for any SR related activity. Vendors should never use key servers, and therefore buyers have no reason to use them, as they shouldn&#039;t.<br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Thanks, that&#039;s pretty definitive. :)<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=191928.msg1383423#msg1383423">Quote from: mcguire39 on July 27, 2013, 01:30 pm</a></div></div><blockquote class="bbc_standard_quote">It does seem risky. I can&#039;t see it making it easier really, because you&#039;d have to copy and paste the keyid anyway, so why not just copy the vendor&#039;s key and &#039;import from clipboard&#039; in GPG4USB?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I use the gpa app of gpu4win and that has no feature I can find to import from the clipboard.&nbsp; Which is why I was looking around.&nbsp; The only way I&#039;ve worked out to get the things in is by creating a text file and loading it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: how safe is it to upload a public key to the GnuPG key server?</strong><br />
+				Post by: <strong>CannabisConsumer</strong> on <strong>July 27, 2013, 11:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				At the moment this is not possible but in the future when quantum computation technology really comes to fruition, the public key will make their jobs finding your private key a lot easier because it could mathematically be deduced.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

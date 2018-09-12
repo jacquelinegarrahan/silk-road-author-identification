@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=28478.0" />
+		<title>Print Page - Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Off topic => Topic started by: cbrdck on June 28, 2012, 12:12 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>cbrdck</strong> on <strong>June 28, 2012, 12:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hi guys, <br /><br />I was browsing the weed section and I thought it would be useful to see the prices in GBP as well as BTC. I started doing just that and from there it kinda got out of control a bit.<br /><br />So I give you my greasemonkey script:<br />* Gets the exchange rates from intersango.com<br />* Adds paper currency column next to BTC price column on category listings.<br />* * Switch between GBP, EUR and USD by clicking the header link (&quot;&lt;-&gt;&quot;)<br />* Adds another column with &lt;currency&gt;/gram cost. This is picked up from title and may not always work, so do not trust implicitly.<br />* The above are also displayed in item detail page<br />* Saves the exchange rates and your currency preference in a cookie<br /><br />Maybe someone else will also find this useful. If you have GreaseMonkey installed, get the script from here:<br /><br />http://userscripts.org/scripts/show/137270<br /><br />In case you missed it above, **THIS SCRIPT CREATES A COOKIE TO STORE THE CURRENT EXCHANGE RATE AND YOUR PREFERRED CURRENCY**&nbsp; <br />Phew. I was required by UK law to let you know. And I&#039;m all for the Law, guys, i am seriouslah.<br /><br />I am releasing this code under DGAFv3. Feel free not to give a fuck either.<br /><br />edit: new d/l link<br /><br />edit 2: If the install button doesn&#039;t work for you, right click the install button, click View User Script Source, and you should see a yellow bar with an install button. Alternatively, save to somewhere and load manually.<br /><br />* It goes without saying, don&#039;t visit unless over Tor. Kind of a dead giveaway.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>Kappacino</strong> on <strong>June 28, 2012, 12:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Someone verify this shit, I&#039;m too inept to give it a go
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>cbrdck</strong> on <strong>June 28, 2012, 01:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				source<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">// ==UserScript==<br />// @name&nbsp; &nbsp; &nbsp; &nbsp; Real world currency mod for SR<br />// @namespace&nbsp; &nbsp;sr<br />// @description SR: convert BTC to GBP/EUR/USD. Calculate &lt;CUR&gt;/gram. Gets live exchange rate from intersango.com. Works on category and info pages and uses cookie to store exchange rate and prefs.<br />// @include&nbsp; &nbsp; &nbsp;http://silkroadvb5piz3r.onion/silkroad/category/*<br />// @version&nbsp; &nbsp; &nbsp;1.1<br />// ==/UserScript==<br /><br /><br />var active_cur=&#039;gbp&#039;;<br />var trading={};<br /><br />function getSymbol(str)<br />{<br /><span style="white-space: pre;">	</span>switch(str)<br /><span style="white-space: pre;">	</span>{<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>case &#039;gbp&#039;: return &#039;&amp;pound;&#039;;break;<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>case &#039;usd&#039;: return &#039;$&#039;;break;<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>case &#039;eur&#039;: return &#039;&amp;euro;&#039;;break;<br /><span style="white-space: pre;">	</span>}<br />}<br /><br />function findGrams(body)<br />{<br /><span style="white-space: pre;">	</span>var matches = ( (/[^A-Za-z0-9](\d+[\.\d]*)+[\s]*(gram|grams|gr|g)+[^A-Za-z0-9]/i) ).exec(body);<br /><span style="white-space: pre;">	</span>if ( matches &amp;&amp; matches.length )<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>return parseFloat(matches[1]);<br /><span style="white-space: pre;">	</span>var matches = ( (/[^A-Za-z0-9](\d+[\.\d]*)+g[^A-Za-z0-9]/i) ).exec(body);<br /><span style="white-space: pre;">	</span>if ( matches &amp;&amp; matches.length )<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>return parseFloat(matches[1]);<br /><span style="white-space: pre;">	</span>return false;<br />}<br /><br />function draw()<br />{<br /><span style="white-space: pre;">	</span>if (location.href.search(&#039;/item/&#039;)&gt;-1)<br /><span style="white-space: pre;">	</span>{<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var bs = document.getElementsByTagName(&#039;b&#039;);<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var priceb = bs.item(0);<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var body = document.getElementsByTagName(&#039;table&#039;).item(0).innerHTML;<br /><br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var price = body.substr( body.search( &#039;Price&#039; ) );<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>price = price.substr( 0, price.search(&#039;&lt;br&gt;&lt;br&gt;&#039;) );<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>price = parseFloat(price.substr( price.lastIndexOf(&#039;&gt;&#039;)+2 ));<br /><br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var item = &#039;&lt;BR/&gt;&#039;+getSymbol(active_cur)+(price*trading[active_cur]).toFixed(2)<br /><br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var g = findGrams(body);<br /><br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>if (g)<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>item+=&#039; (&#039;+(price*trading[active_cur]/g).toFixed(2)+&#039; &#039;+getSymbol(active_cur)+&#039;/g)&#039;;<br /><br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>item += &#039; (&lt;A href=&quot;#&quot; onclick=&quot;changeCurrency()&quot;&gt;change&lt;/a&gt;)&#039;;<br /><br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var first_b = document.getElementsByTagName(&#039;b&#039;).item(0);<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>if (window.original)<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>first_b.innerHTML=window.original;<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>else<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>window.original=first_b.innerHTML;<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>first_b.innerHTML += item;<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>return;<br /><span style="white-space: pre;">	</span>}<br /><span style="white-space: pre;">	</span>if (location.href.search(&#039;/category/&#039;)&gt;-1)<br /><span style="white-space: pre;">	</span>{<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var x = document.getElementById(&#039;table1&#039;);<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>if (window.before)<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>x.innerHTML = window.before;<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>else<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>window.before = x.innerHTML;<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var trs = x.getElementsByTagName(&#039;tr&#039;);<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>for(var ri in trs)<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>{<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>if (ri==0){<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var item = document.createElement(&#039;th&#039;);<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>item.innerHTML=active_cur+&#039; &lt;a href=&quot;#&quot; onclick=&quot;changeCurrency()&quot;&gt;&amp;lt;-&amp;gt;&lt;/a&gt;&#039;;<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>trs[ri].insertBefore(item,trs[ri].childNodes[3]);<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var item = document.createElement(&#039;th&#039;);<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>item.innerHTML=getSymbol(active_cur)+&#039;/g&#039;;<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>trs[ri].insertBefore(item,trs[ri].childNodes[4]);<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>continue;<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>}<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var item = document.createElement(&#039;td&#039;);<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var pricetd = trs[ri].childNodes[2];<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var btc_price = parseFloat(pricetd.innerHTML.substr(1));<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var g = findGrams(trs[ri].innerHTML);<br /><span style="white-space: pre;">	</span><br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>item.innerHTML=getSymbol(active_cur)+(btc_price*trading[active_cur]).toFixed(2);<br /><br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>var item2 = document.createElement(&#039;td&#039;);<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>item2.innerHTML= g ? (btc_price*trading[active_cur]/g).toFixed(2) : &#039;?&#039;;<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>trs[ri].insertBefore(item2,trs[ri].childNodes[3]);<br /><br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>trs[ri].insertBefore(item,trs[ri].childNodes[3]);<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span><br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>}<br /><span style="white-space: pre;">	</span>}<br />}<br /><br /><br />//Utils<br /><br />function getCookie(c_name)<br />{<br />var i,x,y,ARRcookies=document.cookie.split(&quot;;&quot;);<br />for (i=0;i&lt;ARRcookies.length;i++)<br />{<br />&nbsp; x=ARRcookies[i].substr(0,ARRcookies[i].indexOf(&quot;=&quot;));<br />&nbsp; y=ARRcookies[i].substr(ARRcookies[i].indexOf(&quot;=&quot;)+1);<br />&nbsp; x=x.replace(/^\s+|\s+$/g,&quot;&quot;);<br />&nbsp; if (x==c_name)<br />&nbsp; &nbsp; {<br />&nbsp; &nbsp; return unescape(y);<br />&nbsp; &nbsp; }<br />&nbsp; }<br />}<br /><br />function setCookie(c_name,value,exdays)<br />{<br /><span style="white-space: pre;">	</span>var exdate=new Date();<br /><span style="white-space: pre;">	</span>exdate.setDate(exdate.getDate() + exdays);<br /><span style="white-space: pre;">	</span>var c_value=escape(value) + ((exdays==null) ? &quot;&quot; : &quot;; expires=&quot;+exdate.toUTCString());<br /><span style="white-space: pre;">	</span>document.cookie=c_name + &quot;=&quot; + c_value;<br />}<br /><br />function getTradingPrices(resp)<br />{<br /><span style="white-space: pre;">	</span>var gbp = resp.responseText.substr( resp.responseText.search(&#039;British Pound&#039;) );<br /><span style="white-space: pre;">	</span>gbp = gbp.substr( 0, gbp.search(&#039;&lt;/dd&gt;&#039;) );<br /><span style="white-space: pre;">	</span>gbp = parseFloat( gbp.substr( gbp.lastIndexOf(&#039;&gt;&#039;)+1 ) );<br /><span style="white-space: pre;">	</span>trading.gbp=gbp;<br /><br /><span style="white-space: pre;">	</span>var eur = resp.responseText.substr( resp.responseText.search(&#039;Euro&#039;) );<br /><span style="white-space: pre;">	</span>eur = eur.substr( 0, eur.search(&#039;&lt;/dd&gt;&#039;) );<br /><span style="white-space: pre;">	</span>eur = parseFloat( eur.substr( eur.lastIndexOf(&#039;&gt;&#039;)+1 ) );<br /><span style="white-space: pre;">	</span>trading.eur=eur;<br /><br /><span style="white-space: pre;">	</span>var usd = resp.responseText.substr( resp.responseText.search(&#039;US Dollar&#039;) );<br /><span style="white-space: pre;">	</span>usd = usd.substr( 0, usd.search(&#039;&lt;/dd&gt;&#039;) );<br /><span style="white-space: pre;">	</span>usd = parseFloat( usd.substr( usd.lastIndexOf(&#039;&gt;&#039;)+1 ) );<br /><span style="white-space: pre;">	</span>trading.usd=usd;<br /><br /><span style="white-space: pre;">	</span>setCookie(&#039;trading&#039;,JSON.stringify(trading));<br /><span style="white-space: pre;">	</span>draw();<br />}<br /><br /><br />var currencies=&#91;&#039;gbp&#039;,&#039;eur&#039;,&#039;usd&#039;];<br />unsafeWindow.currencies=currencies;<br />unsafeWindow.getSymbol=getSymbol;<br />unsafeWindow.findGrams=findGrams;<br />function changeCurrency()<br />{<br /><span style="white-space: pre;">	</span>var cur = currencies.indexOf( active_cur );<br /><span style="white-space: pre;">	</span>var next = ++cur % currencies.length;<br /><span style="white-space: pre;">	</span>active_cur = currencies[next];<br /><span style="white-space: pre;">	</span>draw();<br /><span style="white-space: pre;">	</span>trading.active_cur = active_cur;<br /><span style="white-space: pre;">	</span>setCookie(&#039;trading&#039;,JSON.stringify(trading));<br />}<br />unsafeWindow.changeCurrency=changeCurrency;<br />unsafeWindow.active_cur=active_cur;<br />unsafeWindow.trading=trading;<br /><br />if(!getCookie(&#039;trading&#039;))<br />{<br /><span style="white-space: pre;">	</span>console.log(&#039;Getting exchange rates from intersango.&#039;);<br />&nbsp;<span style="white-space: pre;">	</span>GM_xmlhttpRequest({<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>&nbsp; method: &quot;GET&quot;,<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>&nbsp; url: &quot;http://www.intersango.com/&quot;,<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>&nbsp; onload: getTradingPrices<br /><span style="white-space: pre;">	</span>});<br /><br />}<br />else<br />{<br /><span style="white-space: pre;">	</span>console.log(&#039;Using stored exchange rates from intersango.&#039;);<br /><span style="white-space: pre;">	</span>eval(&#039;trading=&#039;+getCookie(&#039;trading&#039;));<br /><span style="white-space: pre;">	</span>if (trading.active_cur)<br /><span style="white-space: pre;">	</span><span style="white-space: pre;">	</span>active_cur = trading.active_cur;<br /><span style="white-space: pre;">	</span>draw();<br />}</code>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>cbrdck</strong> on <strong>June 29, 2012, 06:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				New version, new link due to idiocy (signed up with anonymous email address, didnt note it down, lost account)<br /><br />&nbsp;http://userscripts.org/scripts/show/137270<br /><br />New features:<br />+cart page (same stuff as before, paper currency, cost/g, total cost in paper currency)<br />+most other pages (user, home): adds paper-currency equivalent next to BTC price.<br />+added footer to display current exchange rate &amp; change currency, refresh links
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>cbrdck</strong> on <strong>June 29, 2012, 06:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				It doesn&#039;t, GreaseMonkey&#039;s GM_xmlhttpRequest doesn&#039;t set referer.<br /><br />For extra peace of mind, I double-checked that on a server of my own just now, feel free to try it too. Search for GM_xmlhttpRequest in source.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>Ballzinator</strong> on <strong>June 29, 2012, 07:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				Whoa, didn&#039;t expect fellow computer science nerds here :D
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>cbrdck</strong> on <strong>June 29, 2012, 09:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				You&#039;re more than welcome to rewrite it in Haskell, Dr. Shannon.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>gtgeorgz</strong> on <strong>June 29, 2012, 09:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				Ok, so i press install on the download page and nothing happens? <br />I&#039;m using the latest Tor browser included in the Tor Browser Bundle, and yes, i have got greasemonkey enabled and installed. <br />any tips?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>cbrdck</strong> on <strong>June 29, 2012, 10:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hm, I&#039;m getting the same thing. I suppose it has something to do with the TorBrowser restrictions, as I can&#039;t install any other scripts either.<br /><br />This worked for me:<br /><br />1) Right clicking &quot;Install&quot;, click &quot;View User Script Source&quot;. A new tab should open.<br />2) Click &quot;Install&quot; on the yellow bar that reads &quot;This is a Greasemonkey user script. (...)&quot;<br /><br />If this doesn&#039;t work either, you can always save it to disk and load it manually.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>Boris Badenov</strong> on <strong>June 29, 2012, 12:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				This sounds like a dangerous script to me.<br /><br />BB
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>Hamb999</strong> on <strong>June 29, 2012, 04:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It would be awesome if you could then sort by $$ per mg, so you could see the most and least expensive.<br /><br />Just a thought - I am not a computer geek so I don&#039;t know how difficult this would be to do.<br /><br />Thanks cbrdck!&nbsp; I would +1 you if I could.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>cbrdck</strong> on <strong>June 29, 2012, 06:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28478.msg315592#msg315592">Quote from: Boris Badenov on June 29, 2012, 12:07 pm</a></div></div><blockquote class="bbc_standard_quote">This sounds like a dangerous script to me.<br /><br />BB<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hi Boris, <br /><br />While I understand your distrust, I can assure you that to the best of my personal and professional knowledge (am in related field), this script is not dangerous to you. It does exactly what I advertise, which can be verified by anyone with minimal JS understanding.<br /><br />The one minor security consideration that _could_ _potentially_ affect this kind of script is leak the page you are on to intersango.com when making the exchange-rate request (http-referer*). However Greasemonkey does _not_ do this, something that I both knew already _and_ double-checked with this particular script (by querying a server of my own&nbsp;and checking that the referer is indeed blank). Again, verifiable by a simple tweak of the source.<br /><br />Another consideration for the truly paranoid would be that a cookie is set (in order to avoid querying intersango.com on every page load and to store your currency preference). Personally I fail to see how this could be a problem, as SR already uses a cookie to store your session information (plus, the default TorBrowser behavior is to clear all cookies when quitting). Despite this, it still is a piece of information I&#039;m storing in your browser, which is I mention this in the description twice - once IN CAPS!<br /><br />The address queried at intersango.com is purposefully innocuous (just the homepage... intersango.com) in case a sudden surge of queries to some /weird/api?location= caused suspicions or could link you (even then, your Tor exit address) to usage of this script.<br /><br />Please understand that I am _not_ trying to convince you to use my script. I don&#039;t profit from it in any way (apart from the satisfaction that someone else is finding my code useful) as there are no ads, no malicious side to it, no other hidden agenda, etc.** I didn&#039;t even put up a bitcoin address for donations, if you notice, nor will I. <br /><br />I _do_ want to clarify that I have not -intentionally or not-&nbsp; put out a script that could endanger you or compromise your anonymity or account. As a new guy here, I feel it is important to clarify this :)<br /><br />But again, I understand your fears, so no offense taken. After all, I am using this bitch too, and I wouldn&#039;t needlessly fuck with my well-being. And am slightly paranoid.***<br /><br />TL; DR: The most dangerous thing this does is load the intersango.com homepage, and this without exposing which page you are on - it will look like you just visited it via TOR. Need someone else to verify, shouldn&#039;t be that hard to find.<br /><br />*Explanation, in case you&#039;re interested: When you make an HTTP(S) request to a server, there is an optional header that may be set by your browser, called &quot;referer&quot;. This is set to the page that led you to the page you are viewing now. For example, if you click the first Google search result of any query, the referer header on the page you end up will read something like &quot;http://www.google.com/search?q=blah+blah&quot;, so the server knows how you ended up there.<br />** Again, please see source for proof. Does nobody read JS here? (I&#039;d advise dramamine before reading though... kinda messy)<br />*** I find it hard to believe this forum doesn&#039;t have a paranoid (-looking) emoticon.<br /><br />PS: So much for not giving a fuck. Someone got high :D
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>cbrdck</strong> on <strong>June 29, 2012, 07:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				With spectacular timing,<br /><br />v1.3b: bugfix: category page did not draw footer info + links.<br /><br />lols were had.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>cbrdck</strong> on <strong>June 29, 2012, 07:41 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28478.msg315902#msg315902">Quote from: Hamb999 on June 29, 2012, 04:23 pm</a></div></div><blockquote class="bbc_standard_quote">It would be awesome if you could then sort by $$ per mg, so you could see the most and least expensive.<br /><br />Just a thought - I am not a computer geek so I don&#039;t know how difficult this would be to do.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Although it isn&#039;t impossible to do, I think it would be impractical over Tor.<br /><br />In order for the sorted view to actually show the cheapest $/g, it would have to fetch all other pages in the background, so as to include all data in the table before sorting it (there is no guarrantee that the cheapest $/g will be on the first page of results). Over Tor, all these requests would take considerable time. It would also create a pretty huge table in popular categories, which wouldn&#039;t be great for slow computers, so you&#039;d need to hide most of the stuff and paginate...<br /><br />It would take a bit to do, I might get to it if I find some time.<br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28478.msg315902#msg315902">Quote from: Hamb999 on June 29, 2012, 04:23 pm</a></div></div><blockquote class="bbc_standard_quote">Thanks cbrdck!&nbsp; I would +1 you if I could.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>You&#039;re very welcome.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>June 30, 2012, 12:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28478.msg313459#msg313459">Quote from: cbrdck on June 28, 2012, 12:12 pm</a></div></div><blockquote class="bbc_standard_quote">Hi guys, <br /><br />I was browsing the weed section and I thought it would be useful to see the prices in GBP as well as BTC. I started doing just that and from there it kinda got out of control a bit.<br /><br />So I give you my greasemonkey script:<br />* Gets the exchange rates from intersango.com<br />* Adds paper currency column next to BTC price column on category listings.<br />* * Switch between GBP, EUR and USD by clicking the header link (&quot;&lt;-&gt;&quot;)<br />* Adds another column with &lt;currency&gt;/gram cost. This is picked up from title and may not always work, so do not trust implicitly.<br />* The above are also displayed in item detail page<br />* Saves the exchange rates and your currency preference in a cookie<br /><br />Maybe someone else will also find this useful. If you have GreaseMonkey installed, get the script from here:<br /><br />http://userscripts.org/scripts/show/137270<br /><br />In case you missed it above, **THIS SCRIPT CREATES A COOKIE TO STORE THE CURRENT EXCHANGE RATE AND YOUR PREFERRED CURRENCY**&nbsp; <br />Phew. I was required by UK law to let you know. And I&#039;m all for the Law, guys, i am seriouslah.<br /><br />I am releasing this code under DGAFv3. Feel free not to give a fuck either.<br /><br />edit: new d/l link<br /><br />edit 2: If the install button doesn&#039;t work for you, right click the install button, click View User Script Source, and you should see a yellow bar with an install button. Alternatively, save to somewhere and load manually.<br /><br />* It goes without saying, don&#039;t visit unless over Tor. Kind of a dead giveaway.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Hi Cyberduck,<br /><br />Many thanks for this +1<br /><br />I run a service selling Bitcoins for cash in the mail at Intersango rates and have decided to install this on the browser I use at the office so I can monitor prices (my customers will be pleased to hear I use a separate account to actually process and view orders!)<br /><br />If you ever need any BTC and want to obtain them safely, feel free to send me a message.<br /><br />All the best,<br /><br />V.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Greasemonkey script to display paper currencies (USD,EUR,GBP) and cost/gram</strong><br />
+				Post by: <strong>username100</strong> on <strong>August 22, 2012, 07:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				OK, I have this installed but I don&#039;t see any footer to choose my currency.<br /><br />edit: OK I found the &quot;change paper currency&quot; setting in &quot;account&quot; but it is still displaying price in bitcoins...
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

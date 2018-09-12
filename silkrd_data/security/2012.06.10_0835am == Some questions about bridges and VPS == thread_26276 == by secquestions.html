@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=26276.0" />
+		<title>Print Page - Some questions about bridges and VPS</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: secquestions on June 10, 2012, 08:35 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Some questions about bridges and VPS</strong><br />
+				Post by: <strong>secquestions</strong> on <strong>June 10, 2012, 08:35 am</strong>
+			</dt>
+			<dd class="postbody">
+				Well, I&#039;ve been reading some posts about setup a bridge or ssh tunnel on a VPS:<br />http://dkn255hz262ypmii.onion/index.php?topic=24298.msg256296#msg256296<br />http://dkn255hz262ypmii.onion/index.php?topic=18058.msg180967#msg180967<br />http://dkn255hz262ypmii.onion/index.php?topic=11502.15<br />http://dkn255hz262ypmii.onion/index.php?topic=17887.msg178866#msg178866<br /><br />I have some questions. I&#039;m not a tor expert, so, I&#039;m sorry if some questions look dumb for you.<br /><br />1)You can setup a bridge not only as your first node to connect to tor, but as your exit node or middle node too. Use 3 different bridges over 3 different vps is a good idea? One for your first node, other for a middle note and other for the exit node. Does improve your security if you use one private exit node to hidden services and another one p.e.n. to clearnet websites?<br /><br />2)Whats the difference between obfs bridge and normal bridge? I know obfs obfuscate the fact you are using Tor, but if your first and last node are not listed at main directory, how can someone say you are using Tor and how the obfs would help with it?<br /><br />3) Which one is better for user concealment: setup your private obfs bridge or normal bridge?<br /><br />4) What is the difference between setup a bridge in a private VPS offshore and setup it on Amazon EC2 cloud? What are the advantages and disadvantages of each?<br /><br />5) If you setup openvpn over a vps, is a good idea use it before to connect to tor and after your exit node (off course, you would be using two different vps in this case)?<br /><br />6) When connecting to obfs browser bundle, I just can see 3 or 4 relays. This doesn&#039;t mean the obfs is unsafe?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Some questions about bridges and VPS</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>June 10, 2012, 07:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">1)You can setup a bridge not only as your first node to connect to tor, but as your exit node or middle node too. Use 3 different bridges over 3 different vps is a good idea? One for your first node, other for a middle note and other for the exit node. Does improve your security if you use one private exit node to hidden services and another one p.e.n. to clearnet websites?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Although you technically can do this (although the middle and exit would no longer really be considered bridges, and you couldn&#039;t connect to hidden services without using a public rendezvous), it is a horrible idea. Bridges are to hide the fact that you use the Tor network. You don&#039;t want to be the only person using all of the nodes on your path, and you don&#039;t want all of the nodes on your path to be linkable back to you. Stick with just using single node entry bridges. Using two entry bridges is a very good idea, but leave that for the Tor project to implement, because unless everyone is doing it (and 4 hops total are being used) it will hurt your anonymity more than hep. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">2)Whats the difference between obfs bridge and normal bridge? I know obfs obfuscate the fact you are using Tor, but if your first and last node are not listed at main directory, how can someone say you are using Tor and how the obfs would help with it?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Bridges are only concerned with a local attacker being able to determine that you use Tor, remote attackers still know you are using Tor as you exit from a publicly listed exit node, as you should. Obfsproxy obfuscates the traffic fingerprint associated wtih Tor. Normal bridges give you membership concealment by hiding the fact that you are connecting to a Tor router IP address, as the IP addresses of bridges have limited exposure (or no exposure if they are private and you configured them yourself). This prevents or hinders many weaker attackers (like your ISP most likely, or network admin of your network) from being able to determine that you are connecting to a Tor router based on the IP addresses that they see you connecting to (sort of, there are still ways around it, bridges are developing technology not perfected. For starters an attacker could try and use every IP address they see you connecting to as a Tor bridge and see if it works. But that still requires them to target you in the first place, and how will they know who to target since they don&#039;t know bridge IP addresses? I think this flaw is being worked on anyway.)<br /><br />However, Tor traffic has a very distinct fingerprint. For one example out of several, all packets are 512 bytes plus headers. This is not the same for most internet traffic. So even though an attacker may not be able to tell that you are using Tor based off of the IP addresses they can see you connecting to, they can still tell that you are using Tor by analyzing your traffic stream. Obfsproxy takes care of this by obfuscating the traffic stream, trying to make it blend in with other traffic and not stick out as Tor traffic. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">3) Which one is better for user concealment: setup your private obfs bridge or normal bridge?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Certainly setting up your own private obfs bridge is the best option for membership concealment. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">4) What is the difference between setup a bridge in a private VPS offshore and setup it on Amazon EC2 cloud? What are the advantages and disadvantages of each?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div> <br /><br />Either should be fine.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">5) If you setup openvpn over a vps, is a good idea use it before to connect to tor and after your exit node (off course, you would be using two different vps in this case)?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No you should use a private obfsproxy bridge for entry and exit through a normal Tor exit, although in some circumstances using a Tor exit may not work (like working with some shitty e-currencies / exchangers) and in these cases it is okay to chain a VPN to the end of a Tor circuit, but this does more to hurt your anonymity than to help it (for one it makes things much more linkable, although it may help your untraceability somewhat) <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">6) When connecting to obfs browser bundle, I just can see 3 or 4 relays. This doesn&#039;t mean the obfs is unsafe?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Not sure what you mean. I doubt it is really using only 3 or 4 relays, but yes that would not be safe.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Some questions about bridges and VPS</strong><br />
+				Post by: <strong>secquestions</strong> on <strong>June 15, 2012, 10:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks, kmfkewm.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=26276.msg283531#msg283531">Quote from: kmfkewm on June 10, 2012, 07:59 pm</a></div></div><blockquote class="bbc_standard_quote">Although you technically can do this (although the middle and exit would no longer really be considered bridges, and you couldn&#039;t connect to hidden services without using a public rendezvous), it is a horrible idea. Bridges are to hide the fact that you use the Tor network.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I read some posts about the risk of LE running a relay and to use a private exit node to visit tor blocked sites like bitcoins exchanges. Is there any other way to do that beside using bridge? If you setup a &quot;relay&quot; it is not private anymore.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=26276.msg283531#msg283531">Quote from: kmfkewm on June 10, 2012, 07:59 pm</a></div></div><blockquote class="bbc_standard_quote">Not sure what you mean. I doubt it is really using only 3 or 4 relays, but yes that would not be safe.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Using obfsproxy tor browser bundle, when I click on view the network and refresh the relays, I only can see 3 or 4 relays, maybe no relay at all. I&#039;m not using obfs to navigate because of this.&nbsp; Using the regular Tor Browser Bundles it is showed thousands of relays.<br /><br />Is there any obstacle to use a obfs bridge over the regular Tor Browser Bundle?<br /><br />It&#039;s better if its possible, cause:<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Note that these bundles are not maintained currently — for example, they include DNS leaks and old insecure versions of Firefox. We&#039;re working on automating the build process. Stay tuned!</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>https://www.torproject.org/projects/obfsproxy.html.en
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=103802.0" />
+		<title>Print Page - Problems installing GPG on a mac.</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: professoryoke on January 10, 2013, 11:43 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Problems installing GPG on a mac.</strong><br />
+				Post by: <strong>professoryoke</strong> on <strong>January 10, 2013, 11:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Trying to install GPGTools (As per the suggestion of the bitcoin-otc wiki) so that I can trade on bitcoins-otc, however I can&#039;t seem to be able to install it on my mac. I can download it, and when I open it I can use the installer, but after I go through all the steps to install it nothing happens. I don&#039;t have any program I can use, just the same zip file and disk image I started with.<br /><br />Can anyone point me in the right direction? Or suggest another mac friendly GPG?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Problems installing GPG on a mac.</strong><br />
+				Post by: <strong>wasta</strong> on <strong>January 10, 2013, 11:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Google gpg for usb, I guess. Windows users should use it too. There are benefits for the usb-gpg above the gpg-win version.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Problems installing GPG on a mac.</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>January 11, 2013, 01:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=103802.msg717398#msg717398">Quote from: professoryoke on January 10, 2013, 11:43 pm</a></div></div><blockquote class="bbc_standard_quote">Trying to install GPGTools (As per the suggestion of the bitcoin-otc wiki) so that I can trade on bitcoins-otc, however I can&#039;t seem to be able to install it on my mac. I can download it, and when I open it I can use the installer, but after I go through all the steps to install it nothing happens. I don&#039;t have any program I can use, just the same zip file and disk image I started with.<br /><br />Can anyone point me in the right direction? Or suggest another mac friendly GPG?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />GPG4USB is not usable on a Mac; the only platforms supported (at least for now) are Windows and Linux.&nbsp; When you are referring to a .zip file, I&#039;m assuming that you&#039;re referring to GPG4USB, as it is provided in a .zip file.&nbsp; As I said, it won&#039;t work on a Mac, so don&#039;t waste your time trying. (The authors are working on a Mac version, but who knows when it will be available.) <br /><br />Your only option is GPGTools at present, provided that you are running a supported version of OS X.&nbsp; GPGTools will not run on Leopard (`10.5) -- you must be running Snow Leopard (10.6), Lion (10.7) or Mountain Lion (10.8) for GPGTools to properly function. <br /><br />Furthermore, you may need to be running one of the nightly builds. <br /><br />Here is Guru&#039;s tutorial: <br /><br />GPGTools is highly version dependent -- depending on which version of OS X <br />you have, it may or may not work as expected.&nbsp; If you have Leopard (10.5) <br />then you&#039;re pretty much out of luck. Your only option then will be using <br />the command-line. <br /><br />If you have Snow Leopard (10.6), Lion (10.7) or Mountain Lion (10.8), the <br />following instructions should be sufficient to allow you to get up and <br />running. <br /><br />Download and install GPGTools: http://nightly.gpgtools.org/GPGTools_Installer-trunk.dmg<br /><br />Once you have installed GPGTools,&nbsp; what you want to do is to go into <br />System Preferences --&gt; Keyboard --&gt; Services.<br /><br />Scroll down until you find the following entries. Be sure to put a check <br />mark in the boxes to activate each keyboard shortcut. <br /><br />Keyboard shortcuts: <br /><br />OpenPGP: Decrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-D<br /><br />OpenPGP: Encrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-E<br /><br />OpenPGP: Import Key from Selection:&nbsp; &nbsp; &nbsp;Shift-Command-I<br /><br />OpenPGP: Insert My Fingerprint:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-F<br /><br />OpenPGP: Insert My Key:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-K<br /><br />OpenPGP: Sign Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Shift-Command-R<br /><br />OpenPGP: Verify Signature of Selection: Shift-Control-V<br /><br />Remember, these shortcuts only operate on highlighted or selected text. <br /><br />N.B.: To properly be able to import PGP into GPGChain (via TextEdit) you <br />need to change the default on TextEdit from .rtf to plain text. You can do <br />that through the Format menu, or you can go through the main configuration <br />menu, accessible by using Command-comma. Ensure the plain text radio button <br />is selected. <br /><br />Also ensure that the following are UNCHECKED in TextEdit preferences: <br />smart quotes, smart dashes, smart links. <br /><br />To select text within TextEdit, use Command-A to highlight the entire <br />document, or use your mouse to selection the section that you want to <br />verify/sign/encrypt/decrypt. It is highly recommended that you use only <br />plain-text, as opposed to Rich Text (.rtf) format. Use Command-comma to <br />bring up Preferences and ensure that the plain text radio button is <br />checked. <br /><br />Once your text is highlighted in TextEdit, (by pressing Comand-A) you then <br />encrypt using Shift-Command-E. You will then be presented with a list of <br />keys to encrypt to, that you have added to your PGP keyring: <br /><br />Other Commands You May Need:<br />============================<br /><br />OpenPGP: Decrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-D<br /><br />OpenPGP: Encrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-E<br /><br />OpenPGP: Sign File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Control-Command-S<br /><br />OpenPGP: Verify Signature of File:&nbsp; &nbsp; &nbsp; &nbsp;Control-Command-V<br /><br /><br />Once you have setup these shortcuts, you can begin using GPG. <br /><br />To encrypt a message to someone using GPG, you first need a copy of the <br />recipient&#039;s PGP public key. <br /><br />Once you have located someone&#039;s PGP public key, you should copy and paste <br />it into TextEdit. Save the PGP key to a file; you can call the file, <br />import.asc (or import.txt), for example. This saved file will usually be <br />found in the Documents folder. <br /><br />Launch GPG Keychain Access from the Applications folder. click on the <br />Import icon in the upper left hand corner. GPG Keychain Access will then <br />prompt you for the name of the file which contains the key to import. It <br />will usually show you a list of files in the Documents folder. Click on the <br />file named import.asc (or import.txt), and click ok. The PGP public key <br />will then be imported into your PGP keyring. <br /><br />To encrypt a message to a person, the message must be contained in a <br />TextEdit document. Use Command-A to hightlight the entire document. Then <br />use Shift-Command-E to encrypt. GPG will pop-up a list of public keys in <br />your PGP keyring. Each key will have a little checkbox beside it which you <br />can check, to select that particular key. If you were encrypting a message <br />to me, you would put a check in the box beside my PGP key (Guru@SR). <br /><br />When you click on OK, the plaintext (unencrypted) message in TextEdit will <br />be replaced with the encrypted message. You can then copy and paste the <br />encrypted message to enter it into a form on Silk Road, or anywhere else <br />that it needs to go. <br /><br />To decrypt a message sent to you by other people, you need to copy that <br />message to the clipboard, and paste it into a TextEdit document. Again use <br />Command-A to highlight all the encrypted message. Then use Shift-Command-D <br />to decrypt the message. If the message is encrypted to your PGP public key, <br />you will be prompted to enter your passphrase. Once the correct passphrase <br />has been entered, and you click OK, then the message will be decrypted, <br />and the decrypted text will be placed in the TextEdit document, replacing <br />the encrypted message that was there previously. <br /><br />Guru<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Problems installing GPG on a mac.</strong><br />
+				Post by: <strong>professoryoke</strong> on <strong>January 11, 2013, 01:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=103802.msg717657#msg717657">Quote from: Nightcrawler on January 11, 2013, 01:34 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=103802.msg717398#msg717398">Quote from: professoryoke on January 10, 2013, 11:43 pm</a></div></div><blockquote class="bbc_alternate_quote">Trying to install GPGTools (As per the suggestion of the bitcoin-otc wiki) so that I can trade on bitcoins-otc, however I can&#039;t seem to be able to install it on my mac. I can download it, and when I open it I can use the installer, but after I go through all the steps to install it nothing happens. I don&#039;t have any program I can use, just the same zip file and disk image I started with.<br /><br />Can anyone point me in the right direction? Or suggest another mac friendly GPG?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />GPG4USB is not usable on a Mac; the only platforms supported (at least for now) are Windows and Linux.&nbsp; When you are referring to a .zip file, I&#039;m assuming that you&#039;re referring to GPG4USB, as it is provided in a .zip file.&nbsp; As I said, it won&#039;t work on a Mac, so don&#039;t waste your time trying. (The authors are working on a Mac version, but who knows when it will be available.) <br /><br />Your only option is GPGTools at present, provided that you are running a supported version of OS X.&nbsp; GPGTools will not run on Leopard (`10.5) -- you must be running Snow Leopard (10.6), Lion (10.7) or Mountain Lion (10.8) for GPGTools to properly function. <br /><br />Furthermore, you may need to be running one of the nightly builds. <br /><br />Here is Guru&#039;s tutorial: <br /><br />GPGTools is highly version dependent -- depending on which version of OS X <br />you have, it may or may not work as expected.&nbsp; If you have Leopard (10.5) <br />then you&#039;re pretty much out of luck. Your only option then will be using <br />the command-line. <br /><br />If you have Snow Leopard (10.6), Lion (10.7) or Mountain Lion (10.8), the <br />following instructions should be sufficient to allow you to get up and <br />running. <br /><br />Download and install GPGTools: http://nightly.gpgtools.org/GPGTools_Installer-trunk.dmg<br /><br />Once you have installed GPGTools,&nbsp; what you want to do is to go into <br />System Preferences --&gt; Keyboard --&gt; Services.<br /><br />Scroll down until you find the following entries. Be sure to put a check <br />mark in the boxes to activate each keyboard shortcut. <br /><br />Keyboard shortcuts: <br /><br />OpenPGP: Decrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-D<br /><br />OpenPGP: Encrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-E<br /><br />OpenPGP: Import Key from Selection:&nbsp; &nbsp; &nbsp;Shift-Command-I<br /><br />OpenPGP: Insert My Fingerprint:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-F<br /><br />OpenPGP: Insert My Key:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-K<br /><br />OpenPGP: Sign Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Shift-Command-R<br /><br />OpenPGP: Verify Signature of Selection: Shift-Control-V<br /><br />Remember, these shortcuts only operate on highlighted or selected text. <br /><br />N.B.: To properly be able to import PGP into GPGChain (via TextEdit) you <br />need to change the default on TextEdit from .rtf to plain text. You can do <br />that through the Format menu, or you can go through the main configuration <br />menu, accessible by using Command-comma. Ensure the plain text radio button <br />is selected. <br /><br />Also ensure that the following are UNCHECKED in TextEdit preferences: <br />smart quotes, smart dashes, smart links. <br /><br />To select text within TextEdit, use Command-A to highlight the entire <br />document, or use your mouse to selection the section that you want to <br />verify/sign/encrypt/decrypt. It is highly recommended that you use only <br />plain-text, as opposed to Rich Text (.rtf) format. Use Command-comma to <br />bring up Preferences and ensure that the plain text radio button is <br />checked. <br /><br />Once your text is highlighted in TextEdit, (by pressing Comand-A) you then <br />encrypt using Shift-Command-E. You will then be presented with a list of <br />keys to encrypt to, that you have added to your PGP keyring: <br /><br />Other Commands You May Need:<br />============================<br /><br />OpenPGP: Decrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-D<br /><br />OpenPGP: Encrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-E<br /><br />OpenPGP: Sign File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Control-Command-S<br /><br />OpenPGP: Verify Signature of File:&nbsp; &nbsp; &nbsp; &nbsp;Control-Command-V<br /><br /><br />Once you have setup these shortcuts, you can begin using GPG. <br /><br />To encrypt a message to someone using GPG, you first need a copy of the <br />recipient&#039;s PGP public key. <br /><br />Once you have located someone&#039;s PGP public key, you should copy and paste <br />it into TextEdit. Save the PGP key to a file; you can call the file, <br />import.asc (or import.txt), for example. This saved file will usually be <br />found in the Documents folder. <br /><br />Launch GPG Keychain Access from the Applications folder. click on the <br />Import icon in the upper left hand corner. GPG Keychain Access will then <br />prompt you for the name of the file which contains the key to import. It <br />will usually show you a list of files in the Documents folder. Click on the <br />file named import.asc (or import.txt), and click ok. The PGP public key <br />will then be imported into your PGP keyring. <br /><br />To encrypt a message to a person, the message must be contained in a <br />TextEdit document. Use Command-A to hightlight the entire document. Then <br />use Shift-Command-E to encrypt. GPG will pop-up a list of public keys in <br />your PGP keyring. Each key will have a little checkbox beside it which you <br />can check, to select that particular key. If you were encrypting a message <br />to me, you would put a check in the box beside my PGP key (Guru@SR). <br /><br />When you click on OK, the plaintext (unencrypted) message in TextEdit will <br />be replaced with the encrypted message. You can then copy and paste the <br />encrypted message to enter it into a form on Silk Road, or anywhere else <br />that it needs to go. <br /><br />To decrypt a message sent to you by other people, you need to copy that <br />message to the clipboard, and paste it into a TextEdit document. Again use <br />Command-A to highlight all the encrypted message. Then use Shift-Command-D <br />to decrypt the message. If the message is encrypted to your PGP public key, <br />you will be prompted to enter your passphrase. Once the correct passphrase <br />has been entered, and you click OK, then the message will be decrypted, <br />and the decrypted text will be placed in the TextEdit document, replacing <br />the encrypted message that was there previously. <br /><br />Guru<br /><br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Seems like I&#039;m out of luck then, as I&#039;m using Leopard (10.5.7). I was planning on updating my OS soon anyway, so I guess I&#039;ll have to wait for that. Thanks for your help.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Problems installing GPG on a mac.</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>January 11, 2013, 02:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Here is some information relating to using GPG from the command-line: <br /><br />Cyphre Security Guides (master post)<br />http://dkn255hz262ypmii.onion/index.php?topic=38861.0<br /><br />GPG HOWTO: Introduction to the GPG command line<br />http://dkn255hz262ypmii.onion/index.php?topic=35022.0<br /><br />Nightcrawler &lt;Nightcrawler@SR&gt;<br />PGP-Key: 4096R/BBF7433B 2012-09-22<br />Key fingerprint = D870 C6AC CC6E 46B0 E0C7 3955 B8F1 D88E BBF7 433B<br />http://dkn255hz262ypmii.onion/index.php?topic=174.msg633090#msg633090<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

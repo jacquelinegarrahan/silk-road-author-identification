@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=11510.0" />
+		<title>Print Page - Immediate Login?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: sicklikesaddam on February 08, 2012, 09:13 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Immediate Login?</strong><br />
+				Post by: <strong>sicklikesaddam</strong> on <strong>February 08, 2012, 09:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hi<br /><br />Randomly when i entered the silkroad web url today i was taken directly to the home page. (The page with the photo selection when you first log in). I had not entered any username or password.<br /><br />I closed browser and reset TOR and tried again, same thing.<br /><br />Why would this happen? Silk roads URL is not saved in my favourites and i always type it out from memory every time. Any suggestions?<br /><br /><br />SLS
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Immediate Login?</strong><br />
+				Post by: <strong>imaloonyguy</strong> on <strong>February 08, 2012, 09:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				thats pretty goofy. maybe delete your tor browser and reinstall it. you may have a plugin you dont know about?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Immediate Login?</strong><br />
+				Post by: <strong>ForeverFamily</strong> on <strong>February 08, 2012, 11:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				I had this happen a few times too.. It&#039;s kinda weird.. How does it still know who I am after I&#039;ve shut tor down and reopened it?<br /><br />--FF
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Immediate Login?</strong><br />
+				Post by: <strong>wxevkexi</strong> on <strong>February 08, 2012, 04:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=11510.msg107312#msg107312">Quote from: sicklikesaddam on February 08, 2012, 09:13 am</a></div></div><blockquote class="bbc_standard_quote">Hi<br /><br />Randomly when i entered the silkroad web url today i was taken directly to the home page. (The page with the photo selection when you first log in). I had not entered any username or password.<br /><br />I closed browser and reset TOR and tried again, same thing.<br /><br />Why would this happen? Silk roads URL is not saved in my favourites and i always type it out from memory every time. Any suggestions?<br /><br /><br />SLS<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />One way this could happen is bad handling of sessions by SR.<br /><br />SR, like many other websites, uses a session cookie to track your login session. Which is why you don&#039;t get prompted for login every time you navigate to a page. This session cookie is supposed to be expired by SR based on several things (inactivity, etc.). But if it is not expired for some reason, it will connect you to your previous session, IF the browser goes in with an existing session cookie.<br /><br />It could be other things too, I am sure. But SR should really be looking into this. At your end, you should check to see that your browser is configured to drop all cookies on exit (I am assuming you restarted your browser when you restarted TOR).
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Immediate Login?</strong><br />
+				Post by: <strong>sicklikesaddam</strong> on <strong>February 09, 2012, 12:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				It hasnt happened again since then and it also happened at the same time that i pressed the remember me button on another forum i use TOR for. Maybe it was just a coincidence.<br /><br />I am just double checking everytime i log off now<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Immediate Login?</strong><br />
+				Post by: <strong>zifnab</strong> on <strong>February 09, 2012, 01:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				Tools &gt; Options &gt; Privacy &gt; Check: Always use private browsing mode, everything else unchecked. <br /><br />You will need to add the SR website to exceptions when you start up. The cookie should delete itself but if you want to make sure then go to Show Cookies in the same menu and delete it manually after you&#039;ve logged out.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

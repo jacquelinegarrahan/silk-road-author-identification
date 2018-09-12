@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=128700.0" />
+		<title>Print Page - TOR packet capture contains plain-text hostnames</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: 57 on March 05, 2013, 08:21 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>TOR packet capture contains plain-text hostnames</strong><br />
+				Post by: <strong>57</strong> on <strong>March 05, 2013, 08:21 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Question-<br /><br />I decided to capture packets going to and from TOR using Little Snitch in OSX.&nbsp; When I opened the packet capture document, all of the data was encrypted EXCEPT the name of the host receiving the data......... for example: <br /><br />http://dkn255hz262ypmii.onion&nbsp; and http://silkroadvb5piz3r.onion&nbsp; were shown in plain text.&nbsp; So, how does this protect your ISP from seeing which sites you are visiting?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR packet capture contains plain-text hostnames</strong><br />
+				Post by: <strong>acider</strong> on <strong>March 05, 2013, 08:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				What&#039;s the destination/source of those particular packets?<br />Tor browser uses a socks proxy at 127.0.0.1:9150 (9050 for the older versions IIRC) so if it&#039;s that address I guess it&#039;s not a problem.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR packet capture contains plain-text hostnames</strong><br />
+				Post by: <strong>57</strong> on <strong>March 05, 2013, 08:36 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Good point, I&#039;ll have to check, I didn&#039;t even think about that
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR packet capture contains plain-text hostnames</strong><br />
+				Post by: <strong>kusurichoudai</strong> on <strong>March 05, 2013, 08:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Was the hostname in the actual packet header / payload, or were you just seeing the dns resolution that is shown in one of the columns of the capture? If you&#039;re using SSL all the time, there will be zero cleartext contained in the actual packets / frames...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR packet capture contains plain-text hostnames</strong><br />
+				Post by: <strong>Qthello</strong> on <strong>March 05, 2013, 08:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				were you using the torbrowser?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR packet capture contains plain-text hostnames</strong><br />
+				Post by: <strong>modziw</strong> on <strong>March 05, 2013, 09:05 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=128700.msg883262#msg883262">Quote from: Qthello on March 05, 2013, 08:52 pm</a></div></div><blockquote class="bbc_standard_quote">were you using the torbrowser?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />LOL Okay now THERE is a good question!<br /><br />Modzi
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: TOR packet capture contains plain-text hostnames</strong><br />
+				Post by: <strong>Qthello</strong> on <strong>March 05, 2013, 09:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				how the heck did I get a bad karma?&nbsp; :-[
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

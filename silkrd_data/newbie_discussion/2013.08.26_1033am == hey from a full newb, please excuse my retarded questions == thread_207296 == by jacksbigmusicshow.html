@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=207296.0" />
+		<title>Print Page - hey from a full newb, please excuse my retarded questions</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Newbie discussion => Topic started by: jacksbigmusicshow on August 26, 2013, 10:33 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>hey from a full newb, please excuse my retarded questions</strong><br />
+				Post by: <strong>jacksbigmusicshow</strong> on <strong>August 26, 2013, 10:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				full newb here<br /><br />been lurking for a couple of days just trying to get myself sorted around the system. Still have no idea which way is up so please excuse any stupid questions.<br /><br />WTF is with PGP? is it just for encrypting messaging between 2 parties? <br /><br />is it safe to message on the SR site or do I need to PGP?<br /><br />do I have to set up an email to use for PGP messaging?<br /><br />I&#039;m sure these have been covered a billion times before, and I can see a PGP sticky at the top of this newbie thread but can&#039;t understand it?<br /><br />dont even get me started on bitcoins lol<br /><br />thanks for your tolerance
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: hey from a full newb, please excuse my retarded questions</strong><br />
+				Post by: <strong>ace02</strong> on <strong>August 26, 2013, 10:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				PGP/GPG is a way of encrypting sensitive information. The most important thing to encrypt is your address and any specific discussion of packaging. For general questions about the product or whatever, you do not need to use PGP. <br /><br />The easiest and most intuitive program I&#039;ve found for this is gpg4usb. You run it off of a USB flash drive so that the information isn&#039;t on your actual computer. It works on Windows and Linux. Here&#039;s a link to download it but it&#039;s a clearnet (&#039;normal&#039; internet) link so *do not open it in the Tor Browser.* Copy and paste it into your normal browser (firefox, chrome, whatever). Link: http://gpg4usb.cpunk.de/<br /><br />1) The first thing you want to do is create your own private key. If you&#039;re using gpg4usb, just click on &#039;Keys&#039; then &#039;Manage Keys&#039;. This will open a new window. In this window click on &#039;Key&#039; and then select &#039;Generate Key.&#039; For the name, put your SR username and for the email address DO NOT use a real email. Just put something like [username]@me.onion or whatever. <br /><br />2) Now, to send a message to a vendor, you need to import their public key. (Still assuming you&#039;re using gpg4usb) All you do is go to the vendor&#039;s page and copy their public key all the way from -----BEGIN PGP PUBLIC KEY BLOCK-----<br /><br />to -----END PGP PUBLIC KEY BLOCK-----<br /><br />Make sure you copy all of the dashes or else it will not work.<br /><br />3) In gpg4usb, click on &#039;Keys&#039; then &#039;Import Keys From...&#039; and then choose &#039;Clipboard&#039;. The key you just copied from the vendor&#039;s page will now be imported. <br /><br />4) In the tab called &quot;untitled1.txt&quot; type out the message that you want to encrypt. In the tab to the right of the text area it will say &#039;Encrypt For:&#039; and it will show your own key as well as any keys that you have imported. Check the boxes next to your own name and the name of the person to whom you want to send the message. Click the big button with a lock on it that says &#039;Encrypt&#039; and now you have encrypted your information and can send it to the vendor (or whoever). It will look something like this:<br /><br />-----BEGIN PGP MESSAGE-----<br />Version: GnuPG v1.4.12 (MingW32)<br /><br />hQEMA/ZvEEljMSU/AQf9EvP5goViBwCuC57XCjMd+EvL34YRjZWHG1M5mW0l+863<br />NJ1NA6KDlUyxVFJND1M3cZQ+Fpg9vpK/DbtKOfAHKVYxTDPLrnIuPGCjxdnYhIeE<br />iqOWTpoCby5SMdlQT8czLfU2n9XlGTZPVq0g1PAum+mVHcojyMtD34uOXDbyH2QE<br />fzqhgGiU/0O+aByMD2wPLhpNYegV3aEOg+JzJ0QmGU69qCV5RKHQAIc6wB/i818K<br />pfG0JBeEjGY8KoWARqnF9+rwAJczLUMJt182T9Il+hb4If6fB+e9CmPA17DvutMV<br />gEOcC7Y52nT4emCRBmJHGc6o4dAuPbjknN5qna6sJtI/Af2VWgLwatfJf2QTZIhg<br />kU28Vqd1J1bkDTPWBwGC6IX9scGYi0Yg+dRtkLwtA9YVjwiibAUptN3CXENvoY4m<br />=B87k<br />-----END PGP MESSAGE-----<br /><br /><br />USING PGP ON SR:<br /><br />When you go to place an order on SR, there will be a box for your address. DO NOT JUST TYPE YOUR ADDRESS THERE. Encrypt it using the steps listed above and then copy and paste the whole encrypted message into the address box.<br /><br />If a vendor does not use PGP, you should be wary. You are the one who is at risk by sending your real name and address in clear (non-encrypted) text. It&#039;s also a sign (in my opinion) that the vendor may be careless about their own security and (by extension) yours.<br /><br />TL;DR: It&#039;s safe to send most things in clear text but you REALLY should encrypt your address or any other sensitive/identifying information. No, you do not need an email to use PGP.<br /><br />I hope this was helpful. If anything is unclear or if you have any other questions, please feel free to ask! I can also help you out with explaining the whole bitcoin thing if you would like. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: hey from a full newb, please excuse my retarded questions</strong><br />
+				Post by: <strong>Lufkin</strong> on <strong>August 27, 2013, 02:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				Nice summary, ACE02. Nice to see a great answer instead of a directive to read another thread.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: hey from a full newb, please excuse my retarded questions</strong><br />
+				Post by: <strong>jacksbigmusicshow</strong> on <strong>August 28, 2013, 10:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				hey mate<br /><br />thanks heaps for taking the time to explain that, i&#039;m still fucking confused but I will have a play around with it and see if I can get it sorted<br /><br />thanks again
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: hey from a full newb, please excuse my retarded questions</strong><br />
+				Post by: <strong>sinister-breaks</strong> on <strong>August 28, 2013, 10:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				PGP confuses everyone first time man. LEARN IT THOUGH, its a crucial part of shopping on here.<br /><br />Yes you can just send an address without PGP, vendors will still send it, but you run the risk of having your address out there... <br /><br />were security conscious types on here
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: hey from a full newb, please excuse my retarded questions</strong><br />
+				Post by: <strong>jerry47</strong> on <strong>August 28, 2013, 12:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks as well, thorough explanation! 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: hey from a full newb, please excuse my retarded questions</strong><br />
+				Post by: <strong>8447948</strong> on <strong>August 28, 2013, 12:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Are you running mac? If so i posted detailed instruction here:<br />http://dkn255hz262ypmii.onion/index.php?topic=208110.msg1498252#msg1498252<br /><br />you may also find them useful if your a windows user...
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

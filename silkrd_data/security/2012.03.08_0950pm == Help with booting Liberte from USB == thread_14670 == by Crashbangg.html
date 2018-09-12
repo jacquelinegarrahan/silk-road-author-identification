@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=14670.0" />
+		<title>Print Page - Help with booting Liberte from USB</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Crashbangg on March 08, 2012, 09:50 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Help with booting Liberte from USB</strong><br />
+				Post by: <strong>Crashbangg</strong> on <strong>March 08, 2012, 09:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<br />Hi, I&#039;m on a Sony VAIO, and I followed the instructions in this post: http://dkn255hz262ypmii.onion/index.php?topic=8970.0<br /><br />I formatted the USB, extracted the files into the root menu. Restarted, found the boot menu and selected External device. Saw the hammer/sickle screen with the loading bar, I was prompted to select my passphrase which I did, and then the hammer/sickle screen&#039;s loading bar looked complete. This is when the screen goes black and my computer become unresponsive. I have to hold down the power button to get it to turn off. <br /><br />This what I found on http://dee.su/liberte-faq , which is where I downloaded from: <br />Q: The screen goes blank at some stage of the boot process. A: Upgrade your BIOS, if possible (it may have buggy ACPI). Try tuning the brightness up (it may have been reset after video mode change). Try removing any video= options in the boot menu, replacing splash=… with splash=off, and booting with/without KMS. Try adding acpi=off to the kernel options as a last resort. The changes can be made persistent by editing syslinux.cfg. See bug #3140139 and MeeGo bug #64. <br /><br />I updated the BIOS, that didn&#039;t work. I couldnt find any video=mode options, but I replaced splash=silent with splash=off, it didn&#039;t work. I tried adding acpi=off to the options, but I wasn&#039;t sure exactly where I should put it (at the end of the rest of the text?) but after I hit enter, a screen came up with a bunch of text that I hadn&#039;t seen before.. none of the keys I pressed were recognised and it didn&#039;t seem to like the command I gave it (acpi=off) so I just shut down the computer at this point. <br /><br />I will continue to search to try and figure this out but any help is appreciated.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with booting Liberte from USB</strong><br />
+				Post by: <strong>CaptainSensible</strong> on <strong>March 09, 2012, 06:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I had a PC that could only boot two Linux distros from a USB drive.&nbsp; I tried several others but had a similar experience ~~ I could get past the initial startup and configuration screens but then the monitor just went blank.&nbsp; The two Linux distros that would boot were several years old, so perhaps I needed an updated bios, but this was a very low-priced PC with almost no support from the manufacturer.&nbsp; <br /><br />You may just be out of luck.&nbsp; Have you tried Tails?&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with booting Liberte from USB</strong><br />
+				Post by: <strong>Crashbangg</strong> on <strong>March 10, 2012, 03:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				No, I haven&#039;t tried Tails but I will definitely look into it today. I&#039;ve read that Liberte is a bit better, but if I can&#039;t do that.. is Tails comparable at least?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with booting Liberte from USB</strong><br />
+				Post by: <strong>Crashbangg</strong> on <strong>March 10, 2012, 05:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hey, thanks for the help. I installed Tails on the USB instead and it is working beautifully.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with booting Liberte from USB</strong><br />
+				Post by: <strong>CaptainSensible</strong> on <strong>March 10, 2012, 10:18 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Awesome.&nbsp; Liberte is &quot;better&quot; in the sense that it allows for &quot;persistence,&quot; or the ability to save settings and files.&nbsp; So once you have your logon password established, PGP keys entered in the GNU Privacy Assistant, and websites entered in the password manager, you can access all that info the next time you start Liberte.&nbsp; Tails doesn&#039;t have persistence yet, but the Tails developers say they&#039;re working on it.&nbsp; <br /><br />I do like the fact that Tails is maintained by a larger group of developers (Liberte has only it&#039;s one developer, Maxim Kammerer).&nbsp; So there&#039;s more people to spot security defects in Tails and then create fixes.&nbsp; You can learn a lot about how to stay safe on the Internet by reading the FAQs and articles on both the Tails site and the Liberte Linux site. 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

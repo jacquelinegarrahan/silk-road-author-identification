@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=184424.0" />
+		<title>Print Page - Anyone know how secure LUKS encryption is for tails persistent volume?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Quazee on July 14, 2013, 03:43 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Anyone know how secure LUKS encryption is for tails persistent volume?</strong><br />
+				Post by: <strong>Quazee</strong> on <strong>July 14, 2013, 03:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Does anyone know what sized encryption the persistent volume in tails uses and if it is secure from most&nbsp; bruteforce attacks we would have to deal with here? Would I be safe if it was bruteforced by those nsa computers in utah? lol. After some reasearch I think LUKS in Ubuntu might use AES-256 but im not sure about tails. The only information I really found is that it uses LUKS, I stopped using truecrypt because I don&#039;t really trust it as much. I&#039;m trying to make sure LUKS in tails is secure if anyone can help out?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone know how secure LUKS encryption is for tails persistent volume?</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 14, 2013, 04:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yeah, Tails uses AES-256. It&#039;s safe to use.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone know how secure LUKS encryption is for tails persistent volume?</strong><br />
+				Post by: <strong>Quazee</strong> on <strong>July 14, 2013, 05:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=184424.msg1338740#msg1338740">Quote from: astor on July 14, 2013, 04:52 pm</a></div></div><blockquote class="bbc_standard_quote">Yeah, Tails uses AES-256. It&#039;s safe to use.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Nice. you seem knowledgeable on the subject. Thanks for the reply!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone know how secure LUKS encryption is for tails persistent volume?</strong><br />
+				Post by: <strong>CannabisConsumer</strong> on <strong>July 14, 2013, 06:56 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">&quot;Yes, it is secure. Ubuntu uses AES-256 to encrypt the disk volume and has a cypher feedback to help protect it from frequency attacks and others attacks that target statically encrypted data.<br /><br />As an algorithm, AES is secure and this has been proved by crypt-analysis testing. The weakness actually lies within the cypher and the software to pass it the keys. Specifically lies in the keystore (which is stored in the header of the volume), the keystore is secured by a passphrase. Passphrases are of course open to some attacks such as dictionary/brute force (if this was successful, it would decrypt the keystore). Using long &quot;complex&quot; non-word passwords would reduce the chance of this happening.<br /><br />The only other possibility to decrypt is using recording devices or social engineering to determine your passphrase.<br /><br />In short, your computer is reasonably safe unless you are subject to serious organised cyber crime or Government investigation!&quot; </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>~ Source:***CLEARNETWARNING*** http://askubuntu.com/questions/97196/how-secure-is-an-encrypted-luks-filesystem<br /><br />I don&#039;t mean to be &quot;that guy&quot; but you should startpage/duckduckgo it. You can find a lot of research but I suppose your encryption will only be as strong as your key.<br /><br />I would personally consider LUKS encryption safe as long as you have a lengthy key with lots of variation.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone know how secure LUKS encryption is for tails persistent volume?</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 14, 2013, 07:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				LUKS does the key management (it&#039;s the Linux Unified Key Setup), dm-crypt performs the encryption and can use various ciphers, AES is the cipher. As long dm-crypt implements AES correctly, it should not be less safe than other programs that use AES-256. <br /><br />On the other hand, a company named ElcomSoft released a program last year that steals encryption keys from RAM for TrueCrypt, PGP, and BitLocker encrypted containers, but not for LUKS/dm-crypt encrypted containers, so LUKS/dm-crypt is safer than those other programs, at least in that regard.<br /><br />http://thenextweb.com/insider/2012/12/20/this-299-tool-is-reportedly-capable-of-cracking-bitlocker-pgp-and-truecrypt-disks-in-real-time/
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone know how secure LUKS encryption is for tails persistent volume?</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>July 14, 2013, 09:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=184424.msg1338951#msg1338951">Quote from: astor on July 14, 2013, 07:08 pm</a></div></div><blockquote class="bbc_standard_quote">LUKS does the key management (it&#039;s the Linux Unified Key Setup), dm-crypt performs the encryption and can use various ciphers, AES is the cipher. As long dm-crypt implements AES correctly, it should not be less safe than other programs that use AES-256. <br /><br />On the other hand, a company named ElcomSoft released a program last year that steals encryption keys from RAM for TrueCrypt, PGP, and BitLocker encrypted containers, but not for LUKS/dm-crypt encrypted containers, so LUKS/dm-crypt is safer than those other programs, at least in that regard.<br /><br />http://thenextweb.com/insider/2012/12/20/this-299-tool-is-reportedly-capable-of-cracking-bitlocker-pgp-and-truecrypt-disks-in-real-time/<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />All currently implemented systems are, to the best of my knowledge, vulnerable to this type of attack, to one degree or another. I believe that the original poster is placing too much emphasis on which cipher is used; any reasonably-modern cipher should be able to do the job. What is far more important, as you have pointed out, is the vulnerability of having the container&#039;s symmetric key snarfed from RAM.&nbsp; The other thing that is important is the quality of your passphrase. It really isn&#039;t going to matter what cipher is used, if you use a passphrase vulnerable to a dictionary attack, a too short one that can be brute-forced, or if you leave it on a sticky note by the monitor. <br /><br />Nightcrawler<br />4096R/BBF7433B 2012-09-22 Nightcrawler &lt;Nightcrawler@SR&gt;<br />PGP Key: http://pgp.mit.edu:11371/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B&nbsp; &nbsp; &nbsp; (MIT clearnet keyserver)<br />PGP Key: https://keys.indymedia.org/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B&nbsp; &nbsp; (IndyMedia https: clearnet keyserver)<br />PGP Key: http://qtt2yl5jocgrk7nu.onion/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B (IndyMedia .onion keyserver)<br />PGP Key: http://dkn255hz262ypmii.onion/index.php?topic=174.msg633090#msg633090&nbsp; &nbsp; &nbsp;(Silk Road Forums PGP Key Link)<br />PGP Key Fingerprint = 83F8 CAF8 7B73 C3C7 8D07&nbsp; B66B AFC8 CE71 D9AF D2F0<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone know how secure LUKS encryption is for tails persistent volume?</strong><br />
+				Post by: <strong>Quazee</strong> on <strong>July 14, 2013, 10:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=184424.msg1339431#msg1339431">Quote from: Nightcrawler on July 14, 2013, 09:47 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=184424.msg1338951#msg1338951">Quote from: astor on July 14, 2013, 07:08 pm</a></div></div><blockquote class="bbc_alternate_quote">LUKS does the key management (it&#039;s the Linux Unified Key Setup), dm-crypt performs the encryption and can use various ciphers, AES is the cipher. As long dm-crypt implements AES correctly, it should not be less safe than other programs that use AES-256. <br /><br />On the other hand, a company named ElcomSoft released a program last year that steals encryption keys from RAM for TrueCrypt, PGP, and BitLocker encrypted containers, but not for LUKS/dm-crypt encrypted containers, so LUKS/dm-crypt is safer than those other programs, at least in that regard.<br /><br />http://thenextweb.com/insider/2012/12/20/this-299-tool-is-reportedly-capable-of-cracking-bitlocker-pgp-and-truecrypt-disks-in-real-time/<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />All currently implemented systems are, to the best of my knowledge, vulnerable to this type of attack, to one degree or another. I believe that the original poster is placing too much emphasis on which cipher is used; any reasonably-modern cipher should be able to do the job. What is far more important, as you have pointed out, is the vulnerability of having the container&#039;s symmetric key snarfed from RAM.&nbsp; The other thing that is important is the quality of your passphrase. It really isn&#039;t going to matter what cipher is used, if you use a passphrase vulnerable to a dictionary attack, a too short one that can be brute-forced, or if you leave it on a sticky note by the monitor. <br /><br />Nightcrawler<br />4096R/BBF7433B 2012-09-22 Nightcrawler &lt;Nightcrawler@SR&gt;<br />PGP Key: http://pgp.mit.edu:11371/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B&nbsp; &nbsp; &nbsp; (MIT clearnet keyserver)<br />PGP Key: https://keys.indymedia.org/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B&nbsp; &nbsp; (IndyMedia https: clearnet keyserver)<br />PGP Key: http://qtt2yl5jocgrk7nu.onion/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B (IndyMedia .onion keyserver)<br />PGP Key: http://dkn255hz262ypmii.onion/index.php?topic=174.msg633090#msg633090&nbsp; &nbsp; &nbsp;(Silk Road Forums PGP Key Link)<br />PGP Key Fingerprint = 83F8 CAF8 7B73 C3C7 8D07&nbsp; B66B AFC8 CE71 D9AF D2F0<br /><br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=184424.msg1339431#msg1339431">Quote from: Nightcrawler on July 14, 2013, 09:47 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=184424.msg1338951#msg1338951">Quote from: astor on July 14, 2013, 07:08 pm</a></div></div><blockquote class="bbc_alternate_quote">LUKS does the key management (it&#039;s the Linux Unified Key Setup), dm-crypt performs the encryption and can use various ciphers, AES is the cipher. As long dm-crypt implements AES correctly, it should not be less safe than other programs that use AES-256. <br /><br />On the other hand, a company named ElcomSoft released a program last year that steals encryption keys from RAM for TrueCrypt, PGP, and BitLocker encrypted containers, but not for LUKS/dm-crypt encrypted containers, so LUKS/dm-crypt is safer than those other programs, at least in that regard.<br /><br />http://thenextweb.com/insider/2012/12/20/this-299-tool-is-reportedly-capable-of-cracking-bitlocker-pgp-and-truecrypt-disks-in-real-time/<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />All currently implemented systems are, to the best of my knowledge, vulnerable to this type of attack, to one degree or another. I believe that the original poster is placing too much emphasis on which cipher is used; any reasonably-modern cipher should be able to do the job. What is far more important, as you have pointed out, is the vulnerability of having the container&#039;s symmetric key snarfed from RAM.&nbsp; The other thing that is important is the quality of your passphrase. It really isn&#039;t going to matter what cipher is used, if you use a passphrase vulnerable to a dictionary attack, a too short one that can be brute-forced, or if you leave it on a sticky note by the monitor. <br /><br />Nightcrawler<br />4096R/BBF7433B 2012-09-22 Nightcrawler &lt;Nightcrawler@SR&gt;<br />PGP Key: http://pgp.mit.edu:11371/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B&nbsp; &nbsp; &nbsp; (MIT clearnet keyserver)<br />PGP Key: https://keys.indymedia.org/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B&nbsp; &nbsp; (IndyMedia https: clearnet keyserver)<br />PGP Key: http://qtt2yl5jocgrk7nu.onion/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B (IndyMedia .onion keyserver)<br />PGP Key: http://dkn255hz262ypmii.onion/index.php?topic=174.msg633090#msg633090&nbsp; &nbsp; &nbsp;(Silk Road Forums PGP Key Link)<br />PGP Key Fingerprint = 83F8 CAF8 7B73 C3C7 8D07&nbsp; B66B AFC8 CE71 D9AF D2F0<br /><br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You guys are awesome. &lt;3&nbsp; Yes, I have a very strong passphrase so I&#039;m good with that. <br />I was really just curious what others thought about the encryption in Tails. I couldn&#039;t find any imformation on them altering it or anything.<br />so Tails wipes the ram after use so im good on that front<br />Hopefully I don&#039;t get raided and they keep it powered on. :p
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone know how secure LUKS encryption is for tails persistent volume?</strong><br />
+				Post by: <strong>astor</strong> on <strong>July 14, 2013, 10:23 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks Nightcrawler, that&#039;s good info.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">PGP Key: http://pgp.mit.edu:11371/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B&nbsp; &nbsp; &nbsp; (MIT clearnet keyserver)<br />PGP Key: https://keys.indymedia.org/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B&nbsp; &nbsp; (IndyMedia https: clearnet keyserver)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;d just like to point out that nobody on this forum should be grabbing PGP keys from clearnet key servers unless they know how to properly configure their PGP client to work over Tor.<br /><br />Key servers almost certainly log requests, so LE could create a forum account and post links like this to enumerate forum users. Or they could look for links like these posted on the forum and subpoena the key server operates for the requests. They couldn&#039;t prove you did anything illegal, but my philosophy is to never get my IP address on any lists in the first place, so I&#039;m never on their radar.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone know how secure LUKS encryption is for tails persistent volume?</strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>August 29, 2013, 10:18 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=184424.msg1339517#msg1339517">Quote from: astor on July 14, 2013, 10:23 pm</a></div></div><blockquote class="bbc_standard_quote">Thanks Nightcrawler, that&#039;s good info.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">PGP Key: http://pgp.mit.edu:11371/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B&nbsp; &nbsp; &nbsp; (MIT clearnet keyserver)<br />PGP Key: https://keys.indymedia.org/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B&nbsp; &nbsp; (IndyMedia https: clearnet keyserver)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;d just like to point out that nobody on this forum should be grabbing PGP keys from clearnet key servers unless they know how to properly configure their PGP client to work over Tor. </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I guess I never thought of it because I never use client software to grab/look-up keys -- instead i used a web browser under Tor. <br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=184424.msg1339517#msg1339517">Quote from: astor on July 14, 2013, 10:23 pm</a></div></div><blockquote class="bbc_standard_quote">Key servers almost certainly log requests, so LE could create a forum account and post links like this to enumerate forum users. Or they could look for links like these posted on the forum and subpoena the key server operates for the requests. They couldn&#039;t prove you did anything illegal, but my philosophy is to never get my IP address on any lists in the first place, so I&#039;m never on their radar.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You may have a point, but I fail to see where it benefits keyserver operators to log requests. I think that this is more of a theoretical vulnerability, as opposed to a practical one.&nbsp; Despite this, however, I will remove the clearnet links from my .sig. <br /><br />Nightcrawler<br />4096R/BBF7433B 2012-09-22 Nightcrawler &lt;Nightcrawler@SR&gt;<br />PGP Key: http://qtt2yl5jocgrk7nu.onion/pks/lookup?op=get&amp;search=0xB8F1D88EBBF7433B (IndyMedia .onion keyserver)<br />PGP Key: http://dkn255hz262ypmii.onion/index.php?topic=174.msg633090#msg633090&nbsp; &nbsp; &nbsp;(Silk Road Forums PGP Key Link)<br />PGP Key Fingerprint = 83F8 CAF8 7B73 C3C7 8D07&nbsp; B66B AFC8 CE71 D9AF D2F0<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone know how secure LUKS encryption is for tails persistent volume?</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>August 29, 2013, 01:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Technically it&#039;s just as secure as TrueCrypt. And unlike TrueCrypt, which you can only download over an unsecure connection, Tails gets downloaded over a secure connection.<br />Downloading TrueCrypt over an unsecure connection means that an attacker could intercept the connection and give you their version of TrueCrypt with backdoor instead. Most people don&#039;t verify their TrueCrypt downloads.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Anyone know how secure LUKS encryption is for tails persistent volume?</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 30, 2013, 06:01 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=184424.msg1501420#msg1501420">Quote from: Nightcrawler on August 29, 2013, 10:18 am</a></div></div><blockquote class="bbc_standard_quote">I guess I never thought of it because I never use client software to grab/look-up keys -- instead i used a web browser under Tor. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />My public key is on some key servers and I didn&#039;t upload it. The proof (to me) is that it is signed by a key that hasn&#039;t signed the key on my computer. So somebody was playing around with their PGP program, signed my key, and it uploaded it to a key server. That may have been the default action. So they leaked their IP address to the key server, along with their association to me and SR.<br /><br />It&#039;s best for newbies not to fuck with key servers at all. Disable everything that has to do with them.<br /><br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">You may have a point, but I fail to see where it benefits keyserver operators to log requests. I think that this is more of a theoretical vulnerability, as opposed to a practical one.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Why? Key servers run on web servers and all web servers log IP addresses by default. If nothing else, the benefit is to detect malicious behavior, DDOS attacks and stuff like that. The side effect is being a target of subpoenas.<br /><br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

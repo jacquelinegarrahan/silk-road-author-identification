@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=28552.0" />
+		<title>Print Page - virtualization / jails = insecure crap</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: scorp3 on June 29, 2012, 01:29 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>virtualization / jails = insecure crap</strong><br />
+				Post by: <strong>scorp3</strong> on <strong>June 29, 2012, 01:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				Anything except OpenBSD full ASLR hardware virtualization is crap and provides security advantages only in theory. Would you agree with this statement?<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Not to start a war. But the consensus, among the OpenBSD cognescenti, is that virtual machines / Chroot / Jails are not adding additional security, nor platform isolation, though they do offer the appearance of it. Many people think they are getting these through virtualization, but ... the consensus is they are mistaken. You may, if you wish, call that a theory, but the Project members will call it fact, and cite chapter and verse, nastily. You can search the misc@ archives for lots of it. <br /><br />The use of chroot within OpenBSD itself is for filesystem isolation after privilege separation, for Apache and BIND, primarily.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />http://www.daemonforums.org/showthread.php?t=3983<br /><br />I would like to know the truth.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: virtualization / jails = insecure crap</strong><br />
+				Post by: <strong>scorp3</strong> on <strong>June 29, 2012, 11:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28552.msg314671#msg314671">Quote from: Shannon on June 29, 2012, 01:36 am</a></div></div><blockquote class="bbc_standard_quote">i do agree with them though that just using one vm by itself is pretty silly though.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Sure thing.<br /><br />No other opinions on this topic?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: virtualization / jails = insecure crap</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>June 29, 2012, 04:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Beyond a doubt the people who are best at security are the ones who are largely in favor of correctness over all else. That said, there are some very good security researchers who are in support of isolation. OpenBSD is pretty strongly against it actually, they don&#039;t have mandatory access controls either pretty much as close as they get is systrace and the standard permissions system. It isn&#039;t like FreeBSD is made by a bunch of fucktards who have no idea what they are doing, and in fact even some of the people who are in the correctness-only-fuck-everything-else camp have good things to say about FreeBSD jails as opposed to other sorts of similar isolation based techniques. You need to know the limitations of virtualization. Using things like Virtual Box can hurt your security, especially if you are using it willy nilly with no good reason, like you are running everything inside the same VM. In these cases you are taking a security hit and you are not getting any real advantages. I like the idea of running Tor on the host with network facing applications isolated in a virtual machine, although I do suggest doing this with hardware which gives all of the same benefits without any of the hits to security that come from virtualization. Also keep in mind that different types of virtualization have different security benefits and disadvantages to weigh.<br /><br />At the end of the day a very skilled attacker is going to laugh at your virtual isolation and break right out of it, but lesser skilled attackers are going to be stopped by it. In fact there have already been cases where running web servers isolated in virtualbox VMs prevented the feds from deanonymizing hidden services that they managed to hack into, because they couldn&#039;t break out of the isolation and only gained access to internal IP addresses. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: virtualization / jails = insecure crap</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>June 29, 2012, 04:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Of course the best thing to say to people like this is that a perfectly correct isolation system can not be broken out of ;) 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: virtualization / jails = insecure crap</strong><br />
+				Post by: <strong>wanna-be</strong> on <strong>June 30, 2012, 02:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28552.msg315905#msg315905">Quote from: kmfkewm on June 29, 2012, 04:25 pm</a></div></div><blockquote class="bbc_standard_quote">Beyond a doubt the people who are best at security are the ones who are largely in favor of correctness over all else. That said, there are some very good security researchers who are in support of isolation. OpenBSD is pretty strongly against it actually, they don&#039;t have mandatory access controls either pretty much as close as they get is systrace and the standard permissions system. It isn&#039;t like FreeBSD is made by a bunch of fucktards who have no idea what they are doing, and in fact even some of the people who are in the correctness-only-fuck-everything-else camp have good things to say about FreeBSD jails as opposed to other sorts of similar isolation based techniques. You need to know the limitations of virtualization. Using things like Virtual Box can hurt your security, especially if you are using it willy nilly with no good reason, like you are running everything inside the same VM. In these cases you are taking a security hit and you are not getting any real advantages. I like the idea of running Tor on the host with network facing applications isolated in a virtual machine, although I do suggest doing this with hardware which gives all of the same benefits without any of the hits to security that come from virtualization. Also keep in mind that different types of virtualization have different security benefits and disadvantages to weigh.<br /><br />At the end of the day a very skilled attacker is going to laugh at your virtual isolation and break right out of it, but lesser skilled attackers are going to be stopped by it. In fact there have already been cases where running web servers isolated in virtualbox VMs prevented the feds from deanonymizing hidden services that they managed to hack into, because they couldn&#039;t break out of the isolation and only gained access to internal IP addresses.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Is TAILS within vmware within a hidden trucrypt partition with zero data or web browsing history technically secure from a hardware persepective?&nbsp; How about from a web attack?
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

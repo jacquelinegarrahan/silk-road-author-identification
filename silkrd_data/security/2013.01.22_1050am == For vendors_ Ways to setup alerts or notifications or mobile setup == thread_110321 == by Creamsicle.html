@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=110321.0" />
+		<title>Print Page - For vendors: Ways to setup alerts or notifications or mobile setup</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Creamsicle on January 22, 2013, 10:50 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>For vendors: Ways to setup alerts or notifications or mobile setup</strong><br />
+				Post by: <strong>Creamsicle</strong> on <strong>January 22, 2013, 10:50 am</strong>
+			</dt>
+			<dd class="postbody">
+				This post is for fellow vendors but if any non vendors have any ideas please reply. I am trying to create a setup to where I can somehow receive alerts or notifications when my vendor account gets a new order or message. Obviously there is no direct way of doing this but I am wondering with all the apps that are out there etc if anyone has come up with a creative way to stay on top of their vendor accounts when they are on the go?<br /><br />Obviously security is a big issue here but I am just asking for ideas. I would like to be able to check SR via a smartphone (e.g. android or iphone, ipad, android tablet, kindle) but with those devices using Tor is not the same as downloading the tor browser bundle and/or using a linux livecd. But if you were to setup a VPN on your phone/device as well as tor that this might be a safe option. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: For vendors: Ways to setup alerts or notifications or mobile setup</strong><br />
+				Post by: <strong>monrovia</strong> on <strong>January 22, 2013, 10:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Obviously, like you said, security is a BIG issue. I remember reading a post a while ago saying that using tor on a mobile device isn&#039;t all that safe. Not sure if a VPN would completely change the level of security, but it seems like this idea is way too much trouble/risk for the benefit that you would get from it... Every once in a while a customer will get their package shipped out a day earlier...maybe... I&#039;m pretty new, and I&#039;m no vendor, but if I were, I wouldn&#039;t want to risk it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: For vendors: Ways to setup alerts or notifications or mobile setup</strong><br />
+				Post by: <strong>PlutoPete</strong> on <strong>January 23, 2013, 08:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I use my android tablet to browse the site and check my orders, but i do it over wifi rather than the phone network. I&#039;m not confident enough in android to trust using my pin though.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: For vendors: Ways to setup alerts or notifications or mobile setup</strong><br />
+				Post by: <strong>astor</strong> on <strong>January 23, 2013, 08:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=110321.msg751728#msg751728">Quote from: Creamsicle on January 22, 2013, 10:50 am</a></div></div><blockquote class="bbc_standard_quote">Obviously there is no direct way of doing this but I am wondering with all the apps that are out there etc if anyone has come up with a creative way to stay on top of their vendor accounts when they are on the go?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This is technically possible with a Python script (and a few Python libraries). You could use urllib to download a copy of your vendor messages or orders page, generate a hash and compare it to a stored hash. If the hashes are different, the page has been updated, meaning there are new messages or orders. Then use the smtp library to send yourself an email. Some carriers allow you to send emails to an address like 2221113333@sprint.com and you receive it on your phone as a text message.<br /><br />I could write something like this. The problem is that it&#039;s horribly insecure and I won&#039;t do it. :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: For vendors: Ways to setup alerts or notifications or mobile setup</strong><br />
+				Post by: <strong>monrovia</strong> on <strong>January 24, 2013, 01:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=110321.msg756486#msg756486">Quote from: astor on January 23, 2013, 08:51 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=110321.msg751728#msg751728">Quote from: Creamsicle on January 22, 2013, 10:50 am</a></div></div><blockquote class="bbc_alternate_quote">Obviously there is no direct way of doing this but I am wondering with all the apps that are out there etc if anyone has come up with a creative way to stay on top of their vendor accounts when they are on the go?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I could write something like this. The problem is that it&#039;s horribly insecure and I won&#039;t do it. :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Exactly what I though the consensus among the more tech-savy users would be...
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

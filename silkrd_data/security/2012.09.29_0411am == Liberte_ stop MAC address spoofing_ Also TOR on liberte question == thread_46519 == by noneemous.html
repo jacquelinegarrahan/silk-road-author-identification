@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=46519.0" />
+		<title>Print Page - Liberte: stop MAC address spoofing? Also TOR on liberte question</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: noneemous on September 29, 2012, 04:11 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Liberte: stop MAC address spoofing? Also TOR on liberte question</strong><br />
+				Post by: <strong>noneemous</strong> on <strong>September 29, 2012, 04:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;d like to use MAC client filtering as a layer of security on my router, which requires a whitelist of allowed MAC clients. Since Liberte randomizes MAC addresses, this poses a problem. <br /><br />i think for a small time buyer, I&#039;m better off protecting my WLAN security vs avoiding fingerprinting. So anyone know of a way to get a static MAC address or completely stop MAC spoofing in Liberte?<br /><br />Also, a question regarding TOR on Epiphany. Prior to using Liberte, I had only used the TOR browser bundle to access the darknet. Is the TOR implementation in Liberte as secure as the TOR browser bundle? 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte: stop MAC address spoofing? Also TOR on liberte question</strong><br />
+				Post by: <strong>Kilgore</strong> on <strong>October 02, 2012, 02:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ok. first things first.<br />If you wanted to have transmission security and plausible deniability from everyone (not just the feds), then open your router up, use liberte or tails. This means that you have a perfectly good reason for vast amounts of encrypted traffic going over your network (&quot;i swear i know nothing about wireless security officer!&quot;), and if you are using liberte/tails then all that traffic is ENCRYPTED, so your neighbors cant possibly see it, neither can the feds. Also dont forget to use clearweb most of the time though, all your traffic encrypted is suspicious...<br /><br />If you are more worried about neighbors/feds exploiting one of your machines (that connects through clearnet). wpa2 and mac address filtering all the way. Don&#039;t let anyone else onto your network.<br /><br />Secondly I&#039;m not sure but i think you could run it through a VM. this might mean that you could kill 2 birds with one stone, visualization and mac address problems. Don&#039;t hold me to that though.<br /><br />And lastly, the anti browser fingerprinting of liberte is good. But its not great compared to the sheer number of people that use the browser bundle. Pretty hard to &quot;fingerprint&quot; your browser if your browser happens to be the one used by a gajillion people to access an encrypted anonymous network.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte: stop MAC address spoofing? Also TOR on liberte question</strong><br />
+				Post by: <strong>michaeljackson</strong> on <strong>October 02, 2012, 08:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				There&#039;s a few ways to accomplish this. Liberté only randomizes wireless connections, so you could always just connect to your network through ethernet.<br /><br />But if you need wireless, you can always just change the mac address with the ifconfig command. ifconfig can only be run as the root user, and Liberté locks down root access a couple minutes after the system starts, so here&#039;s what I&#039;d suggest:<br /><br />Start Liberté, enter your password, and once it boots to the GUI, push &quot;WindowsKey+Esc&quot; and &quot;Logout to shell&quot; push the WindowsKey again until you see the root terminal. type &quot;okroot&quot; to unlock the root account (you can skip &quot;okroot&quot; if you&#039;re really quick about all this). As the root user, type the following<br /><br />ifconfig wlan0 down<br />ifconfig wlan0 hw ether XX:XX:XX:XX:XX:XX (whatever mac address you whitelight on your router)<br />ifconfig wlan0 up<br /><br />Then you can connect just fine. With this method you&#039;ll have to do this every time you start, and you can whitelight a different address than your normal one. I&#039;d suggest putting the above code in a text file with &quot;#!/bin/bash&quot; at the top, so it looks like this <br /><br />#!/bin/bash<br /><br />ifconfig wlan0 down<br />ifconfig wlan0 hw ether XX:XX:XX:XX:XX:XX (whatever mac address you whitelight on your router)<br />ifconfig wlan0 up<br /><br />Then save the file (for this example, name it &quot;filename&quot;) change permissions to make it executable (right-click, Properties, Permissions, &quot;Make this file executable&quot;) and store it in your persistent directory. Then you can change your mac to the one you whitelighted when you start the computer up by logging out to shell immediately, switching to the root terminal, and typing &quot;./home/anon/persist/filename&quot;<br /><br />This way you can use a different mac address than the one your computer is hardwired to use, and you can connect with the same mac address everytime you start up.<br /><br />There might be an option you can type during the GRUB bootloader to prevent it from randomizing the wireless mac address, but I&#039;m not sure about that. <br /><br />Hope this was helpful and easy to understand, I&#039;m pretty high right now :p
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Liberte: stop MAC address spoofing? Also TOR on liberte question</strong><br />
+				Post by: <strong>michaeljackson</strong> on <strong>October 03, 2012, 01:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46519.msg499037#msg499037">Quote from: Jallo6 on October 02, 2012, 11:38 pm</a></div></div><blockquote class="bbc_standard_quote">Hey,<br /><br />I tried to do this.&nbsp; I am using TAILS.<br /><br />I made the file and stored it in persistent.&nbsp; I named it &quot;C MAC&quot;.<br /><br />I then made the file executable.<br /><br />Then I opened a root terminal and typed:<br /><br />./home/amnesia/Persistent/C MAC<br />(I also tried it without the . period at the front)<br /><br />When I do this it comes back as:<br />bash: ./home/amnesia/Persistent/C: No such file or directory<br /><br /><br /><br />What am I doing wrong?&nbsp; Any help is greatly appreciated.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />When you type stuff in a terminal, you need to put either single &#039; or double &quot; quotes around any file that has a space in it, otherwise it thinks you&#039;re trying to run the file &#039;C&#039; with the option &#039;MAC&#039;<br /><br />Try this:<br /><br />./home/amnesia/Persistent/&#039;C MAC&#039;<br /><br />and it should work
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

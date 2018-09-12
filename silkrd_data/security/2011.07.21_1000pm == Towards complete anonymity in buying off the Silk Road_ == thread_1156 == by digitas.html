@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=1156.0" />
+		<title>Print Page - Towards complete anonymity in buying off the Silk Road:</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: digitas on July 21, 2011, 10:00 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>digitas</strong> on <strong>July 21, 2011, 10:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Towards complete anonymity in buying off the Silk Road:<br /><br />Many users of the Silk Road are new to bitcoin and Tor technology and with that in mind it seems appropriate to discuss how anonymity can be created and then maintained when trying to purchase off the Silk Road.&nbsp; The following post describes one way to get money onto the Silk Road and tries to consider each place where loss of anonymity can occur.&nbsp; I am hoping to use this post as a starting point for fruitful discussion concerning making the process of getting cash onto the Silk Road as completely anonymous as possible.&nbsp; If you have more knowledge than I do on the subject and find problems with what I describe, please post and explain so we may all benefit.&nbsp; Hopefully one day we will have a fairly simple guide that newcomers to the Silk Road can read to understand the technology that the Silk Road operates on and the limitations to this method.<br /><br />A popular route to get bitcoins from a US bank account onto the Silk Road seems to be the following:<br />*adapted from anarcho47&#039;s response in the thread &quot;Argg, I need help; few issues. Details please.&quot; on the Security board<br /><br />Bank --&gt; Dwolla --&gt; Tradehill/MtGox --&gt; Tumbler --&gt; Bitcoin on PC --&gt; SR<br /><br />The following discussion aims to trace this route step by step and analyze each transaction to determine how anonymity can be established and then maintained.&nbsp; The major problem I have seen with this process is that each of these transactions done by the typical computer user will all be done from the same IP address and this fact allows for a digital paper trail to be established that could link your bank account in your real name to the Silk Road transaction.&nbsp; I will offer some ideas on how to get around this problem towards the end of this post.<br /><br />Let&#039;s say I follow the above route. Each transaction is done on my home computer with an IP address that can be tied to my real identity by my ISP (such as could occur if LE was pressuring them for info).&nbsp; I only use Tor to access the .onion sites, I&#039;m not sure how to direct any other traffic into onionland.&nbsp; First, a bank transaction (tied to my actual identity) goes to Dwolla.&nbsp; To make a bank deposit into Dwolla, the bank account has to be verified meaning that even if you give Dwolla fake information for your account profile, Dwolla could still link you to your transaction with your bank account information.<br /><br />Now, to Tradehill/MtGox: I could again use fake info to set up an account, but the incoming deposit of money will be from my verified Dwolla account tied to my bank account.&nbsp; So up to here the transaction is tied to my actual identity.&nbsp; <br /><br />The purpose of the tumbler is to anonymize this transaction and in theory would remove the link between my real identity and the bitcoins.&nbsp; One tumbling method I&#039;m aware of is to enact a series of dummy transactions through an online bitcoin wallet service:&nbsp; Tradehill/MtGox to mybitcoin.com Wallet 1, send mybitcoin.com Wallet 1 to mybitcoin.com Wallet 2, send to Wallet 3, etc. This will take the BTC address (from Tradehill/MtGox, tied to my identity) and move the coins in a way that it breaks the link as I am using fake information to create these wallets and the first transaction can no longer be linked to me.&nbsp; <br /><br />But, anyone with access to the BTC network (aka anyone using a bitcoin client or blockexplorer.com) can see these transactions and link the Tradehill/MtGox address to Wallet 1 to Wallet 2 to Wallet 3 and the problem here is that your IP that is linked to the Bank-&gt;Tradehill/MtGox transaction (obtained from the online wallet service) will match the IP of the person who opened each of the new wallets and these could be matched.&nbsp; Additionally, should we be worried about the fact that all bitcoin transactions are published to the entire BTC network? I think that as long as we can generate dummy transactions that are not tied to our real identity than we can protect against this problem. Let&#039;s assume that we have successfully removed the link between the bitcoins and your real identity and move onwards to see if this is the only weak point in the proposed transaction chain.<br />&nbsp;<br />If we have successfully removed the first link to our real identity, then the coins we got from our bank money should not be linked to our real identity, i.e. no one can say BTC address XYZ of 100 BTC is linked to my name.&nbsp; For the rest of the transaction chain, let&#039;s say I move the bitcoins from mybitcoin.com Wallet 3 to Wallet 4 on my PC.&nbsp; If I understand this part of the process correctly, Wallet 4 on my PC is a wallet associated with a bitcoin client running on your own PC.&nbsp; This part of the chain (tumbler --&gt; BTC on PC --&gt; SR) is advised over tumbler --&gt; SR directly as you don&#039;t want your tumbler to hang onto your coins: there are rumors, for instance, that mybitcoin.com sometimes &quot;misplaces&quot; coins leaving you with an empty wallet and you also have much less control over the transaction into Silk Road when you are ready to deposit onto the site (SR gives you a 12 hr window I believe and while this should be more than enough time, you don&#039;t want an error to occur because your coin tumbler was too slow to move your coins out in time).<br /><br />So moving your coins onto a local wallet that you have control over seems to be a good move, but we are back to being on a device linked to your IP (which is linked to your real identity). Assuming we have anonymity through our idealized tumbler, then as long as we don&#039;t link our IP with that bitcoin address then we are fine.&nbsp; If you are reading this and know enough about bitcoin to say something about keeping this link between address and IP from occurring, please post below.&nbsp; I think that as long as you generate a new address to receive onto your PC, then you will maintain the anonymity gained by using the coin tumbler.&nbsp; I don&#039;t know enough about the bitcoin protocol to say that a newly generated address is not linked to the IP of the machine that made the address in some way FOR CERTAIN, but I think that it is not.&nbsp; (But I could imagine that in the &quot;talk&quot; between computers in the bitcoin network the IP could be linked with a transaction; maybe this only applies when you generate a new block...BTC miners only?) There was a thread a little while ago saying that the BTC client should be running over Tor which would solve the IP problem (leaving us with only the weaknesses associated with the Tor protocol).<br /><br />The first problem with the chain is maintaining loss of identity between Tradehill/MtGox and your PC wallet through the tumbler.&nbsp; The first solution to this problem is to use Tor.&nbsp; Please correct me if I am wrong, but as long as you operate your tumbler operations over Tor than you should be able to maintain anonymity.&nbsp; There are some caveats to this as there are certain attacks to which the Tor network is susceptible.&nbsp; The second solution is to use a different IP address, like a public wifi hotspot, to make the tumbling transactions (and if the hotspot will allow you to connect to the Tor network, why not use Tor too?) Here you will want to be careful that your internet activity cannot be linked to your presence at the hotspot, such as through security camera footage.&nbsp; It might be safer to actually just use Tor from home.&nbsp; In this case, I would recommend you look into a VPN service that allows you to change the exit node (change your apparent IP address) to add another layer of security.<br /><br />The second problem is receiving the tumbled bitcoins on your computer which you then send to the Silk Road.&nbsp; To maintain the most anonymity, I recommend looking into keeping your Silk Road utilities on a removable flash drive and it would be best if you learn how to boot from an OS you put onto the flash drive.&nbsp; This setup would be something like booting from a flash drive with Linux OS that had Bitcoin client, Tor, and GPG and deleted system memory when you removed the drive -- google TAILS OS for more information.&nbsp; This way, no Silk Road activity ever touches your actual computer and if LE shows up, you can easily get rid of a flash drive compared to an entire computer.&nbsp; If LE somehow had a warrant to look at your computer, they would find no Tor, no GPG, no Bitcoin -- no evidence that you have the tools necessary to access and use this site.&nbsp; <br /><br />Once the coins are in your Silk Road account, you should be fine to buy (just run everything through Tor, preferably on the flash drive system as just described) and it will be next to impossible for the purchase to be traced to you.&nbsp; Once you buy, however, you now have the problem of shipping and receiving the goods which is a whole other issue.&nbsp; Hint: GPG is key when sending your address to a seller and will help strengthen the remaining weak spots in the entire Silk Road buying process.&nbsp; Additionally, only buy from sellers that you trust -- with lots of good feedback and a favorable standing on the community forums.&nbsp; A threat to your anonymity is if your seller is compromised and your address is revealed to LE.<br /><br />Finally, it is worthy of our time to take a step back and evaluate the risk involved and the probability of LE finding you.&nbsp; If you followed all of the recommendations in this post, then LE will have to subpoena several companies for IP information, analyze both the Tor network and Bitcoin network to match up transactions, and the mathematics of GPG encryption guarantee that there aren&#039;t enough computational resources available for LE to decipher your encrypted communication given commercially/publicly available software.&nbsp; The sum of all the work necessary to link the goods you received in the mail to your purchase of bitcoins is much, much more than LE has to devote to finding you. **This is an assumption about the resources of LE and potentially underestimates their goals, you can never be too safe!**<br /><br />Again, I welcome answers to questions interspersed throughout this post and any corrections/tips/advice to supplement what I have said here. Just remember while traveling the Silk Road that information is key to keeping you safe -- do your research!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>anarcho47</strong> on <strong>July 21, 2011, 10:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Great post!<br /><br />For the record I recommended using an anonymous gift CC and LibertyReserve (where you can sign up anonymously and also hide the sending address in any transaction for a very small fee).&nbsp; This automatically removes any trace of you except your IP and that is only on MTGox - the rest would be pure speculation on the part of LE with no tangible provability.<br /><br />I think the bigger worry (for sellers) is getting your funds out so they are untraceable.&nbsp; At the very least if you are depositing a ton of cash into a bank account (especially US - thank you Frank-Dodd) you will have the IRS kicking your door in for tax evasion.&nbsp; You can set up offshore credit cards that will accept both Liberty Reserve and Pecunix (if you want something gold-backed) and both of those services are anonymous.<br /><br />Pecunix is actually the better of the two since you can connect to and use it via Tor.&nbsp; It is also 100% anonymous and requires no ID or even a name to set up, just a highly secure set of numbers, passphrase and acces PINs.&nbsp; I know a few people who do business on their own online and they swear by Pecunix, although it&#039;s tough to find a BTC exchange that will take transfers from it.<br /><br />All in all, excellent post, and those are the only contributions I can really think to make.&nbsp; If you are generating new receiving addresses for each transaction on your BTC PC program, and running through a tumbler before PC and on the other side of SR, you should be just fine.&nbsp; All you have to worry about then is the tax parasites...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>phubaiblues</strong> on <strong>July 21, 2011, 10:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I so appreciate the OP starting this thread.&nbsp; when I first was getting going on SR and with btc, I had to learn all this on my own, through trial and error, and spent lots of money--including buying btc on paypal--while I learned the ropes.&nbsp; This is invaluable and can save us money and freedom.&nbsp; More and more I&#039;m convinced we are going to need to get together and do a good FAQ for SR, and find a way to make newbies come over here to the forums.&nbsp; I&#039;d just started a thread on this very subject, as it&#039;s too important just to be left up to new users to &#039;sort it out.&#039;&nbsp; Yeah, it&#039;s paying your dues, but we don&#039;t need the heat, and some people get discouraged and thro caution to the wind, and that is dangerous.&nbsp; <br /><br />Well done!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>chronicpain</strong> on <strong>July 21, 2011, 10:47 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Great thread. But if someone were to use their bitcoin wallet (on the computer) that goes thru tor, wouldn&#039;t that be a pretty good stop gap? So, basically, my ip address isn&#039;t associated with moving btcs in or out, right?<br />Granted, you have to make sure that your bitcoin wallet is going thru tor and not clearnet.<br /><br />Im now in the process of getting a thumbrive that is big enough to hold linux and all the other programs plus a couple of extra GB&#039;s. That way, you are right, my life would be only 3 inches big, lol... the bad thing is if I ever lost it, I would be sol.. But what great advice you gave, just great...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>BitShuffle</strong> on <strong>July 21, 2011, 11:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				well said, digitas...&nbsp; well said
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>btcfreedom</strong> on <strong>July 21, 2011, 11:48 pm</strong>
+			</dt>
+			<dd class="postbody">
+				excellent thread digitas<br /><br />well written couldn&#039;t agree more<br /><br /><br />~B
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>Grimlock</strong> on <strong>July 22, 2011, 03:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Good thing I asked on the thread then. XD Thanks.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>Rinaldo</strong> on <strong>July 22, 2011, 03:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=1156.msg8869#msg8869">Quote from: chronicpain on July 21, 2011, 10:47 pm</a></div></div><blockquote class="bbc_standard_quote">Great thread. But if someone were to use their bitcoin wallet (on the computer) that goes thru tor, wouldn&#039;t that be a pretty good stop gap? So, basically, my ip address isn&#039;t associated with moving btcs in or out, right?<br />Granted, you have to make sure that your bitcoin wallet is going thru tor and not clearnet.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I am hoping someone can help with that exact question..I have confirmed that my bitcoin wallet is running through tor after adjusting the settings (When I have Tor running, it has 8 connections, when I kill Tor I lose all connection)&nbsp; <br /><br />How much protection or added protection is this providing running my local Bitcoin wallet through TOR?&nbsp; This does not replace the need for a tumbler does it?<br /><br />And on the topic, of which I have not seen yet in other threads along the same topic:&nbsp; Which Tumblers are people using?&nbsp; I know of BitcoinLaundry.com which seems pretty janky.... Blind Bitcoin looks to be the most legit&nbsp; http://n7zdesslujl5ba4q.onion/index.html .... But I have yet to use it, and no one had responded in another thread as to using it either...<br /><br />For those of you that might be using other Tumbling options can you please share those with us...&nbsp; <br /><br />Thanks!<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>joeblow2</strong> on <strong>July 22, 2011, 04:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;d be wary of those tumbler places.&nbsp; They could just be having people send their BTC and then taking off with them.&nbsp; All of the tumblers that were listed on the HW when I first got on Tor are gone and no one has really replaced them (meaning a tumbler that the BTC forums talk about and have reviews of).&nbsp; And if you&#039;ve read the other threads about tumblers you know that the last &quot;bitcoinlaundry&quot; owner just added one link to your wallet chain.&nbsp; He didn&#039;t even tumble and he charged you.&nbsp; Nice guy.<br /><br />@digitas-would you be willing to help with (in english that means &quot;write the whole thing if you&#039;re qualified and willing&quot;&nbsp; sorry :)&nbsp; ) concerning the 8-10 steps that need to be done for someone to &quot;isolate their machine&quot; and identity when doing SR business.&nbsp; Since all the things are legal (TrueCrypt, VPN, etc) just a simple list of steps with a short explanation of the goal of each step, any software needed (hopefully with links), any tricks about QC&#039;ing it for the correct result and a simple &quot;how to&quot; so that any potential seller on SR could hand it to a local tech guy and he could install and QC it all to make sure it&#039;s working.&nbsp; <br /><br />Personal use buyers have little to concern themselves with unless there&#039;s another reason for LE to be paying particular attention to them.<br />Like if they&#039;re on house arrest, for instance.&nbsp; (sorry, couldn&#039;t help it) <br />But the sellers need to be as 100% anonymous and staying that way.<br /><br />Would be much appreciated.&nbsp; If anyone else is willing and able, please chime in....&nbsp; &nbsp;:D
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>digitas</strong> on <strong>July 23, 2011, 08:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				@chronicpain -- if the btc client is being tunneled through tor than it should be good, the thing is, like you said, making sure that btc connections go only through tor. your concern about relying on 1 flash drive to carry your entire SR travels is legitimate and I would recommend backing up important files into another encrypted flash drive (see TrueCrypt). Then you can back up every so often, stash the backup and if something were to happen causing you to destroy the primary drive, it wouldn&#039;t be that annoying to recreate it and restore the unique data from the backup<br /><br />@Rinaldo -- Bitcoin works by transferring X bitcoins from account 1 to account 2.&nbsp; This process constitutes one &quot;transaction&quot; and is the fundamental operation of the bitcoin network (outside of mining) -- that is to say bitcoin exists to transfer currency between account 1 to account 2.&nbsp; Now, let&#039;s say you are interested in making a purchase on Silk Road.&nbsp; You make an account and it has an associated wallet with it that you can deposit btc into in order to buy from vendors on SR.&nbsp; This wallet is just like the wallet you carry day to day -- it holds your money (bitcoins in this case).&nbsp; To make the purchase, you first need to move bitcoins from somewhere (bitcoins on your PC) to the SR account&#039;s wallet.&nbsp; During a transfer, you go to SR and open the SR wallet (on the account page), you enter how many bitcoins you have to deposit and an address shows up.&nbsp; This address is like any other address in that it is a pointer to a certain location.&nbsp; You go to your bitcoins on your computer and send bitcoins to the SR-generated address with the bitcoin client.&nbsp; <br /><br />This initiates the transfer and we have to learn a little more about the bitcoin protocol before we can understand why running this traffic over a proxy (Tor) is a good idea.&nbsp; Bitcoin is a decentralized, peer-to-peer pseudonymous cryptocurrency.&nbsp; That phrase is a lot of jargon, but its a simple concept if you break it down:&nbsp; decentralized means that there is no central authority (like a bank) to keep track of each account and all of the transfers made amongst those accounts.&nbsp; Instead of a bank or similar point of authority controlling your currency and transactions, the entire network (all of the bitcoin users all over the globe) works to validate each transaction made.&nbsp; This is the peer-to-peer part, the entire process works by having a swarm of people all working towards keeping it running.&nbsp; You make these connections (and become part of this network/are allowed to participate in the bitcoin economy) by using the internet to talk to all the other users out there.&nbsp; Again, we need an address to identify each computer on the internet to keep all of this communication straight and this address is the IP address (internet protocol address).&nbsp; Your IP is given to you by your internet service provider (ISP) who keeps a log of each IP tied to each account, (probably registered in your real name).&nbsp; It is my understanding that there isn&#039;t a direct link between a transaction made by a specific client and the IP that first announced it to the network, but you could imagine if someone happened to be watching at the right time in the&nbsp; right place, they would see our earlier SR transaction was announced by your IP first (Note: this requires a fair amount of technical know-how and I don&#039;t know if its really possible to be in the &quot;right time at the right place&quot; without already being monitored before you made the transaction, but assuming many buyers on SR are repeat buyers, this is at least plausible, if not very likely at all...).<br /><br />&nbsp;For anonymity&#039;s sake, it would be a lot better if we could disconnect our IP from our bitcoin client and this is what Tor can potentially allow us to do.&nbsp; If we direct all of our bitcoin client traffic through the Tor network before reaching the bitcoin network, then we will have anonymized the traffic as much as Tor can allow and effectively removed our IP from our bitcoin traffic.<br /><br />The purpose of the tumbler is to anonymize the bitcoins, prevention of IP association with bitcoin activity helps protect the anonymity gained by the tumbling process. Assuming you bought your btcs through an exchange with money from a bank transfer, then your initial cash to BTC purchase is linked to your identity.&nbsp; When tumbling, you send your BTCs through a series of wallets that should not be associated with any of your real information or your IP.&nbsp; This removes the link between your identity and the coins and anyone trying to establish this link would be forced to read the bitcoin traffic to follow the route the coins took.&nbsp; If you send the coins to an account that is not associated with you and then you move the coins to SR preserving this anonymity, all anyone knows is you got rid of your bitcoins (presumably several people/transactions ago) and you don&#039;t have any control over what this hypothetical person did with them.<br /><br />@joeblow2 -- I&#039;m working on a little something...&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>panepo</strong> on <strong>July 23, 2011, 09:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Great thread. But if someone were to use their bitcoin wallet (on the computer) that goes thru tor, wouldn&#039;t that be a pretty good stop gap? So, basically, my ip address isn&#039;t associated with moving btcs in or out, right?<br />I am hoping someone can help with that exact question..I have confirmed that my bitcoin wallet is running through tor after adjusting the settings (When I have Tor running, it has 8 connections, when I kill Tor I lose all connection)</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Flow analysis of Bitcoin is independent of flow analysis of Tor. Tor is an important part of using Bitcoin anonymously, so that you can not be linked to bitcoin accounts by your IP address. However, when you cash into bitcoin, your resulting bitcoins are as anonymous as your cash in method. For example, if you sent someone anonymous mail for Bitcoins the resulting bitcoins are as anonymous as the anonymous mailing was. If you send someone bank account wire for bitcoins, the bitcoins are about as anonymous at this point as sending someone a bank wire directly from your account. If you use bank wire to get 10 bitcoins from Alice, and then send them to Bob the drug dealer, the feds can see that someone who got bitcoins from Alice sent to Bob the drug dealer. So they can ask Alice who she sold those ten bitcoins to. You can get plausible deniability with bitcoin by layering &#039;accounts&#039;, but there is not really untraceability/unlinkability in this case; if you ARE Alice the police will merely come to you and ask you who you sold the bitcoins to. Of course you can make some shit up and it will be plausible / difficult for police to prove you sent to Bob and not to someone else who sent to Bob, short of some pretty entry level computer forensic techniques that you can also protect from pretty easily. Regardless plausible deniability is not what you want to aim for. <br /><br />To maintain unlinkability between Alice the Customers and Bob the dealer you need to use so called &quot;tumbling&quot; services which are imo more appropriately called financial mixes, well thats what the professionals call them anyway. A mix works as follows; Alice and 99 other people send a bitcoin to a server. The server then gives them a bearer certificate of some sort, the most secure sort of mix uses blind signatures to offer provable unlinkability against certain attacks. Now, Alice gives the signed bearer certificate back to the blind mix in return for a bitcoin to a secondary account, which isn&#039;t linked to her or her initial account because of Tor. The other 99 people who used the mix give their signed bearer certificates back to the mix in return for bitcoins to 99 new unlinked accounts as well. Now an attacker doing flow analysis with the block chain will be capable of seeing that Alice and 99 others put 1 bitcoin into the mix. They will be capable of seeing that 100 accounts got bitcoins out of the mix. They can follow the bitcoin Alice put into the mix to the person who takes it out, but they can not link the in and out accounts because of the mixing + Tor providing unlinkability on the IP layer. <br /><br />The mix breaks the link, which is what you should all be aiming for when you anonymize your bitcoins. You either need to cash in anonymously or you need to mix your bitcoins, you either need to cash out anonymously or you need to mix your bitcoins. In the ideal world you would be cashing in and out as anonymously as possible in addition to mixing your bitcoins over a few different mixes, particularly if they are not blind mixes because a non-blind mix doesn&#039;t offer guaranteed protection from some attacks that blind mixes offer guaranteed protection from. So why use Tor at all? Well, you need an account to get the bitcoins sent to prior to running them through a mix, depending on the particular configuration of your operation. In this case, Tor prevents you from being linked to this account by your IP address, and then you unlink the actual bitcoins from this account through a mix before getting them to a safe account after they are mixed. Plus you can&#039;t have your in and out account on either side of the mix linked by IP address etc.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">@chronicpain -- if the btc client is being tunneled through tor than it should be good, the thing is, like you said, making sure that btc connections go only through tor. your concern about relying on 1 flash drive to carry your entire SR travels is legitimate and I would recommend backing up important files into another encrypted flash drive (see TrueCrypt). Then you can back up every so often, stash the backup and if something were to happen causing you to destroy the primary drive, it wouldn&#039;t be that annoying to recreate it and restore the unique data from the backup</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It is not enough to use Tor unless you cash in anonymously, otherwise you are left with only plausible deniability. I would rather be indistinguishable from a crowd of several hundred or thousand others, and avoid giving LE any leads to begin with, than to merely have plausible deniability when they question me. Bitcoin by itself offers plausible deniability, but it doesn&#039;t offer anonymity unless you mix it or cash in anonymously in the first place. Also, the plausible deniability of bitcoin may not be that handy. You can deny you send bitcoins to a vendor, but it wont matter if that information is used for intelligence to put you under surveillance and gather more solid evidence, rather than used as evidence by itself. <br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>joeblow2</strong> on <strong>July 23, 2011, 01:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				@digitas-all of your posts are informative, concise and spot on.&nbsp; I think you&#039;re doing a great service for the Board.&nbsp; <br /><br />One question-how are you determining which of the tumblers are truly blind pools and which are not?&nbsp; I admit I haven&#039;t read any tumbler materials in the last month because they were coming and going and up and down all the time and I didn&#039;t feel like learning about some entity that may not be around.&nbsp; Do you have links for this info?&nbsp; And second-in reading about tumblers, do you have places we could go to educate ourselves as to the integrity and reputation of those tumblers?&nbsp; I think a lot of people, including me, have been worried about sending our BTC off to any tumbler or exchange that didn&#039;t have real time sterling feedback ever since the whole Mt. Gox kerfluffle.<br /><br />Thanks for taking the time for this question.&nbsp; Keep up the excellent work!&nbsp; :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>Rinaldo</strong> on <strong>July 24, 2011, 04:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you Digitas AND Panepo... some really good information... From what I have read from both of you, to implement complete unlinkability rather than just plausible deniability...a 3rd party tumbling service is needed (something different than the tumbling that SR provides on its own).&nbsp; So my question again is...WHICH TUMBLING SERVICE are people that want to maintain this unlinkability using???&nbsp; As I have mentioned, the only one that looks legit to me is Blind Bitcoin &lt; http://n7zdesslujl5ba4q.onion/index.html &gt; <br /><br />This is what I can&#039;t figure out:&nbsp; EVERYONE talks about the need for a tumbling service, and you make a very concise case as to why its needed, but no one talks about which service they are actually using???&nbsp; I can&#039;t figure that part out.... Perhaps most people are just comfortable with the scenario that Digitas describes which ultimately provides you with some level of security (plausible deniability) rather than complete unlinkability that Panepo describes?<br /><br />1.) Is there anyone using a tumbling service?<br />2.) Is that tumbling service Blind Bitcoin? &lt; http://n7zdesslujl5ba4q.onion/index.html &gt; <br />3.) If you are using a tumbling service AND its not Blind Bitcoin, which service are you using<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>Eskim0</strong> on <strong>July 24, 2011, 05:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I agree, great info ITT.&nbsp; Would be curious to know what services people have been using, or more info on Blind Bitcoin, as I have been thinking about using them as well. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Towards complete anonymity in buying off the Silk Road:</strong><br />
+				Post by: <strong>SuperDimitri</strong> on <strong>January 07, 2012, 12:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=1156.msg9138#msg9138">Quote from: joeblow2 on July 22, 2011, 04:59 pm</a></div></div><blockquote class="bbc_standard_quote">@digitas-would you be willing to help with (in english that means &quot;write the whole thing if you&#039;re qualified and willing&quot;&nbsp; sorry :)&nbsp; ) concerning the 8-10 steps that need to be done for someone to &quot;isolate their machine&quot; and identity when doing SR business.&nbsp; Since all the things are legal (TrueCrypt, VPN, etc) just a simple list of steps with a short explanation of the goal of each step, any software needed (hopefully with links), any tricks about QC&#039;ing it for the correct result and a simple &quot;how to&quot; so that any potential seller on SR could hand it to a local tech guy and he could install and QC it all to make sure it&#039;s working.&nbsp; <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I know this is an OLD thread, but I couldn&#039;t find any new info, and&nbsp; I thought the idea of a step by step write up on complete anonymity would be awesome (please direct me if I missed it!) <br />I am NOT throwing caution to the wind,which is why I am not a vendor. I have posted a few threads asking for this kind of info, but a write-up would be awesome. <br />And I would tip my infoserver ;)<br />Once I felt safe and secure, and anonymous, I could open up and bring happiness to a small part of the world. <br />Becoming an online vendor is a LOT of work. <br />Someone PLEASE post a tutorial!! 
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

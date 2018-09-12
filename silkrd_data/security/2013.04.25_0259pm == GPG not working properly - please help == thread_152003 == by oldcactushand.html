@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=152003.0" />
+		<title>Print Page - GPG not working properly - please help</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: oldcactushand on April 25, 2013, 02:59 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>GPG not working properly - please help</strong><br />
+				Post by: <strong>oldcactushand</strong> on <strong>April 25, 2013, 02:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m using GPG Keychain Access on Mac OS X 10.6.8.<br /><br />Short version: I can import new keys and they show up on the list, but when I try to encrypt something the new keys don&#039;t show up, only the ones I&#039;ve used in the past.<br /><br />Long version:<br /><br />I went to import the vendor key like normal, but the right click menu did not have a &#039;Services&#039; section. I deleted a bunch of stuff in a downloads folder recently, including what I thought to be the GPG installer. Assuming I&#039;d messed it up somehow, I uninstalled GPG using AppCleaner and then installed GPG Keychain Access again.<br /><br />All my keys were still there. The &#039;Services&#039; section returned to right click menu and I was able to import the new vendor key. It confirmed who it was and this showed up on the list under the correct name. But now, when I go to encrypt my address, only the keys that were there before show up and the new ones do not, meaning I cannot encrypt anything to them. Something interesting that might help someone work it out: the Silk Road staff key does also not let me import to it. <br /><br />The only difference between the keys that work and the keys that don&#039;t, from what I can tell, is that when you click the little arrow to the left of the vendor key - the ones that work have the sections &#039;pub&#039;, &#039;uid&#039; and &#039;sub&#039;. The ones that don&#039;t work only have &#039;pub&#039; and &#039;uid&#039; (one vendor has 2 &#039;uid&#039;).<br /><br />Any help appreciated. Really really want to buy drugs :)<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG not working properly - please help</strong><br />
+				Post by: <strong>princeblack49</strong> on <strong>April 25, 2013, 03:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Try this link: https://nightly.gpgtools.org/<br />I had the same prob once and it fixed it. Let me know if this helps at all.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG not working properly - please help</strong><br />
+				Post by: <strong>oldcactushand</strong> on <strong>April 25, 2013, 04:16 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks. I uninstalled GPG and then download and installed the top link &#039;GPGKeychainAccess-205n.dmg&#039;. Is this what you meant for me to do? Unfortunately there&#039;s no difference. Sorry if I&#039;m noobing out, it took me hours to work out this stuff in the first place.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG not working properly - please help</strong><br />
+				Post by: <strong>princeblack49</strong> on <strong>April 25, 2013, 06:14 pm</strong>
+			</dt>
+			<dd class="postbody">
+				This is the copy of the instructions with a more concise link I received when it happened to me. Sorry, I should have gone back to this post and copied it originally. Good luck! <br /><br />&quot;Try installing/re-installing the nightly build of GPGTools.&nbsp; This has solved this issue for people in the past. https://nightly.gpgtools.org/GPGTools_Installer-latest.dmg&quot;<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG not working properly - please help</strong><br />
+				Post by: <strong>fatoldsun</strong> on <strong>April 25, 2013, 11:04 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Remember how I linked you to that site that can do online PGP encryption?<br /><br />Here&#039;s a different site, which does it all in client-side JS, no server calls. It doesn&#039;t even offer decryption, so you&#039;re not even given an opportunity to think about fucking up.<br />Note that you&#039;ll need to first use the &quot;OpenPGP Key Extraction&quot; link, and then the actual encryption. You can (and should) use Tor with this site.<br /><br />!!!CLEARNET: http://www.hanewin.net/encrypt/PGencode.htm :CLEARNET!!!<br /><br />Of course, it&#039;s infinitely better to set up a PGP program on your devices, but this is a shortcut for people just wanting to encrypt information to a single vendor&#039;s public key.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG not working properly - please help</strong><br />
+				Post by: <strong>oldcactushand</strong> on <strong>April 26, 2013, 07:41 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for the help, +1 both of you. Thankfully another user has helped me get started using PortablePGP, so I think I&#039;ll stick with that in the meantime.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: GPG not working properly - please help</strong><br />
+				Post by: <strong>blackflash8686</strong> on <strong>April 26, 2013, 07:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				I have Mac using GPG. Read this post i believe your answer is there<br /><br /><br />http://dkn255hz262ypmii.onion/index.php?topic=144403.msg990197#msg990197
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

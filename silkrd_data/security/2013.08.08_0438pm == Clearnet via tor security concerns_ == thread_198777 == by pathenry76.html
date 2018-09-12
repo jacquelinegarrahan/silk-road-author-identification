@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=198777.0" />
+		<title>Print Page - Clearnet via tor security concerns?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: pathenry76 on August 08, 2013, 04:38 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Clearnet via tor security concerns?</strong><br />
+				Post by: <strong>pathenry76</strong> on <strong>August 08, 2013, 04:38 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Are there any special security concerns when visiting non onion sites while using tor?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Clearnet via tor security concerns?</strong><br />
+				Post by: <strong>kybzmsrf</strong> on <strong>August 08, 2013, 05:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yes,<br /><br />any unencrypted data is exposed to the exit node.<br />Do not log into clearnet sites without HTTPS support over Tor!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Clearnet via tor security concerns?</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>August 09, 2013, 03:31 pm</strong>
+			</dt>
+			<dd class="postbody">
+				That depends on where your entry node and your exit node is. if the traffic between your computer and the entry node goes through a route sniffed by the NSA (which is always, if you are in the USA and the entry node is outside of the USA), AND the traffic between the exit node and the clearnet destination goes through a route sniffed by the NSA, then they can correlate your IP adress with the clearnet traffic, by looking at the timeframe and the size of data packets. Https only adds limited safety in that case, because the NSA can still see the clearnet URL you visited and associate it with your IP adress.<br /><br />It&#039;s probably best to setup Tor to only use entry nodes in your own country which you trust, and only use exit nodes in countries which are not controlled by the NSA. E.g. South Africa, Taiwan and China.<br /><br />To your torrc config file you could add something like this:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">StrictNodes 1<br />ExitNodes {tw},{za},{cn}<br />EntryNodes $073F27934762FF8BA956FFCE136AAC1CCF45EA13,$80F870DD215A0C56005266A71C46F92F39F1973B,$6557396CF0EE5B72563A22BCAA0FF26E77FA3D08 <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The EntryNodes values are fingerprints of 3 servers in the USA. I don&#039;t know if they can be trusted (first 2 are torservers.net I think) and if the route is sniffed by the NSA, so you should search for servers and their fingerprints on (clearnet) http://torstatus.blutmagie.de<br />When you copy a fingerprint from that website you have to add a $ at the beginning and remove the spaces. Seperate each fingerprint with a comma.<br /><br />Instead of using fingerprints you could also use country codes for the list of entry nodes:<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">EntryNodes {us}<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />You can test the exit node configuration by going to (clearnet) http://ip-check.info . This website will also tell you how identifiable your browser is.<br /><br />There is also the possibility to exclude nodes (entry, relay and exit) from your Tor circuit:<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">#main PRISM collaborators<br />ExcludeNodes {us},{gb},{ca},{au},{nz}<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>But this feature may break your connection to hidden services hosted in those countries.<br /><br />You can find the list of country codes at clearnet http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Clearnet via tor security concerns?</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 09, 2013, 04:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=198777.msg1431558#msg1431558">Quote from: Bazille on August 09, 2013, 03:31 pm</a></div></div><blockquote class="bbc_standard_quote">It&#039;s probably best to setup Tor to only use entry nodes in your own country which you trust, and only use exit nodes in countries which are not controlled by the NSA. E.g. South Africa, Taiwan and China.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This is useless if the site you are visiting is located in the USA, which a majority are for English speakers. In that case, you are better off using an exit node inside the USA, since the NSA is less likely to sniff the connection, although it probably will anyway at the major IXes. I just assume there&#039;s no way resist NSA surveillance at this point, except to use hidden services that are located outside of the USA.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">To your torrc config file you could add something like this:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">StrictNodes 1<br />ExitNodes {tw},{za},{cn}<br />EntryNodes $073F27934762FF8BA956FFCE136AAC1CCF45EA13,$80F870DD215A0C56005266A71C46F92F39F1973B,$6557396CF0EE5B72563A22BCAA0FF26E77FA3D08 <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If you are always using the same few exit nodes, that could kill your anonymity, because your circuit patterns are significantly different from everyone else&#039;s.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Clearnet via tor security concerns?</strong><br />
+				Post by: <strong>Railgun</strong> on <strong>August 09, 2013, 04:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I use https everywhere, which not all sites use, and tend to cycle(request new identity) if I use clearnet. Does the cycling between clearnet/onion aid in keeping myself free from identification query attacks?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Clearnet via tor security concerns?</strong><br />
+				Post by: <strong>Bazille</strong> on <strong>August 09, 2013, 05:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=198777.msg1431826#msg1431826">Quote from: astor on August 09, 2013, 04:43 pm</a></div></div><blockquote class="bbc_standard_quote">This is useless if the site you are visiting is located in the USA, which a majority are for English speakers. In that case, you are better off using an exit node inside the USA, since the NSA is less likely to sniff the connection, although it probably will anyway at the major IXes. I just assume there&#039;s no way resist NSA surveillance at this point, except to use hidden services that are located outside of the USA.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />True. Maybe you should simply use a different exit node country depending on the website you are visiting. If you are visiting a website in France, use a french exit node etc.<br /><br />I didn&#039;t play with this feature yet, but another possibility is specifying the exitnode right in the url. You would have to add <br />AllowDotExit 1<br />to your torrc file.<br /><br />In your browser address bar you could enter<br />http://livelyblog.com.84CA95A4D9E824C6F9662711B887433525760F72.exit<br />to use the exit node with the specified fingerprint, when you&#039;re browsing the clearnet site livelyblog.com. Always using the same fingerprint makes you more identifiable though.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">If you are always using the same few exit nodes, that could kill your anonymity, because your circuit patterns are significantly different from everyone else&#039;s.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />True. It&#039;s probably better to add some more countries which hav emore exit nodes than China, Taiwan and South Africa
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Clearnet via tor security concerns?</strong><br />
+				Post by: <strong>astor</strong> on <strong>August 09, 2013, 06:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=198777.msg1431864#msg1431864">Quote from: Railgun on August 09, 2013, 04:55 pm</a></div></div><blockquote class="bbc_standard_quote">I use https everywhere, which not all sites use, and tend to cycle(request new identity) if I use clearnet. Does the cycling between clearnet/onion aid in keeping myself free from identification query attacks?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />That&#039;s really only a concern if you are visiting two clearnet sites simultaneously. Those TCP streams my be leaving the same circuit at the same exit node, so it can correlate them. Otherwise, changing identities between browsing clearnet sites and hidden services doesn&#039;t help anything, because clearnet sites are accessed through exit nodes while hidden services are not, so they are definitely not using the same circuits (although they may be sharing part of a circuit).<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

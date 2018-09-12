@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=173920.0" />
+		<title>Print Page - Tor problems</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: coglac on June 18, 2013, 01:52 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Tor problems</strong><br />
+				Post by: <strong>coglac</strong> on <strong>June 18, 2013, 01:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				So I just got a new laptop. Which as windows 8 and oh my god what a nightmare. Stick with seven if your getting a computer. But I downloaded tor and it connects and goes to the webpage that says connected but then I can not go to any webaites. I have antivirus with a fire wall. I gave for permission to get passed it. Do I have to turn it off completely? Help me out pleeeeasse 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor problems</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 18, 2013, 02:33 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Go to onion icon (if it exists?) -&gt; Network Map.<br /><br />See the panel that says Connection and Status? Do you see a bunch of relays listed there? This tells you about the circuits that Tor has built, or is building. There should be some lines with three relays listed in each one, and they should say Open.<br /><br />When you try to access a web site in TorBrowser, what happens to the circuits in that list? Do a bunch of them say Connecting? Do the say Closed? What words do you see there?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor problems</strong><br />
+				Post by: <strong>coglac</strong> on <strong>June 18, 2013, 11:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It says closed. Does this mean my firewall is blocking it?<br />Thanks astor
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor problems</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 19, 2013, 12:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				If you have no open circuits at all, then yeah your firewall is probably blocking Tor.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor problems</strong><br />
+				Post by: <strong>coglac</strong> on <strong>June 19, 2013, 01:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				OK well some say open it says connecting then closed. What does it mean if some are open 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor problems</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>June 19, 2013, 01:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Can you not go to ANY websites or can you only not go to hidden services? If you cannot go to hidden services then the problem is almost certainly that your clock or timezone are incorrect.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor problems</strong><br />
+				Post by: <strong>ChemCat</strong> on <strong>June 19, 2013, 02:18 pm</strong>
+			</dt>
+			<dd class="postbody">
+				hiya kmf, i was wonderin just that, has the OP &quot;Sync&#039;d&quot; his machine with the net time?<br /><br />when i reformatted i had to &quot;Sync&quot; the time again ;)<br /><br />Peace &amp; Hugs to ya&#039;ll :)<br /><br />ChemCat O0
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor problems</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 19, 2013, 03:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Timezone shouldn&#039;t matter since all Tor clients operate on GMT, but yeah the clock could be wrong because it&#039;s set to GMT and he entered the local time.<br /><br />coglac, so what happens to those circuits when you try to access a web site? Keep the Network Map open and go to google.com in TorBrowser. Again, you should see Open, Connecting, Closed or Failed. What words do you see?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor problems</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>June 19, 2013, 04:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=173920.msg1253834#msg1253834">Quote from: astor on June 19, 2013, 03:00 pm</a></div></div><blockquote class="bbc_standard_quote">Timezone shouldn&#039;t matter since all Tor clients operate on GMT, but yeah the clock could be wrong because it&#039;s set to GMT and he entered the local time.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If his clock is wrong because he has the correct local time and the wrong timezone then it seems like timezone is what is actually wrong. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor problems</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 19, 2013, 06:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Actually, if the firewall was blocking Tor, there should be no circuits that say Open, Closed, or anything. It would say &lt;path&gt; instead, with no relays listed. So it&#039;s likely he is connected to the Tor network.<br /><br />coglac, this will take forever if you give us one data point per day. I&#039;d like you to go through a list of things and answer all the questions below. If you&#039;re doing this on a different computer, write all this down.<br /><br /><br />First, as kmf suggested, make sure the time AND time zone are correct. On Win8 you should be able to use the search function to search for &quot;change time&quot; and the option will come up. If they are wrong, change the time zone first, then change the time. If the time is right but the time zone is wrong, then when you correct the time zone, the time will be wrong. Make sure they are both right before moving on. Also, check the option to &quot;synchronize to network time server&quot; or something like that.<br /><br />Open these and have them ready:<br /><br />onion icon -&gt; Network Map<br /><br />onion icon -&gt; Message Log -&gt; Advanced tab<br /><br /><br />1. In TorBrowser, try to access google.com.&nbsp; If it connected, great. Move to step 2.<br /><br />If it didn&#039;t, look in the Message Log. Are there any error messages? What are they? Write the whole error message down and post it here.<br /><br />Then, try to access google.com again, but watch the Network Map. Do you see a lot of circuits that are Failed? What words do you see for the circuits? The options will be Building, Open, Connecting, Closed, Failed.<br /><br />2. In TorBrowser, try to access this forum. If it connected, obviously problem solved (probably the time issue).<br /><br />If it didn&#039;t, look in the Message Log. Are there any error messages? What are they? Write the whole error message down and post it here.<br /><br />Then, try to access the forum again, but watch the Network Map. Do you see a lot of circuits that are Failed? What words do you see for the circuits? The options will be Building, Open, Connecting, Closed, Failed.<br /><br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

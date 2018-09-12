@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=12429.0" />
+		<title>Print Page - Instawallet Security?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Heyenezz on February 18, 2012, 07:06 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Instawallet Security?</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>February 18, 2012, 07:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				I use instawallet (www.instawallet.org) to launder bitcoins. <br /><br />How secure would my bitcoins be against theft? Bitcoin addresses are in the public block chain, but I don&#039;t see how someone could tell which ones where instawallet addresses. Even then, they couldn&#039;t necessarily access them because you need the unique URL to do that.<br /><br />Am I missing something here?<br /><br />Thanks for any help!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Instawallet Security?</strong><br />
+				Post by: <strong>a_blackbird</strong> on <strong>February 18, 2012, 07:09 am</strong>
+			</dt>
+			<dd class="postbody">
+				Assuming there&#039;s no weakness in the instawallet code that would allow someone to do an SQL injection and get the list of wallet URLs, I think your bitcoins are probably fairly secure.&nbsp; Just having a BTC address wouldn&#039;t be enough to get the URL, and aside from the instawallet &quot;green address&quot;, there&#039;s nothing about a particular BTC address that would indicate anything about it belonging to instawallet.<br /><br />IMHO, the greatest risk to your BTC at instawallet is your own memory or lack of care in keeping track of your wallet URL.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Instawallet Security?</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>February 18, 2012, 07:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=12429.msg117139#msg117139">Quote from: a_blackbird on February 18, 2012, 07:09 am</a></div></div><blockquote class="bbc_standard_quote">Assuming there&#039;s no weakness in the instawallet code that would allow someone to do an SQL injection and get the list of wallet URLs, I think your bitcoins are probably fairly secure.&nbsp; Just having a BTC address wouldn&#039;t be enough to get the URL, and aside from the instawallet &quot;green address&quot;, there&#039;s nothing about a particular BTC address that would indicate anything about it belonging to instawallet.<br /><br />IMHO, the greatest risk to your BTC at instawallet is your own memory or lack of care in keeping track of your wallet URL.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I&#039;ve read that phrase &quot;SQL injection.&quot; What is it? I access instawallet using Tor if that makes any difference.<br /><br />I book mark all my instawallet pages.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Instawallet Security?</strong><br />
+				Post by: <strong>a_blackbird</strong> on <strong>February 18, 2012, 08:00 am</strong>
+			</dt>
+			<dd class="postbody">
+				An SQL injection is an attack against a web server (usually) whereby the attacker is able to circumvent any sort of input-sanitizing code (or maybe there is no input-sanitizing code) and get some arbitrary queries to run against the database.&nbsp; For example, suppose a website has a form on it that asks for a username and then passes that data directly to a database query without doing any kind of input checking.<br /><br />$username = read_from_form;<br />run_query(&quot;SELECT foo FROM users WHERE username = $username &quot;);<br />...<br /><br />The would-be attacker might enter something like :<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">&#039;baz&#039; OR 1=1; DROP table users;<br /></code><br />And the script might actually delete the users table - because it didn&#039;t properly handle the user input and it sees two valid SQL queries and tries to execute them both.&nbsp; Or, instead of dropping the user table, you might try to select all the data from the user table, or see what other tables are available and pull all the data out of them.&nbsp; There are plenty of easy ways to protect against this sort of attack - I think it&#039;s unlikely that the instawallet site is vulnerable to something so simple.<br /><br />Accessing instawallet via Tor has no bearing at all on whether or not it&#039;s vulnerable to an SQL injection - if such a hole existed, this would be a vulnerability on the instawallet server; it wouldn&#039;t have anything to do with you or any other end user.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Instawallet Security?</strong><br />
+				Post by: <strong>supersecretsquirrel</strong> on <strong>February 18, 2012, 08:06 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=12429.msg117136#msg117136">Quote from: Heyenezz on February 18, 2012, 07:06 am</a></div></div><blockquote class="bbc_standard_quote">I use instawallet (www.instawallet.org) to launder bitcoins. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />1. Don&#039;t store your coins in an instawallet-wallet for too long.<br />2. Don&#039;t store all of your coins in the same wallet.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Instawallet Security?</strong><br />
+				Post by: <strong>ThisOneGuy</strong> on <strong>February 18, 2012, 03:12 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I have wondered the same thing about instawallet.&nbsp; Since you don&#039;t need a password only an url wouldn&#039;t it be very possible for a tor exit node to see what url you used and steal your bitcoins?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Instawallet Security?</strong><br />
+				Post by: <strong>QTC</strong> on <strong>February 18, 2012, 05:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=12429.msg117384#msg117384">Quote from: ThisOneGuy on February 18, 2012, 03:12 pm</a></div></div><blockquote class="bbc_standard_quote">I have wondered the same thing about instawallet.&nbsp; Since you don&#039;t need a password only an url wouldn&#039;t it be very possible for a tor exit node to see what url you used and steal your bitcoins?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>ssl encrypts urls
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Instawallet Security?</strong><br />
+				Post by: <strong>Heyenezz</strong> on <strong>February 19, 2012, 02:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				Sweet, so long as I split my bitcoins among sufficiently many instawallets for short durations then I should be secure.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=108381.0" />
+		<title>Print Page - THIS IS THE MOST SIMPLE PGP INSTRUCTIONS FOR GPG4WIN</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Silk Road discussion => Topic started by: jameslondon on January 18, 2013, 12:28 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>THIS IS THE MOST SIMPLE PGP INSTRUCTIONS FOR GPG4WIN</strong><br />
+				Post by: <strong>jameslondon</strong> on <strong>January 18, 2013, 12:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				This is one of the most simple instructions on how to use PGP with the program GPG4WIN. <br /><br />It is especially helpful for beginners and written in clear and simple english<br /><br />Gpg4win is a package of open source utilities for key management, encryption and decryption. It can be used for email encryption in conjunction with web-based email or any other email client.<br /><br />&nbsp;<br /><br />1 Installation<br /><br />2 Key generation<br /><br />3 Publish public key<br /><br />4 Receiving encrypted email<br /><br />5 Importing a public key<br /><br />6 Sending encrypted email<br /><br /><br /><br />Installation<br /><br />Go to http://www.gpg4win.org/download.html<br /><br />Download the full version<br /><br />Run the file and follow the prompts to install it<br /><br /><br /><br />Key generation<br /><br />Start &quot;Kleopatra&quot;<br /><br />Click File &gt; New Certificate &gt; Create a personal OpenPGP key pair<br /><br />Enter your name and email address, leave the comment blank. Note that the email address you give will be made public.<br /><br />Click Next<br /><br />Click &quot;Create key&quot;<br /><br />Enter a passphrase. This will be used to encrypt the private key on your hard drive.<br /><br /><br /><br />Publish public key<br /><br />In the main window, right-click on the key you just generated and click &quot;Export certificates&quot;.<br /><br />Save it somewhere on your hard drive with a .txt extension.<br /><br />Open the file in notepad or whatever.<br /><br />The key should start with<br /><br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br /><br />Note that it says PUBLIC. If it says &quot;private&quot;, you did something wrong. Don&#039;t publish your private key.<br /><br />Paste the text from the file into Wikipedia while you are logged in, say as a user subpage, or in an HTML comment or collapsed box on your user page (e.g. by enclosing it {{PGP top}}/{{PGP bottom}}).<br /><br /><br /><br />Receiving encrypted email<br /><br />An encrypted message looks like this:<br /><br />-----BEGIN PGP MESSAGE-----<br />Version: GnuPG v1.4.10 (GNU/Linux)<br /><br />hQIOA5iUCyMfX/D2EAgAhikRs40xo05gNu9XSIO2jrjTIShwfWK2d7+9xlv9UjDN<br />...<br />-----END PGP MESSAGE-----<br /><br />Copy the message including the BEGIN line and the END line. You can omit anything outside those lines, such as advertisements.<br /><br />Paste it into notepad. Save it to a file.<br /><br />In Kleopatra, click &quot;Decrypt/Verify Files&quot; in the toolbar.<br /><br />Select the encrypted message file that you just saved.<br /><br />Click &quot;Decrypt/Verify&quot;<br /><br />If everything worked, a file should have been created in the directory you selected, containing the decrypted message.<br /><br /><br /><br />Importing a public key<br /><br />Go to the user&#039;s user page, find their key.<br /><br />Go to the page history, find the revision where the key was added. Make sure the correct user added it.<br /><br />Go to the old revision.<br /><br />Copy the key out of the old revision, paste it into a text file using notepad.<br /><br />Save it to a file, with extension &quot;.gpg&quot;. This may be difficult if you have Windows configured to hide file extensions.<br /><br />In Kleopatra, click File &gt; Import Certificates<br /><br />Choose the .gpg file you saved.<br /><br />Click &quot;OK&quot; when it tells you the import was successful.<br /><br /><br /><br />Sending encrypted email<br /><br />Save the text you want to send in a text file, say using notepad<br /><br />In Kleopatra, click &quot;Sign/Encrypt Files&quot;<br /><br />Select the file with the message you want to send<br /><br />Uncheck &quot;Archive file with...&quot;<br /><br />Check &quot;Text output (ASCII armor)&quot;<br /><br />Click Next<br /><br />Click on your own certificate, click &quot;Add&quot;. Then click the certificate of the person you want to send the message to, and click &quot;Add&quot; again.<br /><br />Click Next<br /><br />Under &quot;OpenPGP Signing Certificate&quot;, select your own certificate, if it&#039;s not selected already.<br /><br />Click &quot;Sign and Encrypt&quot;.<br /><br />A file will be created which contains the text you need to send. Open the file and paste it into an email.<br /><br />Note that the subject line of the email is not encrypted. Don&#039;t put private information in the subject line.<br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: THIS IS THE MOST SIMPLE PGP INSTRUCTIONS FOR GPG4WIN</strong><br />
+				Post by: <strong>dbz4u</strong> on <strong>January 18, 2013, 12:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				You can actually save someone&#039;s public key in a text file(.txt) and then import that&nbsp; 8)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: THIS IS THE MOST SIMPLE PGP INSTRUCTIONS FOR GPG4WIN</strong><br />
+				Post by: <strong>Wadozo</strong> on <strong>January 18, 2013, 02:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				Here is a basic, simple guide I wrote, which should help you out if your using a Windows system (Gpg4win) G.P.A.<br />You could also use gpg4usb. This is a link to astor&#039;s tutorial - http://32yehzkk7jflf6r2.onion/gpg4usb/<br />It has a simple interface and is an easy option for beginners. However, this is how you can use G.P.A.<br /><br />1. Copy the Public Key of the person you want to send a message to.<br /><br />2. Open a text editor, such as Notepad, and paste the Public Key. Name the file and save it to your desired location on your PC.<br /><br />3. Open GPA (Gpg4win), click IMPORT, locate the file you just saved with the Public Key in it, and double click it. It will then show up in KEY MANAGER where it is stored for future use along with any other Public Keys you wish to keep.<br /><br />4. Then click on CLIPBOARD, the 2nd icon in from the right at the top of the page. Type the message you wish to send to the recipient and then click ENCRYPT. Click on the Public Key of the person your sending the message to (should now be highlighted), then click OK at the bottom.<br /><br />5. Then copy the encrypted message and paste it in a PM to the recipient and send it.<br /><br />6. REMEMBER - Include your Own Public Key in this message if you wish to receive an encrypted response from the recipient. You can find this by RIGHT-CLICKING your key in KEY MANAGER, then copy/pasting it. :)
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

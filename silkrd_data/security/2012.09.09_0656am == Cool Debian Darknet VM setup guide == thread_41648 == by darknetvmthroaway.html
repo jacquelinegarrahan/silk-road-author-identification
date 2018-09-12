@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=41648.0" />
+		<title>Print Page - Cool Debian Darknet VM setup guide</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: darknetvmthroaway on September 09, 2012, 06:56 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Cool Debian Darknet VM setup guide</strong><br />
+				Post by: <strong>darknetvmthroaway</strong> on <strong>September 09, 2012, 06:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hey guys found a great article which includes a thorough Debian darknet install guide hope this helps people out there can be applied to a your local darknet vm via virtualbox or vmware if you use debain squeeze desktop iso.<br /><br />Clearnet source url &gt; https://whattheserver.me/blog/darknet-explained-and-then-done-right/<br /><br /><br />They also seem to offer darknet vm service with setup pretty sweet...<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">We have developed a product specifically designed to serve as a DarkNet Gateway by making WhatTheServer your first line of defense. To start you will need to purchase our DarkNet VPS package &gt; https://whattheserver.me/billing/cart.php?a=add&amp;bid=2. It includes the following:<br /><br />&nbsp; &nbsp; &nbsp;2 CPU cores<br />&nbsp; &nbsp; 10GB HDD space<br />&nbsp; &nbsp; 1024MB RAM<br />&nbsp; &nbsp; 1TB Banwidth<br />&nbsp; &nbsp; Bundled with our Premium VPN<br /><br />The bundled VPN creates a log-less and obscured connection between your accessing IP and your DarkNet VPS.<br /><br />The DarkNet VPS package costs $30 per month with the option to pay a one time $30 guided setup fee (2 hour Maximum) and requires a clean install. This only acceptable form of payment for this package is Bitcoin. Any orders created with any other payment type will be canceled, deleted, and refunded LESS PROCESSING FEES.<br /><br />The guided setup includes walking you thorough the encrypted setup of encrypted LVM, pidgin+otr , the tor browser bundle, PGP keys, etc. This is by appointment which must be scheduled via ticket after the purchase of the package. Please be prepared to allow for a block of time as this will be done one on one with a member of our staff via remote support. This will allow you to see everything from start to finish install wise and prepare you for your own future implementation of our strategy.<br /><br />&nbsp;<br /><br />Here is our guide to the WhatTheServer DarkNet implementation:<br /><br />Mandatory Installs and Setup:<br /><br />&nbsp; &nbsp; Download and install an OpenVPN client for your OS from official vpn community site here. If you use windows you can feel free to use our custom installer located here. For Mac we suggest using Tunnelblick located here or Viscosity located here.<br />&nbsp; &nbsp; For those not on the other listed operating systems use the OpenVPN client with our ca.crt and server.opvn file/s here or get them from the email attachment in your welcome email. You should extract to the &#039;config&#039; folder&nbsp; of your OpenVPN install.<br />&nbsp; &nbsp; Run OpenVPN and choose your preferred OpenVPN server.<br />&nbsp; &nbsp; If your using windows make sure that after you have OpenVPN installed and activated that you test for DNS leaks. To test for leaks please visit DNS leak test site. if you see any leaks please either utilize their patch for Windows or follow the instructions in this forum post and then retry the test. It is critical for your privacy and safety that you do this on all Windows computers that you plan to use the OpenVPN connection on.<br />&nbsp; &nbsp; <br />Install Debian squeeze 64bit desktop<br />Setup encrypted LVM and save encryption password<br />Save Root Password<br />Setup user acct and save password<br /><br />Install NX Free Edition for Linux (Client,Node, and Server) and then re-login via nxclient &gt; http://www.nomachine.com/download-package.php?Prod_Id=3776<br /><br />Go to synaptic package manager (System&gt;Administration&gt;Synaptic Package Manger) then got to settings&gt;repositories&gt;third party software edit the repositories and un-check any cd-rom sources<br />Add the following as repos: (then save and exit)<br />&#039;deb http://deb.torproject.org/torproject.org squeeze main&#039;<br />&#039;deb http://dl.google.com/linux/chrome/deb/ stable main&#039;<br />&nbsp; &nbsp; &nbsp; &nbsp;<br />Ignore error about missing gpg keys(were fixing that next)<br /><br />Open to root terminal (red one under Applications&gt;Accessories&gt;Root Terminal) when promoted for Administrator password enter the root password you set during the OS install.&nbsp; Then check the option to save in &#039;Keyring&#039; and follow the prompts to setup keyring master password.<br /><br />Run the following via root terminal(red one under Applications&gt;Accessories&gt;Root Terminal)<br />&#039;gpg --keyserver keys.gnupg.net --recv 886DDD89&#039;<br />&#039;gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -&#039;<br />&#039;apt-get install bleachbit enigmail gpa gnupg gnupg-agent gnupg2 htop network-manager-openvpn network-manager-openvpn-gnome pidgin pidgin-encryption pidgin-openpgp pidgin-otr ntp ntpdate secure-delete chromium -y&#039;<br />&nbsp; &nbsp;<br />Download the TOR Browser Bundle for Linux 64-Bit extract to a permanent location and then run the script to start &gt; https://www.torproject.org/projects/torbrowser.html.en#downloadtbb<br /><br />Configure gedit for pgp encryption by going (Applications&gt;Accessories&gt;gedit); then click edit tab and go to (Preferences&gt;Plugin) and enable &#039;Text Encryption&#039; by filling in the check box. Then save and exit.<br /><br />Configure PGP encrypt/decrypt/sign plugin with gedit Preferences&gt;plugin&gt;text encryption plugin check and exit<br /><br />Create PGP key by going to (System&gt;Preferences&gt;Password &amp; Encryption Keys&gt;File&gt;New). Then select PGP key and continue by following the prompts. Please not if using key strength of 4096 or higher we suggest you use the &#039;Entropy&#039; section in the &#039;Extras&#039; section below to speed the key creation process.<br /><br />Create TOR Mail address by going to TORMail.org via your TOR browser via your fresh DarkNet VPS install.<br /><br />Configure your IceDove with enigmail install and email PGP key by going to (Applications&gt;Internet&gt;IceDove Mail/News&gt;OpenPGP&gt;Setup Wizard). Then follow the default choices choosing the key we previously created if applicable.<br /><br />Configure Pidgin and add instant messenger accounts as needed. Next you will need to enable OTR inside Pidgin by going to (Tools&gt;Plugins) and checking the &#039;Off-The-Record&#039; box. Then click configure plugin and choose an Instant Messenger account and clicking Generate. In addition to the default settings in the &#039;Default OTR Settings&#039; section you should check the &#039;Don&#039;t log OTR conversations&#039;&nbsp; box and hit close. You should repeat key generation process as needed for each account.<br /><br />Optional Installs:<br /><br />Install I2P &gt; http://www.i2p2.de/debian.html<br />Install Teamviewer &gt; http://www.teamviewer.com/en/download/linux.aspx<br /><br />Extras:<br /><br />Entropy<br />To add more entropy in order to speed up pgp key creation when using 4096 or higher you can install rng-tools<br />Run &#039;sudo apt-get install rng-tools&#039; (drop sudo if in root terminal)<br />Then, edit the file /etc/default/rng-tools and add this to the bottom of the file &#039;HRNGDEVICE=/dev/urandom&#039;<br />Restart rng-tools: &#039;sudo /etc/init.d/rng-tools restart&#039; (drop sudo if in root terminal)<br />When finished generating keys you can stop rng-tools: &#039;sudo /etc/init.d/rng-tools stop&#039; (drop sudo if in root terminal)<br /><br />&nbsp;<br /><br />Be Responsible; Be Careful; Most of all Be Free.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />&nbsp;<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

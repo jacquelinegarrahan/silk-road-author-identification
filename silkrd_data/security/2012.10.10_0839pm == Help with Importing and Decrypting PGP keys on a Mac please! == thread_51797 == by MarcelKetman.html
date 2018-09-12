@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=51797.0" />
+		<title>Print Page - Help with Importing and Decrypting PGP keys on a Mac please!  </title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: MarcelKetman on October 10, 2012, 08:39 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Help with Importing and Decrypting PGP keys on a Mac please!  </strong><br />
+				Post by: <strong>MarcelKetman</strong> on <strong>October 10, 2012, 08:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Hi. I&#039;m using GPG Keychain Access. <br /><br />I can&#039;t import text files nor can I copy and paste the public key (despite reading on forums that you can).<br /><br />Can anyone help??
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with Importing and Decrypting PGP keys on a Mac please!  </strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>October 10, 2012, 10:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=51797.msg514815#msg514815">Quote from: MarcelKetman on October 10, 2012, 08:39 pm</a></div></div><blockquote class="bbc_standard_quote">Hi. I&#039;m using GPG Keychain Access. <br /><br />I can&#039;t import text files nor can I copy and paste the public key (despite reading on forums that you can).<br /><br />Can anyone help??<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Marcel, if you&#039;ve read any of the other posts, you would know that gpgtools is os x version dependent. <br /><br />What version of os x are you running?&nbsp; What version of gpgtools did you download and install? <br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with Importing and Decrypting PGP keys on a Mac please!  </strong><br />
+				Post by: <strong>pine</strong> on <strong>October 10, 2012, 11:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Guru to the rescue!<br /><br /><br />IMPORTANT NOTES:<br /><br />a) GPGTools is the software that implements Gnu Privacy Guard (GPG), an open-source PGP-equivalent software package for the Mac. Please see the GPGTools homepage. for more information: https://www.gpgtools.org/<br /><br />b) Whether GPGTools works or not is highly OS-version-dependent -- in other words, it makes a significant difference if you&#039;re running Leopard (10.5.x), Snow Leopard (10.6.x), Lion&nbsp; (10.7.x) or Mountain Lion (10.8).<br /><br />The two most problematic releases are Leopard and Mountain Lion; Leopard, because it is too old, and Mountain Lion because it is too new.<br /><br />c) You would have also discovered that the stock GPGTools installation does not work for everyone. Frequently, to acquire full functionality, one is required to download and install the latest nightly build from the GPGTools site. See: https://nightly.gpgtools.org/GPGTools_Installer-latest.dmg<br /><br />After that, follow the instructions found in this post: http://dkn255hz262ypmii.onion/index.php?topic=32303.msg366929#msg366929<br /><br />d) If you&#039;re running Leopard, then for all intents and purposes, you have little recourse bu to use the command-line, if you want to use GPG. <br />For instructions on how to do this, please see the following post:&nbsp; http://dkn255hz262ypmii.onion/index.php?topic=35440.msg408632#msg408632<br /><br />e) If you&#039;re running Mountain Lion, if the latest nightly build doesn&#039;t work, then I&#039;m afraid you&#039;re mostly out of luck, unless you can get GPG working from the command line, as referenced by the instructions in item d), above.&nbsp; <br /><br />============================================================<br /><br />Download and install GPGTools: http://nightly.gpgtools.org/GPGTools_Installer-trunk.dmg<br /><br />Once you have installed GPGTools,&nbsp; what you want to do is to go into System Preferences --&gt; Keyboard --&gt; Services.<br /><br />Scroll down until you find the following entries. Be sure to put a check mark in the boxes to activate each keyboard <br />shortcut.<br /><br />Keyboard shortcuts:<br /><br />OpenPGP: Decrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-D<br /><br />OpenPGP: Encrypt Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-E<br /><br />OpenPGP: Import Key from Selection:&nbsp; &nbsp; &nbsp;Shift-Command-I<br /><br />OpenPGP: Insert My Fingerprint:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-F<br /><br />OpenPGP: Insert My Key:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shift-Command-K<br /><br />OpenPGP: Sign Selection:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Shift-Command-R<br /><br />OpenPGP: Verify Signature of Selection: Shift-Control-V<br /><br />Remember, these shortcuts only operate on highlighted or selected text.<br /><br />To select text within TextEdit, use Command-A to highlight the entire document, or use your mouse to selection the <br />section that you want to verify/sign/encrypt/decrypt. It is highly recommended that you use only plain-text, as <br />opposed to Rich Text (.rtf) format. Use Command-, to bring up Preferences and ensure that the plain text radio button <br />is checked.<br /><br />Also ensure that the following are UNCHECKED in TextEdit preferences: smart quotes, smart dashes, smart links.<br /><br />Once your text is highlighted in TextEdit, (by pressing Comand-A) you then encrypt using Shift-Command-E. You will <br />then be presented with a list of keys to encrypt to, that you have added to your PGP kryring<br /><br />Other Commands You May Need:<br /><br />OpenPGP: Decrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-D<br /><br />OpenPGP: Encrypt File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Control-Command-E<br /><br />OpenPGP: Sign File:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Control-Command-S<br /><br />OpenPGP: Verify Signature of File:&nbsp; &nbsp; &nbsp; &nbsp;Control-Command-V<br /><br />Naturally, you can change any of these shortcuts to ones of your own choosing, if you wish.<br /><br /><br />Once you have setup these shortcuts, you can begin using GPG.<br /><br />To encrypt a message to someone using GPG, you first need a copy of the recipient&#039;s PGP public key. Many people put <br />a reference to where their PGP public key may be located in their .sig, for example:<br /><br />Guru &lt;Guru@SR&gt;<br />PGP Key: http://dkn255hz262ypmii.onion/index.php?topic=174.msg234832#msg234832<br />PGP Key: http://qtt2yl5jocgrk7nu.onion/pks/lookup?op=get&amp;search=0x523FCBEE886855CA<br />PGP Key Fingerprint: ADBE 8D80 5F5C 9CBA 9BDB 0F05 523F CBEE 8868 55CA<br /><br />Once you have located someone&#039;s PGP public key, you should copy and paste it into TextEdit. Save the file to a file; <br />you can file the file, import.asc, for example. This saved file will usually be found in the Documents folder.<br /><br />Launch GPG Keychain Access from the Applications folder. click on the Import icon in the upper left hand corner. <br />GPG Keychain Access will then prompt you for the name of the file which contains the key to import. It will usually <br />show you a list of files in the Documents folder. Click on the file named import.asc, and click ok. The PGP public <br />key will then be imported into your PGP keyring.<br /><br />To encrypt a message to a person, the message must be contained in a TextEdit document. Use Command-A to hightlight <br />the entire document. Then use Shift-Command-E to encrypt. GPG will pop-up a list of public keys in your PGP keyring. <br />Each key will have a little checkbox beside it which you can check, to select that particular key. If you were <br />encrypting a message to me, you would put a check in the box beside my PGP key (Guru@SR). When you click on OK, <br />the plaintext (unencrypted) message in TextEdit will be replaced with the encrypted message. You can then copy and <br />paste the encrypted message to enter it into a form on Silk Road, or anywhere else that it needs to go.<br /><br />To decrypt a message sent to you by other people, you need to copy that message to the clipboard, and paste it into <br />a TextEdit document. Again use Command-A to highlight all the encrypted message. Then use Shift-Command-D to decrypt <br />the message. If the message is encrypted to your PGP public key, you will be prompted to enter your passphrase. Once <br />the correct passphrase has been entered, and you click OK, then the message will be decrypted, and the decrypted text <br />will be placed in the TextEdit document, replacing the encrypted message that was there previously. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with Importing and Decrypting PGP keys on a Mac please!  </strong><br />
+				Post by: <strong>MarcelKetman</strong> on <strong>October 11, 2012, 09:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for that Pine. <br /><br />I&#039;m using Lion but am literally mid upgrade to Mountain Lion. I&#039;ve got it figured out except I can use services from within text, ie, I can&#039;t highlight the text and decrypt from there. I can however save it as a text file and then do it so that&#039;s fine. I hope upgrading to Mountain Lion doesn&#039;t mess things up on me. <br /><br />Thanks again. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with Importing and Decrypting PGP keys on a Mac please!  </strong><br />
+				Post by: <strong>rightonion</strong> on <strong>October 11, 2012, 12:22 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Open text edit then click<br /><br />TextEdit (top left)&gt;&gt; Services&gt;&gt;Services Preference <br /><br />Scroll to the bottom and tick all the openPGP options and save. <br /><br />Now when you highlight text in text edit you can right click &gt;services&gt;encrypt/decrypt<br /><br />Hope that is what you wanted and works for you. If not let me know<br /><br />You may well be receiving an order from me soon. Your K sounds very interesting :)<br /><br />Right
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with Importing and Decrypting PGP keys on a Mac please!  </strong><br />
+				Post by: <strong>MarcelKetman</strong> on <strong>October 18, 2012, 08:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=51797.msg516792#msg516792">Quote from: rightonion on October 11, 2012, 12:22 pm</a></div></div><blockquote class="bbc_standard_quote">Open text edit then click<br /><br />TextEdit (top left)&gt;&gt; Services&gt;&gt;Services Preference <br /><br />Scroll to the bottom and tick all the openPGP options and save. <br /><br />Now when you highlight text in text edit you can right click &gt;services&gt;encrypt/decrypt<br /><br />Hope that is what you wanted and works for you. If not let me know<br /><br />You may well be receiving an order from me soon. Your K sounds very interesting :)<br /><br />Right<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Cheers bro! Looking forward to doing business with you.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with Importing and Decrypting PGP keys on a Mac please!  </strong><br />
+				Post by: <strong>rightonion</strong> on <strong>October 19, 2012, 08:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				No worries mate
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with Importing and Decrypting PGP keys on a Mac please!  </strong><br />
+				Post by: <strong>pine</strong> on <strong>October 23, 2012, 03:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=51797.msg516651#msg516651">Quote from: MarcelKetman on October 11, 2012, 09:34 am</a></div></div><blockquote class="bbc_standard_quote">Thanks for that Pine. <br /><br />I&#039;m using Lion but am literally mid upgrade to Mountain Lion. I&#039;ve got it figured out except I can use services from within text, ie, I can&#039;t highlight the text and decrypt from there. I can however save it as a text file and then do it so that&#039;s fine. I hope upgrading to Mountain Lion doesn&#039;t mess things up on me. <br /><br />Thanks again.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />FYI: I&#039;m fairly sure that Mountain Lion doesn&#039;t support GPGTools. Sucks balls. Best stick with Lion.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with Importing and Decrypting PGP keys on a Mac please!  </strong><br />
+				Post by: <strong>oticetnom</strong> on <strong>October 23, 2012, 07:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=51797.msg539230#msg539230">Quote from: pine on October 23, 2012, 03:28 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=51797.msg516651#msg516651">Quote from: MarcelKetman on October 11, 2012, 09:34 am</a></div></div><blockquote class="bbc_alternate_quote">Thanks for that Pine. <br /><br />I&#039;m using Lion but am literally mid upgrade to Mountain Lion. I&#039;ve got it figured out except I can use services from within text, ie, I can&#039;t highlight the text and decrypt from there. I can however save it as a text file and then do it so that&#039;s fine. I hope upgrading to Mountain Lion doesn&#039;t mess things up on me. <br /><br />Thanks again.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>im running mac 10.5.8 and dont&#039; have the services menu. Is there any way around this? Thanks! Any help is greatly appreciated<br />FYI: I&#039;m fairly sure that Mountain Lion doesn&#039;t support GPGTools. Sucks balls. Best stick with Lion.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with Importing and Decrypting PGP keys on a Mac please!  </strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>October 23, 2012, 10:12 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=51797.msg539520#msg539520">Quote from: oticetnom on October 23, 2012, 07:10 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=51797.msg539230#msg539230">Quote from: pine on October 23, 2012, 03:28 am</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=51797.msg516651#msg516651">Quote from: MarcelKetman on October 11, 2012, 09:34 am</a></div></div><blockquote class="bbc_standard_quote">Thanks for that Pine. <br /><br />I&#039;m using Lion but am literally mid upgrade to Mountain Lion. I&#039;ve got it figured out except I can use services from within text, ie, I can&#039;t highlight the text and decrypt from there. I can however save it as a text file and then do it so that&#039;s fine. I hope upgrading to Mountain Lion doesn&#039;t mess things up on me. <br /><br />Thanks again.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>im running mac 10.5.8 and dont&#039; have the services menu. Is there any way around this? Thanks! Any help is greatly appreciated<br />FYI: I&#039;m fairly sure that Mountain Lion doesn&#039;t support GPGTools. Sucks balls. Best stick with Lion.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If you&#039;re running Leopard (10.5.8) your only real option is the command-line.&nbsp; There have been several posts on how to use the&nbsp; command-line effectively. <br /><br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with Importing and Decrypting PGP keys on a Mac please!  </strong><br />
+				Post by: <strong>oticetnom</strong> on <strong>October 23, 2012, 06:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=51797.msg539650#msg539650">Quote from: Nightcrawler on October 23, 2012, 10:12 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=51797.msg539520#msg539520">Quote from: oticetnom on October 23, 2012, 07:10 am</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=51797.msg539230#msg539230">Quote from: pine on October 23, 2012, 03:28 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=51797.msg516651#msg516651">Quote from: MarcelKetman on October 11, 2012, 09:34 am</a></div></div><blockquote class="bbc_alternate_quote">Thanks for that Pine. <br /><br />I&#039;m using Lion but am literally mid upgrade to Mountain Lion. I&#039;ve got it figured out except I can use services from within text, ie, I can&#039;t highlight the text and decrypt from there. I can however save it as a text file and then do it so that&#039;s fine. I hope upgrading to Mountain Lion doesn&#039;t mess things up on me. <br /><br />Thanks again.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>im running mac 10.5.8 and dont&#039; have the services menu. Is there any way around this? Thanks! Any help is greatly appreciated<br />FYI: I&#039;m fairly sure that Mountain Lion doesn&#039;t support GPGTools. Sucks balls. Best stick with Lion.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If you&#039;re running Leopard (10.5.8) your only real option is the command-line.&nbsp; There have been several posts on how to use the&nbsp; command-line effectively.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>oh cool thanks! I&#039;ll look into it some more. Couldn&#039;t find a very organized thread.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with Importing and Decrypting PGP keys on a Mac please!  </strong><br />
+				Post by: <strong>telepathicluv</strong> on <strong>November 02, 2012, 01:17 am</strong>
+			</dt>
+			<dd class="postbody">
+				I am following all of the directions to decrypt a message in textedit, but every time I do, I get&nbsp; a message that says decrypt failed! error code = 0.&nbsp; I have the latest updates from gpg tools and I have been successful in sending encrypted messages, just not decrypting. any advice?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Help with Importing and Decrypting PGP keys on a Mac please!  </strong><br />
+				Post by: <strong>Nightcrawler</strong> on <strong>November 02, 2012, 04:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=51797.msg561790#msg561790">Quote from: telepathicluv on November 02, 2012, 01:17 am</a></div></div><blockquote class="bbc_standard_quote">I am following all of the directions to decrypt a message in textedit, but every time I do, I get&nbsp; a message that says decrypt failed! error code = 0.&nbsp; I have the latest updates from gpg tools and I have been successful in sending encrypted messages, just not decrypting. any advice?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The only thing offhand that I can think of, is perhaps you have not set TextEdit to use plain-text, instead of .rtf format? <br /><br />Also, when you copy and paste into TextEdit, use Command-A to select all the text so everything is copied to the clipboard; use Command-C to copy from the clipboard to TextEdit. <br />If messages are not properly copied, i.e. if any of the 5 dashes in the -----BEGIN PGP MESSAGE----- or -----END PGP MESSAGE----- is missing, it will cause gpg to throw an error message. <br /><br />If all else fails, then you may have to resort to the command-line. I realize that this will suck from your perspective, but you may have little other option to decrypt your messages. <br /><br />What you want to do is first, when you paste the message into TextEdit, save it as a file, usually under Documents.&nbsp; For the purposes of example, let&#039;s call the file decrypt.txt<br /><br />Then open up a Terminal, by: Finder --&gt; Services --&gt; Terminal. <br /><br />You will then find yourself at a command prompt. <br /><br />Switch to the Documents folder by issuing the following command: cd Documents<br /><br />N.B. commands in Unix operating systems are case-sensitive. <br /><br />Decrypt by using the following command: gpg --decrypt decrypt.txt &gt;decrypted_file<br /><br />You will be prompted for your passphrase, after which the decrypted message will be found in the Documents folder under decrypted_file. <br /><br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

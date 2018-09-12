@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=218854.0" />
+		<title>Print Page - Historical Vendor GPG Key Database/TXT file (from StExo backup)</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Silk Road discussion => Topic started by: saulgood on October 07, 2013, 05:46 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Historical Vendor GPG Key Database/TXT file (from StExo backup)</strong><br />
+				Post by: <strong>saulgood</strong> on <strong>October 07, 2013, 05:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				Folks,<br /><br />I&#039;ve compiled a backup database of all vendors&#039; GPG keys, as crawled from StExo&#039;s &quot;last safe backup&quot; of the site&#039;s vendor pages (http://dkn255hz262ypmii.onion/index.php?topic=216937.0).<br /><br />You can download it here:<br /><br />https://anonfiles.com/file/3afb3688a78f3820ef51d8994f1ebdfe (1.5MB .txt file)<br /><br />Format is plaintext: vendor name, newline, GPG key, newline. Vendors without GPG keys listed in their profiles will show &#039;None&#039;.<br /><br />Steps I took to create this file:<br /><br />1. Download StExo&#039;s backup from http://dkn255hz262ypmii.onion/index.php?topic=216937.0 and unzip it, creating the vendors directory.<br />2. Save and run the following python script in the directory above &#039;vendors&#039;.<br /><br />----------------------------------------<br />import os<br />import re<br /><br />def read_vendor(f):<br />&nbsp; &nbsp; lines = open(f, &#039;r&#039;).read()<br />&nbsp; &nbsp; vendor_name = re.search(&#039;&lt;title&gt;\s*(.*) \| Silk Road\s*&lt;/title&gt;&#039;, lines).groups()[0]<br />&nbsp; &nbsp; gpg_search = re.search(&#039;-----BEGIN PGP PUBLIC KEY BLOCK-----.*-----END PGP PUBLIC KEY BLOCK-----&#039;, lines, re.DOTALL)<br />&nbsp; &nbsp; gpg_key = gpg_search.group().replace(&#039;&lt;br /&gt;&#039;, &#039;&#039;) if gpg_search else None<br />&nbsp; &nbsp; return vendor_name, gpg_key<br /><br />if __name__ == &#039;__main__&#039;:<br />&nbsp; &nbsp; files = os.listdir(&#039;vendors&#039;)<br />&nbsp; &nbsp; vendors = {}<br />&nbsp; &nbsp; for f in files:<br />&nbsp; &nbsp; &nbsp; &nbsp; vendor_name, gpg_key = read_vendor(&#039;vendors/&#039; + f)<br />&nbsp; &nbsp; &nbsp; &nbsp; vendors[vendor_name] = gpg_key<br />&nbsp; &nbsp; for (vendor_name, gpg_key) in sorted(vendors.items()):<br />&nbsp; &nbsp; &nbsp; &nbsp; print vendor_name<br />&nbsp; &nbsp; &nbsp; &nbsp; print<br />&nbsp; &nbsp; &nbsp; &nbsp; print gpg_key<br />&nbsp; &nbsp; &nbsp; &nbsp; print<br />----------------------------------------<br /><br />Search for your favorite vendors in a text editor and save their GPG keys for future use.<br /><br />What other efforts are people making to archive useful old SR data? How can we better preserve and authenticate this data?<br /><br />cheers,<br /><br />saulgood
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

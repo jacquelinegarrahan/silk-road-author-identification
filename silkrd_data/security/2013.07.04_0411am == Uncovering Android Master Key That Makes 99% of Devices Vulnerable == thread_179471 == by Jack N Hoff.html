@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=179471.0" />
+		<title>Print Page - Uncovering Android Master Key That Makes 99% of Devices Vulnerable</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Jack N Hoff on July 04, 2013, 04:11 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Uncovering Android Master Key That Makes 99% of Devices Vulnerable</strong><br />
+				Post by: <strong>Jack N Hoff</strong> on <strong>July 04, 2013, 04:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">The Bluebox Security research team – Bluebox Labs – recently discovered a vulnerability in Android’s security model that allows a hacker to modify APK code without breaking an application’s cryptographic signature, to turn any legitimate application into a malicious Trojan, completely unnoticed by the app store, the phone, or the end user. The implications are huge! This vulnerability, around at least since the release of Android 1.6 (codename: “Donut” ), could affect any Android phone released in the last 4 years1 – or nearly 900 million devices2– and depending on the type of application, a hacker can exploit the vulnerability for anything from data theft to creation of a mobile botnet.<br /><br />While the risk to the individual and the enterprise is great (a malicious app can access individual data, or gain entry into an enterprise), this risk is compounded when you consider applications developed by the device manufacturers (e.g. HTC, Samsung, Motorola, LG) or third-parties that work in cooperation with the device manufacturer (e.g. Cisco with AnyConnect VPN) – that are granted special elevated privileges within Android – specifically System UID access.<br /><br />Installation of a Trojan application from the device manufacturer can grant the application full access to Android system and all applications (and their data) currently installed. The application then not only has the ability to read arbitrary application data on the device (email, SMS messages, documents, etc.), retrieve all stored account &amp; service passwords, it can essentially take over the normal functioning of the phone and control any function thereof (make arbitrary phone calls, send arbitrary SMS messages, turn on the camera, and record calls). Finally, and most unsettling, is the potential for a hacker to take advantage of the always-on, always-connected, and always-moving (therefore hard-to-detect) nature of these “zombie” mobile devices to create a botnet.<br /><br />How it works:<br /><br />The vulnerability involves discrepancies in how Android applications are cryptographically verified &amp; installed, allowing for APK code modification without breaking the cryptographic signature.<br /><br />All Android applications contain cryptographic signatures, which Android uses to determine if the app is legitimate and to verify that the app hasn’t been tampered with or modified. This vulnerability makes it possible to change an application’s code without affecting the cryptographic signature of the application – essentially allowing a malicious author to trick Android into believing the app is unchanged even if it has been.<br /><br />Details of Android security bug 8219321 were responsibly disclosed through Bluebox Security’s close relationship with Google in February 2013. It’s up to device manufacturers to produce and release firmware updates for mobile devices (and furthermore for users to install these updates). The availability of these updates will widely vary depending upon the manufacturer and model in question.<br /><br />The screenshot below demonstrates that Bluebox Security has been able to modify an Android device manufacturer’s application to the level that we now have access to any (and all) permissions on the device. In this case, we have modified the system-level software information about this device to include the name “Bluebox” in the Baseband Version string (a value normally controlled &amp; configured by the system firmware).<br /><br />http://bluebox.com/wp-content/uploads/2013/06/exploit.png<br /><br />How to get more details:<br /><br />Technical details of the issue, and related tools/material, will be released as part of my Black Hat USA 2013 talk. During the talk, I will review the bug, including how it was found, and how it works. After the talk, we will post a follow-up post to our blog with a link to materials from the talk and you can track this information via @BlueboxSec<br /><br />Recommendations<br /><br />&nbsp; &nbsp; Device owners should be extra cautious in identifying the publisher of the app they want to download.<br />&nbsp; &nbsp; Enterprises with BYOD implementations should use this news to prompt all users to update their devices, and to highlight the importance of keeping their devices updated.<br />&nbsp; &nbsp; IT should see this vulnerability as another driver to move beyond just device management to focus on deep device integrity checking and securing corporate data.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Uncovering Android Master Key That Makes 99% of Devices Vulnerable</strong><br />
+				Post by: <strong>jackofspades</strong> on <strong>July 04, 2013, 07:39 am</strong>
+			</dt>
+			<dd class="postbody">
+				as if i needed another reason to not conduct business via phone
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Uncovering Android Master Key That Makes 99% of Devices Vulnerable</strong><br />
+				Post by: <strong>GrimWaldo</strong> on <strong>July 04, 2013, 03:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Wow, that&#039;s some scary shit... especially the BotNet.<br /><br />I have an Android phone, but I only use it to play &quot;Pissed-Off Ornithos&quot; and talk dirty to my spouse.<br />No worries here.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Uncovering Android Master Key That Makes 99% of Devices Vulnerable</strong><br />
+				Post by: <strong>murderface2012</strong> on <strong>July 04, 2013, 09:32 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<br />Lesson:<br />Know what you&#039;re downloading!!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Uncovering Android Master Key That Makes 99% of Devices Vulnerable</strong><br />
+				Post by: <strong>comsec</strong> on <strong>July 05, 2013, 02:39 am</strong>
+			</dt>
+			<dd class="postbody">
+				This only affects people who install packages OUTSIDE the official Google play store, as they aren&#039;t vuln to this signature spoofing. So if you use F-Droid, or random packages from XDA dev site or elsewhere you could be affected.<br /><br />You don&#039;t need a Google account to download play store .apk&#039;s/apps. There&#039;s a trick you can do with your browser to spoof being a phone and download the .apk&#039;s directly from Google, then you don&#039;t have to trust their playstore app and can safely use applications you know are protected against this attack. You should also have &#039;Enable 3rd party installations&#039; disabled and preferably you should have package manager (pm) chmod 000 or otherwise disabled completely. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Uncovering Android Master Key That Makes 99% of Devices Vulnerable</strong><br />
+				Post by: <strong>ChemCat</strong> on <strong>July 05, 2013, 02:46 am</strong>
+			</dt>
+			<dd class="postbody">
+				opera mobile emulator is pretty good .....<br /><br />allows your pc to be seen as a phone....pretty easy set up from the start.<br /><br />hope this has helped someone&nbsp; :)<br /><br />Peace &amp; Hugs,<br /><br />&nbsp; &nbsp; &nbsp; ChemCat&nbsp; <br /><br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;O0
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Uncovering Android Master Key That Makes 99% of Devices Vulnerable</strong><br />
+				Post by: <strong>ChemCat</strong> on <strong>July 05, 2013, 03:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				:o
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Uncovering Android Master Key That Makes 99% of Devices Vulnerable</strong><br />
+				Post by: <strong>acroyear</strong> on <strong>July 06, 2013, 03:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				This is a non-issue for 99% of android users I think.&nbsp; Theoretically it&#039;s a cool exploit though
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

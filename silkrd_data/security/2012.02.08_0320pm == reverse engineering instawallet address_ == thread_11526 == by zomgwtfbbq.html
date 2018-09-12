@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=11526.0" />
+		<title>Print Page - reverse engineering instawallet address?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: zomgwtfbbq on February 08, 2012, 03:20 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>reverse engineering instawallet address?</strong><br />
+				Post by: <strong>zomgwtfbbq</strong> on <strong>February 08, 2012, 03:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ok, so let me start off by saying that...<br /><br />a: I know that I am most likely fucked.<br />b: I have nobody to blame for this but myself.<br />c: I don&#039;t want anyone to give me anything for my misfortune other than information - this isn&#039;t a &quot;woe is me, please send me a coin&quot; post.&nbsp; If I can&#039;t recover the coins, then I can&#039;t recover them.<br /><br />But... does anyone know any way to reverse engineer part or all of an instawallet address from a bitcoin address?&nbsp; The instawallet faq pretty much says that if you lose that URL, you&#039;re screwed - the guy that runs it either can&#039;t or won&#039;t help you - and I don&#039;t blame him, but I&#039;m out a non-trivial amount of BTC unless I can figure out a solution here.&nbsp; Basically, I think I clicked away from the wrong tab thinking that I had saved the URL somewhere - I&#039;m not entirely sure - but whatever.&nbsp; I have a dump of half of my laptop&#039;s memory (it crashed during the memory dump process) in the hopes that maybe some or part of the URL is in there somewhere, but so far all I&#039;ve been able to get out of it are all of my instawallet URLs except the one I really need.&nbsp; The more I look at it, the more I think too much time had passed between the time that I realized what had happened and the time that I was able to start dumping RAM, so all my grepping is probably for naught.<br /><br />Feel free to mock my misfortune.&nbsp; But any suggestions for solutions are welcome, too.&nbsp; I briefly considered the idea of trying to brute-force it until I did the math on the number of possible wallet URLs.&nbsp; =/
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: reverse engineering instawallet address?</strong><br />
+				Post by: <strong>QTC</strong> on <strong>February 08, 2012, 03:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If the instawallet admin wasn&#039;t an idiot, he&#039;d be using some sort of (inherently considered secure) hash function to generate the URLs. I think you&#039;re outta luck.<br /><br />And bruteforcing it... yeah, that&#039;s 5.4x10^39 URLs by my count... :-(
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: reverse engineering instawallet address?</strong><br />
+				Post by: <strong>sunsetlimited</strong> on <strong>February 08, 2012, 09:05 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Here, have at &#039;em! Klick away... ;)<br />http://www.google.com/search?q=site:https://www.instawallet.org/&amp;hl=en&amp;prmd=imvns&amp;filter=0&amp;biw=1280&amp;bih=861<br /><br />But on a serious note, I fear you&#039;re shit out of luck. :[
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: reverse engineering instawallet address?</strong><br />
+				Post by: <strong>audacity</strong> on <strong>February 28, 2012, 01:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				Sorry mate- not to get your hopes up by posting 2 weeks later&nbsp; :-\ but for future reference for all- the same thing happened to me :(<br /><br />I saved the address and not the URL. I realized then before get-bitcoin deposited my money in my account so i VERY promptly emailed them explaining i needed to change my deposit account address. They said they&#039;d proccess my request before it was deposited. This was a good 8 hours before they actually made the deposit. Then never did. Only offered the 5% refund and still haven&#039;t gotten that. For all i know they could have put it in their own account. Otherwise it&#039;s just sitting out there eating up someones server space.<br /><br />At most try and get the fee back somehow mate. I know how you feel- sucks. but as im sure you&#039;ve realized by now life moves on :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: reverse engineering instawallet address?</strong><br />
+				Post by: <strong>Horizons</strong> on <strong>February 28, 2012, 11:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				I wonder how many bitcoins are floating in the limbo because the owner lost the instawallet address or the HDD storing a local wallet crashed... Since mining is going to stop when a fixed total amount of coins is reached, it&#039;s not good at all to have stuff like this happen.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: reverse engineering instawallet address?</strong><br />
+				Post by: <strong>Wonderland</strong> on <strong>February 28, 2012, 04:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I lost over 200$ on my 1st go-round with instawallet... such a bummer!! I now double and triple check that shit every time!!
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

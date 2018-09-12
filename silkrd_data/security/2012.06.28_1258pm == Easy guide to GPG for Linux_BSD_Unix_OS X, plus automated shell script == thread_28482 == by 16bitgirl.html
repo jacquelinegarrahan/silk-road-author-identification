@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=28482.0" />
+		<title>Print Page - Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: 16bitgirl on June 28, 2012, 12:58 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>16bitgirl</strong> on <strong>June 28, 2012, 12:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Despite being a computer geek, I found GPG a bit tricky to use at first, and I&#039;m guessing I&#039;m not alone, so here is my guide to GPG usage.<br /><br />First off - import the keys of the sellers you want to send stuff to. On their user page, they should have a block of text that looks like this:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: Something or other<br />Charset: This line may or may not be here<br /><br />RandomStuffLikeRDri646D7xb24RG (etc etc)<br />-----END PGP PUBLIC KEY BLOCK-----</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Copy that entire block (including the lines with -----BEGIN----- and -----END-----) into a text file, say, lucykey.txt (I&#039;ve decided my pretend seller is called Lucy), save it in your home directory, then open up a terminal window / command line, which should start out in your home directory. Type the following command:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --import lucykey.txt</code>And GPG will show you some information about the name of the person, for example:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg: key 7A8B9C0D: public key &quot;Lucy &lt;lucy@sky.diamonds&gt;&quot; imported<br />gpg: Total number processed: 1<br />gpg:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;imported: 1</code>Which means that GPG now knows how to encrypt files for &quot;Lucy&quot;, the part before the email address being what GPG calls her. To encrypt a text file, such as top_secret.txt for Lucy, you&#039;d type:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg -e --armor -r &quot;Lucy&quot; top_secret.txt</code>GPG will ask if you want to trust the key, and assuming you answer &quot;y&quot;, it&#039;ll spit out a file called top_secret.txt.asc which is the PGP-encoded version of top_secret.txt, and can only be read by Lucy. This&#039;ll look a lot like those PGP public key blocks, like this:<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">-----BEGIN PGP MESSAGE-----<br />Version: Something or other<br /><br />RandomStuffLikeRDri646D7xb24RG<br />-----END PGP MESSAGE-----</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Just copy that whole block from top_secret.txt.asc to Lucy, and she&#039;ll be able to read it!<br /><br />Now, personally I didn&#039;t quite like the way that worked. I mean, what if some time later, I want to encrypt top_secret.txt for Mary-Jane? After I&#039;d done it, I might forget whether top_secret.txt.asc was Lucy&#039;s version or Mary-Jane&#039;s version. So I created a bash script! Here it is, in all its glory:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">#!/bin/bash<br />if [ &quot;$#&quot; -ne 2 ]; then<br />&nbsp; &nbsp; echo &quot;usage: $0 recipient_name text_file_to_encrypt&quot;<br />&nbsp; &nbsp; echo &quot;The recipient name must contain no spaces, but email addresses also work.&quot;<br />&nbsp; &nbsp; exit 1<br />fi<br />gpg -e --armor -o $2-$1.asc -r &quot;$1&quot; $2<br />echo<br />echo &quot;File $2 has been encrypted, and saved as $2-$1.asc&quot;<br /><br /># This script is released to the public domain. In countries where<br /># this is not possible, such as Soviet Russia (Domain Publics YOU!),<br /># then this script is released under the following license: <br />#<br /># DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE<br />#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Version 2, December 2004<br />#<br /># Copyright (C) 2004 Sam Hocevar &lt;sam@hocevar.net&gt; <br />#<br /># Everyone is permitted to copy and distribute verbatim or modified<br /># copies of this license document, and changing it is allowed as long<br /># as the name is changed. <br />#<br />#&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE<br />#&nbsp; &nbsp;TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION <br />#<br />#&nbsp; 0. You just DO WHAT THE FUCK YOU WANT TO.</code>Save this script somewhere in your path (I recommend the name gpg-encrypt), remembering to run chmod +x on the file. Then, all you have to type is the following:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg-encrypt Lucy top_secret.txt</code>And instead of giving you a file named top_secret.txt.asc, it&#039;ll give you a file named top_secret.txt-Lucy.asc, eliminating any confusion! The script also tells you what it&#039;s called the file just to make it easier to find. Anyway, I hope this information and script helps people who find GPG as cumbersome as I do :D<br /><br />Note: If your vendor&#039;s PGP username has a space in it - say...<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg: key 1C2D3E4F: public key &quot;Lucille Ball &lt;i@love.lucy&gt;&quot; imported</code>Then you must use the email address instead of the username, as in...<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg-encrypt i@love.lucy top_secret.txt</code>The script above has been updated to tell you this if you try and use usernames with spaces :D<br /><br />Second note: If you forget your vendor&#039;s PGP key name, simply type the command...<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --list-keys</code>Or if the list of keys is too long and half of it scrolls away into oblivion...<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --list-keys | less</code>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>June 28, 2012, 01:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28482.msg313527#msg313527">Quote from: 16bitgirl on June 28, 2012, 12:58 pm</a></div></div><blockquote class="bbc_standard_quote">And instead of giving you a file named top_secret.txt.asc, it&#039;ll give you a file named top_secret.txt-Lucy.asc, eliminating any confusion! The script also tells you what it&#039;s called the file just to make it easier to find. Anyway, I hope this information and script helps people who find GPG as cumbersome as I do :D<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Nice, the only drawback is if you don&#039;t want a bunch of filenames which show who they&#039;re encrypted to.&nbsp; That can be avoided by keeping them in an encrypted volume (e.g. TrueCrypt), though.<br /><br />Also you can see the keys a file has been encrypted to by using &quot;gpg -v $filename&quot; (after entering your passphrase if you also encrypted it to yourself).&nbsp; The only time that won&#039;t work is if the &quot;throw-keyid&quot; option was used when the file was created.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>16bitgirl</strong> on <strong>June 28, 2012, 01:24 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ah, I did not know of this option! Curse you GPG, with all your twisty little turns! You&#039;re quite right though about not keeping the files around, personally I use shred or srm on the files once I&#039;m done with them, but a TrueCrypt partition would also work excellently :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>June 28, 2012, 01:26 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28482.msg313570#msg313570">Quote from: 16bitgirl on June 28, 2012, 01:24 pm</a></div></div><blockquote class="bbc_standard_quote">Ah, I did not know of this option! Curse you GPG, with all your twisty little turns! You&#039;re quite right though about not keeping the files around, personally I use shred or srm on the files once I&#039;m done with them, but a TrueCrypt partition would also work excellently :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The &quot;-v&quot; flag invokes verbose mode so it will display more detail about whatever it is doing.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>June 28, 2012, 03:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28482.msg313644#msg313644">Quote from: Guru on June 28, 2012, 02:32 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28482.msg313575#msg313575">Quote from: LouisCyphre on June 28, 2012, 01:26 pm</a></div></div><blockquote class="bbc_alternate_quote">The &quot;-v&quot; flag invokes verbose mode so it will display more detail about whatever it is doing.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Nah... for real fun use gpg --list-packets<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Or make it a little easier on yourself and use pgpdump:<br /><br />http://www.pgpdump.net/<br />http://www.pgpdump.net/about.html<br /><br />As the site says it makes --list-packets more human readable.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>16bitgirl</strong> on <strong>June 28, 2012, 03:43 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Or you could, as I suggested, use the much simpler option of shred :P It overwrites the file repeatedly with both randomness and those fancy patterns that stop forensic file recovery, does the same thing to the file name, and removes the file afterwards, with the -u flag. Personally, for ultimate paranoia, I&#039;d recommend:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">shred -u -n 50 OH_NOES_NOONE_MUST_EVER_SEE_THIS.txt</code> :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>16bitgirl</strong> on <strong>June 28, 2012, 03:50 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Licensing info removed from this post, placed into the script itself.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>CaliTrees</strong> on <strong>June 28, 2012, 03:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Instead of truecrypt you can use dm_crypt modules for encrypting your root, home and swap partitions.&nbsp; Keep it GPL yo.&nbsp; There&#039;s good documentation for gentoo and archlinux.<br /><br />I know some really like CLI but there is a GTK2 gui app you can use instead.&nbsp; http://gpg-crypter.sourceforge.net/&nbsp; You would still need to use your keyring to add the public keys of your coorespondants.&nbsp; However you can use seahorse for a GUI to do that.<br /><br />Nice lil bash script.&nbsp; I&#039;m really waiting for a browser plugin too, that would rock. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>16bitgirl</strong> on <strong>June 28, 2012, 03:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You know, I could never get Seahorse to work properly, and by the time I&#039;d figured things out, it was the command line where I had my knowledge. But hopefully these graphical apps can help others :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>CaliTrees</strong> on <strong>June 28, 2012, 04:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Seahorse is used to just import the public keys.&nbsp; So you open it, go to file import and find your text file.&nbsp; Once that&#039;s done you can close it and open GPG-crypter and it&#039;ll have your imported key.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>June 28, 2012, 04:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28482.msg313791#msg313791">Quote from: CaliTrees on June 28, 2012, 04:01 pm</a></div></div><blockquote class="bbc_standard_quote">Seahorse is used to just import the public keys.&nbsp; So you open it, go to file import and find your text file.&nbsp; Once that&#039;s done you can close it and open GPG-crypter and it&#039;ll have your imported key.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Personally I find that &quot;gpg --import pubkey.asc&quot; is quicker.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>vlad1m1r</strong> on <strong>June 28, 2012, 05:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28482.msg313527#msg313527">Quote from: 16bitgirl on June 28, 2012, 12:58 pm</a></div></div><blockquote class="bbc_standard_quote">Despite being a computer geek, I found GPG a bit tricky to use at first, and I&#039;m guessing I&#039;m not alone, so here is my guide to GPG usage.<br /><br />First off - import the keys of the sellers you want to send stuff to. On their user page, they should have a block of text that looks like this:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: Something or other<br />Charset: This line may or may not be here<br /><br />RandomStuffLikeRDri646D7xb24RG (etc etc)<br />-----END PGP PUBLIC KEY BLOCK-----</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Copy that entire block (including the lines with -----BEGIN----- and -----END-----) into a text file, say, lucykey.txt (I&#039;ve decided my pretend seller is called Lucy), save it in your home directory, then open up a terminal window / command line, which should start out in your home directory. Type the following command:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg --import lucykey.txt</code>And GPG will show you some information about the name of the person, for example:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg: key 7A8B9C0D: public key &quot;Lucy &lt;lucy@sky.diamonds&gt;&quot; imported<br />gpg: Total number processed: 1<br />gpg:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;imported: 1</code>Which means that GPG now knows how to encrypt files for &quot;Lucy&quot;, the part before the email address being what GPG calls her. To encrypt a text file, such as top_secret.txt for Lucy, you&#039;d type:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg -e --armor -r &quot;Lucy&quot; top_secret.txt</code>GPG will ask if you want to trust the key, and assuming you answer &quot;y&quot;, it&#039;ll spit out a file called top_secret.txt.asc which is the PGP-encoded version of top_secret.txt, and can only be read by Lucy. This&#039;ll look a lot like those PGP public key blocks, like this:<br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">-----BEGIN PGP MESSAGE-----<br />Version: Something or other<br /><br />RandomStuffLikeRDri646D7xb24RG<br />-----END PGP MESSAGE-----</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Just copy that whole block from top_secret.txt.asc to Lucy, and she&#039;ll be able to read it!<br /><br />Now, personally I didn&#039;t quite like the way that worked. I mean, what if some time later, I want to encrypt top_secret.txt for Mary-Jane? After I&#039;d done it, I might forget whether top_secret.txt.asc was Lucy&#039;s version or Mary-Jane&#039;s version. So I created a bash script! Here it is, in all its glory:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">#!/bin/bash<br />if [ &quot;$#&quot; -ne 2 ]; then<br />&nbsp; &nbsp; echo &quot;usage: $0 recipient_name text_file_to_encrypt&quot;<br />&nbsp; &nbsp; exit 1<br />fi<br />gpg -e --armor -o $2-$1.asc -r &quot;$1&quot; $2<br />echo<br />echo &quot;File $2 has been encrypted, and saved as $2-$1.asc&quot;</code>Save this script somewhere in your path (I recommend the name gpg-encrypt), remembering to run chmod +x on the file. Then, all you have to type is the following:<br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">gpg-encrypt Lucy top_secret.txt</code>And instead of giving you a file named top_secret.txt.asc, it&#039;ll give you a file named top_secret.txt-Lucy.asc, eliminating any confusion! The script also tells you what it&#039;s called the file just to make it easier to find. Anyway, I hope this information and script helps people who find GPG as cumbersome as I do :D<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />+1 for a very well put together post 16bitgirl well done! If you need help encrypting Truecrypt/LUKS partitions please let me know I&#039;d be happy to help.<br /><br />V.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>bogben</strong> on <strong>June 28, 2012, 07:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28482.msg313760#msg313760">Quote from: 16bitgirl on June 28, 2012, 03:43 pm</a></div></div><blockquote class="bbc_standard_quote">Or you could, as I suggested, use the much simpler option of shred :P It overwrites the file repeatedly with both randomness and those fancy patterns that stop forensic file recovery, does the same thing to the file name, and removes the file afterwards, with the -u flag. Personally, for ultimate paranoia, I&#039;d recommend:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">shred -u -n 50 OH_NOES_NOONE_MUST_EVER_SEE_THIS.txt</code> :)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yes but is it truely random? Not if it uses /dev/urandom and very likely not if it uses /dev/random as srm does. Of course I susupect that either of these is plenty random enough to stop a local police force techie and if the big boys are after you why don&#039;t you know all this and plenty more besides!<br />As it happens both shred and srm suffer from the same problem in that they are incapable of tracking down various places on the disk the auto save function (or whatever) places it as is often the case, especially with the newer ext4 formats in linux. Thus my paranoia makes me run :<br />shred -v -u -n 35 /dev/sdc1 on any disk/usb that I worry about, followed by (after the tedious reformatting):<br />sfill -v /media/USB1 <br />I do not recommend this you have a disk bigger than about 4GB and would like to turn your computer off within 5 full days of begining this&nbsp; :-\
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>16bitgirl</strong> on <strong>July 02, 2012, 10:12 am</strong>
+			</dt>
+			<dd class="postbody">
+				A caveat - the first version of my script will not accept recipient names with a space in them. Email addresses work, though. I&#039;ll update the first post with the new version of the script, which just adds this info to the usage guide you see if there&#039;s too few/many parameters.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>16bitgirl</strong> on <strong>July 02, 2012, 01:21 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28482.msg314019#msg314019">Quote from: bogben on June 28, 2012, 07:13 pm</a></div></div><blockquote class="bbc_standard_quote">Yes but is it truely random? Not if it uses /dev/urandom and very likely not if it uses /dev/random as srm does. Of course I susupect that either of these is plenty random enough to stop a local police force techie and if the big boys are after you why don&#039;t you know all this and plenty more besides!<br />As it happens both shred and srm suffer from the same problem in that they are incapable of tracking down various places on the disk the auto save function (or whatever) places it as is often the case, especially with the newer ext4 formats in linux. Thus my paranoia makes me run :<br />shred -v -u -n 35 /dev/sdc1 on any disk/usb that I worry about, followed by (after the tedious reformatting):<br />sfill -v /media/USB1 <br />I do not recommend this you have a disk bigger than about 4GB and would like to turn your computer off within 5 full days of begining this&nbsp; :-\<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well, there&#039;s no such thing as true randomness in computers, unless you use specialist hardware like... I dunno, a device that generates randomness from the measured speed of a guinea pig wheel or something. Also, half of what shred and srm use now aren&#039;t random (or pseudorandom) patterns, but some specific pre-defined patterns that are supposedly great for wiping the magnetic patterns so as to be forensically unrecoverable. You are correct, however, that some newer filesystems and some harddrives (and most flash drives) will have areas you can&#039;t access that may contain sensitive data. To make matters worse, your method of wiping the &quot;entire&quot; device may not actually wipe the entire device, as quite often (always with flash devices), there will be parts of the disk that aren&#039;t shown to your computer, used for various purposes including replacing space from disk areas that have gone bad. This is certainly a concern, and I do hope that the next iteration of the ext filesystem includes features to specifically allow secure erasing utilities to get around the problems caused by these newer filesystems.<br /><br />It may well be best to keep all these files in an encrypted partition, and then to securely erase said partition when you&#039;re done with it (especially in countries like the UK where you can go to prison if you don&#039;t hand over your decryption keys if the police ask for them). Either that, or disguising an encrypted partition as a second encrypted swap partition that you &quot;forgot&quot; to switch on in an operating system like FreeBSD. Encrypted swap partitions should be indistinguishable from other encrypted partitions, and have the advantage that the OS generates the encryption key at random on boot, since you have no need to know what it is, and so you have a perfectly legitimate reason for being &quot;unable&quot; to hand over such an encryption key. As in, you &quot;deactivated the second encrypted swap partition temporarily, meant to turn it back on but forgot to, and there&#039;s no way of retrieving the key for it&quot;. Of course, if the fake-swap partition were mounted in an app like TrueCrypt when a hypothetical LE raid happened, even if you immediately unmounted it they might be able to retrieve the key from RAM unless your encryption app overwrites that area of memory when unmounting or something.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>July 03, 2012, 08:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28482.msg320663#msg320663">Quote from: 16bitgirl on July 02, 2012, 01:21 pm</a></div></div><blockquote class="bbc_standard_quote">It may well be best to keep all these files in an encrypted partition, and then to securely erase said partition when you&#039;re done with it (especially in countries like the UK where you can go to prison if you don&#039;t hand over your decryption keys if the police ask for them).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I just read Section 49 of RIPA.&nbsp; Wow, that&#039;s pretty special (and by &quot;special&quot; I mean it&#039;s completely fucked).&nbsp; Now, IANAL, but (I&#039;ve done a bit of digging through legislation in the past and) ...<br /><br />Subsection (3) is just nasty, it gives them carte blanche to invoke it whenever they damn well please.<br /><br />There may be some wriggle room available in Subsection (4), especially (4)(a), (4)(b) and (4)(c).&nbsp; More so when it is combined with Section 50(1).<br /><br />http://www.legislation.gov.uk/ukpga/2000/23/part/III&nbsp; (clearnet)<br /><br />It appears that the legislation demands that the notice must be delivered in writing or a a recordable form {49(4)(1)}, must describe the protected information being sought by the order {49(4)(2)} and must specify the matters the order relates to (e.g. a trial or investigation) {49(4)(3)}.&nbsp; Which means that if a notice is made relating to messages encrypted to a GPG key and which were intercepted or covered a particular period, then the notice must specify which actual messages they want decrypted.<br /><br />Plus Section 49(9) exempts keys (or subkeys) which are used to make digital signatures.&nbsp; While Section 50 subsections (1) and (2) indicate that a person served with a notice had the option of providing the key or providing the decrypted data.&nbsp; The rest of Section 50 appears to deal with situations where a key is no longer available or not available to the target of the notice.<br /><br />Now, let&#039;s assume that someone in this situation has all the data which LE and/or spooks want and will comply with every legal request, but otherwise wishes to minimise the damage.&nbsp; Let&#039;s also assume that the notice relates only to data encrypted with OpenPGP/GPG.&nbsp; Here&#039;s what I would try:<br /><br />1) Upon receipt of a notice confirm that it explicitly cites which messages or files they want (e.g. filenames, all email sent and received between dates X and Y, etc.) *and* that the specified data does actually relate to whatever reason there&#039;ve given for the notice/demand.<br /><br />2) If the notice does not explicitly specify the messages, files or the specific issue (subject matter) that they want, then decline on the grounds that the order does not provide the right detail.&nbsp; This is just a delaying tactic and will not last, but the aim is to make sure that they explicitly list each file or message they want (are aware of).&nbsp; Everything else is off the table.&nbsp; Go through the first and second points here until they get it right.<br /><br />3) When they (finally?) do get it right, decrypt the relevant data and provide them with the decrypted data.&nbsp; Perhaps in conjunction with some log of the decryption process so they know the data hasn&#039;t been doctored (a video file of the screen during the decryption ought to be enough).<br /><br />It&#039;s still possible that this might not be enough for them, or a conspirator might still be encrypting data to the relevant public key or they might have invoked Section 51, which is probably the worst part and explicitly mentions demanding keys under certain circumstances.&nbsp; So let&#039;s continue where we left off.<br /><br />4) If the notice specifies the messages of files, but they demand doing the decryption themselves for some verification process (or whatever other reason) then provide them with a spreadsheet containing two columns: the filename or message identifier and the GPG session key for the symmetric cipher used for that specific message.&nbsp; Use &quot;gpg --show-session-key&quot; to obtain the session key for each message, the process will decrypt the file.&nbsp; The filth (LE/spooks) will use &quot;gpg --override-session-key $SESSIONKEY $filename.txt&quot; to obtain what they want.&nbsp; It&#039;s possible that the number of files or messages may make this painful them.&nbsp; If you&#039;re using gpg-agent (for passphrase caching) it should be a lot easier to extract session keys with a script than it would be for those keys to be used to decrypt the corresponding files (it can be done, of course, but with more coding time spent on that script).<br /><br />5) If the number of files is constantly changing as a result of others encrypting to that key then session keys won&#039;t cut it.&nbsp; A key will be required to decrypt the specified messages, but that key will also be able to be used to decrypt any other file or message that has been encrypted with that key.&nbsp; If Section 51 is invoked to demand the key the situation is the same as if the key needs to be provided instead of session keys.<br /><br />If the key must be provided, then only provide the encryption subkey&#039;s secret component.&nbsp; Details of how to do this (and keep a copy of just the encryption subkey against exactly this type of situation) is here:<br /><br />http://dkn255hz262ypmii.onion/index.php?topic=28859.0<br /><br />Once the encryption subkey (with its alternate passphrase) has been handed over, update your master copy to do the following:<br /><br />* Revoke the subkey that has been provided to LE/spooks.<br />* Create a new encryption subkey.<br />* Export the public key and disseminate it everywhere that you have previously.<br /><br />If using that key for encrypting local files or non-transmitted files, stop doing that and switch to a new key explicitly for that purpose which is not provided to others or use a different encryption method.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28482.msg320663#msg320663">Quote from: 16bitgirl on July 02, 2012, 01:21 pm</a></div></div><blockquote class="bbc_standard_quote">Either that, or disguising an encrypted partition as a second encrypted swap partition that you &quot;forgot&quot; to switch on in an operating system like FreeBSD. Encrypted swap partitions should be indistinguishable from other encrypted partitions, and have the advantage that the OS generates the encryption key at random on boot, since you have no need to know what it is, and so you have a perfectly legitimate reason for being &quot;unable&quot; to hand over such an encryption key. As in, you &quot;deactivated the second encrypted swap partition temporarily, meant to turn it back on but forgot to, and there&#039;s no way of retrieving the key for it&quot;. Of course, if the fake-swap partition were mounted in an app like TrueCrypt when a hypothetical LE raid happened, even if you immediately unmounted it they might be able to retrieve the key from RAM unless your encryption app overwrites that area of memory when unmounting or something.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />At that point you have to start looking into the feasibility of using the same trick as in _Cryptonomicon_; to build an electro-magnet into the doorway that LE will have to cart your stuff through when they seize it.&nbsp; I haven&#039;t even vaguely looked into whether or not it would do enough damage to the drives.&nbsp; RAM, however, isn&#039;t that fond of electro-magnetic fields, not does it retain data after a shutdown for long.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>16bitgirl</strong> on <strong>July 04, 2012, 07:07 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Yes, the RIP Act is really quite fucked up. They brought it in alongside a flurry of tabloid scaremongering, claiming it would help catch paedophiles and terrorists (the two most tabloid-friendly excuses for doing anything). However, not only is RIPA a horrendous violation of privacy, it actually protects those two groups, especially the bloody paedophiles. If you were a paedophile with an encrypted partition of child porn, would you rather:<br /><br />A) Refuse to hand over the encryption keys, and get up to two years in jail, on a rather obscure sounding charge?<br />B) Hand over the keys, get many years in jail with extra beatings and bum-rape thrown in, and be both on the Sex Offenders Registry and under probation for the rest of your life?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>July 06, 2012, 01:06 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28482.msg325387#msg325387">Quote from: 16bitgirl on July 04, 2012, 07:07 pm</a></div></div><blockquote class="bbc_standard_quote">Yes, the RIP Act is really quite fucked up. They brought it in alongside a flurry of tabloid scaremongering, claiming it would help catch paedophiles and terrorists (the two most tabloid-friendly excuses for doing anything).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Like tabloids really have a leg to stand on after the Milly Dowler thing.&nbsp; Their real objection to cryptography is it would prevent them from rifling through someone&#039;s data for the next story.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=28482.msg325387#msg325387">Quote from: 16bitgirl on July 04, 2012, 07:07 pm</a></div></div><blockquote class="bbc_standard_quote">However, not only is RIPA a horrendous violation of privacy, it actually protects those two groups, especially the bloody paedophiles. If you were a paedophile with an encrypted partition of child porn, would you rather:<br /><br />A) Refuse to hand over the encryption keys, and get up to two years in jail, on a rather obscure sounding charge?<br />B) Hand over the keys, get many years in jail with extra beatings and bum-rape thrown in, and be both on the Sex Offenders Registry and under probation for the rest of your life?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Nice point, I guess they really didn&#039;t think that one through.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Easy guide to GPG for Linux/BSD/Unix/OS X, plus automated shell script</strong><br />
+				Post by: <strong>bogben</strong> on <strong>July 06, 2012, 07:45 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Lol, I wasn&#039;t actually suggesting a random noise generator was required for secure deleterion :p I was being facetious. You are quite right that USB are the worst offenders as far as not being able to get all the data off it are concerned, the shred and srm commands are not infallibale (I&#039;m not sure what is except secure-wipe of whatever its called) but rather a slightly easier method than DBAN (itself not foolproof as it doesn&#039;t overwrite bad sectors). The trick is to make it too hard and expensive for LE to justify digging far enough to find whatever you have missed.<br /><br />RIPA is a supremely nasty piece of legistlation that makes encryption alone insufficient in the UK. The answer has to be the hidden partition or complete off-site storage (I store all my relevant files in a symmetrically encrypted file in an otherwise unused tormail). Louis has the right of it, but I would say that on top of that its worth changing keys every so often, I delete, revoke and recreate my keys about once a month, that way the most I can be forced to decrypt is 1 months worth of communication. The rest is beyond my ability to recover (as the key generation date will show).<br /><br />I&#039;m not sure about the electromagnet around the door, seems like the raid team would spot it? In any case I think RAM holds memory for about 15 minutes, though this can be extended by freezing it. I suspect that if you are high priority enough for them to send in techs with liquid nitrogen with the raid team you had better make sure you are using something that DOES wipe RAM (truecrypt in TAILS would work as it clears the RAM on shutdown).<br /><br />Tabloids! Ha! The Sun called SR &quot;Evil.com&quot; which tells you all you need to know about them.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

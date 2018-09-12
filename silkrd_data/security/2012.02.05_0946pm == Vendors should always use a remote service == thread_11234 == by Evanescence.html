@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=11234.0" />
+		<title>Print Page - Vendors should always use a remote service</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: Evanescence on February 05, 2012, 09:46 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Vendors should always use a remote service</strong><br />
+				Post by: <strong>Evanescence</strong> on <strong>February 05, 2012, 09:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m starting to come to the conclusion that SR alone is not good enough for vendor security.<br /><br />The problem is, as discussed on other threads is that postmarks and Tor client traffic can be geographically profiled (http://en.wikipedia.org/wiki/Geographic_profiling).<br /><br />If you are a vendor what you need is, minimum, a good VPN service.&nbsp; Or you could rent a whole virtual Windows machine from Microsoft for 10 cents/hour or Linux VM. <br /><br />Either way the critical factor is this moves the origin of TOR traffic from your house to a server where it cannot be found via profiling (practically speaking).<br /><br />I&#039;m not a security expert so take this fwiw, but just thinking it through it should be malpractice for a high value vendor to physically touch any computer with TOR on it.<br /><br /><br />Other thread where this is discussed:<br />http://dkn255hz262ypmii.onion/index.php?topic=10601.0
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors should always use a remote service</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>February 05, 2012, 10:19 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You are better off to buy a VPS somewhere random and use it as a private Tor bridge <br /><br />If you can&#039;t afford to do this you can always use one of the semi-public volunteer bridge nodes:<br /><br />https://bridges.torproject.org<br />https://www.torproject.org/docs/bridges<br /><br />only use ones on port 443 if you want the best membership concealment ... I suggest using no more than three bridges at any given time and try not to change the bridges you pick much. Right now bridges focus primarily on reachability and blocking resistance, but they offer membership concealment in the process. Tor plans to revamp its bridge system soon to offer significantly stronger membership concealment. <br /><br />Using a private bridge you run yourself also gives you the benefit of being protected from active traffic confirmation attacks, since you know the first node you enter traffic through is not owned by an attacker it significantly increases your anonymity and membership concealment. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors should always use a remote service</strong><br />
+				Post by: <strong>Derpasaurus</strong> on <strong>February 06, 2012, 03:43 am</strong>
+			</dt>
+			<dd class="postbody">
+				VPN not safe, they all decrypt your traffic to see what awesome stuff they can find (money) wouldn&#039;t you?<br />Like that guy said build your own VPS bridge node or remote desktop and SSH into it.<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors should always use a remote service</strong><br />
+				Post by: <strong>Evanescence</strong> on <strong>February 06, 2012, 04:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				Well I did mention a remote virtual machine as an option, but the real point is<br /><br />__Vendors should not physically touch a computer sending Tor traffic, and should not even be physically near a computer sending Tor traffic.__<br /><br />Note if you set up a totally private Tor bridge and try to connect to it via SSL you can still be identified as a Tor client.&nbsp; You have to totally remove the Tor protocol between you and the first server you connect to (which could be a virtual machine).<br /><br />I&#039;d be willing to bet lots of vendors are using the Tor browser bundle from their own computer, which seems to be a pretty big mistake given the consequences.<br /><br /><br /><br /><br /><br /><br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=11234.msg104809#msg104809">Quote from: Derpasaurus on February 06, 2012, 03:43 am</a></div></div><blockquote class="bbc_standard_quote">VPN not safe, they all decrypt your traffic to see what awesome stuff they can find (money) wouldn&#039;t you?<br />Like that guy said build your own VPS bridge node or remote desktop and SSH into it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors should always use a remote service</strong><br />
+				Post by: <strong>PharmerJohn</strong> on <strong>February 06, 2012, 05:44 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=11234.msg104857#msg104857">Quote from: Evanescence on February 06, 2012, 04:29 am</a></div></div><blockquote class="bbc_standard_quote">Well I did mention a remote virtual machine as an option, but the real point is<br /><br />__Vendors should not physically touch a computer sending Tor traffic, and should not even be physically near a computer sending Tor traffic.__<br /><br />Note if you set up a totally private Tor bridge and try to connect to it via SSL you can still be identified as a Tor client.&nbsp; You have to totally remove the Tor protocol between you and the first server you connect to (which could be a virtual machine).<br /><br />I&#039;d be willing to bet lots of vendors are using the Tor browser bundle from their own computer, which seems to be a pretty big mistake given the consequences.<br /><br /><br /><br /><br /><br /><br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=11234.msg104809#msg104809">Quote from: Derpasaurus on February 06, 2012, 03:43 am</a></div></div><blockquote class="bbc_alternate_quote">VPN not safe, they all decrypt your traffic to see what awesome stuff they can find (money) wouldn&#039;t you?<br />Like that guy said build your own VPS bridge node or remote desktop and SSH into it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />What if a vendor bought a new computer specifically for SR work, scrubbed of all personal info, and used it from someone else&#039;s IP? Seems safe to me, and even if someone were to get the computer, everything is locked down/ hidden/ encrypted, so... yeah. I might be missing something though, advice?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors should always use a remote service</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>February 06, 2012, 05:52 am</strong>
+			</dt>
+			<dd class="postbody">
+				Being near a computer that uses Tor should be fine as long as it isn&#039;t tied to you in specific. Even using Tor once or twice is probably fine, although never using Tor from a location or device or IP address that can be linked to you is always the best bet. One of the main things you need to worry about is simply getting the Tor software in the first place, an attacker could very well just monitor the Tor project website and see who all downloads Tor. A lot more people download Tor than regularly use it though. In many cases your usage pattern of Tor will leak to an attacker who can monitor the Tor directory authorities, but your usage pattern will not leak to an attacker who monitors the Tor download site. <br /><br />I don&#039;t like using remote virtual machines. The people who own the remote server can spy on your traffic as it passes through. Plus unless you use Tor to connect to the remote machine you are not going to be getting the cool encryption features of Tor. Almost all VPNs are extremely weak to website fingerprinting attacks because they don&#039;t pad their encrypted packets to all be the same size. Tor pads packets to 512 bytes and this significantly distorts fingerprints. Website fingerprinting attacks have in some cases identified that traffic has a 98%+ probability of being a certain preidentified website, even though the traffic is encrypted and can not be decrypted without the proper keys or a currently infeasible amount of computing power. I think the best anyone has done against Tor is 60%. <br /><br />Tor kind of tries to disguise its traffic as SSL. Although it still sticks out. For example all packets are 512 bytes. It also used to have a unique parameter with its SSL implementation but they changed that after some country (forgot which) started using it to identify connections to bridges. Tor traffic still sticks out but it has gotten more and more disguised over the past few years, and currently it requires a significant amount of resources to passively scan large amounts of traffic looking for Tor traffic. If it was easy to do bridges wouldn&#039;t work to by pass the great firewall of China, they would just block all Tor traffic. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors should always use a remote service</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>February 06, 2012, 05:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=11234.msg104901#msg104901">Quote from: PharmerJohn on February 06, 2012, 05:44 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=11234.msg104857#msg104857">Quote from: Evanescence on February 06, 2012, 04:29 am</a></div></div><blockquote class="bbc_alternate_quote">Well I did mention a remote virtual machine as an option, but the real point is<br /><br />__Vendors should not physically touch a computer sending Tor traffic, and should not even be physically near a computer sending Tor traffic.__<br /><br />Note if you set up a totally private Tor bridge and try to connect to it via SSL you can still be identified as a Tor client.&nbsp; You have to totally remove the Tor protocol between you and the first server you connect to (which could be a virtual machine).<br /><br />I&#039;d be willing to bet lots of vendors are using the Tor browser bundle from their own computer, which seems to be a pretty big mistake given the consequences.<br /><br /><br /><br /><br /><br /><br /><br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=11234.msg104809#msg104809">Quote from: Derpasaurus on February 06, 2012, 03:43 am</a></div></div><blockquote class="bbc_standard_quote">VPN not safe, they all decrypt your traffic to see what awesome stuff they can find (money) wouldn&#039;t you?<br />Like that guy said build your own VPS bridge node or remote desktop and SSH into it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />What if a vendor bought a new computer specifically for SR work, scrubbed of all personal info, and used it from someone else&#039;s IP? Seems safe to me, and even if someone were to get the computer, everything is locked down/ hidden/ encrypted, so... yeah. I might be missing something though, advice?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The main thing you and many others are missing is the simple fact that LE may not even give a fuck about what is on your computer. Having your computer encrypted and locked down isn&#039;t going to mean shit if you are deanonymized and they find drugs on you. Not to mention if they really want to get around your full disk encryption they wont have any trouble to do so if they don&#039;t fuck up tactically, unless you are taking exceptional security measures that probably almost nobody actually is, like using shielded equipment and carrying your laptop on you 24/7 to prevent it from being bugged with hardware keyloggers etc. They have already pwnt several carders and even a few drug dealers who used FDE simply by bugging their computers when they were left unattended. One technique they use is to make sure a person is online prior to a raid and then they storm the place and flash freeze the RAM / dump the contents of RAM to a forensics laptop, before it has a chance to lose its state entirely, which can take something like five to ten minutes after power is cut. FBI counter intelligence used transient electromagnetic pulse analysis to steal passwords from some Russian spies a bit ago, but they probably spend more resources on them than they will on you. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors should always use a remote service</strong><br />
+				Post by: <strong>QTC</strong> on <strong>February 06, 2012, 06:20 am</strong>
+			</dt>
+			<dd class="postbody">
+				In my experience anybody that recommends that you use a non anonymized connection from your battlestation to a VPN is probably a federal agent.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors should always use a remote service</strong><br />
+				Post by: <strong>TravellingWithoutMoving</strong> on <strong>February 06, 2012, 01:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				...vendors should take charge and make their own decisions with regards to how they will go about their business specifically their own security..<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors should always use a remote service</strong><br />
+				Post by: <strong>Evanescence</strong> on <strong>February 06, 2012, 03:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=11234.msg104917#msg104917">Quote from: QTC on February 06, 2012, 06:20 am</a></div></div><blockquote class="bbc_standard_quote">In my experience anybody that recommends that you use a non anonymized connection from your battlestation to a VPN is probably a federal agent.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Probably better to just assume any message here could be LEO.&nbsp; Evaluate all information on it&#039;s merits, and only use it if you think if makes sense.<br /><br />I&#039;m not suggesting a VPN service to encrypt your data.&nbsp; I&#039;m just saying it&#039;s one way to not use the Tor protocol to the first hop.&nbsp; <br /><br />There are a dozen ways to accomplish that, pick your favorite.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Vendors should always use a remote service</strong><br />
+				Post by: <strong>Evanescence</strong> on <strong>February 06, 2012, 03:13 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=11234.msg105112#msg105112">Quote from: TravellingWithoutMoving on February 06, 2012, 01:55 pm</a></div></div><blockquote class="bbc_standard_quote">...vendors should take charge and make their own decisions with regards to how they will go about their business specifically their own security..<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Yea people should make their own decisions, but based on being fully aware of the trade offs and risks.<br /><br />Vendors who use Tor browser bundle on their computer for business on a regular basis, can probably be identified if someone is interested in putting in a little time.<br /><br />If any vendor decides to not take this advice you&#039;re right it&#039;s their decision.&nbsp; But I sure would be interested to know how they think its the best decision for them.<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=42982.0" />
+		<title>Print Page - anyone interested in program to manage encryption on SR for PMs etc?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Off topic => Topic started by: kmfkewm on September 15, 2012, 08:08 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>anyone interested in program to manage encryption on SR for PMs etc?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 15, 2012, 08:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				So far it only logs into SR, downloads the first ten pages of your private messages and prints the plaintexts one at a time after piping them to GPG. I can make it so that it shows who the message is from and lets you reply, I can even make it so that it goes to a certain thread on SR forum and downloads public keys from everyone who posts in that thread and automatically manages encrypting outgoing messages sent through it (in addition to automatically decrypting incoming messages). I can also have it automatically generate keys for users and upload their public keys to the post your key thread that it checks for new keys.&nbsp; I can make a neat little GUI for it with TK as well, and can also make it so that it prints non encrypted messages as well (right now it only cares about GPG ciphertexts). I could also make something like this for the silk road market , however I don&#039;t have a vendor account to look at how the HTML there works. This is only a quick little mock up to show that I am capable of such things, if people want a full fledged silk road PM system that manages encryption etc they will have to A. Let me know here and B. See how much bitcoin they can give me to make it worth my time. C. Possibly let me see the html vendors can see so that I can interface it to that as well <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">require &#039;socksify/http&#039;<br />require &#039;socksify&#039;<br /><br /><br />class PMHelper<br /><br /><br />&nbsp;&nbsp;&nbsp;def connect<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;URI.parse(&#039;http://dkn255hz262ypmii.onion&#039;)<br />&nbsp;&nbsp;&nbsp;end<br /><br /><br />&nbsp;&nbsp;&nbsp;def get_private_messages<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;puts &quot;enter username&quot;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;username = gets.chomp!<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#password echos to the screen currently, I can fix that if I spend a bit of time on it<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;puts &quot;enter password&quot;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;password = gets.chomp!<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;puts &quot;connecting to silk road.....&quot;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sr_connection = connect<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net::HTTP.SOCKSProxy(&#039;127.0.0.1&#039;, 9050).start(sr_connection.host, sr_connection.port) do |http|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;puts &quot;logging on.....&quot;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;login = http.post2(&quot;/index.php?action=login2&quot;, &quot;user=#{username}&amp;passwrd=#{password}&quot;)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;session_key = login&#91;&#039;location&#039;].match(/PHPSESSID=.*;action/).to_s.gsub!(&quot;;action&quot;, &quot;&quot;).to_s + &quot;&amp;&quot;<br /><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;puts &quot;getting private messages....\n\n&quot;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#start at PM page 0<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start = 0<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#we will put all gpg ciphertexts into this array&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encrypted_messages_html = &#91;]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#go through PM pages obtaining ciphertexts<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loop do<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pm_main_page = http.get(&quot;/index.php?#{session_key}action=pm;start=#{start}&quot;).body<br />&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#add each found ciphertext to the encrypted_messages_html array<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pm_main_page.scan(/-----BEGIN PGP MESSAGE-----.*-----END PGP MESSAGE-----/).each do |message_html|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encrypted_messages_html &lt;&lt; message_html<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#private messages are displayed 15 at a time<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start += 15<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#break after reading the first 10 pages of PMs (this can be made much nicer and more precise if I spend more time)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break if start == 165<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end<br /><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#html tags are not fun for GPG, let&#039;s make an array to put GPG readable ciphertexts into<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encrypted_messages_regular = &#91;]<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#let&#039;s strip HTML tags from each message, make sure they are formatted properly, and then add them to our array<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encrypted_messages_html.each do |message|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message.gsub!(&quot;&lt;br /&gt;&quot;, &quot;&quot;)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message.gsub!(&quot;-----BEGIN PGP MESSAGE-----&quot;, &quot;-----BEGIN PGP MESSAGE-----\n&quot;)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message.gsub!(&quot;-----END PGP MESSAGE-----&quot;, &quot;\n-----END PGP MESSAGE-----&quot;)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encrypted_messages_regular &lt;&lt;&nbsp;&nbsp;&nbsp;message<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end<br /><br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#lets pipe each of the ciphertexts to GPG and put the output, then block until the user hits enter<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encrypted_messages_regular.each do |message|<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;decrypted_message = `echo &quot;#{message}&quot; | gpg -d`<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;puts decrypted_message<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;puts &quot;press enter to see next message&quot;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gets<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end<br />&nbsp;&nbsp;&nbsp;end<br />end<br /><br />s = PMHelper.new<br />s.get_private_messages<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />edit: fixed spelling mistakes
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: anyone interested in program to manage encryption on SR for PMs etc?</strong><br />
+				Post by: <strong>tpebop</strong> on <strong>September 15, 2012, 08:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				Pretty cool.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: anyone interested in program to manage encryption on SR for PMs etc?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 15, 2012, 08:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				Of course if I do make something bigger than this it will be open source and free for everyone to use. I could easily have it check for orders, automatically decrypt them and even print out envelopes / labels as well ;). The main thing is that right now I am working on big projects and it isn&#039;t worth it for me to spend much effort on doing things like this for free. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: anyone interested in program to manage encryption on SR for PMs etc?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 15, 2012, 09:13 am</strong>
+			</dt>
+			<dd class="postbody">
+				Also I am nearly done with a ruby program that manages ECDH based message encryption and ECDSA authentication, message encryption is done with AES-CTR-256. It doesn&#039;t parse&nbsp; HTML for any of its functionality either, which is a big plus. I can post the source code here and if anyone is interested maybe SR can run a copy of the server script after it and the client are audited. I can have it so that it automatically encrypts outgoing messages, decrypts/authenticates incoming messages and manages key exchange and generation. I can quickly add MITM detection capabilities as well. I also already have a GUI 95% done. Pretty much it is simply a window that contains a &#039;title&#039; and &#039;message&#039; input box, and a list box of nyms. I will modify it so that it fetches a list of all registered nyms and their ECC keys from the central server and stores them client side. You simply select a number of nyms from the nym listbox, type your message and title and hit send, and the encryption etc is done automatically and hidden away from the user. It also has a button you can press that checks for new messages to you, lists them by their title and automatically decrypts/verifies them when you select one. It is fully cross platform and uses OpenSSL for crypto operations. If this is worth anything let me know, I can also make modifications to add functionality or whatever is requested. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: anyone interested in program to manage encryption on SR for PMs etc?</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>September 15, 2012, 10:16 am</strong>
+			</dt>
+			<dd class="postbody">
+				I don&#039;t see anything in there that looks like it addresses the captcha box.&nbsp; Have you solved that and not included it or am I overlooking something?<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: anyone interested in program to manage encryption on SR for PMs etc?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 15, 2012, 10:36 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=42982.msg466899#msg466899">Quote from: LouisCyphre on September 15, 2012, 10:16 am</a></div></div><blockquote class="bbc_standard_quote">I don&#039;t see anything in there that looks like it addresses the captcha box.&nbsp; Have you solved that and not included it or am I overlooking something?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This is for the PM system on the forum, however it is easy enough to work with a captcha by just having it display on a GUI and posting the response to the server. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: anyone interested in program to manage encryption on SR for PMs etc?</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>September 15, 2012, 10:49 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=42982.msg466915#msg466915">Quote from: kmfkewm on September 15, 2012, 10:36 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=42982.msg466899#msg466899">Quote from: LouisCyphre on September 15, 2012, 10:16 am</a></div></div><blockquote class="bbc_alternate_quote">I don&#039;t see anything in there that looks like it addresses the captcha box.&nbsp; Have you solved that and not included it or am I overlooking something?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This is for the PM system on the forum, however it is easy enough to work with a captcha by just having it display on a GUI and posting the response to the server.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Ah, so I was overlooking something.&nbsp; Specifically this bit:<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">&nbsp; &nbsp;def connect<br />&nbsp; &nbsp; &nbsp; URI.parse(&#039;http://dkn255hz262ypmii.onion&#039;)<br />&nbsp; &nbsp;end<br /></code><br />Heh.<br /><br />For forum PMs I generally just decrypt as I need to (i.e. when I&#039;m responding) or use that shell script I posted in the other thread.&nbsp; It won&#039;t work on Linux, though, because the version of split on Linux systems doesn&#039;t have the pattern matching flag (-p).&nbsp; It will work on BSD and OS X.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: anyone interested in program to manage encryption on SR for PMs etc?</strong><br />
+				Post by: <strong>kmfkewm</strong> on <strong>September 15, 2012, 11:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				I would have made it for the marketplace but I don&#039;t know what the html looks like. I could modify it to work there in an hour tops, although it will need to have a GUI for sure to deal with the captcha. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: anyone interested in program to manage encryption on SR for PMs etc?</strong><br />
+				Post by: <strong>LouisCyphre</strong> on <strong>September 15, 2012, 11:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=42982.msg466938#msg466938">Quote from: kmfkewm on September 15, 2012, 11:11 am</a></div></div><blockquote class="bbc_standard_quote">I would have made it for the marketplace but I don&#039;t know what the html looks like. I could modify it to work there in an hour tops, although it will need to have a GUI for sure to deal with the captcha.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />It&#039;s a HTML table, just like the order system.&nbsp; That&#039;s why I opted for getting the user (vendor in the case of the code we&#039;ve discussed elsewhere) to select the contents and paste it into a spreadsheet.&nbsp; It makes the data very easy to manage and allows easy creation of new files for each order or message with filenames based on the username.<br /><br />Converting my other code to handle SR messages was dead simple, took about 10-15 minutes.&nbsp; I might look at it again after I&#039;ve slept and move it all into one file.&nbsp; It still relies on copying the entire page into a spreadsheet and converting to CSV, though.<br />
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

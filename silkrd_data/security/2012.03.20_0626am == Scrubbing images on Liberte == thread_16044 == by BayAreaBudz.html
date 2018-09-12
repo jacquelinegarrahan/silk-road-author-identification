@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=16044.0" />
+		<title>Print Page - Scrubbing images on Liberte</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: BayAreaBudz on March 20, 2012, 06:26 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Scrubbing images on Liberte</strong><br />
+				Post by: <strong>BayAreaBudz</strong> on <strong>March 20, 2012, 06:26 am</strong>
+			</dt>
+			<dd class="postbody">
+				Hey guys<br />I am looking to become a new vendor on silk road in the next couple days and I have gotten every security measure down except for scrubbing my images.<br />I have transferred a couple of pics through a usb stick and put them into a folder called &quot;pictures&quot; on my liberte desktop.<br /><br />The problem is I do not know exactly how to scrub the images of data. Do i go into the command prompt and type: exiv2 rm *pictures*<br /><br />Or some other variation of that? Or do I have to download some other program?<br /><br />Any info would be a great help.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing images on Liberte</strong><br />
+				Post by: <strong>Oldtoker</strong> on <strong>March 20, 2012, 06:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;ve never actually used it but, you should move into the directory pictures.&nbsp; Then issue this command:<br /><br />exiv2 -rm *.jpeg<br /><br />I put jpeg in because that is pretty much the norm.&nbsp; But, use what ever extension that the pic&#039;s are formatted in.&nbsp; You can also just use the * instead of *.jpeg but, I don&#039;t like to use just the *.&nbsp; <br /><br />Whenever you have questions about a linux command just open up a terminal and enter the following:<br /><br />man command<br /><br />Where command is the name of the linux command.&nbsp; For example if you want to know about the ls command just enter:<br /><br />man ls<br /><br />This will list detailed info about that command including all switches and their purposes. <br /><br />Hope this helps.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing images on Liberte</strong><br />
+				Post by: <strong>BayAreaBudz</strong> on <strong>March 20, 2012, 07:37 am</strong>
+			</dt>
+			<dd class="postbody">
+				Alright. I think I did what you told me.<br />I right clicked on the pictures file and went into the command prompt and entered: exiv2 -rm *.jpg.<br />It replied saying that no Exif data was found in the picture.<br /><br />Does that mean that the pic has no data to scrub and is safe to post on these forums?<br /><br />Thanks so much for the help Oldtoker. I just really want to make sure I am doing this right so I am totally secure.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing images on Liberte</strong><br />
+				Post by: <strong>Oldtoker</strong> on <strong>March 20, 2012, 09:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yes, that should be the case.&nbsp; You can normally verify this with an Image Manipulation program such as Gimp or even an icon editor.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing images on Liberte</strong><br />
+				Post by: <strong>cache</strong> on <strong>March 20, 2012, 09:07 am</strong>
+			</dt>
+			<dd class="postbody">
+				Is the command not exiv2 -da *.jpeg?<br />Then you can view the EXIF data by issuing exiv2 *.jpeg<br />Obviously these are all run from the folder containing the pictures.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing images on Liberte</strong><br />
+				Post by: <strong>Oldtoker</strong> on <strong>March 20, 2012, 09:19 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=16044.msg157713#msg157713">Quote from: cache on March 20, 2012, 09:07 am</a></div></div><blockquote class="bbc_standard_quote">Is the command not exiv2 -da *.jpeg?<br />Then you can view the EXIF data by issuing exiv2 *.jpeg<br />Obviously these are all run from the folder containing the pictures.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />According to the manpage -da switches adjust the date and time. -rm removes the data. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Scrubbing images on Liberte</strong><br />
+				Post by: <strong>cache</strong> on <strong>March 20, 2012, 09:28 am</strong>
+			</dt>
+			<dd class="postbody">
+				-d tgt Delete target(s) for&nbsp; the&nbsp; &#039;delete&#039;&nbsp; action.&nbsp; Possible<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; targets are:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a : all supported metadata (the default)<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; e : Exif section<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; t : Exif thumbnail only<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; i : IPTC data<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x : XMP packet<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; c : JPEG comment<br /><br />Looks like -da does the same as -rm then!
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=202347.0" />
+		<title>Print Page - Basic Tutorial: Create 4096-bit PGP keys from Command Line</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: kwantum on August 15, 2013, 05:28 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Basic Tutorial: Create 4096-bit PGP keys from Command Line</strong><br />
+				Post by: <strong>kwantum</strong> on <strong>August 15, 2013, 05:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m aware that most know how to generate a 4096-bit key, but I still want to create a basic tutorial on how to do this because it&#039;s important to stay secure as LE improves their decryption capabilites.<br /><br />1. Search &quot;cmd&quot; in the start bar, right-click, and &quot;run as administrator&quot;<br /><br />2. Type the following in the terminal<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">gpg --gen-key</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />3. You will now be prompted to select the type of key you want from the following selection:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">(1) RSA and RSA (default)<br />(2) DSA and Elgamal<br />(3) DSA (sign only)<br />(4) RSA (sign only)<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />&nbsp;Please type &quot;1&quot;, and press enter. This will allow both encryption and signing.<br /><br />4. Now, you will be asked to enter a keysize. Make sure you type &quot;4096&quot; and press enter.<br /><br />5. When asked for a key expiration date, press &quot;0&quot; so the key does not expire, press enter, and then type &quot;y&quot; to confirm your selection.<br /><br />6. GnuPG will now ask for your real name. DO NOT enter your real name; instead, it&#039;s a good idea to enter your SR username if this key will only be used for SR.<br /><br />7. If you have an email address only exclusively for SR, you can input here. Don&#039;t add any comments to your key.<br /><br />8. GPA will now show the following:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">Change (N)ame, (C)omment, (E)mail, or (O)kay/(Q)uit?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Please type &quot;O&quot; (the letter), and press enter.<br /><br />9. You will now be prompted to enter your passphrase. Here are some guidelines to ensure you have a strong password:<br /><br />A strong password:<br />has at least 15 characters;<br />has uppercase letters;<br />has lowercase letters;<br />has numbers;<br />has symbols, such as ` ! &quot; ? $ ? % ^ &amp; * ( ) _ - + = { [ } ] : ; @ &#039; ~ # | \ &lt; , &gt; . ? /<br />is not like your previous passwords;<br />is not your name;<br />is not your login;<br />is not your friend’s name;<br />is not your family member’s name;<br />is not a dictionary word;<br />is not a common name;<br />is not a keyboard pattern, such as qwerty, asdfghjkl, or 12345678.<br /><br />Please enter your password, and then re-enter it.<br /><br />10. Your key will now be generated; to increase entropy, move your mouse, type on the keyboard, and perhaps open a program.<br /><br />ADDITIONAL INFORMATION:<br /><br />To send an encrypted message to a vendor, please copy the vendor&#039;s public key (on his/her profile), open &quot;GPA&quot;, and press CTRL+V, which will import the key to your keyring. Then click on &quot;Clipboard&quot;, input your message, press &quot;encrypt&quot; and sign from your key. Your message will then be encrypted; send that to your vendor and he/she will be able to decrypt without your public key.<br /><br />To export your public key (so that a vendor can send you an encrypted message), please open &quot;GPA&quot;, right-click on your key, and click &quot;Export key&quot;. Open this .asc file with Notepad.<br /><br />Hopefully this tutorial will help some of the beginners out, and I plan to release some more useful tutorials in the future, so stay tuned!
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

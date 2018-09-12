@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=157.0" />
+		<title>Print Page - Tor's anonymity for users-are these two attack types highly feasible?</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: mr.nobody on June 20, 2011, 05:30 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>mr.nobody</strong> on <strong>June 20, 2011, 05:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				This is an open request to someone/anyone who can intelligently comment about these two types of attacks:<br /><br />1. protocol level attack-it appears it is possible to corrupt a single packet so that the AES-CTR encrypt/decrypt is corrupted at the exit node and the info travels out in clear text.&nbsp; I don&#039;t quite get this because other places I have read that Tor doesn&#039;t use exit nodes and that&#039;s why it is immune to exit node sniffing (or is it just that while we&#039;re on SR, TorPM, etc. we never use an exit node?)&nbsp; The BlackHat paper was called &quot;One Cell Is Enough To Break Tor&#039;s Anonymity&quot;<br /><br />2. some type of locational attack-sorry, I didn&#039;t think this was important when I read it so I don&#039;t have a URL or white paper name and I don&#039;t remember the name they gave this type of attack.&nbsp; But basically since Tor is only using 700-1200 network nodes at a time IF you live in a remote area then *possibly* you are one of only 1-3 people on Tor using that node *at a given time*, so LE could watch the pings on the node and a site (like SR) concurrently and see where they match and then track you back through your IP connection. So, if you&#039;re in Bumfuck, IA you might get nabbed, in NYC, probably not... And btw, what is the proper name for this type of attack?&nbsp; And lastly, would being in any state&#039;s capital city/metro area be enough to make this type of attack not meaningful, or do you need to be in one of the Top 10 or Top 25 American cities?<br /><br />I am not a computer guy, I have to think hard to understand this stuff even when it&#039;s properly explained (like is so well done by goddamn and Poplicola on the old forum) but I thank in advance anyone willing to give us all a layman&#039;s understanding of this stuff.&nbsp; &nbsp;:D <br /><br />I would lastly note that, up to now, I&#039;ve been careful but felt pretty secure, because it seems that all the attacks that have worked have *only* worked due to pretty significant errors on the users part (insecure passwords, multiple site passwords, attacks on peripheral sites, etc.), and not any inherent weaknesses in Tor.&nbsp; Is this an accurate assessment or am I just under-informed?&nbsp; <br /><br />Hopefully this new searchable forum format will prevent these questions from having to be answered multiple times... <br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>niggerjim</strong> on <strong>June 20, 2011, 06:15 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Read the explanation on how tor works and its vulnerabilities on their site. There are lots of claims of tor being broken but all are hardly practical. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>KarlM15</strong> on <strong>June 20, 2011, 07:28 pm</strong>
+			</dt>
+			<dd class="postbody">
+				be creative and develop your own methods for adding layers of security.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>techlord</strong> on <strong>June 20, 2011, 09:01 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Want Tor to really work?<br /><br />...then please don&#039;t just install it and go on. You need to change some of your habits, and reconfigure your software! Tor by itself is NOT all you need to maintain your anonymity. There are several major pitfalls to watch out for:<br /><br />Tor only protects Internet applications that are configured to send their traffic through Tor — it doesn&#039;t magically anonymize all your traffic just because you install it. We recommend you use Firefox with the Torbutton extension.<br /><br />Torbutton blocks browser plugins such as Java, Flash, ActiveX, RealPlayer, Quicktime, Adobe&#039;s PDF plugin, and others: they can be manipulated into revealing your IP address. For example, that means Youtube is disabled. If you really need your Youtube, you can reconfigure Torbutton to allow it; but be aware that you&#039;re opening yourself up to potential attack. Also, extensions like Google toolbar look up more information about the websites you type in: they may bypass Tor and/or broadcast sensitive information. Some people prefer using two browsers (one for Tor, one for non-Tor browsing).<br /><br />Beware of cookies: if you ever browse without Tor and a site gives you a cookie, that cookie could identify you even when you start using Tor again. Torbutton tries to handle your cookies safely. CookieCuller can help protect any cookies you do not want to lose.<br /><br />Tor anonymizes the origin of your traffic, and it encrypts everything between you and the Tor network and everything inside the Tor network, but it can&#039;t encrypt your traffic between the Tor network and its final destination. If you are communicating sensitive information, you should use as much care as you would on the normal scary Internet — use HTTPS or other end-to-end encryption and authentication. HTTPS Everywhere is a Firefox extension produced as a collaboration between The Tor Project and the Electronic Frontier Foundation. It encrypts your communications with a number of major websites.<br /><br />While Tor blocks attackers on your local network from discovering or influencing your destination, it opens new risks: malicious or misconfigured Tor exit nodes can send you the wrong page, or even send you embedded Java applets disguised as domains you trust. Be careful opening documents or applications you download through Tor, unless you&#039;ve verified their integrity.<br /><br />Tor tries to prevent attackers from learning what destinations you connect to. It doesn&#039;t prevent somebody watching your traffic from learning that you&#039;re using Tor. You can mitigate (but not fully resolve) the risk by using a Tor bridge relay rather than connecting directly to the public Tor network, but ultimately the best protection here is a social approach: the more Tor users there are near you and the more diverse their interests, the less dangerous it will be that you are one of them.<br /><br />Do not use BitTorrent and Tor together unless you are using a system like TAILS.<br /><br />Be smart and learn more. Understand what Tor does and does not offer. This list of pitfalls isn&#039;t complete, and we need your help identifying and documenting all the issues.<br /><br />https://www.torproject.org/download/download.html.en#source
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>sandybridge</strong> on <strong>June 20, 2011, 11:27 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=157.msg703#msg703">Quote from: KarlM15 on June 20, 2011, 07:28 pm</a></div></div><blockquote class="bbc_standard_quote">be creative and develop your own methods for adding layers of security.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I rotated my monitor upside-down so my neighbors can&#039;t read what site I&#039;m on.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>mr.nobody</strong> on <strong>June 21, 2011, 12:27 am</strong>
+			</dt>
+			<dd class="postbody">
+				@techlord-thanks for all the excellent advice and the link.<br /><br />The only thing I can&#039;t find is a link for an &quot;HTTPS only&quot; app for Mac.&nbsp; Any ideas?<br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>bllll</strong> on <strong>June 21, 2011, 12:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">This is an open request to someone/anyone who can intelligently comment about these two types of attacks:<br /><br />1. protocol level attack-it appears it is possible to corrupt a single packet so that the AES-CTR encrypt/decrypt is corrupted at the exit node and the info travels out in clear text.&nbsp; I don&#039;t quite get this because other places I have read that Tor doesn&#039;t use exit nodes and that&#039;s why it is immune to exit node sniffing (or is it just that while we&#039;re on SR, TorPM, etc. we never use an exit node?)&nbsp; The BlackHat paper was called &quot;One Cell Is Enough To Break Tor&#039;s Anonymity&quot;</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />This is called a tagging attack. Essentially, the attacker modifies a cell at the entry and looks for the modification at the exit. This is just a different way to do an end to end correlation attack. As always, if the attacker owns your entry and can see your traffic exit you are fucked. <br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">2. some type of locational attack-sorry, I didn&#039;t think this was important when I read it so I don&#039;t have a URL or white paper name and I don&#039;t remember the name they gave this type of attack.&nbsp; But basically since Tor is only using 700-1200 network nodes at a time IF you live in a remote area then *possibly* you are one of only 1-3 people on Tor using that node *at a given time*, so LE could watch the pings on the node and a site (like SR) concurrently and see where they match and then track you back through your IP connection. So, if you&#039;re in Bumfuck, IA you might get nabbed, in NYC, probably not... And btw, what is the proper name for this type of attack?&nbsp; And lastly, would being in any state&#039;s capital city/metro area be enough to make this type of attack not meaningful, or do you need to be in one of the Top 10 or Top 25 American cities?</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />I don&#039;t exactly understand the attack you mention here, but it sounds like it could be one of two. The first attack is usually called an observability attack (probably a poor choice of name for the attack considering observability already means something else as well), the fact that you use Tor is not hidden from even a very weak attacker unless you use a bridge. If you live in the middle of fucking nowhere and ship product with a post mark from the middle of nowhere, an attacker who knows you use Tor could intersect the population of the middle of nowhere with Tor users in the middle of nowhere and narrow in on you possibly to very dangerous levels. This attack is very serious and even using bridges may not be enough to counter it. Your attack sounds more like latency fingerprinting though, the old latency fingerprinting attack only worked on the network when it had &gt;50 nodes and stopped working since it has gotten so much bigger (over 2,000 nodes). There is a more sophisticated latency fingerprinting attack that still works on the Tor network, it is really quite complex and I can&#039;t yet wrap my head around it. I do know that it is more dangerous to you if you use exit nodes though, SO SR SHOULD LEARN TO DISABLE HOTLINKING ALREADY. <br /><br /><br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">I would lastly note that, up to now, I&#039;ve been careful but felt pretty secure, because it seems that all the attacks that have worked have *only* worked due to pretty significant errors on the users part (insecure passwords, multiple site passwords, attacks on peripheral sites, etc.), and not any inherent weaknesses in Tor.&nbsp; Is this an accurate assessment or am I just under-informed?&nbsp; </blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />There are a lot of attacks on Tor that can fuck its anonymity. Tor does a good job of keeping x% of the users safe. Some % of users can probably be traced by a given attacker. For the most part, if your entry guards are not malicious you are safe from most of the attacks on Tor. If your entry guards are malicious, you can probably be fucked eventually, but in addition to being malicious the entry guard also has to have you in mind as one of its targets. This is a gross over simplification of Tor, but many of the direct attacks on Tor do require a malicious entry guard or malicious entry infrastructure. Latency fingerprinting is one exception though. <br /><br /><br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>bllll</strong> on <strong>June 21, 2011, 12:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=157.msg677#msg677">Quote from: niggerjim on June 20, 2011, 06:15 pm</a></div></div><blockquote class="bbc_standard_quote">Read the explanation on how tor works and its vulnerabilities on their site. There are lots of claims of tor being broken but all are hardly practical.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />The Tor people do a piss poor job of explaining all of the vulnerabilities of Tor on their site. For the most part they only really explain the attacks that you can do something to counter, not the attacks that are inherent to the actual protocol. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>techlord</strong> on <strong>June 21, 2011, 03:03 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=157.msg762#msg762">Quote from: bllll on June 21, 2011, 12:53 am</a></div></div><blockquote class="bbc_standard_quote">There are a lot of attacks on Tor that can fuck its anonymity. Tor does a good job of keeping x% of the users safe. Some % of users can probably be traced by a given attacker. For the most part, if your entry guards are not malicious you are safe from most of the attacks on Tor. If your entry guards are malicious, you can probably be fucked eventually, but in addition to being malicious the entry guard also has to have you in mind as one of its targets. This is a gross over simplification of Tor, but many of the direct attacks on Tor do require a malicious entry guard or malicious entry infrastructure. Latency fingerprinting is one exception though.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>The attacker would have to control the entry, all relays and the exit nodes to be able to analyze your traffic. This is easier said than done. And even then, they can only monitor your HTTP traffic. Any traffic enrypted with SSL remains secure. That said, the victim&#039;s IP address may be vulnerable. This is why it&#039;s safer to browse within a virtual machine that&#039;s isolated from Tor.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>kkkkk</strong> on <strong>June 21, 2011, 03:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				The attacker does not need to control the entry relay and exit to analyze your traffic, that is the simplest active attack out there. Here is a more advanced attack; the attacker can control your entry and exit, and add a delay fingerprint to the packets at the entry node and detect the delay fingerprint at the exit node to link the stream. They have no need for the relay in this situation. There have been latency fingerprinting attacks on Tor where the attacker doesn&#039;t even need to control *any* of the nodes on your path. Also, you are confusing signals intelligence with communications intelligence. Here, read this<br /><br />http://g7pz322wcy6jnn4r.onion/opensource/II/Anonymity.html<br /><br />and if you like it read the rest<br /><br />http://g7pz322wcy6jnn4r.onion/opensource/II/index.html
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>techlord</strong> on <strong>June 21, 2011, 03:23 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=157.msg805#msg805">Quote from: kkkkk on June 21, 2011, 03:08 am</a></div></div><blockquote class="bbc_standard_quote">The attacker does not need to control the entry relay and exit to analyze your traffic, that is the simplest active attack out there. Here is a more advanced attack; the attacker can control your entry and exit, and add a delay fingerprint to the packets at the entry node and detect the delay fingerprint at the exit node to link the stream. They have no need for the relay in this situation. There have been latency fingerprinting attacks on Tor where the attacker doesn&#039;t even need to control *any* of the nodes on your path. Also, you are confusing signals intelligence with communications intelligence. Here, read this<br /><br />http://g7pz322wcy6jnn4r.onion/opensource/II/Anonymity.html<br /><br />and if you like it read the rest<br /><br />http://g7pz322wcy6jnn4r.onion/opensource/II/index.html<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Sure, there are different methods out there but they&#039;re very sophisticated and require a great deal of resources for low ROI. <br /><br />As long as the application layer is protected (removing Flash, JAVA, etc.), I think most people are relatively safe.&nbsp; 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>techlord</strong> on <strong>June 21, 2011, 03:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=157.msg756#msg756">Quote from: mr.nobody on June 21, 2011, 12:27 am</a></div></div><blockquote class="bbc_standard_quote">@techlord-thanks for all the excellent advice and the link.<br /><br />The only thing I can&#039;t find is a link for an &quot;HTTPS only&quot; app for Mac.&nbsp; Any ideas?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>https://www.eff.org/files/https-everywhere-latest.xpi
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>ijijiji</strong> on <strong>June 21, 2011, 03:33 am</strong>
+			</dt>
+			<dd class="postbody">
+				Actually, you will get a much better return on your investment if you use attacks that don&#039;t require you to own all three nodes on the persons circuit.They are sophisticated, but there are plenty of people out there who can do them.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>techlord</strong> on <strong>June 21, 2011, 03:38 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=157.msg810#msg810">Quote from: ijijiji on June 21, 2011, 03:33 am</a></div></div><blockquote class="bbc_standard_quote">Actually, you will get a much better return on your investment if you use attacks that don&#039;t require you to own all three nodes on the persons circuit.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Agreed.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">They are sophisticated, but there are plenty of people out there who can do them.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Can you describe how it works? I&#039;m genuinely curious. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>kkkkkiiii</strong> on <strong>June 21, 2011, 03:54 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=157.msg813#msg813">Quote from: techlord on June 21, 2011, 03:38 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=157.msg810#msg810">Quote from: ijijiji on June 21, 2011, 03:33 am</a></div></div><blockquote class="bbc_alternate_quote">Actually, you will get a much better return on your investment if you use attacks that don&#039;t require you to own all three nodes on the persons circuit.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Agreed.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_alternate_quote">They are sophisticated, but there are plenty of people out there who can do them.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Can you describe how it works? I&#039;m genuinely curious.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Read the first .onion link in this thread, it describes all of the basic and moderate attacks on Tor. It is missing some of the more sophisticated attacks, but it is still probably the best collection of summarized attacks out there.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>techlord</strong> on <strong>June 21, 2011, 04:14 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=157.msg818#msg818">Quote from: kkkkkiiii on June 21, 2011, 03:54 am</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=157.msg813#msg813">Quote from: techlord on June 21, 2011, 03:38 am</a></div></div><blockquote class="bbc_alternate_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=157.msg810#msg810">Quote from: ijijiji on June 21, 2011, 03:33 am</a></div></div><blockquote class="bbc_standard_quote">Actually, you will get a much better return on your investment if you use attacks that don&#039;t require you to own all three nodes on the persons circuit.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Agreed.<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">They are sophisticated, but there are plenty of people out there who can do them.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Can you describe how it works? I&#039;m genuinely curious.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Read the first .onion link in this thread, it describes all of the basic and moderate attacks on Tor. It is missing some of the more sophisticated attacks, but it is still probably the best collection of summarized attacks out there.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I&#039;d think most of us on SR are most concerned about traceability and it appears that a victim can only be traced if he uses colluding entry and exit nodes. He can&#039;t be traced if he never navigates off the Tor network. <br /><br />Thanks for that link. Good stuff. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>kkkkkiiii</strong> on <strong>June 21, 2011, 04:31 am</strong>
+			</dt>
+			<dd class="postbody">
+				traces are possible even if you stay on the Tor network, particularly hidden services are quite weak to being traced versus clients anyway. You need to worry about all sorts of attack. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>techlord</strong> on <strong>June 21, 2011, 04:53 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=157.msg826#msg826">Quote from: kkkkkiiii on June 21, 2011, 04:31 am</a></div></div><blockquote class="bbc_standard_quote">traces are possible even if you stay on the Tor network, particularly hidden services are quite weak to being traced versus clients anyway. You need to worry about all sorts of attack.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>The hidden services have to compromised, though. Thanks for making me even more paranoid. :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: Tor's anonymity for users-are these two attack types highly feasible?</strong><br />
+				Post by: <strong>ButtPlug</strong> on <strong>August 01, 2011, 08:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				Know good VPN or double VPN prior to connecting your tor circuit!<br /><br />My method<br /><br />OPENVPN or PPTP/IPsec provider connection: goo.gl/OQJsg&nbsp; (or a hundred others)<br /><br />Tor inside of a virtual machine which is restricted so that ALL VM IP traffic passes out through external tor circuit (proxy running outside of VM). <br />If my VM is compromised the attacker is in a &quot;box&quot; and will only get 192.168.0.X address at most tor IP. Should they in all impossibility break out they will get my OPENVPN exit IP.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

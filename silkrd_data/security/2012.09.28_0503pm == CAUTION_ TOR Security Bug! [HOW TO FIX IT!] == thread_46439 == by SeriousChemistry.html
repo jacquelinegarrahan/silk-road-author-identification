@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=46439.0" />
+		<title>Print Page - CAUTION: TOR Security Bug! [HOW TO FIX IT!]</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: SeriousChemistry on September 28, 2012, 05:03 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>SeriousChemistry</strong> on <strong>September 28, 2012, 05:03 pm</strong>
+			</dt>
+			<dd class="postbody">
+				It has been discovered a severe security bug in Firefox related to websockets bypassing the SOCKS proxy DNS configuration. This means when connecting to a websocket service, your Firefox will query your local DNS resolver, rather than only communicating through its proxy (Tor) as it is configured to do. This bug is present in current Tor Browser Bundles (2.2.39-1 on Windows; 2.2.39-1 on MacOS and Linux).<br /><br />To fix this dns leak/security hole, follow these steps:<br />1. Open TOR and Firefox will open automatically.<br />2. Type “about:config” (without the quotes) into the Firefox URL bar. Press Enter.<br />3. Type “websocket” (again, without the quotes) into the search bar that appears below &quot;about:config&quot;.<br />4. Double-click on “network.websocket.enabled”. That line should now show “false” in the ‘Value’ column.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>Just Chipper</strong> on <strong>September 28, 2012, 06:17 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you for the information. This configuration option is also present in Tails, and I would assume in liberte as well. Mine&#039;s set correctly, but if you&#039;re running an older version you might want to check it. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>ianfleming</strong> on <strong>September 28, 2012, 06:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m worried that the OP is LE and attempting ot get me to make my Tor browser insecure.<br />Can someone with a high post count and some technical knowhow please confirm what he is saying?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>TheEmeraldTriangle</strong> on <strong>September 28, 2012, 06:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg491774#msg491774">Quote from: ianfleming on September 28, 2012, 06:29 pm</a></div></div><blockquote class="bbc_standard_quote">I&#039;m worried that the OP is LE and attempting ot get me to make my Tor browser insecure.<br />Can someone with a high post count and some technical knowhow please confirm what he is saying?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />He copy pasted that text from the Tor project blog. Here&#039;s the url: https://blog.torproject.org/category/tags/websockets<br /><br />So I think it&#039;s legit!<br /><br />(Greetings everybody. Not new to SR, but a new seller -- sort of. Bought and drop shipped for pot2peer before they got suspended.)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>farmer1</strong> on <strong>September 28, 2012, 07:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for the info! Any idea why has this not been updated by Tor in their BB?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>Just Chipper</strong> on <strong>September 28, 2012, 07:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg491806#msg491806">Quote from: farmer1 on September 28, 2012, 07:02 pm</a></div></div><blockquote class="bbc_standard_quote">Thanks for the info! Any idea why has this not been updated by Tor in their BB?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Good question farmer1. You could try emailing them and asking them. That seems like a pretty big thing to forget to do.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>wsg</strong> on <strong>September 28, 2012, 09:56 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks fixed now
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>CoolGrey</strong> on <strong>September 28, 2012, 11:25 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks Guru (and Mr Chemistry for bringing it to our attention).<br /><br />If you have Tor configured to block all scripts, is/was your anonymity still at risk from this bug?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>johnwholesome</strong> on <strong>September 29, 2012, 04:40 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>Wadozo</strong> on <strong>September 29, 2012, 05:42 am</strong>
+			</dt>
+			<dd class="postbody">
+				Cheers. :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>painbow</strong> on <strong>September 29, 2012, 07:29 am</strong>
+			</dt>
+			<dd class="postbody">
+				thx!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>muthapumpa</strong> on <strong>September 29, 2012, 01:21 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Cheers guys! Sorted now!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>Mercury31</strong> on <strong>September 29, 2012, 01:56 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thnx
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>Trice</strong> on <strong>September 29, 2012, 05:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Ohhh my good thats bug is fixed since months, please read right and not anxiety provoking for old bullshit that is fixed<br />https://trac.torproject.org/projects/tor/ticket/5741<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">Changed 4 months ago by mikeperry<br /><br />&nbsp; &nbsp; status changed from assigned to closed<br />&nbsp; &nbsp; resolution set to fixed</code>
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>buybuy555</strong> on <strong>September 29, 2012, 05:29 pm</strong>
+			</dt>
+			<dd class="postbody">
+				cheers for the info guys
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>TheEmeraldTriangle</strong> on <strong>September 29, 2012, 05:44 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg493370#msg493370">Quote from: Trice on September 29, 2012, 05:02 pm</a></div></div><blockquote class="bbc_standard_quote">Ohhh my good thats bug is fixed since months, please read right and not anxiety provoking for old bullshit that is fixed<br />https://trac.torproject.org/projects/tor/ticket/5741<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">Changed 4 months ago by mikeperry<br /><br />&nbsp; &nbsp; status changed from assigned to closed<br />&nbsp; &nbsp; resolution set to fixed</code></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well... I&#039;m running the lastest TOR setup (at least, according to TOR) and it was NOT fixed in mine. I had to manually change it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>Trice</strong> on <strong>September 29, 2012, 08:49 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Well Mister, then please report it on the right place and help all of us ;)<br />https://www.torproject.org/docs/faq.html.en#SupportMail<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>painbow</strong> on <strong>September 29, 2012, 09:52 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg493422#msg493422">Quote from: TheEmeraldTriangle on September 29, 2012, 05:44 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg493370#msg493370">Quote from: Trice on September 29, 2012, 05:02 pm</a></div></div><blockquote class="bbc_alternate_quote">Ohhh my good thats bug is fixed since months, please read right and not anxiety provoking for old bullshit that is fixed<br />https://trac.torproject.org/projects/tor/ticket/5741<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">Changed 4 months ago by mikeperry<br /><br />&nbsp; &nbsp; status changed from assigned to closed<br />&nbsp; &nbsp; resolution set to fixed</code></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well... I&#039;m running the lastest TOR setup (at least, according to TOR) and it was NOT fixed in mine. I had to manually change it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Same here.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>Trice</strong> on <strong>September 29, 2012, 10:09 pm</strong>
+			</dt>
+			<dd class="postbody">
+				here not....<br /><br />Everyone writes blabbla but without &quot;reliable sources&quot; that is only blabla ;D
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>SeriousChemistry</strong> on <strong>September 30, 2012, 12:01 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg493422#msg493422">Quote from: TheEmeraldTriangle on September 29, 2012, 05:44 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg493370#msg493370">Quote from: Trice on September 29, 2012, 05:02 pm</a></div></div><blockquote class="bbc_alternate_quote">Ohhh my good thats bug is fixed since months, please read right and not anxiety provoking for old bullshit that is fixed<br />https://trac.torproject.org/projects/tor/ticket/5741<br /><br /><div class="codeheader">Code: <a href="javascript:void(0);" onclick="return smfSelectText(this);" class="codeoperation">[Select]</a></div><code class="bbc_code">Changed 4 months ago by mikeperry<br /><br />&nbsp; &nbsp; status changed from assigned to closed<br />&nbsp; &nbsp; resolution set to fixed</code></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Well... I&#039;m running the lastest TOR setup (at least, according to TOR) and it was NOT fixed in mine. I had to manually change it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Same here. I triple-checked the newest TOR versions. It was still not fixed.<br /><br />Btw. Thanks for the Karma, unknown karma supplier! ;)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>johnmtl</strong> on <strong>September 30, 2012, 12:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks.<br /><br />+1
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>SeriousChemistry</strong> on <strong>October 01, 2012, 10:30 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you, john!<br /><br />For all: Please tell everybody you reach on SR to fix this bug.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>Flyerz1934</strong> on <strong>October 11, 2012, 06:02 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Thanks for the effort to let the community know this (fixed) bug :)
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>mnak</strong> on <strong>October 11, 2012, 06:26 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Changing the setting in about:config is the workaround, not the fix.&nbsp; With the proper fix, it is fine to have &quot;network.websocket.enabled&quot; set as true.<br /><br />I assume the latest version of the tor browser has the proper fix, although I haven&#039;t tested it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>SeriousChemistry</strong> on <strong>October 11, 2012, 09:57 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg517214#msg517214">Quote from: mnak on October 11, 2012, 06:26 pm</a></div></div><blockquote class="bbc_standard_quote">I assume the latest version of the tor browser has the proper fix, although I haven&#039;t tested it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>I have tested it and it&#039;s still not fixed. So you still have to fix it manually.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>redback</strong> on <strong>October 12, 2012, 12:05 am</strong>
+			</dt>
+			<dd class="postbody">
+				i block outgoing dns and http with my firewall. that fixes (or breaks, depending how you look at it) all applications.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>Slugger</strong> on <strong>October 12, 2012, 04:02 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you, my BB was set incorrectly. Luckily I didn&#039;t use it for anything as I just downloaded it. Once again, thanks&nbsp; 8).
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>SeriousChemistry</strong> on <strong>October 16, 2012, 10:15 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg517572#msg517572">Quote from: unknownuser2012 on October 11, 2012, 10:48 pm</a></div></div><blockquote class="bbc_standard_quote">does it have to be done each time Firefox is started or does it remember from session to session?? I guess it would be a good idea to print the OP&#039;s info, so when a future tor is released, we can check it.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>You have to change it once and/or when you update your TOR or download it again.<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg517572#msg517572">Quote from: unknownuser2012 on October 11, 2012, 10:48 pm</a></div></div><blockquote class="bbc_standard_quote">BTW OP, how on earth did you find this?? This issue seems pretty deep in the bowels of the techie stuff. Just wondering....<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>Magic. ;) No, I am very serious when it comes to security. I read a lot about TOR, PGP etc. You might consider doing that too!<br /><br /><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg518212#msg518212">Quote from: Slugger on October 12, 2012, 04:02 am</a></div></div><blockquote class="bbc_standard_quote">Thank you, my BB was set incorrectly. Luckily I didn&#039;t use it for anything as I just downloaded it. Once again, thanks&nbsp; 8).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>You&#039;re welcome!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>Molly Want a Cracker</strong> on <strong>October 16, 2012, 10:22 am</strong>
+			</dt>
+			<dd class="postbody">
+				How does one do this fix in Liberte?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>SeriousChemistry</strong> on <strong>October 16, 2012, 10:56 am</strong>
+			</dt>
+			<dd class="postbody">
+				Liberte? What are you talking about?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>Molly Want a Cracker</strong> on <strong>October 16, 2012, 06:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg526162#msg526162">Quote from: SeriousChemistry on October 16, 2012, 10:56 am</a></div></div><blockquote class="bbc_standard_quote">Liberte? What are you talking about?<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Liberte Linux.<br /><br />It&#039;s a TOR-based OS that can be run from a USB drive. It uses the GNOME web browser. Any idea on how to do this fix on this platform?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>QwertAnon</strong> on <strong>October 18, 2012, 03:01 am</strong>
+			</dt>
+			<dd class="postbody">
+				Uhm SeriousChemistry please tell us how to reproduce the bug.<br /><br />Everyone, turn your settings back to default,this guy most likely has no idea what he&#039;s talking about.<br /><br />If you care about security, install NoScript and forbid everything, that fixes a lot of vulnerabilities, including this one (which doesn&#039;t matter because it was fixed half a year ago as people have already said multiple times in this thread).
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>SeriousChemistry</strong> on <strong>October 19, 2012, 12:34 am</strong>
+			</dt>
+			<dd class="postbody">
+				Well I am not a computer genius, but I&#039;ve read about this bug in some Security-Forums and I checked it and the settings were still set to the wrong parameter. So you tell me the bug is fixxed, even if the settings are still the same as in the unfixed, older versions of TOR?I really want to make that clear, I don&#039;t want to spread bullshit.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>QwertAnon</strong> on <strong>October 22, 2012, 12:04 am</strong>
+			</dt>
+			<dd class="postbody">
+				As someone already pointed out on page 1 of this thread it doesn&#039;t matter what your settings are because the bug is already fixed. So better change it back to the default.<br />If you read about some bug, check the date of the article. Tor fixes critical bugs very fast because lifes depend on it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>mnak</strong> on <strong>October 25, 2012, 02:11 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg532084#msg532084">Quote from: SeriousChemistry on October 19, 2012, 12:34 am</a></div></div><blockquote class="bbc_standard_quote">Well I am not a computer genius, but I&#039;ve read about this bug in some Security-Forums and I checked it and the settings were still set to the wrong parameter. So you tell me the bug is fixxed, even if the settings are still the same as in the unfixed, older versions of TOR?I really want to make that clear, I don&#039;t want to spread bullshit.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>With the bug fixed, that particular parameter can be set either way and it isn&#039;t a security risk.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>pine</strong> on <strong>October 25, 2012, 06:30 pm</strong>
+			</dt>
+			<dd class="postbody">
+				This shouldn&#039;t affect you if you just use Tor to connect to hidden services.<br /><br />DNS leaks are a perpetual bugbear with torifying applications.&nbsp; Sooner or later the Tor Project will have to do something more drastic about it.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>LittleEddy</strong> on <strong>December 22, 2012, 01:51 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m bumping this thread as a reminder. A new Tor browser was just released and the bug remains. Make the fix and you&#039;re good to go until the next release. This has been discussed elsewhere and as far as I understand it still is something of legitimate concern.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>gestaltassault2</strong> on <strong>December 23, 2012, 08:01 am</strong>
+			</dt>
+			<dd class="postbody">
+				this needs to be a sticky...i keep forgetting to do this every time a new version of TOR is released...
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>peeweed</strong> on <strong>December 23, 2012, 01:20 pm</strong>
+			</dt>
+			<dd class="postbody">
+				If you have updated Tor Browser anytime since May 2012. it is already fixed...<br /><br />Check the update logs (really easy to find, tor browser folder\docs\changelog):<br /><br />Tor Browser Bundle (2.2.35-11); suite=windows<br /><br />&nbsp; * Security release to stop TorBrowser from bypassing SOCKS proxy DNS<br />&nbsp; &nbsp; configuration<br />&nbsp; * New Firefox patches:<br />&nbsp; &nbsp; - Prevent WebSocket DNS leak (closes: #5741)<br />&nbsp; &nbsp; - Fix a race condition that could be used to link browsing sessions<br />&nbsp; &nbsp; &nbsp; together when using new identity from Tor Browser (closes: #5715)<br />&nbsp; * Remove extraneous BetterPrivacy settings from prefs.js (closes: #5722)<br /><br />&nbsp;-- Erinn Clark &lt;erinn@torproject.org&gt;&nbsp; Thu May&nbsp; 3 08:00:00 BRT 2012<br /><br />If you notice the closed bug trac is the same number as posted in the second/third post.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>mnak</strong> on <strong>December 23, 2012, 03:59 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Correct, this bug is resolved and the workaround is no longer needed.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>gestaltassault2</strong> on <strong>December 23, 2012, 05:39 pm</strong>
+			</dt>
+			<dd class="postbody">
+				the bug seems to be still active in Mac versions of TOR
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: CAUTION: TOR Security Bug! [HOW TO FIX IT!]</strong><br />
+				Post by: <strong>mnak</strong> on <strong>December 24, 2012, 12:58 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46439.msg678407#msg678407">Quote from: gestaltassault2 on December 23, 2012, 05:39 pm</a></div></div><blockquote class="bbc_standard_quote">the bug seems to be still active in Mac versions of TOR<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>With the bug fixed, it is acceptable for network.websocket.enabled to be set as true.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

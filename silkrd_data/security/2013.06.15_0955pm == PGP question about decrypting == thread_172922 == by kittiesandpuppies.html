@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=172922.0" />
+		<title>Print Page - PGP question about decrypting</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: kittiesandpuppies on June 15, 2013, 09:55 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>PGP question about decrypting</strong><br />
+				Post by: <strong>kittiesandpuppies</strong> on <strong>June 15, 2013, 09:55 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I recently had to reload my operating system, and I lost my previous keys.&nbsp; I re dl&#039;ed the program, made my key, confirmed it was working by encrypting and decrypting a message to myself.&nbsp; I received an encrypted message I need to view, but when I copy it to the clip board and then press decrypt, it states &quot;Clipboard contains no openPGP data&quot;<br /><br />I did notice the software version when I dl&#039;ed it was 2.1.1 while the person sending me a msg is in 2.0.17.&nbsp; Is this causing the problem or is there something else going on that I am not getting?&nbsp; <br /><br />modified to correct the quote the pop up box states...&nbsp; &nbsp;typos typos
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question about decrypting</strong><br />
+				Post by: <strong>tree</strong> on <strong>June 15, 2013, 10:08 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Did you make sure you copied the &quot;-----BEGIN .... -----&quot;? It should have 5 &quot;-&quot; before and after.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question about decrypting</strong><br />
+				Post by: <strong>astor</strong> on <strong>June 16, 2013, 12:47 am</strong>
+			</dt>
+			<dd class="postbody">
+				Yep, make sure the message is properly formatted. Even if you copied everything correctly, the sender may have missed a dash. Count the dashes and make sure there are five on each side of the first and last lines. If some are missing, you can add them manually. Make sure the message has this format:<br /><br />1. It starts with:&nbsp; -----BEGIN PGP MESSAGE-----<br />2. It has 0 to 3 metadata lines, such as Version, Comment, or Charset. I&#039;m not sure if it can have more than 3, but I&#039;ve never seen it. <br />3. The next line is blank, and it is only one blank line (not 2 or 3). In the case of 0 metadata lines, the blank line immediately follows the dashed line.<br />4. It ends with: -----END PGP MESSAGE-----<br /><br />There could also be an encoding/charset problem, especially since Windows, Mac and Linux treat newlines / return characters differently. Sometimes it helps to copy the message into a text editor and save it with the default for your operating system, then open the text file and copy the message from there.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: PGP question about decrypting</strong><br />
+				Post by: <strong>echo_</strong> on <strong>June 16, 2013, 03:24 am</strong>
+			</dt>
+			<dd class="postbody">
+				Sometimes you need to manually add the dashes. Some text programs will convert two dashes -- into one: — or –<br /><br />Line spacing sometimes is also an issue.
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

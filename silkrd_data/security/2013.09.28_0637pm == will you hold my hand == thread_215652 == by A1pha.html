@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=215652.0" />
+		<title>Print Page - will you hold my hand</title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: A1pha on September 28, 2013, 06:37 pm</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>will you hold my hand</strong><br />
+				Post by: <strong>A1pha</strong> on <strong>September 28, 2013, 06:37 pm</strong>
+			</dt>
+			<dd class="postbody">
+				metaphorically speaking of course.&nbsp; 8)<br /><br />I have had a busy week. I am completely new to tails but finally got it covered, including a persistent volume.<br /><br />now I need to know how to get pgp that I can use within tails on the road.<br /><br />bear in mind I have not got a clue why any of this shit works, it goes straight over my head and I need to follow guides, like the tails guide here. <br /><br />I have searched through the threads here and cant make head nor tail of how to get started. I was looking at gpg4usb but that is as far as I have got, would this even work for me.<br /><br />help me ob1 your my only hope.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: will you hold my hand</strong><br />
+				Post by: <strong>Rastaman Vibration</strong> on <strong>September 28, 2013, 07:42 pm</strong>
+			</dt>
+			<dd class="postbody">
+				Its realy easy to use PGP with Tails. If you look at the top right, you&#039;ll see several icons. You&#039;l see a clipboard icon. This is you PGP app. Click the clipboard icon and select Manage Keys. From there you can import keys, like your own key pair or a vendors public key you want to use to encryot a message.<br /><br />To actually encrypt a message, open up the text editor (Applications&gt;Accessories&gt;gedit) and type up a message. Then look under the edit menu and you&#039;ll see an option to encrypt. Select it, and you&#039;ll be prompted to choose a key from the ones you have already imported. Select it, hit OK and you&#039;re good to go.<br /><br />PM me if you have any further questions
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: will you hold my hand</strong><br />
+				Post by: <strong>IForgotMyFuckingPassword</strong> on <strong>September 28, 2013, 07:51 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=215652.msg1571873#msg1571873">Quote from: A1pha on September 28, 2013, 06:37 pm</a></div></div><blockquote class="bbc_standard_quote">metaphorically speaking of course.&nbsp; 8)<br /><br />I have had a busy week. I am completely new to tails but finally got it covered, including a persistent volume.<br /><br />now I need to know how to get pgp that I can use within tails on the road.<br /><br />bear in mind I have not got a clue why any of this shit works, it goes straight over my head and I need to follow guides, like the tails guide here. <br /><br />I have searched through the threads here and cant make head nor tail of how to get started. I was looking at gpg4usb but that is as far as I have got, would this even work for me.<br /><br />help me ob1 your my only hope.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Ummm all Linux distributions come with native GnuPG software installed. The command is gpg --encrypt or --decrypt (or --verify if your verifying a signature.<br /><br />So if you want to encrypt a file in your home folder, the terminal command would be:<br />gpg --encrypt /home/A1pha/Documents/file.txt<br /><br />Not sure if TAILS has a GUI for that natively. You can download Geany and Geany plugins if you want something that looks more like gpg4win (the clipboard part I mean).
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: will you hold my hand</strong><br />
+				Post by: <strong>A1pha</strong> on <strong>September 28, 2013, 08:53 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=215652.msg1572081#msg1572081">Quote from: IForgotMyFuckingPassword on September 28, 2013, 07:51 pm</a></div></div><blockquote class="bbc_standard_quote"><div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=215652.msg1571873#msg1571873">Quote from: A1pha on September 28, 2013, 06:37 pm</a></div></div><blockquote class="bbc_alternate_quote">metaphorically speaking of course.&nbsp; 8)<br /><br />I have had a busy week. I am completely new to tails but finally got it covered, including a persistent volume.<br /><br />now I need to know how to get pgp that I can use within tails on the road.<br /><br />bear in mind I have not got a clue why any of this shit works, it goes straight over my head and I need to follow guides, like the tails guide here. <br /><br />I have searched through the threads here and cant make head nor tail of how to get started. I was looking at gpg4usb but that is as far as I have got, would this even work for me.<br /><br />help me ob1 your my only hope.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Ummm all Linux distributions come with native GnuPG software installed. The command is gpg --encrypt or --decrypt (or --verify if your verifying a signature.<br /><br />So if you want to encrypt a file in your home folder, the terminal command would be:<br />gpg --encrypt /home/A1pha/Documents/file.txt<br /><br />Not sure if TAILS has a GUI for that natively. You can download Geany and Geany plugins if you want something that looks more like gpg4win (the clipboard part I mean).<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />mate, I know your being nice and trying to help but you might as well have typed that in mongolian as I have got no fucking idea what the fuck is going on.<br /><br />I am just a guy who is trying to buy drugs off the internet safely and normally only use computers for porn and deleting my browsing history from my wife was an achievement. <br /><br />I guess pgp is going to pass me by.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: will you hold my hand</strong><br />
+				Post by: <strong>tree</strong> on <strong>September 28, 2013, 09:04 pm</strong>
+			</dt>
+			<dd class="postbody">
+				You could download gpg4usb, it works on TAILS and it&#039;s pretty easy to use.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: will you hold my hand</strong><br />
+				Post by: <strong>IForgotMyFuckingPassword</strong> on <strong>September 28, 2013, 09:22 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">I guess pgp is going to pass me by.</blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>It&#039;s really not that hard. Forget everything I&#039;ve said so far.<br /><br />In TAILS, press alt-F2. Type Seahorse. Click file (at the top) and select New. Select create PGP key. Put fake information in all of the fields. Click create and choose a password that you can remember. Now you have a public and private keypair. <br /><br />When you want to buy from a new vendor, copy their entire pgp key (including the parts where it says begin/end key). Then do exactly what you did above to open Seahorse. This time, however, click import and select the file you&#039;ve just saved. Now you&#039;ve imported the vendors key to your keyring.<br /><br />At the top right of your desktop, click applications, accessories, and select gedit text editor.<br /><br />Type the text in gedit. From the menu at the top of the gedit window, select edit followed by encrypt. Select your recipient and you&#039;re done.<br /><br />Sorry didn&#039;t realize you were that new to this. You don&#039;t need to install anything to do this. Everything in these steps is preinstalled. And I just tested this in a VM, so I know it works.<br /><br />If you have more questions, I can walk you through it. It really is very easy once you learn it!
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: will you hold my hand</strong><br />
+				Post by: <strong>A1pha</strong> on <strong>September 28, 2013, 09:40 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I will try this tomorrow,&nbsp; my laptop is tied up at the mo so cant try. <br /><br />+1 to you in advance though. 
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: will you hold my hand</strong><br />
+				Post by: <strong>IForgotMyFuckingPassword</strong> on <strong>September 28, 2013, 10:46 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=215652.msg1572282#msg1572282">Quote from: A1pha on September 28, 2013, 09:40 pm</a></div></div><blockquote class="bbc_standard_quote">I will try this tomorrow,&nbsp; my laptop is tied up at the mo so cant try. <br /><br />+1 to you in advance though.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div>PS Glad to help, but I missed one step. You copy and paste the vendor&#039;s key into gedit and then save it. That step goes in between copying the key and importing it. The rest is good.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: will you hold my hand</strong><br />
+				Post by: <strong>A1pha</strong> on <strong>September 29, 2013, 11:08 am</strong>
+			</dt>
+			<dd class="postbody">
+				right, I think im ready for the next phase. <br /><br />here is my public key, what happens now?<br /><br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG v1.4.10 (GNU/Linux)<br /><br />mQINBFJHyUYBEAC73+XO3LYCFyyHRclawgJtgpHb/EspYu/ZGaYytI0VIUSfZw3k<br />6UMJIZpOh7SFQReNgYqzb3D/a4zAIUKIezJyYMBMzT6y9tZw/7yIpdD0fEgeR5LF<br />jdgTsZTlaQFYL1f228/MwH93Mxf/5ePL8BBiYlfqOWZue5YPDWmWmY0gBeiVWZ+w<br />wRkMkGD4KGXOUhJPTbVL7XYnhyM/dLykgP/2CO/8foqMJ2/X5ecxwWLc2gMxAnYI<br />nYk7qWle1xpjbhiUmwRA7Xpv92p7YJjeMUUNImCSmOyQUTS5IFncrtP3jVUGjTwE<br />N1eaToCbA6BTcDC4Q9DLj8QXvoxw0CMPGXrvRWCHyaUbMmicA1+3TjGfdEyhOUz7<br />GZGRUbJO9GgDsgDNRLANiG+CGXovSDLnozpFJYoKfvRt9xahZPKkhqJrU4+M77tA<br />2/0jZY5Rmqe87ygyQ4HectDE++1o2WG+rH0wrihWPPEIr4tS793UmnfHdq+T4gUA<br />lPFqaX5Mn3fcji+kv+VUW/ZnFFe1wz4w0u88AetnQHVP58lQavuvEjS5vDGEKrsp<br />ZFbaiNiIgZU8NVEf7ytWXw+CrvZ6UIgZkjImjCHmpu14sM/lN60by+9Hg7mpUavH<br />RHC/phozUUpllNEOU5i76+gEclhS3xBcOsrGzoVDEoE+gTYrIH1y/L4+MwARAQAB<br />tE1yZWdpbmFsZCBlaXNlbmhvd2VyIGVudHdoaXN0bGUgdGhlIHR1cmQgKGNhbGwg<br />YSBsYXd5ZXIpIDxmdWNrb2ZmQGZ1Y2t5b3UuY29tPokCNwQTAQoAIQUCUkfJRgIb<br />AwULCQgHAwUVCgkICwUWAgMBAAIeAQIXgAAKCRDMzXlBu2JA2+LAD/904XQEKs1D<br />pVL3tIwlDjks2fDKAfT64tNzdFcTnRRjL+KLMmbzJZ7O6JGUV1eWECQiDLZcqtfe<br />Ml86nDKG41Ra6rxm4MrzHh98xsbYaF3zQB8ProEfxhvpGT7Y7ESOwnS+Z6f7W3jr<br />/7Cyyjmx9FVpFjk/pCQTcrt37K/Daaz5q9UNmrT9xyGQPiADlVryPvo3kHfzHz2h<br />U5ZghZvyoH4vMMN2u6s+TgpTP7MmviTd9yiO8mlkc8cnqH21JYOEJWZLNvjv5HsG<br />5KK7uySOUaPxBxdwrH97qeE4L+M8QHtWbAkUuD++4+wWlssOp0RC7Qg6PbIGFb2I<br />ogZv/bSW+PTGbGRk1YtCv+RSsiZx5srGiuHTVgGWusZ+tXfRcI4RLdIj9pZjwSbK<br />EuA1kUablyeRqqwp0jdS/2F5FkqHIoilGMhY5OOW9yh3tjF8hnG2RtX9eeO8Egp8<br />iB8YQSAQa4ZtMZBwtbCma7q9i72hWqemM8btlEglk1T2Bs4SiUv0M2jyoaQwy5+k<br />5JVliUnzVJjgWCnappXXXbqdwo8qLu/tYYXJTUBFbtASBt9vaNR+wsv6qN6JShGo<br />K+QzWe1/elk9G8izXVjKj5EB+MRpGSWiwVV9UuIsYv6/OZUUpTzyO/rRSHsTipqE<br />jg2qrR35LdeX1fkiQfx4ZbK9knzZaCWIHbkCDQRSR8lGARAAvvsriCkadPTs9dMz<br />xl8/wtOsI4m1k9L8CbuvO9R4AwMcMeJco0qK5I2r9ZVk8eyhpSAjgDZpN24Lsu8v<br />50NkXDEC5tZEIYdUsj9ULmdAJCp8Gy7NjSP2kOqvB2EeNN1Z9nR2EKTwPL+MhIqG<br />VQ4x8OlJrBRGlD/vm7GQG56nyibkBTryGF3YcLS1F1/Ev8jyiupweIyfSmTOFeDE<br />S0qqROUjtwssuJlXonBi73cR66DpchxbgJ5Fe+vrah2udYC/y8SrMkJtKN0aK+aE<br />MxW25Dk1Az+3z2tWUzXI1UDzYebsxp6TWakSSaXPPlaR7zjseoquH32/dTG9M0SI<br />PpaD5deYd8jdyZbLpx+W6vgpXdOmTYicdNRRSJp7Tl3IsdwCphCAgUiBcv4GrGeW<br />Y01dYn8+m7arzfU+PmcYUylk/8h/YB6z2puz5VWwTUs/hXJzigfduVvGKfL6JNtX<br />6ZwRQE8UcMyj7TZa4QppH+Ut6NjIc6u7fCIFr/Hfg8mcJrsU5ski/WxPa2yT1elc<br />Fsj4odO8OxsI+Te8IUSGmkfa/aP6QJKfh6+0L7CX+jFj5CeD1X5EnUv6yWBqAywv<br />AjFjPaaPkbaUC+PbnofhqROHfwOVNtR/bCBhNRV6o1mh6RuPehKWMSXKklUrvqc8<br />bXDr9guYVXL93UNVgLqXg5HHPZ0AEQEAAYkCHwQYAQoACQUCUkfJRgIbDAAKCRDM<br />zXlBu2JA2+whD/0fFokIN4+H+vEfKBAHAnH38sPP6YftpHJaXyMPswE2fkoaIO2Y<br />bGEISO0wkvqu/n3fbcCT/JRj6AaYpS/a8X4DsLZRcdO7YVUee9P5qgY7WU+857Sh<br />ZFyaHlR9un/bm0W5hu1nyKATB09uRoCa4UfNUZnm1FFOHygAJJpG0d1Uf1rEFO0f<br />oi+n2jhsGg1v5H6naE6nWu3dz7hmHoHa6hBnQM7bAnoqbd2ksgZYD1d+qndwP7UN<br />oMGs+mO10o+EOb9ZFb3KEYYTtMk/coygDrF0axj2u7u2oVDbtsu0/ZuJoQ3lzkt7<br />A2q3tmotDtFgg4/wBxlPig9C6xCts4UTyg6C+ACZNkgWroBYFg4+gjeN+ctpIBVy<br />j7v4m7evWN0x7TASMBOf+xG41VFebZ3xNgpc8P6MLnVFs3ydvfpCA3wJ1DvChpZS<br />pt/iuOWFEm0b9bCLUWG21B3O6HjjRc2E5i2bdVW4AnliHw05nJGgx0YKDej5gldR<br />MWxIWvIvNRzzOq+W9bvFgHuX9z2hi4NzvQ26ZCTjCkPLwH/eEemKzjb1Q6PjuM5Q<br />zt+XGnKp5WLJ6d+mZA0fiWdZwzQoaiOOs2OH0NeJ7Tx9Iv4dVPejUF2ZGEK204Xh<br />vgtNfkozwL3wtfttj1JvdcyEeh7k36WP9yJD653sHtiA4ICXdSRBbiDWYQ==<br />=qM6d<br />-----END PGP PUBLIC KEY BLOCK-----
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: will you hold my hand</strong><br />
+				Post by: <strong>IForgotMyFuckingPassword</strong> on <strong>September 29, 2013, 04:58 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=215652.msg1573565#msg1573565">Quote from: A1pha on September 29, 2013, 11:08 am</a></div></div><blockquote class="bbc_standard_quote">right, I think im ready for the next phase. <br /><br />here is my public key, what happens now?<br /><br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG v1.4.10 (GNU/Linux)<br /><br />mQINBFJHyUYBEAC73+XO3LYCFyyHRclawgJtgpHb/EspYu/ZGaYytI0VIUSfZw3k<br />6UMJIZpOh7SFQReNgYqzb3D/a4zAIUKIezJyYMBMzT6y9tZw/7yIpdD0fEgeR5LF<br />jdgTsZTlaQFYL1f228/MwH93Mxf/5ePL8BBiYlfqOWZue5YPDWmWmY0gBeiVWZ+w<br />wRkMkGD4KGXOUhJPTbVL7XYnhyM/dLykgP/2CO/8foqMJ2/X5ecxwWLc2gMxAnYI<br />nYk7qWle1xpjbhiUmwRA7Xpv92p7YJjeMUUNImCSmOyQUTS5IFncrtP3jVUGjTwE<br />N1eaToCbA6BTcDC4Q9DLj8QXvoxw0CMPGXrvRWCHyaUbMmicA1+3TjGfdEyhOUz7<br />GZGRUbJO9GgDsgDNRLANiG+CGXovSDLnozpFJYoKfvRt9xahZPKkhqJrU4+M77tA<br />2/0jZY5Rmqe87ygyQ4HectDE++1o2WG+rH0wrihWPPEIr4tS793UmnfHdq+T4gUA<br />lPFqaX5Mn3fcji+kv+VUW/ZnFFe1wz4w0u88AetnQHVP58lQavuvEjS5vDGEKrsp<br />ZFbaiNiIgZU8NVEf7ytWXw+CrvZ6UIgZkjImjCHmpu14sM/lN60by+9Hg7mpUavH<br />RHC/phozUUpllNEOU5i76+gEclhS3xBcOsrGzoVDEoE+gTYrIH1y/L4+MwARAQAB<br />tE1yZWdpbmFsZCBlaXNlbmhvd2VyIGVudHdoaXN0bGUgdGhlIHR1cmQgKGNhbGwg<br />YSBsYXd5ZXIpIDxmdWNrb2ZmQGZ1Y2t5b3UuY29tPokCNwQTAQoAIQUCUkfJRgIb<br />AwULCQgHAwUVCgkICwUWAgMBAAIeAQIXgAAKCRDMzXlBu2JA2+LAD/904XQEKs1D<br />pVL3tIwlDjks2fDKAfT64tNzdFcTnRRjL+KLMmbzJZ7O6JGUV1eWECQiDLZcqtfe<br />Ml86nDKG41Ra6rxm4MrzHh98xsbYaF3zQB8ProEfxhvpGT7Y7ESOwnS+Z6f7W3jr<br />/7Cyyjmx9FVpFjk/pCQTcrt37K/Daaz5q9UNmrT9xyGQPiADlVryPvo3kHfzHz2h<br />U5ZghZvyoH4vMMN2u6s+TgpTP7MmviTd9yiO8mlkc8cnqH21JYOEJWZLNvjv5HsG<br />5KK7uySOUaPxBxdwrH97qeE4L+M8QHtWbAkUuD++4+wWlssOp0RC7Qg6PbIGFb2I<br />ogZv/bSW+PTGbGRk1YtCv+RSsiZx5srGiuHTVgGWusZ+tXfRcI4RLdIj9pZjwSbK<br />EuA1kUablyeRqqwp0jdS/2F5FkqHIoilGMhY5OOW9yh3tjF8hnG2RtX9eeO8Egp8<br />iB8YQSAQa4ZtMZBwtbCma7q9i72hWqemM8btlEglk1T2Bs4SiUv0M2jyoaQwy5+k<br />5JVliUnzVJjgWCnappXXXbqdwo8qLu/tYYXJTUBFbtASBt9vaNR+wsv6qN6JShGo<br />K+QzWe1/elk9G8izXVjKj5EB+MRpGSWiwVV9UuIsYv6/OZUUpTzyO/rRSHsTipqE<br />jg2qrR35LdeX1fkiQfx4ZbK9knzZaCWIHbkCDQRSR8lGARAAvvsriCkadPTs9dMz<br />xl8/wtOsI4m1k9L8CbuvO9R4AwMcMeJco0qK5I2r9ZVk8eyhpSAjgDZpN24Lsu8v<br />50NkXDEC5tZEIYdUsj9ULmdAJCp8Gy7NjSP2kOqvB2EeNN1Z9nR2EKTwPL+MhIqG<br />VQ4x8OlJrBRGlD/vm7GQG56nyibkBTryGF3YcLS1F1/Ev8jyiupweIyfSmTOFeDE<br />S0qqROUjtwssuJlXonBi73cR66DpchxbgJ5Fe+vrah2udYC/y8SrMkJtKN0aK+aE<br />MxW25Dk1Az+3z2tWUzXI1UDzYebsxp6TWakSSaXPPlaR7zjseoquH32/dTG9M0SI<br />PpaD5deYd8jdyZbLpx+W6vgpXdOmTYicdNRRSJp7Tl3IsdwCphCAgUiBcv4GrGeW<br />Y01dYn8+m7arzfU+PmcYUylk/8h/YB6z2puz5VWwTUs/hXJzigfduVvGKfL6JNtX<br />6ZwRQE8UcMyj7TZa4QppH+Ut6NjIc6u7fCIFr/Hfg8mcJrsU5ski/WxPa2yT1elc<br />Fsj4odO8OxsI+Te8IUSGmkfa/aP6QJKfh6+0L7CX+jFj5CeD1X5EnUv6yWBqAywv<br />AjFjPaaPkbaUC+PbnofhqROHfwOVNtR/bCBhNRV6o1mh6RuPehKWMSXKklUrvqc8<br />bXDr9guYVXL93UNVgLqXg5HHPZ0AEQEAAYkCHwQYAQoACQUCUkfJRgIbDAAKCRDM<br />zXlBu2JA2+whD/0fFokIN4+H+vEfKBAHAnH38sPP6YftpHJaXyMPswE2fkoaIO2Y<br />bGEISO0wkvqu/n3fbcCT/JRj6AaYpS/a8X4DsLZRcdO7YVUee9P5qgY7WU+857Sh<br />ZFyaHlR9un/bm0W5hu1nyKATB09uRoCa4UfNUZnm1FFOHygAJJpG0d1Uf1rEFO0f<br />oi+n2jhsGg1v5H6naE6nWu3dz7hmHoHa6hBnQM7bAnoqbd2ksgZYD1d+qndwP7UN<br />oMGs+mO10o+EOb9ZFb3KEYYTtMk/coygDrF0axj2u7u2oVDbtsu0/ZuJoQ3lzkt7<br />A2q3tmotDtFgg4/wBxlPig9C6xCts4UTyg6C+ACZNkgWroBYFg4+gjeN+ctpIBVy<br />j7v4m7evWN0x7TASMBOf+xG41VFebZ3xNgpc8P6MLnVFs3ydvfpCA3wJ1DvChpZS<br />pt/iuOWFEm0b9bCLUWG21B3O6HjjRc2E5i2bdVW4AnliHw05nJGgx0YKDej5gldR<br />MWxIWvIvNRzzOq+W9bvFgHuX9z2hi4NzvQ26ZCTjCkPLwH/eEemKzjb1Q6PjuM5Q<br />zt+XGnKp5WLJ6d+mZA0fiWdZwzQoaiOOs2OH0NeJ7Tx9Iv4dVPejUF2ZGEK204Xh<br />vgtNfkozwL3wtfttj1JvdcyEeh7k36WP9yJD653sHtiA4ICXdSRBbiDWYQ==<br />=qM6d<br />-----END PGP PUBLIC KEY BLOCK-----<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Nice! Well, you only need your public key to give to others if they want to encrypt a message TO you. I almost never use mine here. <br /><br />The next step would be trying to import a vendor&#039;s key (or any key from the key thread in the forum) to see if you can encrypt a message. I&#039;ve laid out those steps for you already. You&#039;re now here:<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">When you want to buy from a new vendor, copy their entire pgp key (including the parts where it says begin/end key) and paste it into Gedit. Save that file. <br /><br />Then do exactly what you did above to open Seahorse. This time, however, click import and select the file you&#039;ve just saved. Now you&#039;ve imported the vendors key to your keyring.<br /><br />At the top right of your desktop, click applications, accessories, and select gedit text editor.<br /><br />Type the text in gedit. From the menu at the top of the gedit window, select edit followed by encrypt. Select your recipient and you&#039;re done.<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />Try that and let me know how you do. In the mean time, I&#039;ll post a message encrypted with your key. See if you can decrypt it.<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: will you hold my hand</strong><br />
+				Post by: <strong>IForgotMyFuckingPassword</strong> on <strong>September 29, 2013, 05:00 pm</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=215652.msg1573565#msg1573565">Quote from: A1pha on September 29, 2013, 11:08 am</a></div></div><blockquote class="bbc_standard_quote">right, I think im ready for the next phase. <br /><br />here is my public key, what happens now?<br /><br />-----BEGIN PGP PUBLIC KEY BLOCK-----<br />Version: GnuPG v1.4.10 (GNU/Linux)<br /><br />mQINBFJHyUYBEAC73+XO3LYCFyyHRclawgJtgpHb/EspYu/ZGaYytI0VIUSfZw3k<br />6UMJIZpOh7SFQReNgYqzb3D/a4zAIUKIezJyYMBMzT6y9tZw/7yIpdD0fEgeR5LF<br />jdgTsZTlaQFYL1f228/MwH93Mxf/5ePL8BBiYlfqOWZue5YPDWmWmY0gBeiVWZ+w<br />wRkMkGD4KGXOUhJPTbVL7XYnhyM/dLykgP/2CO/8foqMJ2/X5ecxwWLc2gMxAnYI<br />nYk7qWle1xpjbhiUmwRA7Xpv92p7YJjeMUUNImCSmOyQUTS5IFncrtP3jVUGjTwE<br />N1eaToCbA6BTcDC4Q9DLj8QXvoxw0CMPGXrvRWCHyaUbMmicA1+3TjGfdEyhOUz7<br />GZGRUbJO9GgDsgDNRLANiG+CGXovSDLnozpFJYoKfvRt9xahZPKkhqJrU4+M77tA<br />2/0jZY5Rmqe87ygyQ4HectDE++1o2WG+rH0wrihWPPEIr4tS793UmnfHdq+T4gUA<br />lPFqaX5Mn3fcji+kv+VUW/ZnFFe1wz4w0u88AetnQHVP58lQavuvEjS5vDGEKrsp<br />ZFbaiNiIgZU8NVEf7ytWXw+CrvZ6UIgZkjImjCHmpu14sM/lN60by+9Hg7mpUavH<br />RHC/phozUUpllNEOU5i76+gEclhS3xBcOsrGzoVDEoE+gTYrIH1y/L4+MwARAQAB<br />tE1yZWdpbmFsZCBlaXNlbmhvd2VyIGVudHdoaXN0bGUgdGhlIHR1cmQgKGNhbGwg<br />YSBsYXd5ZXIpIDxmdWNrb2ZmQGZ1Y2t5b3UuY29tPokCNwQTAQoAIQUCUkfJRgIb<br />AwULCQgHAwUVCgkICwUWAgMBAAIeAQIXgAAKCRDMzXlBu2JA2+LAD/904XQEKs1D<br />pVL3tIwlDjks2fDKAfT64tNzdFcTnRRjL+KLMmbzJZ7O6JGUV1eWECQiDLZcqtfe<br />Ml86nDKG41Ra6rxm4MrzHh98xsbYaF3zQB8ProEfxhvpGT7Y7ESOwnS+Z6f7W3jr<br />/7Cyyjmx9FVpFjk/pCQTcrt37K/Daaz5q9UNmrT9xyGQPiADlVryPvo3kHfzHz2h<br />U5ZghZvyoH4vMMN2u6s+TgpTP7MmviTd9yiO8mlkc8cnqH21JYOEJWZLNvjv5HsG<br />5KK7uySOUaPxBxdwrH97qeE4L+M8QHtWbAkUuD++4+wWlssOp0RC7Qg6PbIGFb2I<br />ogZv/bSW+PTGbGRk1YtCv+RSsiZx5srGiuHTVgGWusZ+tXfRcI4RLdIj9pZjwSbK<br />EuA1kUablyeRqqwp0jdS/2F5FkqHIoilGMhY5OOW9yh3tjF8hnG2RtX9eeO8Egp8<br />iB8YQSAQa4ZtMZBwtbCma7q9i72hWqemM8btlEglk1T2Bs4SiUv0M2jyoaQwy5+k<br />5JVliUnzVJjgWCnappXXXbqdwo8qLu/tYYXJTUBFbtASBt9vaNR+wsv6qN6JShGo<br />K+QzWe1/elk9G8izXVjKj5EB+MRpGSWiwVV9UuIsYv6/OZUUpTzyO/rRSHsTipqE<br />jg2qrR35LdeX1fkiQfx4ZbK9knzZaCWIHbkCDQRSR8lGARAAvvsriCkadPTs9dMz<br />xl8/wtOsI4m1k9L8CbuvO9R4AwMcMeJco0qK5I2r9ZVk8eyhpSAjgDZpN24Lsu8v<br />50NkXDEC5tZEIYdUsj9ULmdAJCp8Gy7NjSP2kOqvB2EeNN1Z9nR2EKTwPL+MhIqG<br />VQ4x8OlJrBRGlD/vm7GQG56nyibkBTryGF3YcLS1F1/Ev8jyiupweIyfSmTOFeDE<br />S0qqROUjtwssuJlXonBi73cR66DpchxbgJ5Fe+vrah2udYC/y8SrMkJtKN0aK+aE<br />MxW25Dk1Az+3z2tWUzXI1UDzYebsxp6TWakSSaXPPlaR7zjseoquH32/dTG9M0SI<br />PpaD5deYd8jdyZbLpx+W6vgpXdOmTYicdNRRSJp7Tl3IsdwCphCAgUiBcv4GrGeW<br />Y01dYn8+m7arzfU+PmcYUylk/8h/YB6z2puz5VWwTUs/hXJzigfduVvGKfL6JNtX<br />6ZwRQE8UcMyj7TZa4QppH+Ut6NjIc6u7fCIFr/Hfg8mcJrsU5ski/WxPa2yT1elc<br />Fsj4odO8OxsI+Te8IUSGmkfa/aP6QJKfh6+0L7CX+jFj5CeD1X5EnUv6yWBqAywv<br />AjFjPaaPkbaUC+PbnofhqROHfwOVNtR/bCBhNRV6o1mh6RuPehKWMSXKklUrvqc8<br />bXDr9guYVXL93UNVgLqXg5HHPZ0AEQEAAYkCHwQYAQoACQUCUkfJRgIbDAAKCRDM<br />zXlBu2JA2+whD/0fFokIN4+H+vEfKBAHAnH38sPP6YftpHJaXyMPswE2fkoaIO2Y<br />bGEISO0wkvqu/n3fbcCT/JRj6AaYpS/a8X4DsLZRcdO7YVUee9P5qgY7WU+857Sh<br />ZFyaHlR9un/bm0W5hu1nyKATB09uRoCa4UfNUZnm1FFOHygAJJpG0d1Uf1rEFO0f<br />oi+n2jhsGg1v5H6naE6nWu3dz7hmHoHa6hBnQM7bAnoqbd2ksgZYD1d+qndwP7UN<br />oMGs+mO10o+EOb9ZFb3KEYYTtMk/coygDrF0axj2u7u2oVDbtsu0/ZuJoQ3lzkt7<br />A2q3tmotDtFgg4/wBxlPig9C6xCts4UTyg6C+ACZNkgWroBYFg4+gjeN+ctpIBVy<br />j7v4m7evWN0x7TASMBOf+xG41VFebZ3xNgpc8P6MLnVFs3ydvfpCA3wJ1DvChpZS<br />pt/iuOWFEm0b9bCLUWG21B3O6HjjRc2E5i2bdVW4AnliHw05nJGgx0YKDej5gldR<br />MWxIWvIvNRzzOq+W9bvFgHuX9z2hi4NzvQ26ZCTjCkPLwH/eEemKzjb1Q6PjuM5Q<br />zt+XGnKp5WLJ6d+mZA0fiWdZwzQoaiOOs2OH0NeJ7Tx9Iv4dVPejUF2ZGEK204Xh<br />vgtNfkozwL3wtfttj1JvdcyEeh7k36WP9yJD653sHtiA4ICXdSRBbiDWYQ==<br />=qM6d<br />-----END PGP PUBLIC KEY BLOCK-----<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />-----BEGIN PGP MESSAGE-----<br />Version: GnuPG v1.4.12 (GNU/Linux)<br /><br />hQIMAxxFatmWG2XMAQ/+M6aZeEmOIczOjfG6Chm+CbU/jc21EmQA8m3tTaQiRdV1<br />t2v61qfDQfzCtGezqm1ZTM2J9czC4kfUtke1KzvfZFXYPeWVeTR7WXVZYENgbsMG<br />aK6b/JiBSRe7ht9tdp2Gh2IA4Y/0Q+cI5tVp5wnjJodl55JR7IuavboaKSz6o+T4<br />KoDcCwHACvYnmEB8+u4XqCrAtAsOKh9HuQMhEtXCQl1q4wiZ3Sxw5tBFnEBrb8hS<br />vY7z1nlEchHWRNr80K8+yv5u+vucnr8uk9Xbe/zpl2mrkYkv5UaHofYplRdf+A7z<br />mne6yw3AbyWp2XiM48X8z4kY/taZjRUrN9sVZQHUm4b61hzAeS4tUpxWLd1lMpkd<br />1eFm9TJtrzLTqvKUg+W7/O/MJr3luj3Fs0LSPotSoQRZhdr1oDRYChiTyciIlCST<br />fhjONkxi/l4lsVlWVWPKbmQWL23i/OZz863MV4lM1K4XyfOvmDpAdbTZCxDRXiPe<br />GPYrZB7PzhUjRBTFBVUcujuBuSe9/2tc2jQJXz8k0yE+v3mIOuPHlnwBFWIaBEYE<br />qHSEVcRGp29UlgDUsHFMOOR0TylC2mnhn0ofyLHUIR2uCaBQ774MxtY/ftubofbZ<br />ZAaSZV9d88V1Pss5uYrOvh5gN65df0odjyvmoiyoC2lUIXV2memsoH1OdlArAzHS<br />6QFmmPE+ED1OQ5iRA+spyvpzLH1OteTQwKIYviuUU/yo4Mz+8cSsLuB00FpvGAVt<br />IWjavSChRF43k1RXRvGP8BgRKjtjnBZpCTEGbAykNyQj4m/XKq4QYwGOGY9Vv2FY<br />jA7OxsUECo9PvepukLJV5xTZtj70D0J0H/V7osFz5mLxYhGTKL/jwW8lVD3mn79Q<br />hn8yrS6Nl5KUS8gk87YPTYYDR2GxFC+Of6uqJkLUKVjKtRwG7GSfkLOPAYqJ2h+C<br />bhwxV2ei73y3mPYsNAoflhKGaMUcPH6Nc3t24UJqWun74ATgYVQDKsE101eGLRD/<br />WWFNQcY8oEgtFWO+b75QyKqgxyWE9lmVwtDzxHaGrJ8Y5Bq84mVX/775kJ24z6yl<br />y+ZktbWEewpU4nAsX8oayobcvlwCzOWdxuuYCffdFroNdg5gy63jrj8d25cFYtDv<br />0OFCo4kKYHcFLbW4jq6rnrILTEn8gUp2kUd5JF9z+fum0HzZDYJr1gUTrc5hr3v9<br />36KOP/qR3k6z8DKXwiYL6h7d+az34gVghAsdSTEUZPH0brV6tG0l9aD3bxdYOUBZ<br />0yVzXIQcB9yUWFItIUgX4uvy9sksL1c87IV0G9n0rQXc+TWFRURPQ1DxTDp8a3qi<br />PB/BWZNp9eRmbiNxDpnR549iDJmkQyjntqWKzYcYLKe2nBEtP4rAesYp5cBdyIni<br />4WjDtSerDpaDQOa0BLFaO6TZXXQlzc0n6VfAR2dC24KgDxFHnAwqFbwizXHZJU+w<br />Q41u4ZXvmfSJR9vODDVQgonBv68QbEt0Osad8OzpegOsGsedWpNJuiTskUjVrF/8<br />SwMhbrhMOcNFIxSw0aXcysqfSUYn84RYOBNOvBEW9xXUCfqOw5p5AgcIdjPpng==<br />=gwyo<br />-----END PGP MESSAGE-----<br /><br /><br />PS A lot of vendors prefer that your silkroad and PGP names match to make their lives easier (I&#039;m NOT asking if the do match! Don&#039;t tell me). If not, you may just want to make another key.
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: will you hold my hand</strong><br />
+				Post by: <strong>A1pha</strong> on <strong>September 29, 2013, 06:35 pm</strong>
+			</dt>
+			<dd class="postbody">
+				I passed your test. Thanks for the help. <br /><br />Your alright you are.<br /><br />+1
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>

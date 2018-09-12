@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="robots" content="noindex" />
+		<link rel="canonical" href="http://dkn255hz262ypmii.onion/index.php?topic=46904.0" />
+		<title>Print Page - HALP! Problem with Tails.  &quot;No default or ui configuration directive found.&quot; </title>
+		<style type="text/css">
+			body, a
+			{
+				color: #000;
+				background: #fff;
+			}
+			body, td, .normaltext
+			{
+				font-family: Verdana, arial, helvetica, serif;
+				font-size: small;
+			}
+			h1#title
+			{
+				font-size: large;
+				font-weight: bold;
+			}
+			h2#linktree
+			{
+				margin: 1em 0 2.5em 0;
+				font-size: small;
+				font-weight: bold;
+			}
+			dl#posts
+			{
+				width: 90%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			dt.postheader
+			{
+				border: solid #000;
+				border-width: 1px 0;
+				padding: 4px 0;
+			}
+			dd.postbody
+			{
+				margin: 1em 0 2em 2em;
+			}
+			table
+			{
+				empty-cells: show;
+			}
+			blockquote, code
+			{
+				border: 1px solid #000;
+				margin: 3px;
+				padding: 1px;
+				display: block;
+			}
+			code
+			{
+				font: x-small monospace;
+			}
+			blockquote
+			{
+				font-size: x-small;
+			}
+			.smalltext, .quoteheader, .codeheader
+			{
+				font-size: x-small;
+			}
+			.largetext
+			{
+				font-size: large;
+			}
+			.centertext
+			{
+				text-align: center;
+			}
+			hr
+			{
+				height: 1px;
+				border: 0;
+				color: black;
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Silk Road forums</h1>
+		<h2 id="linktree">Discussion => Security => Topic started by: painbow on October 01, 2012, 03:21 am</h2>
+		<dl id="posts">
+			<dt class="postheader">
+				Title: <strong>HALP! Problem with Tails.  &quot;No default or ui configuration directive found.&quot; </strong><br />
+				Post by: <strong>painbow</strong> on <strong>October 01, 2012, 03:21 am</strong>
+			</dt>
+			<dd class="postbody">
+				I&#039;m using Windows 7 and burned the Tails 0.13 ISO onto a CD.&nbsp; <br /><br />Whenever I try to boot from the CD, I get the following error::<br /><br />Error 3200 reading sector 393700 <br />No default or ui configuration directive found<br /><br />Anybody help?!<br />
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HALP! Problem with Tails.  &quot;No default or ui configuration directive found.&quot; </strong><br />
+				Post by: <strong>painbow</strong> on <strong>October 01, 2012, 04:10 am</strong>
+			</dt>
+			<dd class="postbody">
+				<div class="quoteheader"><div class="topslice_quote"><a href="http://dkn255hz262ypmii.onion/index.php?topic=46904.msg495976#msg495976">Quote from: Guru on October 01, 2012, 03:45 am</a></div></div><blockquote class="bbc_standard_quote">I&#039;m assuming that you checked out the hash of the .iso file, or verified the PGP detached signature?&nbsp; If so, that would rule out a bad .iso download. <br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />No, I haven&#039;t checked the hash of the iso file.&nbsp; How do I do that?<br /><br />Also, what&#039;s the point of verifying detached PGP signature?&nbsp; Is it just to make sure your download was from a legit source?
+			</dd>
+			<dt class="postheader">
+				Title: <strong>Re: HALP! Problem with Tails.  &quot;No default or ui configuration directive found.&quot; </strong><br />
+				Post by: <strong>painbow</strong> on <strong>October 01, 2012, 06:25 am</strong>
+			</dt>
+			<dd class="postbody">
+				Thank you Guru!<br /><br />This is what I got when I did&nbsp; gpg verify thing.&nbsp; Does this look alright?<br /><br /><div class="quoteheader"><div class="topslice_quote">Quote</div></div><blockquote class="bbc_standard_quote">gpg --verify tails*.pgp tails*.iso<br />gpg: Signature made 09/18/12 04:25:35 Eastern Daylight Time using RSA key ID BE2<br />CD9C1<br />gpg: Good signature from &quot;Tails developers (signing key) &lt;tails@boum.org&gt;&quot;<br />gpg:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;aka &quot;T(A)ILS developers (signing key) &lt;amnesia@boum.org&gt;&quot;<br />gpg: WARNING: This key is not certified with a trusted signature!<br />gpg:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; There is no indication that the signature belongs to the owner.<br />Primary key fingerprint: 0D24 B36A A9A2 A651 7878&nbsp; 7645 1202 821C BE2C D9C1<br /></blockquote><div class="quotefooter"><div class="botslice_quote"></div></div><br />If the verification failed, what would it say instead?
+			</dd>
+		</dl>
+		<div id="footer" class="smalltext">
+			
+			<span class="smalltext" style="display: inline; visibility: visible; font-family: Verdana, Arial, sans-serif;"><a href="http://dkn255hz262ypmii.onion/index.php?action=credits" title="Simple Machines Forum" target="_blank" class="new_win">SMF 2.0.5</a> |
+ <a href="http://www.simplemachines.org/about/smf/license.php" title="License" target="_blank" class="new_win">SMF &copy; 2013</a>, <a href="http://www.simplemachines.org" title="Simple Machines" target="_blank" class="new_win">Simple Machines</a>
+			</span>
+		</div>
+	</body>
+</html>
