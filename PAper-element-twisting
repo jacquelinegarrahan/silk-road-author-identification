@@ -1,0 +1,112 @@
+Skip to content
+Your account has been flagged.
+Because of that, your profile is hidden from the public. If you believe this is a mistake, contact support to have your account status reviewed.
+tree to cannabis
+Repositories0
+Code205K+
+Commits22
+Issues53
+Marketplace0
+Topics0
+Wikis11
+Users0
+Language
+
+Sort
+
+207,416 code results
+@danuttah
+danuttah/Cannabis-Skyrim – CannabisGrowScript.psc
+Showing the top five matches
+Last indexed on Jul 1, 2018
+Papyrus
+Form Property CannabisSativaDeadTree Auto
+Form Property CannabisIndicaDeadTree Auto
+Form Property CannabisAZBabyTree Auto
+Form Property CannabisAZInfantTree Auto
+Form Property CannabisAZGrowingTree Auto
+Form Property CannabisAZFloweringTree Auto
+@genghis88
+genghis88/SearchEngine – Portal_Cannabis
+Showing the top two matches
+Last indexed on Jun 28, 2018
+<div class="CategoryTreeItem"><span class="CategoryTreeBullet"><span class="CategoryTreeToggle" style="display: none;" data-ct-title="Cannabis" title="collapse" data-ct-loaded="1" data-ct-state="expanded"><span style="color:#0645AD;">▼</span></span></span> <a class="CategoryTreeLabel  CategoryTreeLabelNs14 CategoryTreeLabelCategory" href="Category_Cannabis">Cannabis</a></div>
+<div class="CategoryTreeChildren" style="display:block">
+@Yijie-Li
+Yijie-Li/WSE2 – Portal_Cannabis
+Showing the top two matches
+Last indexed on Jun 26, 2018
+<div class="CategoryTreeItem"><span class="CategoryTreeBullet"><span class="CategoryTreeToggle" style="display: none;" data-ct-title="Cannabis" title="collapse" data-ct-loaded="1" data-ct-state="expanded"><span style="color:#0645AD;">▼</span></span></span> <a class="CategoryTreeLabel  CategoryTreeLabelNs14 CategoryTreeLabelCategory" href="Category_Cannabis">Cannabis</a></div>
+<div class="CategoryTreeChildren" style="display:block">
+@nguyenmmegan
+nguyenmmegan/Projects – drugUse.Rmd
+Showing the top five matches
+Last indexed on Sep 17, 2018
+RMarkdown
+within a year, and “No” otherwise. This can be done by checking if the Cannabis variable is greater than
+or equal to CL3. 
+
+```{r}
+drug_use <- drug_use %>%
+  mutate(recent_cannabis_use = factor(ifelse(Cannabis > "CL2", "Yes", "No"), levels = c("No", "Yes")))
+We construct a decision tree to predict recent_cannabis_use using all other predictors in drug_use_train.
+@nakoafarrant
+nakoafarrant/stml_w19_hw3 – homework3-handout.rmd
+Showing the top six matches
+Last indexed 6 hours ago
+RMarkdown
+__(b).__ We will create a new tibble that includes a subset of the original variables.  We will focus on all variables between `age` and `SS` as well as the new factor related to recent cannabis use.  Create `drug_use_subset` with the command:
+summary(cannabis.tree)
+```
+
+
+        
+__(a).__ Use 10-fold CV to select the a tree which minimizes the cross-validation misclassification  rate.  Use the function `cv.tree`, and set the argument `FUN=prune.misclass`.  Note: you do not need to use a `do.chunk` function since the `tree` package will do cross validation for you.  Find the size of the tree which minimizes the cross validation error.  If multiple trees have the same minimum cross validated misclassification rate, set `best_size` to the smallest tree size with that minimum rate. 
+@joshua924
+joshua924/WSE – Portal_Cannabis
+Showing the top two matches
+Last indexed on Jun 29, 2018
+<div class="CategoryTreeItem"><span class="CategoryTreeBullet"><span class="CategoryTreeToggle" style="display: none;" data-ct-title="Cannabis" title="collapse" data-ct-loaded="1" data-ct-state="expanded"><span style="color:#0645AD;">▼</span></span></span> <a class="CategoryTreeLabel  CategoryTreeLabelNs14 CategoryTreeLabelCategory" href="Category_Cannabis">Cannabis</a></div>
+<div class="CategoryTreeChildren" style="display:block">
+@rbavery
+rbavery/statml_spring2018 – homeworkRyanMeet.Rmd
+Showing the top four matches
+Last indexed on Jul 6, 2018
+RMarkdown
+## They may need to be adjusted depending on your OS
+# if your output looks odd, increase or decrease indent
+indent1 = '    '
+tree_parameters = tree.control(nobs=nrow(drug_use_train), minsize=10, mindev=1e-3)
+
+weed_tree = tree(formula = recent_cannabis_use ~ ., data=drug_use_train ,control = tree_parameters)
+@XiyuanHu
+XiyuanHu/WebSearchEngine – Portal_Cannabis
+Showing the top two matches
+Last indexed on Jun 26, 2018
+<div class="CategoryTreeItem"><span class="CategoryTreeBullet"><span class="CategoryTreeToggle" style="display: none;" data-ct-title="Cannabis" title="collapse" data-ct-loaded="1" data-ct-state="expanded"><span style="color:#0645AD;">▼</span></span></span> <a class="CategoryTreeLabel  CategoryTreeLabelNs14 CategoryTreeLabelCategory" href="Category_Cannabis">Cannabis</a></div>
+<div class="CategoryTreeChildren" style="display:block">
+@kunalbalani
+kunalbalani/Turbo360 – Portal_Cannabis
+Showing the top two matches
+Last indexed on Jun 26, 2018
+<div class="CategoryTreeItem"><span class="CategoryTreeBullet"><span class="CategoryTreeToggle" style="display: none;" data-ct-title="Cannabis" title="collapse" data-ct-loaded="1" data-ct-state="expanded"><span style="color:#0645AD;">▼</span></span></span> <a class="CategoryTreeLabel  CategoryTreeLabelNs14 CategoryTreeLabelCategory" href="Category_Cannabis">Cannabis</a></div>
+<div class="CategoryTreeChildren" style="display:block">
+@Demonic-Penguin
+Demonic-Penguin/Acres-Craft-Cannabis – project.pbxproj
+Showing the top four matches
+Last indexed on Jul 3, 2018
+		A120D35A1D241BD700F9D53F /* Acres Craft Cannabis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Acres Craft Cannabis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A120D3621D241BD800F9D53F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A120D3651D241BD800F9D53F /* Acres_Craft_Cannabis.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Acres_Craft_Cannabis.xcdatamodel; sourceTree = "<group>"; };
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
