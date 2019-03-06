@@ -1,0 +1,138 @@
+Skip to content
+Your account has been flagged.
+Because of that, your profile is hidden from the public. If you believe this is a mistake, contact support to have your account status reviewed.
+
+onion meta thread
+Repositories0
+Code93K
+Commits6
+Issues52
+Marketplace0
+Topics0
+Wikis256
+Users0
+Language
+
+Sort
+
+Showing 93,089 available code results 
+@sgamerith
+sgamerith/aic_2015 – SocksWorker.java
+Showing the top three matches
+Last indexed on Jun 29, 2018
+Java
+package at.ac.tuwien.aic.ws14.group2.onion.node.local.socks.server;
+
+import at.ac.tuwien.aic.ws14.group2.onion.directory.api.service.ChainNodeInformation;
+import at.ac.tuwien.aic.ws14.group2.onion.node.common.node.Endpoint;
+import at.ac.tuwien.aic.ws14.group2.onion.node.local.node.ChainMetaData;
+import at.ac.tuwien.aic.ws14.group2.onion.node.local.node.LocalNodeCore;
+@FIU-SCIS-Senior-Projects
+FIU-SCIS-Senior-Projects/Security-Evaluation-of-Encrypted-Databases-SEED-1.0 – myback
+Showing the top four matches
+Last indexed on Jul 12, 2018
+    rm->rfmeta.insert(pair);
+}
+
+
+static Item *
+decrypt_item_layers(const Item &i, const FieldMeta *const fm, onion o,
+    Item *out_i = NULL;
+    //we have fieldMeta, but only use part of it. we select the onion via the o in olk we constructed.
+@wingsofovnia
+wingsofovnia/p2p-group27-onion – TunnelDatum.java
+Showing the top three matches
+Last indexed on Jul 8, 2018
+Java
+package de.tum.p2p.proto.message.onion.forwarding.composite;
+
+import de.tum.p2p.proto.ProtoException;
+import java.util.concurrent.ThreadLocalRandom;
+
+import static de.tum.p2p.proto.message.MessageType.ONION_TUNNEL_COVER;
+import static de.tum.p2p.proto.message.MessageType.ONION_TUNNEL_DATUM;
+@sgamerith
+sgamerith/aic_2015 – ChainNodeStarter.java
+Showing the top three matches
+Last indexed on Jun 29, 2018
+Java
+package at.ac.tuwien.aic.ws14.group2.onion.node.chain;
+
+import at.ac.tuwien.aic.ws14.group2.onion.directory.api.service.ChainNodeInformation;
+import at.ac.tuwien.aic.ws14.group2.onion.directory.api.service.DirectoryService;
+@sandaojushi
+sandaojushi/cryptdb – rewrite_util.cc
+Showing the top three matches
+Last indexed on Jul 6, 2018
+C++
+static Create_field *
+get_create_field(const Analysis &a, Create_field * const f,
+                 const OnionMeta &om)
+    for (auto oit : fm->orderedOnionMetas()) {
+        OnionMeta * const om = oit.second;
+        Create_field * const new_cf = get_create_field(a, f, *om);
+@GODA-S
+GODA-S/cryptdb – rewrite_util.cc
+Showing the top three matches
+Last indexed on Jul 6, 2018
+C++
+static Create_field *
+get_create_field(const Analysis &a, Create_field * const f,
+                 const OnionMeta &om)
+    for (auto oit : fm->orderedOnionMetas()) {
+        OnionMeta * const om = oit.second;
+        Create_field * const new_cf = get_create_field(a, f, *om);
+@FIU-SCIS-Senior-Projects
+FIU-SCIS-Senior-Projects/Security-Evaluation-of-Encrypted-Databases-SEED-1.0 – rewrite_util.cc
+Showing the top three matches
+Last indexed on Jul 12, 2018
+C++
+static Create_field *
+get_create_field(const Analysis &a, Create_field * const f,
+                 const OnionMeta &om)
+    for (auto oit : fm->orderedOnionMetas()) {
+        OnionMeta * const om = oit.second;
+        Create_field * const new_cf = get_create_field(a, f, *om);
+@hophacker
+hophacker/bitcoin_public_data – http:\\anonymous.livelyblog.com\2012\12\30\links-deep-web-onion-by-m1cr0b10\
+Showing the top four matches
+Last indexed on Jun 29, 2018
+  <title>Links Deep Web .onion By M1cr0b10</title>
+	<meta name="description" content="Be Anonymous On The Internet(s)!:  Links Deep Web .onion By M1cr0b10" />
+				<div class="nav-previous"><a href="http://anonymous.livelyblog.com/2012/12/30/links-deep-web-onion-by-m1cr0b10/comment-page-1/#comments" ><span class="meta-nav">&larr;</span> Older Comments</a></div>
+@EncryptDB-Research
+EncryptDB-Research/cryptdb-seed – myback
+Showing the top four matches
+Last indexed on Jul 13, 2018
+    rm->rfmeta.insert(pair);
+}
+
+
+static Item *
+decrypt_item_layers(const Item &i, const FieldMeta *const fm, onion o,
+    Item *out_i = NULL;
+    //we have fieldMeta, but only use part of it. we select the onion via the o in olk we constructed.
+@CSecLab
+CSecLab/avispa-project-web – 000126.html
+Showing the top three matches
+Last indexed on Jul 6, 2018
+HTML
+   <TITLE> [Avispa-users] FW: Onion Router Protocol Verification
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:avispa-users%40avispa-project.org?Subject=%5BAvispa-users%5D%20FW%3A%20Onion%20Router%20Protocol%20Verification&In-Reply-To=50E7CECE11ED7A498DD237E4FE277E5F0A4ACC0D%40mclex01.us.primus">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Press h to open a hovercard with more details.
