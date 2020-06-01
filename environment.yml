@@ -1,0 +1,12 @@
+name: silk-road-author-id
+dependencies:
+  - python=3.7
+  - conda-forge::jupyterlab
+  - bokeh::jupyter_bokeh
+  - conda-forge::notebook
+  - anaconda::ipykernel
+  - click
+  - bs4
+  - pip
+  - pip:
+    - tensorflow==2.1.0
