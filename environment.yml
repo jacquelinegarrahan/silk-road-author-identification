@@ -6,7 +6,9 @@ dependencies:
   - conda-forge::notebook
   - anaconda::ipykernel
   - click
+  - matplotlib
   - bs4
+  - pandas
   - pip
   - pip:
     - tensorflow==2.1.0
