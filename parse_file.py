@@ -171,6 +171,10 @@ WORD_REPLACEMENTS = [
 ]
 
 
+
+TWITTER_GLOVE = [25, 50, 100, 200]
+WIKIPEDIA_GLOVE = [50, 100, 200, 300]
+
 def parse_forum_html(file_name: str) -> dict:
     """
     Extracts all users from a silk road forum page, and their posts
@@ -210,6 +214,7 @@ def parse_forum_html(file_name: str) -> dict:
     return posts
 
 
+
 if __name__ == "__main__":
     dirpath = "test_files"
     file_list = os.listdir(dirpath)
@@ -222,3 +227,6 @@ if __name__ == "__main__":
             posts = parse_forum_html(dirpath + "/" + file_list[f])
             for post in posts:
                 writer.writerow([post["author"], post["body_text"]])
+
+
+    #df.to_pickle(file_name)
