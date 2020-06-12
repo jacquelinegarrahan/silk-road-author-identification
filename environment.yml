@@ -6,6 +6,7 @@ dependencies:
   - conda-forge::notebook
   - anaconda::ipykernel
   - click
+  - scikit-learn
   - matplotlib
   - bs4
   - pandas
