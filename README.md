@@ -1,4 +1,4 @@
-# dark_web_authorship
+# Silk Road Author Identification
 
 This project aims to apply LSTM and RNN neural networks to classifying sequence representations by author in Silk Road forums. The code contains notebooks for preparing and running both models types, as well as building datasets. Vector representations of the forum posts were built using the Stanford gloVe vector representations. The BuildDataset notebook includes utility functions for building embedding matrices from the Stanford vector representations and preparing datasets. The dataset used for this project was compiled by Gwern Branwen for the dataset, and can be accessed at https://www.gwern.net/DNM-archives.
 
