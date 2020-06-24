@@ -5,7 +5,9 @@ This is the source code for my EECE5644 final project (Summer 2018), which aims 
 ## Installation
 
 Install the stanford gloVe twitter and wikipedia pretrained using wget. Note, these will take a very long time to install.
+<br>
 `$ wget http://nlp.stanford.edu/data/wordvecs/glove.twitter.27B.zip`
+<br>
 `$ wget http://nlp.stanford.edu/data/wordvecs/glove.6B.zip `
 
 Unzip the files:
